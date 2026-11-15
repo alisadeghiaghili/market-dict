@@ -14,25 +14,26 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__, template_folder="templates", static_folder="static")
 
 DATA_FILE = os.path.join(os.path.dirname(__file__), "bilingual_dictionary.json")
+_CACHE = {"mtime": 0, "data": []}
 
-def load_dictionary() -> List[Dict[str, Any]]:
+def get_dictionary() -> List[Dict[str, Any]]:
     if not os.path.exists(DATA_FILE):
         return []
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-DICTIONARY: List[Dict[str, Any]] = load_dictionary()
+    current_mtime = os.path.getmtime(DATA_FILE)
+    if current_mtime != _CACHE["mtime"]:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            _CACHE["data"] = json.load(f)
+            _CACHE["mtime"] = current_mtime
+    return _CACHE["data"]
 
 # Persian text normalization for accurate search
 def normalize_text(text: str) -> str:
     if not text:
         return ""
     text = text.lower()
-    # Persian/Arabic character unification
     text = text.replace("ي", "ی").replace("ك", "ک").replace("ة", "ه").replace("ۀ", "ه")
-    text = text.replace("\u200c", " ")  # zero-width non-joiner to space
+    text = text.replace("\u200c", " ")
     text = text.replace("  ", " ")
-    # remove common Persian diacritics
     text = re.sub(r"[\u064B-\u065F\u0670]", "", text)
     return text.strip()
 
@@ -42,20 +43,22 @@ def index():
 
 @app.route("/api/stats")
 def get_stats():
-    categories = set(t.get("category", "") for t in DICTIONARY if t.get("category"))
-    letters = set(t.get("letter", "") for t in DICTIONARY if t.get("letter"))
-    featured_count = sum(1 for t in DICTIONARY if t.get("featured"))
+    dictionary = get_dictionary()
+    categories = set(t.get("category", "") for t in dictionary if t.get("category"))
+    letters = set(t.get("letter", "") for t in dictionary if t.get("letter"))
+    deep_count = sum(1 for t in dictionary if t.get("deep_enriched") or t.get("sections"))
     return jsonify({
-        "total_terms": len(DICTIONARY),
+        "total_terms": len(dictionary),
         "total_categories": len(categories),
         "total_letters": len(letters),
-        "featured_count": featured_count
+        "deep_enriched_count": deep_count
     })
 
 @app.route("/api/letters")
 def get_letters():
+    dictionary = get_dictionary()
     counts: Dict[str, int] = {}
-    for item in DICTIONARY:
+    for item in dictionary:
         ltr = item.get("letter", "#").upper()
         counts[ltr] = counts.get(ltr, 0) + 1
     
@@ -64,8 +67,9 @@ def get_letters():
 
 @app.route("/api/categories")
 def get_categories():
+    dictionary = get_dictionary()
     counts: Dict[str, int] = {}
-    for item in DICTIONARY:
+    for item in dictionary:
         cat = item.get("category", "سایر")
         counts[cat] = counts.get(cat, 0) + 1
     
@@ -80,7 +84,7 @@ def search_terms():
     page = int(request.args.get("page", 1))
     limit = int(request.args.get("limit", 24))
 
-    filtered = DICTIONARY
+    filtered = get_dictionary()
 
     # Filter by Letter
     if letter and letter != "ALL":
@@ -102,7 +106,6 @@ def search_terms():
             cat = normalize_text(item.get("category", ""))
 
             score = 0
-            # Exact matches get highest score
             if norm_query == term_en or norm_query == term_fa:
                 score += 100
             elif term_en.startswith(norm_query) or term_fa.startswith(norm_query):
@@ -136,24 +139,26 @@ def search_terms():
 @app.route("/api/terms/<term_id>")
 def get_term_by_id(term_id: str):
     term_id_norm = term_id.lower().strip()
-    for item in DICTIONARY:
+    dictionary = get_dictionary()
+    for item in dictionary:
         if item.get("id", "").lower() == term_id_norm or normalize_text(item.get("term_en", "")) == term_id_norm:
             return jsonify(item)
     return jsonify({"error": "Term not found"}), 404
 
 @app.route("/api/random")
 def get_random_term():
-    if not DICTIONARY:
+    dictionary = get_dictionary()
+    if not dictionary:
         return jsonify({"error": "No terms available"}), 404
-    # Prefer featured terms if available
-    featured = [t for t in DICTIONARY if t.get("featured")]
-    pool = featured if featured and random.random() < 0.7 else DICTIONARY
+    # Prefer deep enriched items if available
+    deep_pool = [t for t in dictionary if t.get("sections")]
+    pool = deep_pool if deep_pool and random.random() < 0.8 else dictionary
     return jsonify(random.choice(pool))
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     print(f"\n=======================================================")
     print(f"🚀 MarketDict Bilingual Web App is running!")
-    print(f"👉 Local URL: http://localhost:{port}")
+    print(f"👉 Local URL: http://localhost:5000")
     print(f"=======================================================\n")
     app.run(host="0.0.0.0", port=port, debug=True)

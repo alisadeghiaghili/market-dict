@@ -1,24 +1,22 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-Investopedia Financial Terms Dictionary Scraper
+Investopedia Financial Terms Dictionary Scraper (Deep Content Edition)
 =============================================================================
 Target: https://www.investopedia.com/financial-term-dictionary-4769738
 
 Key Features:
 - Silent & Stealth: Uses curl_cffi with Chrome 124 TLS/JA3/JA4 fingerprinting
   to bypass Cloudflare WAF silently and headless without any browser popups.
-- Graceful:
-  * Automatic retry with exponential backoff & jitter for network/rate limits (429/503).
+- Full Content Extraction:
+  * Lead Definition (introductory definition paragraphs)
+  * Key Takeaways (all bullet points from callouts)
+  * Complete In-Depth Sections (Formulas, Calculations, Examples, Pros/Cons,
+    Comparisons, FAQs, and 'The Bottom Line')
+- Graceful & Resilient:
+  * Automatic retry with exponential backoff & jitter for network/rate limits.
   * Polite randomized rate limiting between requests to avoid server throttling.
   * Signal handling (Ctrl+C / SIGINT) ensures partial results are safely saved.
-  * Checkpoint & incremental saving support.
-- Dual Scrape Modes:
-  * 'hub' (default): Extracts all 630+ terms directly listed on the dictionary hub page.
-  * 'all' (--all-letters): Follows all 27 letter index subpages (#, A-Z) to extract
-    the full dictionary (thousands of terms).
-- Optional Deep Extraction (--with-details):
-  * Scrapes definitions, meta descriptions, and key takeaways for each term.
 - Multi-format Export: JSON and CSV with UTF-8 encoding.
 =============================================================================
 """
@@ -35,7 +33,6 @@ import argparse
 from typing import List, Dict, Optional, Tuple, Set
 from dataclasses import dataclass, asdict
 
-# Third-party dependencies
 try:
     from bs4 import BeautifulSoup
 except ImportError:
@@ -51,9 +48,6 @@ except ImportError:
     import urllib.error
 
 
-# -----------------------------------------------------------------------------
-# Configuration
-# -----------------------------------------------------------------------------
 @dataclass
 class ScraperConfig:
     hub_url: str = "https://www.investopedia.com/financial-term-dictionary-4769738"
@@ -72,9 +66,6 @@ class ScraperConfig:
     log_level: int = logging.INFO
 
 
-# -----------------------------------------------------------------------------
-# Scraper Implementation
-# -----------------------------------------------------------------------------
 class InvestopediaScraper:
     def __init__(self, config: ScraperConfig):
         self.config = config
@@ -101,10 +92,9 @@ class InvestopediaScraper:
             self.logger.debug("Initialized curl_cffi session with Chrome 124 impersonation.")
         else:
             self.session = None
-            self.logger.warning("curl_cffi not found. Using standard urllib fallback (may trigger Cloudflare 403).")
+            self.logger.warning("curl_cffi not found. Using standard urllib fallback.")
 
     def _setup_signals(self):
-        """Handle Ctrl+C gracefully by saving what has been collected so far."""
         def handle_signal(sig, frame):
             self.logger.warning("\n[!] Interrupt signal received (Ctrl+C). Gracefully finishing and saving collected data...")
             self.interrupted = True
@@ -114,14 +104,10 @@ class InvestopediaScraper:
             signal.signal(signal.SIGTERM, handle_signal)
 
     def _sleep_polite(self):
-        """Graceful randomized delay to avoid triggering server rate limits."""
         delay = random.uniform(self.config.delay_min, self.config.delay_max)
         time.sleep(delay)
 
     def fetch_page(self, url: str) -> Optional[str]:
-        """
-        Fetch HTML content gracefully with retries, exponential backoff, and WAF evasion.
-        """
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
@@ -142,11 +128,7 @@ class InvestopediaScraper:
         while retries <= self.config.max_retries and not self.interrupted:
             try:
                 if HAS_CURL_CFFI:
-                    response = self.session.get(
-                        url,
-                        headers=headers,
-                        timeout=self.config.timeout
-                    )
+                    response = self.session.get(url, headers=headers, timeout=self.config.timeout)
                     status_code = response.status_code
                     text = response.text
                 else:
@@ -158,7 +140,7 @@ class InvestopediaScraper:
                 if status_code == 200:
                     return text
                 elif status_code in (429, 500, 502, 503, 504):
-                    self.logger.warning(f"HTTP {status_code} on {url}. Retrying in {backoff:.1f}s (attempt {retries+1}/{self.config.max_retries})...")
+                    self.logger.warning(f"HTTP {status_code} on {url}. Retrying in {backoff:.1f}s...")
                     time.sleep(backoff)
                     backoff *= self.config.backoff_factor
                     retries += 1
@@ -167,26 +149,19 @@ class InvestopediaScraper:
                     return None
 
             except Exception as e:
-                self.logger.warning(f"Network error on {url}: {e}. Retrying in {backoff:.1f}s (attempt {retries+1}/{self.config.max_retries})...")
+                self.logger.warning(f"Network error on {url}: {e}. Retrying in {backoff:.1f}s...")
                 time.sleep(backoff)
                 backoff *= self.config.backoff_factor
                 retries += 1
 
-        self.logger.error(f"Failed to fetch {url} after {self.config.max_retries} attempts.")
         return None
 
     def parse_hub_page(self, html: str) -> Tuple[List[Dict], Dict[str, str]]:
-        """
-        Parses the master dictionary page:
-        1. Extracts the curated top terms for each letter block.
-        2. Discovers the 27 subpage links ('terms-beginning-with-*') for deep scraping.
-        """
         soup = BeautifulSoup(html, "html.parser")
         hub_terms = []
         letter_links = {}
-
-        # 1. Extract letter blocks
         import re
+
         sections = soup.find_all("div", class_=re.compile(r"dictionary-top24-list__content"))
         for section in sections:
             heading = section.find(["h2", "h3", "span", "a"], class_=re.compile(r"heading|letter|title", re.I))
@@ -210,7 +185,6 @@ class InvestopediaScraper:
                         "source": "hub_page"
                     })
 
-        # 2. Extract full letter index links
         for a in soup.find_all("a", href=re.compile(r"terms-beginning-with-")):
             href = a.get("href", "").strip()
             if href.startswith("/"):
@@ -223,19 +197,12 @@ class InvestopediaScraper:
         return hub_terms, letter_links
 
     def parse_letter_page(self, html: str, letter: str) -> List[Dict]:
-        """
-        Parses an individual letter index page (e.g. Terms Beginning With 'A').
-        Extracts all terms listed under the dictionary list container.
-        """
         import re
         soup = BeautifulSoup(html, "html.parser")
         letter_terms = []
 
-        # Find all term links inside the dictionary container
-        # Pattern covers 'dictionary-top300-list__list', 'dictionary-list', etc.
         anchors = soup.find_all("a", class_=re.compile(r"dictionary-(?:top\d+|list).*__list"))
         if not anchors:
-            # Fallback: scan main content for /terms/ links
             main = soup.find("main") or soup.find("article") or soup
             anchors = [a for a in main.find_all("a", href=True) if "/terms/" in a["href"]]
 
@@ -245,7 +212,6 @@ class InvestopediaScraper:
             if term_url.startswith("/"):
                 term_url = "https://www.investopedia.com" + term_url
 
-            # Filter out non-term links (e.g. navigation or category pages)
             if not term_title or not term_url or "/terms/" not in term_url:
                 continue
 
@@ -262,49 +228,106 @@ class InvestopediaScraper:
 
         return letter_terms
 
+    def parse_full_term_content(self, html: str) -> Dict:
+        """
+        Extracts ALL useful information from a term page:
+        1. Lead definition (paragraphs before first heading)
+        2. Key takeaways (all bullet points)
+        3. All in-depth sections (Heading, Paragraphs, Lists, Examples, Bottom line)
+        """
+        import re
+        soup = BeautifulSoup(html, "html.parser")
+
+        # 1. Meta description
+        meta_desc = ""
+        m = soup.find("meta", attrs={"name": "description"})
+        if m and m.get("content"):
+            meta_desc = m["content"].strip()
+
+        body = soup.find("div", class_="article-body-content") or soup.find("div", id="article-body_1-0") or soup
+
+        # 2. Key Takeaways
+        takeaways = []
+        callout = soup.find(class_=re.compile(r"universal-callout|whatyouneedtoknow|key-takeaways"))
+        if callout:
+            for li in callout.find_all("li"):
+                txt = li.get_text(strip=True)
+                if txt and len(txt) > 5:
+                    takeaways.append(txt)
+
+        # 3. Lead Definition
+        lead_paragraphs = []
+        for p in body.find_all("p", recursive=True):
+            if p.find_parent(class_=re.compile(r"callout|recirc|newsletter|author|ad-")):
+                continue
+            txt = p.get_text(strip=True)
+            if len(txt) > 25 and not any(skip in txt for skip in ["Get personalized", "Investopedia /", "Fact checked by"]):
+                lead_paragraphs.append(txt)
+                if len(lead_paragraphs) >= 2:
+                    break
+
+        lead_definition = "\n\n".join(lead_paragraphs) if lead_paragraphs else meta_desc
+
+        # 4. Detailed Sections
+        sections = []
+        current_sec = None
+        bottom_line = ""
+
+        for el in body.children:
+            if not hasattr(el, "name") or not el.name:
+                continue
+
+            h = el if el.name in ["h2", "h3"] else el.find(["h2", "h3"])
+            if h:
+                htxt = h.get_text(strip=True)
+                if any(skip in htxt.lower() for skip in ["related articles", "article sources", "trending", "newsletter", "key takeaways"]):
+                    continue
+                if current_sec and (current_sec["paragraphs"] or current_sec["items"]):
+                    sections.append(current_sec)
+                current_sec = {"title": htxt, "paragraphs": [], "items": []}
+
+            if current_sec:
+                ps = el.find_all("p") if el.name != "p" else [el]
+                for p in ps:
+                    ptxt = p.get_text(strip=True)
+                    if ptxt and len(ptxt) > 20 and not any(skip in ptxt for skip in ["Get personalized", "Investopedia /", "Fact checked by"]):
+                        if "bottom line" in current_sec["title"].lower():
+                            bottom_line += ptxt + " "
+                        current_sec["paragraphs"].append(ptxt)
+
+                lis = el.find_all("li")
+                for li in lis:
+                    litxt = li.get_text(strip=True)
+                    if litxt and len(litxt) > 5 and len(litxt) < 300:
+                        current_sec["items"].append(litxt)
+
+        if current_sec and (current_sec["paragraphs"] or current_sec["items"]):
+            sections.append(current_sec)
+
+        return {
+            "meta_description": meta_desc,
+            "definition": lead_definition,
+            "key_takeaways": takeaways,
+            "sections": sections,
+            "bottom_line": bottom_line.strip()
+        }
+
     def fetch_term_detail(self, term_dict: Dict) -> Dict:
-        """
-        Optionally fetches the term's page to extract:
-        - Meta description
-        - Summary / Definition
-        - Key Takeaways (if present)
-        """
         url = term_dict["url"]
         self._sleep_polite()
         html = self.fetch_page(url)
         if not html:
             term_dict["definition"] = ""
             term_dict["key_takeaways"] = []
+            term_dict["sections"] = []
+            term_dict["bottom_line"] = ""
             return term_dict
 
-        soup = BeautifulSoup(html, "html.parser")
-
-        # 1. Meta description
-        meta_desc = soup.find("meta", attrs={"name": "description"})
-        term_dict["meta_description"] = meta_desc["content"].strip() if meta_desc and meta_desc.get("content") else ""
-
-        # 2. Key takeaways
-        takeaways = []
-        takeaways_div = soup.find("div", id=lambda x: x and "key-takeaways" in x.lower()) or \
-                        soup.find(class_=lambda x: x and "takeaways" in str(x).lower())
-        if takeaways_div:
-            takeaways = [li.get_text(strip=True) for li in takeaways_div.find_all("li")]
-        term_dict["key_takeaways"] = takeaways
-
-        # 3. Intro definition paragraph
-        body_div = soup.find("div", id="article-body") or soup.find("div", class_=lambda x: x and "article-body" in str(x).lower())
-        if body_div:
-            p = body_div.find("p")
-            term_dict["definition"] = p.get_text(strip=True) if p else ""
-        else:
-            term_dict["definition"] = term_dict.get("meta_description", "")
-
+        details = self.parse_full_term_content(html)
+        term_dict.update(details)
         return term_dict
 
     def run(self) -> List[Dict]:
-        """
-        Orchestrates the scraping flow based on configuration.
-        """
         self.logger.info(f"Starting Investopedia scraper in mode='{self.config.mode}'...")
         self.logger.info(f"Fetching master dictionary hub: {self.config.hub_url}")
 
@@ -319,7 +342,6 @@ class InvestopediaScraper:
 
         self.terms.extend(hub_terms)
 
-        # Mode 'all': Crawl all letter subpages
         if self.config.mode == "all" and not self.interrupted:
             self.logger.info("Beginning deep extraction across all letter subpages...")
             letters_order = sorted(letter_links.keys())
@@ -332,47 +354,38 @@ class InvestopediaScraper:
                     break
 
                 letter_url = letter_links[letter_key]
-                self.logger.info(f"[{idx}/{len(letters_order)}] Scraping letter '{letter_key}' ({letter_url})...")
+                self.logger.info(f"[{idx}/{len(letters_order)}] Scraping letter '{letter_key}'...")
                 self._sleep_polite()
 
                 sub_html = self.fetch_page(letter_url)
                 if not sub_html:
-                    self.logger.warning(f"Could not load letter '{letter_key}'. Skipping.")
                     continue
 
                 sub_terms = self.parse_letter_page(sub_html, letter_key)
-                self.logger.info(f"  -> Added {len(sub_terms)} new terms for letter '{letter_key}'. Total so far: {len(self.terms) + len(sub_terms)}")
                 self.terms.extend(sub_terms)
 
-        # Truncate if max_terms specified
         if self.config.max_terms:
             self.terms = self.terms[:self.config.max_terms]
 
-        # Mode '--with-details': Fetch term details
         if self.config.fetch_details and not self.interrupted:
             total = len(self.terms)
-            self.logger.info(f"Fetching in-depth definitions for {total} terms...")
+            self.logger.info(f"Fetching complete in-depth content (definition, takeaways, full sections) for {total} terms...")
             for idx, item in enumerate(self.terms, 1):
                 if self.interrupted:
                     break
-                self.logger.info(f"[{idx}/{total}] Fetching details: {item['term']}")
+                self.logger.info(f"[{idx}/{total}] Scraping full details: {item['term']}")
                 self.fetch_term_detail(item)
 
-        self.logger.info(f"Scraping completed! Total unique terms collected: {len(self.terms)}")
+        self.logger.info(f"Scraping completed! Total unique terms: {len(self.terms)}")
         self.save_results()
         return self.terms
 
     def save_results(self):
-        """
-        Saves the results cleanly to JSON and/or CSV files.
-        """
         if not self.terms:
-            self.logger.warning("No terms collected to save.")
             return
 
         prefix = self.config.output_prefix
 
-        # 1. JSON Export
         if self.config.export_json:
             json_filename = f"{prefix}.json"
             try:
@@ -382,14 +395,12 @@ class InvestopediaScraper:
             except Exception as e:
                 self.logger.error(f"Failed to write JSON: {e}")
 
-        # 2. CSV Export
         if self.config.export_csv:
             csv_filename = f"{prefix}.csv"
             try:
-                # Determine fieldnames dynamically
                 keys = ["letter", "term", "url", "slug", "source"]
                 if self.config.fetch_details:
-                    keys += ["meta_description", "definition", "key_takeaways"]
+                    keys += ["definition", "key_takeaways", "bottom_line"]
 
                 with open(csv_filename, "w", encoding="utf-8-sig", newline="") as f:
                     writer = csv.DictWriter(f, fieldnames=keys, extrasaction="ignore")
@@ -404,58 +415,18 @@ class InvestopediaScraper:
                 self.logger.error(f"Failed to write CSV: {e}")
 
 
-# -----------------------------------------------------------------------------
-# CLI Entry Point
-# -----------------------------------------------------------------------------
 def parse_arguments() -> ScraperConfig:
     parser = argparse.ArgumentParser(
-        description="Accurate, graceful & silent scraper for Investopedia Financial Terms Dictionary."
+        description="Deep, accurate, graceful & silent scraper for Investopedia Financial Terms Dictionary."
     )
-    parser.add_argument(
-        "--mode",
-        choices=["hub", "all"],
-        default="hub",
-        help="Scraping mode: 'hub' extracts terms directly on the target URL (~630 terms); 'all' follows all 27 letter subpages to extract the entire dictionary (~6,000+ terms)."
-    )
-    parser.add_argument(
-        "-o", "--output",
-        default="investopedia_terms",
-        help="Output filename prefix (without extension). Default: 'investopedia_terms'."
-    )
-    parser.add_argument(
-        "--format",
-        choices=["json", "csv", "both"],
-        default="both",
-        help="Export format: 'json', 'csv', or 'both' (default: both)."
-    )
-    parser.add_argument(
-        "--with-details",
-        action="store_true",
-        help="Fetch in-depth definition, meta description, and key takeaways for each term."
-    )
-    parser.add_argument(
-        "--delay-min",
-        type=float,
-        default=0.8,
-        help="Minimum polite delay between requests in seconds (default: 0.8s)."
-    )
-    parser.add_argument(
-        "--delay-max",
-        type=float,
-        default=2.0,
-        help="Maximum polite delay between requests in seconds (default: 2.0s)."
-    )
-    parser.add_argument(
-        "--max-terms",
-        type=int,
-        default=None,
-        help="Optional limit on maximum number of terms to collect (useful for testing)."
-    )
-    parser.add_argument(
-        "-q", "--quiet",
-        action="store_true",
-        help="Silent mode (suppress terminal logs, except errors)."
-    )
+    parser.add_argument("--mode", choices=["hub", "all"], default="hub")
+    parser.add_argument("-o", "--output", default="investopedia_terms")
+    parser.add_argument("--format", choices=["json", "csv", "both"], default="both")
+    parser.add_argument("--with-details", action="store_true", help="Fetch complete definitions, takeaways, and full in-depth sections for every term.")
+    parser.add_argument("--delay-min", type=float, default=0.8)
+    parser.add_argument("--delay-max", type=float, default=2.0)
+    parser.add_argument("--max-terms", type=int, default=None)
+    parser.add_argument("-q", "--quiet", action="store_true")
 
     args = parser.parse_args()
 
