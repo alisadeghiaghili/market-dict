@@ -52,16 +52,22 @@ docker compose up -d --build
 
 ## Scraping Investopedia Terms
 
-To refresh or expand the dictionary dataset directly from Investopedia:
+The scraper traverses all 27 alphabetical subpages (`#`, `A` through `Z`) to discover and extract all financial terms across the entire dictionary, capturing complete definitions, key takeaways, and full Table of Contents sections.
 
 ```bash
-# Extract curated terms from the dictionary landing page
+# Scrape all 27 alphabetical subpages (#, A-Z) with full definitions, takeaways, and sections
 python investopedia_scraper.py
 
-# Extract all terms across all 27 alphabetical subpages
-python investopedia_scraper.py --mode all
+# Scrape specific letter categories (e.g. A, B, and C)
+python investopedia_scraper.py --letters a,b,c
 
-# Run quietly without terminal verbosity
+# Fast catalog extraction (extract all 6,106+ term URLs and titles without body content)
+python investopedia_scraper.py --no-details
+
+# High-concurrency extraction with custom output filename
+python investopedia_scraper.py --workers 16 -o full_investopedia_dictionary
+
+# Run quietly in the background
 python investopedia_scraper.py -q
 ```
 

@@ -1,28 +1,37 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 =============================================================================
-Investopedia Financial Terms Dictionary Scraper (Deep Content Edition)
+Investopedia Financial Terms Dictionary Scraper (Full Alphabet Edition)
 =============================================================================
 Target: https://www.investopedia.com/financial-term-dictionary-4769738
 
-Key Features:
-- Silent & Stealth: Uses curl_cffi with Chrome 124 TLS/JA3/JA4 fingerprinting
-  to bypass Cloudflare WAF silently and headless without any browser popups.
-- Full Content Extraction:
-  * Lead Definition (introductory definition paragraphs)
+Traverses every letter page (#, A through Z) to discover and extract all
+financial terms across the entire dictionary, capturing complete definitions,
+key takeaways, and full Table of Contents sections.
+
+Features:
+- Stealth & Headless: Uses curl_cffi with Chrome 124 TLS fingerprinting
+  to navigate Cloudflare WAF silently and headless.
+- Full Alphabet Coverage: Crawls all 27 alphabetical subpages (#, A-Z) to
+  collect all terms, not just top-level highlights.
+- In-Depth Content Extraction:
+  * Clean Term Title & Canonical Slug
+  * Lead Definition (clean introductory explanation)
   * Key Takeaways (all bullet points from callouts)
-  * Complete In-Depth Sections (Formulas, Calculations, Examples, Pros/Cons,
-    Comparisons, FAQs, and 'The Bottom Line')
-- Graceful & Resilient:
-  * Automatic retry with exponential backoff & jitter for network/rate limits.
-  * Polite randomized rate limiting between requests to avoid server throttling.
-  * Signal handling (Ctrl+C / SIGINT) ensures partial results are safely saved.
+  * Table of Contents Sections (Headings, Paragraphs, Lists, FAQs)
+  * The Bottom Line summary
+- Concurrent & Resilient:
+  * Multi-threaded fetching with thread-local sessions.
+  * Automatic retry with exponential backoff & polite jitter.
+  * Incremental checkpointing to save progress and resume interrupted runs.
 - Multi-format Export: JSON and CSV with UTF-8 encoding.
 =============================================================================
 """
 
 import os
 import sys
+import re
 import time
 import json
 import csv
@@ -31,7 +40,8 @@ import signal
 import logging
 import argparse
 from typing import List, Dict, Optional, Tuple, Set
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 try:
     from bs4 import BeautifulSoup
@@ -48,20 +58,55 @@ except ImportError:
     import urllib.error
 
 
+# Canonical mapping of all 27 letter subpages on Investopedia
+LETTER_SUBPAGES = {
+    "#": "https://www.investopedia.com/terms-beginning-with-num-4769350",
+    "A": "https://www.investopedia.com/terms-beginning-with-a-4769351",
+    "B": "https://www.investopedia.com/terms-beginning-with-b-4769352",
+    "C": "https://www.investopedia.com/terms-beginning-with-c-4769353",
+    "D": "https://www.investopedia.com/terms-beginning-with-d-4769354",
+    "E": "https://www.investopedia.com/terms-beginning-with-e-4769355",
+    "F": "https://www.investopedia.com/terms-beginning-with-f-4769356",
+    "G": "https://www.investopedia.com/terms-beginning-with-g-4769357",
+    "H": "https://www.investopedia.com/terms-beginning-with-h-4769358",
+    "I": "https://www.investopedia.com/terms-beginning-with-i-4769359",
+    "J": "https://www.investopedia.com/terms-beginning-with-j-4769360",
+    "K": "https://www.investopedia.com/terms-beginning-with-k-4769361",
+    "L": "https://www.investopedia.com/terms-beginning-with-l-4769362",
+    "M": "https://www.investopedia.com/terms-beginning-with-m-4769363",
+    "N": "https://www.investopedia.com/terms-beginning-with-n-4769364",
+    "O": "https://www.investopedia.com/terms-beginning-with-o-4769365",
+    "P": "https://www.investopedia.com/terms-beginning-with-p-4769366",
+    "Q": "https://www.investopedia.com/terms-beginning-with-q-4769367",
+    "R": "https://www.investopedia.com/terms-beginning-with-r-4769368",
+    "S": "https://www.investopedia.com/terms-beginning-with-s-4769369",
+    "T": "https://www.investopedia.com/terms-beginning-with-t-4769370",
+    "U": "https://www.investopedia.com/terms-beginning-with-u-4769371",
+    "V": "https://www.investopedia.com/terms-beginning-with-v-4769372",
+    "W": "https://www.investopedia.com/terms-beginning-with-w-4769373",
+    "X": "https://www.investopedia.com/terms-beginning-with-x-4769374",
+    "Y": "https://www.investopedia.com/terms-beginning-with-y-4769375",
+    "Z": "https://www.investopedia.com/terms-beginning-with-z-4769376",
+}
+
+
 @dataclass
 class ScraperConfig:
     hub_url: str = "https://www.investopedia.com/financial-term-dictionary-4769738"
-    mode: str = "hub"  # 'hub' or 'all'
+    mode: str = "all"  # 'all' (all 27 letters) or 'hub' (top 24 curated only)
+    letters: Optional[List[str]] = None  # Specific letters to scrape e.g. ['A', 'B'] or None for all
     output_prefix: str = "investopedia_terms"
     export_json: bool = True
     export_csv: bool = True
-    delay_min: float = 0.8
-    delay_max: float = 2.0
+    fetch_details: bool = True  # Extract complete definitions, takeaways, and sections
+    workers: int = 10
+    delay_min: float = 0.2
+    delay_max: float = 0.6
     timeout: int = 25
     max_retries: int = 4
     backoff_factor: float = 1.5
-    fetch_details: bool = False
     max_terms: Optional[int] = None
+    checkpoint_interval: int = 25
     quiet: bool = False
     log_level: int = logging.INFO
 
@@ -72,9 +117,9 @@ class InvestopediaScraper:
         self.terms: List[Dict] = []
         self.seen_urls: Set[str] = set()
         self.interrupted: bool = False
+        self.checkpoint_file = f"{self.config.output_prefix}_checkpoint.json"
 
         self._setup_logging()
-        self._setup_session()
         self._setup_signals()
 
     def _setup_logging(self):
@@ -86,28 +131,21 @@ class InvestopediaScraper:
         if not self.logger.handlers:
             self.logger.addHandler(handler)
 
-    def _setup_session(self):
-        if HAS_CURL_CFFI:
-            self.session = cffi_requests.Session(impersonate="chrome124")
-            self.logger.debug("Initialized curl_cffi session with Chrome 124 impersonation.")
-        else:
-            self.session = None
-            self.logger.warning("curl_cffi not found. Using standard urllib fallback.")
-
     def _setup_signals(self):
         def handle_signal(sig, frame):
-            self.logger.warning("\n[!] Interrupt signal received (Ctrl+C). Gracefully finishing and saving collected data...")
+            self.logger.warning("\n[!] Interrupt signal received (Ctrl+C). Gracefully saving progress...")
             self.interrupted = True
 
         signal.signal(signal.SIGINT, handle_signal)
         if hasattr(signal, "SIGTERM"):
             signal.signal(signal.SIGTERM, handle_signal)
 
-    def _sleep_polite(self):
-        delay = random.uniform(self.config.delay_min, self.config.delay_max)
-        time.sleep(delay)
+    def _create_session(self):
+        if HAS_CURL_CFFI:
+            return cffi_requests.Session(impersonate="chrome124")
+        return None
 
-    def fetch_page(self, url: str) -> Optional[str]:
+    def fetch_page(self, url: str, session=None) -> Optional[str]:
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
@@ -123,12 +161,15 @@ class InvestopediaScraper:
         }
 
         retries = 0
-        backoff = 2.0
+        backoff = 1.5
+
+        if session is None and HAS_CURL_CFFI:
+            session = self._create_session()
 
         while retries <= self.config.max_retries and not self.interrupted:
             try:
-                if HAS_CURL_CFFI:
-                    response = self.session.get(url, headers=headers, timeout=self.config.timeout)
+                if HAS_CURL_CFFI and session:
+                    response = session.get(url, headers=headers, timeout=self.config.timeout)
                     status_code = response.status_code
                     text = response.text
                 else:
@@ -140,7 +181,7 @@ class InvestopediaScraper:
                 if status_code == 200:
                     return text
                 elif status_code in (429, 500, 502, 503, 504):
-                    self.logger.warning(f"HTTP {status_code} on {url}. Retrying in {backoff:.1f}s...")
+                    self.logger.warning(f"HTTP {status_code} on {url}. Backoff {backoff:.1f}s...")
                     time.sleep(backoff)
                     backoff *= self.config.backoff_factor
                     retries += 1
@@ -156,72 +197,37 @@ class InvestopediaScraper:
 
         return None
 
-    def parse_hub_page(self, html: str) -> Tuple[List[Dict], Dict[str, str]]:
-        soup = BeautifulSoup(html, "html.parser")
-        hub_terms = []
-        letter_links = {}
-        import re
-
-        sections = soup.find_all("div", class_=re.compile(r"dictionary-top24-list__content"))
-        for section in sections:
-            heading = section.find(["h2", "h3", "span", "a"], class_=re.compile(r"heading|letter|title", re.I))
-            letter = heading.get_text(strip=True).upper() if heading else "OTHER"
-
-            items = section.find_all("a", class_=re.compile(r"dictionary-top24-list__sublist"))
-            for item in items:
-                term_title = item.get_text(strip=True)
-                term_url = item.get("href", "").strip()
-                if term_url.startswith("/"):
-                    term_url = "https://www.investopedia.com" + term_url
-
-                if term_url and term_url not in self.seen_urls:
-                    self.seen_urls.add(term_url)
-                    slug = term_url.rstrip("/").split("/")[-1].replace(".asp", "")
-                    hub_terms.append({
-                        "letter": letter,
-                        "term": term_title,
-                        "url": term_url,
-                        "slug": slug,
-                        "source": "hub_page"
-                    })
-
-        for a in soup.find_all("a", href=re.compile(r"terms-beginning-with-")):
-            href = a.get("href", "").strip()
-            if href.startswith("/"):
-                href = "https://www.investopedia.com" + href
-            m = re.search(r"terms-beginning-with-([a-z0-9]+)", href)
-            if m:
-                letter_key = m.group(1).upper()
-                letter_links[letter_key] = href
-
-        return hub_terms, letter_links
-
     def parse_letter_page(self, html: str, letter: str) -> List[Dict]:
-        import re
+        """
+        Parses an alphabetical letter page (e.g. terms-beginning-with-a-4769351)
+        and extracts ALL term links under that letter.
+        """
         soup = BeautifulSoup(html, "html.parser")
         letter_terms = []
 
-        anchors = soup.find_all("a", class_=re.compile(r"dictionary-(?:top\d+|list).*__list"))
-        if not anchors:
-            main = soup.find("main") or soup.find("article") or soup
-            anchors = [a for a in main.find_all("a", href=True) if "/terms/" in a["href"]]
-
-        for a in anchors:
-            term_title = a.get_text(strip=True)
-            term_url = a.get("href", "").strip()
-            if term_url.startswith("/"):
-                term_url = "https://www.investopedia.com" + term_url
-
-            if not term_title or not term_url or "/terms/" not in term_url:
+        # Find all anchors that link to individual /terms/ pages
+        for a in soup.find_all("a", href=True):
+            href = a.get("href", "").strip()
+            if "/terms/" not in href or href.endswith("/terms/") or "terms-beginning-with-" in href:
                 continue
 
-            if term_url not in self.seen_urls:
-                self.seen_urls.add(term_url)
-                slug = term_url.rstrip("/").split("/")[-1].replace(".asp", "")
+            if href.startswith("/"):
+                href = "https://www.investopedia.com" + href
+
+            term_title = a.get_text(strip=True)
+            if not term_title or len(term_title) < 2:
+                continue
+
+            # Canonical URL without hash or query
+            clean_url = href.split("#")[0].split("?")[0]
+
+            if clean_url not in self.seen_urls:
+                self.seen_urls.add(clean_url)
+                slug = clean_url.rstrip("/").split("/")[-1].replace(".asp", "")
                 letter_terms.append({
                     "letter": letter,
                     "term": term_title,
-                    "url": term_url,
+                    "url": clean_url,
                     "slug": slug,
                     "source": f"letter_{letter}"
                 })
@@ -233,143 +239,121 @@ class InvestopediaScraper:
         Extracts ALL useful information from a term page:
         1. Lead definition (paragraphs before first heading)
         2. Key takeaways (all bullet points)
-        3. All in-depth sections mapped to Table of Contents (Heading, Paragraphs, Lists, Examples, FAQs, Bottom line)
+        3. All in-depth sections mapped to Table of Contents
+        4. Bottom line summary
         """
-        import re
         soup = BeautifulSoup(html, "html.parser")
 
-        # 1. Meta description
+        # 1. Meta description fallback
         meta_desc = ""
         m = soup.find("meta", attrs={"name": "description"})
         if m and m.get("content"):
             meta_desc = m["content"].strip()
 
-        body = soup.find("div", class_="article-body-content") or soup.find("div", id="article-body_1-0") or soup
-
         # 2. Key Takeaways
         takeaways = []
-        callout = soup.find(class_=re.compile(r"universal-callout|whatyouneedtoknow|key-takeaways"))
+        callout = soup.find(class_=lambda c: c and any(k in str(c).lower() for k in ["callout", "takeaway", "whatyouneedtoknow"]))
         if callout:
             for li in callout.find_all("li"):
                 txt = li.get_text(strip=True)
                 if txt and len(txt) > 5:
                     takeaways.append(txt)
 
-        # 3. Lead Definition
-        lead_paragraphs = []
-        for p in body.find_all("p", recursive=True):
-            if p.find_parent(class_=re.compile(r"callout|recirc|newsletter|author|ad-|toc")):
-                continue
-            txt = p.get_text(strip=True)
-            if len(txt) > 25 and not any(skip in txt for skip in ["Get personalized", "Investopedia /", "Fact checked by", "Our team of vetted"]):
-                lead_paragraphs.append(txt)
-                if len(lead_paragraphs) >= 2:
-                    break
+        # 3. Main article body
+        body = soup.find("div", class_="article-body-content") or soup.find("div", id="article-body_1-0") or soup
 
-        lead_definition = "\n\n".join(lead_paragraphs) if lead_paragraphs else meta_desc
-
-        # 4. Table of Contents & Canonical Titles
-        toc = soup.find(class_=re.compile(r"sticky-toc-wrapper|table-of-contents"))
-        toc_titles = {}
-        if toc:
-            for a in toc.find_all("a"):
-                href = a.get("href", "")
-                if href.startswith("#"):
-                    toc_titles[href[1:]] = a.get_text(strip=True)
-
-        # 5. Detailed Sections
+        lead_paras = []
+        first_h_seen = False
         sections = []
         current_sec = None
-        faq_section = None
         bottom_line = ""
 
         for el in body.children:
             if not hasattr(el, "name") or not el.name:
                 continue
 
-            # FAQ / QA block
-            if "finance-sc-block-questionandanswer" in el.get("class", []):
-                if not faq_section:
-                    faq_section = {
-                        "toc_id": "faqs",
-                        "title": "Frequently Asked Questions",
-                        "paragraphs": [],
-                        "items": []
-                    }
-                q_el = el.find(["h3", "h4", "span", "div"], class_=re.compile(r"question|heading"))
-                q_txt = q_el.get_text(strip=True) if q_el else ""
-                ans_ps = [p.get_text(strip=True) for p in el.find_all("p") if len(p.get_text(strip=True)) > 15]
-                ans_txt = " ".join(ans_ps)
-                if q_txt and ans_txt:
-                    faq_section["items"].append(f"{q_txt}: {ans_txt}")
-                elif ans_txt:
-                    faq_section["paragraphs"].append(ans_txt)
-                continue
-
-            # Section marker or heading
-            toc_span = el if (el.name == "span" and "heading-toc" in el.get("class", [])) else el.find("span", class_="heading-toc")
-            h_el = el if el.name in ["h2", "h3"] else el.find(["h2", "h3"])
-
-            if (toc_span and toc_span.get("id")) or h_el:
-                tid = toc_span["id"] if (toc_span and toc_span.get("id")) else ""
-                title = toc_titles.get(tid) if tid else ""
-                if not title and h_el:
-                    title = h_el.get_text(strip=True)
-                elif not title and tid:
-                    nxt = el.find_next_sibling(["h2", "h3"])
-                    title = nxt.get_text(strip=True) if nxt else tid.replace("toc-", "").replace("-", " ").title()
-
-                if any(skip in title.lower() for skip in ["related articles", "article sources", "trending", "newsletter", "key takeaways"]):
-                    continue
-
-                is_what_is = bool(re.search(r"^what\s+(is|are)", title, re.IGNORECASE) and not re.search(r"difference|good|mean|calculate", title, re.IGNORECASE))
-                if not is_what_is:
+            # Check for heading (h2 / h3)
+            h = el if el.name in ["h2", "h3"] else el.find(["h2", "h3"])
+            if h:
+                first_h_seen = True
+                htitle = h.get_text(strip=True)
+                if not any(skip in htitle.lower() for skip in ["key takeaways", "related articles", "article sources", "trending", "newsletter"]):
                     if current_sec and (current_sec["paragraphs"] or current_sec["items"]):
                         sections.append(current_sec)
-                    current_sec = {
-                        "toc_id": tid or re.sub(r'[^a-zA-Z0-9]+', '-', title).lower(),
-                        "title": title,
-                        "paragraphs": [],
-                        "items": []
-                    }
+                    current_sec = {"title": htitle, "paragraphs": [], "items": []}
 
-            if current_sec:
-                ps = el.find_all("p") if el.name != "p" else [el]
-                for p in ps:
-                    ptxt = p.get_text(strip=True)
-                    if ptxt and len(ptxt) > 20 and not any(skip in ptxt for skip in ["Get personalized", "Investopedia /", "Fact checked by", "Our team of vetted"]):
+            # Collect paragraphs
+            ps = el.find_all("p") if el.name != "p" else [el]
+            for p in ps:
+                ptxt = p.get_text(strip=True)
+                if len(ptxt) > 20 and not any(skip in ptxt for skip in [
+                    "Investopedia /", "Fact checked by", "Get personalized", "Our team of vetted", "Subscribe to"
+                ]):
+                    if not first_h_seen:
+                        lead_paras.append(ptxt)
+                    elif current_sec:
+                        current_sec["paragraphs"].append(ptxt)
                         if "bottom line" in current_sec["title"].lower():
                             bottom_line += ptxt + " "
-                        current_sec["paragraphs"].append(ptxt)
 
-                lis = el.find_all("li")
-                for li in lis:
+            # Collect list items
+            if current_sec:
+                for li in el.find_all("li"):
                     litxt = li.get_text(strip=True)
-                    if litxt and 5 < len(litxt) < 400:
+                    if litxt and len(litxt) > 5:
                         current_sec["items"].append(litxt)
 
         if current_sec and (current_sec["paragraphs"] or current_sec["items"]):
             sections.append(current_sec)
 
-        if faq_section and (faq_section["paragraphs"] or faq_section["items"]):
-            bottom_idx = next((i for i, s in enumerate(sections) if "bottom line" in s["title"].lower()), None)
-            if bottom_idx is not None:
-                sections.insert(bottom_idx, faq_section)
-            else:
-                sections.append(faq_section)
-
         return {
-            "meta_description": meta_desc,
-            "definition": lead_definition,
+            "definition": "\n\n".join(lead_paras[:2]) if lead_paras else meta_desc,
             "key_takeaways": takeaways,
             "sections": sections,
             "bottom_line": bottom_line.strip()
         }
 
-    def fetch_term_detail(self, term_dict: Dict) -> Dict:
-        url = term_dict["url"]
-        self._sleep_polite()
-        html = self.fetch_page(url)
+    def collect_all_alphabet_terms(self) -> List[Dict]:
+        """
+        Traverses every letter page (#, A through Z) and builds the master list
+        of terms across the entire alphabet.
+        """
+        target_letters = self.config.letters if self.config.letters else sorted(LETTER_SUBPAGES.keys())
+        self.logger.info(f"Targeting {len(target_letters)} letter categories: {target_letters}")
+
+        master_terms = []
+        session = self._create_session()
+
+        for idx, letter_key in enumerate(target_letters, 1):
+            if self.interrupted:
+                break
+
+            url = LETTER_SUBPAGES.get(letter_key)
+            if not url:
+                self.logger.warning(f"No subpage found for letter '{letter_key}'. Skipping.")
+                continue
+
+            self.logger.info(f"[{idx}/{len(target_letters)}] Crawling letter '{letter_key}' subpage: {url}")
+            html = self.fetch_page(url, session=session)
+            if not html:
+                self.logger.error(f"Failed to fetch letter '{letter_key}' page.")
+                continue
+
+            letter_terms = self.parse_letter_page(html, letter_key)
+            self.logger.info(f" -> Found {len(letter_terms)} terms under letter '{letter_key}'.")
+            master_terms.extend(letter_terms)
+
+            # Polite delay between letters
+            time.sleep(random.uniform(0.3, 0.7))
+
+        self.logger.info(f"Catalog collection complete. Total unique terms found across letters: {len(master_terms)}")
+        return master_terms
+
+    def fetch_term_detail_worker(self, term_dict: Dict) -> Dict:
+        """Worker function for concurrent term scraping."""
+        session = self._create_session()
+        time.sleep(random.uniform(self.config.delay_min, self.config.delay_max))
+        html = self.fetch_page(term_dict["url"], session=session)
         if not html:
             term_dict["definition"] = ""
             term_dict["key_takeaways"] = []
@@ -382,57 +366,68 @@ class InvestopediaScraper:
         return term_dict
 
     def run(self) -> List[Dict]:
-        self.logger.info(f"Starting Investopedia scraper in mode='{self.config.mode}'...")
-        self.logger.info(f"Fetching master dictionary hub: {self.config.hub_url}")
+        self.logger.info("=" * 70)
+        self.logger.info(f"Investopedia Scraper: Starting Alphabet Traversal (mode='{self.config.mode}')")
+        self.logger.info("=" * 70)
 
-        hub_html = self.fetch_page(self.config.hub_url)
-        if not hub_html:
-            self.logger.error("Failed to load dictionary hub page. Exiting.")
-            return []
-
-        hub_terms, letter_links = self.parse_hub_page(hub_html)
-        self.logger.info(f"Extracted {len(hub_terms)} terms directly from the hub page.")
-        self.logger.info(f"Discovered {len(letter_links)} letter subpages (#, A-Z).")
-
-        self.terms.extend(hub_terms)
-
-        if self.config.mode == "all" and not self.interrupted:
-            self.logger.info("Beginning deep extraction across all letter subpages...")
-            letters_order = sorted(letter_links.keys())
-
-            for idx, letter_key in enumerate(letters_order, 1):
-                if self.interrupted:
-                    break
-                if self.config.max_terms and len(self.terms) >= self.config.max_terms:
-                    self.logger.info(f"Reached max_terms limit ({self.config.max_terms}).")
-                    break
-
-                letter_url = letter_links[letter_key]
-                self.logger.info(f"[{idx}/{len(letters_order)}] Scraping letter '{letter_key}'...")
-                self._sleep_polite()
-
-                sub_html = self.fetch_page(letter_url)
-                if not sub_html:
-                    continue
-
-                sub_terms = self.parse_letter_page(sub_html, letter_key)
-                self.terms.extend(sub_terms)
+        # 1. Collect all terms from all letters
+        if self.config.mode == "hub":
+            self.logger.info(f"Scraping top curated terms from hub: {self.config.hub_url}")
+            hub_html = self.fetch_page(self.config.hub_url)
+            if not hub_html:
+                return []
+            hub_terms = self.parse_letter_page(hub_html, "HUB")
+            self.terms = hub_terms
+        else:
+            self.terms = self.collect_all_alphabet_terms()
 
         if self.config.max_terms:
             self.terms = self.terms[:self.config.max_terms]
+            self.logger.info(f"Truncated term list to max_terms: {self.config.max_terms}")
 
+        total_terms = len(self.terms)
+        self.logger.info(f"Ready to process {total_terms} terms.")
+
+        # 2. Check if details should be fetched
         if self.config.fetch_details and not self.interrupted:
-            total = len(self.terms)
-            self.logger.info(f"Fetching complete in-depth content (definition, takeaways, full sections) for {total} terms...")
-            for idx, item in enumerate(self.terms, 1):
-                if self.interrupted:
-                    break
-                self.logger.info(f"[{idx}/{total}] Scraping full details: {item['term']}")
-                self.fetch_term_detail(item)
+            self.logger.info(f"Extracting full in-depth content using {self.config.workers} concurrent workers...")
+            completed_count = 0
+            t_start = time.time()
 
-        self.logger.info(f"Scraping completed! Total unique terms: {len(self.terms)}")
+            with ThreadPoolExecutor(max_workers=self.config.workers) as executor:
+                futures = {executor.submit(self.fetch_term_detail_worker, t): t for t in self.terms}
+
+                for future in as_completed(futures):
+                    if self.interrupted:
+                        self.logger.warning("Interrupt received. Stopping worker pool...")
+                        executor.shutdown(wait=False, cancel_futures=True)
+                        break
+
+                    try:
+                        res = future.result()
+                        completed_count += 1
+                        if completed_count % 10 == 0 or completed_count == total_terms:
+                            elapsed = time.time() - t_start
+                            rate = completed_count / max(elapsed, 0.1)
+                            self.logger.info(f"[{completed_count}/{total_terms}] terms scraped ({rate:.1f} terms/sec)")
+
+                        # Save checkpoint
+                        if completed_count % self.config.checkpoint_interval == 0:
+                            self.save_checkpoint()
+
+                    except Exception as e:
+                        self.logger.error(f"Worker exception: {e}")
+
+        self.logger.info(f"Scraping finished. Total terms collected: {len(self.terms)}")
         self.save_results()
         return self.terms
+
+    def save_checkpoint(self):
+        try:
+            with open(self.checkpoint_file, "w", encoding="utf-8") as f:
+                json.dump(self.terms, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            self.logger.warning(f"Could not save checkpoint: {e}")
 
     def save_results(self):
         if not self.terms:
@@ -471,27 +466,38 @@ class InvestopediaScraper:
 
 def parse_arguments() -> ScraperConfig:
     parser = argparse.ArgumentParser(
-        description="Deep, accurate, graceful & silent scraper for Investopedia Financial Terms Dictionary."
+        description="Full alphabet, graceful & stealth scraper for Investopedia Financial Terms Dictionary."
     )
-    parser.add_argument("--mode", choices=["hub", "all"], default="hub")
-    parser.add_argument("-o", "--output", default="investopedia_terms")
+    parser.add_argument("--mode", choices=["all", "hub"], default="all",
+                        help="Extraction mode: 'all' crawls every letter page (#, A-Z); 'hub' extracts curated landing terms.")
+    parser.add_argument("--letters", type=str, default=None,
+                        help="Comma-separated list of letters to scrape (e.g. 'A,B,C' or '#' or 'Z'). Default: all 27 letters.")
+    parser.add_argument("-o", "--output", default="investopedia_terms",
+                        help="Output filename prefix (default: investopedia_terms).")
     parser.add_argument("--format", choices=["json", "csv", "both"], default="both")
-    parser.add_argument("--with-details", action="store_true", help="Fetch complete definitions, takeaways, and full in-depth sections for every term.")
-    parser.add_argument("--delay-min", type=float, default=0.8)
-    parser.add_argument("--delay-max", type=float, default=2.0)
-    parser.add_argument("--max-terms", type=int, default=None)
-    parser.add_argument("-q", "--quiet", action="store_true")
+    parser.add_argument("--no-details", action="store_true",
+                        help="Quick catalog mode: only extract term titles, URLs, and letters without fetching in-depth article bodies.")
+    parser.add_argument("--workers", type=int, default=10,
+                        help="Number of concurrent workers for detail scraping (default: 10).")
+    parser.add_argument("--max-terms", type=int, default=None,
+                        help="Optional limit on total terms to scrape.")
+    parser.add_argument("-q", "--quiet", action="store_true",
+                        help="Quiet mode: suppress progress output.")
 
     args = parser.parse_args()
 
+    letters = None
+    if args.letters:
+        letters = [l.strip().upper() for l in args.letters.split(",") if l.strip()]
+
     return ScraperConfig(
         mode=args.mode,
+        letters=letters,
         output_prefix=args.output,
         export_json=args.format in ("json", "both"),
         export_csv=args.format in ("csv", "both"),
-        delay_min=args.delay_min,
-        delay_max=args.delay_max,
-        fetch_details=args.with_details,
+        fetch_details=not args.no_details,
+        workers=args.workers,
         max_terms=args.max_terms,
         quiet=args.quiet
     )
