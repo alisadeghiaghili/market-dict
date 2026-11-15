@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarketDict | واژه‌نامه تخصصی اصطلاحات مالی اینوستوپدیا</title>
+    <title>Market Dict</title>
+    
+    <!-- Meaningful Financial Market & Dictionary Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
     
     <!-- Google Fonts: Vazirmatn (FA) & Inter (EN) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,19 +79,40 @@
     <header class="sticky top-0 z-40 backdrop-blur-md bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between gap-4">
             
-            <!-- Logo & Brand -->
+            <!-- Logo & Brand with Financial Icon -->
             <div class="flex items-center gap-3 cursor-pointer" onclick="resetFilters()">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white shadow-md shadow-emerald-500/20">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                <div class="w-10 h-10 rounded-xl overflow-hidden shadow-md shadow-emerald-500/20 flex-shrink-0">
+                    <!-- Meaningful SVG Logo: Candlesticks + Dictionary Book -->
+                    <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
+                        <defs>
+                            <linearGradient id="navBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#10b981"/>
+                                <stop offset="50%" stop-color="#059669"/>
+                                <stop offset="100%" stop-color="#047857"/>
+                            </linearGradient>
+                            <linearGradient id="navGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#fbbf24"/>
+                                <stop offset="100%" stop-color="#f59e0b"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="64" height="64" rx="14" fill="url(#navBgGrad)"/>
+                        <line x1="20" y1="24" x2="20" y2="44" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="17" y="28" width="6" height="12" rx="1.5" fill="#ffffff"/>
+                        <line x1="32" y1="16" x2="32" y2="44" stroke="url(#navGoldGrad)" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="29" y="20" width="6" height="18" rx="1.5" fill="url(#navGoldGrad)"/>
+                        <line x1="44" y1="12" x2="44" y2="40" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="41" y="15" width="6" height="16" rx="1.5" fill="#ffffff"/>
+                        <path d="M14 48 C 22 45, 28 47, 32 50 C 36 47, 42 45, 50 48" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M22 34 L 32 24 L 38 30 L 48 18" stroke="url(#navGoldGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="43,18 48,18 48,23" stroke="url(#navGoldGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
                 <div>
                     <div class="flex items-center gap-2">
                         <span class="font-en font-bold text-xl tracking-tight text-slate-900 dark:text-white">Market<span class="text-emerald-500">Dict</span></span>
-                        <span class="text-xs bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 font-semibold px-2.5 py-0.5 rounded-full border border-emerald-300 dark:border-emerald-800">مرجع اینوستوپدیا</span>
+                        <span class="text-xs bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 font-semibold px-2.5 py-0.5 rounded-full border border-emerald-300 dark:border-emerald-800">واژه‌نامه تخصصی</span>
                     </div>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">واژه‌نامه و دانشنامه جامع اصطلاحات بازارهای مالی و سرمایه</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">واژه‌نامه و دانشنامه جامع اصطلاحات مالی</p>
                 </div>
             </div>
 
@@ -160,8 +185,8 @@
             <!-- Stats Bar -->
             <div class="flex items-center justify-center gap-6 pt-2 text-xs text-slate-500 dark:text-slate-400">
                 <div>📚 <span id="statTotalTerms" class="font-bold text-slate-700 dark:text-slate-300">۶۳۱</span> اصطلاح مالی</div>
+                <div>🏷️ <span id="statTotalCats" class="font-bold text-slate-700 dark:text-slate-300">۱۴</span> دسته تخصصی بازار سرمایه</div>
                 <div>📑 <span id="statDeepCount" class="font-bold text-emerald-600 dark:text-emerald-400">۵۶+</span> مقاله تحلیلی جامع</div>
-                <div>🌐 منبع: Investopedia Financial Dictionary</div>
             </div>
         </div>
     </section>
@@ -172,15 +197,31 @@
         <!-- Alphabet Bar (A-Z) Filter -->
         <div class="bg-white dark:bg-slate-900 rounded-2xl p-3 border border-slate-200 dark:border-slate-800 shadow-sm overflow-x-auto scrollbar-none">
             <div class="flex items-center gap-1.5 min-w-max justify-center font-en text-sm font-semibold" id="alphabetContainer">
-                <button onclick="setLetterFilter('ALL')" id="letter-ALL" class="letter-btn active px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-fa text-xs transition">همه</button>
+                <button onclick="setLetterFilter('ALL')" id="letter-ALL" class="letter-btn active px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-fa text-xs transition">همه حروف</button>
             </div>
         </div>
 
-        <!-- Categories Filter Pills -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="categoriesContainer">
-            <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap bg-emerald-600 text-white shadow-sm transition">
-                همه دسته‌ها
-            </button>
+        <!-- Redesigned Comprehensive Categories Panel (Multi-row Grid/Wrap Layout) -->
+        <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3.5">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="text-lg">🗂️</span>
+                    <h3 class="text-sm font-bold text-slate-800 dark:text-slate-200">دسته‌بندی‌های تخصصی بازار سرمایه:</h3>
+                </div>
+                <button onclick="toggleCategoriesExpand()" id="catExpandBtn" class="text-xs text-emerald-600 dark:text-emerald-400 hover:underline font-semibold flex items-center gap-1 sm:hidden">
+                    <span>مشاهده همه</span>
+                </button>
+            </div>
+
+            <!-- Multi-Row Categories Container -->
+            <div id="categoriesContainer" class="flex flex-wrap gap-2 sm:gap-2.5">
+                <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-600 text-white shadow-sm transition flex items-center gap-1.5 border border-emerald-600">
+                    <span>🏛️</span>
+                    <span>همه دسته‌ها</span>
+                    <span class="bg-emerald-700/60 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">۶۳۱</span>
+                </button>
+                <!-- Dynamic Category Pills inserted here -->
+            </div>
         </div>
 
         <!-- Active Filter Indicator & Count -->
@@ -298,7 +339,7 @@
                     <div id="boxDefEn" class="bg-slate-100 dark:bg-slate-800/90 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 font-en" dir="ltr">
                         <div class="flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">
                             <span>🇬🇧</span>
-                            <span>Original Definition (Investopedia):</span>
+                            <span>Original Definition:</span>
                         </div>
                         <p id="modalDefEn" class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-line">
                         </p>
@@ -333,7 +374,7 @@
             <!-- Modal Footer -->
             <div class="p-4 sm:p-5 bg-slate-50 dark:bg-slate-850 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
                 <a id="modalSourceLink" href="#" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5 font-medium">
-                    <span>مشاهده مقاله اصلی در Investopedia</span>
+                    <span>مشاهده مقاله اصلی در وب‌سایت مرجع</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                     </svg>
@@ -463,6 +504,7 @@
                 const res = await fetch('/api/stats');
                 const data = await res.json();
                 document.getElementById('statTotalTerms').innerText = data.total_terms.toLocaleString('fa-IR');
+                document.getElementById('statTotalCats').innerText = data.total_categories.toLocaleString('fa-IR');
                 if (data.deep_enriched_count) {
                     document.getElementById('statDeepCount').innerText = `${data.deep_enriched_count.toLocaleString('fa-IR')} مقاله تحلیلی جامع`;
                 }
@@ -499,8 +541,12 @@
                 cats.forEach(item => {
                     const btn = document.createElement('button');
                     btn.id = `cat-${encodeURIComponent(item.name)}`;
-                    btn.className = 'cat-pill px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 transition';
-                    btn.innerHTML = `${item.name} <span class="opacity-60 text-[10px]">(${item.count})</span>`;
+                    btn.className = 'cat-pill px-3.5 py-2 rounded-xl text-xs font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-sm transition flex items-center gap-1.5';
+                    btn.innerHTML = `
+                        <span>${item.icon || '🏷️'}</span>
+                        <span class="font-semibold">${item.name}</span>
+                        <span class="opacity-70 text-[10px] bg-slate-100 dark:bg-slate-800 px-1.5 py-0.2 rounded-full font-bold">(${item.count})</span>
+                    `;
                     btn.onclick = () => setCategoryFilter(item.name);
                     container.appendChild(btn);
                 });
@@ -634,13 +680,13 @@
             currentCategory = category;
             currentPage = 1;
             document.querySelectorAll('.cat-pill').forEach(btn => {
-                btn.classList.remove('bg-emerald-600', 'text-white');
-                btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300');
+                btn.classList.remove('bg-emerald-600', 'text-white', 'border-emerald-600');
+                btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
             });
             const activeBtn = document.getElementById(category === 'ALL' ? 'cat-ALL' : `cat-${encodeURIComponent(category)}`);
             if (activeBtn) {
-                activeBtn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300');
-                activeBtn.classList.add('bg-emerald-600', 'text-white');
+                activeBtn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
+                activeBtn.classList.add('bg-emerald-600', 'text-white', 'border-emerald-600');
             }
             loadTerms();
         }
@@ -977,7 +1023,7 @@ ${activeModalTerm.definition_en}
 💡 نکات کلیدی:
 ${(activeModalTerm.takeaways_en || []).map(t => '• ' + t).join('\n')}
 
-🔗 لینک منبع: ${activeModalTerm.url}`;
+🔗 منبع: ${activeModalTerm.url}`;
 
             navigator.clipboard.writeText(content).then(() => {
                 showToast('مشخصات اصطلاح در حافظه کپی شد!');

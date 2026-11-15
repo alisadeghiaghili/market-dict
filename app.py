@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MarketDict - Bilingual Financial Terms Web Application
+MarketDict - Financial Terms Dictionary
 Backend Server using Flask.
 """
 
@@ -16,6 +16,23 @@ app = Flask(__name__, template_folder="templates", static_folder="static")
 DATA_FILE = os.path.join(os.path.dirname(__file__), "bilingual_dictionary.json")
 _CACHE = {"mtime": 0, "data": []}
 
+CATEGORY_ICONS = {
+    "بازار سهام و معاملات": "📈",
+    "حسابداری و صورت‌های مالی": "📊",
+    "اقتصاد کلان و سیاست پولی": "🏛️",
+    "ارزش‌گذاری و تحلیل بنیادی": "⚖️",
+    "تحلیل تکنیکال و نموداری": "📉",
+    "ابزارهای مشتقه و آپشن": "⚡",
+    "اوراق بدهی و اسناد خزانه": "📜",
+    "بانکداری، وام و اعتبارات": "🏦",
+    "مدیریت ریسک و بیمه": "🛡️",
+    "سرمایه‌گذاری و صندوق‌ها": "💼",
+    "مالیات، مقررات و قوانین": "⚖️",
+    "تجارت بین‌الملل و بازرگانی": "🌐",
+    "ارزهای دیجیتال و فین‌تک": "🪙",
+    "کسب‌وکار و مدیریت استراتژیک": "💡"
+}
+
 def get_dictionary() -> List[Dict[str, Any]]:
     if not os.path.exists(DATA_FILE):
         return []
@@ -26,7 +43,6 @@ def get_dictionary() -> List[Dict[str, Any]]:
             _CACHE["mtime"] = current_mtime
     return _CACHE["data"]
 
-# Persian text normalization for accurate search
 def normalize_text(text: str) -> str:
     if not text:
         return ""
@@ -40,6 +56,10 @@ def normalize_text(text: str) -> str:
 @app.route("/")
 def index():
     return render_template("index.html")
+
+@app.route("/favicon.ico")
+def favicon():
+    return app.send_static_file("favicon.svg")
 
 @app.route("/api/stats")
 def get_stats():
@@ -74,7 +94,13 @@ def get_categories():
         counts[cat] = counts.get(cat, 0) + 1
     
     sorted_cats = sorted(counts.items(), key=lambda x: -x[1])
-    return jsonify([{"name": k, "count": v} for k, v in sorted_cats])
+    return jsonify([
+        {
+            "name": k,
+            "count": v,
+            "icon": CATEGORY_ICONS.get(k, "🏷️")
+        } for k, v in sorted_cats
+    ])
 
 @app.route("/api/terms")
 def search_terms():
@@ -94,7 +120,7 @@ def search_terms():
     if category and category != "ALL":
         filtered = [t for t in filtered if t.get("category", "") == category]
 
-    # Filter by Search Query (Bilingual)
+    # Filter by Search Query
     if query:
         norm_query = normalize_text(query)
         scored_results = []
@@ -150,7 +176,6 @@ def get_random_term():
     dictionary = get_dictionary()
     if not dictionary:
         return jsonify({"error": "No terms available"}), 404
-    # Prefer deep enriched items if available
     deep_pool = [t for t in dictionary if t.get("sections")]
     pool = deep_pool if deep_pool and random.random() < 0.8 else dictionary
     return jsonify(random.choice(pool))
@@ -158,7 +183,7 @@ def get_random_term():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     print(f"\n=======================================================")
-    print(f"🚀 MarketDict Bilingual Web App is running!")
-    print(f"👉 Local URL: http://localhost:5000")
+    print(f"🚀 MarketDict Web App is running!")
+    print(f"👉 Local URL: http://localhost:{port}")
     print(f"=======================================================\n")
     app.run(host="0.0.0.0", port=port, debug=True)
