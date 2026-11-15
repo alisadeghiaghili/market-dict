@@ -137,9 +137,9 @@ curl http://localhost:5000/api/stats
 Expected response:
 ```json
 {
-  "featured_count": 46,
-  "total_categories": 46,
+  "total_terms": 631,
+  "total_categories": 14,
   "total_letters": 27,
-  "total_terms": 631
+  "deep_enriched_count": 57
 }
 ```

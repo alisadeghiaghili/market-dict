@@ -4,7 +4,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 
-A modern bilingual (English & Persian) financial dictionary web application and a stealth, polite Investopedia crawler.
+A modern bilingual (English & Persian) financial dictionary — **631 market & investing terms** across 14 domains, with real-time fuzzy search — paired with a stealth, polite Investopedia crawler that keeps the dataset fresh.
 
 ---
 
