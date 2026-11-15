@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketDict | واژه‌نامه تخصصی مالی اینوستوپدیا (دوزبانه)</title>
+    
+    <!-- Google Fonts: Vazirmatn (FA) & Inter (EN) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        }
+                    },
+                    fontFamily: {
+                        fa: ['Vazirmatn', 'system-ui', 'sans-serif'],
+                        en: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        .font-en {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+            text-align: left;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.05);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100,116,139,0.3);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100,116,139,0.6);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-200">
+
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between gap-4">
+            
+            <!-- Logo & Brand -->
+            <div class="flex items-center gap-3 cursor-pointer" onclick="resetFilters()">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white shadow-md shadow-emerald-500/20">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-en font-bold text-xl tracking-tight text-slate-900 dark:text-white">Market<span class="text-emerald-500">Dict</span></span>
+                        <span class="text-xs bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 font-semibold px-2 py-0.5 rounded-full border border-emerald-300 dark:border-emerald-800/50">دوزبانه</span>
+                    </div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">واژه‌نامه تخصصی اصطلاحات مالی اینوستوپدیا</p>
+                </div>
+            </div>
+
+            <!-- Header Quick Actions -->
+            <div class="flex items-center gap-2">
+                <!-- Random Term Button -->
+                <button onclick="fetchRandomTerm()" title="اصطلاح تصادفی برای یادگیری" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 border border-emerald-200 dark:border-emerald-800 transition">
+                    <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                    <span class="hidden md:inline">اصطلاح تصادفی</span>
+                </button>
+
+                <!-- Bookmarks Filter Toggle -->
+                <button id="favoritesBtn" onclick="toggleFavoritesFilter()" title="اصطلاحات نشان‌شده" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition">
+                    <svg id="favIcon" class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                    </svg>
+                    <span class="hidden md:inline">نشان‌شده‌ها</span>
+                    <span id="favoritesCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
+                </button>
+
+                <!-- Dark Mode Toggle -->
+                <button onclick="toggleDarkMode()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition" title="تغییر تم روز / شب">
+                    <svg id="themeMoon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <svg id="themeSun" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero & Search Section -->
+    <section class="relative bg-gradient-to-b from-emerald-500/10 via-slate-50 to-transparent dark:from-emerald-950/20 dark:via-slate-900 dark:to-transparent py-10 px-4">
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            
+            <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                جستجوی اصطلاحات مالی و بازارهای سرمایه
+            </h1>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                جستجوی لحظه‌ای به هر دو زبان <span class="text-emerald-600 dark:text-emerald-400 font-semibold">فارسی و انگلیسی</span> همراه با تلفظ صوتی، تعاریف تخصصی و نکات کلیدی.
+            </p>
+
+            <!-- Search Bar Component -->
+            <div class="relative max-w-2xl mx-auto mt-6">
+                <div class="relative flex items-center shadow-lg rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 transition focus-within:ring-2 focus-within:ring-emerald-500 focus-within:border-emerald-500">
+                    <div class="pr-4 pl-2 text-slate-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        oninput="handleSearchInput()" 
+                        placeholder="جستجو کنید... (مثال: EBITDA، ترازنامه، اوراق قرضه، CAPM، تورم)" 
+                        class="w-full py-4 pr-2 pl-12 text-sm sm:text-base bg-transparent text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none"
+                    />
+                    <!-- Clear button -->
+                    <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute left-4 p-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="flex items-center justify-center gap-6 pt-2 text-xs text-slate-500 dark:text-slate-400">
+                <div>📚 <span id="statTotalTerms" class="font-bold text-slate-700 dark:text-slate-300">۶۳۱</span> اصطلاح ثبت‌شده</div>
+                <div>🏷️ <span id="statTotalCats" class="font-bold text-slate-700 dark:text-slate-300">۱۸</span> دسته‌بندی تخصصی</div>
+                <div>🌐 منبع مرجع: Investopedia</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content & Filters Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-6">
+
+        <!-- Alphabet Bar (A-Z) Filter -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-200 dark:border-slate-700/60 shadow-sm overflow-x-auto scrollbar-none">
+            <div class="flex items-center gap-1.5 min-w-max justify-center font-en text-sm font-semibold" id="alphabetContainer">
+                <button onclick="setLetterFilter('ALL')" id="letter-ALL" class="letter-btn active px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-fa text-xs transition">همه</button>
+                <!-- Dynamic Letter Buttons inserted here -->
+            </div>
+        </div>
+
+        <!-- Categories Filter Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="categoriesContainer">
+            <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap bg-emerald-600 text-white shadow-sm transition">
+                همه دسته‌ها
+            </button>
+            <!-- Dynamic Category Pills inserted here -->
+        </div>
+
+        <!-- Active Filter Indicator & Count -->
+        <div class="flex items-center justify-between text-xs sm:text-sm text-slate-600 dark:text-slate-400 px-1">
+            <div id="resultsCount">در حال بارگذاری اصطلاحات...</div>
+            <button id="resetFiltersBtn" onclick="resetFilters()" class="hidden text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 font-medium">
+                پاک کردن فیلترها ✕
+            </button>
+        </div>
+
+        <!-- Terms Cards Grid -->
+        <div id="termsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Dynamic Term Cards loaded here -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden text-center py-16 space-y-3 bg-white dark:bg-slate-800 rounded-3xl border border-dashed border-slate-300 dark:border-slate-700">
+            <div class="w-16 h-16 mx-auto rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-400 text-2xl">🔍</div>
+            <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200">اصطلاحی با این مشخصات یافت نشد!</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 max-w-sm mx-auto">می‌توانید املای واژه را بررسی کنید یا عبارت جستجو و فیلتر الفبا را تغییر دهید.</p>
+            <button onclick="resetFilters()" class="mt-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-semibold shadow transition">
+                نمایش تمام اصطلاحات
+            </button>
+        </div>
+
+        <!-- Load More Pagination Button -->
+        <div id="loadMoreContainer" class="hidden text-center pt-6">
+            <button onclick="loadMoreTerms()" class="px-6 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 font-semibold text-sm shadow-sm transition">
+                بارگذاری اصطلاحات بیشتر...
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Detail Modal Component -->
+    <div id="detailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-200" onclick="closeModalOnBackdrop(event)">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-700 flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="modalCard">
+            
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-slate-100 dark:border-slate-700 flex items-start justify-between gap-4">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                        <span id="modalLetterBadge" class="font-en text-xs font-bold px-2.5 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400">#</span>
+                        <span id="modalCategoryBadge" class="text-xs font-semibold px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">دسته‌بندی</span>
+                    </div>
+                    <div class="flex items-center gap-2 pt-1">
+                        <h2 id="modalTermEn" class="font-en text-2xl font-extrabold text-slate-900 dark:text-white">Term EN</h2>
+                        <!-- Audio Pronounce Button -->
+                        <button id="modalAudioBtn" onclick="speakTerm()" title="تلفظ صوتی انگلیسی" class="p-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950 hover:bg-emerald-100 text-emerald-600 dark:text-emerald-400 transition">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 id="modalTermFa" class="text-lg font-bold text-emerald-600 dark:text-emerald-400">معادل فارسی</h3>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <!-- Modal Star Button -->
+                    <button id="modalStarBtn" onclick="toggleCurrentModalFavorite()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-400 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                        </svg>
+                    </button>
+                    <!-- Close button -->
+                    <button onclick="closeModal()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 space-y-6">
+                
+                <!-- Persian Explanation Block (RTL) -->
+                <div class="bg-emerald-50/60 dark:bg-emerald-950/20 p-5 rounded-2xl border border-emerald-100 dark:border-emerald-900/40 space-y-2">
+                    <div class="flex items-center gap-2 text-xs font-bold text-emerald-800 dark:text-emerald-300">
+                        <span>🇮🇷</span>
+                        <span>تعریف و توضیحات به زبان فارسی:</span>
+                    </div>
+                    <p id="modalDefFa" class="text-sm sm:text-base text-slate-700 dark:text-slate-200 leading-relaxed font-normal">
+                        توضیحات فارسی...
+                    </p>
+
+                    <!-- Persian Takeaways -->
+                    <div id="modalTakeawaysFaContainer" class="pt-2 hidden">
+                        <div class="text-xs font-bold text-emerald-800 dark:text-emerald-300 pb-1">💡 نکات کلیدی:</div>
+                        <ul id="modalTakeawaysFa" class="list-disc list-inside text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- English Explanation Block (LTR) -->
+                <div class="bg-slate-50 dark:bg-slate-750 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 font-en" dir="ltr">
+                    <div class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-300">
+                        <span>🇬🇧</span>
+                        <span>English Definition & Overview:</span>
+                    </div>
+                    <p id="modalDefEn" class="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed">
+                        English explanation...
+                    </p>
+
+                    <!-- English Takeaways -->
+                    <div id="modalTakeawaysEnContainer" class="pt-2 hidden">
+                        <div class="text-xs font-bold text-slate-700 dark:text-slate-300 pb-1">💡 Key Takeaways:</div>
+                        <ul id="modalTakeawaysEn" class="list-disc list-inside text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-6 bg-slate-50 dark:bg-slate-850 border-t border-slate-100 dark:border-slate-700 flex flex-wrap items-center justify-between gap-3 text-xs">
+                <!-- Source link -->
+                <a id="modalSourceLink" href="#" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5 font-medium">
+                    <span>مشاهده مقاله کامل در Investopedia</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+
+                <!-- Copy button -->
+                <button onclick="copyModalContent()" class="px-4 py-2 rounded-xl bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 font-semibold flex items-center gap-1.5 transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                    <span id="copyBtnText">کپی اطلاعات اصطلاح</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-slate-900 text-white px-4 py-2.5 rounded-xl shadow-lg border border-slate-700 flex items-center gap-2 text-sm">
+            <span class="text-emerald-400">✓</span>
+            <span id="toastMsg">متن با موفقیت کپی شد!</span>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        // State
+        let currentQuery = '';
+        let currentLetter = 'ALL';
+        let currentCategory = 'ALL';
+        let currentPage = 1;
+        let onlyFavorites = false;
+        let activeModalTerm = null;
+        let debounceTimer = null;
+
+        // Favorites stored in LocalStorage
+        let favorites = JSON.parse(localStorage.getItem('marketdict_favs') || '[]');
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            updateFavoritesCount();
+            loadStats();
+            loadLetters();
+            loadCategories();
+            loadTerms();
+
+            // Keyboard shortcut for search
+            window.addEventListener('keydown', (e) => {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    document.getElementById('searchInput').focus();
+                }
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        });
+
+        // Theme management
+        function initTheme() {
+            if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+
+        function toggleDarkMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Favorites management
+        function updateFavoritesCount() {
+            document.getElementById('favoritesCountBadge').innerText = favorites.length;
+        }
+
+        function isFavorite(id) {
+            return favorites.includes(id);
+        }
+
+        function toggleFavorite(id, event) {
+            if (event) event.stopPropagation();
+            if (favorites.includes(id)) {
+                favorites = favorites.filter(item => item !== id);
+                showToast('اصطلاح از نشان‌شده‌ها حذف شد.');
+            } else {
+                favorites.push(id);
+                showToast('اصطلاح به نشان‌شده‌ها اضافه شد!');
+            }
+            localStorage.setItem('marketdict_favs', JSON.stringify(favorites));
+            updateFavoritesCount();
+
+            // Update UI star icon if visible
+            const starSvg = document.getElementById(`star-icon-${id}`);
+            if (starSvg) {
+                if (isFavorite(id)) {
+                    starSvg.classList.add('fill-amber-400', 'text-amber-500');
+                    starSvg.classList.remove('text-slate-400');
+                } else {
+                    starSvg.classList.remove('fill-amber-400', 'text-amber-500');
+                    starSvg.classList.add('text-slate-400');
+                }
+            }
+
+            if (activeModalTerm && activeModalTerm.id === id) {
+                updateModalStarUI();
+            }
+
+            if (onlyFavorites) {
+                loadTerms();
+            }
+        }
+
+        function toggleFavoritesFilter() {
+            onlyFavorites = !onlyFavorites;
+            const btn = document.getElementById('favoritesBtn');
+            const icon = document.getElementById('favIcon');
+            if (onlyFavorites) {
+                btn.classList.add('ring-2', 'ring-amber-400', 'bg-amber-50', 'dark:bg-amber-950/40');
+                icon.classList.add('fill-amber-400');
+            } else {
+                btn.classList.remove('ring-2', 'ring-amber-400', 'bg-amber-50', 'dark:bg-amber-950/40');
+                icon.classList.remove('fill-amber-400');
+            }
+            currentPage = 1;
+            loadTerms();
+        }
+
+        // API Fetchers
+        async function loadStats() {
+            try {
+                const res = await fetch('/api/stats');
+                const data = await res.json();
+                document.getElementById('statTotalTerms').innerText = data.total_terms.toLocaleString('fa-IR');
+                document.getElementById('statTotalCats').innerText = data.total_categories.toLocaleString('fa-IR');
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        async function loadLetters() {
+            try {
+                const res = await fetch('/api/letters');
+                const letters = await res.json();
+                const container = document.getElementById('alphabetContainer');
+
+                letters.forEach(item => {
+                    const btn = document.createElement('button');
+                    btn.id = `letter-${item.letter}`;
+                    btn.className = 'letter-btn px-2.5 py-1 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition flex items-center gap-1';
+                    btn.innerHTML = `<span>${item.letter}</span>`;
+                    btn.onclick = () => setLetterFilter(item.letter);
+                    container.appendChild(btn);
+                });
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        async function loadCategories() {
+            try {
+                const res = await fetch('/api/categories');
+                const cats = await res.json();
+                const container = document.getElementById('categoriesContainer');
+
+                cats.forEach(item => {
+                    const btn = document.createElement('button');
+                    btn.id = `cat-${encodeURIComponent(item.name)}`;
+                    btn.className = 'cat-pill px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-600 transition';
+                    btn.innerHTML = `${item.name} <span class="opacity-60 text-[10px]">(${item.count})</span>`;
+                    btn.onclick = () => setCategoryFilter(item.name);
+                    container.appendChild(btn);
+                });
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        async function loadTerms(append = false) {
+            const grid = document.getElementById('termsGrid');
+            const emptyState = document.getElementById('emptyState');
+            const loadMoreContainer = document.getElementById('loadMoreContainer');
+            const countLabel = document.getElementById('resultsCount');
+
+            if (!append) {
+                grid.innerHTML = '<div class="col-span-full text-center py-12 text-slate-400">در حال جستجو و بارگذاری...</div>';
+            }
+
+            try {
+                let url = `/api/terms?page=${currentPage}&limit=24`;
+                if (currentQuery) url += `&q=${encodeURIComponent(currentQuery)}`;
+                if (currentLetter !== 'ALL') url += `&letter=${encodeURIComponent(currentLetter)}`;
+                if (currentCategory !== 'ALL') url += `&category=${encodeURIComponent(currentCategory)}`;
+
+                const res = await fetch(url);
+                const data = await res.json();
+
+                let terms = data.terms;
+
+                // Client filter for favorites if enabled
+                if (onlyFavorites) {
+                    terms = terms.filter(t => isFavorite(t.id));
+                }
+
+                if (!append) grid.innerHTML = '';
+
+                if (terms.length === 0 && !append) {
+                    emptyState.classList.remove('hidden');
+                    loadMoreContainer.classList.add('hidden');
+                    countLabel.innerText = 'نتیجه‌ای یافت نشد';
+                    return;
+                }
+
+                emptyState.classList.add('hidden');
+                countLabel.innerText = `نمایش ${terms.length} از ${data.total} اصطلاح`;
+
+                terms.forEach(term => {
+                    grid.appendChild(createTermCard(term));
+                });
+
+                if (data.has_more && !onlyFavorites) {
+                    loadMoreContainer.classList.remove('hidden');
+                } else {
+                    loadMoreContainer.classList.add('hidden');
+                }
+
+                updateResetFilterButton();
+
+            } catch (err) {
+                console.error(err);
+                grid.innerHTML = '<div class="col-span-full text-center py-12 text-rose-500">خطا در بارگذاری اطلاعات.</div>';
+            }
+        }
+
+        function createTermCard(term) {
+            const card = document.createElement('div');
+            card.className = 'group bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700/80 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-xl dark:hover:shadow-emerald-950/20 transition-all duration-200 flex flex-col justify-between cursor-pointer';
+            card.onclick = () => openModal(term);
+
+            const favActive = isFavorite(term.id);
+
+            card.innerHTML = `
+                <div class="space-y-3">
+                    <div class="flex items-start justify-between gap-2">
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <span class="font-en text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400">
+                                ${term.letter}
+                            </span>
+                            <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
+                                ${term.category}
+                            </span>
+                        </div>
+                        <button onclick="toggleFavorite('${term.id}', event)" class="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition" title="افزودن به نشان‌شده‌ها">
+                            <svg id="star-icon-${term.id}" class="w-5 h-5 ${favActive ? 'fill-amber-400 text-amber-500' : 'text-slate-300 dark:text-slate-600'} hover:text-amber-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div>
+                        <h3 class="font-en text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">
+                            ${term.term_en}
+                        </h3>
+                        <h4 class="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5">
+                            ${term.term_fa}
+                        </h4>
+                    </div>
+
+                    <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                        ${term.definition_fa}
+                    </p>
+                </div>
+
+                <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs">
+                    <span class="text-slate-400 group-hover:text-emerald-500 font-medium transition flex items-center gap-1">
+                        مشاهده تعریف دوزبانه ←
+                    </span>
+                    <button onclick="speakDirect('${term.term_en.replace(/'/g, "\\'")}', event)" title="تلفظ انگلیسی" class="p-1 rounded-md text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                        </svg>
+                    </button>
+                </div>
+            `;
+            return card;
+        }
+
+        // Filters Handling
+        function setLetterFilter(letter) {
+            currentLetter = letter;
+            currentPage = 1;
+
+            document.querySelectorAll('.letter-btn').forEach(btn => {
+                btn.classList.remove('bg-emerald-600', 'text-white');
+                btn.classList.add('text-slate-600', 'dark:text-slate-300');
+            });
+            const activeBtn = document.getElementById(`letter-${letter}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-slate-600', 'dark:text-slate-300');
+                activeBtn.classList.add('bg-emerald-600', 'text-white');
+            }
+
+            loadTerms();
+        }
+
+        function setCategoryFilter(category) {
+            currentCategory = category;
+            currentPage = 1;
+
+            document.querySelectorAll('.cat-pill').forEach(btn => {
+                btn.classList.remove('bg-emerald-600', 'text-white');
+                btn.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+            });
+            const activeBtn = document.getElementById(category === 'ALL' ? 'cat-ALL' : `cat-${encodeURIComponent(category)}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+                activeBtn.classList.add('bg-emerald-600', 'text-white');
+            }
+
+            loadTerms();
+        }
+
+        function handleSearchInput() {
+            clearTimeout(debounceTimer);
+            const input = document.getElementById('searchInput');
+            const clearBtn = document.getElementById('clearSearchBtn');
+
+            currentQuery = input.value.trim();
+            if (currentQuery) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+
+            debounceTimer = setTimeout(() => {
+                currentPage = 1;
+                loadTerms();
+            }, 250);
+        }
+
+        function clearSearch() {
+            const input = document.getElementById('searchInput');
+            input.value = '';
+            currentQuery = '';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+            currentPage = 1;
+            loadTerms();
+        }
+
+        function resetFilters() {
+            clearSearch();
+            setLetterFilter('ALL');
+            setCategoryFilter('ALL');
+            if (onlyFavorites) toggleFavoritesFilter();
+        }
+
+        function updateResetFilterButton() {
+            const resetBtn = document.getElementById('resetFiltersBtn');
+            if (currentQuery || currentLetter !== 'ALL' || currentCategory !== 'ALL' || onlyFavorites) {
+                resetBtn.classList.remove('hidden');
+            } else {
+                resetBtn.classList.add('hidden');
+            }
+        }
+
+        function loadMoreTerms() {
+            currentPage++;
+            loadTerms(true);
+        }
+
+        // Modal Functionality
+        function openModal(term) {
+            activeModalTerm = term;
+            document.getElementById('modalTermEn').innerText = term.term_en;
+            document.getElementById('modalTermFa').innerText = term.term_fa;
+            document.getElementById('modalLetterBadge').innerText = term.letter;
+            document.getElementById('modalCategoryBadge').innerText = term.category;
+
+            document.getElementById('modalDefFa').innerText = term.definition_fa;
+            document.getElementById('modalDefEn').innerText = term.definition_en;
+
+            // Persian takeaways
+            const faCont = document.getElementById('modalTakeawaysFaContainer');
+            const faList = document.getElementById('modalTakeawaysFa');
+            faList.innerHTML = '';
+            if (term.takeaways_fa && term.takeaways_fa.length > 0) {
+                faCont.classList.remove('hidden');
+                term.takeaways_fa.forEach(t => {
+                    const li = document.createElement('li');
+                    li.innerText = t;
+                    faList.appendChild(li);
+                });
+            } else {
+                faCont.classList.add('hidden');
+            }
+
+            // English takeaways
+            const enCont = document.getElementById('modalTakeawaysEnContainer');
+            const enList = document.getElementById('modalTakeawaysEn');
+            enList.innerHTML = '';
+            if (term.takeaways_en && term.takeaways_en.length > 0) {
+                enCont.classList.remove('hidden');
+                term.takeaways_en.forEach(t => {
+                    const li = document.createElement('li');
+                    li.innerText = t;
+                    enList.appendChild(li);
+                });
+            } else {
+                enCont.classList.add('hidden');
+            }
+
+            // Source Link
+            const link = document.getElementById('modalSourceLink');
+            if (term.url) {
+                link.href = term.url;
+                link.classList.remove('hidden');
+            } else {
+                link.classList.add('hidden');
+            }
+
+            updateModalStarUI();
+
+            // Display
+            const modal = document.getElementById('detailModal');
+            const card = document.getElementById('modalCard');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                card.classList.remove('scale-95', 'opacity-0');
+                card.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('detailModal');
+            const card = document.getElementById('modalCard');
+            card.classList.remove('scale-100', 'opacity-100');
+            card.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                activeModalTerm = null;
+            }, 150);
+        }
+
+        function closeModalOnBackdrop(e) {
+            if (e.target.id === 'detailModal') {
+                closeModal();
+            }
+        }
+
+        function updateModalStarUI() {
+            const btn = document.getElementById('modalStarBtn');
+            const svg = btn.querySelector('svg');
+            if (activeModalTerm && isFavorite(activeModalTerm.id)) {
+                svg.classList.add('fill-amber-400', 'text-amber-500');
+                svg.classList.remove('text-slate-400');
+            } else {
+                svg.classList.remove('fill-amber-400', 'text-amber-500');
+                svg.classList.add('text-slate-400');
+            }
+        }
+
+        function toggleCurrentModalFavorite() {
+            if (activeModalTerm) {
+                toggleFavorite(activeModalTerm.id);
+            }
+        }
+
+        // Web Speech API for Pronunciation
+        function speakTerm() {
+            if (activeModalTerm) {
+                speakDirect(activeModalTerm.term_en);
+            }
+        }
+
+        function speakDirect(text, event) {
+            if (event) event.stopPropagation();
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = 0.9;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                showToast('تلفظ صوتی در این مرورگر پشتیبانی نمی‌شود.');
+            }
+        }
+
+        // Copy content
+        function copyModalContent() {
+            if (!activeModalTerm) return;
+            const content = `📌 ${activeModalTerm.term_en} (${activeModalTerm.term_fa})
+دسته‌بندی: ${activeModalTerm.category}
+
+🇮🇷 تعریف فارسی:
+${activeModalTerm.definition_fa}
+
+🇬🇧 English Definition:
+${activeModalTerm.definition_en}
+
+🔗 منبع: ${activeModalTerm.url}`;
+
+            navigator.clipboard.writeText(content).then(() => {
+                showToast('مشخصات اصطلاح در حافظه کپی شد!');
+                const copyBtnText = document.getElementById('copyBtnText');
+                copyBtnText.innerText = 'کپی شد! ✓';
+                setTimeout(() => {
+                    copyBtnText.innerText = 'کپی اطلاعات اصطلاح';
+                }, 2000);
+            });
+        }
+
+        // Fetch Random Term
+        async function fetchRandomTerm() {
+            try {
+                const res = await fetch('/api/random');
+                const term = await res.json();
+                openModal(term);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        // Toast notifications
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>

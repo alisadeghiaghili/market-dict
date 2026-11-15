@@ -1,0 +1,632 @@
+﻿letter,term,url,slug,source
+#,1%/10 Net 30,https://www.investopedia.com/terms/1/1-10net30.asp,1-10net30,hub_page
+#,10-K,https://www.investopedia.com/terms/1/10-k.asp,10-k,hub_page
+#,10-Q SEC Form,https://www.investopedia.com/terms/1/10q.asp,10q,hub_page
+#,10-Year Treasury Note,https://www.investopedia.com/terms/1/10-yeartreasury.asp,10-yeartreasury,hub_page
+#,1040 IRS Form,https://www.investopedia.com/terms/1/1040.asp,1040,hub_page
+#,1040A Form,https://www.investopedia.com/terms/1/1040a.asp,1040a,hub_page
+#,1040EZ Form,https://www.investopedia.com/terms/1/1040ez.asp,1040ez,hub_page
+#,IA-1092 SEC Release,https://www.investopedia.com/terms/1/1092.asp,1092,hub_page
+#,11th District Cost of Funds Index (COFI),https://www.investopedia.com/terms/1/cofi.asp,cofi,hub_page
+#,12B-1 Fee,https://www.investopedia.com/terms/1/12b-1fees.asp,12b-1fees,hub_page
+#,183-Day Rule,https://www.investopedia.com/terms/1/183-day-rule.asp,183-day-rule,hub_page
+#,30-Year Treasury,https://www.investopedia.com/terms/1/30-yeartreasury.asp,30-yeartreasury,hub_page
+#,51% Attack,https://www.investopedia.com/terms/1/51-attack.asp,51-attack,hub_page
+#,401(a) Plan,https://www.investopedia.com/terms/1/401a-plan.asp,401a-plan,hub_page
+#,401(k) Plan,https://www.investopedia.com/terms/1/401kplan.asp,401kplan,hub_page
+#,403(b) Plan,https://www.investopedia.com/terms/1/403bplan.asp,403bplan,hub_page
+#,457 Plan,https://www.investopedia.com/terms/1/457plan.asp,457plan,hub_page
+#,5/1 Hybrid Adjustable-Rate Mortgage (5/1 Hybrid ARM),https://www.investopedia.com/terms/1/5-1_arm.asp,5-1_arm,hub_page
+#,501(c)(3) Organizations,https://www.investopedia.com/terms/1/501c3-organizations.asp,501c3-organizations,hub_page
+#,52-Week High/Low,https://www.investopedia.com/terms/1/52weekhighlow.asp,52weekhighlow,hub_page
+#,529 Plan,https://www.investopedia.com/terms/1/529plan.asp,529plan,hub_page
+#,8-K (Form 8K),https://www.investopedia.com/terms/1/8-k.asp,8-k,hub_page
+#,80-20 Rule,https://www.investopedia.com/terms/1/80-20-rule.asp,80-20-rule,hub_page
+#,83(b) Election,https://www.investopedia.com/terms/1/83b-election.asp,83b-election,hub_page
+A,Absolute Advantage,https://www.investopedia.com/terms/a/absoluteadvantage.asp,absoluteadvantage,hub_page
+A,Accounting Equation,https://www.investopedia.com/terms/a/accounting-equation.asp,accounting-equation,hub_page
+A,Accounting Rate of Return (ARR),https://www.investopedia.com/terms/a/arr.asp,arr,hub_page
+A,Acid-Test Ratio,https://www.investopedia.com/terms/a/acidtest.asp,acidtest,hub_page
+A,Acquisition,https://www.investopedia.com/terms/a/acquisition.asp,acquisition,hub_page
+A,Adverse Selection,https://www.investopedia.com/terms/a/adverseselection.asp,adverseselection,hub_page
+A,After-Hours Trading,https://www.investopedia.com/terms/a/afterhourstrading.asp,afterhourstrading,hub_page
+A,Understanding Alpha in Investing: Definition and Examples,https://www.investopedia.com/terms/a/alpha.asp,alpha,hub_page
+A,Amalgamation,https://www.investopedia.com/terms/a/amalgamation.asp,amalgamation,hub_page
+A,American Depositary Receipt (ADR),https://www.investopedia.com/terms/a/adr.asp,adr,hub_page
+A,American Dream,https://www.investopedia.com/terms/a/american-dream.asp,american-dream,hub_page
+A,Analysis of Variance (ANOVA),https://www.investopedia.com/terms/a/anova.asp,anova,hub_page
+A,Angel Investor: Definition and How It Works,https://www.investopedia.com/terms/a/angelinvestor.asp,angelinvestor,hub_page
+A,Annual Percentage Rate (APR),https://www.investopedia.com/terms/a/apr.asp,apr,hub_page
+A,Annuity,https://www.investopedia.com/terms/a/annuity.asp,annuity,hub_page
+A,Applicable Federal Rate (AFR),https://www.investopedia.com/terms/a/applicablefederalrate.asp,applicablefederalrate,hub_page
+A,Artificial Intelligence (AI),https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp,artificial-intelligence-ai,hub_page
+A,Asset,https://www.investopedia.com/terms/a/asset.asp,asset,hub_page
+A,Asset Management,https://www.investopedia.com/terms/a/assetmanagement.asp,assetmanagement,hub_page
+A,"Asset Turnover Ratio: Definition, Calculation & Industry Comparison",https://www.investopedia.com/terms/a/assetturnover.asp,assetturnover,hub_page
+A,Assets Under Management (AUM),https://www.investopedia.com/terms/a/aum.asp,aum,hub_page
+A,Automated Clearing House (ACH),https://www.investopedia.com/terms/a/ach.asp,ach,hub_page
+A,Automated Teller Machine (ATM),https://www.investopedia.com/terms/a/atm.asp,atm,hub_page
+A,Average True Range (ATR),https://www.investopedia.com/terms/a/atr.asp,atr,hub_page
+B,Balanced Scorecard,https://www.investopedia.com/terms/b/balancedscorecard.asp,balancedscorecard,hub_page
+B,Balance Sheet,https://www.investopedia.com/terms/b/balancesheet.asp,balancesheet,hub_page
+B,Bank Identification Numbers,https://www.investopedia.com/terms/b/bank-identification-number.asp,bank-identification-number,hub_page
+B,Bankruptcy,https://www.investopedia.com/terms/b/bankruptcy.asp,bankruptcy,hub_page
+B,Baye's Theorem,https://www.investopedia.com/terms/b/bayes-theorem.asp,bayes-theorem,hub_page
+B,Bear Market,https://www.investopedia.com/terms/b/bearmarket.asp,bearmarket,hub_page
+B,Berkshire Hathaway,https://www.investopedia.com/terms/b/berkshire-hathaway.asp,berkshire-hathaway,hub_page
+B,Bernie Madoff,https://www.investopedia.com/terms/b/bernard-madoff.asp,bernard-madoff,hub_page
+B,Beta,https://www.investopedia.com/terms/b/beta.asp,beta,hub_page
+B,Bill of Lading,https://www.investopedia.com/terms/b/billoflading.asp,billoflading,hub_page
+B,Bitcoin Mining,https://www.investopedia.com/terms/b/bitcoin-mining.asp,bitcoin-mining,hub_page
+B,Blockchain,https://www.investopedia.com/terms/b/blockchain.asp,blockchain,hub_page
+B,Bollinger Band,https://www.investopedia.com/terms/b/bollingerbands.asp,bollingerbands,hub_page
+B,Bond,https://www.investopedia.com/terms/b/bond.asp,bond,hub_page
+B,Break-Even Analysis,https://www.investopedia.com/terms/b/breakevenanalysis.asp,breakevenanalysis,hub_page
+B,Brexit,https://www.investopedia.com/terms/b/brexit.asp,brexit,hub_page
+B,Budget,https://www.investopedia.com/terms/b/budget.asp,budget,hub_page
+B,Budget Deficit,https://www.investopedia.com/terms/b/budget-deficit.asp,budget-deficit,hub_page
+B,Bull Market,https://www.investopedia.com/terms/b/bullmarket.asp,bullmarket,hub_page
+B,Business Cycle,https://www.investopedia.com/terms/b/businesscycle.asp,businesscycle,hub_page
+B,Business Ethics,https://www.investopedia.com/terms/b/business-ethics.asp,business-ethics,hub_page
+B,Business Model,https://www.investopedia.com/terms/b/businessmodel.asp,businessmodel,hub_page
+B,Business-to-Consumer,https://www.investopedia.com/terms/b/btoc.asp,btoc,hub_page
+B,Business Valuation,https://www.investopedia.com/terms/b/business-valuation.asp,business-valuation,hub_page
+C,Capital,https://www.investopedia.com/terms/c/capital.asp,capital,hub_page
+C,Capital Asset Pricing Model (CAPM),https://www.investopedia.com/terms/c/capm.asp,capm,hub_page
+C,Capital Expenditure,https://www.investopedia.com/terms/c/capitalexpenditure.asp,capitalexpenditure,hub_page
+C,Capitalism,https://www.investopedia.com/terms/c/capitalism.asp,capitalism,hub_page
+C,Central Limit Theorem (CLT),https://www.investopedia.com/terms/c/central_limit_theorem.asp,central_limit_theorem,hub_page
+C,Chartered Financial Analyst (CFA),https://www.investopedia.com/terms/c/cfa.asp,cfa,hub_page
+C,Chief Executive Officer (CEO),https://www.investopedia.com/terms/c/ceo.asp,ceo,hub_page
+C,Code of Ethics,https://www.investopedia.com/terms/c/code-of-ethics.asp,code-of-ethics,hub_page
+C,Coefficient of Variation (CV),https://www.investopedia.com/terms/c/coefficientofvariation.asp,coefficientofvariation,hub_page
+C,Collateral,https://www.investopedia.com/terms/c/collateral.asp,collateral,hub_page
+C,Command Economy,https://www.investopedia.com/terms/c/command-economy.asp,command-economy,hub_page
+C,Comparative Advantage,https://www.investopedia.com/terms/c/comparativeadvantage.asp,comparativeadvantage,hub_page
+C,Compound Annual Growth Rate (CAGR),https://www.investopedia.com/terms/c/cagr.asp,cagr,hub_page
+C,Compound Interest,https://www.investopedia.com/terms/c/compoundinterest.asp,compoundinterest,hub_page
+C,Conflict Theory,https://www.investopedia.com/terms/c/conflict-theory.asp,conflict-theory,hub_page
+C,Consumer Price Index (CPI),https://www.investopedia.com/terms/c/consumerpriceindex.asp,consumerpriceindex,hub_page
+C,Contribution Margin,https://www.investopedia.com/terms/c/contributionmargin.asp,contributionmargin,hub_page
+C,Correlation,https://www.investopedia.com/terms/c/correlation.asp,correlation,hub_page
+C,Correlation Coefficient,https://www.investopedia.com/terms/c/correlationcoefficient.asp,correlationcoefficient,hub_page
+C,Cost of Goods Sold (COGS),https://www.investopedia.com/terms/c/cogs.asp,cogs,hub_page
+C,Creative Destruction,https://www.investopedia.com/terms/c/creativedestruction.asp,creativedestruction,hub_page
+C,Credit Default Swap (CDS),https://www.investopedia.com/terms/c/creditdefaultswap.asp,creditdefaultswap,hub_page
+C,Current Ratio,https://www.investopedia.com/terms/c/currentratio.asp,currentratio,hub_page
+C,Customer Service,https://www.investopedia.com/terms/c/customer-service.asp,customer-service,hub_page
+D,Days Payable Outstanding (DPO),https://www.investopedia.com/terms/d/dpo.asp,dpo,hub_page
+D,Days Sales Outstanding (DSO),https://www.investopedia.com/terms/d/dso.asp,dso,hub_page
+D,Debenture,https://www.investopedia.com/terms/d/debenture.asp,debenture,hub_page
+D,Debt Ratio,https://www.investopedia.com/terms/d/debtratio.asp,debtratio,hub_page
+D,Debt-Service Coverage Ratio (DSCR),https://www.investopedia.com/terms/d/dscr.asp,dscr,hub_page
+D,Debt-to-Equity Ratio (D/E),https://www.investopedia.com/terms/d/debtequityratio.asp,debtequityratio,hub_page
+D,Deferred Compensation,https://www.investopedia.com/terms/d/deferred-compensation.asp,deferred-compensation,hub_page
+D,Delivered-at-Place (DAP),https://www.investopedia.com/terms/d/delivered-place-dap.asp,delivered-place-dap,hub_page
+D,Delivered Duty Paid (DDP),https://www.investopedia.com/terms/d/delivery-duty-paid.asp,delivery-duty-paid,hub_page
+D,Delivered Duty Unpaid (DDU),https://www.investopedia.com/terms/d/delivereddutyunpaid.asp,delivereddutyunpaid,hub_page
+D,Demand,https://www.investopedia.com/terms/d/demand.asp,demand,hub_page
+D,Demand Elasticity,https://www.investopedia.com/terms/p/priceelasticity.asp,priceelasticity,hub_page
+D,Demonetization,https://www.investopedia.com/terms/d/demonetization.asp,demonetization,hub_page
+D,Derivative,https://www.investopedia.com/terms/d/derivative.asp,derivative,hub_page
+D,Dilution,https://www.investopedia.com/terms/d/dilution.asp,dilution,hub_page
+D,Disbursement,https://www.investopedia.com/terms/d/disbursement.asp,disbursement,hub_page
+D,Discount Rate,https://www.investopedia.com/terms/d/discountrate.asp,discountrate,hub_page
+D,Diversification,https://www.investopedia.com/terms/d/diversification.asp,diversification,hub_page
+D,Dividend,https://www.investopedia.com/terms/d/dividend.asp,dividend,hub_page
+D,Dividend Payout Ratio,https://www.investopedia.com/terms/d/dividendpayoutratio.asp,dividendpayoutratio,hub_page
+D,Dividend Yield,https://www.investopedia.com/terms/d/dividendyield.asp,dividendyield,hub_page
+D,Dow Jones Industrial Average (DJIA),https://www.investopedia.com/terms/d/djia.asp,djia,hub_page
+D,Due Diligence,https://www.investopedia.com/terms/d/duediligence.asp,duediligence,hub_page
+D,DuPont Analysis,https://www.investopedia.com/terms/d/dupontanalysis.asp,dupontanalysis,hub_page
+E,Earnest Money,https://www.investopedia.com/terms/e/earnest-money.asp,earnest-money,hub_page
+E,Earnings Before Interest and Taxes (EBIT),https://www.investopedia.com/terms/e/ebit.asp,ebit,hub_page
+E,"Earnings Before Interest, Taxes, Depreciation and Amortization (EBITDA)",https://www.investopedia.com/terms/e/ebitda.asp,ebitda,hub_page
+E,Earnings Per Share (EPS),https://www.investopedia.com/terms/e/eps.asp,eps,hub_page
+E,EBITA,https://www.investopedia.com/terms/e/ebita.asp,ebita,hub_page
+E,Economic Growth,https://www.investopedia.com/terms/e/economicgrowth.asp,economicgrowth,hub_page
+E,Economic Moat,https://www.investopedia.com/ask/answers/05/economicmoat.asp,economicmoat,hub_page
+E,Economics,https://www.investopedia.com/terms/e/economics.asp,economics,hub_page
+E,Economies of Scale,https://www.investopedia.com/terms/e/economiesofscale.asp,economiesofscale,hub_page
+E,Employee Stock Ownership Plan (ESOP),https://www.investopedia.com/terms/e/esop.asp,esop,hub_page
+E,Endowment Fund,https://www.investopedia.com/terms/e/endowment.asp,endowment,hub_page
+E,Enterprise Resource Planning (ERP),https://www.investopedia.com/terms/e/erp.asp,erp,hub_page
+E,Enterprise Value (EV),https://www.investopedia.com/terms/e/enterprisevalue.asp,enterprisevalue,hub_page
+E,Entrepreneur,https://www.investopedia.com/terms/e/entrepreneur.asp,entrepreneur,hub_page
+E,Environmental Protection Agency (EPA),https://www.investopedia.com/terms/e/environmental-protection-agency.asp,environmental-protection-agency,hub_page
+E,"Environmental, Social, and Governance (ESG) Criteria",https://www.investopedia.com/terms/e/environmental-social-and-governance-esg-criteria.asp,environmental-social-and-governance-esg-criteria,hub_page
+E,Equity,https://www.investopedia.com/terms/e/equity.asp,equity,hub_page
+E,Equivalent Annual Cost (EAC),https://www.investopedia.com/terms/e/eac.asp,eac,hub_page
+E,Escrow,https://www.investopedia.com/terms/e/escrow.asp,escrow,hub_page
+E,European Union (EU),https://www.investopedia.com/terms/e/europeanunion.asp,europeanunion,hub_page
+E,Ex-Dividend,https://www.investopedia.com/terms/e/ex-dividend.asp,ex-dividend,hub_page
+E,Exchange Rate,https://www.investopedia.com/terms/e/exchangerate.asp,exchangerate,hub_page
+E,Exchange-Traded Fund (ETF),https://www.investopedia.com/terms/e/etf.asp,etf,hub_page
+E,Externality,https://www.investopedia.com/terms/e/externality.asp,externality,hub_page
+F,FAANG Stocks,https://www.investopedia.com/terms/f/faang-stocks.asp,faang-stocks,hub_page
+F,Factors of Production,https://www.investopedia.com/terms/f/factors-production.asp,factors-production,hub_page
+F,FANG Stocks,https://www.investopedia.com/terms/f/fang-stocks-fb-amzn.asp,fang-stocks-fb-amzn,hub_page
+F,Feasibility Study,https://www.investopedia.com/terms/f/feasibility-study.asp,feasibility-study,hub_page
+F,Federal Deposit Insurance Corporation (FDIC),https://www.investopedia.com/terms/f/fdic.asp,fdic,hub_page
+F,Federal Funds Rate,https://www.investopedia.com/terms/f/federalfundsrate.asp,federalfundsrate,hub_page
+F,Federal Housing Administration Loan (FHA),https://www.investopedia.com/terms/f/fhaloan.asp,fhaloan,hub_page
+F,Federal Insurance Contributions Act (FICA),https://www.investopedia.com/terms/f/fica.asp,fica,hub_page
+F,Fiat Money,https://www.investopedia.com/terms/f/fiatmoney.asp,fiatmoney,hub_page
+F,Fiduciary,https://www.investopedia.com/terms/f/fiduciary.asp,fiduciary,hub_page
+F,Finance,https://www.investopedia.com/terms/f/finance.asp,finance,hub_page
+F,Financial Institution (FI),https://www.investopedia.com/terms/f/financialinstitution.asp,financialinstitution,hub_page
+F,Financial Statements,https://www.investopedia.com/terms/f/financial-statements.asp,financial-statements,hub_page
+F,Financial Technology (Fintech),https://www.investopedia.com/terms/f/fintech.asp,fintech,hub_page
+F,Fiscal Policy,https://www.investopedia.com/terms/f/fiscalpolicy.asp,fiscalpolicy,hub_page
+F,Fixed Income,https://www.investopedia.com/terms/f/fixedincome.asp,fixedincome,hub_page
+F,Fixed-Income Security,https://www.investopedia.com/terms/f/fixed-incomesecurity.asp,fixed-incomesecurity,hub_page
+F,Four Ps,https://www.investopedia.com/terms/f/four-ps.asp,four-ps,hub_page
+F,Free Carrier (FCA),https://www.investopedia.com/terms/f/fca.asp,fca,hub_page
+F,Free Market,https://www.investopedia.com/terms/f/freemarket.asp,freemarket,hub_page
+F,Free on Board (FOB),https://www.investopedia.com/terms/f/fob.asp,fob,hub_page
+F,Free Trade,https://www.investopedia.com/terms/f/free-trade.asp,free-trade,hub_page
+F,Fringe Benefits,https://www.investopedia.com/terms/f/fringe-benefits.asp,fringe-benefits,hub_page
+F,Futures,https://www.investopedia.com/terms/f/futures.asp,futures,hub_page
+G,Game Theory,https://www.investopedia.com/terms/g/gametheory.asp,gametheory,hub_page
+G,Gamma,https://www.investopedia.com/terms/g/gamma.asp,gamma,hub_page
+G,General Agreement on Tariffs and Trade (GATT),https://www.investopedia.com/terms/g/gatt.asp,gatt,hub_page
+G,General Data Protection Regulation (GDPR),https://www.investopedia.com/terms/g/general-data-protection-regulation-gdpr.asp,general-data-protection-regulation-gdpr,hub_page
+G,General Ledger,https://www.investopedia.com/terms/g/generalledger.asp,generalledger,hub_page
+G,Generally Accepted Accounting Principles (GAAP),https://www.investopedia.com/terms/g/gaap.asp,gaap,hub_page
+G,Generation X (Gen X),https://www.investopedia.com/terms/g/generation-x-genx.asp,generation-x-genx,hub_page
+G,Geometric Mean,https://www.investopedia.com/terms/g/geometricmean.asp,geometricmean,hub_page
+G,Giffen Good,https://www.investopedia.com/terms/g/giffen-good.asp,giffen-good,hub_page
+G,Gini Index,https://www.investopedia.com/terms/g/gini-index.asp,gini-index,hub_page
+G,Globalization,https://www.investopedia.com/terms/g/globalization.asp,globalization,hub_page
+G,Goods and Services Tax (GST),https://www.investopedia.com/terms/g/gst.asp,gst,hub_page
+G,Goodwill,https://www.investopedia.com/terms/g/goodwill.asp,goodwill,hub_page
+G,Gordon Growth Model,https://www.investopedia.com/terms/g/gordongrowthmodel.asp,gordongrowthmodel,hub_page
+G,Government Bond,https://www.investopedia.com/terms/g/government-bond.asp,government-bond,hub_page
+G,Government Shutdown,https://www.investopedia.com/terms/g/government-shutdown.asp,government-shutdown,hub_page
+G,Great Depression,https://www.investopedia.com/terms/g/great_depression.asp,great_depression,hub_page
+G,Gross Domestic Product (GDP),https://www.investopedia.com/terms/g/gdp.asp,gdp,hub_page
+G,Gross Income,https://www.investopedia.com/terms/g/grossincome.asp,grossincome,hub_page
+G,Gross Margin,https://www.investopedia.com/terms/g/grossmargin.asp,grossmargin,hub_page
+G,Gross National Product (GNP),https://www.investopedia.com/terms/g/gnp.asp,gnp,hub_page
+G,Gross Profit,https://www.investopedia.com/terms/g/grossprofit.asp,grossprofit,hub_page
+G,Gross Profit Margin,https://www.investopedia.com/terms/g/gross_profit_margin.asp,gross_profit_margin,hub_page
+G,Guarantor,https://www.investopedia.com/terms/g/guarantor.asp,guarantor,hub_page
+H,Hard Skills,https://www.investopedia.com/terms/h/hard-skills.asp,hard-skills,hub_page
+H,Harmonic Mean,https://www.investopedia.com/terms/h/harmonicaverage.asp,harmonicaverage,hub_page
+H,Head And Shoulders Pattern,https://www.investopedia.com/terms/h/head-shoulders.asp,head-shoulders,hub_page
+H,Health Maintenance Organizations (HMOs),https://www.investopedia.com/terms/h/hmo.asp,hmo,hub_page
+H,Health Savings Account (HSA),https://www.investopedia.com/terms/h/hsa.asp,hsa,hub_page
+H,Hedge,https://www.investopedia.com/terms/h/hedge.asp,hedge,hub_page
+H,Hedge Fund,https://www.investopedia.com/terms/h/hedgefund.asp,hedgefund,hub_page
+H,Herfindahl-Hirschman Index (HHI),https://www.investopedia.com/terms/h/hhi.asp,hhi,hub_page
+H,Heteroskedasticity,https://www.investopedia.com/terms/h/heteroskedasticity.asp,heteroskedasticity,hub_page
+H,High-Low Method,https://www.investopedia.com/terms/h/high-low-method.asp,high-low-method,hub_page
+H,High-Net-Worth Individual (HNWI),https://www.investopedia.com/terms/h/hnwi.asp,hnwi,hub_page
+H,Hold Harmless Clause,https://www.investopedia.com/terms/h/hold-harmless-clause.asp,hold-harmless-clause,hub_page
+H,Holding Company,https://www.investopedia.com/terms/h/holdingcompany.asp,holdingcompany,hub_page
+H,Home Equity Loan,https://www.investopedia.com/terms/h/homeequityloan.asp,homeequityloan,hub_page
+H,Homeowners Association (HOA),https://www.investopedia.com/terms/h/hoa.asp,hoa,hub_page
+H,Homeowners Association Fee (HOA Fee),https://www.investopedia.com/terms/h/homeowners-association-fee-hoa.asp,homeowners-association-fee-hoa,hub_page
+H,Homestead Exemption,https://www.investopedia.com/terms/h/homestead-exemption.asp,homestead-exemption,hub_page
+H,Horizontal Integration,https://www.investopedia.com/terms/h/horizontalintegration.asp,horizontalintegration,hub_page
+H,Hostile Takeover,https://www.investopedia.com/terms/h/hostiletakeover.asp,hostiletakeover,hub_page
+H,Housing Bubble,https://www.investopedia.com/terms/h/housing_bubble.asp,housing_bubble,hub_page
+H,Human Capital,https://www.investopedia.com/terms/h/humancapital.asp,humancapital,hub_page
+H,Hurdle Rate,https://www.investopedia.com/terms/h/hurdlerate.asp,hurdlerate,hub_page
+H,Hyperinflation,https://www.investopedia.com/terms/h/hyperinflation.asp,hyperinflation,hub_page
+H,Hypothesis Testing,https://www.investopedia.com/terms/h/hypothesistesting.asp,hypothesistesting,hub_page
+I,Income,https://www.investopedia.com/terms/i/income.asp,income,hub_page
+I,Income Statement,https://www.investopedia.com/terms/i/incomestatement.asp,incomestatement,hub_page
+I,Indemnity,https://www.investopedia.com/terms/i/indemnity.asp,indemnity,hub_page
+I,Indemnity Insurance,https://www.investopedia.com/terms/i/indemnity_insurance.asp,indemnity_insurance,hub_page
+I,Index Fund,https://www.investopedia.com/terms/i/indexfund.asp,indexfund,hub_page
+I,Individual Retirement Account (IRA),https://www.investopedia.com/terms/i/ira.asp,ira,hub_page
+I,Industrial Revolution,https://www.investopedia.com/terms/i/industrial-revolution.asp,industrial-revolution,hub_page
+I,Inferior Good,https://www.investopedia.com/terms/i/inferior-good.asp,inferior-good,hub_page
+I,Inflation,https://www.investopedia.com/terms/i/inflation.asp,inflation,hub_page
+I,Initial Public Offerings (IPOs),https://www.investopedia.com/terms/i/ipo.asp,ipo,hub_page
+I,Insider Trading,https://www.investopedia.com/terms/i/insidertrading.asp,insidertrading,hub_page
+I,Insurance,https://www.investopedia.com/terms/i/insurance.asp,insurance,hub_page
+I,Insurance Premium,https://www.investopedia.com/terms/i/insurance-premium.asp,insurance-premium,hub_page
+I,Interest Coverage Ratio,https://www.investopedia.com/terms/i/interestcoverageratio.asp,interestcoverageratio,hub_page
+I,Interest Rate,https://www.investopedia.com/terms/i/interestrate.asp,interestrate,hub_page
+I,Internal Rate of Return (IRR),https://www.investopedia.com/terms/i/irr.asp,irr,hub_page
+I,Internal Revenue Service (IRS),https://www.investopedia.com/terms/i/irs.asp,irs,hub_page
+I,International Financial Reporting Standards (IFRS),https://www.investopedia.com/terms/i/ifrs.asp,ifrs,hub_page
+I,International Monetary Fund (IMF),https://www.investopedia.com/terms/i/imf.asp,imf,hub_page
+I,Interpersonal Skills,https://www.investopedia.com/terms/i/interpersonal-skills.asp,interpersonal-skills,hub_page
+I,Inventory Turnover,https://www.investopedia.com/terms/i/inventoryturnover.asp,inventoryturnover,hub_page
+I,Inverted Yield Curve,https://www.investopedia.com/terms/i/invertedyieldcurve.asp,invertedyieldcurve,hub_page
+I,Invisible Hand,https://www.investopedia.com/terms/i/invisiblehand.asp,invisiblehand,hub_page
+I,Irrevocable Trust,https://www.investopedia.com/terms/i/irrevocabletrust.asp,irrevocabletrust,hub_page
+J,J-Curve,https://www.investopedia.com/terms/j/j-curve-effect.asp,j-curve-effect,hub_page
+J,January Effect,https://www.investopedia.com/terms/j/januaryeffect.asp,januaryeffect,hub_page
+J,Japanese Government Bond (JGB),https://www.investopedia.com/terms/j/jgb.asp,jgb,hub_page
+J,Jensen's Measure,https://www.investopedia.com/terms/j/jensensmeasure.asp,jensensmeasure,hub_page
+J,Job Market,https://www.investopedia.com/terms/j/job-market.asp,job-market,hub_page
+J,John Maynard Keynes,https://www.investopedia.com/terms/j/john_maynard_keynes.asp,john_maynard_keynes,hub_page
+J,Joint and Several Liability,https://www.investopedia.com/terms/j/joint-and-several-liability.asp,joint-and-several-liability,hub_page
+J,Joint Probability,https://www.investopedia.com/terms/j/jointprobability.asp,jointprobability,hub_page
+J,Joint-Stock Company,https://www.investopedia.com/terms/j/jointstockcompany.asp,jointstockcompany,hub_page
+J,Joint Tenancy,https://www.investopedia.com/terms/j/joint-tenancy.asp,joint-tenancy,hub_page
+J,Joint Venture (JV),https://www.investopedia.com/terms/j/jointventure.asp,jointventure,hub_page
+J,Jones Act,https://www.investopedia.com/terms/j/jonesact.asp,jonesact,hub_page
+J,Joseph Schumpeter,https://www.investopedia.com/terms/j/joseph-schumpeter.asp,joseph-schumpeter,hub_page
+J,Journal,https://www.investopedia.com/terms/j/journal.asp,journal,hub_page
+J,Joint Tenants With Right of Survivorship (JTWROS),https://www.investopedia.com/terms/j/jtwros.asp,jtwros,hub_page
+J,JPY (Japanese Yen),https://www.investopedia.com/terms/forex/j/jpy-japanese-yen.asp,jpy-japanese-yen,hub_page
+J,Jumbo CD,https://www.investopedia.com/terms/j/jumbocd.asp,jumbocd,hub_page
+J,Jumbo Loan,https://www.investopedia.com/terms/j/jumboloan.asp,jumboloan,hub_page
+J,Junk Bond,https://www.investopedia.com/terms/j/junkbond.asp,junkbond,hub_page
+J,Juris Doctor (JD),https://www.investopedia.com/terms/j/juris-doctor.asp,juris-doctor,hub_page
+J,Jurisdiction Risk,https://www.investopedia.com/terms/j/jurisdiction-risk.asp,jurisdiction-risk,hub_page
+J,Just In Case (JIC),https://www.investopedia.com/terms/j/jic.asp,jic,hub_page
+J,Just In Time (JIT),https://www.investopedia.com/terms/j/jit.asp,jit,hub_page
+K,Kaizen,https://www.investopedia.com/terms/k/kaizen.asp,kaizen,hub_page
+K,Karl Marx,https://www.investopedia.com/terms/k/karl-marx.asp,karl-marx,hub_page
+K,Keltner Channel,https://www.investopedia.com/terms/k/keltnerchannel.asp,keltnerchannel,hub_page
+K,Keogh Plan,https://www.investopedia.com/terms/k/keoghplan.asp,keoghplan,hub_page
+K,Key Performance Indicators (KPI),https://www.investopedia.com/terms/k/kpi.asp,kpi,hub_page
+K,Key Person Insurance,https://www.investopedia.com/terms/k/keypersoninsurance.asp,keypersoninsurance,hub_page
+K,Key Rate Duration,https://www.investopedia.com/terms/k/keyrateduration.asp,keyrateduration,hub_page
+K,Keynesian Economics,https://www.investopedia.com/terms/k/keynesianeconomics.asp,keynesianeconomics,hub_page
+K,Kickback,https://www.investopedia.com/terms/k/kickback.asp,kickback,hub_page
+K,Kiddie Tax,https://www.investopedia.com/terms/k/kiddietax.asp,kiddietax,hub_page
+K,Kids In Parents' Pockets Eroding Retirement Savings (KIPPERS),https://www.investopedia.com/terms/k/kippers.asp,kippers,hub_page
+K,Kiosk,https://www.investopedia.com/terms/k/kiosk.asp,kiosk,hub_page
+K,Kiting,https://www.investopedia.com/terms/k/kited.asp,kited,hub_page
+K,Klinger Oscillator,https://www.investopedia.com/terms/k/klingeroscillator.asp,klingeroscillator,hub_page
+K,Knock-In Option,https://www.investopedia.com/terms/k/knock-inoption.asp,knock-inoption,hub_page
+K,Knock-Out Option,https://www.investopedia.com/terms/k/knock-outoption.asp,knock-outoption,hub_page
+K,Know Sure Thing (KST),https://www.investopedia.com/terms/k/know-sure-thing-kst.asp,know-sure-thing-kst,hub_page
+K,Know Your Client (KYC),https://www.investopedia.com/terms/k/knowyourclient.asp,knowyourclient,hub_page
+K,Knowledge Economy,https://www.investopedia.com/terms/k/knowledge-economy.asp,knowledge-economy,hub_page
+K,Knowledge Process Outsourcing (KPO),https://www.investopedia.com/terms/k/knowledge-process-outsourcing.asp,knowledge-process-outsourcing,hub_page
+K,Korean Composite Stock Price Indexes (KOSPI),https://www.investopedia.com/terms/k/kospi.asp,kospi,hub_page
+K,Kurtosis,https://www.investopedia.com/terms/k/kurtosis.asp,kurtosis,hub_page
+K,Kuwaiti Dinar (KWD),https://www.investopedia.com/terms/k/kwd.asp,kwd,hub_page
+K,The Kyoto Protocol,https://www.investopedia.com/terms/k/kyoto.asp,kyoto,hub_page
+L,Laissez-Faire,https://www.investopedia.com/terms/l/laissezfaire.asp,laissezfaire,hub_page
+L,Law of Demand,https://www.investopedia.com/terms/l/lawofdemand.asp,lawofdemand,hub_page
+L,Law of Supply,https://www.investopedia.com/terms/l/lawofsupply.asp,lawofsupply,hub_page
+L,Law of Supply and Demand,https://www.investopedia.com/terms/l/law-of-supply-demand.asp,law-of-supply-demand,hub_page
+L,Leadership,https://www.investopedia.com/terms/l/leadership.asp,leadership,hub_page
+L,Letter of Intent (LOI),https://www.investopedia.com/terms/l/letterofintent.asp,letterofintent,hub_page
+L,Letters of Credit,https://www.investopedia.com/terms/l/letterofcredit.asp,letterofcredit,hub_page
+L,Leverage,https://www.investopedia.com/terms/l/leverage.asp,leverage,hub_page
+L,Leverage Ratio,https://www.investopedia.com/terms/l/leverageratio.asp,leverageratio,hub_page
+L,Leveraged Buyout (LBO),https://www.investopedia.com/terms/l/leveragedbuyout.asp,leveragedbuyout,hub_page
+L,Liability,https://www.investopedia.com/terms/l/liability.asp,liability,hub_page
+L,Liability Insurance,https://www.investopedia.com/terms/l/liability_insurance.asp,liability_insurance,hub_page
+L,Limit Order,https://www.investopedia.com/terms/l/limitorder.asp,limitorder,hub_page
+L,"How Limited Government Works: Concept, History & Examples",https://www.investopedia.com/terms/l/limited-government.asp,limited-government,hub_page
+L,Limited Liability Company (LLC),https://www.investopedia.com/terms/l/llc.asp,llc,hub_page
+L,Limited Partnership (LP),https://www.investopedia.com/terms/l/limitedpartnership.asp,limitedpartnership,hub_page
+L,Line of Credit (LOC),https://www.investopedia.com/terms/l/lineofcredit.asp,lineofcredit,hub_page
+L,Liquidation,https://www.investopedia.com/terms/l/liquidation.asp,liquidation,hub_page
+L,Liquidity,https://www.investopedia.com/terms/l/liquidity.asp,liquidity,hub_page
+L,Liquidity Coverage Ratio (LCR),https://www.investopedia.com/terms/l/liquidity-coverage-ratio.asp,liquidity-coverage-ratio,hub_page
+L,Liquidity Ratio,https://www.investopedia.com/terms/l/liquidityratios.asp,liquidityratios,hub_page
+L,Loan-To-Value Ratio (LTV),https://www.investopedia.com/terms/l/loantovalue.asp,loantovalue,hub_page
+L,London Inter-Bank Offered Rate (LIBOR),https://www.investopedia.com/terms/l/libor.asp,libor,hub_page
+L,Ltd. (Limited),https://www.investopedia.com/terms/l/ltd-limited.asp,ltd-limited,hub_page
+M,Macroeconomics,https://www.investopedia.com/terms/m/macroeconomics.asp,macroeconomics,hub_page
+M,Magna Cum Laude,https://www.investopedia.com/terms/m/magna-cum-laude.asp,magna-cum-laude,hub_page
+M,Management by Objectives (MBO),https://www.investopedia.com/terms/m/management-by-objectives.asp,management-by-objectives,hub_page
+M,Margin,https://www.investopedia.com/terms/m/margin.asp,margin,hub_page
+M,Margin Call,https://www.investopedia.com/terms/m/margincall.asp,margincall,hub_page
+M,Market Share,https://www.investopedia.com/terms/m/marketshare.asp,marketshare,hub_page
+M,Marketing,https://www.investopedia.com/terms/m/marketing.asp,marketing,hub_page
+M,Marketing Strategy,https://www.investopedia.com/terms/m/marketing-strategy.asp,marketing-strategy,hub_page
+M,Master Limited Partnership (MLP),https://www.investopedia.com/terms/m/mlp.asp,mlp,hub_page
+M,Memorandum of Understanding (MOU),https://www.investopedia.com/terms/m/mou.asp,mou,hub_page
+M,Mercantilism,https://www.investopedia.com/terms/m/mercantilism.asp,mercantilism,hub_page
+M,Mergers and Acquisitions (M&A),https://www.investopedia.com/terms/m/mergersandacquisitions.asp,mergersandacquisitions,hub_page
+M,Milton Friedman,https://www.investopedia.com/terms/m/milton-friedman.asp,milton-friedman,hub_page
+M,Mixed Economic System,https://www.investopedia.com/terms/m/mixed-economic-system.asp,mixed-economic-system,hub_page
+M,Monetary Policy,https://www.investopedia.com/terms/m/monetarypolicy.asp,monetarypolicy,hub_page
+M,Money Laundering,https://www.investopedia.com/terms/m/moneylaundering.asp,moneylaundering,hub_page
+M,Money Market Account,https://www.investopedia.com/terms/m/moneymarketaccount.asp,moneymarketaccount,hub_page
+M,Monopolistic Competition,https://www.investopedia.com/terms/m/monopolisticmarket.asp,monopolisticmarket,hub_page
+M,Monte Carlo Simulation,https://www.investopedia.com/terms/m/montecarlosimulation.asp,montecarlosimulation,hub_page
+M,Moore's Law,https://www.investopedia.com/terms/m/mooreslaw.asp,mooreslaw,hub_page
+M,Moving Average Convergence Divergence (MACD),https://www.investopedia.com/terms/m/macd.asp,macd,hub_page
+M,Multilevel Marketing,https://www.investopedia.com/terms/m/multi-level-marketing.asp,multi-level-marketing,hub_page
+M,Mutual Fund,https://www.investopedia.com/terms/m/mutualfund.asp,mutualfund,hub_page
+M,Mutually Exclusive,https://www.investopedia.com/terms/m/mutuallyexclusive.asp,mutuallyexclusive,hub_page
+N,Nasdaq,https://www.investopedia.com/terms/n/nasdaq.asp,nasdaq,hub_page
+N,Nash Equilibrium,https://www.investopedia.com/terms/n/nash-equilibrium.asp,nash-equilibrium,hub_page
+N,Negative Correlation,https://www.investopedia.com/terms/n/negative-correlation.asp,negative-correlation,hub_page
+N,Neoliberalism,https://www.investopedia.com/terms/n/neoliberalism.asp,neoliberalism,hub_page
+N,Net Asset Value (NAV),https://www.investopedia.com/terms/n/nav.asp,nav,hub_page
+N,Net Income (NI),https://www.investopedia.com/terms/n/netincome.asp,netincome,hub_page
+N,Net Operating Income (NOI),https://www.investopedia.com/terms/n/noi.asp,noi,hub_page
+N,Net Present Value (NPV),https://www.investopedia.com/terms/n/npv.asp,npv,hub_page
+N,Net Profit Margin,https://www.investopedia.com/terms/n/net_margin.asp,net_margin,hub_page
+N,Net Worth,https://www.investopedia.com/terms/n/networth.asp,networth,hub_page
+N,Netting,https://www.investopedia.com/terms/n/netting.asp,netting,hub_page
+N,Network Marketing,https://www.investopedia.com/terms/n/network-marketing.asp,network-marketing,hub_page
+N,Networking,https://www.investopedia.com/terms/n/networking.asp,networking,hub_page
+N,New York Stock Exchange (NYSE),https://www.investopedia.com/terms/n/nyse.asp,nyse,hub_page
+N,Next of Kin,https://www.investopedia.com/terms/n/next-of-kin.asp,next-of-kin,hub_page
+N,NINJA Loan,https://www.investopedia.com/terms/n/ninja-loan.asp,ninja-loan,hub_page
+N,Nominal,https://www.investopedia.com/terms/n/nominal.asp,nominal,hub_page
+N,Non-Disclosure Agreement (NDA),https://www.investopedia.com/terms/n/nda.asp,nda,hub_page
+N,Normal Distribution,https://www.investopedia.com/terms/n/normaldistribution.asp,normaldistribution,hub_page
+N,North American Free Trade Agreement (NAFTA),https://www.investopedia.com/terms/n/nafta.asp,nafta,hub_page
+N,Not for Profit,https://www.investopedia.com/terms/n/not-for-profit.asp,not-for-profit,hub_page
+N,Notional Value,https://www.investopedia.com/terms/n/notionalvalue.asp,notionalvalue,hub_page
+N,Novation,https://www.investopedia.com/terms/n/novation.asp,novation,hub_page
+N,Null Hypothesis,https://www.investopedia.com/terms/n/null_hypothesis.asp,null_hypothesis,hub_page
+O,Offset,https://www.investopedia.com/terms/o/offset.asp,offset,hub_page
+O,"Old Age, Survivors, and Disability Insurance (OASDI)",https://www.investopedia.com/terms/o/oasdi.asp,oasdi,hub_page
+O,Oligopoly,https://www.investopedia.com/terms/o/oligopoly.asp,oligopoly,hub_page
+O,Onerous Contract,https://www.investopedia.com/terms/o/onerouscontract.asp,onerouscontract,hub_page
+O,Online Banking,https://www.investopedia.com/terms/o/onlinebanking.asp,onlinebanking,hub_page
+O,Open Market Operations,https://www.investopedia.com/terms/o/openmarketoperations.asp,openmarketoperations,hub_page
+O,Operating Income,https://www.investopedia.com/terms/o/operatingincome.asp,operatingincome,hub_page
+O,Operating Leverage,https://www.investopedia.com/terms/o/operatingleverage.asp,operatingleverage,hub_page
+O,Operating Margin,https://www.investopedia.com/terms/o/operatingmargin.asp,operatingmargin,hub_page
+O,Operations Management,https://www.investopedia.com/terms/o/operations-management.asp,operations-management,hub_page
+O,Opportunity Cost,https://www.investopedia.com/terms/o/opportunitycost.asp,opportunitycost,hub_page
+O,Option,https://www.investopedia.com/terms/o/option.asp,option,hub_page
+O,Organization of the Petroleum Exporting Countries (OPEC),https://www.investopedia.com/terms/o/opec.asp,opec,hub_page
+O,Organizational Behavior (OB),https://www.investopedia.com/terms/o/organizational-behavior.asp,organizational-behavior,hub_page
+O,Organizational Structure,https://www.investopedia.com/terms/o/organizational-structure.asp,organizational-structure,hub_page
+O,Original Equipment Manufacturer (OEM),https://www.investopedia.com/terms/o/oem.asp,oem,hub_page
+O,Original Issue Discount (OID),https://www.investopedia.com/terms/o/oid.asp,oid,hub_page
+O,Out Of The Money (OTM),https://www.investopedia.com/terms/o/outofthemoney.asp,outofthemoney,hub_page
+O,Outsourcing,https://www.investopedia.com/terms/o/outsourcing.asp,outsourcing,hub_page
+O,Over-The-Counter (OTC),https://www.investopedia.com/terms/o/otc.asp,otc,hub_page
+O,Over-The-Counter Market,https://www.investopedia.com/terms/o/over-the-countermarket.asp,over-the-countermarket,hub_page
+O,Overdraft,https://www.investopedia.com/terms/o/overdraft.asp,overdraft,hub_page
+O,Overhead,https://www.investopedia.com/terms/o/overhead.asp,overhead,hub_page
+O,Overnight Index Swap,https://www.investopedia.com/terms/o/overnightindexswap.asp,overnightindexswap,hub_page
+P,P-Value,https://www.investopedia.com/terms/p/p-value.asp,p-value,hub_page
+P,Partnership,https://www.investopedia.com/terms/p/partnership.asp,partnership,hub_page
+P,Penny Stocks Trade,https://www.investopedia.com/terms/p/pennystock.asp,pennystock,hub_page
+P,Per Capita GDP,https://www.investopedia.com/terms/p/per-capita-gdp.asp,per-capita-gdp,hub_page
+P,Perfect Competition,https://www.investopedia.com/terms/p/perfectcompetition.asp,perfectcompetition,hub_page
+P,"What Is Personal Finance, and Why Is It Important?",https://www.investopedia.com/terms/p/personalfinance.asp,personalfinance,hub_page
+P,Phillips Curve,https://www.investopedia.com/terms/p/phillipscurve.asp,phillipscurve,hub_page
+P,"Ponzi Scheme: Definition, Examples, and Origins",https://www.investopedia.com/terms/p/ponzischeme.asp,ponzischeme,hub_page
+P,Porter's 5 Forces,https://www.investopedia.com/terms/p/porter.asp,porter,hub_page
+P,Positive Correlation,https://www.investopedia.com/terms/p/positive-correlation.asp,positive-correlation,hub_page
+P,Pre-Market,https://www.investopedia.com/terms/p/premarket.asp,premarket,hub_page
+P,Preference Shares,https://www.investopedia.com/terms/p/preference-shares.asp,preference-shares,hub_page
+P,Preferred Stock,https://www.investopedia.com/terms/p/preferredstock.asp,preferredstock,hub_page
+P,Present Value,https://www.investopedia.com/terms/p/presentvalue.asp,presentvalue,hub_page
+P,Price-to-Earnings Ratio (P/E Ratio),https://www.investopedia.com/terms/p/price-earningsratio.asp,price-earningsratio,hub_page
+P,Price/Earnings-to-Growth (PEG) Ratio,https://www.investopedia.com/terms/p/pegratio.asp,pegratio,hub_page
+P,Pro Rata,https://www.investopedia.com/terms/p/pro-rata.asp,pro-rata,hub_page
+P,Producer Price Index (PPI),https://www.investopedia.com/terms/p/ppi.asp,ppi,hub_page
+P,Profit,https://www.investopedia.com/terms/p/profit.asp,profit,hub_page
+P,Profit and Loss Statement (P&L),https://www.investopedia.com/terms/p/plstatement.asp,plstatement,hub_page
+P,Promissory Note,https://www.investopedia.com/terms/p/promissorynote.asp,promissorynote,hub_page
+P,Prospectus,https://www.investopedia.com/terms/p/prospectus.asp,prospectus,hub_page
+P,Public Limited Company (PLC),https://www.investopedia.com/terms/p/plc.asp,plc,hub_page
+P,Put Option,https://www.investopedia.com/terms/p/putoption.asp,putoption,hub_page
+Q,Q Ratio (Tobin's Q),https://www.investopedia.com/terms/q/qratio.asp,qratio,hub_page
+Q,Quadruple Witching,https://www.investopedia.com/terms/q/quadruplewitching.asp,quadruplewitching,hub_page
+Q,Qualified Dividend,https://www.investopedia.com/terms/q/qualifieddividend.asp,qualifieddividend,hub_page
+Q,Qualified Institutional Buyer (QIB),https://www.investopedia.com/terms/q/qib.asp,qib,hub_page
+Q,Qualified Institutional Placement (QIP),https://www.investopedia.com/terms/q/qip.asp,qip,hub_page
+Q,Qualified Longevity Annuity Contract (QLAC),https://www.investopedia.com/terms/q/qualified-longevity-annuity-contract-qlac.asp,qualified-longevity-annuity-contract-qlac,hub_page
+Q,Qualified Opinion,https://www.investopedia.com/terms/q/qualifiedopinion.asp,qualifiedopinion,hub_page
+Q,Qualified Retirement Plan,https://www.investopedia.com/terms/q/qrp.asp,qrp,hub_page
+Q,Qualified Terminable Interest Property (QTIP) Trust,https://www.investopedia.com/terms/q/qtip.asp,qtip,hub_page
+Q,Qualitative Analysis,https://www.investopedia.com/terms/q/qualitativeanalysis.asp,qualitativeanalysis,hub_page
+Q,Quality Control,https://www.investopedia.com/terms/q/quality-control.asp,quality-control,hub_page
+Q,Quality of Earnings,https://www.investopedia.com/terms/q/qualityofearnings.asp,qualityofearnings,hub_page
+Q,Quality Management,https://www.investopedia.com/terms/q/quality-management.asp,quality-management,hub_page
+Q,Quantitative Analysis (QA),https://www.investopedia.com/terms/q/quantitativeanalysis.asp,quantitativeanalysis,hub_page
+Q,Quantitative Easing,https://www.investopedia.com/terms/q/quantitative-easing.asp,quantitative-easing,hub_page
+Q,Quantitative Trading,https://www.investopedia.com/terms/q/quantitative-trading.asp,quantitative-trading,hub_page
+Q,Quantity Demanded,https://www.investopedia.com/terms/q/quantitydemanded.asp,quantitydemanded,hub_page
+Q,"Quarter (Q1, Q2, Q3, Q4)",https://www.investopedia.com/terms/q/quarter.asp,quarter,hub_page
+Q,Quarter on Quarter (QOQ),https://www.investopedia.com/terms/q/qoq.asp,qoq,hub_page
+Q,Quasi Contract,https://www.investopedia.com/terms/q/quasi-contract.asp,quasi-contract,hub_page
+Q,Quick Assets,https://www.investopedia.com/terms/q/quickassets.asp,quickassets,hub_page
+Q,Quick Ratio,https://www.investopedia.com/terms/q/quickratio.asp,quickratio,hub_page
+Q,Quintiles,https://www.investopedia.com/terms/q/quintile.asp,quintile,hub_page
+Q,Quota,https://www.investopedia.com/terms/q/quota.asp,quota,hub_page
+R,R-Squared,https://www.investopedia.com/terms/r/r-squared.asp,r-squared,hub_page
+R,Racketeering,https://www.investopedia.com/terms/r/racketeering.asp,racketeering,hub_page
+R,Rate of Return,https://www.investopedia.com/terms/r/rateofreturn.asp,rateofreturn,hub_page
+R,Rational Choice Theory,https://www.investopedia.com/terms/r/rational-choice-theory.asp,rational-choice-theory,hub_page
+R,Real Estate,https://www.investopedia.com/terms/r/realestate.asp,realestate,hub_page
+R,Real Estate Investment Trust (REIT),https://www.investopedia.com/terms/r/reit.asp,reit,hub_page
+R,Real Gross Domestic Product (GDP),https://www.investopedia.com/terms/r/realgdp.asp,realgdp,hub_page
+R,Receivables Turnover Ratio,https://www.investopedia.com/terms/r/receivableturnoverratio.asp,receivableturnoverratio,hub_page
+R,Registered Investment Advisor (RIA),https://www.investopedia.com/terms/r/ria.asp,ria,hub_page
+R,Regression,https://www.investopedia.com/terms/r/regression.asp,regression,hub_page
+R,Relative Strength Index (RSI),https://www.investopedia.com/terms/r/rsi.asp,rsi,hub_page
+R,Renewable Resource,https://www.investopedia.com/terms/r/renewable_resource.asp,renewable_resource,hub_page
+R,Repurchase Agreement (Repo),https://www.investopedia.com/terms/r/repurchaseagreement.asp,repurchaseagreement,hub_page
+R,Requests for Proposal (RFP),https://www.investopedia.com/terms/r/request-for-proposal.asp,request-for-proposal,hub_page
+R,Required Minimum Distribution (RMD),https://www.investopedia.com/terms/r/requiredminimumdistribution.asp,requiredminimumdistribution,hub_page
+R,Retained Earnings,https://www.investopedia.com/terms/r/retainedearnings.asp,retainedearnings,hub_page
+R,Return on Assets (ROA),https://www.investopedia.com/terms/r/returnonassets.asp,returnonassets,hub_page
+R,Return on Equity (ROE),https://www.investopedia.com/terms/r/returnonequity.asp,returnonequity,hub_page
+R,Return on Invested Capital (ROIC),https://www.investopedia.com/terms/r/returnoninvestmentcapital.asp,returnoninvestmentcapital,hub_page
+R,Return on Investment (ROI),https://www.investopedia.com/terms/r/returnoninvestment.asp,returnoninvestment,hub_page
+R,Roth 401(k),https://www.investopedia.com/terms/r/roth401k.asp,roth401k,hub_page
+R,Roth IRA,https://www.investopedia.com/terms/r/rothira.asp,rothira,hub_page
+R,Rule of 72,https://www.investopedia.com/terms/r/ruleof72.asp,ruleof72,hub_page
+R,Russell 2000 Index,https://www.investopedia.com/terms/r/russell2000.asp,russell2000,hub_page
+S,S&P 500 Index (Standard & Poor's 500 Index),https://www.investopedia.com/terms/s/sp500.asp,sp500,hub_page
+S,Sarbanes-Oxley (SOX) Act of 2002,https://www.investopedia.com/terms/s/sarbanesoxleyact.asp,sarbanesoxleyact,hub_page
+S,Securities and Exchange Commission (SEC),https://www.investopedia.com/terms/s/sec.asp,sec,hub_page
+S,Security,https://www.investopedia.com/terms/s/security.asp,security,hub_page
+S,Series 63,https://www.investopedia.com/terms/s/series63.asp,series63,hub_page
+S,Series 7,https://www.investopedia.com/terms/s/series7.asp,series7,hub_page
+S,Sharpe Ratio,https://www.investopedia.com/terms/s/sharperatio.asp,sharperatio,hub_page
+S,Short Selling,https://www.investopedia.com/terms/s/shortselling.asp,shortselling,hub_page
+S,Social Media,https://www.investopedia.com/terms/s/social-media.asp,social-media,hub_page
+S,Social Responsibility,https://www.investopedia.com/terms/s/socialresponsibility.asp,socialresponsibility,hub_page
+S,Solvency Ratio,https://www.investopedia.com/terms/s/solvencyratio.asp,solvencyratio,hub_page
+S,Spread,https://www.investopedia.com/terms/s/spread.asp,spread,hub_page
+S,Standard Deviation,https://www.investopedia.com/terms/s/standarddeviation.asp,standarddeviation,hub_page
+S,Stochastic Oscillator,https://www.investopedia.com/terms/s/stochasticoscillator.asp,stochasticoscillator,hub_page
+S,Stock,https://www.investopedia.com/terms/s/stock.asp,stock,hub_page
+S,Stock Keeping Unit (SKU),https://www.investopedia.com/terms/s/stock-keeping-unit-sku.asp,stock-keeping-unit-sku,hub_page
+S,Stock Market,https://www.investopedia.com/terms/s/stockmarket.asp,stockmarket,hub_page
+S,Stop-Limit Order,https://www.investopedia.com/terms/s/stop-limitorder.asp,stop-limitorder,hub_page
+S,Straddle,https://www.investopedia.com/terms/s/straddle.asp,straddle,hub_page
+S,"Strength, Weakness, Opportunity, and Threat (SWOT) Analysis",https://www.investopedia.com/terms/s/swot.asp,swot,hub_page
+S,Subsidiary,https://www.investopedia.com/terms/s/subsidiary.asp,subsidiary,hub_page
+S,Supply Chain,https://www.investopedia.com/terms/s/supplychain.asp,supplychain,hub_page
+S,Sustainability,https://www.investopedia.com/terms/s/sustainability.asp,sustainability,hub_page
+S,Systematic Sampling,https://www.investopedia.com/terms/s/systematic-sampling.asp,systematic-sampling,hub_page
+T,T-Test,https://www.investopedia.com/terms/t/t-test.asp,t-test,hub_page
+T,Tariff,https://www.investopedia.com/terms/t/tariff.asp,tariff,hub_page
+T,Technical Analysis,https://www.investopedia.com/terms/t/technicalanalysis.asp,technicalanalysis,hub_page
+T,Tenancy in Common (TIC),https://www.investopedia.com/terms/t/tenancy_in_common.asp,tenancy_in_common,hub_page
+T,Term Life Insurance,https://www.investopedia.com/terms/t/termlife.asp,termlife,hub_page
+T,Terminal Value (TV),https://www.investopedia.com/terms/t/terminalvalue.asp,terminalvalue,hub_page
+T,Third World,https://www.investopedia.com/terms/t/third-world.asp,third-world,hub_page
+T,Total-Debt-to-Total-Assets,https://www.investopedia.com/terms/t/totaldebttototalassets.asp,totaldebttototalassets,hub_page
+T,Total Expense Ratio (TER),https://www.investopedia.com/terms/t/ter.asp,ter,hub_page
+T,Total Quality Management (TQM),https://www.investopedia.com/terms/t/total-quality-management-tqm.asp,total-quality-management-tqm,hub_page
+T,Total Shareholder Return (TSR),https://www.investopedia.com/terms/t/tsr.asp,tsr,hub_page
+T,Trade Deficit,https://www.investopedia.com/terms/t/trade_deficit.asp,trade_deficit,hub_page
+T,Trailing 12 Months (TTM),https://www.investopedia.com/terms/t/ttm.asp,ttm,hub_page
+T,Tranches,https://www.investopedia.com/terms/t/tranches.asp,tranches,hub_page
+T,Transaction,https://www.investopedia.com/terms/t/transaction.asp,transaction,hub_page
+T,Treasury Bills (T-Bills),https://www.investopedia.com/terms/t/treasurybill.asp,treasurybill,hub_page
+T,Treasury Inflation-Protected Security (TIPS),https://www.investopedia.com/terms/t/tips.asp,tips,hub_page
+T,Triple Bottom Line (TBL),https://www.investopedia.com/terms/t/triple-bottom-line.asp,triple-bottom-line,hub_page
+T,Troubled Asset Relief Program (TARP),https://www.investopedia.com/terms/t/troubled-asset-relief-program-tarp.asp,troubled-asset-relief-program-tarp,hub_page
+T,Trust,https://www.investopedia.com/terms/t/trust.asp,trust,hub_page
+T,Trust Fund,https://www.investopedia.com/terms/t/trust-fund.asp,trust-fund,hub_page
+T,Trustee,https://www.investopedia.com/terms/t/trustee.asp,trustee,hub_page
+T,TSA PreCheck,https://www.investopedia.com/terms/t/tsa-pre.asp,tsa-pre,hub_page
+T,Turnover,https://www.investopedia.com/terms/t/turnover.asp,turnover,hub_page
+U,Underlying Asset,https://www.investopedia.com/terms/u/underlying-asset.asp,underlying-asset,hub_page
+U,Underwriter,https://www.investopedia.com/terms/u/underwriter.asp,underwriter,hub_page
+U,Underwriting,https://www.investopedia.com/terms/u/underwriting.asp,underwriting,hub_page
+U,Unearned Income,https://www.investopedia.com/terms/u/unearnedincome.asp,unearnedincome,hub_page
+U,Unemployment,https://www.investopedia.com/terms/u/unemployment.asp,unemployment,hub_page
+U,Unemployment Rate,https://www.investopedia.com/terms/u/unemploymentrate.asp,unemploymentrate,hub_page
+U,Unicorn,https://www.investopedia.com/terms/u/unicorn.asp,unicorn,hub_page
+U,Unified Managed Account (UMA),https://www.investopedia.com/terms/u/uma.asp,uma,hub_page
+U,Uniform Distribution,https://www.investopedia.com/terms/u/uniform-distribution.asp,uniform-distribution,hub_page
+U,Uniform Gifts to Minors Ac (UGMA),https://www.investopedia.com/terms/u/ugma.asp,ugma,hub_page
+U,Uniform Transfers to Minors Act (UTMA),https://www.investopedia.com/terms/u/utma.asp,utma,hub_page
+U,Unilateral Contract,https://www.investopedia.com/terms/u/unilateral-contract.asp,unilateral-contract,hub_page
+U,Unit Investment Trust (UIT),https://www.investopedia.com/terms/u/uit.asp,uit,hub_page
+U,United Nations (UN),https://www.investopedia.com/terms/u/united-nations-un.asp,united-nations-un,hub_page
+U,Universal Life Insurance,https://www.investopedia.com/terms/u/universallife.asp,universallife,hub_page
+U,Unlevered Beta,https://www.investopedia.com/terms/u/unleveredbeta.asp,unleveredbeta,hub_page
+U,Unlevered Free Cash Flow (UFCF),https://www.investopedia.com/terms/u/unlevered-free-cash-flow-ufcf.asp,unlevered-free-cash-flow-ufcf,hub_page
+U,Unlimited Liability,https://www.investopedia.com/terms/u/unlimited-liability.asp,unlimited-liability,hub_page
+U,Unsecured Loan,https://www.investopedia.com/terms/u/unsecuredloan.asp,unsecuredloan,hub_page
+U,Upside,https://www.investopedia.com/terms/u/upside.asp,upside,hub_page
+U,U.S. Dollar Index (USDX),https://www.investopedia.com/terms/u/usdx.asp,usdx,hub_page
+U,U.S. Savings Bonds,https://www.investopedia.com/terms/u/ussavingsbonds.asp,ussavingsbonds,hub_page
+U,Utilities Sector,https://www.investopedia.com/terms/u/utilities_sector.asp,utilities_sector,hub_page
+U,Utility,https://www.investopedia.com/terms/u/utility.asp,utility,hub_page
+V,Valuation,https://www.investopedia.com/terms/v/valuation.asp,valuation,hub_page
+V,Value Added,https://www.investopedia.com/terms/v/valueadded.asp,valueadded,hub_page
+V,Value Chain,https://www.investopedia.com/terms/v/valuechain.asp,valuechain,hub_page
+V,Value Investing,https://www.investopedia.com/terms/v/valueinvesting.asp,valueinvesting,hub_page
+V,Value Proposition,https://www.investopedia.com/terms/v/valueproposition.asp,valueproposition,hub_page
+V,Value at Risk (VaR),https://www.investopedia.com/terms/v/var.asp,var,hub_page
+V,Value-Added Tax (VAT),https://www.investopedia.com/terms/v/valueaddedtax.asp,valueaddedtax,hub_page
+V,Variability,https://www.investopedia.com/terms/v/variability.asp,variability,hub_page
+V,Variable Annuity,https://www.investopedia.com/terms/v/variableannuity.asp,variableannuity,hub_page
+V,Variable Cost,https://www.investopedia.com/terms/v/variablecost.asp,variablecost,hub_page
+V,Variance,https://www.investopedia.com/terms/v/variance.asp,variance,hub_page
+V,Vega,https://www.investopedia.com/terms/v/vega.asp,vega,hub_page
+V,Velocity of Money,https://www.investopedia.com/terms/v/velocity.asp,velocity,hub_page
+V,Venture Capital,https://www.investopedia.com/terms/v/venturecapital.asp,venturecapital,hub_page
+V,Venture Capitalist (VC),https://www.investopedia.com/terms/v/venturecapitalist.asp,venturecapitalist,hub_page
+V,Vertical Analysis,https://www.investopedia.com/terms/v/vertical_analysis.asp,vertical_analysis,hub_page
+V,Vertical Integration,https://www.investopedia.com/terms/v/verticalintegration.asp,verticalintegration,hub_page
+V,Vesting,https://www.investopedia.com/terms/v/vesting.asp,vesting,hub_page
+V,Visual Basic for Applications (VBA),https://www.investopedia.com/terms/v/visual-basic-for-applications-vba.asp,visual-basic-for-applications-vba,hub_page
+V,VIX (CBOE Volatility Index),https://www.investopedia.com/terms/v/vix.asp,vix,hub_page
+V,Volatility,https://www.investopedia.com/terms/v/volatility.asp,volatility,hub_page
+V,Volcker Rule,https://www.investopedia.com/terms/v/volcker-rule.asp,volcker-rule,hub_page
+V,Volume Weighted Average Price (VWAP),https://www.investopedia.com/terms/v/vwap.asp,vwap,hub_page
+V,Voluntary Employees Beneficiary Association Plan (VEBA),https://www.investopedia.com/terms/v/voluntaryemployeesassoc.asp,voluntaryemployeesassoc,hub_page
+W,W-2 Form,https://www.investopedia.com/terms/w/w2form.asp,w2form,hub_page
+W,W-4 Form,https://www.investopedia.com/terms/w/w4form.asp,w4form,hub_page
+W,W-8 Form,https://www.investopedia.com/terms/w/w8form.asp,w8form,hub_page
+W,Waiver of Subrogation,https://www.investopedia.com/terms/w/waiver-of-subrogation.asp,waiver-of-subrogation,hub_page
+W,Wall Street,https://www.investopedia.com/terms/w/wallstreet.asp,wallstreet,hub_page
+W,War Bond,https://www.investopedia.com/terms/w/warbonds.asp,warbonds,hub_page
+W,Warrant,https://www.investopedia.com/terms/w/warrant.asp,warrant,hub_page
+W,Wash Sale,https://www.investopedia.com/terms/w/washsale.asp,washsale,hub_page
+W,Wealth Management,https://www.investopedia.com/terms/w/wealthmanagement.asp,wealthmanagement,hub_page
+W,Wearable Technology,https://www.investopedia.com/terms/w/wearable-technology.asp,wearable-technology,hub_page
+W,Weighted Average,https://www.investopedia.com/terms/w/weightedaverage.asp,weightedaverage,hub_page
+W,Weighted Average Cost of Capital (WACC),https://www.investopedia.com/terms/w/wacc.asp,wacc,hub_page
+W,White-Collar Crime,https://www.investopedia.com/terms/w/white-collar-crime.asp,white-collar-crime,hub_page
+W,White Paper,https://www.investopedia.com/terms/w/whitepaper.asp,whitepaper,hub_page
+W,Wholesale Price Index (WPI),https://www.investopedia.com/terms/w/wpi.asp,wpi,hub_page
+W,Wire Fraud,https://www.investopedia.com/terms/w/wirefraud.asp,wirefraud,hub_page
+W,Wire Transfers,https://www.investopedia.com/terms/w/wiretransfer.asp,wiretransfer,hub_page
+W,Withholding Allowance,https://www.investopedia.com/terms/w/withholdingallowance.asp,withholdingallowance,hub_page
+W,Withholding Tax,https://www.investopedia.com/terms/w/withholdingtax.asp,withholdingtax,hub_page
+W,Working Capital (NWC),https://www.investopedia.com/terms/w/workingcapital.asp,workingcapital,hub_page
+W,Works-in-Progress (WIP),https://www.investopedia.com/terms/w/workinprogress.asp,workinprogress,hub_page
+W,World Trade Organization (WTO),https://www.investopedia.com/terms/w/wto.asp,wto,hub_page
+W,WorldCom,https://www.investopedia.com/terms/w/worldcom.asp,worldcom,hub_page
+X,X-Efficiency,https://www.investopedia.com/terms/x/x-efficiency.asp,x-efficiency,hub_page
+X,X-Mark Signature,https://www.investopedia.com/terms/x/x-mark-signature.asp,x-mark-signature,hub_page
+X,XBRL (eXtensible Business Reporting Language),https://www.investopedia.com/terms/x/xbrl.asp,xbrl,hub_page
+X,XCD (Eastern Caribbean Dollar),https://www.investopedia.com/terms/x/xcd-eastern-caribbean-dollar.asp,xcd-eastern-caribbean-dollar,hub_page
+X,XD,https://www.investopedia.com/terms/x/xd.asp,xd,hub_page
+X,Xenocurrency,https://www.investopedia.com/terms/x/xenocurrency.asp,xenocurrency,hub_page
+X,Xetra,https://www.investopedia.com/terms/x/xetra.asp,xetra,hub_page
+X,XML (Extensible Markup Language),https://www.investopedia.com/business-essentials-4689832,business-essentials-4689832,hub_page
+X,XRT,https://www.investopedia.com/terms/x/xrt.asp,xrt,hub_page
+Y,Yacht Insurance,https://www.investopedia.com/terms/y/yacht-insurance.asp,yacht-insurance,hub_page
+Y,Yale School of Management,https://www.investopedia.com/terms/y/yale-school-of-management.asp,yale-school-of-management,hub_page
+Y,Yankee Bond,https://www.investopedia.com/terms/y/yankeebond.asp,yankeebond,hub_page
+Y,Yankee Market,https://www.investopedia.com/terms/y/yankee-market.asp,yankee-market,hub_page
+Y,Year-End Bonus,https://www.investopedia.com/terms/y/year-end-bonus.asp,year-end-bonus,hub_page
+Y,Year-Over-Year (YOY),https://www.investopedia.com/terms/y/year-over-year.asp,year-over-year,hub_page
+Y,Year to Date (YTD),https://www.investopedia.com/terms/y/ytd.asp,ytd,hub_page
+Y,Year's Maximum Pensionable Earnings (YMPE),https://www.investopedia.com/terms/y/years-maximum-pensionable-earnings.asp,years-maximum-pensionable-earnings,hub_page
+Y,Yearly Rate Of Return Method,https://www.investopedia.com/terms/a/annual-return.asp,annual-return,hub_page
+Y,Yearly Renewable Term (YRT),https://www.investopedia.com/terms/y/yearly-renewable-term-yrt.asp,yearly-renewable-term-yrt,hub_page
+Y,Yield,https://www.investopedia.com/terms/y/yield.asp,yield,hub_page
+Y,Yield Basis,https://www.investopedia.com/terms/y/yield_basis.asp,yield_basis,hub_page
+Y,Yield Curve,https://www.investopedia.com/terms/y/yieldcurve.asp,yieldcurve,hub_page
+Y,Yield Curve Risk,https://www.investopedia.com/terms/y/yieldcurverisk.asp,yieldcurverisk,hub_page
+Y,Yield Maintenance,https://www.investopedia.com/terms/y/yieldmaintenance.asp,yieldmaintenance,hub_page
+Y,Yield on Cost (YOC),https://www.investopedia.com/terms/y/yield-on-cost.asp,yield-on-cost,hub_page
+Y,Yield on Earning Assets,https://www.investopedia.com/terms/y/yield-earning-assets.asp,yield-earning-assets,hub_page
+Y,Yield Spread,https://www.investopedia.com/terms/y/yieldspread.asp,yieldspread,hub_page
+Y,Yield to Call,https://www.investopedia.com/terms/y/yieldtocall.asp,yieldtocall,hub_page
+Y,Yield to Maturity (YTM),https://www.investopedia.com/terms/y/yieldtomaturity.asp,yieldtomaturity,hub_page
+Y,Yield to Worst (YTW),https://www.investopedia.com/terms/y/yieldtoworst.asp,yieldtoworst,hub_page
+Y,Yield Variance,https://www.investopedia.com/business-4689640,business-4689640,hub_page
+Y,York Antwerp Rules,https://www.investopedia.com/terms/y/york-antwerp-rules.asp,york-antwerp-rules,hub_page
+Y,Yuppie,https://www.investopedia.com/terms/y/yuppie.asp,yuppie,hub_page
+Z,Z-Score,https://www.investopedia.com/terms/z/zscore.asp,zscore,hub_page
+Z,Z-Test,https://www.investopedia.com/terms/z/z-test.asp,z-test,hub_page
+Z,Zacks Investment Research,https://www.investopedia.com/terms/z/zacks-investment-research.asp,zacks-investment-research,hub_page
+Z,ZCash,https://www.investopedia.com/terms/z/zcash.asp,zcash,hub_page
+Z,Zero Balance Account (ZBA),https://www.investopedia.com/terms/z/zba.asp,zba,hub_page
+Z,Zero-Based Budgeting (ZBB),https://www.investopedia.com/terms/z/zbb.asp,zbb,hub_page
+Z,Zero-Beta Portfolio,https://www.investopedia.com/terms/z/zero-betaportfolio.asp,zero-betaportfolio,hub_page
+Z,Zero-Bound,https://www.investopedia.com/terms/z/zero-bound.asp,zero-bound,hub_page
+Z,Zero Coupon Inflation Swap,https://www.investopedia.com/terms/z/zero-coupon-inflation-swap.asp,zero-coupon-inflation-swap,hub_page
+Z,Zero Coupon Swap,https://www.investopedia.com/terms/z/zero-coupon-swap.asp,zero-coupon-swap,hub_page
+Z,Zero Cost Collar,https://www.investopedia.com/terms/z/zerocostcollar.asp,zerocostcollar,hub_page
+Z,Zero-Coupon Bond,https://www.investopedia.com/terms/z/zero-couponbond.asp,zero-couponbond,hub_page
+Z,Zero-Lot-Line House,https://www.investopedia.com/terms/z/zero-lot-line-house.asp,zero-lot-line-house,hub_page
+Z,Zero-One Integer Programming,https://www.investopedia.com/terms/z/zero-one-integer-programming.asp,zero-one-integer-programming,hub_page
+Z,Zero-Rated Goods,https://www.investopedia.com/terms/z/zero-rated-goods.asp,zero-rated-goods,hub_page
+Z,Zero-Sum Game,https://www.investopedia.com/terms/z/zero-sumgame.asp,zero-sumgame,hub_page
+Z,Zero-Volatility Spread (Z-spread),https://www.investopedia.com/terms/z/zspread.asp,zspread,hub_page
+Z,Zeta Model,https://www.investopedia.com/terms/z/zeta_model.asp,zeta_model,hub_page
+Z,Zig Zag Indicator,https://www.investopedia.com/terms/z/zig_zag_indicator.asp,zig_zag_indicator,hub_page
+Z,zk-SNARK,https://www.investopedia.com/terms/z/zksnark.asp,zksnark,hub_page
+Z,Zombies,https://www.investopedia.com/terms/z/zombies.asp,zombies,hub_page
+Z,Zoning,https://www.investopedia.com/terms/z/zoning.asp,zoning,hub_page
+Z,Zoning Ordinance,https://www.investopedia.com/terms/z/zoning-ordinance.asp,zoning-ordinance,hub_page
+Z,ZZZZ Best,https://www.investopedia.com/terms/z/zzzzbest.asp,zzzzbest,hub_page
