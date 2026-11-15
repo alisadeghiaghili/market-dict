@@ -195,26 +195,45 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-6">
 
         <!-- Alphabet Bar (A-Z) Filter -->
-        <div class="bg-white dark:bg-slate-900 rounded-2xl p-3 border border-slate-200 dark:border-slate-800 shadow-sm overflow-x-auto scrollbar-none">
-            <div class="flex items-center gap-1.5 min-w-max justify-center font-en text-sm font-semibold" id="alphabetContainer">
-                <button onclick="setLetterFilter('ALL')" id="letter-ALL" class="letter-btn active px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-fa text-xs transition">همه حروف</button>
+        <div id="alphabetCard" class="bg-white dark:bg-slate-900 rounded-2xl p-3 border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200">
+            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-100 dark:border-slate-800 px-1">
+                <div class="flex items-center gap-2">
+                    <span class="text-sm">🔤</span>
+                    <span class="text-xs font-bold text-slate-700 dark:text-slate-300">فهرست الفبایی (A - Z):</span>
+                    <span id="activeLetterBadge" class="hidden text-[11px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800"></span>
+                </div>
+                <button onclick="toggleAlphabetCollapse()" id="alphaCollapseBtn" class="text-xs text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 font-semibold flex items-center gap-1.5 px-2.5 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="کوچک‌نمایی یا باز کردن فیلتر الفبا">
+                    <span id="alphaCollapseLabel">بستن</span>
+                    <svg id="alphaChevron" class="w-3.5 h-3.5 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="alphabetContent" class="overflow-x-auto scrollbar-none transition-all duration-200">
+                <div class="flex items-center gap-1.5 min-w-max justify-center font-en text-sm font-semibold" id="alphabetContainer">
+                    <button onclick="setLetterFilter('ALL')" id="letter-ALL" class="letter-btn active px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-fa text-xs transition">همه حروف</button>
+                </div>
             </div>
         </div>
 
         <!-- Redesigned Comprehensive Categories Panel (Multi-row Grid/Wrap Layout) -->
-        <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3.5">
+        <div id="categoriesCard" class="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-6 border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200 space-y-3.5">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 flex-wrap">
                     <span class="text-lg">🗂️</span>
                     <h3 class="text-sm font-bold text-slate-800 dark:text-slate-200">دسته‌بندی‌های تخصصی بازار سرمایه:</h3>
+                    <span id="activeCategoryBadge" class="hidden text-[11px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800"></span>
                 </div>
-                <button onclick="toggleCategoriesExpand()" id="catExpandBtn" class="text-xs text-emerald-600 dark:text-emerald-400 hover:underline font-semibold flex items-center gap-1 sm:hidden">
-                    <span>مشاهده همه</span>
+                <button onclick="toggleCategoriesCollapse()" id="catCollapseBtn" class="text-xs text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="کوچک‌نمایی یا باز کردن فیلتر دسته‌بندی‌ها">
+                    <span id="catCollapseLabel">بستن فیلترها</span>
+                    <svg id="catChevron" class="w-4 h-4 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
                 </button>
             </div>
 
             <!-- Multi-Row Categories Container -->
-            <div id="categoriesContainer" class="flex flex-wrap gap-2 sm:gap-2.5">
+            <div id="categoriesContainer" class="flex flex-wrap gap-2 sm:gap-2.5 transition-all duration-200">
                 <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-600 text-white shadow-sm transition flex items-center gap-1.5 border border-emerald-600">
                     <span>🏛️</span>
                     <span>همه دسته‌ها</span>
@@ -226,7 +245,12 @@
 
         <!-- Active Filter Indicator & Count -->
         <div class="flex items-center justify-between text-xs sm:text-sm text-slate-600 dark:text-slate-400 px-1">
-            <div id="resultsCount">در حال بارگذاری اصطلاحات...</div>
+            <div class="flex items-center gap-2 sm:gap-3 flex-wrap">
+                <div id="resultsCount">در حال بارگذاری اصطلاحات...</div>
+                <button onclick="toggleAllFilters()" id="toggleAllFiltersBtn" class="text-xs text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 font-medium flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="بستن یا باز کردن یکپارچه همه فیلترها">
+                    <span id="toggleAllFiltersLabel">🎛️ بستن همه فیلترها</span>
+                </button>
+            </div>
             <button id="resetFiltersBtn" onclick="resetFilters()" class="hidden text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 font-medium">
                 پاک کردن فیلترها ✕
             </button>
@@ -410,9 +434,12 @@
         let debounceTimer = null;
 
         let favorites = JSON.parse(localStorage.getItem('marketdict_favs') || '[]');
+        let categoriesCollapsed = false;
+        let alphabetCollapsed = false;
 
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
+            initFiltersCollapse();
             updateFavoritesCount();
             loadStats();
             loadLetters();
@@ -661,6 +688,97 @@
             return card;
         }
 
+        function initFiltersCollapse() {
+            if (localStorage.getItem('marketdict_cat_collapsed') === 'true') {
+                toggleCategoriesCollapse(true);
+            }
+            if (localStorage.getItem('marketdict_alpha_collapsed') === 'true') {
+                toggleAlphabetCollapse(true);
+            }
+        }
+
+        function toggleCategoriesCollapse(forceState = null) {
+            categoriesCollapsed = (forceState !== null) ? forceState : !categoriesCollapsed;
+            const container = document.getElementById('categoriesContainer');
+            const label = document.getElementById('catCollapseLabel');
+            const chevron = document.getElementById('catChevron');
+
+            if (categoriesCollapsed) {
+                container.classList.add('hidden');
+                if (label) label.innerText = 'باز کردن فیلترها (۱۴ دسته)';
+                if (chevron) chevron.classList.add('rotate-180');
+            } else {
+                container.classList.remove('hidden');
+                if (label) label.innerText = 'بستن فیلترها';
+                if (chevron) chevron.classList.remove('rotate-180');
+            }
+            localStorage.setItem('marketdict_cat_collapsed', categoriesCollapsed ? 'true' : 'false');
+            updateAllFiltersButton();
+        }
+
+        function toggleAlphabetCollapse(forceState = null) {
+            alphabetCollapsed = (forceState !== null) ? forceState : !alphabetCollapsed;
+            const content = document.getElementById('alphabetContent');
+            const label = document.getElementById('alphaCollapseLabel');
+            const chevron = document.getElementById('alphaChevron');
+
+            if (alphabetCollapsed) {
+                content.classList.add('hidden');
+                if (label) label.innerText = 'باز کردن الفبا';
+                if (chevron) chevron.classList.add('rotate-180');
+            } else {
+                content.classList.remove('hidden');
+                if (label) label.innerText = 'بستن';
+                if (chevron) chevron.classList.remove('rotate-180');
+            }
+            localStorage.setItem('marketdict_alpha_collapsed', alphabetCollapsed ? 'true' : 'false');
+            updateAllFiltersButton();
+        }
+
+        function toggleAllFilters() {
+            const bothCollapsed = categoriesCollapsed && alphabetCollapsed;
+            if (bothCollapsed) {
+                toggleCategoriesCollapse(false);
+                toggleAlphabetCollapse(false);
+            } else {
+                toggleCategoriesCollapse(true);
+                toggleAlphabetCollapse(true);
+            }
+        }
+
+        function updateAllFiltersButton() {
+            const label = document.getElementById('toggleAllFiltersLabel');
+            if (!label) return;
+            const bothCollapsed = categoriesCollapsed && alphabetCollapsed;
+            if (bothCollapsed) {
+                label.innerText = '🎛️ باز کردن همه فیلترها';
+            } else {
+                label.innerText = '🎛️ بستن همه فیلترها';
+            }
+        }
+
+        function updateFilterBadges() {
+            const letterBadge = document.getElementById('activeLetterBadge');
+            if (letterBadge) {
+                if (currentLetter !== 'ALL') {
+                    letterBadge.innerText = `حرف ${currentLetter}`;
+                    letterBadge.classList.remove('hidden');
+                } else {
+                    letterBadge.classList.add('hidden');
+                }
+            }
+
+            const catBadge = document.getElementById('activeCategoryBadge');
+            if (catBadge) {
+                if (currentCategory !== 'ALL') {
+                    catBadge.innerText = currentCategory;
+                    catBadge.classList.remove('hidden');
+                } else {
+                    catBadge.classList.add('hidden');
+                }
+            }
+        }
+
         function setLetterFilter(letter) {
             currentLetter = letter;
             currentPage = 1;
@@ -673,6 +791,7 @@
                 activeBtn.classList.remove('text-slate-600', 'dark:text-slate-300');
                 activeBtn.classList.add('bg-emerald-600', 'text-white');
             }
+            updateFilterBadges();
             loadTerms();
         }
 
@@ -688,6 +807,7 @@
                 activeBtn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
                 activeBtn.classList.add('bg-emerald-600', 'text-white', 'border-emerald-600');
             }
+            updateFilterBadges();
             loadTerms();
         }
 
