@@ -8,3 +8,7 @@ venv/
 *.log
 .DS_Store
 Thumbs.db
+translation_cache.json
+*.argosmodel
+*.tmp
+
