@@ -233,7 +233,7 @@ class InvestopediaScraper:
         Extracts ALL useful information from a term page:
         1. Lead definition (paragraphs before first heading)
         2. Key takeaways (all bullet points)
-        3. All in-depth sections (Heading, Paragraphs, Lists, Examples, Bottom line)
+        3. All in-depth sections mapped to Table of Contents (Heading, Paragraphs, Lists, Examples, FAQs, Bottom line)
         """
         import re
         soup = BeautifulSoup(html, "html.parser")
@@ -258,39 +258,86 @@ class InvestopediaScraper:
         # 3. Lead Definition
         lead_paragraphs = []
         for p in body.find_all("p", recursive=True):
-            if p.find_parent(class_=re.compile(r"callout|recirc|newsletter|author|ad-")):
+            if p.find_parent(class_=re.compile(r"callout|recirc|newsletter|author|ad-|toc")):
                 continue
             txt = p.get_text(strip=True)
-            if len(txt) > 25 and not any(skip in txt for skip in ["Get personalized", "Investopedia /", "Fact checked by"]):
+            if len(txt) > 25 and not any(skip in txt for skip in ["Get personalized", "Investopedia /", "Fact checked by", "Our team of vetted"]):
                 lead_paragraphs.append(txt)
                 if len(lead_paragraphs) >= 2:
                     break
 
         lead_definition = "\n\n".join(lead_paragraphs) if lead_paragraphs else meta_desc
 
-        # 4. Detailed Sections
+        # 4. Table of Contents & Canonical Titles
+        toc = soup.find(class_=re.compile(r"sticky-toc-wrapper|table-of-contents"))
+        toc_titles = {}
+        if toc:
+            for a in toc.find_all("a"):
+                href = a.get("href", "")
+                if href.startswith("#"):
+                    toc_titles[href[1:]] = a.get_text(strip=True)
+
+        # 5. Detailed Sections
         sections = []
         current_sec = None
+        faq_section = None
         bottom_line = ""
 
         for el in body.children:
             if not hasattr(el, "name") or not el.name:
                 continue
 
-            h = el if el.name in ["h2", "h3"] else el.find(["h2", "h3"])
-            if h:
-                htxt = h.get_text(strip=True)
-                if any(skip in htxt.lower() for skip in ["related articles", "article sources", "trending", "newsletter", "key takeaways"]):
+            # FAQ / QA block
+            if "finance-sc-block-questionandanswer" in el.get("class", []):
+                if not faq_section:
+                    faq_section = {
+                        "toc_id": "faqs",
+                        "title": "Frequently Asked Questions",
+                        "paragraphs": [],
+                        "items": []
+                    }
+                q_el = el.find(["h3", "h4", "span", "div"], class_=re.compile(r"question|heading"))
+                q_txt = q_el.get_text(strip=True) if q_el else ""
+                ans_ps = [p.get_text(strip=True) for p in el.find_all("p") if len(p.get_text(strip=True)) > 15]
+                ans_txt = " ".join(ans_ps)
+                if q_txt and ans_txt:
+                    faq_section["items"].append(f"{q_txt}: {ans_txt}")
+                elif ans_txt:
+                    faq_section["paragraphs"].append(ans_txt)
+                continue
+
+            # Section marker or heading
+            toc_span = el if (el.name == "span" and "heading-toc" in el.get("class", [])) else el.find("span", class_="heading-toc")
+            h_el = el if el.name in ["h2", "h3"] else el.find(["h2", "h3"])
+
+            if (toc_span and toc_span.get("id")) or h_el:
+                tid = toc_span["id"] if (toc_span and toc_span.get("id")) else ""
+                title = toc_titles.get(tid) if tid else ""
+                if not title and h_el:
+                    title = h_el.get_text(strip=True)
+                elif not title and tid:
+                    nxt = el.find_next_sibling(["h2", "h3"])
+                    title = nxt.get_text(strip=True) if nxt else tid.replace("toc-", "").replace("-", " ").title()
+
+                if any(skip in title.lower() for skip in ["related articles", "article sources", "trending", "newsletter", "key takeaways"]):
                     continue
-                if current_sec and (current_sec["paragraphs"] or current_sec["items"]):
-                    sections.append(current_sec)
-                current_sec = {"title": htxt, "paragraphs": [], "items": []}
+
+                is_what_is = bool(re.search(r"^what\s+(is|are)", title, re.IGNORECASE) and not re.search(r"difference|good|mean|calculate", title, re.IGNORECASE))
+                if not is_what_is:
+                    if current_sec and (current_sec["paragraphs"] or current_sec["items"]):
+                        sections.append(current_sec)
+                    current_sec = {
+                        "toc_id": tid or re.sub(r'[^a-zA-Z0-9]+', '-', title).lower(),
+                        "title": title,
+                        "paragraphs": [],
+                        "items": []
+                    }
 
             if current_sec:
                 ps = el.find_all("p") if el.name != "p" else [el]
                 for p in ps:
                     ptxt = p.get_text(strip=True)
-                    if ptxt and len(ptxt) > 20 and not any(skip in ptxt for skip in ["Get personalized", "Investopedia /", "Fact checked by"]):
+                    if ptxt and len(ptxt) > 20 and not any(skip in ptxt for skip in ["Get personalized", "Investopedia /", "Fact checked by", "Our team of vetted"]):
                         if "bottom line" in current_sec["title"].lower():
                             bottom_line += ptxt + " "
                         current_sec["paragraphs"].append(ptxt)
@@ -298,11 +345,18 @@ class InvestopediaScraper:
                 lis = el.find_all("li")
                 for li in lis:
                     litxt = li.get_text(strip=True)
-                    if litxt and len(litxt) > 5 and len(litxt) < 300:
+                    if litxt and 5 < len(litxt) < 400:
                         current_sec["items"].append(litxt)
 
         if current_sec and (current_sec["paragraphs"] or current_sec["items"]):
             sections.append(current_sec)
+
+        if faq_section and (faq_section["paragraphs"] or faq_section["items"]):
+            bottom_idx = next((i for i, s in enumerate(sections) if "bottom line" in s["title"].lower()), None)
+            if bottom_idx is not None:
+                sections.insert(bottom_idx, faq_section)
+            else:
+                sections.append(faq_section)
 
         return {
             "meta_description": meta_desc,
