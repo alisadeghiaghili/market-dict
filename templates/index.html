@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarketDict | واژه‌نامه تخصصی و جامع اصطلاحات مالی (دوزبانه)</title>
+    <title>MarketDict | واژه‌نامه تخصصی اصطلاحات مالی اینوستوپدیا</title>
     
     <!-- Google Fonts: Vazirmatn (FA) & Inter (EN) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN with extended Dark Mode Palette -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -18,6 +18,11 @@
             theme: {
                 extend: {
                     colors: {
+                        slate: {
+                            750: '#243044',
+                            850: '#151f32',
+                            950: '#0b1120'
+                        },
                         brand: {
                             50: '#f0fdf4',
                             100: '#dcfce7',
@@ -52,6 +57,9 @@
         ::-webkit-scrollbar-track {
             background: rgba(0,0,0,0.05);
         }
+        .dark ::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.03);
+        }
         ::-webkit-scrollbar-thumb {
             background: rgba(100,116,139,0.3);
             border-radius: 4px;
@@ -61,10 +69,10 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-200">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200">
 
     <!-- Top Navigation Header -->
-    <header class="sticky top-0 z-40 backdrop-blur-md bg-white/85 dark:bg-slate-900/85 border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between gap-4">
             
             <!-- Logo & Brand -->
@@ -77,9 +85,9 @@
                 <div>
                     <div class="flex items-center gap-2">
                         <span class="font-en font-bold text-xl tracking-tight text-slate-900 dark:text-white">Market<span class="text-emerald-500">Dict</span></span>
-                        <span class="text-xs bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 font-semibold px-2 py-0.5 rounded-full border border-emerald-300 dark:border-emerald-800/50">جامع و دوزبانه</span>
+                        <span class="text-xs bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 font-semibold px-2.5 py-0.5 rounded-full border border-emerald-300 dark:border-emerald-800">مرجع اینوستوپدیا</span>
                     </div>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">واژه‌نامه و دانشنامه جامع اصطلاحات مالی اینوستوپدیا</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">واژه‌نامه و دانشنامه جامع اصطلاحات بازارهای مالی و سرمایه</p>
                 </div>
             </div>
 
@@ -94,7 +102,7 @@
                 </button>
 
                 <!-- Bookmarks Filter Toggle -->
-                <button id="favoritesBtn" onclick="toggleFavoritesFilter()" title="اصطلاحات نشان‌شده" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition">
+                <button id="favoritesBtn" onclick="toggleFavoritesFilter()" title="اصطلاحات نشان‌شده" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
                     <svg id="favIcon" class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                     </svg>
@@ -103,7 +111,7 @@
                 </button>
 
                 <!-- Dark Mode Toggle -->
-                <button onclick="toggleDarkMode()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition" title="تغییر تم روز / شب">
+                <button onclick="toggleDarkMode()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 transition" title="تغییر تم روز / شب">
                     <svg id="themeMoon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                     </svg>
@@ -116,19 +124,19 @@
     </header>
 
     <!-- Hero & Search Section -->
-    <section class="relative bg-gradient-to-b from-emerald-500/10 via-slate-50 to-transparent dark:from-emerald-950/20 dark:via-slate-900 dark:to-transparent py-10 px-4">
+    <section class="relative bg-gradient-to-b from-emerald-500/10 via-slate-50 to-transparent dark:from-emerald-950/30 dark:via-slate-950 dark:to-transparent py-10 px-4">
         <div class="max-w-4xl mx-auto text-center space-y-4">
             
             <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
                 دانشنامه و واژه‌نامه تخصصی اصطلاحات مالی
             </h1>
-            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                شامل تعاریف کامل (Definitions)، نکات کلیدی (Key Takeaways)، فرمول‌ها، محاسبات، مثال‌های عملی و جمع‌بندی به دو زبان <span class="text-emerald-600 dark:text-emerald-400 font-semibold">فارسی و انگلیسی</span>.
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                مرجع کامل تعاریف تخصصی (Definitions)، نکات کلیدی (Key Takeaways)، فرمول‌ها، محاسبات و تحلیل‌های کاربردی بازارهای مالی و سرمایه‌گذاری.
             </p>
 
             <!-- Search Bar Component -->
             <div class="relative max-w-2xl mx-auto mt-6">
-                <div class="relative flex items-center shadow-lg rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 transition focus-within:ring-2 focus-within:ring-emerald-500 focus-within:border-emerald-500">
+                <div class="relative flex items-center shadow-lg rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition focus-within:ring-2 focus-within:ring-emerald-500 focus-within:border-emerald-500">
                     <div class="pr-4 pl-2 text-slate-400">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -139,9 +147,9 @@
                         id="searchInput" 
                         oninput="handleSearchInput()" 
                         placeholder="جستجو کنید... (مثال: EBITDA، ترازنامه، اوراق قرضه، CAPM، تورم، 10-K)" 
-                        class="w-full py-4 pr-2 pl-12 text-sm sm:text-base bg-transparent text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none"
+                        class="w-full py-4 pr-2 pl-12 text-sm sm:text-base bg-transparent text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none"
                     />
-                    <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute left-4 p-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition">
+                    <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute left-4 p-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
@@ -152,8 +160,8 @@
             <!-- Stats Bar -->
             <div class="flex items-center justify-center gap-6 pt-2 text-xs text-slate-500 dark:text-slate-400">
                 <div>📚 <span id="statTotalTerms" class="font-bold text-slate-700 dark:text-slate-300">۶۳۱</span> اصطلاح مالی</div>
-                <div>📑 <span id="statDeepCount" class="font-bold text-emerald-600 dark:text-emerald-400">۵۶+</span> مقاله با تحلیل جامع و چندبخشی</div>
-                <div>🌐 منبع: Investopedia Dictionary</div>
+                <div>📑 <span id="statDeepCount" class="font-bold text-emerald-600 dark:text-emerald-400">۵۶+</span> مقاله تحلیلی جامع</div>
+                <div>🌐 منبع: Investopedia Financial Dictionary</div>
             </div>
         </div>
     </section>
@@ -162,7 +170,7 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-6">
 
         <!-- Alphabet Bar (A-Z) Filter -->
-        <div class="bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-200 dark:border-slate-700/60 shadow-sm overflow-x-auto scrollbar-none">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-3 border border-slate-200 dark:border-slate-800 shadow-sm overflow-x-auto scrollbar-none">
             <div class="flex items-center gap-1.5 min-w-max justify-center font-en text-sm font-semibold" id="alphabetContainer">
                 <button onclick="setLetterFilter('ALL')" id="letter-ALL" class="letter-btn active px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-fa text-xs transition">همه</button>
             </div>
@@ -188,8 +196,8 @@
         </div>
 
         <!-- Empty State -->
-        <div id="emptyState" class="hidden text-center py-16 space-y-3 bg-white dark:bg-slate-800 rounded-3xl border border-dashed border-slate-300 dark:border-slate-700">
-            <div class="w-16 h-16 mx-auto rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-400 text-2xl">🔍</div>
+        <div id="emptyState" class="hidden text-center py-16 space-y-3 bg-white dark:bg-slate-900 rounded-3xl border border-dashed border-slate-300 dark:border-slate-800">
+            <div class="w-16 h-16 mx-auto rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 text-2xl">🔍</div>
             <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200">اصطلاحی با این مشخصات یافت نشد!</h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 max-w-sm mx-auto">می‌توانید املای واژه را بررسی کنید یا عبارت جستجو و فیلتر الفبا را تغییر دهید.</p>
             <button onclick="resetFilters()" class="mt-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-semibold shadow transition">
@@ -199,7 +207,7 @@
 
         <!-- Load More Pagination Button -->
         <div id="loadMoreContainer" class="hidden text-center pt-6">
-            <button onclick="loadMoreTerms()" class="px-6 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 font-semibold text-sm shadow-sm transition">
+            <button onclick="loadMoreTerms()" class="px-6 py-2.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 font-semibold text-sm shadow-sm transition">
                 بارگذاری اصطلاحات بیشتر...
             </button>
         </div>
@@ -207,22 +215,22 @@
     </main>
 
     <!-- Comprehensive In-Depth Detail Modal -->
-    <div id="detailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-200" onclick="closeModalOnBackdrop(event)">
-        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700 flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="modalCard">
+    <div id="detailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-md transition-opacity duration-200" onclick="closeModalOnBackdrop(event)">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="modalCard">
             
             <!-- Modal Header -->
-            <div class="p-5 sm:p-6 border-b border-slate-100 dark:border-slate-700 flex items-start justify-between gap-4 bg-slate-50/50 dark:bg-slate-850/50">
-                <div class="space-y-1">
+            <div class="p-5 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex items-start justify-between gap-4 bg-slate-50/70 dark:bg-slate-850/80">
+                <div class="space-y-1.5">
                     <div class="flex items-center gap-2 flex-wrap">
-                        <span id="modalLetterBadge" class="font-en text-xs font-bold px-2.5 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400">#</span>
-                        <span id="modalCategoryBadge" class="text-xs font-semibold px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">دسته‌بندی</span>
-                        <span id="modalDeepBadge" class="hidden text-xs font-bold px-2 py-0.5 rounded-md bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/40">
-                            📑 تحلیل چندبخشی کامل
+                        <span id="modalLetterBadge" class="font-en text-xs font-bold px-2.5 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/40">#</span>
+                        <span id="modalCategoryBadge" class="text-xs font-semibold px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">دسته‌بندی</span>
+                        <span id="modalDeepBadge" class="hidden text-xs font-bold px-2.5 py-0.5 rounded-md bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/50">
+                            📑 تحلیل تخصصی چندبخشی
                         </span>
                     </div>
-                    <div class="flex items-center gap-2 pt-1.5">
+                    <div class="flex items-center gap-2 pt-1">
                         <h2 id="modalTermEn" class="font-en text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Term EN</h2>
-                        <button id="modalAudioBtn" onclick="speakTerm()" title="تلفظ صوتی انگلیسی" class="p-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950 hover:bg-emerald-100 text-emerald-600 dark:text-emerald-400 transition">
+                        <button id="modalAudioBtn" onclick="speakTerm()" title="تلفظ صوتی انگلیسی" class="p-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/80 hover:bg-emerald-100 dark:hover:bg-emerald-900 text-emerald-600 dark:text-emerald-400 transition">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
                             </svg>
@@ -232,12 +240,12 @@
                 </div>
 
                 <div class="flex items-center gap-2">
-                    <button id="modalStarBtn" onclick="toggleCurrentModalFavorite()" class="p-2 rounded-xl bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-slate-400 transition border border-slate-200 dark:border-slate-600">
+                    <button id="modalStarBtn" onclick="toggleCurrentModalFavorite()" class="p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 transition border border-slate-200 dark:border-slate-700">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                         </svg>
                     </button>
-                    <button onclick="closeModal()" class="p-2 rounded-xl bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300 transition border border-slate-200 dark:border-slate-600">
+                    <button onclick="closeModal()" class="p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-300 transition border border-slate-200 dark:border-slate-700">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
@@ -245,33 +253,49 @@
                 </div>
             </div>
 
+            <!-- Language View Mode Selector inside Modal -->
+            <div class="px-5 sm:px-6 pt-3 pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 text-xs bg-white dark:bg-slate-900">
+                <span class="text-slate-500 dark:text-slate-400 font-medium hidden sm:inline">نحوه نمایش محتوا:</span>
+                <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl">
+                    <button id="viewModeFa" onclick="setViewMode('fa')" class="px-3 py-1 rounded-lg font-semibold text-xs transition bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-sm">
+                        🇮🇷 متن فارسی
+                    </button>
+                    <button id="viewModeEn" onclick="setViewMode('en')" class="px-3 py-1 rounded-lg font-semibold text-xs transition text-slate-600 dark:text-slate-300 hover:text-emerald-500">
+                        🇬🇧 English
+                    </button>
+                    <button id="viewModeBoth" onclick="setViewMode('both')" class="px-3 py-1 rounded-lg font-semibold text-xs transition text-slate-600 dark:text-slate-300 hover:text-emerald-500">
+                        🌐 نمای مقایسه‌ای
+                    </button>
+                </div>
+            </div>
+
             <!-- Modal Content (Scrollable) -->
-            <div class="p-5 sm:p-6 overflow-y-auto space-y-6 flex-1">
+            <div class="p-5 sm:p-6 overflow-y-auto space-y-6 flex-1 bg-white dark:bg-slate-900">
 
                 <!-- 1. Key Takeaways Box (نکات کلیدی) -->
-                <div id="modalTakeawaysBox" class="bg-amber-50/80 dark:bg-amber-950/25 p-5 rounded-2xl border border-amber-200/80 dark:border-amber-900/50 space-y-2.5">
+                <div id="modalTakeawaysBox" class="bg-amber-500/10 dark:bg-amber-950/40 p-5 rounded-2xl border border-amber-300/80 dark:border-amber-800/60 space-y-2.5">
                     <div class="flex items-center gap-2 text-xs font-bold text-amber-900 dark:text-amber-300">
                         <span class="text-base">💡</span>
                         <span>نکات کلیدی (Key Takeaways):</span>
                     </div>
-                    <ul id="modalTakeawaysList" class="space-y-1.5 text-xs sm:text-sm text-slate-700 dark:text-slate-200">
+                    <ul id="modalTakeawaysList" class="space-y-2 text-xs sm:text-sm text-slate-800 dark:text-slate-200">
                     </ul>
                 </div>
 
-                <!-- 2. Core Lead Definitions (English + Persian) -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    <!-- Persian Definition -->
-                    <div class="bg-emerald-50/60 dark:bg-emerald-950/20 p-5 rounded-2xl border border-emerald-100 dark:border-emerald-900/40 space-y-2">
+                <!-- 2. Core Lead Definitions Container -->
+                <div id="modalDefinitionsContainer" class="space-y-4">
+                    <!-- Persian Definition Box -->
+                    <div id="boxDefFa" class="bg-emerald-50/70 dark:bg-emerald-950/40 p-5 rounded-2xl border border-emerald-200 dark:border-emerald-800/50 space-y-2">
                         <div class="flex items-center gap-1.5 text-xs font-bold text-emerald-800 dark:text-emerald-300">
                             <span>🇮🇷</span>
                             <span>تعریف و مفهوم به زبان فارسی:</span>
                         </div>
-                        <p id="modalDefFa" class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-normal whitespace-pre-line">
+                        <p id="modalDefFa" class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-normal whitespace-pre-line">
                         </p>
                     </div>
 
-                    <!-- English Definition -->
-                    <div class="bg-slate-100/70 dark:bg-slate-750 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 font-en" dir="ltr">
+                    <!-- English Definition Box -->
+                    <div id="boxDefEn" class="bg-slate-100 dark:bg-slate-800/90 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 font-en" dir="ltr">
                         <div class="flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">
                             <span>🇬🇧</span>
                             <span>Original Definition (Investopedia):</span>
@@ -281,31 +305,33 @@
                     </div>
                 </div>
 
-                <!-- 3. In-Depth Sections (سرفصل‌ها، فرمول‌ها، محاسبات، تاریخچه و معایب/مزایا) -->
+                <!-- 3. In-Depth Sections Container -->
                 <div id="modalSectionsContainer" class="space-y-4">
-                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-700">
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
                         <span class="text-base">📑</span>
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white">سرفصل‌ها و توضیحات تکمیلی (Full Sections & Explanations):</h4>
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white">سرفصل‌ها و توضیحات تکمیلی:</h4>
                     </div>
 
-                    <div id="modalSectionsList" class="space-y-3.5">
+                    <div id="modalSectionsList" class="space-y-4">
                     </div>
                 </div>
 
                 <!-- 4. The Bottom Line (جمع‌بندی نهایی) -->
-                <div id="modalBottomLineBox" class="hidden bg-slate-900 text-white dark:bg-slate-950 p-5 rounded-2xl border border-slate-700 space-y-2">
+                <div id="modalBottomLineBox" class="hidden bg-slate-900 dark:bg-slate-850 p-5 rounded-2xl border border-slate-700 dark:border-slate-700/80 space-y-2 text-white">
                     <div class="flex items-center gap-2 text-xs font-bold text-emerald-400">
                         <span>🎯</span>
                         <span>جمع‌بندی و نتیجه‌گیری نهایی (The Bottom Line):</span>
                     </div>
-                    <p id="modalBottomLineText" class="text-xs sm:text-sm text-slate-300 leading-relaxed font-en" dir="ltr">
+                    <p id="modalBottomLineFa" class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                    </p>
+                    <p id="modalBottomLineEn" class="text-xs sm:text-sm text-slate-400 leading-relaxed font-en pt-1 border-t border-slate-800" dir="ltr">
                     </p>
                 </div>
 
             </div>
 
             <!-- Modal Footer -->
-            <div class="p-4 sm:p-5 bg-slate-50 dark:bg-slate-850 border-t border-slate-100 dark:border-slate-700 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div class="p-4 sm:p-5 bg-slate-50 dark:bg-slate-850 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
                 <a id="modalSourceLink" href="#" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5 font-medium">
                     <span>مشاهده مقاله اصلی در Investopedia</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -313,7 +339,7 @@
                     </svg>
                 </a>
 
-                <button onclick="copyModalContent()" class="px-4 py-2 rounded-xl bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 font-semibold flex items-center gap-1.5 transition">
+                <button onclick="copyModalContent()" class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-semibold flex items-center gap-1.5 transition">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                     </svg>
@@ -326,7 +352,7 @@
 
     <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
-        <div class="bg-slate-900 text-white px-4 py-2.5 rounded-xl shadow-lg border border-slate-700 flex items-center gap-2 text-sm">
+        <div class="bg-slate-900 dark:bg-slate-800 text-white px-4 py-2.5 rounded-xl shadow-lg border border-slate-700 flex items-center gap-2 text-sm">
             <span class="text-emerald-400">✓</span>
             <span id="toastMsg">متن با موفقیت کپی شد!</span>
         </div>
@@ -339,6 +365,7 @@
         let currentPage = 1;
         let onlyFavorites = false;
         let activeModalTerm = null;
+        let currentViewMode = 'fa'; // 'fa', 'en', 'both'
         let debounceTimer = null;
 
         let favorites = JSON.parse(localStorage.getItem('marketdict_favs') || '[]');
@@ -437,7 +464,7 @@
                 const data = await res.json();
                 document.getElementById('statTotalTerms').innerText = data.total_terms.toLocaleString('fa-IR');
                 if (data.deep_enriched_count) {
-                    document.getElementById('statDeepCount').innerText = `${data.deep_enriched_count.toLocaleString('fa-IR')} اصطلاح`;
+                    document.getElementById('statDeepCount').innerText = `${data.deep_enriched_count.toLocaleString('fa-IR')} مقاله تحلیلی جامع`;
                 }
             } catch (err) {
                 console.error(err);
@@ -453,7 +480,7 @@
                 letters.forEach(item => {
                     const btn = document.createElement('button');
                     btn.id = `letter-${item.letter}`;
-                    btn.className = 'letter-btn px-2.5 py-1 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition flex items-center gap-1';
+                    btn.className = 'letter-btn px-2.5 py-1 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-1';
                     btn.innerHTML = `<span>${item.letter}</span>`;
                     btn.onclick = () => setLetterFilter(item.letter);
                     container.appendChild(btn);
@@ -472,7 +499,7 @@
                 cats.forEach(item => {
                     const btn = document.createElement('button');
                     btn.id = `cat-${encodeURIComponent(item.name)}`;
-                    btn.className = 'cat-pill px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-600 transition';
+                    btn.className = 'cat-pill px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 transition';
                     btn.innerHTML = `${item.name} <span class="opacity-60 text-[10px]">(${item.count})</span>`;
                     btn.onclick = () => setCategoryFilter(item.name);
                     container.appendChild(btn);
@@ -535,7 +562,7 @@
 
         function createTermCard(term) {
             const card = document.createElement('div');
-            card.className = 'group bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700/80 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-xl dark:hover:shadow-emerald-950/20 transition-all duration-200 flex flex-col justify-between cursor-pointer';
+            card.className = 'group bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-400 hover:shadow-xl dark:hover:shadow-emerald-950/30 transition-all duration-200 flex flex-col justify-between cursor-pointer';
             card.onclick = () => openModal(term);
 
             const favActive = isFavorite(term.id);
@@ -545,15 +572,15 @@
                 <div class="space-y-3">
                     <div class="flex items-start justify-between gap-2">
                         <div class="flex items-center gap-1.5 flex-wrap">
-                            <span class="font-en text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400">
+                            <span class="font-en text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/40">
                                 ${term.letter}
                             </span>
-                            <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
+                            <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
                                 ${term.category}
                             </span>
-                            ${hasDeep ? `<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">📑 سرفصل‌های جامع</span>` : ''}
+                            ${hasDeep ? `<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/50">📑 سرفصل‌های جامع</span>` : ''}
                         </div>
-                        <button onclick="toggleFavorite('${term.id}', event)" class="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition" title="افزودن به نشان‌شده‌ها">
+                        <button onclick="toggleFavorite('${term.id}', event)" class="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="افزودن به نشان‌شده‌ها">
                             <svg id="star-icon-${term.id}" class="w-5 h-5 ${favActive ? 'fill-amber-400 text-amber-500' : 'text-slate-300 dark:text-slate-600'} hover:text-amber-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                             </svg>
@@ -569,14 +596,14 @@
                         </h4>
                     </div>
 
-                    <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
+                    <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">
                         ${term.definition_fa}
                     </p>
                 </div>
 
-                <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs">
+                <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
                     <span class="text-slate-400 group-hover:text-emerald-500 font-medium transition flex items-center gap-1">
-                        مشاهده دانشنامه کامل ←
+                        مشاهده توضیحات کامل ←
                     </span>
                     <button onclick="speakDirect('${term.term_en.replace(/'/g, "\\'")}', event)" title="تلفظ انگلیسی" class="p-1 rounded-md text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -608,11 +635,11 @@
             currentPage = 1;
             document.querySelectorAll('.cat-pill').forEach(btn => {
                 btn.classList.remove('bg-emerald-600', 'text-white');
-                btn.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+                btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300');
             });
             const activeBtn = document.getElementById(category === 'ALL' ? 'cat-ALL' : `cat-${encodeURIComponent(category)}`);
             if (activeBtn) {
-                activeBtn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+                activeBtn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300');
                 activeBtn.classList.add('bg-emerald-600', 'text-white');
             }
             loadTerms();
@@ -661,7 +688,33 @@
             loadTerms(true);
         }
 
-        // Comprehensive In-Depth Modal
+        // Language View Mode Switcher
+        function setViewMode(mode) {
+            currentViewMode = mode;
+
+            const btnFa = document.getElementById('viewModeFa');
+            const btnEn = document.getElementById('viewModeEn');
+            const btnBoth = document.getElementById('viewModeBoth');
+
+            [btnFa, btnEn, btnBoth].forEach(btn => {
+                btn.classList.remove('bg-white', 'dark:bg-slate-700', 'text-emerald-600', 'dark:text-emerald-400', 'shadow-sm');
+                btn.classList.add('text-slate-600', 'dark:text-slate-300');
+            });
+
+            if (mode === 'fa') {
+                btnFa.classList.add('bg-white', 'dark:bg-slate-700', 'text-emerald-600', 'dark:text-emerald-400', 'shadow-sm');
+            } else if (mode === 'en') {
+                btnEn.classList.add('bg-white', 'dark:bg-slate-700', 'text-emerald-600', 'dark:text-emerald-400', 'shadow-sm');
+            } else {
+                btnBoth.classList.add('bg-white', 'dark:bg-slate-700', 'text-emerald-600', 'dark:text-emerald-400', 'shadow-sm');
+            }
+
+            if (activeModalTerm) {
+                renderModalBody(activeModalTerm);
+            }
+        }
+
+        // Comprehensive Modal Rendering
         function openModal(term) {
             activeModalTerm = term;
             document.getElementById('modalTermEn').innerText = term.term_en;
@@ -674,87 +727,7 @@
             if (hasDeep) deepBadge.classList.remove('hidden');
             else deepBadge.classList.add('hidden');
 
-            // 1. Key Takeaways
-            const takeawaysList = document.getElementById('modalTakeawaysList');
-            takeawaysList.innerHTML = '';
-            
-            const enTakeaways = term.takeaways_en || [];
-            const faTakeaways = term.takeaways_fa || [];
-            
-            if (enTakeaways.length > 0 || faTakeaways.length > 0) {
-                document.getElementById('modalTakeawaysBox').classList.remove('hidden');
-                
-                // If we have English takeaways, display them with bullets
-                enTakeaways.forEach((item, idx) => {
-                    const li = document.createElement('li');
-                    li.className = 'flex items-start gap-2';
-                    const faText = faTakeaways[idx] ? `<span class="block text-emerald-800 dark:text-emerald-300 font-medium text-xs pt-0.5">${faTakeaways[idx]}</span>` : '';
-                    li.innerHTML = `
-                        <span class="text-amber-500 font-bold mt-0.5">•</span>
-                        <div>
-                            <span class="font-en text-slate-800 dark:text-slate-100 font-medium">${item}</span>
-                            ${faText}
-                        </div>
-                    `;
-                    takeawaysList.appendChild(li);
-                });
-            } else {
-                document.getElementById('modalTakeawaysBox').classList.add('hidden');
-            }
-
-            // 2. Definitions
-            document.getElementById('modalDefFa').innerText = term.definition_fa || 'توضیحات در حال تکمیل...';
-            document.getElementById('modalDefEn').innerText = term.definition_en || 'English definition pending...';
-
-            // 3. In-depth Sections
-            const sectionsCont = document.getElementById('modalSectionsContainer');
-            const sectionsList = document.getElementById('modalSectionsList');
-            sectionsList.innerHTML = '';
-
-            if (term.sections && term.sections.length > 0) {
-                sectionsCont.classList.remove('hidden');
-                term.sections.forEach((sec, idx) => {
-                    const secCard = document.createElement('div');
-                    secCard.className = 'bg-slate-50 dark:bg-slate-750/70 p-4 sm:p-5 rounded-2xl border border-slate-200 dark:border-slate-700/80 space-y-2';
-
-                    let paragraphsHtml = '';
-                    if (sec.paragraphs_en && sec.paragraphs_en.length > 0) {
-                        paragraphsHtml = sec.paragraphs_en.map(p => `<p class="font-en text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed">${p}</p>`).join('');
-                    }
-
-                    let itemsHtml = '';
-                    if (sec.items_en && sec.items_en.length > 0) {
-                        itemsHtml = `<ul class="font-en list-disc list-inside text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1 pt-1">
-                            ${sec.items_en.map(it => `<li>${it}</li>`).join('')}
-                        </ul>`;
-                    }
-
-                    secCard.innerHTML = `
-                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-2 mb-2">
-                            <h5 class="text-xs sm:text-sm font-bold text-emerald-700 dark:text-emerald-400">
-                                ${sec.title_fa || sec.title_en}
-                            </h5>
-                            <span class="font-en text-[11px] text-slate-400 font-semibold">#${idx+1}</span>
-                        </div>
-                        <div class="space-y-2" dir="ltr">
-                            ${paragraphsHtml}
-                            ${itemsHtml}
-                        </div>
-                    `;
-                    sectionsList.appendChild(secCard);
-                });
-            } else {
-                sectionsCont.classList.add('hidden');
-            }
-
-            // 4. Bottom Line
-            const bottomBox = document.getElementById('modalBottomLineBox');
-            if (term.bottom_line_en) {
-                bottomBox.classList.remove('hidden');
-                document.getElementById('modalBottomLineText').innerText = term.bottom_line_en;
-            } else {
-                bottomBox.classList.add('hidden');
-            }
+            renderModalBody(term);
 
             // Source Link
             const link = document.getElementById('modalSourceLink');
@@ -774,6 +747,172 @@
                 card.classList.remove('scale-95', 'opacity-0');
                 card.classList.add('scale-100', 'opacity-100');
             }, 10);
+        }
+
+        function renderModalBody(term) {
+            // 1. Key Takeaways
+            const takeawaysList = document.getElementById('modalTakeawaysList');
+            takeawaysList.innerHTML = '';
+            
+            const enTakeaways = term.takeaways_en || [];
+            const faTakeaways = term.takeaways_fa || [];
+            
+            if (enTakeaways.length > 0 || faTakeaways.length > 0) {
+                document.getElementById('modalTakeawaysBox').classList.remove('hidden');
+                
+                const count = Math.max(enTakeaways.length, faTakeaways.length);
+                for (let i = 0; i < count; i++) {
+                    const enText = enTakeaways[i] || '';
+                    const faText = faTakeaways[i] || '';
+
+                    const li = document.createElement('li');
+                    li.className = 'flex items-start gap-2.5';
+
+                    let contentHtml = '';
+                    if (currentViewMode === 'fa') {
+                        contentHtml = `<span class="text-slate-800 dark:text-slate-100 font-medium text-xs sm:text-sm leading-relaxed">${faText || enText}</span>`;
+                    } else if (currentViewMode === 'en') {
+                        contentHtml = `<span class="font-en text-slate-800 dark:text-slate-100 font-medium text-xs sm:text-sm leading-relaxed" dir="ltr">${enText || faText}</span>`;
+                    } else {
+                        // Both
+                        contentHtml = `
+                            <div class="space-y-1">
+                                <span class="block text-slate-900 dark:text-white font-medium text-xs sm:text-sm">${faText}</span>
+                                <span class="block font-en text-slate-600 dark:text-slate-300 text-xs" dir="ltr">${enText}</span>
+                            </div>
+                        `;
+                    }
+
+                    li.innerHTML = `
+                        <span class="text-amber-500 font-bold mt-0.5">•</span>
+                        <div class="flex-1">${contentHtml}</div>
+                    `;
+                    takeawaysList.appendChild(li);
+                }
+            } else {
+                document.getElementById('modalTakeawaysBox').classList.add('hidden');
+            }
+
+            // 2. Definitions Boxes Visibility
+            const boxDefFa = document.getElementById('boxDefFa');
+            const boxDefEn = document.getElementById('boxDefEn');
+            document.getElementById('modalDefFa').innerText = term.definition_fa || 'توضیحات در حال تکمیل...';
+            document.getElementById('modalDefEn').innerText = term.definition_en || 'English definition pending...';
+
+            if (currentViewMode === 'fa') {
+                boxDefFa.classList.remove('hidden');
+                boxDefEn.classList.add('hidden');
+            } else if (currentViewMode === 'en') {
+                boxDefFa.classList.add('hidden');
+                boxDefEn.classList.remove('hidden');
+            } else {
+                boxDefFa.classList.remove('hidden');
+                boxDefEn.classList.remove('hidden');
+            }
+
+            // 3. In-Depth Sections
+            const sectionsCont = document.getElementById('modalSectionsContainer');
+            const sectionsList = document.getElementById('modalSectionsList');
+            sectionsList.innerHTML = '';
+
+            if (term.sections && term.sections.length > 0) {
+                sectionsCont.classList.remove('hidden');
+                term.sections.forEach((sec, idx) => {
+                    const secCard = document.createElement('div');
+                    secCard.className = 'bg-slate-50 dark:bg-slate-800/90 p-4 sm:p-5 rounded-2xl border border-slate-200 dark:border-slate-700/80 space-y-3';
+
+                    const titleFa = sec.title_fa || sec.title_en;
+                    const titleEn = sec.title_en || '';
+
+                    let titleDisplay = '';
+                    if (currentViewMode === 'fa') {
+                        titleDisplay = `<h5 class="text-xs sm:text-sm font-bold text-emerald-700 dark:text-emerald-400">${titleFa}</h5>`;
+                    } else if (currentViewMode === 'en') {
+                        titleDisplay = `<h5 class="font-en text-xs sm:text-sm font-bold text-emerald-700 dark:text-emerald-400" dir="ltr">${titleEn}</h5>`;
+                    } else {
+                        titleDisplay = `
+                            <div>
+                                <h5 class="text-xs sm:text-sm font-bold text-emerald-700 dark:text-emerald-400">${titleFa}</h5>
+                                <span class="font-en text-[11px] text-slate-500 dark:text-slate-400 font-semibold block" dir="ltr">${titleEn}</span>
+                            </div>
+                        `;
+                    }
+
+                    // Paragraphs
+                    const pFaList = sec.paragraphs_fa || [];
+                    const pEnList = sec.paragraphs_en || [];
+                    const maxP = Math.max(pFaList.length, pEnList.length);
+
+                    let pContent = '';
+                    for (let i = 0; i < maxP; i++) {
+                        const pFa = pFaList[i] || '';
+                        const pEn = pEnList[i] || '';
+
+                        if (currentViewMode === 'fa') {
+                            if (pFa) pContent += `<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed">${pFa}</p>`;
+                            else if (pEn) pContent += `<p class="font-en text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed" dir="ltr">${pEn}</p>`;
+                        } else if (currentViewMode === 'en') {
+                            if (pEn) pContent += `<p class="font-en text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed" dir="ltr">${pEn}</p>`;
+                        } else {
+                            pContent += `
+                                <div class="space-y-1 py-1 border-b border-slate-100 dark:border-slate-700/50 last:border-none">
+                                    <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed">${pFa || ''}</p>
+                                    <p class="font-en text-xs text-slate-600 dark:text-slate-400 leading-relaxed" dir="ltr">${pEn || ''}</p>
+                                </div>
+                            `;
+                        }
+                    }
+
+                    // Items / Lists
+                    let itemsContent = '';
+                    const itEn = sec.items_en || [];
+                    if (itEn.length > 0) {
+                        itemsContent = `<ul class="font-en list-disc list-inside text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-1 pt-1" dir="ltr">
+                            ${itEn.map(it => `<li>${it}</li>`).join('')}
+                        </ul>`;
+                    }
+
+                    secCard.innerHTML = `
+                        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-2.5">
+                            ${titleDisplay}
+                            <span class="font-en text-[11px] text-slate-400 font-semibold">#${idx+1}</span>
+                        </div>
+                        <div class="space-y-2">
+                            ${pContent}
+                            ${itemsContent}
+                        </div>
+                    `;
+                    sectionsList.appendChild(secCard);
+                });
+            } else {
+                sectionsCont.classList.add('hidden');
+            }
+
+            // 4. Bottom Line
+            const bottomBox = document.getElementById('modalBottomLineBox');
+            const blFa = term.bottom_line_fa || '';
+            const blEn = term.bottom_line_en || '';
+
+            if (blFa || blEn) {
+                bottomBox.classList.remove('hidden');
+                const pFa = document.getElementById('modalBottomLineFa');
+                const pEn = document.getElementById('modalBottomLineEn');
+                pFa.innerText = blFa;
+                pEn.innerText = blEn;
+
+                if (currentViewMode === 'fa') {
+                    pFa.classList.remove('hidden');
+                    pEn.classList.add('hidden');
+                } else if (currentViewMode === 'en') {
+                    pFa.classList.add('hidden');
+                    pEn.classList.remove('hidden');
+                } else {
+                    pFa.classList.remove('hidden');
+                    pEn.classList.remove('hidden');
+                }
+            } else {
+                bottomBox.classList.add('hidden');
+            }
         }
 
         function closeModal() {
