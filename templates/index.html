@@ -71,6 +71,30 @@
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(100,116,139,0.6);
         }
+        .internal-term-link {
+            color: #059669;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 3px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+            border-radius: 4px;
+            padding: 0 3px;
+            display: inline;
+        }
+        .internal-term-link:hover {
+            color: #047857;
+            background-color: rgba(16, 185, 129, 0.14);
+            text-decoration-style: solid;
+        }
+        .dark .internal-term-link {
+            color: #34d399;
+        }
+        .dark .internal-term-link:hover {
+            color: #6ee7b7;
+            background-color: rgba(16, 185, 129, 0.24);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200">
@@ -305,6 +329,13 @@
                 </div>
 
                 <div class="flex items-center gap-2">
+                    <!-- History Back Button -->
+                    <button id="modalBackBtn" onclick="goBackModalHistory()" class="hidden px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition text-xs font-semibold flex items-center gap-1 border border-slate-200 dark:border-slate-700" title="بازگشت به اصطلاح قبلی">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>بازگشت</span>
+                    </button>
                     <button id="modalStarBtn" onclick="toggleCurrentModalFavorite()" class="p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 transition border border-slate-200 dark:border-slate-700">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
@@ -445,6 +476,7 @@
             loadLetters();
             loadCategories();
             loadTerms();
+            checkUrlHash();
 
             window.addEventListener('keydown', (e) => {
                 if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -453,7 +485,21 @@
                 }
                 if (e.key === 'Escape') closeModal();
             });
+
+            // Global Interceptor for internal term links
+            document.addEventListener('click', (e) => {
+                const link = e.target.closest('.internal-term-link') || (e.target.tagName === 'A' && e.target.getAttribute('href') && e.target.getAttribute('href').startsWith('#term/'));
+                if (link) {
+                    e.preventDefault();
+                    const slug = link.getAttribute('data-slug') || (link.getAttribute('href') ? link.getAttribute('href').replace('#term/', '') : '');
+                    if (slug) {
+                        openTermBySlug(slug, true);
+                    }
+                }
+            });
         });
+
+        window.addEventListener('hashchange', checkUrlHash);
 
         function initTheme() {
             if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -880,9 +926,72 @@
             }
         }
 
-        // Comprehensive Modal Rendering
-        function openModal(term) {
+        // Comprehensive Modal Rendering & History Management
+        let modalHistory = [];
+
+        function updateModalBackBtn() {
+            const backBtn = document.getElementById('modalBackBtn');
+            if (backBtn) {
+                if (modalHistory && modalHistory.length > 0) {
+                    backBtn.classList.remove('hidden');
+                } else {
+                    backBtn.classList.add('hidden');
+                }
+            }
+        }
+
+        async function openTermBySlug(slug, pushHistory = true) {
+            if (!slug) return;
+            const cleanSlug = slug.toLowerCase().trim().replace('.asp', '');
+
+            if (pushHistory && activeModalTerm) {
+                // Prevent duplicate consecutive history entries
+                const lastHistory = modalHistory[modalHistory.length - 1];
+                if (!lastHistory || lastHistory.slug !== activeModalTerm.slug) {
+                    modalHistory.push(activeModalTerm);
+                }
+            }
+
+            try {
+                const res = await fetch(`/api/terms/${encodeURIComponent(cleanSlug)}`);
+                if (res.ok) {
+                    const term = await res.json();
+                    openModal(term, false);
+                    history.pushState(null, '', `#term/${term.slug || cleanSlug}`);
+                } else {
+                    showToast(`اصطلاح «${cleanSlug}» هنوز در این پایگاه ثبت نشده است.`);
+                }
+            } catch (err) {
+                console.error(err);
+                showToast('خطا در بارگذاری اصطلاح.');
+            }
+        }
+
+        function goBackModalHistory() {
+            if (modalHistory && modalHistory.length > 0) {
+                const prevTerm = modalHistory.pop();
+                openModal(prevTerm, false);
+                history.pushState(null, '', `#term/${prevTerm.slug || ''}`);
+            }
+        }
+
+        function checkUrlHash() {
+            const hash = window.location.hash;
+            if (hash && hash.startsWith('#term/')) {
+                const slug = hash.replace('#term/', '').trim();
+                if (slug) {
+                    openTermBySlug(slug, false);
+                }
+            }
+        }
+
+        function openModal(term, clearHistory = true) {
             activeModalTerm = term;
+            if (clearHistory) {
+                modalHistory = [];
+            }
+            updateModalBackBtn();
+
             document.getElementById('modalTermEn').innerText = term.term_en;
             document.getElementById('modalTermFa').innerText = term.term_fa;
             document.getElementById('modalLetterBadge').innerText = term.letter;
@@ -962,8 +1071,8 @@
             // 2. Definitions Boxes Visibility
             const boxDefFa = document.getElementById('boxDefFa');
             const boxDefEn = document.getElementById('boxDefEn');
-            document.getElementById('modalDefFa').innerText = term.definition_fa || 'توضیحات در حال تکمیل...';
-            document.getElementById('modalDefEn').innerText = term.definition_en || 'English definition pending...';
+            document.getElementById('modalDefFa').innerHTML = term.definition_fa || 'توضیحات در حال تکمیل...';
+            document.getElementById('modalDefEn').innerHTML = term.definition_en || 'English definition pending...';
 
             if (currentViewMode === 'fa') {
                 boxDefFa.classList.remove('hidden');
@@ -1087,8 +1196,8 @@
                 bottomBox.classList.remove('hidden');
                 const pFa = document.getElementById('modalBottomLineFa');
                 const pEn = document.getElementById('modalBottomLineEn');
-                pFa.innerText = blFa;
-                pEn.innerText = blEn;
+                pFa.innerHTML = blFa;
+                pEn.innerHTML = blEn;
 
                 if (currentViewMode === 'fa') {
                     pFa.classList.remove('hidden');
@@ -1113,6 +1222,11 @@
             setTimeout(() => {
                 modal.classList.add('hidden');
                 activeModalTerm = null;
+                modalHistory = [];
+                updateModalBackBtn();
+                if (window.location.hash.startsWith('#term/')) {
+                    history.pushState(null, '', window.location.pathname + window.location.search);
+                }
             }, 150);
         }
 

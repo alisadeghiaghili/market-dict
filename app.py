@@ -162,13 +162,35 @@ def search_terms():
         "has_more": end_idx < total_matches
     })
 
-@app.route("/api/terms/<term_id>")
-def get_term_by_id(term_id: str):
-    term_id_norm = term_id.lower().strip()
+@app.route("/api/terms/<term_identifier>")
+def get_term_by_id(term_identifier: str):
+    norm = term_identifier.lower().strip().replace(".asp", "")
+    norm_clean = re.sub(r"[^a-z0-9]", "", norm)
     dictionary = get_dictionary()
+    
+    # 1. Exact match pass
     for item in dictionary:
-        if item.get("id", "").lower() == term_id_norm or normalize_text(item.get("term_en", "")) == term_id_norm:
+        item_id = str(item.get("id", "")).lower()
+        item_slug = item.get("slug", "").lower().replace(".asp", "")
+        item_en = normalize_text(item.get("term_en", ""))
+        url = item.get("url", "")
+        url_slug = url.rstrip("/").split("/")[-1].replace(".asp", "").lower() if url else ""
+
+        if norm in (item_id, item_slug, item_en, url_slug):
             return jsonify(item)
+            
+    # 2. Alphanumeric normalized pass (ignores hyphens, underscores, spaces)
+    if norm_clean:
+        for item in dictionary:
+            item_slug_clean = re.sub(r"[^a-z0-9]", "", item.get("slug", "").lower().replace(".asp", ""))
+            url = item.get("url", "")
+            url_slug = url.rstrip("/").split("/")[-1].replace(".asp", "").lower() if url else ""
+            url_slug_clean = re.sub(r"[^a-z0-9]", "", url_slug)
+            item_en_clean = re.sub(r"[^a-z0-9]", "", item.get("term_en", "").lower())
+            
+            if norm_clean in (item_slug_clean, url_slug_clean, item_en_clean):
+                return jsonify(item)
+
     return jsonify({"error": "Term not found"}), 404
 
 @app.route("/api/random")

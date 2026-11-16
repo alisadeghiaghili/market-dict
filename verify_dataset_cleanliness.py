@@ -24,8 +24,10 @@ STOP_WORDS = {
 def has_english_sentence(text: str) -> bool:
     if not text or not isinstance(text, str):
         return False
+    # Strip HTML tags
+    clean = re.sub(r'<[^>]+>', '', text)
     # Strip LaTeX/math environments and formulas
-    clean = re.sub(r'\\begin\{.*?\}.*?\\end\{.*?\}', '', text, flags=re.DOTALL)
+    clean = re.sub(r'\\begin\{.*?\}.*?\\end\{.*?\}', '', clean, flags=re.DOTALL)
     clean = re.sub(r'\$\$.*?\$\$', '', clean, flags=re.DOTALL)
     clean = re.sub(r'\\text\{.*?\}', '', clean)
     clean = re.sub(r'\\frac\{.*?\}\{.*?\}', '', clean)

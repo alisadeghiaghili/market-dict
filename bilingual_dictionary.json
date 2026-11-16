@@ -75734,57 +75734,57 @@
     "deep_enriched": true
   },
   {
-    "id": 364,
     "letter": "O",
     "category": "ابزارهای مشتقه و آپشن",
     "term_en": "Open Interest",
     "term_fa": "موقعیت‌های باز (Open Interest)",
+    "slug": "openinterest",
     "url": "https://www.investopedia.com/terms/o/openinterest.asp",
-    "definition_en": "Open interest refers to the total number of outstandingfuturesor options contracts that remain open and haven't been settled or closed. It helps traders gauge market activity, liquidity, and the strength of price trends. Changes in open interest offer clues about whether new money enters or leaves the market, which helps traders develop trading strategies. Keep reading to learn how open interest works, how to interpret it, and how it can influence trading decisions.\n\nOpen interest is most often associated with the futures and options markets, where the number of open contracts changes daily. Open interest is the number ofoptionsorfuturescontracts held by traders in active positions. These positions have been opened, but have not been closed out, expired, orexercised.",
-    "definition_fa": "سود باز به تعداد کل قراردادهای آتی یا اختیار معامله‌ای که باز هستند و هنوز تسویه یا بسته نشده‌اند، اشاره دارد. این موضوع به معامله‌گران کمک می‌کند تا فعالیت بازار، نقدینگی و قدرت روندهای قیمتی را ارزیابی کنند. تغییرات در سود باز نشانه‌هایی از ورود یا خروج پول جدید به بازار ارائه می‌دهد، که به معامله‌گران در توسعه استراتژی‌های معاملاتی کمک می‌کند. ادامه مطلب را بخوانید تا بیاموزید سود باز چگونه کار می‌کند، چگونه آن را تفسیر کنید و چگونه می‌تواند تصمیمات معاملاتی را تحت تأثیر قرار دهد. \n\nسود باز اغلب با بازارهای آتی و اختیار معامله مرتبط است، جایی که تعداد قراردادهای باز روزانه تغییر می‌کند. سود باز تعداد قراردادهای اختیار یا آتی است که توسط معامله‌گران در موقعیت‌های فعال نگه داشته می‌شود. این موقعیت‌ها باز شده‌اند، اما بسته نشده‌اند، منقضی نشده‌اند یا اعمال نشده‌اند.",
+    "definition_en": "Open interest refers to the total number of outstanding futures or options contracts that remain open and haven't been settled or closed. It helps traders gauge market activity, liquidity, and the strength of price trends. Changes in open interest offer clues about whether new money enters or leaves the market, which helps traders develop trading strategies. Keep reading to learn how open interest works, how to interpret it, and how it can influence trading decisions.\n\nOpen interest is most often associated with the futures and options markets, where the number of open contracts changes daily. Open interest is the number of <a class=\"internal-term-link\" data-slug=\"option\" href=\"#term/option\">options</a> or <a class=\"internal-term-link\" data-slug=\"futurescontract\" href=\"#term/futurescontract\">futures</a> contracts held by traders in active positions. These positions have been opened, but have not been closed out, expired, or <a class=\"internal-term-link\" data-slug=\"exercise\" href=\"#term/exercise\">exercised</a>.",
+    "definition_fa": "موقعیت‌های باز (Open Interest) به تعداد کل قراردادهای آتی یا اختیار معامله معوقی اطلاق می شود که باز باقی می مانند و تسویه یا بسته نشده اند. این به معامله گران کمک می کند تا فعالیت بازار، نقدینگی و قدرت روند قیمت را بسنجند. تغییرات در بهره باز سرنخ هایی در مورد ورود یا خروج پول جدید به بازار ارائه می دهد که به معامله گران کمک می کند تا استراتژی های معاملاتی را توسعه دهند. به خواندن ادامه دهید تا بیاموزید که موقعیت‌های باز چگونه کار می کند، چگونه آن را تفسیر کنید و چگونه می تواند بر تصمیمات معاملاتی تأثیر بگذارد. \n\nموقعیت‌های باز (Open Interest) اغلب با بازارهای آتی و اختیار معامله مرتبط است، جایی که تعداد قراردادهای باز روزانه تغییر می کند. موقعیت‌های باز تعداد قراردادهای <a class=\"internal-term-link\" data-slug=\"option\" href=\"#term/option\">اختیار معامله</a> یا <a class=\"internal-term-link\" data-slug=\"futurescontract\" href=\"#term/futurescontract\">قراردادهای آتی</a> است که توسط معامله‌گران در موقعیت‌های فعال نگهداری می‌شود. این موقعیت‌ها باز شده‌اند، اما بسته نشده‌اند، منقضی نشده‌اند، یا <a class=\"internal-term-link\" data-slug=\"exercise\" href=\"#term/exercise\">اعمال نشده‌اند (Exercised)</a>.",
     "takeaways_en": [
-      "Open interest refers to the total number of outstanding derivative contracts, such as options orfutures, that have not yet been settled.",
+      "Open interest refers to the total number of outstanding derivative contracts, such as options or futures, that have not yet been settled.",
       "High open interest suggests a high level of liquidity, making it easier for traders to enter and exit positions.",
       "Rising open interest indicates new money entering the market, while a decline suggests money is exiting and potential market trend changes.",
       "Open interest, unlike trading volume, does not increase with the transfer of contracts between traders.",
       "High open interest is not predictive of price trends but indicates the level of trader interest and sentiment."
     ],
     "takeaways_fa": [
-      "بازار باز به تعداد کل قراردادهای مشتقه معوق، مانند اختیار معامله یا قراردادهای آتی، که هنوز تسویه نشده‌اند، اشاره دارد.",
-      "بهره باز بالا نشان‌دهنده سطح بالای نقدینگی است و ورود و خروج معامله‌گران از موقعیت‌ها را آسان‌تر می‌کند.",
-      "افزایش علاقه باز نشان‌دهنده ورود پول جدید به بازار است، در حالی که کاهش آن نشان می‌دهد پول در حال خروج است و تغییرات احتمالی روند بازار ممکن است رخ دهد.",
-      "بازماندگی باز، برخلاف حجم معاملات، با انتقال قراردادها بین معامله‌گران افزایش نمی‌یابد.",
-      "بهره باز بالا پیش‌بینی‌کننده روند قیمت‌ها نیست اما سطح علاقه و احساسات معامله‌گران را نشان می‌دهد."
+      "بهره باز به تعداد کل قراردادهای مشتقه معوق، مانند اختیار معامله یا قراردادهای آتی، که هنوز تسویه نشده اند، اطلاق می شود.",
+      "علاقه باز بالا نشان دهنده سطح بالایی از نقدینگی است و ورود و خروج معامله گران از موقعیت ها را آسان تر می کند.",
+      "افزایش بهره باز نشان دهنده ورود پول جدید به بازار است، در حالی که کاهش نشان می دهد پول در حال خروج است و روند بالقوه بازار تغییر می کند.",
+      "سود باز برخلاف حجم معاملات با انتقال قراردادها بین معامله گران افزایش نمی یابد.",
+      "سود باز بالا پیش بینی کننده روند قیمت نیست بلکه نشان دهنده سطح علاقه و احساسات معامله گر است."
     ],
     "bottom_line_en": "Open interest is the total number of open derivative contracts that haven’t been settled. They haven’t been exercised, closed out, or expired. This measurement is associated with the options and futures market rather than the stock market. Open interest is equal to the total number of open contracts, not the sum of all transactions between buyers and sellers. When open interest goes up, it represents new money coming into the market. When open interest decreases, it means money is flowing out of the market. Open interest is not generally viewed as an indicator of trends or price action.",
-    "bottom_line_fa": "باز بودن موقعیت کل تعداد قراردادهای مشتقه باز است که تسویه نشده‌اند. آنها اعمال نشده‌اند، خاتمه نیافته‌اند یا منقضی نشده‌اند. این اندازه‌گیری با بازار اختیار معامله و قراردادهای آتی مرتبط است تا بازار سهام. باز بودن موقعیت برابر با کل تعداد قراردادهای باز است، نه جمع کل معاملات بین خریداران و فروشندگان. وقتی باز بودن موقعیت افزایش می‌یابد، نشان‌دهنده ورود پول جدید به بازار است. وقتی باز بودن موقعیت کاهش می‌یابد، به معنای خروج پول از بازار است. باز بودن موقعیت معمولاً به عنوان شاخصی از روندها یا تغییرات قیمت مشاهده نمی‌شود.",
+    "bottom_line_fa": "بهره باز تعداد کل قراردادهای مشتقه باز است که تسویه نشده است. آنها تمرین، بسته یا منقضی نشده اند. این اندازه‌گیری به‌جای بازار سهام، با گزینه‌ها و بازار آتی مرتبط است. بهره آزاد برابر است با تعداد کل قراردادهای باز، نه مجموع تمام معاملات بین خریداران و فروشندگان. وقتی بهره باز بالا می رود، نشان دهنده ورود پول جدید به بازار است. وقتی بهره باز کاهش می یابد، به این معنی است که پول از بازار خارج می شود. بهره باز عموماً به عنوان شاخصی از روند یا اقدام قیمت در نظر گرفته نمی شود.",
     "sections": [
       {
         "title_en": "What Is Open Interest?",
         "title_fa": "بازار باز چیست؟",
         "paragraphs_en": [
-          "Open interest refers to the total number of outstandingfuturesor options contracts that remain open and haven't been settled or closed. It helps traders gauge market activity, liquidity, and the strength of price trends. Changes in open interest offer clues about whether new money enters or leaves the market, which helps traders develop trading strategies. Keep reading to learn how open interest works, how to interpret it, and how it can influence trading decisions."
+          "Open interest refers to the total number of outstanding futures or options contracts that remain open and haven't been settled or closed. It helps traders gauge market activity, liquidity, and the strength of price trends. Changes in open interest offer clues about whether new money enters or leaves the market, which helps traders develop trading strategies. Keep reading to learn how open interest works, how to interpret it, and how it can influence trading decisions."
         ],
         "paragraphs_fa": [
-          "باز بودن موقعیت به تعداد کل قراردادهای آتی یا اختیارات باز اطلاق می‌شود که هنوز تسویه یا بسته نشده‌اند. این شاخص به معامله‌گران کمک می‌کند تا فعالیت بازار، نقدینگی و قدرت روندهای قیمتی را ارزیابی کنند. تغییرات در باز بودن موقعیت نشانه‌هایی از ورود یا خروج سرمایه جدید به بازار ارائه می‌دهد که به معامله‌گران در توسعه استراتژی‌های معاملاتی کمک می‌کند. ادامه مطلب را بخوانید تا بفهمید باز بودن موقعیت چگونه کار می‌کند، چگونه باید آن را تفسیر کرد و چگونه می‌تواند بر تصمیمات معاملاتی تأثیر بگذارد."
+          "سود باز به تعداد کل قراردادهای آتی یا اختیار معامله معوقی اطلاق می شود که باز باقی می مانند و تسویه یا بسته نشده اند. این به معامله گران کمک می کند تا فعالیت بازار، نقدینگی و قدرت روند قیمت را بسنجند. تغییرات در بهره باز سرنخ هایی در مورد ورود یا خروج پول جدید به بازار ارائه می دهد که به معامله گران کمک می کند تا استراتژی های معاملاتی را توسعه دهند. به خواندن ادامه دهید تا بیاموزید که علاقه باز چگونه کار می کند، چگونه آن را تفسیر کنید و چگونه می تواند بر تصمیمات معاملاتی تأثیر بگذارد."
         ],
         "items_en": [],
         "items_fa": []
       },
       {
         "title_en": "How to Understand Open Interest",
-        "title_fa": "چگونه بهره باز را درک کنیم",
+        "title_fa": "چگونه علاقه باز را درک کنیم",
         "paragraphs_en": [
-          "Open interest is most often associated with the futures and options markets, where the number of open contracts changes daily. Open interest is the number ofoptionsorfuturescontracts held by traders in active positions. These positions have been opened, but have not been closed out, expired, orexercised.",
-          "Open interest decreases when buyers (or holders) and sellers (or writers) of contracts close out more positions than were opened that day.To close out a position, a trader must take an offsetting position or exercise their option.",
-          "Open interest increases once again when investors and traders open more new long positions or sellers take on new short positions in an amount greater than the number of contracts that were closed that day.",
-          "Here’s a simple scenario—assume that the open interest of the ABC call option is 0. The next day a trader buys 10 ABC options contracts as a new position. Open interest for this particular call option is now 10. The day after, five ABC contracts were closed, and 10 were opened. This means that open interest increased by five to 15."
+          "Open interest is most often associated with the futures and options markets, where the number of open contracts changes daily. Open interest is the number of options or futures contracts held by traders in active positions. These positions have been opened, but have not been closed out, expired, or exercised.",
+          "Open interest decreases when buyers (or holders) and sellers (or writers) of contracts close out more positions than were opened that day.<span class=\"ql-inline-citation\" data-cite=\"1\"></span> To close out a position, a trader must take an offsetting position or exercise their option.",
+          "Open interest increases once again when investors and traders open more new long positions or sellers take on new short positions in an amount greater than the number of contracts that were closed that day.",
+          "Here’s a simple scenario—assume that the open interest of the ABC call option is 0. The next day a trader buys 10 ABC options contracts as a new position. Open interest for this particular call option is now 10. The day after, five ABC contracts were closed, and 10 were opened. This means that open interest increased by five to 15."
         ],
         "paragraphs_fa": [
-          "باز شدن قراردادها اغلب با بازارهای آتی و آپشن مرتبط است، جایی که تعداد قراردادهای باز روزانه تغییر می‌کند. باز شدن قراردادها تعداد قراردادهای آپشن یا آتی است که توسط معامله‌گران در موقعیت‌های فعال نگهداری می‌شود. این موقعیت‌ها باز شده‌اند، اما بسته نشده‌اند، منقضی نشده‌اند یا استفاده نشده‌اند.",
-          "بهره باز زمانی کاهش می‌یابد که خریداران (یا دارندگان) و فروشندگان (یا نویسندگان) قراردادها، موقعیت‌های بیشتری را نسبت به آنچه در آن روز باز شده بود، ببندند. برای بستن یک موقعیت، یک معامله‌گر باید یک موقعیت جبرانی اتخاذ کند یا از اختیار خود استفاده کند.",
-          "سطح باز دوباره افزایش می‌یابد زمانی که سرمایه‌گذاران و معامله‌گران موقعیت‌های بلند جدید بیشتری باز می‌کنند یا فروشندگان موقعیت‌های کوتاه جدیدی برمی‌دارند که بیشتر از تعداد قراردادهایی است که در آن روز بسته شده‌اند.",
-          "در اینجا یک سناریوی ساده وجود دارد — فرض کنید که باز بودن موقعیت (Open Interest) اختیار خرید ABC برابر با 0 است. روز بعد یک معامله‌گر 10 قرارداد اختیار خرید ABC را به عنوان یک موقعیت جدید خریداری می‌کند. باز بودن موقعیت برای این اختیار خرید خاص اکنون 10 است. روز بعد، پنج قرارداد ABC بسته شد و 10 قرارداد باز شد. این بدان معناست که باز بودن موقعیت پنج واحد افزایش یافته و به 15 رسیده است."
+          "سود باز اغلب با بازارهای آتی و اختیار معامله مرتبط است، جایی که تعداد قراردادهای باز روزانه تغییر می کند. بهره باز تعداد گزینه ها یا قراردادهای آتی است که توسط معامله گران در موقعیت های فعال نگهداری می شود. این موقعیت ها باز شده اند، اما بسته نشده اند، منقضی نشده اند، یا اعمال نشده اند.",
+          "زمانی که خریداران (یا دارندگان) و فروشندگان (یا نویسندگان) قراردادها موقعیت‌های بیشتری را نسبت به آن روز باز می‌کنند، کاهش می‌یابد.<span class=\"ql-inline-citation\" data-cite=\"1\"></span> برای بستن یک موقعیت، یک معامله‌گر باید یک موقعیت جبرانی داشته باشد یا از اختیار خود استفاده کند.",
+          "زمانی که سرمایه‌گذاران و معامله‌گران موقعیت‌های خرید جدید بیشتری باز می‌کنند یا فروشندگان موقعیت‌های فروش جدید را به میزانی بیشتر از تعداد قراردادهایی که در آن روز بسته شده‌اند، باز می‌کنند، بهره باز افزایش می‌یابد.",
+          "در اینجا یک سناریوی ساده وجود دارد—فرض کنید که سود باز اختیار خرید ABC 0 باشد. روز بعد یک معامله گر 10 قرارداد اختیار معامله ABC را به عنوان یک موقعیت جدید خریداری می کند. سود باز برای این اختیار خرید خاص اکنون 10 است. روز بعد، پنج قرارداد ABC بسته شد و 10 قرارداد باز شد. این به این معنی است که علاقه باز با 5 تا 15 افزایش یافته است."
         ],
         "items_en": [],
         "items_fa": []
@@ -75796,37 +75796,37 @@
           "A common misconception about open interest lies in its ability to make predictions. New traders might be led to believe that it can forecast price action, but it cannot. High or low open interest only reflects trader interest and sentiments."
         ],
         "paragraphs_fa": [
-          "یک تصور غلط رایج درباره حجم باز، مربوط به توانایی آن در پیش‌بینی است. معامله‌گران تازه‌کار ممکن است باور کنند که این ابزار قادر به پیش‌بینی حرکت قیمت است، اما این طور نیست. حجم باز بالا یا پایین تنها بیانگر علاقه و احساسات معامله‌گران است."
+          "یک تصور غلط رایج در مورد علاقه باز در توانایی آن در پیش بینی نهفته است. معامله گران جدید ممکن است به این باور برسند که می تواند اقدام قیمت را پیش بینی کند، اما نمی تواند. بهره باز بالا یا پایین تنها نشان دهنده علاقه و احساسات معامله گر است."
         ],
         "items_en": [],
         "items_fa": []
       },
       {
         "title_en": "Comparing Open Interest and Trading Volume",
-        "title_fa": "مقایسه بهره باز و حجم معاملات",
+        "title_fa": "مقایسه سود باز و حجم معاملات",
         "paragraphs_en": [
-          "Open interest is sometimes confused with tradingvolume, but the two terms refer todifferent measures. For example, imagine one trader holds 10 option contracts and sells them to a new trader entering the market. The transfer of these contracts does not create any change in the open interest because positions were transferred, not closed or opened.",
+          "Open interest is sometimes confused with trading <a class=\"internal-term-link\" data-slug=\"volume\" href=\"#term/volume\">volume</a>, but the two terms refer to different measures. For example, imagine one trader holds 10 option contracts and sells them to a new trader entering the market. The transfer of these contracts does not create any change in the open interest because positions were transferred, not closed or opened.",
           "Trading volume, on the other hand, increased by 10 because of the transferral."
         ],
         "paragraphs_fa": [
-          "میزان باز بودن موقعیت‌ها گاهی با حجم معاملات اشتباه گرفته می‌شود، اما این دو اصطلاح به معیارهای متفاوتی اشاره دارند. به عنوان مثال، فرض کنید یک معامله‌گر ۱۰ قرارداد اختیار دارد و آن‌ها را به معامله‌گر جدیدی که وارد بازار می‌شود می‌فروشد. انتقال این قراردادها هیچ تغییری در میزان باز بودن موقعیت‌ها ایجاد نمی‌کند زیرا موقعیت‌ها منتقل شده‌اند، نه بسته یا باز شده‌اند.",
-          "از سوی دیگر، حجم معاملات به دلیل انتقال، ۱۰ افزایش یافت."
+          "بهره باز گاهی اوقات با تجارت <a class=\"internal-term-link\" data-slug=\"volume\" href=\"#term/volume\">حجم</a> اشتباه گرفته می شود، اما این دو اصطلاح به معیارهای متفاوتی اشاره دارند. به عنوان مثال، تصور کنید یک معامله گر 10 قرارداد اختیار معامله دارد و آنها را به معامله گر جدیدی که وارد بازار می شود می فروشد. واگذاری این قراردادها هیچ تغییری در سود باز ایجاد نمی کند زیرا موقعیت ها منتقل شده اند، بسته یا باز نشده اند.",
+          "از سوی دیگر حجم معاملات به دلیل انتقال 10 عدد افزایش یافت."
         ],
         "items_en": [],
         "items_fa": []
       },
       {
         "title_en": "Why Open Interest Matters in Markets",
-        "title_fa": "چرا علاقه باز در بازارها مهم است",
+        "title_fa": "چرا علاقه باز در بازارها مهم است؟",
         "paragraphs_en": [
           "Open interest is a measure of market activity. Little or no open interest means there are no opening positions, or that nearly all the positions have been closed. High open interest means there are many contracts still open, which means market participants will be watching that market closely.",
           "Open interest measures money flow into or out of a futures or options market. Increasing open interest represents new or additional money coming into the market, while decreasing open interest indicates money flowing out of the market.",
-          "Open interest is significant tooptions tradersas it provides key information regarding theliquidityof an option."
+          "Open interest is significant to options traders as it provides key information regarding the liquidity of an option."
         ],
         "paragraphs_fa": [
-          "باز بودن موقعیت یک معیار از فعالیت بازار است. باز بودن موقعیت کم یا صفر به این معنی است که هیچ موقعیت بازی وجود ندارد، یا تقریباً تمام موقعیت‌ها بسته شده‌اند. باز بودن موقعیت بالا به این معنی است که قراردادهای زیادی هنوز باز هستند، که به این معناست که شرکت‌کنندگان بازار آن بازار را با دقت دنبال خواهند کرد.",
-          "بهره باز، جریان پول به داخل یا خارج از بازار معاملات آتی یا اختیار معامله را اندازه‌گیری می‌کند. افزایش بهره باز نشان‌دهنده ورود پول جدید یا اضافی به بازار است، در حالی که کاهش بهره باز نشان‌دهنده خروج پول از بازار می‌باشد.",
-          "بهره باز برای معامله‌گران آپشن اهمیت دارد زیرا اطلاعات کلیدی در مورد نقدینگی یک آپشن فراهم می‌کند."
+          "علاقه باز معیاری برای سنجش فعالیت بازار است. علاقه کم یا بدون علاقه به این معنی است که هیچ موقعیت باز وجود ندارد یا تقریباً همه موقعیت ها بسته شده اند. علاقه باز بالا به این معنی است که بسیاری از قراردادها هنوز باز هستند، به این معنی که فعالان بازار آن بازار را از نزدیک تماشا خواهند کرد.",
+          "بهره باز جریان پول به داخل یا خارج از بازار آتی یا اختیار معامله را اندازه گیری می کند. افزایش سود باز نشان دهنده ورود پول جدید یا اضافی به بازار است، در حالی که کاهش سود باز نشان دهنده خروج پول از بازار است.",
+          "علاقه باز برای معامله گران گزینه مهم است زیرا اطلاعات کلیدی را در مورد نقدشوندگی یک گزینه ارائه می دهد."
         ],
         "items_en": [],
         "items_fa": []
@@ -75838,19 +75838,19 @@
           "High open interest creates opportunities to buy and sell. This liquidity helps traders move into and out of positions quickly. If liquidity is low (low open interest), traders are less able to get in and out of the market."
         ],
         "paragraphs_fa": [
-          "دارایی باز بالا فرصت‌هایی برای خرید و فروش ایجاد می‌کند. این نقدینگی به معامله‌گران کمک می‌کند تا به سرعت وارد و خارج از موقعیت‌ها شوند. اگر نقدینگی کم باشد (دارایی باز کم)، معامله‌گران کمتر قادر به ورود و خروج از بازار خواهند بود."
+          "علاقه باز بالا فرصت هایی برای خرید و فروش ایجاد می کند. این نقدینگی به معامله گران کمک می کند تا به سرعت وارد و خارج شوند. اگر نقدینگی کم باشد (با بهره باز کم)، معامله گران کمتر می توانند وارد بازار شوند و از آن خارج شوند."
         ],
         "items_en": [],
         "items_fa": []
       },
       {
         "title_en": "Open Interest: Real-World Example",
-        "title_fa": "موقعیت باز: مثال واقعی",
+        "title_fa": "علاقه باز: مثال دنیای واقعی",
         "paragraphs_en": [
           "Below is a table of trading activity in the options market for traders A, B, C, D, and E. Open interest is calculated following the trading activity for each day. The key to understanding how this works is whether the trader bought or sold to open or close positions."
         ],
         "paragraphs_fa": [
-          "در زیر جدولی از فعالیت‌های معاملاتی در بازار اختیار معامله برای معامله‌گران A، B، C، D و E آمده است. بهره باز پس از هر روز معاملاتی بر اساس فعالیت معاملاتی محاسبه می‌شود. کلید فهم نحوه کار این است که معامله‌گر برای باز یا بستن موقعیت‌ها خرید کرده یا فروخته است."
+          "در زیر جدولی از فعالیت های معاملاتی در بازار اختیار معامله برای معامله گران A، B، C، D و E ارائه شده است. سود باز پس از فعالیت معاملاتی برای هر روز محاسبه می شود. نکته کلیدی برای درک نحوه عملکرد این است که آیا معامله گر خرید یا فروش برای باز کردن یا بستن موقعیت ها دارد."
         ],
         "items_en": [
           "Jan. 1: Trader A buys one option to open a position from Trader B, increasing open interest by one.",
@@ -75859,44 +75859,44 @@
           "Jan. 4: Trader E bought five options from C to open positions, who sold the five purchased from D to close positions."
         ],
         "items_fa": [
-          "۱ ژانویه: معامله‌گر A یک اختیار خرید برای باز کردن موقعیت از معامله‌گر B خریداری می‌کند و تعداد موقعیت‌های باز را به میزان یک افزایش می‌دهد.",
-          "۲ ژانویه: معامله‌گر C پنج اختیار خرید برای باز کردن موقعیت از D خریداری می‌کند، که باعث افزایش موقعیت‌های باز به شش می‌شود.",
-          "۳ ژانویه: معامله‌گر A یک اختیار را به D می‌فروشد تا یک موقعیت را ببندد و تعداد موقعیت‌های باز را به اندازه یک کاهش دهد.",
-          "۴ ژانویه: معامله‌گر E پنج قرارداد اختیار از C خرید تا موقعیت‌ها را باز کند، کسی که پنج قرارداد خریداری‌شده را از D فروخت تا موقعیت‌ها را ببندد."
+          "1 ژانویه: معامله گر A یک گزینه را برای باز کردن یک موقعیت از معامله گر B خریداری می کند و سود باز را یک گزینه افزایش می دهد.",
+          "2 ژانویه: معامله گر C پنج گزینه برای باز کردن یک موقعیت از D خریداری می کند که سود باز را به 6 افزایش می دهد.",
+          "3 ژانویه: معامله گر A یک گزینه را به D می فروشد تا یک پوزیشن را ببندد و سود باز را یک واحد کاهش دهد.",
+          "4 ژانویه: معامله گر E پنج گزینه را از C به موقعیت های باز خرید، که پنج گزینه خریداری شده از D را به موقعیت های بسته فروخت."
         ]
       },
       {
         "title_en": "Is Higher Open Interest Better?",
-        "title_fa": "آیا علاقه باز بالاتر بهتر است؟",
+        "title_fa": "آیا بهره باز بالاتر بهتر است؟",
         "paragraphs_en": [
           "High open interest usually indicates higher liquidity for a contract. This generally means there will be less difference between how much a trader wants for an option and how much another will pay. This can make it easier to buy and sell. If open interest is increasing and becoming higher, this signals that the market trends around that option are likely to continue."
         ],
         "paragraphs_fa": [
-          "بهره باز بالا معمولاً نشان‌دهنده نقدینگی بالاتر برای یک قرارداد است. این معمولاً به این معناست که تفاوت بین میزان مبلغی که یک معامله‌گر برای یک اختیار معامله می‌خواهد و میزان مبلغی که دیگری می‌پردازد کمتر خواهد بود. این می‌تواند خرید و فروش را آسان‌تر کند. اگر بهره باز در حال افزایش و بالاتر شدن باشد، این نشان می‌دهد که روندهای بازار حول آن اختیار معامله احتمالاً ادامه خواهند داشت."
+          "سود باز بالا معمولاً نشان دهنده نقدینگی بالاتر برای قرارداد است. این به طور کلی به این معنی است که تفاوت کمتری بین میزان خواسته یک معامله گر برای یک گزینه و میزان پرداخت دیگری وجود خواهد داشت. این می تواند خرید و فروش را آسان تر کند. اگر علاقه باز در حال افزایش و افزایش باشد، این نشان می دهد که روند بازار حول آن گزینه احتمالاً ادامه خواهد داشت."
         ],
         "items_en": [],
         "items_fa": []
       },
       {
         "title_en": "Is Open Interest Bearish or Bullish?",
-        "title_fa": "آیا علاقه باز نزولی است یا صعودی؟",
+        "title_fa": "بهره باز نزولی است یا صعودی؟",
         "paragraphs_en": [
-          "Rising open interest usually means that there is new buying happening, which is a bullish trend. However, if open interest grows too high, it can sometimes be abearish signalthat indicates a coming change in market trends."
+          "Rising open interest usually means that there is new buying happening, which is a bullish trend. However, if open interest grows too high, it can sometimes be a bearish signal that indicates a coming change in market trends."
         ],
         "paragraphs_fa": [
-          "افزایش بهره باز معمولاً به این معناست که خرید جدیدی در حال رخ دادن است، که یک روند صعودی محسوب می‌شود. با این حال، اگر بهره باز بیش از حد افزایش یابد، گاهی می‌تواند یک علامت نزولی باشد که نشان‌دهنده تغییر قریب‌الوقوع در روندهای بازار است."
+          "افزایش علاقه باز معمولاً به این معنی است که خرید جدیدی اتفاق می افتد، که یک روند صعودی است. با این حال، اگر علاقه باز بیش از حد رشد کند، گاهی اوقات می تواند یک سیگنال نزولی باشد که نشان دهنده تغییر آینده در روند بازار است."
         ],
         "items_en": [],
         "items_fa": []
       },
       {
         "title_en": "What Happens When Open Interest Increases?",
-        "title_fa": "چه اتفاقی می‌افتد وقتی که علاقه باز افزایش می‌یابد؟",
+        "title_fa": "چه اتفاقی می‌افتد وقتی علاقه باز افزایش می‌یابد؟",
         "paragraphs_en": [
           "When open interest increases, it usually means new money is coming into the market for that option. As long as this is happening, the current trend will continue. When open interest decreases, it is usually a sign that the market is liquidating and more investors are leaving. This often means that the current price trend is ending."
         ],
         "paragraphs_fa": [
-          "وقتی علاقه باز افزایش می‌یابد، معمولاً به این معناست که پول جدید وارد بازار آن اختیار معامله می‌شود. تا زمانی که این اتفاق می‌افتد، روند فعلی ادامه خواهد داشت. وقتی علاقه باز کاهش می‌یابد، معمولاً نشانه‌ای است که بازار در حال نقد کردن است و سرمایه‌گذاران بیشتری در حال خروج هستند. این اغلب به این معناست که روند قیمت فعلی در حال پایان است."
+          "وقتی بهره باز افزایش می یابد، معمولاً به این معنی است که پول جدیدی برای آن گزینه وارد بازار می شود. تا زمانی که این اتفاق بیفتد، روند فعلی ادامه خواهد داشت. وقتی بهره باز کاهش می یابد، معمولاً نشانه این است که بازار در حال نقد شدن است و سرمایه گذاران بیشتری را ترک می کنند. این اغلب به این معنی است که روند فعلی قیمت در حال پایان است."
         ],
         "items_en": [],
         "items_fa": []
@@ -75909,13 +75909,15 @@
           "When open interest goes up, it represents new money coming into the market. When open interest decreases, it means money is flowing out of the market. Open interest is not generally viewed as an indicator of trends or price action."
         ],
         "paragraphs_fa": [
-          "باز بودن علاقه به مجموع قراردادهای مشتقه باز اشاره دارد که هنوز تسویه نشده‌اند. این قراردادها اجرا، بسته یا منقضی نشده‌اند. این اندازه‌گیری با بازار گزینه‌ها و قراردادهای آتی مرتبط است تا بازار سهام. باز بودن علاقه برابر با تعداد کل قراردادهای باز است، نه مجموع تمام معاملات بین خریداران و فروشندگان.",
-          "وقتی حجم موقعیت‌های باز افزایش می‌یابد، نشان‌دهنده ورود پول جدید به بازار است. وقتی حجم موقعیت‌های باز کاهش می‌یابد، به این معناست که پول از بازار خارج می‌شود. حجم موقعیت‌های باز معمولاً به عنوان یک شاخص از روندها یا تغییرات قیمتی دیده نمی‌شود."
+          "بهره باز تعداد کل قراردادهای مشتقه باز است که تسویه نشده است. آنها تمرین، بسته یا منقضی نشده اند. این اندازه‌گیری به‌جای بازار سهام، با گزینه‌ها و بازار آتی مرتبط است. بهره آزاد برابر است با تعداد کل قراردادهای باز، نه مجموع تمام معاملات بین خریداران و فروشندگان.",
+          "وقتی بهره باز بالا می رود، نشان دهنده ورود پول جدید به بازار است. وقتی بهره باز کاهش می یابد، به این معنی است که پول از بازار خارج می شود. بهره باز عموماً به عنوان شاخصی از روند یا اقدام قیمت در نظر گرفته نمی شود."
         ],
         "items_en": [],
         "items_fa": []
       }
-    ]
+    ],
+    "deep_enriched": true,
+    "id": 364
   },
   {
     "id": 365,
@@ -76996,13 +76998,14 @@
     "deep_enriched": true
   },
   {
-    "id": 371,
-    "term_en": "Option",
-    "term_fa": "اختیار معامله",
     "letter": "O",
     "category": "ابزارهای مشتقه و آپشن",
-    "definition_en": "Options are contracts tied to stocks or another underlying asset. They give buyers the right, but not the obligation, to buy or sell it at a set price (the strike price) before or at a specific expiration date. Traders use options to manage risk, generate income, or gain exposure to an asset with less capital upfront. Knowing how they work is important, as they can be complex and risky. Keep reading to learn how options work, the key terms, and strategies for making better options trading decisions.",
-    "definition_fa": "اختیار معامله قراردادهایی هستند که به سهام یا دارایی پایه دیگری وابسته‌اند. این قراردادها به خریداران حق می‌دهند، اما الزام نمی‌آورند، که آن دارایی را با قیمت مشخص (قیمت اعتصابی) قبل از تاریخ انقضا یا در آن تاریخ بخرند یا بفروشند. معامله‌گران از اختیارات معامله برای مدیریت ریسک، کسب درآمد یا دسترسی به دارایی با سرمایه کمتر استفاده می‌کنند. دانستن نحوه کار آن‌ها مهم است، زیرا می‌توانند پیچیده و پرریسک باشند. برای یادگیری نحوه کارکرد اختیارات معامله، اصطلاحات کلیدی و استراتژی‌ها برای تصمیم‌گیری بهتر در تجارت اختیارات، به خواندن ادامه دهید.",
+    "term_en": "Option",
+    "term_fa": "گزینه (Option)",
+    "slug": "option",
+    "url": "https://www.investopedia.com/terms/o/option.asp",
+    "definition_en": "Options are contracts tied to stocks or another underlying asset. They give buyers the right, but not the obligation, to buy or sell it at a set price (the strike price) before or at a specific expiration date. Traders use options to manage risk, generate income, or gain exposure to an asset with less capital upfront. Knowing how they work is important, as they can be complex and risky. Keep reading to learn how options work, the key terms, and strategies for making better options trading decisions.<span class=\"inline-citation-node\" data-cite=\"22\"></span> <br/>\n\nOptions are versatile financial products. These contracts involve a buyer and seller, where the buyer pays a premium for the rights granted by the contract. <a class=\"internal-term-link\" data-slug=\"call\" href=\"#term/call\">Call options</a> allow the holder to buy the asset at a stated price within a specific time frame. <a class=\"internal-term-link\" data-slug=\"put\" href=\"#term/put\">Put options</a>, on the other hand, allow the holder to sell the asset at a stated price within a specific time frame. Each call option has a bullish buyer and a bearish seller, while put options have a bearish buyer and a bullish seller.",
+    "definition_fa": "اختیار معامله قراردادهایی هستند که با سهام یا سایر دارایی های اساسی مرتبط هستند. آنها به خریداران این حق را می دهند، اما نه تعهدی، آن را به قیمت تعیین شده (قیمت اعتصابی) قبل یا در یک تاریخ انقضا خاص بخرند یا بفروشند. معامله‌گران از گزینه‌هایی برای مدیریت ریسک، ایجاد درآمد یا قرار گرفتن در معرض یک دارایی با سرمایه کمتر استفاده می‌کنند. دانستن نحوه کار آنها مهم است، زیرا ممکن است پیچیده و مخاطره آمیز باشند. به خواندن ادامه دهید تا با نحوه کار گزینه‌ها، اصطلاحات کلیدی و استراتژی‌های تصمیم‌گیری بهتر در مورد معاملات گزینه‌ها آشنا شوید.<span class=\"inline-citation-node\" data-cite=\"22\"></span> <br/> \n\nگزینه ها محصولات مالی همه کاره هستند. این قراردادها شامل خریدار و فروشنده می شود که در آن خریدار حق بیمه ای را برای حقوق اعطا شده توسط قرارداد می پردازد. <a class=\"internal-term-link\" data-slug=\"call\" href=\"#term/call\">گزینه‌های تماس</a> به دارنده این امکان را می‌دهد که دارایی را با قیمت مشخص شده در یک بازه زمانی خاص خریداری کند. از طرف دیگر، <a class=\"internal-term-link\" data-slug=\"put\" href=\"#term/put\">گزینه‌های قرار دادن</a> به دارنده اجازه می‌دهد تا دارایی را با قیمتی مشخص در یک بازه زمانی خاص بفروشد. هر اختیار خرید دارای یک خریدار صعودی و یک فروشنده نزولی است، در حالی که گزینه فروش دارای یک خریدار نزولی و یک فروشنده صعودی است.",
     "takeaways_en": [
       "Options are financial instruments that allow rights to buy or sell an asset at a specified price, offering leverage and risk management.",
       "Call options benefit from rising asset prices, while put options profit from declining prices, providing strategic trading opportunities.",
@@ -77017,8 +77020,6 @@
       "یونانی‌ها — دلتا، تتا، گاما و وگا — برای ارزیابی حساسیت قیمت گزینه‌ها، کاهش ارزش زمانی و تأثیر نوسانات حیاتی هستند.",
       "استراتژی‌های اختیار معامله مانند اسپردها به معامله‌گران امکان می‌دهند تا پروفایل‌های ریسک-بازده متناسب با سناریوهای مختلف بازار ایجاد کنند."
     ],
-    "url": "https://www.investopedia.com/terms/o/option.asp",
-    "featured": false,
     "bottom_line_en": "Options are a type of derivative product that allow investors to speculate on or hedge against the volatility of an underlying stock. Options are divided into call options, which allow buyers to profit if the price of the stock increases, and put options, in which the buyer profits if the price of the stock declines. Investors can also short an option by selling it to other investors. Shorting (selling) a call option would therefore mean profiting if the underlying stock declines, while selling a put option would mean profiting if the stock increases in value.",
     "bottom_line_fa": "اختیار معامله‌ها نوعی محصول مشتقه هستند که به سرمایه‌گذاران امکان می‌دهند بر نوسانات یک سهام پایه حدس بزنند یا در برابر آن پوشش دهند. اختیار معامله‌ها به دو دسته تقسیم می‌شوند: اختیار خرید که به خریداران اجازه می‌دهد در صورت افزایش قیمت سهام سود ببرند، و اختیار فروش که در آن خریدار در صورت کاهش قیمت سهام سود می‌برد. سرمایه‌گذاران همچنین می‌توانند با فروش آن به دیگر سرمایه‌گذاران، یک اختیار معامله را شورت کنند. بنابراین، شورت کردن (فروش) یک اختیار خرید به معنای سود بردن در صورت کاهش سهام پایه است، در حالی که فروش یک اختیار فروش به معنای سود بردن در صورت افزایش ارزش سهام است.",
     "sections": [
@@ -77026,10 +77027,10 @@
         "title_en": "What Are Options?",
         "title_fa": "اختیارهای معامله چیستند؟",
         "paragraphs_en": [
-          "Options are contracts tied to stocks or another underlying asset. They give buyers the right, but not the obligation, to buy or sell it at a set price (the strike price) before or at a specific expiration date. Traders use options to manage risk, generate income, or gain exposure to an asset with less capital upfront. Knowing how they work is important, as they can be complex and risky. Keep reading to learn how options work, the key terms, and strategies for making better options trading decisions."
+          "Options are contracts tied to stocks or another underlying asset. They give buyers the right, but not the obligation, to buy or sell it at a set price (the strike price) before or at a specific expiration date. Traders use options to manage risk, generate income, or gain exposure to an asset with less capital upfront. Knowing how they work is important, as they can be complex and risky. Keep reading to learn how options work, the key terms, and strategies for making better options trading decisions.<span class=\"inline-citation-node\" data-cite=\"22\"></span> <br/>"
         ],
         "paragraphs_fa": [
-          "اختیار معامله قراردادهایی هستند که به سهام یا دارایی پایه دیگری وابسته‌اند. این قراردادها به خریداران حق می‌دهند، اما الزام نمی‌آورند، که آن دارایی را با قیمت مشخص (قیمت اعتصابی) قبل از تاریخ انقضا یا در آن تاریخ بخرند یا بفروشند. معامله‌گران از اختیارات معامله برای مدیریت ریسک، کسب درآمد یا دسترسی به دارایی با سرمایه کمتر استفاده می‌کنند. دانستن نحوه کار آن‌ها مهم است، زیرا می‌توانند پیچیده و پرریسک باشند. برای یادگیری نحوه کارکرد اختیارات معامله، اصطلاحات کلیدی و استراتژی‌ها برای تصمیم‌گیری بهتر در تجارت اختیارات، به خواندن ادامه دهید."
+          "اختیار معامله قراردادهایی هستند که با سهام یا سایر دارایی های اساسی مرتبط هستند. آنها به خریداران این حق را می دهند، اما نه تعهدی، آن را به قیمت تعیین شده (قیمت اعتصابی) قبل یا در یک تاریخ انقضا خاص بخرند یا بفروشند. معامله‌گران از گزینه‌هایی برای مدیریت ریسک، ایجاد درآمد یا قرار گرفتن در معرض یک دارایی با سرمایه کمتر استفاده می‌کنند. دانستن نحوه کار آنها مهم است، زیرا ممکن است پیچیده و مخاطره آمیز باشند. به خواندن ادامه دهید تا با نحوه کار گزینه‌ها، اصطلاحات کلیدی و استراتژی‌های تصمیم‌گیری بهتر در مورد معاملات گزینه‌ها آشنا شوید.<span class=\"inline-citation-node\" data-cite=\"22\"></span> <br/>"
         ],
         "items_en": [],
         "items_fa": []
@@ -77041,26 +77042,58 @@
           "Options are versatile financial products. These contracts involve a buyer and seller, where the buyer pays a premium for the rights granted by the contract. Call options allow the holder to buy the asset at a stated price within a specific time frame. Put options, on the other hand, allow the holder to sell the asset at a stated price within a specific time frame. Each call option has a bullish buyer and a bearish seller, while put options have a bearish buyer and a bullish seller.",
           "Traders and investors buy and sell options for several reasons. Options allow traders to leverage a position in an asset for less cost than buying the shares directly. Investors use options to hedge or reduce the risk exposure of their portfolios.",
           "In some cases, the option holder can generate income when they buy call options or become an options writer. Options are also one of the most direct ways to invest in oil. For options traders, an option’s daily trading volume and open interest are the two key numbers to watch to make the most well-informed investment decisions.",
-          "American options can be exercised any time before expiration, whereas European options can only be exercised at expiration. Exercising means using your right to buy or sell the underlying security."
+          "American options can be exercised any time before expiration, whereas European options can only be exercised at expiration.<span class=\"inline-citation-node\" data-cite=\"3\"></span> Exercising means using your right to buy or sell the underlying security."
         ],
         "paragraphs_fa": [
           "اختیار معامله محصولات مالی متنوعی هستند. این قراردادها شامل یک خریدار و یک فروشنده می‌شوند، که خریدار بابت حقوقی که توسط قرارداد اعطا می‌شود، حق بیمه پرداخت می‌کند. اختیار خرید به دارنده آن امکان می‌دهد دارایی را در یک بازه زمانی مشخص به قیمتی معین خریداری کند. از طرف دیگر، اختیار فروش به دارنده آن اجازه می‌دهد دارایی را در یک بازه زمانی مشخص به قیمتی معین بفروشد. هر اختیار خرید دارای یک خریدار افزایشی و یک فروشنده کاهشی است، در حالی که اختیار فروش دارای یک خریدار کاهشی و یک فروشنده افزایشی است.",
           "تاجران و سرمایه‌گذاران به دلایل مختلفی گزینه‌ها را می‌خرند و می‌فروشند. گزینه‌ها به تاجران اجازه می‌دهند که با هزینه کمتر از خرید مستقیم سهام، موقعیتی در یک دارایی ایجاد کنند. سرمایه‌گذاران از گزینه‌ها برای پوشش ریسک یا کاهش میزان ریسک پرتفوی خود استفاده می‌کنند.",
           "در برخی موارد، دارنده اختیار می‌تواند هنگام خرید گزینه‌های خرید یا زمانی که تبدیل به نویسنده گزینه‌ها می‌شود، درآمد ایجاد کند. گزینه‌ها همچنین یکی از مستقیم‌ترین روش‌ها برای سرمایه‌گذاری در نفت هستند. برای معامله‌گران گزینه‌ها، حجم معاملات روزانه و علاقه باز یک گزینه دو عدد کلیدی هستند که باید مورد توجه قرار گیرند تا تصمیمات سرمایه‌گذاری به‌خوبی آگاهانه گرفته شوند.",
-          "اختیارهای آمریکایی می‌توانند در هر زمانی قبل از انقضا اعمال شوند، در حالی که اختیارهای اروپایی فقط در زمان انقضا قابل اعمال هستند. اعمال کردن به معنی استفاده از حق خود برای خرید یا فروش دارایی پایه است."
+          "اختیارات آمریکایی را می توان در هر زمانی قبل از انقضا اعمال کرد، در حالی که اختیارات اروپایی فقط در زمان انقضا قابل اعمال است.<span class=\"inline-citation-node\" data-cite=\"3\"></span> اعمال به معنای استفاده از حق شما برای خرید یا فروش اوراق بهادار اساسی است."
         ],
         "items_en": [],
         "items_fa": []
       },
       {
+        "title_en": "Options Terminology to Know",
+        "title_fa": "گزینه های اصطلاحات برای دانستن",
+        "paragraphs_en": [
+          "Options trading involves a lot of lingo. Here are just some of the key terms to know the meanings of:"
+        ],
+        "paragraphs_fa": [
+          "خرید و فروش گزینه ها شامل بسیاری از زبان ها می شود. در اینجا فقط برخی از اصطلاحات کلیدی برای دانستن معانی آن آورده شده است:"
+        ],
+        "items_en": [
+          "<a class=\"internal-term-link\" data-slug=\"atthemoney\" href=\"#term/atthemoney\"><strong>At-the-money (ATM)</strong></a>: An option whose strike price is exactly that of where the underlying is trading. ATM options have a delta of 0.50.",
+          "<a class=\"internal-term-link\" data-slug=\"inthemoney\" href=\"#term/inthemoney\"><strong>In-the-money (ITM)</strong></a>: An option with intrinsic value and a delta greater than 0.50. For a call, the strike price of an ITM option will be below the current price of the underlying; for a put, it’ll be above the current price.",
+          "<a class=\"internal-term-link\" data-slug=\"outofthemoney\" href=\"#term/outofthemoney\"><strong>Out-of-the-money (OTM)</strong></a>: An option with only extrinsic (time) value and a delta of less than 0.50. For a call, the strike price of an OTM option will be above the current price of the underlying; for a put, it’ll be below the current price.",
+          "<a class=\"internal-term-link\" data-slug=\"option-premium\" href=\"#term/option-premium\"><strong>Premium</strong></a>: The price paid for an option in the market.",
+          "<a class=\"internal-term-link\" data-slug=\"strikeprice\" href=\"#term/strikeprice\"><strong>Strike price</strong></a>: The price at which you can buy or sell the underlying, also known as the exercise price.",
+          "<a class=\"internal-term-link\" data-slug=\"underlying-security\" href=\"#term/underlying-security\"><strong>Underlying</strong></a>: The security upon which the option is based.",
+          "<a class=\"internal-term-link\" data-slug=\"iv\" href=\"#term/iv\"><strong>Implied volatility (IV)</strong></a>: The volatility of the underlying (how quickly and severely it moves) as revealed by market prices.",
+          "<a class=\"internal-term-link\" data-slug=\"exercise\" href=\"#term/exercise\"><strong>Exercise</strong></a>: When an options contract owner exercises the right to buy or sell at the strike price. The seller is then said to be <a class=\"internal-term-link\" data-slug=\"assignment\" href=\"#term/assignment\">assigned</a>.",
+          "<a class=\"internal-term-link\" data-slug=\"expirationdate\" href=\"#term/expirationdate\"><strong>Expiration</strong></a>: The date at which the options contract expires, or ceases to exist. OTM options will expire worthless."
+        ],
+        "items_fa": [
+          "<a class=\"internal-term-link\" data-slug=\"atthemoney\" href=\"#term/atthemoney\"><strong>At-the-money (ATM)</strong></a>: گزینه ای که قیمت اعتصاب آن دقیقاً همان جایی است که کالای اساسی در آن معامله می شود. گزینه های ATM دارای دلتای 0.50 هستند.",
+          "<a class=\"internal-term-link\" data-slug=\"inthemoney\" href=\"#term/inthemoney\"><strong>In-the-money (ITM)</strong></a>: گزینه ای با ارزش ذاتی و دلتای بیشتر از 0.50. برای یک تماس، قیمت پیشنهادی یک گزینه ITM کمتر از قیمت فعلی کالای اساسی خواهد بود. به طور کلی، از قیمت فعلی بالاتر خواهد بود.",
+          "<a class=\"internal-term-link\" data-slug=\"outofthemoney\" href=\"#term/outofthemoney\"><strong>خارج از پول (OTM)</strong></a>: گزینه ای با ارزش بیرونی (زمان) و دلتای کمتر از 0.50. برای یک تماس، قیمت اعتصاب یک گزینه OTM بالاتر از قیمت فعلی کالای اساسی خواهد بود. به طور کلی، آن را زیر قیمت فعلی خواهد بود.",
+          "<a class=\"internal-term-link\" data-slug=\"option-premium\" href=\"#term/option-premium\"><strong>Premium</strong></a>: قیمتی که برای یک گزینه در بازار پرداخت می شود.",
+          "<a class=\"internal-term-link\" data-slug=\"strikeprice\" href=\"#term/strikeprice\"><strong>قیمت اعتصابی</strong></a>: قیمتی که در آن می‌توانید کالای اساسی را بخرید یا بفروشید که به عنوان قیمت تمرین نیز شناخته می‌شود.",
+          "<a class=\"internal-term-link\" data-slug=\"underlying-security\" href=\"#term/underlying-security\"><strong>Underlying</strong></a>: امنیتی که گزینه مبتنی بر آن است.",
+          "<a class=\"internal-term-link\" data-slug=\"iv\" href=\"#term/iv\"><strong>نوسانات ضمنی (IV)</strong></a>: نوسانات زیربنایی (چقدر سریع و شدید حرکت می کند) که توسط قیمت های بازار آشکار می شود.",
+          "<a class=\"internal-term-link\" data-slug=\"exercise\" href=\"#term/exercise\"><strong>تمرین</strong></a>: زمانی که مالک قرارداد اختیار معامله از حق خرید یا فروش به قیمت تخفیف استفاده می‌کند. سپس گفته می شود که فروشنده <a class=\"internal-term-link\" data-slug=\"assignment\" href=\"#term/assignment\">تخصیص داده شده است</a>.",
+          "<a class=\"internal-term-link\" data-slug=\"expirationdate\" href=\"#term/expirationdate\"><strong>انقضا</strong></a>: تاریخی که در آن قرارداد اختیارات منقضی می‌شود، یا وجود ندارد. گزینه های OTM بی ارزش منقضی می شوند."
+        ]
+      },
+      {
         "title_en": "Understanding Call Options",
         "title_fa": "درک اختیار خرید",
         "paragraphs_en": [
-          "A call option gives the holder the right, but not the obligation, to buy the underlying stock at the strike price on or before expiration. A call option will therefore become more valuable as the underlying security rises in price (calls have a positive delta).",
+          "A call option gives the holder the right, but not the obligation, to buy the underlying stock at the strike price on or before expiration. A call option will therefore become more valuable as the underlying security rises in price (calls have a positive delta).<span class=\"inline-citation-node\" data-cite=\"10\"></span>",
           "A long call can be used to speculate on the price of the underlying rising, as it has unlimited upside potential and a maximum loss equal to the premium (price) paid for the option."
         ],
         "paragraphs_fa": [
-          "اختیار خرید به دارنده این حق را می‌دهد، اما نه الزام، که سهام پایه را به قیمت اعمال در یا قبل از تاریخ انقضا خریداری کند. بنابراین اختیار خرید با افزایش قیمت ابزار پایه ارزشمندتر می‌شود (اختیارهای خرید دلتا مثبت دارند).",
+          "اختیار خرید این حق را به دارنده می دهد، اما نه تعهدی، برای خرید سهام پایه به قیمت اعتصاب در تاریخ یا قبل از انقضا. بنابراین، با افزایش قیمت امنیت اصلی، یک گزینه تماس ارزشمندتر می شود (تماس ها دارای دلتای مثبت هستند).<span class=\"inline-citation-node\" data-cite=\"10\"></span>",
           "یک کال بلند می‌تواند برای حدس و گمان در مورد افزایش قیمت دارایی پایه استفاده شود، زیرا پتانسیل صعود نامحدود دارد و حداکثر ضرر آن برابر با حق بیمه (قیمت) پرداخت شده برای اختیار است."
         ],
         "items_en": [],
@@ -77070,12 +77103,12 @@
         "title_en": "Understanding Put Options",
         "title_fa": "درک اختیار فروش",
         "paragraphs_en": [
-          "Opposite to call options, a put gives the holder the right, but not the obligation, to sell the underlying stock at the strike price on or before expiration. A long put, therefore, is a short position in the underlying security, as the put gains value as the underlying’s price falls (puts have a negative delta).",
-          "Protective puts can be purchased as a sort of insurance, providing a price floor for investors to hedge their positions."
+          "Opposite to call options, a put gives the holder the right, but not the obligation, to sell the underlying stock at the strike price on or before expiration. A long put, therefore, is a short position in the underlying security, as the put gains value as the underlying’s price falls (puts have a negative delta).<span class=\"inline-citation-node\" data-cite=\"10\"></span>",
+          "<a class=\"internal-term-link\" data-slug=\"protective-put\" href=\"#term/protective-put\">Protective puts</a> can be purchased as a sort of insurance, providing a price floor for investors to hedge their positions."
         ],
         "paragraphs_fa": [
-          "بر خلاف اختیار خرید، اختیار فروش به دارنده آن حق می‌دهد، اما نه تعهد، که سهام پایه را به قیمت اعمال در یا قبل از تاریخ انقضا بفروشد. بنابراین، اختیار فروش خریداری‌شده یک موقعیت کوتاه در اوراق بهادار پایه است، زیرا اختیار فروش با کاهش قیمت پایه ارزش پیدا می‌کند (اختیار فروش دارای دلتا منفی است).",
-          "اختیارات فروش حفاظتی می‌توانند به‌عنوان نوعی بیمه خریداری شوند و کف قیمتی برای سرمایه‌گذاران فراهم کنند تا موقعیت‌های خود را پوشش دهند."
+          "در مقابل اختیار خرید، یک قرارداد به دارنده این حق می دهد، اما نه تعهدی، که سهام پایه را به قیمت اعتصاب در زمان یا قبل از انقضا بفروشد. بنابراین، قرارداد طولانی، یک موقعیت کوتاه در اوراق بهادار اساسی است، زیرا با کاهش قیمت اوراق بهادار، ارزش فروش افزایش می‌یابد (خردادها دارای دلتای منفی هستند).<span class=\"inline-citation-node\" data-cite=\"10\"></span>",
+          "<a class=\"internal-term-link\" data-slug=\"protective-put\" href=\"#term/protective-put\">فروشگاه‌های محافظ</a> را می‌توان به‌عنوان نوعی بیمه خریداری کرد که کف قیمتی را برای سرمایه‌گذاران فراهم می‌کند تا از موقعیت‌های خود محافظت کنند."
         ],
         "items_en": [],
         "items_fa": []
@@ -77084,12 +77117,12 @@
         "title_en": "American vs. European Option Styles: What to Know",
         "title_fa": "سبک‌های اختیارات آمریکایی در مقابل اروپایی: چه باید دانست",
         "paragraphs_en": [
-          "American options can be exercised at any time between the date of purchase and the expiration date. European options are different from American options in that they can only be exercised at the end of their lives on their expiration date.",
-          "The difference between American and European options is about early exercise, not geography. In the United States, most single stock options are American while index options are European. An American option also typically carries a higher premium than an otherwise identical European option. This is because the early exercise feature is desirable and commands a premium."
+          "<a class=\"internal-term-link\" data-slug=\"americanoption\" href=\"#term/americanoption\">American options</a> can be exercised at any time between the date of purchase and the expiration date. <a class=\"internal-term-link\" data-slug=\"europeanoption\" href=\"#term/europeanoption\">European options</a> are different from American options in that they can only be exercised at the end of their lives on their expiration date.",
+          "The difference between American and European options is about early exercise, not geography. In the United States, most single stock options are American while index options are European.<span class=\"inline-citation-node\" data-cite=\"11\"></span> An American option also typically carries a higher premium than an otherwise identical European option. This is because the early exercise feature is desirable and commands a premium."
         ],
         "paragraphs_fa": [
-          "اختیارهای معامله آمریکایی می‌توانند در هر زمانی بین تاریخ خرید و تاریخ انقضا اعمال شوند. اختیارهای معامله اروپایی با اختیارهای آمریکایی متفاوت هستند زیرا تنها در پایان دوره عمرشان در تاریخ انقضا قابل اعمال هستند.",
-          "تفاوت بین اختیارهای آمریکایی و اروپایی مربوط به اجرای زودهنگام است، نه جغرافیا. در ایالات متحده، بیشتر گزینه‌های سهام منفرد آمریکایی هستند در حالی که گزینه‌های شاخص اروپایی هستند. یک گزینه آمریکایی همچنین معمولاً حق بیمه بالاتری نسبت به یک گزینه اروپایی مشابه دارد. این به این دلیل است که ویژگی اجرای زودهنگام مطلوب است و حق بیمه‌ای را به خود اختصاص می‌دهد."
+          "<a class=\"internal-term-link\" data-slug=\"americanoption\" href=\"#term/americanoption\">گزینه‌های آمریکایی</a> را می‌توان در هر زمانی بین تاریخ خرید و تاریخ انقضا اعمال کرد. <a class=\"internal-term-link\" data-slug=\"europeanoption\" href=\"#term/europeanoption\">گزینه‌های اروپایی</a> با گزینه‌های آمریکایی متفاوت است زیرا فقط در پایان عمرشان در تاریخ انقضا قابل استفاده هستند.",
+          "تفاوت بین گزینه های آمریکایی و اروپایی در مورد ورزش اولیه است، نه جغرافیا. در ایالات متحده، اکثر گزینه های سهام تک آمریکایی هستند در حالی که گزینه های شاخص اروپایی هستند.<span class=\"inline-citation-node\" data-cite=\"11\"></span> یک گزینه آمریکایی نیز معمولاً دارای حق بیمه بالاتری نسبت به یک گزینه اروپایی مشابه است. این به این دلیل است که ویژگی تمرین اولیه مطلوب است و حق بیمه را به همراه دارد."
         ],
         "items_en": [],
         "items_fa": []
@@ -77098,12 +77131,12 @@
         "title_en": "Essential Considerations for Trading Options",
         "title_fa": "ملاحظات اساسی برای معامله اختیارها",
         "paragraphs_en": [
-          "Each options contract usually represents 100 shares of the underlying asset. The buyer pays a premium fee for each contract. For example, if an option has a premium of 35 cents per contract, buying one option costs $35 ($0.35 x 100). The premium is partially based on the strike price.",
-          "Another factor in the premium price is the expiration date. Just like with that carton of milk in the refrigerator, the expiration date indicates the day the option contract must be used. The underlying asset influences the use-by date, and some options will expire daily, weekly, monthly, and even quarterly. For monthly contracts, it’s usually the third Friday."
+          "Each <a class=\"internal-term-link\" data-slug=\"optionscontract\" href=\"#term/optionscontract\">options contract</a> usually represents 100 shares of the underlying asset. The buyer pays a premium fee for each contract.<span class=\"inline-citation-node\" data-cite=\"22\"></span> For example, if an option has a premium of 35 cents per contract, buying one option costs $35 ($0.35 x 100). The premium is partially based on the strike price.",
+          "Another factor in the premium price is the <a class=\"internal-term-link\" data-slug=\"expirationdate\" href=\"#term/expirationdate\">expiration date</a>. Just like with that carton of milk in the refrigerator, the expiration date indicates the day the option contract must be used. The underlying asset influences the use-by date, and some options will expire daily, weekly, monthly, and even quarterly.<span class=\"inline-citation-node\" data-cite=\"11\"></span> For monthly contracts, it’s usually the third Friday."
         ],
         "paragraphs_fa": [
-          "هر قرارداد اختیار معامله معمولاً نماینده ۱۰۰ سهم از دارایی پایه است. خریدار برای هر قرارداد مبلغی تحت عنوان حق بیمه پرداخت می‌کند. به عنوان مثال، اگر حق بیمه یک اختیار معامله ۳۵ سنت برای هر قرارداد باشد، خرید یک اختیار معامله ۳۵ دلار هزینه دارد (۰.۳۵ دلار × ۱۰۰). حق بیمه تا حدی بر اساس قیمت اعمال تعیین می‌شود.",
-          "عامل دیگری که در قیمت بالاتر نقش دارد تاریخ انقضا است. درست مانند آن پاکت شیر در یخچال، تاریخ انقضا روزی را نشان می‌دهد که قرارداد اختیار باید استفاده شود. دارایی پایه بر تاریخ انقضا تأثیر می‌گذارد و برخی از اختیارها روزانه، هفتگی، ماهانه و حتی فصلی منقضی می‌شوند. برای قراردادهای ماهانه، معمولاً جمعه سوم ماه است."
+          "هر <a class=\"internal-term-link\" data-slug=\"optionscontract\" href=\"#term/optionscontract\">قرارداد گزینه‌ها</a> معمولاً 100 سهم از دارایی پایه را نشان می‌دهد. خریدار برای هر قرارداد یک حق بیمه هزینه می‌پردازد.<span class=\"inline-citation-node\" data-cite=\"22\"></span> برای مثال، اگر یک گزینه حق بیمه 35 سنت در هر قرارداد داشته باشد، خرید یک گزینه 35 دلار (0.35 در 100 دلار) هزینه دارد. حق بیمه تا حدی بر اساس قیمت اعتصاب است.",
+          "یکی دیگر از عوامل در قیمت حق بیمه <a class=\"internal-term-link\" data-slug=\"expirationdate\" href=\"#term/expirationdate\">تاریخ انقضا</a> است. درست مانند آن کارتن شیر در یخچال، تاریخ انقضا نشان دهنده روزی است که قرارداد اختیار معامله باید استفاده شود. دارایی اساسی بر تاریخ استفاده تأثیر می گذارد و برخی از گزینه ها روزانه، هفتگی، ماهانه و حتی فصلی منقضی می شوند.<span class=\"inline-citation-node\" data-cite=\"11\"></span> برای قراردادهای ماهانه، معمولاً جمعه سوم است."
         ],
         "items_en": [],
         "items_fa": []
@@ -77112,10 +77145,22 @@
         "title_en": "Options Spread Strategies",
         "title_fa": "استراتژی‌های اسپرد آپشن‌ها",
         "paragraphs_en": [
-          "Options spreads combine buying and selling different options to achieve a specific risk-return profile. Spreads are constructed using vanilla options and can take advantage of various scenarios, such as high- or low-volatility environments, up- or down-moves, or anything in between."
+          "Options spreads combine buying and selling different options to achieve a specific risk-return profile. Spreads are constructed using <a class=\"internal-term-link\" data-slug=\"vanillaoption\" href=\"#term/vanillaoption\">vanilla options</a> and can take advantage of various scenarios, such as high- or low-volatility environments, up- or down-moves, or anything in between."
         ],
         "paragraphs_fa": [
-          "اسپردهای آپشن ترکیبی از خرید و فروش آپشن‌های مختلف برای دستیابی به یک پروفایل ریسک-بازده خاص هستند. اسپردها با استفاده از آپشن‌های وانیلایی ساخته می‌شوند و می‌توانند از سناریوهای مختلف بهره ببرند، مانند محیط‌های با نوسان بالا یا پایین، حرکت‌های صعودی یا نزولی، یا هر چیزی در بین آن‌ها."
+          "اسپرد اختیارات خرید و فروش گزینه های مختلف را برای دستیابی به یک پروفایل ریسک-بازده خاص ترکیب می کند. اسپردها با استفاده از <a class=\"internal-term-link\" data-slug=\"vanillaoption\" href=\"#term/vanillaoption\">گزینه‌های وانیلی</a> ساخته می‌شوند و می‌توانند از سناریوهای مختلفی مانند محیط‌های با نوسان زیاد یا کم، حرکت‌های بالا یا پایین یا هر چیز دیگری استفاده کنند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Important",
+        "title_fa": "مهم",
+        "paragraphs_en": [
+          "Spread strategies can be characterized by their payoff or visualizations of their profit-loss profile, such as <a class=\"internal-term-link\" data-slug=\"bullcallspread\" href=\"#term/bullcallspread\">bull call spreads</a> or <a class=\"internal-term-link\" data-slug=\"ironcondor\" href=\"#term/ironcondor\">iron condors</a>."
+        ],
+        "paragraphs_fa": [
+          "استراتژی‌های گسترش را می‌توان با سود یا تجسم نمایه سود-زیانی آن‌ها مشخص کرد، مانند <a class=\"internal-term-link\" data-slug=\"bullcallspread\" href=\"#term/bullcallspread\">پرداخت تماس‌های گاوی</a> یا <a class=\"internal-term-link\" data-slug=\"ironcondor.#condor\" href=\"ironcondor.#sterm\"{101}{101}"
         ],
         "items_en": [],
         "items_fa": []
@@ -77124,12 +77169,12 @@
         "title_en": "Understanding the Greeks: Essential Metrics for Options Risk Management",
         "title_fa": "درک یونانی‌ها: معیارهای اساسی برای مدیریت ریسک اختیارها",
         "paragraphs_en": [
-          "The options market uses the term the “Greeks“ to describe the different dimensions of risk involved in taking an options position, either in a particular option or a portfolio. These variables are called Greeks because they’re typically associated with Greek symbols.",
-          "Each risk variable is a result of an imperfect assumption or relationship of the option with another underlying variable. Traders use different Greek values to assess options risk and manage option portfolios."
+          "The options market uses the term the “<a class=\"internal-term-link\" data-slug=\"greeks\" href=\"#term/greeks\">Greeks</a>“ to describe the different dimensions of risk involved in taking an options position, either in a particular option or a portfolio. These variables are called Greeks because they’re typically associated with Greek symbols.",
+          "Each risk variable is a result of an imperfect assumption or relationship of the option with another underlying variable. Traders use different Greek values to assess options <a class=\"internal-term-link\" data-slug=\"risk\" href=\"#term/risk\">risk</a> and manage option portfolios.<span class=\"inline-citation-node\" data-cite=\"13\"></span>"
         ],
         "paragraphs_fa": [
-          "بازار اختیار معامله از اصطلاح «یونانی‌ها» برای توصیف ابعاد مختلف ریسک در گرفتن یک موقعیت اختیار، چه در یک اختیار خاص و چه در یک پرتفوی، استفاده می‌کند. این متغیرها یونانی نامیده می‌شوند زیرا معمولاً با نمادهای یونانی مرتبط هستند.",
-          "هر متغیر ریسک نتیجه یک فرضیه یا رابطه ناقص گزینه با یک متغیر زیربنایی دیگر است. معامله‌گران از مقادیر مختلف یونانی برای ارزیابی ریسک گزینه‌ها و مدیریت پرتفوی گزینه‌ها استفاده می‌کنند."
+          "بازار اختیار معامله از اصطلاح «<a class=\"internal-term-link\" data-slug=\"greeks\" href=\"#term/greeks\">یونانی ها</a>\" برای توصیف ابعاد مختلف ریسک درگیر در گرفتن یک موقعیت اختیار معامله، چه در یک گزینه خاص یا یک نمونه کار، استفاده می کند. این متغیرها یونانی نامیده می شوند زیرا معمولاً با نمادهای یونانی مرتبط هستند.",
+          "هر متغیر ریسک نتیجه یک فرض یا رابطه ناقص گزینه با متغیر اساسی دیگر است. معامله‌گران از مقادیر یونانی متفاوتی برای ارزیابی گزینه‌های <a class=\"internal-term-link\" data-slug=\"risk\" href=\"#term/risk\">ریسک</a> و مدیریت پرتفوی گزینه‌ها استفاده می‌کنند.<span class=\"inline-citation-node\" data-cite=\"13\"></span>"
         ],
         "items_en": [],
         "items_fa": []
@@ -77138,13 +77183,13 @@
         "title_en": "Delta: A Key Option Greek",
         "title_fa": "دلتا: یک گزینه کلیدی یونانی",
         "paragraphs_en": [
-          "Delta (Δ) represents the rate of change between the option’s price and a $1 change in the underlying asset’s price. In other words, the price sensitivity of the option relative to the underlying. Delta of a call option has a range between zero and one, while the delta of a put option has a range between zero and negative one. For example, let’s assume an investor is long a call option with a delta of 0.50. Therefore, if the underlying stock increases by $1, the option’s price would theoretically increase by 50 cents.",
-          "Delta also indicates the hedge ratio needed for a delta-neutral position. So if you purchase a standard American call option with a 0.40 delta, you need to sell 40 shares of stock to be fully hedged. Net delta for a portfolio of options can also be used to obtain the portfolio’s hedge ratio.",
+          "<a class=\"internal-term-link\" data-slug=\"delta\" href=\"#term/delta\">Delta</a> (Δ) represents the <a class=\"internal-term-link\" data-slug=\"rateofchange\" href=\"#term/rateofchange\">rate of change</a> between the option’s price and a $1 change in the <a class=\"internal-term-link\" data-slug=\"underlying-asset\" href=\"#term/underlying-asset\">underlying asset’s</a> price.<span class=\"inline-citation-node\" data-cite=\"10\"></span> In other words, the price sensitivity of the option relative to the underlying. Delta of a call option has a range between zero and one, while the delta of a <a class=\"internal-term-link\" data-slug=\"putoption\" href=\"#term/putoption\">put option</a> has a range between zero and negative one. For example, let’s assume an investor is long a call option with a delta of 0.50. Therefore, if the underlying stock increases by $1, the option’s price would theoretically increase by 50 cents.",
+          "Delta also indicates the <a class=\"internal-term-link\" data-slug=\"hedgeratio\" href=\"#term/hedgeratio\">hedge ratio</a> needed for a <a class=\"internal-term-link\" data-slug=\"deltaneutral\" href=\"#term/deltaneutral\">delta-neutral</a> position. So if you purchase a standard American call option with a 0.40 delta, you need to sell 40 shares of stock to be fully hedged. Net delta for a portfolio of options can also be used to obtain the portfolio’s hedge ratio.",
           "A less common usage of an option’s delta is the current probability that it’ll expire ITM. For instance, a 0.40 delta call option today has an implied 40% probability of finishing ITM."
         ],
         "paragraphs_fa": [
-          "دلتا (Δ) نشان‌دهنده نرخ تغییر بین قیمت اختیار معامله و تغییر ۱ دلاری در قیمت دارایی پایه است. به عبارت دیگر، حساسیت قیمت اختیار معامله نسبت به دارایی پایه را نشان می‌دهد. دلتا یک اختیار خرید در محدوده صفر تا یک قرار دارد، در حالی که دلتا یک اختیار فروش در محدوده صفر تا منفی یک است. به عنوان مثال، فرض کنید یک سرمایه‌گذار یک اختیار خرید با دلتا ۰.۵۰ دارد. بنابراین، اگر سهام پایه ۱ دلار افزایش یابد، قیمت اختیار معامله به طور نظری ۵۰ سنت افزایش خواهد یافت.",
-          "دلتا همچنین نسبت هج مورد نیاز برای یک موقعیت دلتا-خنثی را نشان می‌دهد. بنابراین اگر یک اختیار خرید استاندارد آمریکایی با دلتا 0.40 خریداری کنید، باید 40 سهم از سهام را بفروشید تا به طور کامل هج شوید. دلتا خالص برای یک پرتفوی از اختیارات نیز می‌تواند برای به‌دست آوردن نسبت هج پرتفوی استفاده شود.",
+          "<a class=\"internal-term-link\" data-slug=\"delta\" href=\"#term/delta\">Delta</a> (Δ) نشان‌دهنده <a class=\"internal-term-link\" data-slug=\"rateofchange\" href=\"#term/rateofchange\">نرخ تغییر</a> بین قیمت گزینه و تغییر 1 دلاری در <a class=\"-link\" در ترم است. data-slug=\"underlying-asset\" href=\"#term/underlying-asset\">قیمت دارایی اساسی</a>.<span class=\"inline-citation-node\" data-cite=\"10\"></span> به عبارت دیگر، حساسیت قیمت گزینه نسبت به مورد اساسی. دلتای یک گزینه تماس دارای محدوده ای بین صفر و یک است، در حالی که دلتای یک <a class=\"internal-term-link\" data-slug=\"putoption\" href=\"#term/putoption\">گزینه قرار دادن</a> دارای محدوده بین صفر و منفی یک است. به عنوان مثال، فرض کنید یک سرمایه گذار یک گزینه خرید طولانی با دلتای 0.50 است. بنابراین، اگر سهام پایه 1 دلار افزایش یابد، قیمت اختیار از نظر تئوری 50 سنت افزایش می یابد.",
+          "دلتا همچنین <a class=\"internal-term-link\" data-slug=\"hedgeratio\" href=\"#term/hedgeratio\">نسبت پوشش</a> مورد نیاز برای موقعیت <a class=\"internal-term-link\" data-slug=\"deltaneutral\" href=\"#term/deltaneutral\">دلتا خنثی</a> را نشان می دهد. بنابراین اگر یک گزینه تماس استاندارد آمریکایی با دلتای 0.40 خریداری می کنید، باید 40 سهم از سهام را بفروشید تا به طور کامل پوشش داده شود. دلتای خالص برای مجموعه ای از گزینه ها نیز می تواند برای به دست آوردن نسبت پوششی پرتفوی استفاده شود.",
           "استفاده کمتر رایج از دلتا یک اختیار، احتمال فعلی این است که در سررسید در پول (ITM) باشد. برای مثال، یک اختیار خرید با دلتا ۰.۴۰ امروز دارای احتمال ضمنی ۴۰٪ برای اتمام در پول است."
         ],
         "items_en": [],
@@ -77154,11 +77199,11 @@
         "title_en": "Theta: Measuring Time Decay in Options",
         "title_fa": "تتا: اندازه‌گیری کاهش ارزش زمان در اختیار‌ها",
         "paragraphs_en": [
-          "Theta (Θ) represents the rate of change between the option price and time, or time sensitivity—sometimes known as an option’s time decay. Theta indicates the amount an option’s price would decrease as the time to expiration decreases, all else equal. For example, assume an investor is long an option with a theta of -0.50. The option’s price would decrease by 50 cents every day that passes, all else being equal. If three trading days pass, the option’s value would theoretically decrease by $1.50.",
+          "<a class=\"internal-term-link\" data-slug=\"theta\" href=\"#term/theta\">Theta</a> (Θ) represents the rate of change between the option price and time, or time sensitivity—sometimes known as an option’s time decay.<span class=\"inline-citation-node\" data-cite=\"24\"></span> Theta indicates the amount an option’s price would decrease as the time to expiration decreases, all else equal. For example, assume an investor is long an option with a theta of -0.50. The option’s price would decrease by 50 cents every day that passes, all else being equal. If three trading days pass, the option’s value would theoretically decrease by $1.50.",
           "Theta is higher for ATM options and lower for ITM or OTM options. Options closer to expiration also have accelerating time decay. Long calls and long puts usually have negative Theta. Short calls and short puts, on the other hand, have positive Theta. By comparison, an instrument whose value isn’t eroded by time has zero Theta."
         ],
         "paragraphs_fa": [
-          "تتا (Θ) نرخ تغییر بین قیمت اختیار و زمان را نشان می‌دهد، یا حساسیت زمانی—که گاهی به عنوان کاهش ارزش زمانی اختیار شناخته می‌شود. تتا نشان می‌دهد که قیمت یک اختیار چگونه با کاهش زمان تا تاریخ انقضا کاهش می‌یابد، در حالی که سایر عوامل ثابت هستند. به عنوان مثال، فرض کنید یک سرمایه‌گذار اختیار خریدی با تتای -0.50 دارد. قیمت اختیار هر روز که می‌گذرد 50 سنت کاهش می‌یابد، اگر سایر عوامل ثابت باشند. اگر سه روز معاملاتی بگذرد، ارزش اختیار به طور نظری 1.50 دلار کاهش می‌یابد.",
+          "<a class=\"internal-term-link\" data-slug=\"theta\" href=\"#term/theta\">تتا</a> (Θ) نشان‌دهنده نرخ تغییر بین قیمت گزینه و زمان، یا حساسیت زمانی است — که گاهی اوقات به عنوان زوال زمانی یک گزینه شناخته می‌شود.<span class=\"inline-citation-node\" data-cite=\"24\"></s انقضا کاهش می یابد، همه چیز برابر است. به عنوان مثال، فرض کنید یک سرمایه گذار طولانی مدت یک گزینه با تتا 0.50- است. قیمت این گزینه هر روز که می گذرد 50 سنت کاهش می یابد، همه چیز برابر است. اگر سه روز معاملاتی بگذرد، ارزش گزینه از نظر تئوری 1.50 دلار کاهش می یابد.",
           "تتا برای گزینه‌های ATM بالاتر و برای گزینه‌های ITM یا OTM پایین‌تر است. گزینه‌هایی که به تاریخ انقضا نزدیک‌تر هستند نیز دچار تسریع در تحلیل زمانی می‌شوند. کال‌های طولانی و پوت‌های طولانی معمولاً تتای منفی دارند. از سوی دیگر، کال‌های کوتاه و پوت‌های کوتاه تتای مثبت دارند. در مقایسه، ابزاری که ارزش آن با گذر زمان تحلیل نمی‌رود تتای صفر دارد."
         ],
         "items_en": [],
@@ -77168,16 +77213,16 @@
         "title_en": "Gamma: Sensitivity of Delta in Options",
         "title_fa": "گاما: حساسیت دلتا در گزینه‌ها",
         "paragraphs_en": [
-          "Gamma (Γ) represents the rate of change between an option’s delta and the underlying asset’s price. This is called second-order (second-derivative) price sensitivity. Gamma indicates the amount the delta would change given a $1 move in the underlying security. Let’s assume an investor is long one call option on hypothetical stock XYZ. The call option has a delta of 0.50 and a gamma of 0.10. Therefore, if stock XYZ increases or decreases by $1, the call option’s delta would increase or decrease by 0.10.",
+          "<a class=\"internal-term-link\" data-slug=\"gamma\" href=\"#term/gamma\">Gamma</a> (Γ) represents the rate of change between an option’s delta and the underlying asset’s price.<span class=\"inline-citation-node\" data-cite=\"25\"></span> This is called second-order (second-derivative) price sensitivity. Gamma indicates the amount the delta would change given a $1 move in the underlying security. Let’s assume an investor is long one call option on hypothetical stock XYZ. The call option has a delta of 0.50 and a gamma of 0.10. Therefore, if stock XYZ increases or decreases by $1, the call option’s delta would increase or decrease by 0.10.",
           "Gamma is used to determine the stability of an option’s delta. Higher gamma values indicate that delta could change dramatically in response to even small movements in the underlying’s price.",
           "Gamma is higher for ATM options and lower for ITM or OTM options, increasing as expiration nears. Gamma values are generally smaller the further away from the date of expiration. This means that options with longer expirations are less sensitive to delta changes. Gamma values are typically larger closer to expiration, as price changes have more impact on gamma.",
-          "Options traders may opt to not only hedge delta but also gamma in order to be delta-gamma neutral, meaning that as the underlying price moves, the delta will remain close to zero."
+          "Options traders may opt to not only hedge delta but also gamma in order to be <a class=\"internal-term-link\" data-slug=\"deltagamma-hedging\" href=\"#term/deltagamma-hedging\">delta-gamma neutral</a>, meaning that as the underlying price moves, the delta will remain close to zero.<span class=\"inline-citation-node\" data-cite=\"16\"></span>"
         ],
         "paragraphs_fa": [
-          "گاما (Γ) نشان‌دهنده نرخ تغییر بین دلتا یک اختیار معامله و قیمت دارایی پایه است. این حساسیت قیمتی مرتبه دوم (مشتق دوم) نامیده می‌شود. گاما نشان می‌دهد که دلتا با یک تغییر 1 دلاری در دارایی پایه چقدر تغییر می‌کند. فرض کنیم سرمایه‌گذاری یک اختیار خرید از سهام فرضی XYZ خریداری کرده است. دلتا این اختیار خرید 0.50 و گاما آن 0.10 است. بنابراین، اگر سهام XYZ یک دلار افزایش یا کاهش یابد، دلتا اختیار خرید به میزان 0.10 افزایش یا کاهش می‌یابد.",
+          "<a class=\"internal-term-link\" data-slug=\"gamma\" href=\"#term/gamma\">گاما</a> (Γ) نشان‌دهنده نرخ تغییر بین دلتای یک گزینه و قیمت دارایی زیربنایی است.<span class=\"inline-citation-node\" data-cite=\"25\"></span> این (secondity-content-order) نامیده می‌شود. گاما نشان دهنده مقداری است که دلتا با توجه به حرکت 1 دلاری در اوراق بهادار اساسی تغییر می کند. بیایید فرض کنیم که یک سرمایه‌گذار در سهام فرضی XYZ یک گزینه فراخوان طولانی مدت است. گزینه تماس دارای دلتا 0.50 و گاما 0.10 است. بنابراین، اگر سهام XYZ 1 دلار افزایش یا کاهش یابد، دلتای اختیار خرید 0.10 افزایش یا کاهش می یابد.",
           "گامما برای تعیین ثبات دلتا یک اختیار استفاده می‌شود. مقادیر بالاتر گامما نشان می‌دهد که دلتا ممکن است حتی در پاسخ به تغییرات کوچک قیمت دارایی پایه به طور چشمگیری تغییر کند.",
           "گاما برای گزینه‌های ATM بالاتر و برای گزینه‌های ITM یا OTM پایین‌تر است و با نزدیک شدن به تاریخ انقضا افزایش می‌یابد. مقادیر گاما معمولاً هرچه از تاریخ انقضا دورتر باشند کوچکتر است. این بدان معناست که گزینه‌های با انقضای طولانی‌تر نسبت به تغییرات دلتا حساسیت کمتری دارند. مقادیر گاما معمولاً نزدیک به انقضا بزرگتر هستند، زیرا تغییرات قیمت تأثیر بیشتری بر گاما دارند.",
-          "معامله‌گران اختیار معامله ممکن است تصمیم بگیرند نه تنها دلتا را هج کنند بلکه گاما را نیز هج کنند تا به وضعیت دلتا-گاما خنثی برسند، به این معنی که با حرکت قیمت دارایی پایه، دلتا نزدیک به صفر باقی خواهد ماند."
+          "معامله گران گزینه ممکن است نه تنها هج دلتا بلکه گاما را نیز انتخاب کنند تا <a class=\"internal-term-link\" data-slug=\"deltagamma-hedging\" href=\"#term/deltagamma-hedging\">دلتا-گاما خنثی</a> باشند، به این معنی که با حرکت قیمت پایه، دلتا نزدیک به class=\"inno-line\" class=\"inno-line\" می ماند. data-cite=\"16\"></span>"
         ],
         "items_en": [],
         "items_fa": []
@@ -77186,13 +77231,13 @@
         "title_en": "Vega: Assessing Volatility Impact on Options",
         "title_fa": "وگا: ارزیابی تأثیر نوسان بر گزینه‌ها",
         "paragraphs_en": [
-          "Vega (V) represents the rate of change between an option’s value and the underlying asset’s IV. This is the option’s sensitivity to volatility. Vega indicates the amount an option’s price changes given a 1% change in IV. For example, an option with a vega of 0.10 indicates the option’s value is expected to change by 10 cents if the IV changes by 1%.",
-          "Because increased volatility implies that the underlying instrument is more likely to experience extreme values, a rise in volatility correspondingly increases the value of an option. Conversely, a decrease in volatility negatively affects the value of the option. Vega is at its maximum for ATM options that have longer times until expiration.",
+          "<a class=\"internal-term-link\" data-slug=\"vega\" href=\"#term/vega\">Vega</a> (V) represents the rate of change between an option’s value and the underlying asset’s IV.<span class=\"inline-citation-node\" data-cite=\"26\"></span> This is the option’s sensitivity to volatility. Vega indicates the amount an option’s price changes given a 1% change in IV. For example, an option with a vega of 0.10 indicates the option’s value is expected to change by 10 cents if the IV changes by 1%.",
+          "Because increased volatility implies that the underlying instrument is more likely to experience extreme <a class=\"internal-term-link\" data-slug=\"value\" href=\"#term/value\">values</a>, a rise in volatility correspondingly increases the value of an option. Conversely, a decrease in volatility negatively affects the value of the option. Vega is at its maximum for ATM options that have longer times until expiration.<span class=\"inline-citation-node\" data-cite=\"19\"></span>",
           "Those familiar with the Greek alphabet will point out that there’s no actual Greek letter named vega. There are various theories about how this symbol, which resembles the Greek letter nu, found its way into stock-trading lingo."
         ],
         "paragraphs_fa": [
-          "وگا (V) نشان‌دهنده نرخ تغییر بین ارزش یک اختیار معامله و IV دارایی پایه است. این حساسیت اختیار معامله نسبت به نوسان است. وگا میزان تغییر قیمت یک اختیار معامله را با توجه به تغییر ۱٪ در IV نشان می‌دهد. به عنوان مثال، یک اختیار معامله با وگای ۰.۱۰ نشان می‌دهد که انتظار می‌رود ارزش اختیار معامله در صورت تغییر IV به میزان ۱٪، ۱۰ سنت تغییر کند.",
-          "زیرا افزایش نوسان به این معناست که ابزار پایه احتمال بیشتری دارد که مقادیر بسیار شدید را تجربه کند، افزایش نوسان به طور متناسب ارزش یک گزینه را افزایش می‌دهد. برعکس، کاهش نوسان ارزش گزینه را به طور منفی تحت تأثیر قرار می‌دهد. وگا در بالاترین حد خود برای گزینه‌های ATM است که زمان بیشتری تا انقضا دارند.",
+          "<a class=\"internal-term-link\" data-slug=\"vega\" href=\"#term/vega\">Vega</a> (V) نشان‌دهنده نرخ تغییر بین ارزش یک گزینه و IV دارایی زیربنایی است.<span class=\"inline-citation-node\" data-cite=\"26\"></span> این حساسیت به volatility گزینه است. Vega مقدار تغییرات قیمت یک گزینه را با تغییر 1٪ در IV نشان می دهد. به عنوان مثال، گزینه ای با وگا 0.10 نشان می دهد که در صورت تغییر 1٪ IV، انتظار می رود ارزش گزینه 10 سنت تغییر کند.",
+          "از آنجایی که افزایش نوسانات نشان می‌دهد که ابزار اصلی بیشتر با <a class=\"internal-term-link\" data-slug=\"value\" href=\"#term/value\">ارزش‌های</a> شدید مواجه می‌شود، افزایش نوسانات به ترتیب ارزش یک گزینه را افزایش می‌دهد. در مقابل، کاهش نوسانات بر ارزش گزینه تأثیر منفی می گذارد. Vega برای گزینه های ATM که زمان بیشتری تا انقضا دارند، حداکثر است.<span class=\"inline-citation-node\" data-cite=\"19\"></span>",
           "کسانی که با الفبای یونانی آشنا هستند اشاره خواهند کرد که در واقع هیچ حرف یونانی به نام وگا وجود ندارد. نظریه‌های مختلفی در مورد اینکه این نماد، که شبیه حرف یونانی نو است، چگونه وارد اصطلاحات معاملات سهام شده وجود دارد."
         ],
         "items_en": [],
@@ -77202,10 +77247,10 @@
         "title_en": "Rho: Interest Rate Sensitivity in Options",
         "title_fa": "رو: حساسیت نرخ بهره در اختیارها",
         "paragraphs_en": [
-          "Rho (p) represents the rate of change between an option’s value and a 1% change in the interest rate. This measures sensitivity to the interest rate. For example, assume a call option has a rho of 0.05 and a price of $1.25. If interest rates rise by 1%, the value of the call option would increase to $1.30, all else being equal. The opposite is true for put options. Rho is greatest for ATM options with long times until expiration."
+          "<a class=\"internal-term-link\" data-slug=\"rho\" href=\"#term/rho\">Rho</a> (p) represents the rate of change between an option’s value and a 1% change in the <a class=\"internal-term-link\" data-slug=\"interestrate\" href=\"#term/interestrate\">interest rate</a>.<span class=\"inline-citation-node\" data-cite=\"27\"></span> This measures sensitivity to the interest rate. For example, assume a call option has a rho of 0.05 and a price of $1.25. If interest rates rise by 1%, the value of the call option would increase to $1.30, all else being equal. The opposite is true for put options. Rho is greatest for ATM options with long times until expiration."
         ],
         "paragraphs_fa": [
-          "رو (ρ) نشان‌دهنده نرخ تغییر بین ارزش یک اختیار معامله و تغییر ۱٪ در نرخ بهره است. این شاخص حساسیت نسبت به نرخ بهره را اندازه‌گیری می‌کند. به عنوان مثال، فرض کنید یک اختیار خرید دارای رو ۰.۰۵ و قیمت ۱.۲۵ دلار باشد. اگر نرخ بهره ۱٪ افزایش یابد، ارزش اختیار خرید به ۱.۳۰ دلار افزایش می‌یابد، البته در صورتی که سایر شرایط ثابت باشند. عکس این موضوع برای اختیار فروش صادق است. رو بیشترین مقدار را برای گزینه‌های ATM با زمان طولانی تا انقضا دارد."
+          "<a class=\"internal-term-link\" data-slug=\"rho\" href=\"#term/rho\">Rho</a> (p) نشان‌دهنده نرخ تغییر بین مقدار یک گزینه و تغییر 1٪ در <a class=\"internal-term-link\" data-slug=\"interestrate\"#term/interestrate.=\"#term/interestrate.<aref=\"no-deline\">interest rate</a href=\"node-line\">href=\"nodestrate\">interestration</a> data-cite=\"27\"></span> این میزان حساسیت به نرخ بهره را اندازه گیری می کند. به عنوان مثال، فرض کنید یک اختیار خرید دارای rho 0.05 و قیمت 1.25 دلار است. اگر نرخ بهره 1% افزایش یابد، ارزش اختیار خرید به 1.30 دلار افزایش می یابد، در حالی که همه چیز برابر است. برعکس برای گزینه های قرار دادن صادق است. Rho برای گزینه های ATM با زمان های طولانی تا انقضا بهترین است."
         ],
         "items_en": [],
         "items_fa": []
@@ -77214,11 +77259,11 @@
         "title_en": "Exploring Minor Option Greeks",
         "title_fa": "بررسی گزینه‌های کوچک یونانی",
         "paragraphs_en": [
-          "Some other Greeks, which aren’t discussed as often, are lambda, epsilon, vomma, vera, speed, zomma, color, and ultima.",
+          "Some other Greeks, which aren’t discussed as often, are <a class=\"internal-term-link\" data-slug=\"lambda\" href=\"#term/lambda\">lambda</a>, epsilon, <a class=\"internal-term-link\" data-slug=\"vomma\" href=\"#term/vomma\">vomma</a>, vera, speed, zomma, color, and ultima.",
           "These Greeks are second- or third-derivatives of the pricing model and affect things like the change in delta with a change in volatility. They’re increasingly used in options trading strategies, as computer software can quickly compute and account for these complex and sometimes esoteric risk factors."
         ],
         "paragraphs_fa": [
-          "برخی دیگر از گرک‌ها که به اندازه سایرین بحث نمی‌شوند، شامل لامبدا، اپسیلون، وومّا، ورا، اسپید، زوما، کالر و اولتیما هستند.",
+          "برخی دیگر از یونانی‌ها که اغلب در مورد آنها بحث نمی‌شود، <a class=\"internal-term-link\" data-slug=\"lambda\" href=\"#term/lambda\">لامبدا</a>، epsilon، <a class=\"internal-term-link\" data-slug=\"vomma\"=\"#term/vomma\">vemma، color</a,zom\">vomma,</a, href=\"#term/lambda\">Vomma,</a,,zom> هستند.",
           "این یونانی‌ها مشتقات دوم یا سوم مدل قیمت‌گذاری هستند و بر چیزهایی مانند تغییر دلتا با تغییر نوسان تأثیر می‌گذارند. آن‌ها به طور فزاینده‌ای در استراتژی‌های معاملاتی آپشن‌ها استفاده می‌شوند، زیرا نرم‌افزار کامپیوتری می‌تواند به سرعت این عوامل پیچیده و گاه اسرارآمیز ریسک را محاسبه و لحاظ کند."
         ],
         "items_en": [],
@@ -77230,14 +77275,14 @@
         "paragraphs_en": [
           "As mentioned earlier, call options allow the holder to buy an underlying security at the stated strike price by the expiration date, also called the expiry. The holder has no obligation to buy the asset if they don’t want to purchase it. The risk to the buyer is limited to the premium paid. Fluctuations of the underlying stock have no impact.",
           "Suppose buyers are bullish on a stock and believe the share price will rise above the strike price before the option expires. If the investor’s bullish outlook is realized and the price increases above the strike price, the investor can exercise the option, buy the stock at the strike price, and immediately sell the stock at the current market price for a profit.",
-          "Their profit on this trade is equal to the market share price less the strike share price, plus the expense of the option (the premium and any brokerage commission to place the orders). The result is multiplied by the number of option contracts purchased, then multiplied by 100—assuming each contract represents 100 shares.",
-          "If the underlying stock price doesn’t move above the strike price by the expiration date, the option expires worthless. The holder isn’t required to buy the shares but will lose the premium paid for the call."
+          "Their profit on this trade is equal to the market share price less the strike share price, plus the expense of the option (the premium and any brokerage commission to place the orders). The result is multiplied by the number of option contracts purchased, then multiplied by 100—assuming each contract represents 100 <a class=\"internal-term-link\" data-slug=\"shares\" href=\"#term/shares\">shares</a>.",
+          "If the underlying stock price doesn’t move above the strike price by the expiration date, the option expires worthless. The holder isn’t required to buy the shares but will lose the premium paid for the call.<span class=\"inline-citation-node\" data-cite=\"21\"></span>"
         ],
         "paragraphs_fa": [
           "همان‌طور که قبلاً ذکر شد، اختیار خرید به دارنده اجازه می‌دهد که یک اوراق بهادار پایه را با قیمت توافق شده تا تاریخ انقضا خریداری کند، که به آن تاریخ سررسید نیز گفته می‌شود. دارنده هیچ تعهدی برای خرید دارایی اگر نخواهد خرید، ندارد. ریسک برای خریدار محدود به حق بیمه پرداخت شده است. نوسانات سهام پایه هیچ تأثیری ندارد.",
           "فرض کنید خریداران نسبت به یک سهم خوش‌بین هستند و معتقدند که قیمت سهم قبل از انقضای اختیار معامله بالاتر از قیمت اعمال خواهد رفت. اگر دیدگاه خوش‌بینانه سرمایه‌گذار محقق شود و قیمت از قیمت اعمال بالاتر رود، سرمایه‌گذار می‌تواند اختیار معامله را اعمال کند، سهام را به قیمت اعمال خریداری کند و بلافاصله سهام را به قیمت بازار فعلی برای کسب سود بفروشد.",
-          "سود آن‌ها در این معامله برابر است با قیمت سهم بازار منهای قیمت سهم اعمال، به‌اضافه هزینه اختیار (حق‌الزحمه و هر گونه کمیسیون کارگزاری برای ثبت سفارش‌ها). نتیجه در تعداد قراردادهای اختیار خریداری شده ضرب می‌شود، سپس در ۱۰۰ ضرب می‌شود—با فرض اینکه هر قرارداد نمایانگر ۱۰۰ سهم باشد.",
-          "اگر قیمت سهام پایه تا تاریخ انقضا بالاتر از قیمت اعتصاب حرکت نکند، اختیار معامله بی‌ارزش می‌شود. دارنده ملزم به خرید سهام نیست اما پرمیومی که برای اختیار خرید پرداخت شده است را از دست می‌دهد."
+          "سود آنها در این معامله برابر است با قیمت سهم بازار منهای قیمت سهام اعتصاب، به اضافه هزینه اختیار (حق بیمه و هر کمیسیون کارگزاری برای ثبت سفارش). نتیجه در تعداد قراردادهای اختیار خریداری شده ضرب می شود، سپس در 100 ضرب می شود—با فرض اینکه هر قرارداد نشان دهنده 100 <a class=\"internal-term-link\" data-slug=\"shares\" href=\"#term/shares\">سهم</a> باشد.",
+          "اگر قیمت سهام پایه تا تاریخ انقضا بالاتر از قیمت اعتصاب حرکت نکند، گزینه بی ارزش منقضی می شود. دارنده ملزم به خرید سهام نیست اما حق بیمه پرداخت شده برای تماس را از دست می دهد.<span class=\"inline-citation-node\" data-cite=\"21\"></span>"
         ],
         "items_en": [],
         "items_fa": []
@@ -77248,14 +77293,14 @@
         "paragraphs_en": [
           "Selling call options is known as writing a contract. The writer receives the premium fee. In other words, a buyer pays the premium to the writer (seller) of an option. The maximum profit is the premium received when selling the option. The seller of a call option expects the stock price to fall or stay near the strike price.",
           "If the prevailing market share price is at or below the strike price by expiry, the option expires worthless for the call buyer. The option seller pockets the premium as their profit. The option isn’t exercised because the buyer wouldn’t buy the stock at the strike price higher than or equal to the prevailing market price.",
-          "However, if the market share price is more than the strike price at expiry, the seller of the option must sell the shares to an option buyer at that lower strike price. In other words, the seller must either sell shares from their portfolio holdings or buy the stock at the prevailing market price to sell to the call option buyer. The contract writer incurs a loss, but the size of the loss depends on the cost basis of the shares they must use to cover the option order, plus any brokerage fees, minus any premium they received.",
-          "As you can see, the risk to the call writers is far greater than the risk exposure of call buyers. The call buyer only loses the premium. The writer faces infinite risk because the stock price could continue to rise, increasing losses significantly."
+          "However, if the market share price is more than the strike price at expiry, the seller of the option must sell the shares to an option buyer at that lower strike price. In other words, the seller must either sell shares from their <a class=\"internal-term-link\" data-slug=\"portfolio\" href=\"#term/portfolio\">portfolio</a> holdings or buy the stock at the prevailing market price to sell to the call option buyer. The contract writer incurs a loss, but the size of the loss depends on the cost basis of the shares they must use to cover the option order, plus any brokerage fees, minus any premium they received.",
+          "As you can see, the risk to the <a class=\"internal-term-link\" data-slug=\"writing-an-option\" href=\"#term/writing-an-option\">call writers</a> is far greater than the risk exposure of call buyers. The call buyer only loses the premium. The writer faces infinite risk because the stock price could continue to rise, increasing losses significantly.<span class=\"inline-citation-node\" data-cite=\"21\"></span>"
         ],
         "paragraphs_fa": [
           "فروش اختیار خرید به عنوان نوشتن یک قرارداد شناخته می‌شود. نویسنده، حق کمیسیون را دریافت می‌کند. به عبارت دیگر، یک خریدار حق کمیسیون را به نویسنده (فروشنده) اختیار می‌پردازد. حداکثر سود، کمیسیونی است که هنگام فروش اختیار دریافت می‌شود. فروشنده یک اختیار خرید انتظار دارد که قیمت سهام کاهش یابد یا نزدیک به قیمت اعمال باقی بماند.",
           "اگر قیمت سهم بازار غالب در زمان انقضا برابر یا کمتر از قیمت اعتصاب باشد، اختیار معامله برای خریدار اختیار خرید بی‌ارزش می‌شود. فروشنده اختیار، مبلغ حق بیمه را به عنوان سود خود دریافت می‌کند. اختیار معامله اعمال نمی‌شود زیرا خریدار تمایلی به خرید سهام با قیمت اعتصاب که بالاتر یا برابر با قیمت بازار فعلی است، ندارد.",
-          "با این حال، اگر قیمت سهم در بازار در زمان انقضا بیشتر از قیمت اعتصابی باشد، فروشنده اختیار معامله باید سهام را به خریدار اختیار به آن قیمت اعتصابی پایین‌تر بفروشد. به عبارت دیگر، فروشنده باید یا سهام از دارایی‌های موجود در پرتفوی خود بفروشد یا سهام را به قیمت جاری بازار خریداری کرده و به خریدار اختیار خرید بفروشد. نویسنده قرارداد متحمل زیان می‌شود، اما اندازه زیان بستگی به بهای تمام شده سهامی دارد که باید برای پوشش سفارش اختیار از آن استفاده کند، به‌اضافه هر هزینه کارگزاری، منهای هر حق‌الزحمه‌ای که دریافت کرده است.",
-          "همانطور که می‌بینید، ریسک برای نویسندگان قرارداد خرید (call) به مراتب بیشتر از میزان ریسک برای خریداران قرارداد خرید است. خریدار قرارداد خرید تنها پرمیوم را از دست می‌دهد. نویسنده با ریسک نامحدود مواجه است زیرا قیمت سهام ممکن است به افزایش خود ادامه دهد و زیان‌ها را به طور قابل توجهی افزایش دهد."
+          "با این حال، اگر قیمت سهم بازار بیشتر از قیمت اعتصاب در انقضا باشد، فروشنده گزینه باید سهام را به خریدار اختیار معامله با آن قیمت اعتصاب کمتر بفروشد. به عبارت دیگر، فروشنده باید یا سهام را از دارایی‌های <a class=\"internal-term-link\" data-slug=\"portfolio\" href=\"#term/portfolio\">پورتفولیو</a> خود بفروشد یا سهام را به قیمت بازار غالب بخرد تا به خریدار اختیار خرید بفروشد. قرارداد نویس متحمل ضرر می شود، اما اندازه زیان بستگی به هزینه سهامی دارد که باید برای پوشش اختیار معامله استفاده کند، به اضافه هر گونه کارمزد کارگزاری، منهای حق بیمه ای که دریافت کرده است.",
+          "همانطور که می بینید، خطر برای <a class=\"internal-term-link\" data-slug=\"writing-an-option\" href=\"#term/writing-an-option\">نویسندگان تماس</a> به مراتب بیشتر از در معرض خطر قرار گرفتن خریداران تماس است. خریدار تماس فقط حق بیمه را از دست می دهد. نویسنده با ریسک بی‌نهایتی مواجه است، زیرا قیمت سهام می‌تواند به افزایش خود ادامه دهد و زیان‌ها را به میزان قابل توجهی افزایش دهد.<span class=\"inline-citation-node\" data-cite=\"21\"></span>"
         ],
         "items_en": [],
         "items_fa": []
@@ -77266,14 +77311,14 @@
         "paragraphs_en": [
           "Put options are investments where the buyer believes the underlying stock’s market price will fall below the strike price on or before the expiration date of the option. Once again, the holder can sell shares without the obligation to sell at the stated strike per share price by the stated date.",
           "Since buyers of put options want the stock price to decrease, the put option is profitable when the underlying stock’s price is below the strike price. If the prevailing market price is less than the strike price at expiry, the investor can exercise the put. They’ll sell shares at the option’s higher strike price. Should they wish to replace their holding of these shares, they may buy them on the open market.",
-          "Their profit on this trade is equal to the strike price less the current market price, plus expenses (the premium and any brokerage commission to place the orders). The result would be multiplied by the number of option contracts purchased, then multiplied by 100—assuming each contract represents 100 shares.",
-          "The value of holding a put option will increase as the underlying stock price decreases. Conversely, the value of the put option declines as the stock price increases. The risk of buying put options is limited to the loss of the premium if the option expires worthless."
+          "Their profit on this <a class=\"internal-term-link\" data-slug=\"trade\" href=\"#term/trade\">trade</a> is equal to the strike price less the current market price, plus expenses (the premium and any brokerage commission to place the orders). The result would be multiplied by the number of option contracts purchased, then multiplied by 100—assuming each contract represents 100 shares.",
+          "The value of holding a put option will increase as the underlying stock price decreases. Conversely, the value of the put option declines as the stock price increases. The risk of buying put options is limited to the loss of the premium if the option expires worthless.<span class=\"inline-citation-node\" data-cite=\"21\"></span>"
         ],
         "paragraphs_fa": [
           "اختیار فروش (پوت آپشن) سرمایه‌گذاری‌هایی هستند که در آن خریدار معتقد است قیمت بازار سهام پایه قبل از تاریخ انقضای اختیار یا در همان تاریخ کمتر از قیمت اعمال خواهد شد. باز هم، دارنده می‌تواند سهام را بدون الزام به فروش به قیمت اعمال تعیین شده برای هر سهم تا تاریخ مشخص شده بفروشد.",
           "از آنجا که خریداران اختیار فروش می‌خواهند قیمت سهام کاهش یابد، اختیار فروش زمانی سودآور است که قیمت سهام پایه زیر قیمت اعمال باشد. اگر قیمت بازار جاری در سررسید کمتر از قیمت اعمال باشد، سرمایه‌گذار می‌تواند اختیار فروش را اعمال کند. آن‌ها سهام را به قیمت بالاتر اعمال شده در اختیار می‌فروشند. اگر بخواهند مالکیت این سهام را جایگزین کنند، می‌توانند آن‌ها را در بازار آزاد خریداری کنند.",
-          "سود آن‌ها در این معامله برابر با قیمت اعتصاب منهای قیمت فعلی بازار، به‌علاوه هزینه‌ها (حق بیمه و هر کمیسیون کارگزاری برای ثبت سفارشات) است. این نتیجه در تعداد قراردادهای اختیار خریداری‌شده ضرب می‌شود، سپس در ۱۰۰ ضرب می‌گردد—با فرض اینکه هر قرارداد نماینده ۱۰۰ سهم باشد.",
-          "ارزش نگهداری یک اختیار فروش با کاهش قیمت سهام پایه افزایش می‌یابد. به طور معکوس، ارزش اختیار فروش با افزایش قیمت سهام کاهش می‌یابد. ریسک خرید اختیارهای فروش محدود به از دست رفتن حق بیمه در صورتی است که اختیار به بی‌ارزشی منقضی شود."
+          "سود آنها در این <a class=\"internal-term-link\" data-slug=\"trade\" href=\"#term/trade\">تجارت</a> برابر است با قیمت اعتصاب منهای قیمت فعلی بازار، به اضافه هزینه ها (حق بیمه و هر کمیسیون دلالی برای ثبت سفارش ها). نتیجه در تعداد قراردادهای اختیار خریداری شده ضرب می شود، سپس در 100 ضرب می شود - با فرض اینکه هر قرارداد نماینده 100 سهم باشد.",
+          "ارزش نگهداری یک اختیار فروش با کاهش قیمت سهام پایه افزایش می یابد. برعکس، با افزایش قیمت سهام، ارزش اختیار فروش کاهش می یابد. خطر خرید گزینه های فروش محدود به از دست دادن حق بیمه در صورت منقضی شدن گزینه بی ارزش است.<span class=\"inline-citation-node\" data-cite=\"21\"></span>"
         ],
         "items_en": [],
         "items_fa": []
@@ -77285,7 +77330,7 @@
           "Selling put options is also known as writing a contract. A put option writer believes the underlying stock’s price will stay the same or increase over the life of the option, making them bullish on the shares. Here, the option buyer has the right to make the seller buy shares of the underlying asset at the strike price on expiry.",
           "If the underlying stock’s price closes above the strike price by the expiration date, the put option expires worthless. The writer’s maximum profit is the premium. The option isn’t exercised because the option buyer wouldn’t sell the stock at the lower strike price when the market price is higher.",
           "If the stock’s market value falls below the option strike price, the writer is obligated to buy shares of the underlying stock at the strike price. In other words, the put option will be exercised by the option buyer who sells their shares at the strike price because it’s higher than the stock’s market value.",
-          "A put option writer risks losing when the market price drops below the strike price. The seller is then forced to purchase shares at the strike price at expiration. The writer’s loss can be significant depending on how much the shares depreciate.",
+          "A put option writer risks losing when the market price drops below the strike price. The seller is then forced to purchase shares at the strike price at expiration. The writer’s loss can be significant depending on how much the shares depreciate.<span class=\"inline-citation-node\" data-cite=\"21\"></span>",
           "The writer (seller) can either hold on to the shares and hope the stock price rises back above the purchase price or sell the shares and take the loss. Any loss is offset by the premium received.",
           "An investor may write put options at a strike price where they see the shares being a good value and would be willing to buy at that price. When the price falls, and the buyer exercises their option, they get the stock at the price they want with the added benefit of receiving the option premium.",
           "A call option buyer has the right to buy assets at a lower price than the market when the stock's price rises",
@@ -77299,7 +77344,7 @@
           "فروش اختیار فروش همچنین به عنوان نوشتن یک قرارداد نیز شناخته می‌شود. نویسنده اختیار فروش معتقد است که قیمت سهام پایه طی مدت زمان اختیار ثابت می‌ماند یا افزایش می‌یابد و این باعث می‌شود که او نسبت به سهام خوش‌بین باشد. در اینجا، خریدار اختیار حق دارد فروشنده را مجبور به خرید سهام دارایی پایه به قیمت اعتصابی در زمان انقضا کند.",
           "اگر قیمت سهام پایه تا تاریخ انقضا بالاتر از قیمت اعتصابی بسته شود، اختیار فروش بی‌ارزش می‌شود. حداکثر سود نویسنده، حق بیمه است. اختیار اعمال نمی‌شود زیرا خریدار اختیار زمانی که قیمت بازار بالاتر است، سهام را به قیمت اعتصابی پایین‌تر نمی‌فروشد.",
           "اگر ارزش بازاری سهام به زیر قیمت اعتصابی اختیار معامله برسد، نویسنده موظف است که سهام پایه را به قیمت اعتصابی خریداری کند. به عبارت دیگر، اختیار فروش توسط خریداری که سهام خود را به قیمت اعتصابی می‌فروشد اعمال خواهد شد، زیرا این قیمت بالاتر از ارزش بازاری سهام است.",
-          "نویسنده اختیار فروش هنگام کاهش قیمت بازار به زیر قیمت اعتصابی در معرض از دست دادن قرار دارد. در این صورت فروشنده مجبور است در تاریخ انقضا سهام را به قیمت اعتصابی خریداری کند. میزان زیان نویسنده می‌تواند بسته به میزان کاهش ارزش سهام قابل توجه باشد.",
+          "زمانی که قیمت بازار به کمتر از قیمت معاملاتی کاهش می‌یابد، یک نویسنده اختیار فروش ریسک ضرر می‌کند. سپس فروشنده مجبور می شود سهام را با قیمت اعتصاب در زمان انقضا خریداری کند. ضرر نویسنده بسته به میزان کاهش ارزش سهام می تواند قابل توجه باشد.<span class=\"inline-citation-node\" data-cite=\"21\"></span>",
           "نویسنده (فروشنده) می‌تواند یا سهام را نگه دارد و امیدوار باشد که قیمت سهام دوباره بالاتر از قیمت خرید برگردد یا سهام را بفروشد و زیان را متحمل شود. هر گونه زیان با پرمیومی که دریافت شده جبران می‌شود.",
           "یک سرمایه‌گذار می‌تواند گزینه‌های فروش را به قیمتی که معتقد است سهام ارزش خوبی دارد و مایل به خرید در آن قیمت است، بنویسد. وقتی قیمت کاهش پیدا می‌کند و خریدار از اختیار خود استفاده می‌کند، سهام را به قیمتی که می‌خواهد به دست می‌آورد و علاوه بر آن از مزیت دریافت حق بیمه گزینه نیز بهره‌مند می‌شود.",
           "خریدار اختیار خرید این حق را دارد که دارایی‌ها را با قیمتی پایین‌تر از بازار خریداری کند زمانی که قیمت سهام افزایش می‌یابد",
@@ -77310,20 +77355,20 @@
           "خریداران اختیار معامله باید حق بیمه‌ای از قبل به نویسندگان اختیار معامله پرداخت کنند"
         ],
         "items_en": [
-          "A call option buyer has the right to buy assets at a lower price than the market when the stock's price rises",
-          "The put option buyer profits by selling stock at the strike price when the market price is below the strike price",
-          "Option sellers receive a premium fee from the buyer for writing an option",
-          "The put option seller may have to buy the asset at a higher strike price than they would normally pay if the market falls",
-          "The call option writer faces infinite risk if the stock's price rises and they're forced to buy shares at a high price",
-          "Option buyers must pay an upfront premium to the writers of the option"
+          "<p>A call option buyer has the right to buy assets at a lower price than the market when the stock's price rises</p>",
+          "<p>The put option buyer profits by selling stock at the strike price when the market price is below the strike price</p>",
+          "<p>Option sellers receive a premium fee from the buyer for writing an option</p>",
+          "<p>The put option seller may have to buy the asset at a higher strike price than they would normally pay if the market falls</p>",
+          "<p>The call option writer faces infinite risk if the stock's price rises and they're forced to buy shares at a high price</p>",
+          "<p>Option buyers must pay an upfront premium to the writers of the option</p>"
         ],
         "items_fa": [
-          "خریدار اختیار خرید این حق را دارد که دارایی‌ها را با قیمتی پایین‌تر از بازار خریداری کند زمانی که قیمت سهام افزایش می‌یابد",
-          "خریدار اختیار فروش با فروش سهام به قیمت اعتصابی هنگامی که قیمت بازار کمتر از قیمت اعتصابی است، سود می‌برد",
-          "فروشندگان اختیار به خاطر نوشتن یک قرارداد اختیار از خریدار حق‌الزحمه دریافت می‌کنند",
-          "فروشنده اختیار فروش ممکن است مجبور شود دارایی را با قیمت اعمال بالاتری از آنچه معمولاً در صورت سقوط بازار پرداخت می‌کرد، خریداری کند",
-          "نویسنده اختیار خرید با خطر بی‌نهایت مواجه می‌شود اگر قیمت سهام افزایش یابد و او مجبور شود سهام را به قیمت بالا خریداری کند",
-          "خریداران اختیار معامله باید حق بیمه‌ای از قبل به نویسندگان اختیار معامله پرداخت کنند"
+          "<p>خریدار اختیار خرید این حق را دارد که دارایی‌ها را با قیمتی پایین‌تر از بازار در هنگام افزایش قیمت سهام بخرد</p>",
+          "<p>خریدار اختیار فروش با فروش سهام به قیمت اعتصاب زمانی سود می برد که قیمت بازار کمتر از قیمت تعیین شده باشد</p>",
+          "<p>فروشندگان آپشن به ازای نوشتن یک آپشن، کارمزد ویژه ای از خریدار دریافت می کنند</p>",
+          "<p>فروشنده اختیار فروش ممکن است مجبور شود دارایی را با قیمتی بالاتر از قیمتی که معمولاً در صورت سقوط بازار می پردازد، بخرد</p>",
+          "<p>اگر قیمت سهام افزایش یابد و مجبور شوند سهام را با قیمت بالا بخرند، نویسنده اختیار خرید با خطر بی‌نهایتی مواجه می‌شود.",
+          "<p>خریداران گزینه باید حق بیمه اولیه را به نویسندگان گزینه پرداخت کنند</p>"
         ]
       },
       {
@@ -77345,8 +77390,60 @@
         "items_fa": []
       },
       {
+        "title_en": "What Are the Main Advantages of Options?",
+        "title_fa": "مزایای اصلی گزینه ها چیست؟",
+        "paragraphs_en": [
+          "Options can be very useful as a source of leverage and risk hedging.",
+          "For example, a bullish investor who wishes to invest $1,000 in a company could potentially earn a far greater return by purchasing $1,000 worth of call options on that firm, compared to buying $1,000 of that company’s shares. In this sense, the call options provide the investor with a way to leverage their position by increasing their buying power.",
+          "On the other hand, if that same investor already has exposure to that same company and wants to reduce that exposure, they could hedge their risk by selling put options against that company."
+        ],
+        "paragraphs_fa": [
+          "گزینه ها می توانند به عنوان منبع اهرم و پوشش ریسک بسیار مفید باشند.",
+          "برای مثال، یک سرمایه‌گذار صعودی که می‌خواهد ۱۰۰۰ دلار در یک شرکت سرمایه‌گذاری کند، می‌تواند با خرید ۱۰۰۰ دلار اختیار خرید در آن شرکت، در مقایسه با خرید ۱۰۰۰ دلار از سهام آن شرکت، بازدهی بسیار بیشتری کسب کند. از این نظر، گزینه های فراخوان راهی را در اختیار سرمایه گذار قرار می دهند تا با افزایش قدرت خرید، موقعیت خود را افزایش دهد.",
+          "از سوی دیگر، اگر همان سرمایه‌گذار قبلاً در معرض همان شرکت قرار داشته باشد و بخواهد آن قرار گرفتن در معرض آن را کاهش دهد، می‌تواند با فروش گزینه‌های فروش در برابر آن شرکت، ریسک خود را پوشش دهد."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "What Are the Main Disadvantages of Options?",
+        "title_fa": "معایب اصلی گزینه ها چیست؟",
+        "paragraphs_en": [
+          "The main disadvantage of options contracts is that they’re complex and difficult to price. This is why options are considered to be most suitable for experienced professional investors. In recent years, they’ve become increasingly popular among retail investors. Because of their capacity for outsized returns or losses, investors should make sure they fully understand the potential implications before entering into any options positions. Failing to do so can lead to devastating losses."
+        ],
+        "paragraphs_fa": [
+          "عیب اصلی قراردادهای اختیار معامله این است که پیچیده و سخت برای قیمت‌گذاری هستند. به همین دلیل، اختیار معامله معمولاً برای سرمایه‌گذاران حرفه‌ای و با تجربه مناسب‌تر در نظر گرفته می‌شود. در سال‌های اخیر، این قراردادها در میان سرمایه‌گذاران خرد نیز به طور فزاینده‌ای محبوب شده‌اند. به دلیل توانایی آن‌ها در ایجاد بازده یا ضررهای بزرگ، سرمایه‌گذاران باید مطمئن شوند که کاملاً پیامدهای بالقوه را قبل از ورود به هر موقعیت اختیار معامله درک کرده‌اند. عدم رعایت این نکته می‌تواند منجر به ضررهای ویرانگر شود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "How Do Options Differ From Futures?",
+        "title_fa": "چگونه گزینه ها با آینده متفاوت است؟",
+        "paragraphs_en": [
+          "Both options and futures are types of derivative contracts that are based on some underlying asset or security. The main difference is that options contracts grant the right, but not the obligation, to buy or sell the underlying in the future. <a class=\"internal-term-link\" data-slug=\"futurescontract\" href=\"#term/futurescontract\">Futures contracts</a>, meanwhile, come with an obligation to buy or sell the underlying."
+        ],
+        "paragraphs_fa": [
+          "هم اختیار معامله و هم قراردادهای آتی انواعی از قراردادهای مشتقه هستند که بر اساس برخی دارایی ها یا اوراق بهادار پایه گذاری شده اند. تفاوت اصلی این است که قراردادهای اختیار معامله، حق خرید یا فروش کالای اساسی را در آینده، اما نه تعهد، اعطا می کنند. در همین حال، <a class=\"internal-term-link\" data-slug=\"futurescontract\" href=\"#term/futurescontract\">قراردادهای آتی</a>، با تعهد به خرید یا فروش موارد اساسی همراه است."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Is an Options Contract an Asset?",
+        "title_fa": "آیا قرارداد اختیار معامله یک دارایی است؟",
+        "paragraphs_en": [
+          "An options contract is a derivatives security, which is a type of asset."
+        ],
+        "paragraphs_fa": [
+          "قرارداد اختیار معامله یک اوراق بهادار مشتقه است، که نوعی دارایی است."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
         "title_en": "The Bottom Line",
-        "title_fa": "جمع‌بندی و نتیجه‌گیری نهایی",
+        "title_fa": "نتیجه‌گیری نهایی",
         "paragraphs_en": [
           "Options are a type of derivative product that allow investors to speculate on or hedge against the volatility of an underlying stock. Options are divided into call options, which allow buyers to profit if the price of the stock increases, and put options, in which the buyer profits if the price of the stock declines. Investors can also short an option by selling it to other investors. Shorting (selling) a call option would therefore mean profiting if the underlying stock declines, while selling a put option would mean profiting if the stock increases in value."
         ],
@@ -77355,27 +77452,10 @@
         ],
         "items_en": [],
         "items_fa": []
-      },
-      {
-        "title_en": "Frequently Asked Questions",
-        "title_fa": "پرسش‌های متداول (FAQ)",
-        "paragraphs_en": [
-          "Options can be very useful as a source of leverage and risk hedging. For example, a bullish investor who wishes to invest $1,000 in a company could potentially earn a far greater return by purchasing $1,000 worth of call options on that firm, compared to buying $1,000 of that company’s shares. In this sense, the call options provide the investor with a way to leverage their position by increasing their buying power. On the other hand, if that same investor already has exposure to that same company and wants to reduce that exposure, they could hedge their risk by selling put options against that company.",
-          "The main disadvantage of options contracts is that they’re complex and difficult to price. This is why options are considered to be most suitable for experienced professional investors. In recent years, they’ve become increasingly popular among retail investors. Because of their capacity for outsized returns or losses, investors should make sure they fully understand the potential implications before entering into any options positions. Failing to do so can lead to devastating losses.",
-          "Both options and futures are types of derivative contracts that are based on some underlying asset or security. The main difference is that options contracts grant the right, but not the obligation, to buy or sell the underlying in the future. Futures contracts, meanwhile, come with an obligation to buy or sell the underlying.",
-          "An options contract is a derivatives security, which is a type of asset."
-        ],
-        "paragraphs_fa": [
-          "اختیارات می‌توانند به عنوان یک منبع اهرم و پوشش ریسک بسیار مفید باشند. برای مثال، یک سرمایه‌گذار صعودی که می‌خواهد ۱۰۰۰ دلار در یک شرکت سرمایه‌گذاری کند، می‌تواند با خرید اختیارات خرید به ارزش ۱۰۰۰ دلار از آن شرکت، سود بسیار بیشتری نسبت به خرید ۱۰۰۰ دلار از سهام آن شرکت کسب کند. از این نظر، اختیارات خرید به سرمایه‌گذار روشی برای اهرم‌سازی موقعیت خود با افزایش قدرت خریدش ارائه می‌دهند. از طرف دیگر، اگر همان سرمایه‌گذار قبلاً در معرض آن شرکت باشد و بخواهد آن قرار گرفتن در معرض را کاهش دهد، می‌تواند با فروش اختیارات فروش علیه آن شرکت، ریسک خود را پوشش دهد.",
-          "عیب اصلی قراردادهای اختیار معامله این است که پیچیده و سخت برای قیمت‌گذاری هستند. به همین دلیل، اختیار معامله معمولاً برای سرمایه‌گذاران حرفه‌ای و با تجربه مناسب‌تر در نظر گرفته می‌شود. در سال‌های اخیر، این قراردادها در میان سرمایه‌گذاران خرد نیز به طور فزاینده‌ای محبوب شده‌اند. به دلیل توانایی آن‌ها در ایجاد بازده یا ضررهای بزرگ، سرمایه‌گذاران باید مطمئن شوند که کاملاً پیامدهای بالقوه را قبل از ورود به هر موقعیت اختیار معامله درک کرده‌اند. عدم رعایت این نکته می‌تواند منجر به ضررهای ویرانگر شود.",
-          "هر دو قرارداد اختیار معامله و قراردادهای آتی نوعی از قراردادهای مشتقه هستند که بر اساس یک دارایی یا اوراق بهادار پایه بنا شده‌اند. تفاوت اصلی این است که قراردادهای اختیار معامله حق خرید یا فروش دارایی پایه در آینده را می‌دهند، اما الزام آور نیستند. در حالی که قراردادهای آتی همراه با تعهد برای خرید یا فروش دارایی پایه هستند.",
-          "قرارداد اختیار معامله یک اوراق بهادار مشتقه است، که نوعی دارایی است."
-        ],
-        "items_en": [],
-        "items_fa": []
       }
     ],
-    "deep_enriched": true
+    "deep_enriched": true,
+    "id": 371
   },
   {
     "id": 372,
@@ -114627,7 +114707,7 @@
           "Popular charting packages typically use a formula for closely approximating VWAP, such as:<span class=”katex”><span class=”katex-mathml”><math xmlns=”http://www.w3.org/1998/Math/MathML”><semantics><mtable rowspacing=”0.25em” columnalign=”right left” columnspacing=”0em”><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mrow><mtext mathvariant=”bold”>VWAP</mtext><mtext> </mtext></mrow><mo>=</mo><mfrac><mrow><mrow><mtext mathvariant=”bold”>Cumulative</mtext><mtext> </mtext><mtext mathvariant=”bold”>Typical</mtext><mtext> </mtext><mtext mathvariant=”bold”>Price</mtext><mtext> </mtext></mrow><mo>×</mo><mrow><mtext> </mtext><mtext mathvariant=”bold”>Volume</mtext></mrow></mrow><mrow><mtext mathvariant=”bold”>Cumulative</mtext><mtext> </mtext><mtext mathvariant=”bold”>Volume</mtext></mrow></mfrac></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mtext mathvariant=”bold”>where:</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mtext>Typical Price</mtext><mo>=</mo><mtext>High price</mtext><mo>+</mo><mtext>low price</mtext><mo>+</mo><mtext>closing price/3</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mtext>Cumulative</mtext><mo>=</mo><mtext>Total trades since the trading session opened</mtext></mrow></mstyle></mtd></mtr></mtable><annotation encoding=”application/x-tex”>\\begin{aligned}&amp;\\textbf{VWAP }\\mathbf{= }\\frac{\\textbf{Cumulative Typical Price }\\mathbf{\\times}\\textbf{ Volume}}{\\textbf{Cumulative Volume}}\\\\&amp;\\textbf{where:}\\\\&amp;\\text{Typical Price}=\\text{High price}+\\text{low price}+\\text{closing price/3}\\\\&amp;\\text{Cumulative}=\\text{Total trades since the trading session opened}\\end{aligned}</annotation></semantics></math></span><span class=”katex-html” aria-hidden=”true”><span class=”base”><span class=”strut” style=”height:6.5574em;vertical-align:-3.0287em;”></span><span class=”mord”><span class=”mtable”><span class=”col-align-r”><span class=”vlist-t vlist-t2”><span class=”vlist-r”><span class=”vlist” style=”height:3.5287em;”><span style=”top:-5.5287em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span><span style=”top:-3.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span><span style=”top:-2.2027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span><span style=”top:-0.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span></span><span class=”vlist-s”>​</span></span><span class=”vlist-r”><span class=”vlist” style=”height:3.0287em;”><span></span></span></span></span></span><span class=”col-align-l”><span class=”vlist-t vlist-t2”><span class=”vlist-r”><span class=”vlist” style=”height:3.5287em;”><span style=”top:-5.5287em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord textbf”>VWAP </span></span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mrel”>=</span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mord”><span class=”mopen nulldelimiter”></span><span class=”mfrac”><span class=”vlist-t vlist-t2”><span class=”vlist-r”><span class=”vlist” style=”height:1.3714em;”><span style=”top:-2.314em;”><span class=”pstrut” style=”height:3em;”></span><span class=”mord”><span class=”mord text”><span class=”mord textbf”>Cumulative Volume</span></span></span></span><span style=”top:-3.23em;”><span class=”pstrut” style=”height:3em;”></span><span class=”frac-line” style=”border-bottom-width:0.04em;”></span></span><span style=”top:-3.677em;”><span class=”pstrut” style=”height:3em;”></span><span class=”mord”><span class=”mord text”><span class=”mord textbf”>Cumulative Typical Price </span></span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mbin”>×</span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mord text”><span class=”mord textbf”> Volume</span></span></span></span></span><span class=”vlist-s”>​</span></span><span class=”vlist-r”><span class=”vlist” style=”height:0.686em;”><span></span></span></span></span></span><span class=”mclose nulldelimiter”></span></span></span></span><span style=”top:-3.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord textbf”>where:</span></span></span></span><span style=”top:-2.2027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord”>Typical Price</span></span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mrel”>=</span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mord text”><span class=”mord”>High price</span></span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mbin”>+</span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mord text”><span class=”mord”>low price</span></span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mbin”>+</span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mord text”><span class=”mord”>closing price/3</span></span></span></span><span style=”top:-0.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord”>Cumulative</span></span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mrel”>=</span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mord text”><span class=”mord”>Total trades since the trading session opened</span></span></span></span></span><span class=”vlist-s”>​</span></span><span class=”vlist-r”><span class=”vlist” style=”height:3.0287em;”><span></span></span></span></span></span></span></span></span></span></span>"
         ],
         "paragraphs_fa": [
-          "Popular charting packages typically use a formula for closely approximating VWAP, such as:<span class=”katex”><span class=”katex-mathml”><math xmlns=”http://www.w3.org/1998/Math/MathML”><semantics><mtable rowspacing=”0.25em” columnalign=”right left” columnspacing=”0em”><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mrow><mtext mathvariant=”bold”>VWAP</mtext><mtext> </mtext></mrow><mo>=</mo><mfrac><mrow><mrow><mtext mathvariant=”bold”>Cumulative</mtext><mtext> </mtext><mtext mathvariant=”bold”>Typical</mtext><mtext> </mtext><mtext mathvariant=”bold”>Price</mtext><mtext> </mtext></mrow><mo>×</mo><mrow><mtext> </mtext><mtext mathvariant=”bold”>Volume</mtext></mrow></mrow><mrow><mtext mathvariant=”bold”>Cumulative</mtext><mtext> </mtext><mtext mathvariant=”bold”>Volume</mtext></mrow></mfrac></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mtext mathvariant=”bold”>where:</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mtext>Typical Price</mtext><mo>=</mo><mtext>High price</mtext><mo>+</mo><mtext>low price</mtext><mo>+</mo><mtext>closing price/3</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mtext>Cumulative</mtext><mo>=</mo><mtext>Total trades since the trading session opened</mtext></mrow></mstyle></mtd></mtr></mtable><annotation encoding=”application/x-tex”>\\begin{aligned}&amp;\\textbf{VWAP }\\mathbf{= }\\frac{\\textbf{Cumulative Typical Price }\\mathbf{\\times}\\textbf{ Volume}}{\\textbf{Cumulative Volume}}\\\\&amp;\\textbf{where:}\\\\&amp;\\text{Typical Price}=\\text{High price}+\\text{low price}+\\text{closing price/3}\\\\&amp;\\text{Cumulative}=\\text{Total trades since the trading session opened}\\end{aligned}</annotation></semantics></math></span><span class=”katex-html” aria-hidden=”true”><span class=”base”><span class=”strut” style=”height:6.5574em;vertical-align:-3.0287em;”></span><span class=”mord”><span class=”mtable”><span class=”col-align-r”><span class=”vlist-t vlist-t2”><span class=”vlist-r”><span class=”vlist” style=”height:3.5287em;”><span style=”top:-5.5287em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span><span style=”top:-3.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span><span style=”top:-2.2027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span><span style=”top:-0.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span></span><span class=”vlist-s”>​</span></span><span class=”vlist-r”><span class=”vlist” style=”height:3.0287em;”><span></span></span></span></span></span><span class=”col-align-l”><span class=”vlist-t vlist-t2”><span class=”vlist-r”><span class=”vlist” style=”height:3.5287em;”><span style=”top:-5.5287em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord textbf”>VWAP </span></span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mrel”>=</span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mord”><span class=”mopen nulldelimiter”></span><span class=”mfrac”><span class=”vlist-t vlist-t2”><span class=”vlist-r”><span class=”vlist” style=”height:1.3714em;”><span style=”top:-2.314em;”><span class=”pstrut” style=”height:3em;”></span><span class=”mord”><span class=”mord text”><span class=”mord textbf”>Cumulative Volume</span></span></span></span><span style=”top:-3.23em;”><span class=”pstrut” style=”height:3em;”></span><span class=”frac-line” style=”border-bottom-width:0.04em;”></span></span><span style=”top:-3.677em;”><span class=”pstrut” style=”height:3em;”></span><span class=”mord”><span class=”mord text”><span class=”mord textbf”>Cumulative Typical Price </span></span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mbin”>×</span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mord text”><span class=”mord textbf”> Volume</span></span></span></span></span><span class=”vlist-s”>​</span></span><span class=”vlist-r”><span class=”vlist” style=”height:0.686em;”><span></span></span></span></span></span><span class=”mclose nulldelimiter”></span></span></span></span><span style=”top:-3.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord textbf”>where:</span></span></span></span><span style=”top:-2.2027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord”>Typical Price</span></span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mrel”>=</span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mord text”><span class=”mord”>High price</span></span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mbin”>+</span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mord text”><span class=”mord”>low price</span></span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mbin”>+</span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mord text”><span class=”mord”>closing price/3</span></span></span></span><span style=”top:-0.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord”>Cumulative</span></span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mrel”>=</span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mord text”><span class=”mord”>Total trades since the trading session opened</span></span></span></span></span><span class=”vlist-s”>​</span></span><span class=”vlist-r”><span class=”vlist” style=”height:3.0287em;”><span></span></span></span></span></span></span></span></span></span></span>"
+          "نرم‌افزارهای محبوب نموداری معمولاً از فرمولی برای تقریب دقیق VWAP استفاده می‌کنند، مانند:<span class=”katex”><span class=”katex-mathml”><math xmlns=”http://www.w3.org/1998/Math/MathML”><semantics><mtable rowspacing=”0.25em” columnalign=”right left” columnspacing=”0em”><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mrow><mtext mathvariant=”bold”>VWAP</mtext><mtext> </mtext></mrow><mo>=</mo><mfrac><mrow><mrow><mtext mathvariant=”bold”>Cumulative</mtext><mtext> </mtext><mtext mathvariant=”bold”>Typical</mtext><mtext> </mtext><mtext mathvariant=”bold”>Price</mtext><mtext> </mtext></mrow><mo>×</mo><mrow><mtext> </mtext><mtext mathvariant=”bold”>Volume</mtext></mrow></mrow><mrow><mtext mathvariant=”bold”>Cumulative</mtext><mtext> </mtext><mtext mathvariant=”bold”>Volume</mtext></mrow></mfrac></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mtext mathvariant=”bold”>where:</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mtext>Typical Price</mtext><mo>=</mo><mtext>High price</mtext><mo>+</mo><mtext>low price</mtext><mo>+</mo><mtext>closing price/3</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel=”0” displaystyle=”true”><mrow><mrow></mrow><mtext>Cumulative</mtext><mo>=</mo><mtext>Total trades since the trading session opened</mtext></mrow></mstyle></mtd></mtr></mtable><annotation encoding=”application/x-tex”>\\begin{aligned}&amp;\\textbf{VWAP }\\mathbf{= }\\frac{\\textbf{Cumulative Typical Price }\\mathbf{\\times}\\textbf{ Volume}}{\\textbf{Cumulative Volume}}\\\\&amp;\\textbf{where:}\\\\&amp;\\text{Typical Price}=\\text{High price}+\\text{low price}+\\text{closing price/3}\\\\&amp;\\text{Cumulative}=\\text{Total trades since the trading session opened}\\end{aligned}</annotation></semantics></math></span><span class=”katex-html” aria-hidden=”true”><span class=”base”><span class=”strut” style=”height:6.5574em;vertical-align:-3.0287em;”></span><span class=”mord”><span class=”mtable”><span class=”col-align-r”><span class=”vlist-t vlist-t2”><span class=”vlist-r”><span class=”vlist” style=”height:3.5287em;”><span style=”top:-5.5287em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span><span style=”top:-3.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span><span style=”top:-2.2027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span><span style=”top:-0.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”></span></span></span><span class=”vlist-s”>​</span></span><span class=”vlist-r”><span class=”vlist” style=”height:3.0287em;”><span></span></span></span></span></span><span class=”col-align-l”><span class=”vlist-t vlist-t2”><span class=”vlist-r”><span class=”vlist” style=”height:3.5287em;”><span style=”top:-5.5287em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord textbf”>VWAP </span></span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mrel”>=</span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mord”><span class=”mopen nulldelimiter”></span><span class=”mfrac”><span class=”vlist-t vlist-t2”><span class=”vlist-r”><span class=”vlist” style=”height:1.3714em;”><span style=”top:-2.314em;”><span class=”pstrut” style=”height:3em;”></span><span class=”mord”><span class=”mord text”><span class=”mord textbf”>Cumulative Volume</span></span></span></span><span style=”top:-3.23em;”><span class=”pstrut” style=”height:3em;”></span><span class=”frac-line” style=”border-bottom-width:0.04em;”></span></span><span style=”top:-3.677em;”><span class=”pstrut” style=”height:3em;”></span><span class=”mord”><span class=”mord text”><span class=”mord textbf”>Cumulative Typical Price </span></span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mbin”>×</span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mord text”><span class=”mord textbf”> Volume</span></span></span></span></span><span class=”vlist-s”>​</span></span><span class=”vlist-r”><span class=”vlist” style=”height:0.686em;”><span></span></span></span></span></span><span class=”mclose nulldelimiter”></span></span></span></span><span style=”top:-3.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord textbf”>where:</span></span></span></span><span style=”top:-2.2027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord”>Typical Price</span></span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mrel”>=</span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mord text”><span class=”mord”>High price</span></span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mbin”>+</span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mord text”><span class=”mord”>low price</span></span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mbin”>+</span><span class=”mspace” style=”margin-right:0.2222em;”></span><span class=”mord text”><span class=”mord”>closing price/3</span></span></span></span><span style=”top:-0.7027em;”><span class=”pstrut” style=”height:3.3714em;”></span><span class=”mord”><span class=”mord”></span><span class=”mord text”><span class=”mord”>Cumulative</span></span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mrel”>=</span><span class=”mspace” style=”margin-right:0.2778em;”></span><span class=”mord text”><span class=”mord”>Total trades since the trading session opened</span></span></span></span></span><span class=”vlist-s”>​</span></span><span class=”vlist-r”><span class=”vlist” style=”height:3.0287em;”><span></span></span></span></span></span></span></span></span></span></span>"
         ],
         "items_en": [],
         "items_fa": []
@@ -126588,5 +126668,255 @@
       }
     ],
     "deep_enriched": true
+  },
+  {
+    "letter": "F",
+    "category": "ابزارهای مشتقه و آپشن",
+    "term_en": "Futures Contract",
+    "term_fa": "قرارداد آتی (Futures Contract)",
+    "slug": "futurescontract",
+    "url": "https://www.investopedia.com/terms/f/futurescontract.asp",
+    "definition_en": "Futures contracts are standardized legal agreements that mandate the purchase or sale of a specific commodity, asset, or security at a predetermined price on a specified future date. These contracts facilitate trading on <a class=\"internal-term-link\" data-slug=\"futuresexchange\" href=\"#term/futuresexchange\">futures exchanges</a> by ensuring standardized terms for quality and quantity, thus enabling efficient market operations. Buyers commit to purchasing the underlying asset at contract expiration, while sellers commit to delivering it. By understanding futures contracts, market participants can hedge against price fluctuations or speculate on market movements, making these contracts vital tools for both risk management and investment strategies.\n\nFutures are financial contracts requiring parties to trade an asset at a specified future date and price.<span class=\"inline-citation-node\" data-cite=\"5\"></span> The buyer must buy, and the seller must sell the <a class=\"internal-term-link\" data-slug=\"underlying-asset\" href=\"#term/underlying-asset\">underlying asset</a> at the agreed price, regardless of its market price at expiration.",
+    "definition_fa": "قراردادهای آتی، قراردادهای قانونی استاندارد شده ای هستند که خرید یا فروش یک کالا، دارایی یا اوراق بهادار خاص را با قیمت از پیش تعیین شده در یک تاریخ مشخص در آینده الزامی می کنند. این قراردادها تجارت در <a class=\"internal-term-link\" data-slug=\"futuresexchange\" href=\"#term/futuresexchange\">مبادلات آتی</a> را با اطمینان از شرایط استاندارد شده برای کیفیت و کمیت، تسهیل می‌کنند، بنابراین عملیات بازار کارآمد را ممکن می‌سازند. خریداران متعهد به خرید دارایی پایه در انقضای قرارداد هستند، در حالی که فروشندگان متعهد به تحویل آن هستند. با درک قراردادهای آتی، فعالان بازار می توانند در برابر نوسانات قیمت محافظت کنند یا در مورد حرکات بازار حدس و گمان کنند و این قراردادها را به ابزارهای حیاتی برای مدیریت ریسک و استراتژی های سرمایه گذاری تبدیل می کند. \n\nقراردادهای آتی، قراردادهای مالی هستند که طرفین را ملزم می‌کند تا دارایی را در تاریخ و قیمت مشخصی در آینده معامله کنند.<span class=\"inline-citation-node\" data-cite=\"5\"></span> خریدار باید خرید کند، و فروشنده باید <a class=\"internal-term-link\" data-slug=\"underlying-asset\"<span class=\"inline-citation-node\"{101}href: قیمت توافقی، صرف نظر از قیمت بازار آن در انقضا.",
+    "takeaways_en": [
+      "Futures contracts are standardized agreements used to buy or sell an underlying asset at a predetermined price on a future date, traded on regulated exchanges.",
+      "These contracts serve two main purposes: hedging, where participants secure prices against market fluctuations, and speculation, where traders bet on future price movements for profit.",
+      "Unlike forward contracts, which are privately negotiated and customizable, futures contracts offer transparency through standardized terms and are traded on exchanges, ensuring a high level of regulation and oversight.",
+      "The mechanics of futures trading can lead to cash settlements or physical delivery at expiration, adding another layer of consideration for participants in these markets.",
+      "Trading in futures requires a margin account and usually involves complex risk management strategies, appealing to both retail traders and institutional investors."
+    ],
+    "takeaways_fa": [
+      "قراردادهای آتی قراردادهای استاندارد شده ای هستند که برای خرید یا فروش یک دارایی پایه به قیمت از پیش تعیین شده در تاریخ آتی استفاده می شوند و در بورس های تنظیم شده معامله می شوند.",
+      "این قراردادها دو هدف اصلی را دنبال می‌کنند: پوشش ریسک، جایی که شرکت‌کنندگان قیمت‌ها را در برابر نوسانات بازار تضمین می‌کنند، و سفته‌بازی، جایی که معامله‌گران برای سود بر روی حرکت‌های آتی قیمت شرط‌بندی می‌کنند.",
+      "برخلاف قراردادهای آتی که به صورت خصوصی مذاکره می شوند و قابل تنظیم هستند، قراردادهای آتی شفافیت را از طریق شرایط استاندارد ارائه می دهند و در مبادلات معامله می شوند و سطح بالایی از مقررات و نظارت را تضمین می کنند.",
+      "مکانیزم معاملات آتی می تواند منجر به تسویه نقدی یا تحویل فیزیکی در انقضا شود و لایه دیگری از توجه را به شرکت کنندگان در این بازارها اضافه کند.",
+      "معامله در معاملات آتی نیاز به یک حساب حاشیه دارد و معمولاً شامل استراتژی های مدیریت ریسک پیچیده است که هم برای معامله گران خرده فروشی و هم برای سرمایه گذاران نهادی جذاب است."
+    ],
+    "bottom_line_en": "Futures contracts play an important role in the smooth operations of the commodities market. They allow buyers and sellers to lock in prices in advance and help farmers, miners, manufacturers, and other market participants to work without having to worry about daily changes in the market. The prices of futures are affected by interest rate changes and dividend payments. <br/>",
+    "bottom_line_fa": "قراردادهای آتی نقش مهمی در عملکرد روان بازار کالاها دارند. آنها به خریداران و فروشندگان اجازه می دهند تا قیمت ها را از قبل قفل کنند و به کشاورزان، معدنچیان، تولیدکنندگان و سایر فعالان بازار کمک می کنند تا بدون نگرانی در مورد تغییرات روزانه در بازار کار کنند. قیمت معاملات آتی متاثر از تغییرات نرخ بهره و پرداخت سود سهام است. <br/>",
+    "sections": [
+      {
+        "title_en": "What Is a Futures Contract?",
+        "title_fa": "قرارداد آتی چیست؟",
+        "paragraphs_en": [
+          "Futures contracts are standardized legal agreements that mandate the purchase or sale of a specific commodity, asset, or security at a predetermined price on a specified future date. These contracts facilitate trading on futures exchanges by ensuring standardized terms for quality and quantity, thus enabling efficient market operations. Buyers commit to purchasing the underlying asset at contract expiration, while sellers commit to delivering it. By understanding futures contracts, market participants can hedge against price fluctuations or speculate on market movements, making these contracts vital tools for both risk management and investment strategies."
+        ],
+        "paragraphs_fa": [
+          "قراردادهای آتی، قراردادهای قانونی استاندارد شده ای هستند که خرید یا فروش یک کالا، دارایی یا اوراق بهادار خاص را با قیمت از پیش تعیین شده در یک تاریخ مشخص در آینده الزامی می کنند. این قراردادها تجارت در بورس های آتی را با اطمینان از شرایط استاندارد شده برای کیفیت و کمیت تسهیل می کند و در نتیجه امکان عملیات بازار کارآمد را فراهم می کند. خریداران متعهد به خرید دارایی پایه در انقضای قرارداد هستند، در حالی که فروشندگان متعهد به تحویل آن هستند. با درک قراردادهای آتی، فعالان بازار می توانند در برابر نوسانات قیمت محافظت کنند یا در مورد حرکات بازار حدس و گمان کنند و این قراردادها را به ابزارهای حیاتی برای مدیریت ریسک و استراتژی های سرمایه گذاری تبدیل می کند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Diving Deep Into Futures Contracts",
+        "title_fa": "غواصی عمیق در قراردادهای آتی",
+        "paragraphs_en": [
+          "Futures are financial contracts requiring parties to trade an asset at a specified future date and price.<span class=\"inline-citation-node\" data-cite=\"5\"></span> The buyer must buy, and the seller must sell the underlying asset at the agreed price, regardless of its market price at expiration.",
+          "Underlying assets include physical commodities or other financial instruments. Futures contracts specify the quantity of the asset and are standardized for trading on a futures exchange. Futures can be used for hedging or trade speculation.",
+          "“Futures contract” and “<a class=\"internal-term-link\" data-slug=\"futures\" href=\"#term/futures\">futures</a>“ mean the same thing. For example, you might hear somebody say they bought oil futures, which means the same thing as an oil futures contract. “Futures contract” usually refers to a specific type, like oil, gold, bonds, or S&P 500 index futures. Futures contracts are also one of the most direct ways to invest in oil. The term “futures” is more general, and is often used to refer to the whole market, such as, “They’re a futures trader.”",
+          "Futures contracts are standardized, whereas forward contracts are not. <a class=\"internal-term-link\" data-slug=\"forwardcontract\" href=\"#term/forwardcontract\">Forwards</a> are similar types of agreements that lock in a future price in the present, but forwards are traded <a class=\"internal-term-link\" data-slug=\"otc\" href=\"#term/otc\">over-the-counter</a> (OTC) and have customizable terms that are arrived at between the counterparties. Futures contracts, on the other hand, will each have the same terms regardless of who is the counterparty."
+        ],
+        "paragraphs_fa": [
+          "قراردادهای آتی، قراردادهای مالی هستند که طرفین را ملزم می‌کند یک دارایی را در تاریخ و قیمت مشخصی در آینده معامله کنند.<span class=\"inline-citation-node\" data-cite=\"5\"></span> خریدار باید بدون توجه به قیمت بازار آن در زمان انقضا، خرید کند، و فروشنده باید دارایی پایه را به قیمت توافق شده بفروشد.",
+          "دارایی های اساسی شامل کالاهای فیزیکی یا سایر ابزارهای مالی است. قراردادهای آتی مقدار دارایی را مشخص می کنند و برای معامله در بورس آتی استاندارد می شوند. از معاملات آتی می توان برای پوشش ریسک یا سفته بازی استفاده کرد.",
+          "\"قرارداد آتی\" و \"<a class=\"internal-term-link\" data-slug=\"futures\" href=\"#term/futures\">آینده</a>\" معنی یکسانی دارند. به عنوان مثال، ممکن است از کسی بشنوید که می گوید قراردادهای آتی نفت خریده است، که به معنای همان قرارداد آتی نفت است. \"قرارداد آتی\" معمولاً به نوع خاصی مانند نفت، طلا، اوراق قرضه یا معاملات آتی شاخص S&P 500 اشاره دارد. قراردادهای آتی نیز یکی از مستقیم ترین راه ها برای سرمایه گذاری در نفت است. اصطلاح \"آتی\" عمومی تر است و اغلب برای اشاره به کل بازار استفاده می شود، مانند \"آنها معامله گر آتی هستند.\"",
+          "قراردادهای آتی استاندارد هستند، در حالی که قراردادهای آتی استاندارد نیستند. <a class=\"internal-term-link\" data-slug=\"forwardcontract\" href=\"#term/forwardcontract\"> فوروارد</a> انواع مشابهی از قراردادها هستند که قیمت آتی را در زمان حال قفل می‌کنند، اما معاملات آتی معامله می‌شوند <a class=\"internal-term-link\" data-slug=\"otc\" href=\"#term/otc\"</a>شرایط سفارشی (OTC) که بین شرایط سفارشی (OTC) رسیده است. طرف مقابل از سوی دیگر، قراردادهای آتی، صرف نظر از اینکه طرف مقابل چه کسی باشد، هر یک دارای شرایط یکسانی خواهند بود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Practical Uses of Futures Contracts",
+        "title_fa": "استفاده عملی از قراردادهای آتی",
+        "paragraphs_en": [
+          "Futures contracts are used by two categories of market participants: hedgers and speculators."
+        ],
+        "paragraphs_fa": [
+          "قراردادهای آتی توسط دو دسته از فعالان بازار استفاده می شود: تامین کنندگان و سفته بازان."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Hedgers",
+        "title_fa": "پرچین",
+        "paragraphs_en": [
+          "Producers or buyers use futures to <a class=\"internal-term-link\" data-slug=\"exchangeoffuturesforcash\" href=\"#term/exchangeoffuturesforcash\">lock in the price</a> at which a commodity is sold or bought. They use futures contracts to ensure that they have a buyer and a satisfactory price, hedging against any changes in the market.<span class=\"inline-citation-node\" data-cite=\"6\"></span>",
+          "An oil producer needs to sell its oil. They may use futures contracts to lock in a price they will sell at, and then deliver the oil to the buyer when the futures contract expires. Similarly, a manufacturing company may need oil for making widgets. Since they like to plan ahead and always have oil coming in each month, they too may use futures contracts. This way they know in advance the price they will pay for oil (the futures contract price) and they know they will be taking delivery of the oil once the contract expires."
+        ],
+        "paragraphs_fa": [
+          "تولیدکنندگان یا خریداران از قراردادهای آتی برای <a class=\"internal-term-link\" data-slug=\"exchangeoffuturesforcash\" href=\"#term/exchangeoffuturesforcash\">قیمت</a> استفاده می‌کنند که یک کالا در آن فروخته یا خریداری می‌شود. آنها از قراردادهای آتی استفاده می کنند تا اطمینان حاصل کنند که خریدار و قیمت رضایت بخشی دارند و در مقابل هرگونه تغییر در بازار محافظت می کنند.<span class=\"inline-citation-node\" data-cite=\"6\"></span>",
+          "یک تولیدکننده نفت باید نفت خود را بفروشد. آنها ممکن است از قراردادهای آتی برای قفل کردن قیمتی که به آن می فروشند استفاده کنند و پس از اتمام قرارداد آتی نفت را به خریدار تحویل دهند. به طور مشابه، یک شرکت تولیدی ممکن است برای ساخت ویجت ها به روغن نیاز داشته باشد. از آنجایی که آنها دوست دارند از قبل برنامه ریزی کنند و همیشه نفت در هر ماه عرضه می شود، ممکن است از قراردادهای آتی نیز استفاده کنند. به این ترتیب آنها از قبل قیمتی را که برای نفت می پردازند (قیمت قرارداد آتی) می دانند و می دانند که پس از پایان قرارداد، نفت را تحویل خواهند گرفت."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Speculators",
+        "title_fa": "دلالان",
+        "paragraphs_en": [
+          "Since many commodity prices tend to move in predictable patterns, it is possible to make a profit by trading futures, even if one does not have a direct interest in the underlying commodity. Traders and fund managers use futures to speculate on an asset’s price.<span class=\"inline-citation-node\" data-cite=\"7\"></span>",
+          "A trader might buy grain futures if they believe the grain price will rise before delivery. Any unexpected changes to the weather or growing conditions may cause the futures price to rise or drop."
+        ],
+        "paragraphs_fa": [
+          "از آنجایی که بسیاری از قیمت‌های کالاها تمایل به حرکت در الگوهای قابل پیش‌بینی دارند، می‌توان با معامله در معاملات آتی سود به دست آورد، حتی اگر کسی علاقه مستقیمی به کالای اساسی نداشته باشد. معامله گران و مدیران صندوق از معاملات آتی برای حدس و گمان در مورد قیمت دارایی استفاده می کنند.<span class=\"inline-citation-node\" data-cite=\"7\"></span>",
+          "اگر یک معامله گر معتقد باشد که قیمت غلات قبل از تحویل افزایش می یابد، ممکن است معاملات آتی غلات را خریداری کند. هر گونه تغییر غیرمنتظره در آب و هوا یا شرایط رو به رشد ممکن است باعث افزایش یا کاهش قیمت آتی شود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Exploring Different Types of Futures Contracts",
+        "title_fa": "بررسی انواع مختلف قراردادهای آتی",
+        "paragraphs_en": [
+          "Futures can set prices on any commodity or asset with a sufficiently large market. Some of the most frequently traded types of futures are outlined below:"
+        ],
+        "paragraphs_fa": [
+          "معاملات آتی می توانند قیمت هر کالا یا دارایی را با بازار به اندازه کافی بزرگ تعیین کنند. برخی از متداول ترین انواع معاملات آتی به شرح زیر است:"
+        ],
+        "items_en": [
+          "<strong>Agricultural Futures: </strong>These were the original futures contracts available at markets like the Chicago Mercantile Exchange. In addition to grain futures, there are also tradable futures contracts in fibers (such as cotton), lumber, milk, coffee, sugar, and even livestock.",
+          "<strong>Energy Futures: </strong>These provide exposure to the most common fuels and energy products, such as crude oil and natural gas.",
+          "<strong>Metal Futures: </strong>These contracts trade in industrial metals, such as gold, steel, and copper.",
+          "<strong>Currency Futures: </strong>These contracts provide exposure to changes in the exchange rates and interest rates of different national currencies.",
+          "<strong>Financial Futures: </strong>Contracts that trade in the future value of a security or index. For example, there are futures for the S&P 500 and Nasdaq indexes. There are also futures for debt products, such as U.S. Treasury bonds and <a class=\"internal-term-link\" data-slug=\"boblfutures\" href=\"#term/boblfutures\">German Bundesobligation (BOBL) bonds</a>.<span class=\"inline-citation-node\" data-cite=\"3\"></span>"
+        ],
+        "items_fa": [
+          "<strong>آینده کشاورزی: ​​</strong>اینها قراردادهای آتی اولیه موجود در بازارهایی مانند بورس کالای شیکاگو بودند. علاوه بر آتی غلات، قراردادهای آتی قابل معامله در الیاف (مانند پنبه)، الوار، شیر، قهوه، شکر و حتی دام نیز وجود دارد.",
+          "<strong>آینده انرژی: </strong>اینها قرار گرفتن در معرض رایج ترین سوخت ها و محصولات انرژی، مانند نفت خام و گاز طبیعی را فراهم می کنند.",
+          "<strong>آینده فلزات: </strong>این قراردادها در زمینه فلزات صنعتی مانند طلا، فولاد و مس تجارت می کنند.",
+          "<strong>آتی ارز: </strong>این قراردادها در معرض تغییرات نرخ ارز و نرخ بهره ارزهای ملی مختلف قرار می گیرند.",
+          "<strong>آتی مالی: </strong>قراردادهایی که ارزش آتی یک اوراق بهادار یا شاخص را معامله می کنند. به عنوان مثال، معاملات آتی برای شاخص های S&P 500 و Nasdaq وجود دارد. همچنین معاملات آتی برای محصولات بدهی، مانند اوراق قرضه خزانه داری ایالات متحده و <a class=\"internal-term-link\" data-slug=\"boblfutures\" href=\"#term/boblfutures\">اوراق تعهدی آلمان (BOBL)</a> وجود دارد.<span class=\"inline-citation-node\" data-cite=\"3\">"
+        ]
+      },
+      {
+        "title_en": "Futures Contract vs. Forward Contract",
+        "title_fa": "قرارداد آتی در مقابل قرارداد آتی",
+        "paragraphs_en": [
+          "A futures contract is similar to a <a class=\"internal-term-link\" data-slug=\"forwardcontract\" href=\"#term/forwardcontract\">forwards contract</a>, where a buyer and seller agree to set a price and quantity of a product for delivery at a later date. Both types of contract can be used for speculation, as well as hedging.",
+          "However, there are also important differences. While a futures contract is a standardized agreement that can be traded on an exchange, a forward contract is simply a private agreement between a buyer and a seller. While it is possible to trade forwards on OTC markets, they are less regulated and less accessible to retail investors. This means that there are also more opportunities to customize a forward agreement according to the buyer’s and seller’s needs. <br/>"
+        ],
+        "paragraphs_fa": [
+          "یک قرارداد آتی شبیه به یک <a class=\"internal-term-link\" data-slug=\"forwardcontract\" href=\"#term/forwardcontract\">قرارداد فوروارد</a> است که در آن خریدار و فروشنده توافق می کنند قیمت و مقدار محصول را برای تحویل در تاریخ بعدی تعیین کنند. هر دو نوع قرارداد را می توان برای سفته بازی و همچنین پوشش ریسک استفاده کرد.",
+          "با این حال، تفاوت های مهمی نیز وجود دارد. در حالی که قرارداد آتی یک قرارداد استاندارد است که می تواند در بورس معامله شود، قرارداد آتی صرفاً یک توافق خصوصی بین خریدار و فروشنده است. در حالی که امکان داد و ستد فوروارد در بازارهای فرابورس وجود دارد، اما این بازارها مقررات کمتری دارند و برای سرمایه گذاران خرده دسترسی کمتری دارند. این بدان معنی است که فرصت‌های بیشتری برای سفارشی‌سازی قرارداد پیش‌رو بر اساس نیازهای خریدار و فروشنده وجود دارد. <br/>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "How Futures Contracts Work",
+        "title_fa": "قراردادهای آتی چگونه کار می کنند",
+        "paragraphs_en": [
+          "Imagine an oil producer plans to produce one million barrels of oil over the next year. It will be ready for delivery in 12 months. Assume the current price is $75 per barrel. The producer could produce the oil, and then sell it at the current market prices one year from today.",
+          "Given the volatility of oil prices, the market price at that time could be very different than the current price. If the oil producer thinks oil will be higher in one year, they may opt not to lock in a price now. But, if they think $75 is a good price, they could lock in a guaranteed sale price by entering into a futures contract.",
+          "A mathematical model is used to price futures, which takes into account the current <a class=\"internal-term-link\" data-slug=\"spotprice\" href=\"#term/spotprice\">spot price</a>, the <a class=\"internal-term-link\" data-slug=\"risk-freerate\" href=\"#term/risk-freerate\">risk-free rate of return</a>, time to maturity, storage costs, dividends, dividend yields, and <a class=\"internal-term-link\" data-slug=\"convenienceyield\" href=\"#term/convenienceyield\">convenience yields</a>. Assume that the one-year oil futures contracts are priced at $78 per barrel. By entering into this contract, in one year the producer is obligated to deliver one million barrels of oil and is guaranteed to receive $78 million. The $78 price per barrel is received regardless of where spot market prices are at the time.",
+          "Contracts are <a class=\"internal-term-link\" data-slug=\"standardization\" href=\"#term/standardization\">standardized</a>. For example, one oil contract on the <a class=\"internal-term-link\" data-slug=\"cme\" href=\"#term/cme\">Chicago Mercantile Exchange</a> (CME) is for 1,000 barrels of oil.<span class=\"inline-citation-node\" data-cite=\"1\"></span> Therefore, if someone wanted to lock in a price (selling or buying) on 100,000 barrels of oil, they would need to buy/sell 100 contracts. To lock in a price on one million barrels of oil/they would need to buy/sell 1,000 contracts.",
+          "The futures markets are regulated by the <a class=\"internal-term-link\" data-slug=\"cftc\" href=\"#term/cftc\">Commodity Futures Trading Commission</a> (CFTC). The CFTC is a federal agency created by Congress in 1974 to ensure the integrity of futures market pricing, including preventing abusive trading practices, fraud, and regulating brokerage firms engaged in futures trading.<span class=\"inline-citation-node\" data-cite=\"4\"></span>"
+        ],
+        "paragraphs_fa": [
+          "تصور کنید یک تولیدکننده نفت قصد دارد در سال آینده یک میلیون بشکه نفت تولید کند. 12 ماه دیگر آماده تحویل می شود. فرض کنید قیمت فعلی 75 دلار در هر بشکه باشد. تولیدکننده می تواند نفت را تولید کند و سپس آن را به قیمت فعلی بازار یک سال از امروز بفروشد.",
+          "با توجه به نوسانات قیمت نفت، قیمت بازار در آن زمان می تواند بسیار متفاوت از قیمت فعلی باشد. اگر تولیدکننده نفت فکر می‌کند که نفت در یک سال آینده بالاتر خواهد رفت، ممکن است تصمیم بگیرند که قیمت را در حال حاضر قفل نکنند. اما، اگر آنها فکر می کنند 75 دلار قیمت خوبی است، می توانند با عقد قرارداد آتی، قیمت فروش تضمین شده را قفل کنند.",
+          "یک مدل ریاضی برای قیمت‌گذاری معاملات آتی استفاده می‌شود که <a class=\"internal-term-link\" data-slug=\"spotprice\" href=\"#term/spotprice\">قیمت نقطه‌ای</a>، <a class=\"internal-term-link\" data-slug=\"risk-freerate\" href=\"#term/risk-term-freerate\" href=\"#term/risk-k-freerate\" href=\"#term/risk-freerate\" href=\"#term/risk-freerate\" href=\"#term/risk-kfreerate\"> هزینه‌های ذخیره‌سازی، نرخ بازگشت، نرخ بازگشت، زمان و زمان maturation را در نظر می‌گیرد. سود سهام، بازده سود سهام، و <a class=\"internal-term-link\" data-slug=\"convenienceyield\" href=\"#term/convenienceyield\">بازده راحتی</a>. فرض کنید قیمت قراردادهای آتی یک ساله نفت ۷۸ دلار در هر بشکه باشد. با انعقاد این قرارداد، تولیدکننده در یک سال متعهد به تحویل یک میلیون بشکه نفت و دریافت 78 میلیون دلار تضمینی می شود. قیمت 78 دلار به ازای هر بشکه صرف نظر از اینکه قیمت‌های بازار نقدی در آن زمان کجا هستند، دریافت می‌شود.",
+          "قراردادها <a class=\"internal-term-link\" data-slug=\"standardization\" href=\"#term/standardization\">استاندارد</a> هستند. به عنوان مثال، یک قرارداد نفتی در <a class=\"internal-term-link\" data-slug=\"cme\" href=\"#term/cme\">بورس کالای شیکاگو</a> (CME) برای 1000 بشکه نفت است.<span class=\"inline-citation-node\" data-cite=\"1\"></span>بنابراین، اگر کسی بخواهد قیمت را بخرد 100000 بشکه نفت، آنها باید 100 قرارداد خرید/فروش کنند. برای تعیین قیمت یک میلیون بشکه نفت / آنها باید 1000 قرارداد بخرند / بفروشند.",
+          "بازارهای آتی توسط <a class=\"internal-term-link\" data-slug=\"cftc\" href=\"#term/cftc\">کمیسیون معاملات آتی کالا</a> (CFTC) تنظیم می‌شوند. CFTC یک آژانس فدرال است که توسط کنگره در سال 1974 برای اطمینان از یکپارچگی قیمت‌گذاری بازار آتی، از جمله جلوگیری از شیوه‌های تجاری سوء استفاده، کلاهبرداری، و تنظیم شرکت‌های کارگزاری فعال در معاملات آتی ایجاد شد.<span class=\"inline-citation-node\" data-cite=\"4\"></span>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "The Process of Trading Futures Contracts",
+        "title_fa": "فرآیند معاملات قراردادهای آتی",
+        "paragraphs_en": [
+          "Retail traders and portfolio managers are not interested in delivering or receiving the underlying asset. A retail trader has little need to receive 1,000 barrels of oil, but they may be interested in capturing a profit on the price moves of oil.",
+          "Futures contracts can be traded purely for profit, as long as the trade is closed before expiration. Many futures contracts expire on the third Friday of the month, but contracts do vary so check the contract specifications of any and all contracts before trading them.",
+          "For example, it is January, and April contracts are trading at $55. If a trader believes that the price of oil will rise before the contract expires in April, they could buy the contract at $55. This gives them control of 1,000 barrels of oil. They are not required to pay $55,000 ($55 x 1,000 barrels) for this privilege, though. Rather, the broker only requires an <a class=\"internal-term-link\" data-slug=\"initialmargin\" href=\"#term/initialmargin\">initial margin</a> payment, typically of a few thousand dollars for each contract.",
+          "The profit or loss of the position fluctuates in the account as the price of the futures contract moves. If the loss gets too big, the broker will ask the trader to deposit more money to cover the loss. This is called <a class=\"internal-term-link\" data-slug=\"maintenancemargin\" href=\"#term/maintenancemargin\">maintenance margin</a>.",
+          "The final profit or loss of the trade is realized when the trade is closed. In this case, if the buyer sells the contract at $60, they make $5,000 [($60-$55) x 1,000). Alternatively, if the price drops to $50 and they close out the position there, they lose $5,000."
+        ],
+        "paragraphs_fa": [
+          "معامله گران خرده فروشی و مدیران سبد سهام علاقه ای به تحویل یا دریافت دارایی پایه ندارند. یک تاجر خرده‌فروشی نیاز چندانی به دریافت 1000 بشکه نفت ندارد، اما ممکن است علاقه‌مند به کسب سود از حرکت قیمت نفت باشد.",
+          "قراردادهای آتی را می توان صرفاً برای سود معامله کرد، تا زمانی که معامله قبل از انقضا بسته شود. بسیاری از قراردادهای آتی در سومین جمعه ماه منقضی می‌شوند، اما قراردادها متفاوت هستند، بنابراین قبل از معامله، مشخصات قراردادها را بررسی کنید.",
+          "به عنوان مثال، ژانویه است و قراردادهای آوریل با قیمت 55 دلار معامله می شوند. اگر تاجری معتقد باشد که قیمت نفت قبل از پایان قرارداد در ماه آوریل افزایش خواهد یافت، می تواند قرارداد را با قیمت 55 دلار خریداری کند. این امر به آنها امکان کنترل 1000 بشکه نفت را می دهد. با این حال، آنها ملزم به پرداخت 55000 دلار (55 دلار در 1000 بشکه) برای این امتیاز نیستند. در عوض، کارگزار فقط به پرداخت <a class=\"internal-term-link\" data-slug=\"initialmargin\" href=\"#term/initialmargin\">حاشیه اولیه</a> نیاز دارد، معمولاً چند هزار دلار برای هر قرارداد.",
+          "با حرکت قیمت قرارداد آتی، سود یا زیان موقعیت در حساب نوسان می کند. اگر زیان بیش از حد بزرگ شود، کارگزار از معامله‌گر می‌خواهد که پول بیشتری برای پوشش ضرر سپرده بگذارد. این <a class=\"internal-term-link\" data-slug=\"maintenancemargin\" href=\"#term/maintenancemargin\">حاشیه نگهداری</a> نامیده می شود.",
+          "سود یا زیان نهایی معامله زمانی محقق می شود که معامله بسته شود. در این حالت، اگر خریدار قرارداد را به قیمت 60 دلار بفروشد، 5000 دلار [(60-55 دلار) در 1000 دلار به دست می آورد. از طرف دیگر، اگر قیمت به 50 دلار کاهش یابد و آنها موقعیت را در آنجا ببندند، 5000 دلار از دست خواهند داد."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Why Is It Called a Futures Contract?",
+        "title_fa": "چرا به آن قرارداد آتی می گویند؟",
+        "paragraphs_en": [
+          "A futures contract gets its name from the fact that the buyer and seller of the contract are agreeing to a price today for some asset or security that is to be delivered in the future."
+        ],
+        "paragraphs_fa": [
+          "قرارداد آتی نام خود را از این واقعیت گرفته است که خریدار و فروشنده قرارداد امروز با قیمتی برای برخی دارایی یا اوراق بهاداری که قرار است در آینده تحویل شود توافق می کنند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Are Futures and Forwards the Same Thing?",
+        "title_fa": "آیا آینده و آینده یکسان هستند؟",
+        "paragraphs_en": [
+          "These two types of derivatives contract function in much the same way, but the main difference is that futures are exchange-traded and have standardized contract specifications. These exchanges are highly regulated and provide transparent contract and pricing data. Forwards, in contrast, trade over the counter (OTC) with terms and contract specifications customized by the two parties involved."
+        ],
+        "paragraphs_fa": [
+          "این دو نوع قرارداد مشتقه تقریباً یکسان عمل می کنند، اما تفاوت اصلی این است که معاملات آتی در بورس انجام می شود و دارای مشخصات قرارداد استاندارد شده است. این مبادلات به شدت تنظیم شده اند و داده های شفاف قرارداد و قیمت را ارائه می دهند. در مقابل، معاملات پیشخوان (OTC) با شرایط و مشخصات قرارداد سفارشی شده توسط دو طرف درگیر انجام می شود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "What Happens If a Futures Contract Is Held Until It Expires?",
+        "title_fa": "اگر قرارداد آتی تا زمان انقضا حفظ شود چه اتفاقی می افتد؟",
+        "paragraphs_en": [
+          "Unless the contract position is <a class=\"internal-term-link\" data-slug=\"closeposition\" href=\"#term/closeposition\">closed out</a> prior to its expiration, the short is obligated to make delivery to the long, who is obligated to take it. Depending on the contract, the values exchanged can be <a class=\"internal-term-link\" data-slug=\"cashsettlement\" href=\"#term/cashsettlement\">settled in cash</a>. Most often, the trader will simply pay or receive a cash settlement depending on whether the underlying asset increased or decreased during the investment holding period. In some cases, however, futures contracts will require <a class=\"internal-term-link\" data-slug=\"physicaldelivery\" href=\"#term/physicaldelivery\">physical delivery</a>. In this scenario, the investor holding the contract upon expiration would be responsible for storing the goods and would need to cover costs for material handling, physical storage, and insurance."
+        ],
+        "paragraphs_fa": [
+          "مگر اینکه موقعیت قرارداد قبل از انقضای آن <a class=\"internal-term-link\" data-slug=\"closeposition\" href=\"#term/closeposition\">بسته باشد</a>، شرکت کوتاه موظف است به لانگ که موظف به تحویل گرفتن آن است، تحویل دهد. بسته به قرارداد، ارزش‌های مبادله شده می‌توانند <a class=\"internal-term-link\" data-slug=\"cashsettlement\" href=\"#term/cashsettlement\">تسویه نقدی</a> باشند. اغلب، معامله‌گر بسته به افزایش یا کاهش دارایی پایه در طول دوره نگهداری سرمایه‌گذاری، صرفاً تسویه نقدی را پرداخت یا دریافت می‌کند. اما در برخی موارد، قراردادهای آتی به <a class=\"internal-term-link\" data-slug=\"physicaldelivery\" href=\"#term/physicaldelivery\">تحویل فیزیکی</a> نیاز دارند. در این سناریو، سرمایه‌گذار دارای قرارداد پس از انقضا، مسئول نگهداری کالا خواهد بود و باید هزینه‌های جابجایی مواد، ذخیره‌سازی فیزیکی و بیمه را پوشش دهد."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Who Uses Futures Contracts?",
+        "title_fa": "چه کسی از قراردادهای آتی استفاده می کند؟",
+        "paragraphs_en": [
+          "Speculators can use futures contracts to bet on the future price of some asset or security. Hedgers use futures to lock in a price today to reduce market uncertainty between now and the time that good is to be delivered or received. <a class=\"internal-term-link\" data-slug=\"arbitrageur\" href=\"#term/arbitrageur\">Arbitrageurs</a> trade futures contracts in or across related markets, taking advantage of theoretical mispricings that may exist temporarily."
+        ],
+        "paragraphs_fa": [
+          "سفته بازان می توانند از قراردادهای آتی برای شرط بندی روی قیمت آتی برخی دارایی یا اوراق بهادار استفاده کنند. Hedgers از معاملات آتی برای قفل کردن قیمت امروز استفاده می‌کند تا عدم اطمینان بازار را از هم‌اکنون و زمان تحویل یا دریافت کالا کاهش دهد. <a class=\"internal-term-link\" data-slug=\"arbitrageur\" ​​href=\"#term/arbitrageur\">داوران</a> قراردادهای آتی را در یا در بازارهای مرتبط معامله می‌کنند و از قیمت‌گذاری‌های نادرست نظری که ممکن است به طور موقت وجود داشته باشد، استفاده می‌کنند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "How Can I Trade Futures?",
+        "title_fa": "چگونه می توانم معاملات آتی انجام دهم؟",
+        "paragraphs_en": [
+          "Depending on your broker and your account status with that broker, you may be eligible to trade futures. You will require a margin account and be approved to do so. Qualified traders in the U.S. will often have the ability to trade futures on different exchanges such as the Chicago Mercantile Exchange (CME), <a class=\"internal-term-link\" data-slug=\"intercontinentalexchange\" href=\"#term/intercontinentalexchange\">ICE Futures</a> U.S. (Intercontinental Exchange), and the CBOE Futures Exchange (CFE)."
+        ],
+        "paragraphs_fa": [
+          "بسته به کارگزار شما و وضعیت حساب شما در آن کارگزار، ممکن است واجد شرایط معاملات آتی باشید. برای انجام این کار به یک حساب حاشیه نیاز خواهید داشت. معامله گران واجد شرایط در ایالات متحده غالباً می توانند معاملات آتی را در صرافی های مختلف مانند بورس کالای شیکاگو (CME)، <a class=\"internal-term-link\" data-slug=\"intercontinentalexchange\" href=\"#term/intercontinentalexchange\">ICE Futures</a> U.S. FEBOE (Intercon) و CME (Intercontin) معامله کنند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "The Bottom Line",
+        "title_fa": "نتیجه‌گیری نهایی",
+        "paragraphs_en": [
+          "Futures contracts play an important role in the smooth operations of the commodities market. They allow buyers and sellers to lock in prices in advance and help farmers, miners, manufacturers, and other market participants to work without having to worry about daily changes in the market. The prices of futures are affected by interest rate changes and dividend payments. <br/>"
+        ],
+        "paragraphs_fa": [
+          "قراردادهای آتی نقش مهمی در عملکرد روان بازار کالاها دارند. آنها به خریداران و فروشندگان اجازه می دهند تا قیمت ها را از قبل قفل کنند و به کشاورزان، معدنچیان، تولیدکنندگان و سایر فعالان بازار کمک می کنند تا بدون نگرانی در مورد تغییرات روزانه در بازار کار کنند. قیمت معاملات آتی متاثر از تغییرات نرخ بهره و پرداخت سود سهام است. <br/>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      }
+    ],
+    "deep_enriched": true,
+    "id": 633
   }
 ]
