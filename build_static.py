@@ -16,22 +16,9 @@ def clean_key(text):
         return ""
     return re.sub(r"[^a-z0-9]", "", str(text).lower().replace(".asp", ""))
 
-CATEGORY_ICONS = {
-    "بازار سهام و معاملات": "📈",
-    "حسابداری و صورت‌های مالی": "📊",
-    "اقتصاد کلان و سیاست پولی": "🏛️",
-    "ارزش‌گذاری و تحلیل بنیادی": "⚖️",
-    "تحلیل تکنیکال و نموداری": "📉",
-    "ابزارهای مشتقه و آپشن": "⚡",
-    "اوراق بدهی و اسناد خزانه": "📜",
-    "بانکداری، وام و اعتبارات": "🏦",
-    "مدیریت ریسک و بیمه": "🛡️",
-    "سرمایه‌گذاری و صندوق‌ها": "💼",
-    "مالیات، مقررات و قوانین": "⚖️",
-    "تجارت بین‌الملل و بازرگانی": "🌐",
-    "ارزهای دیجیتال و فین‌تک": "🪙",
-    "کسب‌وکار و مدیریت استراتژیک": "💡"
-}
+from categories_engine import TAXONOMY, TAXONOMY_BY_FA
+
+CATEGORY_ICONS = {item["fa"]: item["icon"] for item in TAXONOMY}
 
 def build():
     start_time = time.time()
@@ -114,6 +101,8 @@ def build():
             "term_fa": item.get("term_fa", ""),
             "letter": ltr,
             "category": cat,
+            "category_fa": item.get("category_fa", cat),
+            "category_en": item.get("category_en", ""),
             "definition_fa": item.get("definition_fa", "")[:240],
             "definition_en": item.get("definition_en", "")[:240],
             "slug": slug,
@@ -155,7 +144,13 @@ def build():
 
     # Sort categories and letters
     sorted_cats = [
-        {"name": k, "count": v, "icon": CATEGORY_ICONS.get(k, "🏷️")}
+        {
+            "name": k,
+            "name_fa": TAXONOMY_BY_FA.get(k, {}).get("fa", k),
+            "name_en": TAXONOMY_BY_FA.get(k, {}).get("en", ""),
+            "count": v,
+            "icon": TAXONOMY_BY_FA.get(k, {}).get("icon", CATEGORY_ICONS.get(k, "🏷️"))
+        }
         for k, v in sorted(category_counts.items(), key=lambda x: -x[1])
     ]
     sorted_letters = [

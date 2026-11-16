@@ -337,10 +337,15 @@
 
             <!-- Multi-Row Categories Container -->
             <div id="categoriesContainer" class="flex flex-wrap gap-2 sm:gap-2.5 transition-all duration-200">
-                <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-600 text-white shadow-sm transition flex items-center gap-1.5 border border-emerald-600">
-                    <span>🏛️</span>
-                    <span>همه دسته‌ها</span>
-                    <span id="catTotalAllCount" class="bg-emerald-700/60 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">۶۳۳</span>
+                <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-600 text-white shadow-sm transition flex items-center gap-2 border border-emerald-600 text-right">
+                    <span class="text-base sm:text-lg shrink-0">🏛️</span>
+                    <div class="flex flex-col text-right leading-tight">
+                        <div class="flex items-center gap-1.5">
+                            <span class="font-bold">همه دسته‌ها</span>
+                            <span id="catTotalAllCount" class="cat-count-badge bg-emerald-700/60 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold"></span>
+                        </div>
+                        <span class="cat-en-sub font-en text-[10px] text-emerald-100/90 font-medium tracking-tight">All Categories</span>
+                    </div>
                 </button>
                 <!-- Dynamic Category Pills inserted here -->
             </div>
@@ -391,7 +396,7 @@
                 <div class="space-y-1.5">
                     <div class="flex items-center gap-2 flex-wrap">
                         <span id="modalLetterBadge" class="font-en text-xs font-bold px-2.5 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/40">#</span>
-                        <span id="modalCategoryBadge" class="text-xs font-semibold px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">دسته‌بندی</span>
+                        <span id="modalCategoryBadge" class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 inline-flex flex-col text-right leading-tight">دسته‌بندی</span>
                         <span id="modalDeepBadge" class="hidden text-xs font-bold px-2.5 py-0.5 rounded-md bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/50">
                             📑 تحلیل تخصصی چندبخشی
                         </span>
@@ -901,21 +906,32 @@
                     const res = await fetch('/api/categories');
                     cats = await res.json();
                 }
+                window.allCategoriesData = cats;
                 const container = document.getElementById('categoriesContainer');
 
                 // Preserve the "cat-ALL" button and reload category pills
                 const allBtn = document.getElementById('cat-ALL');
                 container.innerHTML = '';
-                if (allBtn) container.appendChild(allBtn);
+                if (allBtn) {
+                    container.appendChild(allBtn);
+                    const totalAll = cats.reduce((acc, c) => acc + (c.count || 0), 0);
+                    const totalBadge = document.getElementById('catTotalAllCount');
+                    if (totalBadge) totalBadge.innerText = totalAll.toLocaleString('fa-IR');
+                }
 
                 cats.forEach(item => {
                     const btn = document.createElement('button');
                     btn.id = `cat-${encodeURIComponent(item.name)}`;
-                    btn.className = 'cat-pill px-3.5 py-2 rounded-xl text-xs font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-sm transition flex items-center gap-1.5';
+                    btn.className = 'cat-pill px-3.5 py-2 rounded-xl text-xs font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-sm transition flex items-center gap-2 text-right';
                     btn.innerHTML = `
-                        <span>${item.icon || '🏷️'}</span>
-                        <span class="font-semibold">${item.name}</span>
-                        <span class="opacity-70 text-[10px] bg-slate-100 dark:bg-slate-800 px-1.5 py-0.2 rounded-full font-bold">(${item.count})</span>
+                        <span class="text-base sm:text-lg shrink-0">${item.icon || '🏷️'}</span>
+                        <div class="flex flex-col text-right leading-tight">
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-bold text-xs">${item.name_fa || item.name}</span>
+                                <span class="cat-count-badge opacity-75 text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-1.5 py-0.2 rounded-full font-bold">(${item.count})</span>
+                            </div>
+                            <span class="cat-en-sub font-en text-[10px] text-slate-500 dark:text-slate-400 tracking-tight font-medium">${item.name_en || ''}</span>
+                        </div>
                     `;
                     btn.onclick = () => setCategoryFilter(item.name);
                     container.appendChild(btn);
@@ -1012,8 +1028,9 @@
                             <span class="font-en text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/40">
                                 ${term.letter}
                             </span>
-                            <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-                                ${term.category}
+                            <span class="text-[11px] font-medium px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 inline-flex flex-col text-right leading-tight">
+                                <span class="font-bold text-[11px] text-slate-800 dark:text-slate-200">${term.category_fa || term.category}</span>
+                                ${term.category_en ? `<span class="font-en text-[9px] text-slate-400 dark:text-slate-500 font-medium">${term.category_en}</span>` : ''}
                             </span>
                             ${hasDeep ? `<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/50">📑 سرفصل‌های جامع</span>` : ''}
                         </div>
@@ -1135,7 +1152,12 @@
             const catBadge = document.getElementById('activeCategoryBadge');
             if (catBadge) {
                 if (currentCategory !== 'ALL') {
-                    catBadge.innerText = currentCategory;
+                    const catObj = (window.allCategoriesData || []).find(c => c.name === currentCategory || c.name_fa === currentCategory);
+                    if (catObj && catObj.name_en) {
+                        catBadge.innerHTML = `<span>${catObj.name_fa || catObj.name}</span> <span class="font-en text-[10px] opacity-80 mr-1.5 font-normal">(${catObj.name_en})</span>`;
+                    } else {
+                        catBadge.innerText = currentCategory;
+                    }
                     catBadge.classList.remove('hidden');
                 } else {
                     catBadge.classList.add('hidden');
@@ -1163,13 +1185,33 @@
             currentCategory = category;
             currentPage = 1;
             document.querySelectorAll('.cat-pill').forEach(btn => {
-                btn.classList.remove('bg-emerald-600', 'text-white', 'border-emerald-600');
+                btn.classList.remove('bg-emerald-600', 'text-white', 'border-emerald-600', 'active');
                 btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
+                const sub = btn.querySelector('.cat-en-sub');
+                if (sub) {
+                    sub.classList.remove('text-emerald-100');
+                    sub.classList.add('text-slate-500', 'dark:text-slate-400');
+                }
+                const cnt = btn.querySelector('.cat-count-badge');
+                if (cnt) {
+                    cnt.classList.remove('bg-emerald-700/60', 'text-white');
+                    cnt.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+                }
             });
             const activeBtn = document.getElementById(category === 'ALL' ? 'cat-ALL' : `cat-${encodeURIComponent(category)}`);
             if (activeBtn) {
                 activeBtn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
-                activeBtn.classList.add('bg-emerald-600', 'text-white', 'border-emerald-600');
+                activeBtn.classList.add('bg-emerald-600', 'text-white', 'border-emerald-600', 'active');
+                const sub = activeBtn.querySelector('.cat-en-sub');
+                if (sub) {
+                    sub.classList.remove('text-slate-500', 'dark:text-slate-400');
+                    sub.classList.add('text-emerald-100');
+                }
+                const cnt = activeBtn.querySelector('.cat-count-badge');
+                if (cnt) {
+                    cnt.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+                    cnt.classList.add('bg-emerald-700/60', 'text-white');
+                }
             }
             updateFilterBadges();
             loadTerms();
@@ -1308,7 +1350,13 @@
             document.getElementById('modalTermEn').innerText = term.term_en;
             document.getElementById('modalTermFa').innerText = term.term_fa;
             document.getElementById('modalLetterBadge').innerText = term.letter;
-            document.getElementById('modalCategoryBadge').innerText = term.category;
+            const modalCatBadge = document.getElementById('modalCategoryBadge');
+            if (modalCatBadge) {
+                modalCatBadge.innerHTML = `
+                    <span class="font-bold text-xs">${term.category_fa || term.category}</span>
+                    ${term.category_en ? `<span class="font-en text-[10px] text-slate-500 dark:text-slate-400 font-medium block">${term.category_en}</span>` : ''}
+                `;
+            }
 
             const hasDeep = (term.sections && term.sections.length > 0) || term.deep_enriched || term.has_deep;
             const deepBadge = document.getElementById('modalDeepBadge');

@@ -16,22 +16,9 @@ app = Flask(__name__, template_folder="templates", static_folder="static")
 DATA_FILE = os.path.join(os.path.dirname(__file__), "bilingual_dictionary.json")
 _CACHE = {"mtime": 0, "data": []}
 
-CATEGORY_ICONS = {
-    "بازار سهام و معاملات": "📈",
-    "حسابداری و صورت‌های مالی": "📊",
-    "اقتصاد کلان و سیاست پولی": "🏛️",
-    "ارزش‌گذاری و تحلیل بنیادی": "⚖️",
-    "تحلیل تکنیکال و نموداری": "📉",
-    "ابزارهای مشتقه و آپشن": "⚡",
-    "اوراق بدهی و اسناد خزانه": "📜",
-    "بانکداری، وام و اعتبارات": "🏦",
-    "مدیریت ریسک و بیمه": "🛡️",
-    "سرمایه‌گذاری و صندوق‌ها": "💼",
-    "مالیات، مقررات و قوانین": "⚖️",
-    "تجارت بین‌الملل و بازرگانی": "🌐",
-    "ارزهای دیجیتال و فین‌تک": "🪙",
-    "کسب‌وکار و مدیریت استراتژیک": "💡"
-}
+from categories_engine import TAXONOMY, TAXONOMY_BY_FA
+
+CATEGORY_ICONS = {item["fa"]: item["icon"] for item in TAXONOMY}
 
 def get_dictionary() -> List[Dict[str, Any]]:
     if not os.path.exists(DATA_FILE):
@@ -109,8 +96,10 @@ def get_categories():
     return jsonify([
         {
             "name": k,
+            "name_fa": TAXONOMY_BY_FA.get(k, {}).get("fa", k),
+            "name_en": TAXONOMY_BY_FA.get(k, {}).get("en", ""),
             "count": v,
-            "icon": CATEGORY_ICONS.get(k, "🏷️")
+            "icon": TAXONOMY_BY_FA.get(k, {}).get("icon", CATEGORY_ICONS.get(k, "🏷️"))
         } for k, v in sorted_cats
     ])
 
