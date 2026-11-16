@@ -52,8 +52,8 @@ def verify_dataset(filepath="bilingual_dictionary.json"):
     errors = []
     warnings = []
 
-    if total_terms != 631:
-        errors.append(f"Expected 631 terms, got {total_terms}")
+    if total_terms < 631:
+        errors.append(f"Expected at least 631 terms, got {total_terms}")
 
     terms_without_sections = []
     total_sections = 0

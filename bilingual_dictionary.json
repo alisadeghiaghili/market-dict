@@ -1,6 +1,6 @@
 [
   {
-    "id": "1-10net30",
+    "id": 1,
     "term_en": "1%/10 Net 30",
     "term_fa": "تخفیف ۱٪ نقدی در ۱۰ روز، مهلت ۳۰ روز",
     "letter": "#",
@@ -138,7 +138,7 @@
     "deep_enriched": true
   },
   {
-    "id": "10-k",
+    "id": 2,
     "term_en": "10-K",
     "term_fa": "گزارش سالانه ۱۰-کا (فرم 10-K)",
     "letter": "#",
@@ -390,7 +390,7 @@
     "deep_enriched": true
   },
   {
-    "id": "10q",
+    "id": 3,
     "term_en": "10-Q SEC Form",
     "term_fa": "گزارش سه‌ماهه ۱۰-کیو (فرم 10-Q)",
     "letter": "#",
@@ -566,7 +566,7 @@
     "deep_enriched": true
   },
   {
-    "id": "10-yeartreasury",
+    "id": 4,
     "term_en": "10-Year Treasury Note",
     "term_fa": "اوراق خزانه ۱۰ ساله آمریکا",
     "letter": "#",
@@ -726,7 +726,7 @@
     "deep_enriched": true
   },
   {
-    "id": "1040",
+    "id": 5,
     "term_en": "1040 IRS Form",
     "term_fa": "1040 IRS Form",
     "letter": "#",
@@ -1112,7 +1112,7 @@
     "deep_enriched": true
   },
   {
-    "id": "1040a",
+    "id": 6,
     "term_en": "1040A Form",
     "term_fa": "1040A Form",
     "letter": "#",
@@ -1200,7 +1200,7 @@
     "deep_enriched": true
   },
   {
-    "id": "1040ez",
+    "id": 7,
     "term_en": "1040EZ Form",
     "term_fa": "1040EZ Form",
     "letter": "#",
@@ -1356,7 +1356,7 @@
     "deep_enriched": true
   },
   {
-    "id": "cofi",
+    "id": 8,
     "term_en": "11th District Cost of Funds Index (COFI)",
     "term_fa": "11th District هزینه of وجوه / صندوق‌ها شاخص (COFI)",
     "letter": "#",
@@ -1424,7 +1424,7 @@
     "deep_enriched": true
   },
   {
-    "id": "12b-1fees",
+    "id": 9,
     "term_en": "12B-1 Fee",
     "term_fa": "12B-1 Fee",
     "letter": "#",
@@ -1518,7 +1518,7 @@
     "deep_enriched": true
   },
   {
-    "id": "183-day-rule",
+    "id": 10,
     "term_en": "183-Day Rule",
     "term_fa": "183-Day Rule",
     "letter": "#",
@@ -1682,7 +1682,7 @@
     "deep_enriched": true
   },
   {
-    "id": "30-yeartreasury",
+    "id": 11,
     "term_en": "30-Year Treasury",
     "term_fa": "30-Year Treasury",
     "letter": "#",
@@ -1782,7 +1782,7 @@
     "deep_enriched": true
   },
   {
-    "id": "401a-plan",
+    "id": 12,
     "term_en": "401(a) Plan",
     "term_fa": "401(a) Plan",
     "letter": "#",
@@ -2000,7 +2000,7 @@
     "deep_enriched": true
   },
   {
-    "id": "401kplan",
+    "id": 13,
     "term_en": "401(k) Plan",
     "term_fa": "طرح بازنشستگی ۴۰۱(ک)",
     "letter": "#",
@@ -2394,7 +2394,7 @@
     "deep_enriched": true
   },
   {
-    "id": "403bplan",
+    "id": 14,
     "term_en": "403(b) Plan",
     "term_fa": "403(b) Plan",
     "letter": "#",
@@ -2556,7 +2556,7 @@
     "deep_enriched": true
   },
   {
-    "id": "457plan",
+    "id": 15,
     "term_en": "457 Plan",
     "term_fa": "457 Plan",
     "letter": "#",
@@ -2698,7 +2698,7 @@
     "deep_enriched": true
   },
   {
-    "id": "5-1_arm",
+    "id": 16,
     "term_en": "5/1 Hybrid Adjustable-Rate Mortgage (5/1 Hybrid ARM)",
     "term_fa": "وام مسکن 5/1 هیبریدی با نرخ قابل تنظیم (5/1 Hybrid ARM)",
     "letter": "#",
@@ -2830,7 +2830,7 @@
     "deep_enriched": true
   },
   {
-    "id": "501c3-organizations",
+    "id": 17,
     "term_en": "501(c)(3) Organizations",
     "term_fa": "501(c)(3) Organizations",
     "letter": "#",
@@ -3044,7 +3044,7 @@
     "deep_enriched": true
   },
   {
-    "id": "51-attack",
+    "id": 18,
     "term_en": "51% Attack",
     "term_fa": "حمله ۵۱ درصدی (بلاکچین)",
     "letter": "#",
@@ -3216,7 +3216,7 @@
     "deep_enriched": true
   },
   {
-    "id": "52weekhighlow",
+    "id": 19,
     "term_en": "52-Week High/Low",
     "term_fa": "بالاترین و پایین‌ترین قیمت ۵۲ هفته",
     "letter": "#",
@@ -3318,7 +3318,7 @@
     "deep_enriched": true
   },
   {
-    "id": "529plan",
+    "id": 20,
     "term_en": "529 Plan",
     "term_fa": "529 Plan",
     "letter": "#",
@@ -3622,7 +3622,7 @@
     "deep_enriched": true
   },
   {
-    "id": "8-k",
+    "id": 21,
     "term_en": "8-K (Form 8K)",
     "term_fa": "8-K (Form 8K)",
     "letter": "#",
@@ -3918,7 +3918,7 @@
     "deep_enriched": true
   },
   {
-    "id": "80-20-rule",
+    "id": 22,
     "term_en": "80-20 Rule",
     "term_fa": "80-20 Rule",
     "letter": "#",
@@ -4124,7 +4124,7 @@
     "deep_enriched": true
   },
   {
-    "id": "83b-election",
+    "id": 23,
     "term_en": "83(b) Election",
     "term_fa": "83(b) Election",
     "letter": "#",
@@ -4364,7 +4364,7 @@
     "deep_enriched": true
   },
   {
-    "id": "absoluteadvantage",
+    "id": 24,
     "term_en": "Absolute Advantage",
     "term_fa": "مزیت مطلق",
     "letter": "A",
@@ -4544,7 +4544,7 @@
     "deep_enriched": true
   },
   {
-    "id": "accounting-equation",
+    "id": 25,
     "term_en": "Accounting Equation",
     "term_fa": "معادله اساسی حسابداری",
     "letter": "A",
@@ -4778,7 +4778,7 @@
     "deep_enriched": true
   },
   {
-    "id": "arr",
+    "id": 26,
     "term_en": "Accounting Rate of Return (ARR)",
     "term_fa": "نرخ بازده حسابداری (ARR)",
     "letter": "A",
@@ -4822,7 +4822,7 @@
     "deep_enriched": true
   },
   {
-    "id": "acidtest",
+    "id": 27,
     "term_en": "Acid-Test Ratio",
     "term_fa": "نسبت آنی (نسبت اسیدی / Acid-Test)",
     "letter": "A",
@@ -4968,7 +4968,7 @@
     "deep_enriched": true
   },
   {
-    "id": "acquisition",
+    "id": 28,
     "term_en": "Acquisition",
     "term_fa": "Acquisition",
     "letter": "A",
@@ -5238,7 +5238,7 @@
     "deep_enriched": true
   },
   {
-    "id": "adverseselection",
+    "id": 29,
     "term_en": "Adverse Selection",
     "term_fa": "Adverse Selection",
     "letter": "A",
@@ -5406,7 +5406,7 @@
     "deep_enriched": true
   },
   {
-    "id": "afterhourstrading",
+    "id": 30,
     "term_en": "After-Hours Trading",
     "term_fa": "After-Hours معاملات",
     "letter": "A",
@@ -5702,7 +5702,7 @@
     "deep_enriched": true
   },
   {
-    "id": "alpha",
+    "id": 31,
     "term_en": "Alpha in Investing",
     "term_fa": "Alpha in Investing",
     "letter": "A",
@@ -5870,7 +5870,7 @@
     "deep_enriched": true
   },
   {
-    "id": "amalgamation",
+    "id": 32,
     "term_en": "Amalgamation",
     "term_fa": "Amalgamation",
     "letter": "A",
@@ -6102,7 +6102,7 @@
     "deep_enriched": true
   },
   {
-    "id": "adr",
+    "id": 33,
     "term_en": "American Depositary Receipt (ADR)",
     "term_fa": "رسید سپرده گذاری آمریکایی (ADR)",
     "letter": "A",
@@ -6402,7 +6402,7 @@
     "deep_enriched": true
   },
   {
-    "id": "american-dream",
+    "id": 34,
     "term_en": "American Dream",
     "term_fa": "American Dream",
     "letter": "A",
@@ -6598,7 +6598,7 @@
     "deep_enriched": true
   },
   {
-    "id": "anova",
+    "id": 35,
     "term_en": "Analysis of Variance (ANOVA)",
     "term_fa": "تحلیل of Variance (ANOVA)",
     "letter": "A",
@@ -6854,7 +6854,7 @@
     "deep_enriched": true
   },
   {
-    "id": "angelinvestor",
+    "id": 36,
     "term_en": "Angel Investor: Definition and How It Works",
     "term_fa": "سرمایه گذار فرشته",
     "letter": "A",
@@ -7026,7 +7026,7 @@
     "deep_enriched": true
   },
   {
-    "id": "apr",
+    "id": 37,
     "term_en": "Annual Percentage Rate (APR)",
     "term_fa": "نرخ درصد سالانه (APR)",
     "letter": "A",
@@ -7228,7 +7228,7 @@
     "deep_enriched": true
   },
   {
-    "id": "annuity",
+    "id": 38,
     "term_en": "Annuity",
     "term_fa": "مستمری / سالانه",
     "letter": "A",
@@ -7526,7 +7526,7 @@
     "deep_enriched": true
   },
   {
-    "id": "applicablefederalrate",
+    "id": 39,
     "term_en": "Applicable Federal Rate (AFR)",
     "term_fa": "نرخ فدرال قابل اعمال (AFR)",
     "letter": "A",
@@ -7658,7 +7658,7 @@
     "deep_enriched": true
   },
   {
-    "id": "artificial-intelligence-ai",
+    "id": 40,
     "term_en": "Artificial Intelligence (AI)",
     "term_fa": "Artificial Intelligence (AI)",
     "letter": "A",
@@ -7796,7 +7796,7 @@
     "deep_enriched": true
   },
   {
-    "id": "asset",
+    "id": 41,
     "term_en": "Asset",
     "term_fa": "دارایی",
     "letter": "A",
@@ -7996,7 +7996,7 @@
     "deep_enriched": true
   },
   {
-    "id": "assetmanagement",
+    "id": 42,
     "term_en": "Asset Management",
     "term_fa": "مدیریت دارایی‌ها (سبدگردانی)",
     "letter": "A",
@@ -8200,7 +8200,7 @@
     "deep_enriched": true
   },
   {
-    "id": "assetturnover",
+    "id": 43,
     "term_en": "Asset Turnover Ratio: Definition, Calculation & Industry Comparison",
     "term_fa": "نسبت گردش دارایی",
     "letter": "A",
@@ -8352,7 +8352,7 @@
     "deep_enriched": true
   },
   {
-    "id": "aum",
+    "id": 44,
     "term_en": "Assets Under Management (AUM)",
     "term_fa": "دارایی‌های تحت مدیریت (AUM)",
     "letter": "A",
@@ -8560,7 +8560,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ach",
+    "id": 45,
     "term_en": "Automated Clearing House (ACH)",
     "term_fa": "اتاق تسویه خودکار (ACH)",
     "letter": "A",
@@ -8726,7 +8726,7 @@
     "deep_enriched": true
   },
   {
-    "id": "atm",
+    "id": 46,
     "term_en": "Automated Teller Machine (ATM)",
     "term_fa": "دستگاه باجه خودکار (ATM)",
     "letter": "A",
@@ -8896,7 +8896,7 @@
     "deep_enriched": true
   },
   {
-    "id": "atr",
+    "id": 47,
     "term_en": "Average True Range (ATR)",
     "term_fa": "برد واقعی متوسط (ATR)",
     "letter": "A",
@@ -9114,7 +9114,7 @@
     "deep_enriched": true
   },
   {
-    "id": "balancesheet",
+    "id": 48,
     "term_en": "Balance Sheet",
     "term_fa": "ترازنامه (صورت وضعیت مالی)",
     "letter": "B",
@@ -9370,7 +9370,7 @@
     "deep_enriched": true
   },
   {
-    "id": "balancedscorecard",
+    "id": 49,
     "term_en": "Balanced Scorecard",
     "term_fa": "کارت امتیازی متوازن (BSC)",
     "letter": "B",
@@ -9584,7 +9584,7 @@
     "deep_enriched": true
   },
   {
-    "id": "bank-identification-number",
+    "id": 50,
     "term_en": "Bank Identification Numbers",
     "term_fa": "بانک Identification Numbers",
     "letter": "B",
@@ -9724,7 +9724,7 @@
     "deep_enriched": true
   },
   {
-    "id": "bankruptcy",
+    "id": 51,
     "term_en": "Bankruptcy",
     "term_fa": "Bankruptcy",
     "letter": "B",
@@ -9974,7 +9974,7 @@
     "deep_enriched": true
   },
   {
-    "id": "bayes-theorem",
+    "id": 52,
     "term_en": "Baye's Theorem",
     "term_fa": "Baye's Theorem",
     "letter": "B",
@@ -10132,7 +10132,7 @@
     "deep_enriched": true
   },
   {
-    "id": "bearmarket",
+    "id": 53,
     "term_en": "Bear Market",
     "term_fa": "خرسی (نزولی) بازار",
     "letter": "B",
@@ -10354,7 +10354,7 @@
     "deep_enriched": true
   },
   {
-    "id": "berkshire-hathaway",
+    "id": 54,
     "term_en": "Berkshire Hathaway",
     "term_fa": "Berkshire Hathaway",
     "letter": "B",
@@ -10444,7 +10444,7 @@
     "deep_enriched": true
   },
   {
-    "id": "bernard-madoff",
+    "id": 55,
     "term_en": "Bernie Madoff",
     "term_fa": "Bernie Madoff",
     "letter": "B",
@@ -10692,7 +10692,7 @@
     "deep_enriched": true
   },
   {
-    "id": "beta",
+    "id": 56,
     "term_en": "Beta",
     "term_fa": "Beta",
     "letter": "B",
@@ -10852,7 +10852,7 @@
     "deep_enriched": true
   },
   {
-    "id": "billoflading",
+    "id": 57,
     "term_en": "Bill of Lading",
     "term_fa": "Bill of Lading",
     "letter": "B",
@@ -11036,7 +11036,7 @@
     "deep_enriched": true
   },
   {
-    "id": "bitcoin-mining",
+    "id": 58,
     "term_en": "Bitcoin Mining",
     "term_fa": "Bitcoin Mining",
     "letter": "B",
@@ -11418,7 +11418,7 @@
     "deep_enriched": true
   },
   {
-    "id": "blockchain",
+    "id": 59,
     "term_en": "Blockchain",
     "term_fa": "Blockchain",
     "letter": "B",
@@ -11862,7 +11862,7 @@
     "deep_enriched": true
   },
   {
-    "id": "bollingerbands",
+    "id": 60,
     "term_en": "Bollinger Band",
     "term_fa": "Bollinger Band",
     "letter": "B",
@@ -12106,7 +12106,7 @@
     "deep_enriched": true
   },
   {
-    "id": "bond",
+    "id": 61,
     "term_en": "Bond",
     "term_fa": "اوراق قرضه",
     "letter": "B",
@@ -12304,7 +12304,7 @@
     "deep_enriched": true
   },
   {
-    "id": "breakevenanalysis",
+    "id": 62,
     "term_en": "Break-Even Analysis",
     "term_fa": "Break-Even تحلیل",
     "letter": "B",
@@ -12514,7 +12514,7 @@
     "deep_enriched": true
   },
   {
-    "id": "brexit",
+    "id": 63,
     "term_en": "Brexit",
     "term_fa": "Brexit",
     "letter": "B",
@@ -13068,7 +13068,7 @@
     "deep_enriched": true
   },
   {
-    "id": "budget",
+    "id": 64,
     "term_en": "Budget",
     "term_fa": "Budget",
     "letter": "B",
@@ -13706,7 +13706,7 @@
     "deep_enriched": true
   },
   {
-    "id": "budget-deficit",
+    "id": 65,
     "term_en": "Budget Deficit",
     "term_fa": "Budget کسری",
     "letter": "B",
@@ -13854,7 +13854,7 @@
     "deep_enriched": true
   },
   {
-    "id": "bullmarket",
+    "id": 66,
     "term_en": "Bull Market",
     "term_fa": "گاوی (صعودی) بازار",
     "letter": "B",
@@ -13990,7 +13990,7 @@
     "deep_enriched": true
   },
   {
-    "id": "businesscycle",
+    "id": 67,
     "term_en": "Business Cycle",
     "term_fa": "Business Cycle",
     "letter": "B",
@@ -14130,7 +14130,7 @@
     "deep_enriched": true
   },
   {
-    "id": "business-ethics",
+    "id": 68,
     "term_en": "Business Ethics",
     "term_fa": "Business Ethics",
     "letter": "B",
@@ -14392,7 +14392,7 @@
     "deep_enriched": true
   },
   {
-    "id": "businessmodel",
+    "id": 69,
     "term_en": "Business Model",
     "term_fa": "Business الگو / مدل",
     "letter": "B",
@@ -14772,7 +14772,7 @@
     "deep_enriched": true
   },
   {
-    "id": "business-valuation",
+    "id": 70,
     "term_en": "Business Valuation",
     "term_fa": "Business ارزش‌گذاری",
     "letter": "B",
@@ -14980,7 +14980,7 @@
     "deep_enriched": true
   },
   {
-    "id": "btoc",
+    "id": 71,
     "term_en": "Business-to-Consumer",
     "term_fa": "Business-to-Consumer",
     "letter": "B",
@@ -15136,7 +15136,7 @@
     "deep_enriched": true
   },
   {
-    "id": "capital",
+    "id": 72,
     "term_en": "Capital",
     "term_fa": "سرمایه",
     "letter": "C",
@@ -15380,7 +15380,7 @@
     "deep_enriched": true
   },
   {
-    "id": "capm",
+    "id": 73,
     "term_en": "Capital Asset Pricing Model (CAPM)",
     "term_fa": "الگوی قیمت‌گذاری دارایی‌های سرمایه‌ای (CAPM)",
     "letter": "C",
@@ -15626,7 +15626,7 @@
     "deep_enriched": true
   },
   {
-    "id": "capitalexpenditure",
+    "id": 74,
     "term_en": "Capital Expenditure",
     "term_fa": "مخارج سرمایه‌ای (کپکس / CapEx)",
     "letter": "C",
@@ -15828,7 +15828,7 @@
     "deep_enriched": true
   },
   {
-    "id": "capitalism",
+    "id": 75,
     "term_en": "Capitalism",
     "term_fa": "سرمایه‌داری (کاپیتالیسم)",
     "letter": "C",
@@ -16210,7 +16210,7 @@
     "deep_enriched": true
   },
   {
-    "id": "central_limit_theorem",
+    "id": 76,
     "term_en": "Central Limit Theorem (CLT)",
     "term_fa": "قضیه حد مرکزی (CLT)",
     "letter": "C",
@@ -16346,7 +16346,7 @@
     "deep_enriched": true
   },
   {
-    "id": "cfa",
+    "id": 77,
     "term_en": "Chartered Financial Analyst (CFA)",
     "term_fa": "تحلیلگر مالی خبره (CFA)",
     "letter": "C",
@@ -16560,7 +16560,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ceo",
+    "id": 78,
     "term_en": "Chief Executive Officer (CEO)",
     "term_fa": "مدیر عامل (مدیر عامل) (CEO)",
     "letter": "C",
@@ -16852,7 +16852,7 @@
     "deep_enriched": true
   },
   {
-    "id": "code-of-ethics",
+    "id": 79,
     "term_en": "Code of Ethics",
     "term_fa": "Code of Ethics",
     "letter": "C",
@@ -17106,7 +17106,7 @@
     "deep_enriched": true
   },
   {
-    "id": "coefficientofvariation",
+    "id": 80,
     "term_en": "Coefficient of Variation (CV)",
     "term_fa": "Coefficient of Variation (CV)",
     "letter": "C",
@@ -17284,7 +17284,7 @@
     "deep_enriched": true
   },
   {
-    "id": "collateral",
+    "id": 81,
     "term_en": "Collateral",
     "term_fa": "Collateral",
     "letter": "C",
@@ -17442,7 +17442,7 @@
     "deep_enriched": true
   },
   {
-    "id": "command-economy",
+    "id": 82,
     "term_en": "Command Economy",
     "term_fa": "Command اقتصاد",
     "letter": "C",
@@ -17584,7 +17584,7 @@
     "deep_enriched": true
   },
   {
-    "id": "comparativeadvantage",
+    "id": 83,
     "term_en": "Comparative Advantage",
     "term_fa": "Comparative Advantage",
     "letter": "C",
@@ -17840,7 +17840,7 @@
     "deep_enriched": true
   },
   {
-    "id": "cagr",
+    "id": 84,
     "term_en": "Compound Annual Growth Rate (CAGR)",
     "term_fa": "نرخ رشد سالانه مرکب (CAGR)",
     "letter": "C",
@@ -18154,7 +18154,7 @@
     "deep_enriched": true
   },
   {
-    "id": "compoundinterest",
+    "id": 85,
     "term_en": "Compound Interest",
     "term_fa": "Compound بهره",
     "letter": "C",
@@ -18538,7 +18538,7 @@
     "deep_enriched": true
   },
   {
-    "id": "conflict-theory",
+    "id": 86,
     "term_en": "Conflict Theory",
     "term_fa": "Conflict Theory",
     "letter": "C",
@@ -18682,7 +18682,7 @@
     "deep_enriched": true
   },
   {
-    "id": "consumerpriceindex",
+    "id": 87,
     "term_en": "Consumer Price Index (CPI)",
     "term_fa": "شاخص قیمت مصرف‌کننده (تورم CPI)",
     "letter": "C",
@@ -18886,7 +18886,7 @@
     "deep_enriched": true
   },
   {
-    "id": "contributionmargin",
+    "id": 88,
     "term_en": "Contribution Margin",
     "term_fa": "Contribution حاشیه سود / مارجین",
     "letter": "C",
@@ -19084,7 +19084,7 @@
     "deep_enriched": true
   },
   {
-    "id": "correlation",
+    "id": 89,
     "term_en": "Correlation",
     "term_fa": "Correlation",
     "letter": "C",
@@ -19346,7 +19346,7 @@
     "deep_enriched": true
   },
   {
-    "id": "correlationcoefficient",
+    "id": 90,
     "term_en": "Correlation Coefficient",
     "term_fa": "Correlation Coefficient",
     "letter": "C",
@@ -19534,7 +19534,7 @@
     "deep_enriched": true
   },
   {
-    "id": "cogs",
+    "id": 91,
     "term_en": "Cost of Goods Sold (COGS)",
     "term_fa": "بهای تمام شده کالای فروخته شده (COGS)",
     "letter": "C",
@@ -19828,7 +19828,7 @@
     "deep_enriched": true
   },
   {
-    "id": "creativedestruction",
+    "id": 92,
     "term_en": "Creative Destruction",
     "term_fa": "Creative Destruction",
     "letter": "C",
@@ -19994,7 +19994,7 @@
     "deep_enriched": true
   },
   {
-    "id": "creditdefaultswap",
+    "id": 93,
     "term_en": "Credit Default Swap (CDS)",
     "term_fa": "اعتبار Default سوآپ (قرارداد معاوضه) (CDS)",
     "letter": "C",
@@ -20320,7 +20320,7 @@
     "deep_enriched": true
   },
   {
-    "id": "currentratio",
+    "id": 94,
     "term_en": "Current Ratio",
     "term_fa": "نسبت جاری (نسبت نقدینگی)",
     "letter": "C",
@@ -20594,7 +20594,7 @@
     "deep_enriched": true
   },
   {
-    "id": "customer-service",
+    "id": 95,
     "term_en": "Customer Service",
     "term_fa": "Customer Service",
     "letter": "C",
@@ -20808,7 +20808,7 @@
     "deep_enriched": true
   },
   {
-    "id": "dpo",
+    "id": 96,
     "term_en": "Days Payable Outstanding (DPO)",
     "term_fa": "معوقه روزهای پرداختنی (DPO)",
     "letter": "D",
@@ -21066,7 +21066,7 @@
     "deep_enriched": true
   },
   {
-    "id": "dso",
+    "id": 97,
     "term_en": "Days Sales Outstanding (DSO)",
     "term_fa": "دوره وصول مطالبات (DSO)",
     "letter": "D",
@@ -21234,7 +21234,7 @@
     "deep_enriched": true
   },
   {
-    "id": "debenture",
+    "id": 98,
     "term_en": "Debenture",
     "term_fa": "Debenture",
     "letter": "D",
@@ -21490,7 +21490,7 @@
     "deep_enriched": true
   },
   {
-    "id": "debtratio",
+    "id": 99,
     "term_en": "Debt Ratio",
     "term_fa": "بدهی نسبت",
     "letter": "D",
@@ -21766,7 +21766,7 @@
     "deep_enriched": true
   },
   {
-    "id": "dscr",
+    "id": 100,
     "term_en": "Debt-Service Coverage Ratio (DSCR)",
     "term_fa": "نسبت پوشش بدهی-خدمات (DSCR)",
     "letter": "D",
@@ -22042,7 +22042,7 @@
     "deep_enriched": true
   },
   {
-    "id": "debtequityratio",
+    "id": 101,
     "term_en": "Debt-to-Equity Ratio (D/E)",
     "term_fa": "نسبت بدهی به حقوق صاحبان سهام (نسبت D/E)",
     "letter": "D",
@@ -22286,7 +22286,7 @@
     "deep_enriched": true
   },
   {
-    "id": "deferred-compensation",
+    "id": 102,
     "term_en": "Deferred Compensation",
     "term_fa": "Deferred Compensation",
     "letter": "D",
@@ -22488,7 +22488,7 @@
     "deep_enriched": true
   },
   {
-    "id": "delivery-duty-paid",
+    "id": 103,
     "term_en": "Delivered Duty Paid (DDP)",
     "term_fa": "وظیفه پرداخت شده (DDP)",
     "letter": "D",
@@ -22626,7 +22626,7 @@
     "deep_enriched": true
   },
   {
-    "id": "delivereddutyunpaid",
+    "id": 104,
     "term_en": "Delivered Duty Unpaid (DDU)",
     "term_fa": "وظیفه تحویلی بدون پرداخت (DDU)",
     "letter": "D",
@@ -22772,7 +22772,7 @@
     "deep_enriched": true
   },
   {
-    "id": "delivered-place-dap",
+    "id": 105,
     "term_en": "Delivered-at-Place (DAP)",
     "term_fa": "تحویل در محل (DAP)",
     "letter": "D",
@@ -22940,7 +22940,7 @@
     "deep_enriched": true
   },
   {
-    "id": "demand",
+    "id": 106,
     "term_en": "Demand",
     "term_fa": "Demand",
     "letter": "D",
@@ -23128,7 +23128,7 @@
     "deep_enriched": true
   },
   {
-    "id": "priceelasticity",
+    "id": 107,
     "term_en": "Demand Elasticity",
     "term_fa": "Demand Elasticity",
     "letter": "D",
@@ -23326,7 +23326,7 @@
     "deep_enriched": true
   },
   {
-    "id": "demonetization",
+    "id": 108,
     "term_en": "Demonetization",
     "term_fa": "Demonetization",
     "letter": "D",
@@ -23472,7 +23472,7 @@
     "deep_enriched": true
   },
   {
-    "id": "derivative",
+    "id": 109,
     "term_en": "Derivative",
     "term_fa": "مشتقه مالی",
     "letter": "D",
@@ -23768,7 +23768,7 @@
     "deep_enriched": true
   },
   {
-    "id": "dilution",
+    "id": 110,
     "term_en": "Dilution",
     "term_fa": "Dilution",
     "letter": "D",
@@ -23882,7 +23882,7 @@
     "deep_enriched": true
   },
   {
-    "id": "disbursement",
+    "id": 111,
     "term_en": "Disbursement",
     "term_fa": "Disbursement",
     "letter": "D",
@@ -24078,7 +24078,7 @@
     "deep_enriched": true
   },
   {
-    "id": "discountrate",
+    "id": 112,
     "term_en": "Discount Rate",
     "term_fa": "تنزیل / تخفیف نرخ",
     "letter": "D",
@@ -24308,7 +24308,7 @@
     "deep_enriched": true
   },
   {
-    "id": "diversification",
+    "id": 113,
     "term_en": "Diversification",
     "term_fa": "Diversification",
     "letter": "D",
@@ -24732,7 +24732,7 @@
     "deep_enriched": true
   },
   {
-    "id": "dividend",
+    "id": 114,
     "term_en": "Dividend",
     "term_fa": "سود نقدی تقسیمی (DPS)",
     "letter": "D",
@@ -24988,7 +24988,7 @@
     "deep_enriched": true
   },
   {
-    "id": "dividendpayoutratio",
+    "id": 115,
     "term_en": "Dividend Payout Ratio",
     "term_fa": "نسبت پرداخت سود نقدی (DPS/EPS)",
     "letter": "D",
@@ -25218,7 +25218,7 @@
     "deep_enriched": true
   },
   {
-    "id": "dividendyield",
+    "id": 116,
     "term_en": "Dividend Yield",
     "term_fa": "سود نقدی تقسیمی (DPS) بازده / سود",
     "letter": "D",
@@ -25458,7 +25458,7 @@
     "deep_enriched": true
   },
   {
-    "id": "djia",
+    "id": 117,
     "term_en": "Dow Jones Industrial Average (DJIA)",
     "term_fa": "میانگین صنعتی داوجونز (DJIA)",
     "letter": "D",
@@ -25654,7 +25654,7 @@
     "deep_enriched": true
   },
   {
-    "id": "duediligence",
+    "id": 118,
     "term_en": "Due Diligence",
     "term_fa": "Due Diligence",
     "letter": "D",
@@ -26048,7 +26048,7 @@
     "deep_enriched": true
   },
   {
-    "id": "dupontanalysis",
+    "id": 119,
     "term_en": "DuPont Analysis",
     "term_fa": "DuPont تحلیل",
     "letter": "D",
@@ -26280,7 +26280,7 @@
     "deep_enriched": true
   },
   {
-    "id": "earnest-money",
+    "id": 120,
     "term_en": "Earnest Money",
     "term_fa": "Earnest Money",
     "letter": "E",
@@ -26492,7 +26492,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ebit",
+    "id": 121,
     "term_en": "Earnings Before Interest and Taxes (EBIT)",
     "term_fa": "سود قبل از بهره و مالیات (EBIT)",
     "letter": "E",
@@ -26666,7 +26666,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ebitda",
+    "id": 122,
     "term_en": "Earnings Before Interest, Taxes, Depreciation and Amortization (EBITDA)",
     "term_fa": "سود قبل از بهره، مالیات و استهلاک (EBITDA)",
     "letter": "E",
@@ -26918,7 +26918,7 @@
     "deep_enriched": true
   },
   {
-    "id": "eps",
+    "id": 123,
     "term_en": "Earnings Per Share (EPS)",
     "term_fa": "درآمد هر سهم (EPS)",
     "letter": "E",
@@ -27174,7 +27174,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ebita",
+    "id": 124,
     "term_en": "EBITA",
     "term_fa": "EBITA",
     "letter": "E",
@@ -27304,7 +27304,7 @@
     "deep_enriched": true
   },
   {
-    "id": "economicgrowth",
+    "id": 125,
     "term_en": "Economic Growth",
     "term_fa": "اقتصادی رشد",
     "letter": "E",
@@ -27524,7 +27524,7 @@
     "deep_enriched": true
   },
   {
-    "id": "economicmoat",
+    "id": 126,
     "term_en": "Economic Moat",
     "term_fa": "اقتصادی Moat",
     "letter": "E",
@@ -27918,7 +27918,7 @@
     "deep_enriched": true
   },
   {
-    "id": "economics",
+    "id": 127,
     "term_en": "Economics",
     "term_fa": "Economics",
     "letter": "E",
@@ -28226,7 +28226,7 @@
     "deep_enriched": true
   },
   {
-    "id": "economiesofscale",
+    "id": 128,
     "term_en": "Economies of Scale",
     "term_fa": "Economies of Scale",
     "letter": "E",
@@ -28474,7 +28474,7 @@
     "deep_enriched": true
   },
   {
-    "id": "esop",
+    "id": 129,
     "term_en": "Employee Stock Ownership Plan (ESOP)",
     "term_fa": "طرح مالکیت سهام کارکنان (ESOP)",
     "letter": "E",
@@ -28624,7 +28624,7 @@
     "deep_enriched": true
   },
   {
-    "id": "endowment",
+    "id": 130,
     "term_en": "Endowment Fund",
     "term_fa": "Endowment صندوق",
     "letter": "E",
@@ -28904,7 +28904,7 @@
     "deep_enriched": true
   },
   {
-    "id": "erp",
+    "id": 131,
     "term_en": "Enterprise Resource Planning (ERP)",
     "term_fa": "برنامه‌ریزی منابع سازمانی (ERP)",
     "letter": "E",
@@ -29254,7 +29254,7 @@
     "deep_enriched": true
   },
   {
-    "id": "enterprisevalue",
+    "id": 132,
     "term_en": "Enterprise Value (EV)",
     "term_fa": "ارزش کل بنگاه (Enterprise Value / EV)",
     "letter": "E",
@@ -29528,7 +29528,7 @@
     "deep_enriched": true
   },
   {
-    "id": "entrepreneur",
+    "id": 133,
     "term_en": "Entrepreneur",
     "term_fa": "Entrepreneur",
     "letter": "E",
@@ -30000,7 +30000,7 @@
     "deep_enriched": true
   },
   {
-    "id": "environmental-protection-agency",
+    "id": 134,
     "term_en": "Environmental Protection Agency (EPA)",
     "term_fa": "آژانس حفاظت از محیط زیست (EPA)",
     "letter": "E",
@@ -30186,7 +30186,7 @@
     "deep_enriched": true
   },
   {
-    "id": "environmental-social-and-governance-esg-criteria",
+    "id": 135,
     "term_en": "Environmental, Social, and Governance (ESG) Criteria",
     "term_fa": "معیارهای محیط‌زیستی، اجتماعی و حاکمیتی (ESG)",
     "letter": "E",
@@ -30306,7 +30306,7 @@
     "deep_enriched": true
   },
   {
-    "id": "equity",
+    "id": 136,
     "term_en": "Equity",
     "term_fa": "حقوق صاحبان سهام / حقوق مالکانه",
     "letter": "E",
@@ -30622,7 +30622,7 @@
     "deep_enriched": true
   },
   {
-    "id": "eac",
+    "id": 137,
     "term_en": "Equivalent Annual Cost (EAC)",
     "term_fa": "هزینه سالانه معادل (EAC)",
     "letter": "E",
@@ -30802,7 +30802,7 @@
     "deep_enriched": true
   },
   {
-    "id": "escrow",
+    "id": 138,
     "term_en": "Escrow",
     "term_fa": "Escrow",
     "letter": "E",
@@ -31020,7 +31020,7 @@
     "deep_enriched": true
   },
   {
-    "id": "europeanunion",
+    "id": 139,
     "term_en": "European Union (EU)",
     "term_fa": "European Union (EU)",
     "letter": "E",
@@ -31200,7 +31200,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ex-dividend",
+    "id": 140,
     "term_en": "Ex-Dividend",
     "term_fa": "Ex-Dividend",
     "letter": "E",
@@ -31330,7 +31330,7 @@
     "deep_enriched": true
   },
   {
-    "id": "exchangerate",
+    "id": 141,
     "term_en": "Exchange Rate",
     "term_fa": "صرافی / بورس نرخ",
     "letter": "E",
@@ -31474,7 +31474,7 @@
     "deep_enriched": true
   },
   {
-    "id": "etf",
+    "id": 142,
     "term_en": "Exchange-Traded Fund (ETF)",
     "term_fa": "صندوق قابل معامله در بورس (ETF)",
     "letter": "E",
@@ -31740,7 +31740,7 @@
     "deep_enriched": true
   },
   {
-    "id": "externality",
+    "id": 143,
     "term_en": "Externality",
     "term_fa": "Externality",
     "letter": "E",
@@ -31964,7 +31964,7 @@
     "deep_enriched": true
   },
   {
-    "id": "faang-stocks",
+    "id": 144,
     "term_en": "FAANG Stocks",
     "term_fa": "سهام فنگ (FAANG)",
     "letter": "F",
@@ -32092,7 +32092,7 @@
     "deep_enriched": true
   },
   {
-    "id": "factors-production",
+    "id": 145,
     "term_en": "Factors of Production",
     "term_fa": "Factors of Production",
     "letter": "F",
@@ -32342,7 +32342,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fang-stocks-fb-amzn",
+    "id": 146,
     "term_en": "FANG Stocks",
     "term_fa": "FANG سهام",
     "letter": "F",
@@ -32550,7 +32550,7 @@
     "deep_enriched": true
   },
   {
-    "id": "feasibility-study",
+    "id": 147,
     "term_en": "Feasibility Study",
     "term_fa": "Feasibility Study",
     "letter": "F",
@@ -32774,7 +32774,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fdic",
+    "id": 148,
     "term_en": "Federal Deposit Insurance Corporation (FDIC)",
     "term_fa": "شرکت بیمه سپرده‌های فدرال (FDIC)",
     "letter": "F",
@@ -32940,7 +32940,7 @@
     "deep_enriched": true
   },
   {
-    "id": "federalfundsrate",
+    "id": 149,
     "term_en": "Federal Funds Rate",
     "term_fa": "نرخ بهره فدرال رزرو (Federal Funds Rate)",
     "letter": "F",
@@ -33124,7 +33124,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fhaloan",
+    "id": 150,
     "term_en": "Federal Housing Administration Loan (FHA)",
     "term_fa": "وام اداره مسکن فدرال (FHA)",
     "letter": "F",
@@ -33494,7 +33494,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fica",
+    "id": 151,
     "term_en": "Federal Insurance Contributions Act (FICA)",
     "term_fa": "قانون مشارکت‌های بیمه فدرال (FICA)",
     "letter": "F",
@@ -33678,7 +33678,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fiatmoney",
+    "id": 152,
     "term_en": "Fiat Money",
     "term_fa": "Fiat Money",
     "letter": "F",
@@ -33862,7 +33862,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fiduciary",
+    "id": 153,
     "term_en": "Fiduciary",
     "term_fa": "Fiduciary",
     "letter": "F",
@@ -34266,7 +34266,7 @@
     "deep_enriched": true
   },
   {
-    "id": "finance",
+    "id": 154,
     "term_en": "Finance",
     "term_fa": "Finance",
     "letter": "F",
@@ -34658,7 +34658,7 @@
     "deep_enriched": true
   },
   {
-    "id": "financialinstitution",
+    "id": 155,
     "term_en": "Financial Institution (FI)",
     "term_fa": "Financial Institution (FI)",
     "letter": "F",
@@ -34898,7 +34898,7 @@
     "deep_enriched": true
   },
   {
-    "id": "financial-statements",
+    "id": 156,
     "term_en": "Financial Statements",
     "term_fa": "Financial Statements",
     "letter": "F",
@@ -35200,7 +35200,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fintech",
+    "id": 157,
     "term_en": "Financial Technology (Fintech)",
     "term_fa": "فناوری مالی (فین‌تک) (Fintech)",
     "letter": "F",
@@ -35406,7 +35406,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fiscalpolicy",
+    "id": 158,
     "term_en": "Fiscal Policy",
     "term_fa": "مالی / بودجه‌ای سیاست / خط‌مشی / بیمه‌نامه",
     "letter": "F",
@@ -35620,7 +35620,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fixedincome",
+    "id": 159,
     "term_en": "Fixed Income",
     "term_fa": "Fixed درآمد / سود",
     "letter": "F",
@@ -35924,7 +35924,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fixed-incomesecurity",
+    "id": 160,
     "term_en": "Fixed-Income Security",
     "term_fa": "Fixed-Income ورقه بهادار",
     "letter": "F",
@@ -36234,7 +36234,7 @@
     "deep_enriched": true
   },
   {
-    "id": "four-ps",
+    "id": 161,
     "term_en": "Four Ps",
     "term_fa": "Four Ps",
     "letter": "F",
@@ -36468,7 +36468,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fca",
+    "id": 162,
     "term_en": "Free Carrier (FCA)",
     "term_fa": "حامل آزاد (FCA)",
     "letter": "F",
@@ -36586,7 +36586,7 @@
     "deep_enriched": true
   },
   {
-    "id": "freemarket",
+    "id": 163,
     "term_en": "Free Market",
     "term_fa": "Free بازار",
     "letter": "F",
@@ -36720,7 +36720,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fob",
+    "id": 164,
     "term_en": "Free on Board (FOB)",
     "term_fa": "تحویل رایگان روی عرشه (FOB)",
     "letter": "F",
@@ -36976,7 +36976,7 @@
     "deep_enriched": true
   },
   {
-    "id": "free-trade",
+    "id": 165,
     "term_en": "Free Trade",
     "term_fa": "Free تجارت / معامله",
     "letter": "F",
@@ -37272,7 +37272,7 @@
     "deep_enriched": true
   },
   {
-    "id": "fringe-benefits",
+    "id": 166,
     "term_en": "Fringe Benefits",
     "term_fa": "Fringe Benefits",
     "letter": "F",
@@ -37410,7 +37410,7 @@
     "deep_enriched": true
   },
   {
-    "id": "futures",
+    "id": 167,
     "term_en": "Futures",
     "term_fa": "معاملات آتی",
     "letter": "F",
@@ -37610,7 +37610,7 @@
     "deep_enriched": true
   },
   {
-    "id": "gametheory",
+    "id": 168,
     "term_en": "Game Theory",
     "term_fa": "نظریه بازی‌ها",
     "letter": "G",
@@ -38080,7 +38080,7 @@
     "deep_enriched": true
   },
   {
-    "id": "gamma",
+    "id": 169,
     "term_en": "Gamma",
     "term_fa": "Gamma",
     "letter": "G",
@@ -38194,7 +38194,7 @@
     "deep_enriched": true
   },
   {
-    "id": "gatt",
+    "id": 170,
     "term_en": "General Agreement on Tariffs and Trade (GATT)",
     "term_fa": "توافق‌نامه عمومی تعرفه‌ها و تجارت (گات) (GATT)",
     "letter": "G",
@@ -38336,7 +38336,7 @@
     "deep_enriched": true
   },
   {
-    "id": "general-data-protection-regulation-gdpr",
+    "id": 171,
     "term_en": "General Data Protection Regulation (GDPR)",
     "term_fa": "مقررات عمومی حفاظت از داده‌ها (GDPR)",
     "letter": "G",
@@ -38478,7 +38478,7 @@
     "deep_enriched": true
   },
   {
-    "id": "generalledger",
+    "id": 172,
     "term_en": "General Ledger",
     "term_fa": "General Ledger",
     "letter": "G",
@@ -38626,7 +38626,7 @@
     "deep_enriched": true
   },
   {
-    "id": "gaap",
+    "id": 173,
     "term_en": "Generally Accepted Accounting Principles (GAAP)",
     "term_fa": "اصول حسابداری پذیرفته‌شده به‌طور عام (GAAP)",
     "letter": "G",
@@ -38764,7 +38764,7 @@
     "deep_enriched": true
   },
   {
-    "id": "generation-x-genx",
+    "id": 174,
     "term_en": "Generation X (Gen X)",
     "term_fa": "Generation X (Gen X)",
     "letter": "G",
@@ -39062,7 +39062,7 @@
     "deep_enriched": true
   },
   {
-    "id": "geometricmean",
+    "id": 175,
     "term_en": "Geometric Mean",
     "term_fa": "Geometric Mean",
     "letter": "G",
@@ -39200,7 +39200,7 @@
     "deep_enriched": true
   },
   {
-    "id": "giffen-good",
+    "id": 176,
     "term_en": "Giffen Good",
     "term_fa": "Giffen Good",
     "letter": "G",
@@ -39314,7 +39314,7 @@
     "deep_enriched": true
   },
   {
-    "id": "gini-index",
+    "id": 177,
     "term_en": "Gini Index",
     "term_fa": "Gini شاخص",
     "letter": "G",
@@ -39486,7 +39486,7 @@
     "deep_enriched": true
   },
   {
-    "id": "globalization",
+    "id": 178,
     "term_en": "Globalization",
     "term_fa": "Globalization",
     "letter": "G",
@@ -39698,7 +39698,7 @@
     "deep_enriched": true
   },
   {
-    "id": "gst",
+    "id": 179,
     "term_en": "Goods and Services Tax (GST)",
     "term_fa": "مالیات بر کالاها و خدمات (GST)",
     "letter": "G",
@@ -39890,7 +39890,7 @@
     "deep_enriched": true
   },
   {
-    "id": "goodwill",
+    "id": 180,
     "term_en": "Goodwill",
     "term_fa": "Goodwill",
     "letter": "G",
@@ -40084,7 +40084,7 @@
     "deep_enriched": true
   },
   {
-    "id": "gordongrowthmodel",
+    "id": 181,
     "term_en": "Gordon Growth Model",
     "term_fa": "Gordon رشد الگو / مدل",
     "letter": "G",
@@ -40184,7 +40184,7 @@
     "deep_enriched": true
   },
   {
-    "id": "government-bond",
+    "id": 182,
     "term_en": "Government Bond",
     "term_fa": "Government اوراق قرضه",
     "letter": "G",
@@ -40356,7 +40356,7 @@
     "deep_enriched": true
   },
   {
-    "id": "government-shutdown",
+    "id": 183,
     "term_en": "Government Shutdown",
     "term_fa": "Government Shutdown",
     "letter": "G",
@@ -40514,7 +40514,7 @@
     "deep_enriched": true
   },
   {
-    "id": "great_depression",
+    "id": 184,
     "term_en": "Great Depression",
     "term_fa": "Great Depression",
     "letter": "G",
@@ -40774,7 +40774,7 @@
     "deep_enriched": true
   },
   {
-    "id": "gdp",
+    "id": 185,
     "term_en": "Gross Domestic Product (GDP)",
     "term_fa": "تولید ناخالص داخلی (GDP)",
     "letter": "G",
@@ -41086,7 +41086,7 @@
     "deep_enriched": true
   },
   {
-    "id": "grossincome",
+    "id": 186,
     "term_en": "Gross Income",
     "term_fa": "Gross درآمد / سود",
     "letter": "G",
@@ -41268,7 +41268,7 @@
     "deep_enriched": true
   },
   {
-    "id": "grossmargin",
+    "id": 187,
     "term_en": "Gross Margin",
     "term_fa": "Gross حاشیه سود / مارجین",
     "letter": "G",
@@ -41418,7 +41418,7 @@
     "deep_enriched": true
   },
   {
-    "id": "gnp",
+    "id": 188,
     "term_en": "Gross National Product (GNP)",
     "term_fa": "تولید ناخالص ملی (GNP)",
     "letter": "G",
@@ -41518,7 +41518,7 @@
     "deep_enriched": true
   },
   {
-    "id": "grossprofit",
+    "id": 189,
     "term_en": "Gross Profit",
     "term_fa": "Gross سود",
     "letter": "G",
@@ -41724,7 +41724,7 @@
     "deep_enriched": true
   },
   {
-    "id": "gross_profit_margin",
+    "id": 190,
     "term_en": "Gross Profit Margin",
     "term_fa": "Gross سود حاشیه سود / مارجین",
     "letter": "G",
@@ -41902,7 +41902,7 @@
     "deep_enriched": true
   },
   {
-    "id": "guarantor",
+    "id": 191,
     "term_en": "Guarantor",
     "term_fa": "Guarantor",
     "letter": "G",
@@ -42122,7 +42122,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hard-skills",
+    "id": 192,
     "term_en": "Hard Skills",
     "term_fa": "Hard Skills",
     "letter": "H",
@@ -42344,7 +42344,7 @@
     "deep_enriched": true
   },
   {
-    "id": "harmonicaverage",
+    "id": 193,
     "term_en": "Harmonic Mean",
     "term_fa": "Harmonic Mean",
     "letter": "H",
@@ -42496,7 +42496,7 @@
     "deep_enriched": true
   },
   {
-    "id": "head-shoulders",
+    "id": 194,
     "term_en": "Head And Shoulders Pattern",
     "term_fa": "الگوی سر و شانه (تحلیل تکنیکال)",
     "letter": "H",
@@ -42716,7 +42716,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hmo",
+    "id": 195,
     "term_en": "Health Maintenance Organizations (HMOs)",
     "term_fa": "سازمان‌های نگهداری سلامت (HMOها) (HMOs)",
     "letter": "H",
@@ -42954,7 +42954,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hsa",
+    "id": 196,
     "term_en": "Health Savings Account (HSA)",
     "term_fa": "حساب پس‌انداز سلامت (HSA)",
     "letter": "H",
@@ -43226,7 +43226,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hedge",
+    "id": 197,
     "term_en": "Hedge",
     "term_fa": "پوشش ریسک (هجینگ)",
     "letter": "H",
@@ -43430,7 +43430,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hedgefund",
+    "id": 198,
     "term_en": "Hedge Fund",
     "term_fa": "پوشش ریسک (هجینگ) صندوق",
     "letter": "H",
@@ -43678,7 +43678,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hhi",
+    "id": 199,
     "term_en": "Herfindahl-Hirschman Index (HHI)",
     "term_fa": "شاخص هرفیندال-هیرشمن (HHI)",
     "letter": "H",
@@ -43850,7 +43850,7 @@
     "deep_enriched": true
   },
   {
-    "id": "heteroskedasticity",
+    "id": 200,
     "term_en": "Heteroskedasticity",
     "term_fa": "Heteroskedasticity",
     "letter": "H",
@@ -43972,7 +43972,7 @@
     "deep_enriched": true
   },
   {
-    "id": "high-low-method",
+    "id": 201,
     "term_en": "High-Low Method",
     "term_fa": "روش بیشینه-کمینه",
     "letter": "H",
@@ -44174,7 +44174,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hnwi",
+    "id": 202,
     "term_en": "High-Net-Worth Individual (HNWI)",
     "term_fa": "فرد با دارایی خالص بالا (HNWI)",
     "letter": "H",
@@ -44320,7 +44320,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hold-harmless-clause",
+    "id": 203,
     "term_en": "Hold Harmless Clause",
     "term_fa": "بند حفظ مسئولیت",
     "letter": "H",
@@ -44440,7 +44440,7 @@
     "deep_enriched": true
   },
   {
-    "id": "holdingcompany",
+    "id": 204,
     "term_en": "Holding Company",
     "term_fa": "هلدینگ / مالکیت دارایی Company",
     "letter": "H",
@@ -44574,7 +44574,7 @@
     "deep_enriched": true
   },
   {
-    "id": "homeequityloan",
+    "id": 205,
     "term_en": "Home Equity Loan",
     "term_fa": "Home حقوق صاحبان سهام / حقوق مالکانه وام",
     "letter": "H",
@@ -44802,7 +44802,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hoa",
+    "id": 206,
     "term_en": "Homeowners Association (HOA)",
     "term_fa": "انجمن مالکان خانه (HOA)",
     "letter": "H",
@@ -45022,7 +45022,7 @@
     "deep_enriched": true
   },
   {
-    "id": "homeowners-association-fee-hoa",
+    "id": 207,
     "term_en": "Homeowners Association Fee (HOA Fee)",
     "term_fa": "هزینه انجمن مالکان خانه (هزینه HOA) (HOA Fee)",
     "letter": "H",
@@ -45158,7 +45158,7 @@
     "deep_enriched": true
   },
   {
-    "id": "homestead-exemption",
+    "id": 208,
     "term_en": "Homestead Exemption",
     "term_fa": "Homestead Exemption",
     "letter": "H",
@@ -45310,7 +45310,7 @@
     "deep_enriched": true
   },
   {
-    "id": "horizontalintegration",
+    "id": 209,
     "term_en": "Horizontal Integration",
     "term_fa": "Horizontal Integration",
     "letter": "H",
@@ -45530,7 +45530,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hostiletakeover",
+    "id": 210,
     "term_en": "Hostile Takeover",
     "term_fa": "Hostile Takeover",
     "letter": "H",
@@ -45736,7 +45736,7 @@
     "deep_enriched": true
   },
   {
-    "id": "housing_bubble",
+    "id": 211,
     "term_en": "Housing Bubble",
     "term_fa": "Housing حباب قیمتی",
     "letter": "H",
@@ -45852,7 +45852,7 @@
     "deep_enriched": true
   },
   {
-    "id": "limited-government",
+    "id": 212,
     "term_en": "How Limited Government Works: Concept, History & Examples",
     "term_fa": "چگونه دولت محدود عمل می‌کند: مفهوم، تاریخچه و نمونه‌ها",
     "letter": "L",
@@ -46064,7 +46064,7 @@
     "deep_enriched": true
   },
   {
-    "id": "humancapital",
+    "id": 213,
     "term_en": "Human Capital",
     "term_fa": "Human سرمایه",
     "letter": "H",
@@ -46180,7 +46180,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hurdlerate",
+    "id": 214,
     "term_en": "Hurdle Rate",
     "term_fa": "Hurdle نرخ",
     "letter": "H",
@@ -46444,7 +46444,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hyperinflation",
+    "id": 215,
     "term_en": "Hyperinflation",
     "term_fa": "Hyperinflation",
     "letter": "H",
@@ -46660,7 +46660,7 @@
     "deep_enriched": true
   },
   {
-    "id": "hypothesistesting",
+    "id": 216,
     "term_en": "Hypothesis Testing",
     "term_fa": "Hypothesis Testing",
     "letter": "H",
@@ -46792,7 +46792,7 @@
     "deep_enriched": true
   },
   {
-    "id": "1092",
+    "id": 217,
     "term_en": "IA-1092 SEC Release",
     "term_fa": "IA-1092 SEC Release",
     "letter": "#",
@@ -46870,7 +46870,7 @@
     "deep_enriched": true
   },
   {
-    "id": "income",
+    "id": 218,
     "term_en": "Income",
     "term_fa": "درآمد / سود",
     "letter": "I",
@@ -47046,7 +47046,7 @@
     "deep_enriched": true
   },
   {
-    "id": "incomestatement",
+    "id": 219,
     "term_en": "Income Statement",
     "term_fa": "صورت سود و زیان",
     "letter": "I",
@@ -47402,7 +47402,7 @@
     "deep_enriched": true
   },
   {
-    "id": "indemnity",
+    "id": 220,
     "term_en": "Indemnity",
     "term_fa": "Indemnity",
     "letter": "I",
@@ -47572,7 +47572,7 @@
     "deep_enriched": true
   },
   {
-    "id": "indemnity_insurance",
+    "id": 221,
     "term_en": "Indemnity Insurance",
     "term_fa": "Indemnity بیمه",
     "letter": "I",
@@ -47712,7 +47712,7 @@
     "deep_enriched": true
   },
   {
-    "id": "indexfund",
+    "id": 222,
     "term_en": "Index Fund",
     "term_fa": "شاخص صندوق",
     "letter": "I",
@@ -47956,7 +47956,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ira",
+    "id": 223,
     "term_en": "Individual Retirement Account (IRA)",
     "term_fa": "حساب بازنشستگی فردی (IRA)",
     "letter": "I",
@@ -48202,7 +48202,7 @@
     "deep_enriched": true
   },
   {
-    "id": "industrial-revolution",
+    "id": 224,
     "term_en": "Industrial Revolution",
     "term_fa": "Industrial Revolution",
     "letter": "I",
@@ -48406,7 +48406,7 @@
     "deep_enriched": true
   },
   {
-    "id": "inferior-good",
+    "id": 225,
     "term_en": "Inferior Good",
     "term_fa": "Inferior Good",
     "letter": "I",
@@ -48632,7 +48632,7 @@
     "deep_enriched": true
   },
   {
-    "id": "inflation",
+    "id": 226,
     "term_en": "Inflation",
     "term_fa": "تورم",
     "letter": "I",
@@ -49078,7 +49078,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ipo",
+    "id": 227,
     "term_en": "Initial Public Offerings (IPOs)",
     "term_fa": "عرضه اولیه عمومی (IPOها) (IPOs)",
     "letter": "I",
@@ -49438,7 +49438,7 @@
     "deep_enriched": true
   },
   {
-    "id": "insidertrading",
+    "id": 228,
     "term_en": "Insider Trading",
     "term_fa": "Insider معاملات",
     "letter": "I",
@@ -49892,7 +49892,7 @@
     "deep_enriched": true
   },
   {
-    "id": "insurance",
+    "id": 229,
     "term_en": "Insurance",
     "term_fa": "بیمه",
     "letter": "I",
@@ -50124,7 +50124,7 @@
     "deep_enriched": true
   },
   {
-    "id": "insurance-premium",
+    "id": 230,
     "term_en": "Insurance Premium",
     "term_fa": "بیمه صرف / حق بیمه / پرمیوم",
     "letter": "I",
@@ -50320,7 +50320,7 @@
     "deep_enriched": true
   },
   {
-    "id": "interestcoverageratio",
+    "id": 231,
     "term_en": "Interest Coverage Ratio",
     "term_fa": "بهره Coverage نسبت",
     "letter": "I",
@@ -50458,7 +50458,7 @@
     "deep_enriched": true
   },
   {
-    "id": "interestrate",
+    "id": 232,
     "term_en": "Interest Rate",
     "term_fa": "بهره نرخ",
     "letter": "I",
@@ -50652,7 +50652,7 @@
     "deep_enriched": true
   },
   {
-    "id": "irr",
+    "id": 233,
     "term_en": "Internal Rate of Return (IRR)",
     "term_fa": "Internal نرخ of بازده (IRR)",
     "letter": "I",
@@ -50994,7 +50994,7 @@
     "deep_enriched": true
   },
   {
-    "id": "irs",
+    "id": 234,
     "term_en": "Internal Revenue Service (IRS)",
     "term_fa": "Internal درآمد عملیاتی Service (IRS)",
     "letter": "I",
@@ -51172,7 +51172,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ifrs",
+    "id": 235,
     "term_en": "International Financial Reporting Standards (IFRS)",
     "term_fa": "استانداردهای بین‌المللی گزارشگری مالی (IFRS)",
     "letter": "I",
@@ -51330,7 +51330,7 @@
     "deep_enriched": true
   },
   {
-    "id": "imf",
+    "id": 236,
     "term_en": "International Monetary Fund (IMF)",
     "term_fa": "International پولی صندوق (IMF)",
     "letter": "I",
@@ -51480,7 +51480,7 @@
     "deep_enriched": true
   },
   {
-    "id": "interpersonal-skills",
+    "id": 237,
     "term_en": "Interpersonal Skills",
     "term_fa": "Interpersonal Skills",
     "letter": "I",
@@ -51750,7 +51750,7 @@
     "deep_enriched": true
   },
   {
-    "id": "inventoryturnover",
+    "id": 238,
     "term_en": "Inventory Turnover",
     "term_fa": "Inventory Turnover",
     "letter": "I",
@@ -51964,7 +51964,7 @@
     "deep_enriched": true
   },
   {
-    "id": "invertedyieldcurve",
+    "id": 239,
     "term_en": "Inverted Yield Curve",
     "term_fa": "Inverted بازده / سود منحنی",
     "letter": "I",
@@ -52116,7 +52116,7 @@
     "deep_enriched": true
   },
   {
-    "id": "invisiblehand",
+    "id": 240,
     "term_en": "Invisible Hand",
     "term_fa": "Invisible Hand",
     "letter": "I",
@@ -52242,7 +52242,7 @@
     "deep_enriched": true
   },
   {
-    "id": "irrevocabletrust",
+    "id": 241,
     "term_en": "Irrevocable Trust",
     "term_fa": "Irrevocable تراست / امانت‌داری",
     "letter": "I",
@@ -52426,7 +52426,7 @@
     "deep_enriched": true
   },
   {
-    "id": "j-curve-effect",
+    "id": 242,
     "term_en": "J-Curve",
     "term_fa": "J-Curve",
     "letter": "J",
@@ -52556,7 +52556,7 @@
     "deep_enriched": true
   },
   {
-    "id": "januaryeffect",
+    "id": 243,
     "term_en": "January Effect",
     "term_fa": "January Effect",
     "letter": "J",
@@ -52706,7 +52706,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jgb",
+    "id": 244,
     "term_en": "Japanese Government Bond (JGB)",
     "term_fa": "Japanese Government اوراق قرضه (JGB)",
     "letter": "J",
@@ -52804,7 +52804,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jensensmeasure",
+    "id": 245,
     "term_en": "Jensen's Measure",
     "term_fa": "Jensen's Measure",
     "letter": "J",
@@ -52950,7 +52950,7 @@
     "deep_enriched": true
   },
   {
-    "id": "job-market",
+    "id": 246,
     "term_en": "Job Market",
     "term_fa": "Job بازار",
     "letter": "J",
@@ -53062,7 +53062,7 @@
     "deep_enriched": true
   },
   {
-    "id": "john_maynard_keynes",
+    "id": 247,
     "term_en": "John Maynard Keynes",
     "term_fa": "جان مینارد کینز",
     "letter": "J",
@@ -53266,7 +53266,7 @@
     "deep_enriched": true
   },
   {
-    "id": "joint-and-several-liability",
+    "id": 248,
     "term_en": "Joint and Several Liability",
     "term_fa": "مسئولیت تضامنی و مشترک",
     "letter": "J",
@@ -53396,7 +53396,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jointprobability",
+    "id": 249,
     "term_en": "Joint Probability",
     "term_fa": "Joint Probability",
     "letter": "J",
@@ -53526,7 +53526,7 @@
     "deep_enriched": true
   },
   {
-    "id": "joint-tenancy",
+    "id": 250,
     "term_en": "Joint Tenancy",
     "term_fa": "Joint Tenancy",
     "letter": "J",
@@ -53804,7 +53804,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jtwros",
+    "id": 251,
     "term_en": "Joint Tenants With Right of Survivorship (JTWROS)",
     "term_fa": "مستأجرین مشترک با حق بازماندگی (JTWROS)",
     "letter": "J",
@@ -54016,7 +54016,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jointventure",
+    "id": 252,
     "term_en": "Joint Venture (JV)",
     "term_fa": "Joint Venture (JV)",
     "letter": "J",
@@ -54252,7 +54252,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jointstockcompany",
+    "id": 253,
     "term_en": "Joint-Stock Company",
     "term_fa": "شرکت سهامی",
     "letter": "J",
@@ -54440,7 +54440,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jonesact",
+    "id": 254,
     "term_en": "Jones Act",
     "term_fa": "Jones Act",
     "letter": "J",
@@ -54594,7 +54594,7 @@
     "deep_enriched": true
   },
   {
-    "id": "joseph-schumpeter",
+    "id": 255,
     "term_en": "Joseph Schumpeter",
     "term_fa": "Joseph Schumpeter",
     "letter": "J",
@@ -54780,7 +54780,7 @@
     "deep_enriched": true
   },
   {
-    "id": "journal",
+    "id": 256,
     "term_en": "Journal",
     "term_fa": "Journal",
     "letter": "J",
@@ -54936,7 +54936,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jpy-japanese-yen",
+    "id": 257,
     "term_en": "JPY (Japanese Yen)",
     "term_fa": "ین ژاپن (JPY) (Japanese Yen)",
     "letter": "J",
@@ -55058,7 +55058,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jumbocd",
+    "id": 258,
     "term_en": "Jumbo CD",
     "term_fa": "Jumbo CD",
     "letter": "J",
@@ -55282,7 +55282,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jumboloan",
+    "id": 259,
     "term_en": "Jumbo Loan",
     "term_fa": "Jumbo وام",
     "letter": "J",
@@ -55460,7 +55460,7 @@
     "deep_enriched": true
   },
   {
-    "id": "junkbond",
+    "id": 260,
     "term_en": "Junk Bond",
     "term_fa": "Junk اوراق قرضه",
     "letter": "J",
@@ -55688,7 +55688,7 @@
     "deep_enriched": true
   },
   {
-    "id": "juris-doctor",
+    "id": 261,
     "term_en": "Juris Doctor (JD)",
     "term_fa": "Juris Doctor (JD)",
     "letter": "J",
@@ -55938,7 +55938,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jurisdiction-risk",
+    "id": 262,
     "term_en": "Jurisdiction Risk",
     "term_fa": "Jurisdiction ریسک",
     "letter": "J",
@@ -56018,7 +56018,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jic",
+    "id": 263,
     "term_en": "Just In Case (JIC)",
     "term_fa": "فقط برای احتیاط (JIC)",
     "letter": "J",
@@ -56114,7 +56114,7 @@
     "deep_enriched": true
   },
   {
-    "id": "jit",
+    "id": 264,
     "term_en": "Just In Time (JIT)",
     "term_fa": "تولید به موقع (JIT)",
     "letter": "J",
@@ -56242,7 +56242,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kaizen",
+    "id": 265,
     "term_en": "Kaizen",
     "term_fa": "Kaizen",
     "letter": "K",
@@ -56434,7 +56434,7 @@
     "deep_enriched": true
   },
   {
-    "id": "karl-marx",
+    "id": 266,
     "term_en": "Karl Marx",
     "term_fa": "Karl Marx",
     "letter": "K",
@@ -56632,7 +56632,7 @@
     "deep_enriched": true
   },
   {
-    "id": "keltnerchannel",
+    "id": 267,
     "term_en": "Keltner Channel",
     "term_fa": "Keltner Channel",
     "letter": "K",
@@ -56724,7 +56724,7 @@
     "deep_enriched": true
   },
   {
-    "id": "keoghplan",
+    "id": 268,
     "term_en": "Keogh Plan",
     "term_fa": "Keogh Plan",
     "letter": "K",
@@ -56854,7 +56854,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kpi",
+    "id": 269,
     "term_en": "Key Performance Indicators (KPI)",
     "term_fa": "شاخص‌های کلیدی عملکرد (KPI)",
     "letter": "K",
@@ -57372,7 +57372,7 @@
     "deep_enriched": true
   },
   {
-    "id": "keypersoninsurance",
+    "id": 270,
     "term_en": "Key Person Insurance",
     "term_fa": "Key Person بیمه",
     "letter": "K",
@@ -57518,7 +57518,7 @@
     "deep_enriched": true
   },
   {
-    "id": "keyrateduration",
+    "id": 271,
     "term_en": "Key Rate Duration",
     "term_fa": "Key نرخ Duration",
     "letter": "K",
@@ -57630,7 +57630,7 @@
     "deep_enriched": true
   },
   {
-    "id": "keynesianeconomics",
+    "id": 272,
     "term_en": "Keynesian Economics",
     "term_fa": "Keynesian Economics",
     "letter": "K",
@@ -57906,7 +57906,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kickback",
+    "id": 273,
     "term_en": "Kickback",
     "term_fa": "Kickback",
     "letter": "K",
@@ -58058,7 +58058,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kiddietax",
+    "id": 274,
     "term_en": "Kiddie Tax",
     "term_fa": "Kiddie مالیات",
     "letter": "K",
@@ -58206,7 +58206,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kippers",
+    "id": 275,
     "term_en": "Kids In Parents' Pockets Eroding Retirement Savings (KIPPERS)",
     "term_fa": "کودکان در جیب والدین در حال فرسایش پس‌انداز بازنشستگی (KIPPERS)",
     "letter": "K",
@@ -58290,7 +58290,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kiosk",
+    "id": 276,
     "term_en": "Kiosk",
     "term_fa": "Kiosk",
     "letter": "K",
@@ -58576,7 +58576,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kited",
+    "id": 277,
     "term_en": "Kiting",
     "term_fa": "Kiting",
     "letter": "K",
@@ -58672,7 +58672,7 @@
     "deep_enriched": true
   },
   {
-    "id": "klingeroscillator",
+    "id": 278,
     "term_en": "Klinger Oscillator",
     "term_fa": "Klinger Oscillator",
     "letter": "K",
@@ -58844,7 +58844,7 @@
     "deep_enriched": true
   },
   {
-    "id": "knock-inoption",
+    "id": 279,
     "term_en": "Knock-In Option",
     "term_fa": "Knock-In اختیار معامله",
     "letter": "K",
@@ -58930,7 +58930,7 @@
     "deep_enriched": true
   },
   {
-    "id": "knock-outoption",
+    "id": 280,
     "term_en": "Knock-Out Option",
     "term_fa": "Knock-Out اختیار معامله",
     "letter": "K",
@@ -59104,7 +59104,7 @@
     "deep_enriched": true
   },
   {
-    "id": "know-sure-thing-kst",
+    "id": 281,
     "term_en": "Know Sure Thing (KST)",
     "term_fa": "دانستن چیز مطمئن (KST)",
     "letter": "K",
@@ -59204,7 +59204,7 @@
     "deep_enriched": true
   },
   {
-    "id": "knowyourclient",
+    "id": 282,
     "term_en": "Know Your Client (KYC)",
     "term_fa": "مشتری خود را بشناسید (KYC)",
     "letter": "K",
@@ -59384,7 +59384,7 @@
     "deep_enriched": true
   },
   {
-    "id": "knowledge-economy",
+    "id": 283,
     "term_en": "Knowledge Economy",
     "term_fa": "Knowledge اقتصاد",
     "letter": "K",
@@ -59552,7 +59552,7 @@
     "deep_enriched": true
   },
   {
-    "id": "knowledge-process-outsourcing",
+    "id": 284,
     "term_en": "Knowledge Process Outsourcing (KPO)",
     "term_fa": "برون‌سپاری فرآیندهای دانش (KPO)",
     "letter": "K",
@@ -59716,7 +59716,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kospi",
+    "id": 285,
     "term_en": "Korean Composite Stock Price Indexes (KOSPI)",
     "term_fa": "شاخص قیمت سهام مرکب کره (کوسپی) (KOSPI)",
     "letter": "K",
@@ -59792,7 +59792,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kurtosis",
+    "id": 286,
     "term_en": "Kurtosis",
     "term_fa": "Kurtosis",
     "letter": "K",
@@ -60032,7 +60032,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kwd",
+    "id": 287,
     "term_en": "Kuwaiti Dinar (KWD)",
     "term_fa": "دینار کویت (KWD)",
     "letter": "K",
@@ -60162,7 +60162,7 @@
     "deep_enriched": true
   },
   {
-    "id": "laissezfaire",
+    "id": 288,
     "term_en": "Laissez-Faire",
     "term_fa": "Laissez-Faire",
     "letter": "L",
@@ -60280,7 +60280,7 @@
     "deep_enriched": true
   },
   {
-    "id": "lawofdemand",
+    "id": 289,
     "term_en": "Law of Demand",
     "term_fa": "قانون تقاضا",
     "letter": "L",
@@ -60456,7 +60456,7 @@
     "deep_enriched": true
   },
   {
-    "id": "lawofsupply",
+    "id": 290,
     "term_en": "Law of Supply",
     "term_fa": "قانون عرضه",
     "letter": "L",
@@ -60582,7 +60582,7 @@
     "deep_enriched": true
   },
   {
-    "id": "law-of-supply-demand",
+    "id": 291,
     "term_en": "Law of Supply and Demand",
     "term_fa": "قانون عرضه و تقاضا",
     "letter": "L",
@@ -60800,7 +60800,7 @@
     "deep_enriched": true
   },
   {
-    "id": "leadership",
+    "id": 292,
     "term_en": "Leadership",
     "term_fa": "Leadership",
     "letter": "L",
@@ -60924,7 +60924,7 @@
     "deep_enriched": true
   },
   {
-    "id": "letterofintent",
+    "id": 293,
     "term_en": "Letter of Intent (LOI)",
     "term_fa": "نامه قصد (LOI)",
     "letter": "L",
@@ -61068,7 +61068,7 @@
     "deep_enriched": true
   },
   {
-    "id": "letterofcredit",
+    "id": 294,
     "term_en": "Letters of Credit",
     "term_fa": "Letters of اعتبار",
     "letter": "L",
@@ -61320,7 +61320,7 @@
     "deep_enriched": true
   },
   {
-    "id": "leverage",
+    "id": 295,
     "term_en": "Leverage",
     "term_fa": "Leverage",
     "letter": "L",
@@ -61612,7 +61612,7 @@
     "deep_enriched": true
   },
   {
-    "id": "leverageratio",
+    "id": 296,
     "term_en": "Leverage Ratio",
     "term_fa": "Leverage نسبت",
     "letter": "L",
@@ -61930,7 +61930,7 @@
     "deep_enriched": true
   },
   {
-    "id": "leveragedbuyout",
+    "id": 297,
     "term_en": "Leveraged Buyout (LBO)",
     "term_fa": "خرید اهرمی (LBO)",
     "letter": "L",
@@ -62068,7 +62068,7 @@
     "deep_enriched": true
   },
   {
-    "id": "liability",
+    "id": 298,
     "term_en": "Liability",
     "term_fa": "بدهی / تعهد",
     "letter": "L",
@@ -62324,7 +62324,7 @@
     "deep_enriched": true
   },
   {
-    "id": "liability_insurance",
+    "id": 299,
     "term_en": "Liability Insurance",
     "term_fa": "بدهی / تعهد بیمه",
     "letter": "L",
@@ -62462,7 +62462,7 @@
     "deep_enriched": true
   },
   {
-    "id": "limitorder",
+    "id": 300,
     "term_en": "Limit Order",
     "term_fa": "Limit Order",
     "letter": "L",
@@ -62598,7 +62598,7 @@
     "deep_enriched": true
   },
   {
-    "id": "llc",
+    "id": 301,
     "term_en": "Limited Liability Company (LLC)",
     "term_fa": "Limited بدهی / تعهد Company (LLC)",
     "letter": "L",
@@ -62776,7 +62776,7 @@
     "deep_enriched": true
   },
   {
-    "id": "limitedpartnership",
+    "id": 302,
     "term_en": "Limited Partnership (LP)",
     "term_fa": "Limited Partnership (LP)",
     "letter": "L",
@@ -63030,7 +63030,7 @@
     "deep_enriched": true
   },
   {
-    "id": "lineofcredit",
+    "id": 303,
     "term_en": "Line of Credit (LOC)",
     "term_fa": "Line of اعتبار (LOC)",
     "letter": "L",
@@ -63256,7 +63256,7 @@
     "deep_enriched": true
   },
   {
-    "id": "liquidation",
+    "id": 304,
     "term_en": "Liquidation",
     "term_fa": "Liquidation",
     "letter": "L",
@@ -63386,7 +63386,7 @@
     "deep_enriched": true
   },
   {
-    "id": "liquidity",
+    "id": 305,
     "term_en": "Liquidity",
     "term_fa": "نقدشوندگی",
     "letter": "L",
@@ -63590,7 +63590,7 @@
     "deep_enriched": true
   },
   {
-    "id": "liquidity-coverage-ratio",
+    "id": 306,
     "term_en": "Liquidity Coverage Ratio (LCR)",
     "term_fa": "نقدشوندگی Coverage نسبت (LCR)",
     "letter": "L",
@@ -63726,7 +63726,7 @@
     "deep_enriched": true
   },
   {
-    "id": "liquidityratios",
+    "id": 307,
     "term_en": "Liquidity Ratio",
     "term_fa": "نقدشوندگی نسبت",
     "letter": "L",
@@ -64106,7 +64106,7 @@
     "deep_enriched": true
   },
   {
-    "id": "loantovalue",
+    "id": 308,
     "term_en": "Loan-To-Value Ratio (LTV)",
     "term_fa": "نسبت وام به ارزش (LTV)",
     "letter": "L",
@@ -64318,7 +64318,7 @@
     "deep_enriched": true
   },
   {
-    "id": "libor",
+    "id": 309,
     "term_en": "London Inter-Bank Offered Rate (LIBOR)",
     "term_fa": "نرخ بین‌بانکی لندن (لیبور) (LIBOR)",
     "letter": "L",
@@ -64580,7 +64580,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ltd-limited",
+    "id": 310,
     "term_en": "Ltd. (Limited)",
     "term_fa": "Ltd. (Limited)",
     "letter": "L",
@@ -64780,7 +64780,7 @@
     "deep_enriched": true
   },
   {
-    "id": "macroeconomics",
+    "id": 311,
     "term_en": "Macroeconomics",
     "term_fa": "اقتصاد کلان",
     "letter": "M",
@@ -65140,7 +65140,7 @@
     "deep_enriched": true
   },
   {
-    "id": "magna-cum-laude",
+    "id": 312,
     "term_en": "Magna Cum Laude",
     "term_fa": "با افتخار عالی",
     "letter": "M",
@@ -65240,7 +65240,7 @@
     "deep_enriched": true
   },
   {
-    "id": "management-by-objectives",
+    "id": 313,
     "term_en": "Management by Objectives (MBO)",
     "term_fa": "مدیریت بر اساس اهداف (MBO)",
     "letter": "M",
@@ -65400,7 +65400,7 @@
     "deep_enriched": true
   },
   {
-    "id": "margin",
+    "id": 314,
     "term_en": "Margin",
     "term_fa": "حاشیه سود / مارجین",
     "letter": "M",
@@ -65692,7 +65692,7 @@
     "deep_enriched": true
   },
   {
-    "id": "margincall",
+    "id": 315,
     "term_en": "Margin Call",
     "term_fa": "حاشیه سود / مارجین Call",
     "letter": "M",
@@ -65846,7 +65846,7 @@
     "deep_enriched": true
   },
   {
-    "id": "marketshare",
+    "id": 316,
     "term_en": "Market Share",
     "term_fa": "بازار سهم",
     "letter": "M",
@@ -66070,7 +66070,7 @@
     "deep_enriched": true
   },
   {
-    "id": "marketing",
+    "id": 317,
     "term_en": "Marketing",
     "term_fa": "Marketing",
     "letter": "M",
@@ -66328,7 +66328,7 @@
     "deep_enriched": true
   },
   {
-    "id": "marketing-strategy",
+    "id": 318,
     "term_en": "Marketing Strategy",
     "term_fa": "Marketing استراتژی",
     "letter": "M",
@@ -66584,7 +66584,7 @@
     "deep_enriched": true
   },
   {
-    "id": "mlp",
+    "id": 319,
     "term_en": "Master Limited Partnership (MLP)",
     "term_fa": "شراکت محدود اصلی (MLP)",
     "letter": "M",
@@ -66826,7 +66826,7 @@
     "deep_enriched": true
   },
   {
-    "id": "mou",
+    "id": 320,
     "term_en": "Memorandum of Understanding (MOU)",
     "term_fa": "یادداشت تفاهم (MOU)",
     "letter": "M",
@@ -66976,7 +66976,7 @@
     "deep_enriched": true
   },
   {
-    "id": "mercantilism",
+    "id": 321,
     "term_en": "Mercantilism",
     "term_fa": "Mercantilism",
     "letter": "M",
@@ -67224,7 +67224,7 @@
     "deep_enriched": true
   },
   {
-    "id": "mergersandacquisitions",
+    "id": 322,
     "term_en": "Mergers and Acquisitions (M&A)",
     "term_fa": "ادغام‌ها و اکتساب‌ها (M&A)",
     "letter": "M",
@@ -67624,7 +67624,7 @@
     "deep_enriched": true
   },
   {
-    "id": "milton-friedman",
+    "id": 323,
     "term_en": "Milton Friedman",
     "term_fa": "Milton Friedman",
     "letter": "M",
@@ -67918,7 +67918,7 @@
     "deep_enriched": true
   },
   {
-    "id": "mixed-economic-system",
+    "id": 324,
     "term_en": "Mixed Economic System",
     "term_fa": "Mixed اقتصادی System",
     "letter": "M",
@@ -68190,7 +68190,7 @@
     "deep_enriched": true
   },
   {
-    "id": "monetarypolicy",
+    "id": 325,
     "term_en": "Monetary Policy",
     "term_fa": "پولی سیاست / خط‌مشی / بیمه‌نامه",
     "letter": "M",
@@ -68418,7 +68418,7 @@
     "deep_enriched": true
   },
   {
-    "id": "moneylaundering",
+    "id": 326,
     "term_en": "Money Laundering",
     "term_fa": "Money Laundering",
     "letter": "M",
@@ -68544,7 +68544,7 @@
     "deep_enriched": true
   },
   {
-    "id": "moneymarketaccount",
+    "id": 327,
     "term_en": "Money Market Account",
     "term_fa": "Money بازار حساب",
     "letter": "M",
@@ -68812,7 +68812,7 @@
     "deep_enriched": true
   },
   {
-    "id": "monopolisticmarket",
+    "id": 328,
     "term_en": "Monopolistic Competition",
     "term_fa": "Monopolistic Competition",
     "letter": "M",
@@ -69004,7 +69004,7 @@
     "deep_enriched": true
   },
   {
-    "id": "montecarlosimulation",
+    "id": 329,
     "term_en": "Monte Carlo Simulation",
     "term_fa": "شبیه‌سازی مونت کارلو",
     "letter": "M",
@@ -69172,7 +69172,7 @@
     "deep_enriched": true
   },
   {
-    "id": "mooreslaw",
+    "id": 330,
     "term_en": "Moore's Law",
     "term_fa": "Moore's Law",
     "letter": "M",
@@ -69348,7 +69348,7 @@
     "deep_enriched": true
   },
   {
-    "id": "macd",
+    "id": 331,
     "term_en": "Moving Average Convergence Divergence (MACD)",
     "term_fa": "میانگین متحرک همگرایی واگرایی (MACD)",
     "letter": "M",
@@ -69542,7 +69542,7 @@
     "deep_enriched": true
   },
   {
-    "id": "multi-level-marketing",
+    "id": 332,
     "term_en": "Multilevel Marketing",
     "term_fa": "Multilevel Marketing",
     "letter": "M",
@@ -69714,7 +69714,7 @@
     "deep_enriched": true
   },
   {
-    "id": "mutualfund",
+    "id": 333,
     "term_en": "Mutual Fund",
     "term_fa": "Mutual صندوق",
     "letter": "M",
@@ -70284,7 +70284,7 @@
     "deep_enriched": true
   },
   {
-    "id": "mutuallyexclusive",
+    "id": 334,
     "term_en": "Mutually Exclusive",
     "term_fa": "Mutually Exclusive",
     "letter": "M",
@@ -70386,7 +70386,7 @@
     "deep_enriched": true
   },
   {
-    "id": "nasdaq",
+    "id": 335,
     "term_en": "Nasdaq",
     "term_fa": "بورس نزدک (NASDAQ)",
     "letter": "N",
@@ -70576,7 +70576,7 @@
     "deep_enriched": true
   },
   {
-    "id": "nash-equilibrium",
+    "id": 336,
     "term_en": "Nash Equilibrium",
     "term_fa": "تعادل نش (نظریه بازی‌ها)",
     "letter": "N",
@@ -70704,7 +70704,7 @@
     "deep_enriched": true
   },
   {
-    "id": "negative-correlation",
+    "id": 337,
     "term_en": "Negative Correlation",
     "term_fa": "Negative Correlation",
     "letter": "N",
@@ -71076,7 +71076,7 @@
     "deep_enriched": true
   },
   {
-    "id": "neoliberalism",
+    "id": 338,
     "term_en": "Neoliberalism",
     "term_fa": "Neoliberalism",
     "letter": "N",
@@ -71320,7 +71320,7 @@
     "deep_enriched": true
   },
   {
-    "id": "nav",
+    "id": 339,
     "term_en": "Net Asset Value (NAV)",
     "term_fa": "Net دارایی ارزش (NAV)",
     "letter": "N",
@@ -71496,7 +71496,7 @@
     "deep_enriched": true
   },
   {
-    "id": "netincome",
+    "id": 340,
     "term_en": "Net Income (NI)",
     "term_fa": "Net درآمد / سود (NI)",
     "letter": "N",
@@ -71626,7 +71626,7 @@
     "deep_enriched": true
   },
   {
-    "id": "noi",
+    "id": 341,
     "term_en": "Net Operating Income (NOI)",
     "term_fa": "Net Operating درآمد / سود (NOI)",
     "letter": "N",
@@ -71764,7 +71764,7 @@
     "deep_enriched": true
   },
   {
-    "id": "npv",
+    "id": 342,
     "term_en": "Net Present Value (NPV)",
     "term_fa": "ارزش فعلی خالص (NPV)",
     "letter": "N",
@@ -72016,7 +72016,7 @@
     "deep_enriched": true
   },
   {
-    "id": "net_margin",
+    "id": 343,
     "term_en": "Net Profit Margin",
     "term_fa": "Net سود حاشیه سود / مارجین",
     "letter": "N",
@@ -72112,7 +72112,7 @@
     "deep_enriched": true
   },
   {
-    "id": "networth",
+    "id": 344,
     "term_en": "Net Worth",
     "term_fa": "Net Worth",
     "letter": "N",
@@ -72316,7 +72316,7 @@
     "deep_enriched": true
   },
   {
-    "id": "netting",
+    "id": 345,
     "term_en": "Netting",
     "term_fa": "Netting",
     "letter": "N",
@@ -72488,7 +72488,7 @@
     "deep_enriched": true
   },
   {
-    "id": "network-marketing",
+    "id": 346,
     "term_en": "Network Marketing",
     "term_fa": "Network Marketing",
     "letter": "N",
@@ -72594,7 +72594,7 @@
     "deep_enriched": true
   },
   {
-    "id": "networking",
+    "id": 347,
     "term_en": "Networking",
     "term_fa": "Networking",
     "letter": "N",
@@ -72720,7 +72720,7 @@
     "deep_enriched": true
   },
   {
-    "id": "nyse",
+    "id": 348,
     "term_en": "New York Stock Exchange (NYSE)",
     "term_fa": "New York سهم / سهام صرافی / بورس (NYSE)",
     "letter": "N",
@@ -72860,7 +72860,7 @@
     "deep_enriched": true
   },
   {
-    "id": "next-of-kin",
+    "id": 349,
     "term_en": "Next of Kin",
     "term_fa": "Next of Kin",
     "letter": "N",
@@ -73030,7 +73030,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ninja-loan",
+    "id": 350,
     "term_en": "NINJA Loan",
     "term_fa": "NINJA وام",
     "letter": "N",
@@ -73148,7 +73148,7 @@
     "deep_enriched": true
   },
   {
-    "id": "nominal",
+    "id": 351,
     "term_en": "Nominal",
     "term_fa": "Nominal",
     "letter": "N",
@@ -73274,7 +73274,7 @@
     "deep_enriched": true
   },
   {
-    "id": "nda",
+    "id": 352,
     "term_en": "Non-Disclosure Agreement (NDA)",
     "term_fa": "Non-Disclosure توافق‌نامه (NDA)",
     "letter": "N",
@@ -73650,7 +73650,7 @@
     "deep_enriched": true
   },
   {
-    "id": "normaldistribution",
+    "id": 353,
     "term_en": "Normal Distribution",
     "term_fa": "Normal Distribution",
     "letter": "N",
@@ -73824,7 +73824,7 @@
     "deep_enriched": true
   },
   {
-    "id": "nafta",
+    "id": 354,
     "term_en": "North American Free Trade Agreement (NAFTA)",
     "term_fa": "توافق‌نامهٔ تجارت آزاد آمریکای شمالی (نفتا) (NAFTA)",
     "letter": "N",
@@ -74200,7 +74200,7 @@
     "deep_enriched": true
   },
   {
-    "id": "not-for-profit",
+    "id": 355,
     "term_en": "Not for Profit",
     "term_fa": "Not for سود",
     "letter": "N",
@@ -74364,7 +74364,7 @@
     "deep_enriched": true
   },
   {
-    "id": "notionalvalue",
+    "id": 356,
     "term_en": "Notional Value",
     "term_fa": "Notional ارزش",
     "letter": "N",
@@ -74544,7 +74544,7 @@
     "deep_enriched": true
   },
   {
-    "id": "novation",
+    "id": 357,
     "term_en": "Novation",
     "term_fa": "Novation",
     "letter": "N",
@@ -74756,7 +74756,7 @@
     "deep_enriched": true
   },
   {
-    "id": "null_hypothesis",
+    "id": 358,
     "term_en": "Null Hypothesis",
     "term_fa": "Null Hypothesis",
     "letter": "N",
@@ -74934,7 +74934,7 @@
     "deep_enriched": true
   },
   {
-    "id": "offset",
+    "id": 359,
     "term_en": "Offset",
     "term_fa": "Offset",
     "letter": "O",
@@ -75070,7 +75070,7 @@
     "deep_enriched": true
   },
   {
-    "id": "oasdi",
+    "id": 360,
     "term_en": "Old Age, Survivors, and Disability Insurance (OASDI)",
     "term_fa": "بیمه سالمندی، بازماندگان و ازکارافتادگی (OASDI)",
     "letter": "O",
@@ -75190,7 +75190,7 @@
     "deep_enriched": true
   },
   {
-    "id": "oligopoly",
+    "id": 361,
     "term_en": "Oligopoly",
     "term_fa": "Oligopoly",
     "letter": "O",
@@ -75388,7 +75388,7 @@
     "deep_enriched": true
   },
   {
-    "id": "onerouscontract",
+    "id": 362,
     "term_en": "Onerous Contract",
     "term_fa": "Onerous قرارداد",
     "letter": "O",
@@ -75492,7 +75492,7 @@
     "deep_enriched": true
   },
   {
-    "id": "onlinebanking",
+    "id": 363,
     "term_en": "Online Banking",
     "term_fa": "Online بانکداری",
     "letter": "O",
@@ -75734,7 +75734,191 @@
     "deep_enriched": true
   },
   {
-    "id": "openmarketoperations",
+    "id": 364,
+    "letter": "O",
+    "category": "ابزارهای مشتقه و آپشن",
+    "term_en": "Open Interest",
+    "term_fa": "موقعیت‌های باز (Open Interest)",
+    "url": "https://www.investopedia.com/terms/o/openinterest.asp",
+    "definition_en": "Open interest refers to the total number of outstandingfuturesor options contracts that remain open and haven't been settled or closed. It helps traders gauge market activity, liquidity, and the strength of price trends. Changes in open interest offer clues about whether new money enters or leaves the market, which helps traders develop trading strategies. Keep reading to learn how open interest works, how to interpret it, and how it can influence trading decisions.\n\nOpen interest is most often associated with the futures and options markets, where the number of open contracts changes daily. Open interest is the number ofoptionsorfuturescontracts held by traders in active positions. These positions have been opened, but have not been closed out, expired, orexercised.",
+    "definition_fa": "سود باز به تعداد کل قراردادهای آتی یا اختیار معامله‌ای که باز هستند و هنوز تسویه یا بسته نشده‌اند، اشاره دارد. این موضوع به معامله‌گران کمک می‌کند تا فعالیت بازار، نقدینگی و قدرت روندهای قیمتی را ارزیابی کنند. تغییرات در سود باز نشانه‌هایی از ورود یا خروج پول جدید به بازار ارائه می‌دهد، که به معامله‌گران در توسعه استراتژی‌های معاملاتی کمک می‌کند. ادامه مطلب را بخوانید تا بیاموزید سود باز چگونه کار می‌کند، چگونه آن را تفسیر کنید و چگونه می‌تواند تصمیمات معاملاتی را تحت تأثیر قرار دهد. \n\nسود باز اغلب با بازارهای آتی و اختیار معامله مرتبط است، جایی که تعداد قراردادهای باز روزانه تغییر می‌کند. سود باز تعداد قراردادهای اختیار یا آتی است که توسط معامله‌گران در موقعیت‌های فعال نگه داشته می‌شود. این موقعیت‌ها باز شده‌اند، اما بسته نشده‌اند، منقضی نشده‌اند یا اعمال نشده‌اند.",
+    "takeaways_en": [
+      "Open interest refers to the total number of outstanding derivative contracts, such as options orfutures, that have not yet been settled.",
+      "High open interest suggests a high level of liquidity, making it easier for traders to enter and exit positions.",
+      "Rising open interest indicates new money entering the market, while a decline suggests money is exiting and potential market trend changes.",
+      "Open interest, unlike trading volume, does not increase with the transfer of contracts between traders.",
+      "High open interest is not predictive of price trends but indicates the level of trader interest and sentiment."
+    ],
+    "takeaways_fa": [
+      "بازار باز به تعداد کل قراردادهای مشتقه معوق، مانند اختیار معامله یا قراردادهای آتی، که هنوز تسویه نشده‌اند، اشاره دارد.",
+      "بهره باز بالا نشان‌دهنده سطح بالای نقدینگی است و ورود و خروج معامله‌گران از موقعیت‌ها را آسان‌تر می‌کند.",
+      "افزایش علاقه باز نشان‌دهنده ورود پول جدید به بازار است، در حالی که کاهش آن نشان می‌دهد پول در حال خروج است و تغییرات احتمالی روند بازار ممکن است رخ دهد.",
+      "بازماندگی باز، برخلاف حجم معاملات، با انتقال قراردادها بین معامله‌گران افزایش نمی‌یابد.",
+      "بهره باز بالا پیش‌بینی‌کننده روند قیمت‌ها نیست اما سطح علاقه و احساسات معامله‌گران را نشان می‌دهد."
+    ],
+    "bottom_line_en": "Open interest is the total number of open derivative contracts that haven’t been settled. They haven’t been exercised, closed out, or expired. This measurement is associated with the options and futures market rather than the stock market. Open interest is equal to the total number of open contracts, not the sum of all transactions between buyers and sellers. When open interest goes up, it represents new money coming into the market. When open interest decreases, it means money is flowing out of the market. Open interest is not generally viewed as an indicator of trends or price action.",
+    "bottom_line_fa": "باز بودن موقعیت کل تعداد قراردادهای مشتقه باز است که تسویه نشده‌اند. آنها اعمال نشده‌اند، خاتمه نیافته‌اند یا منقضی نشده‌اند. این اندازه‌گیری با بازار اختیار معامله و قراردادهای آتی مرتبط است تا بازار سهام. باز بودن موقعیت برابر با کل تعداد قراردادهای باز است، نه جمع کل معاملات بین خریداران و فروشندگان. وقتی باز بودن موقعیت افزایش می‌یابد، نشان‌دهنده ورود پول جدید به بازار است. وقتی باز بودن موقعیت کاهش می‌یابد، به معنای خروج پول از بازار است. باز بودن موقعیت معمولاً به عنوان شاخصی از روندها یا تغییرات قیمت مشاهده نمی‌شود.",
+    "sections": [
+      {
+        "title_en": "What Is Open Interest?",
+        "title_fa": "بازار باز چیست؟",
+        "paragraphs_en": [
+          "Open interest refers to the total number of outstandingfuturesor options contracts that remain open and haven't been settled or closed. It helps traders gauge market activity, liquidity, and the strength of price trends. Changes in open interest offer clues about whether new money enters or leaves the market, which helps traders develop trading strategies. Keep reading to learn how open interest works, how to interpret it, and how it can influence trading decisions."
+        ],
+        "paragraphs_fa": [
+          "باز بودن موقعیت به تعداد کل قراردادهای آتی یا اختیارات باز اطلاق می‌شود که هنوز تسویه یا بسته نشده‌اند. این شاخص به معامله‌گران کمک می‌کند تا فعالیت بازار، نقدینگی و قدرت روندهای قیمتی را ارزیابی کنند. تغییرات در باز بودن موقعیت نشانه‌هایی از ورود یا خروج سرمایه جدید به بازار ارائه می‌دهد که به معامله‌گران در توسعه استراتژی‌های معاملاتی کمک می‌کند. ادامه مطلب را بخوانید تا بفهمید باز بودن موقعیت چگونه کار می‌کند، چگونه باید آن را تفسیر کرد و چگونه می‌تواند بر تصمیمات معاملاتی تأثیر بگذارد."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "How to Understand Open Interest",
+        "title_fa": "چگونه بهره باز را درک کنیم",
+        "paragraphs_en": [
+          "Open interest is most often associated with the futures and options markets, where the number of open contracts changes daily. Open interest is the number ofoptionsorfuturescontracts held by traders in active positions. These positions have been opened, but have not been closed out, expired, orexercised.",
+          "Open interest decreases when buyers (or holders) and sellers (or writers) of contracts close out more positions than were opened that day.To close out a position, a trader must take an offsetting position or exercise their option.",
+          "Open interest increases once again when investors and traders open more new long positions or sellers take on new short positions in an amount greater than the number of contracts that were closed that day.",
+          "Here’s a simple scenario—assume that the open interest of the ABC call option is 0. The next day a trader buys 10 ABC options contracts as a new position. Open interest for this particular call option is now 10. The day after, five ABC contracts were closed, and 10 were opened. This means that open interest increased by five to 15."
+        ],
+        "paragraphs_fa": [
+          "باز شدن قراردادها اغلب با بازارهای آتی و آپشن مرتبط است، جایی که تعداد قراردادهای باز روزانه تغییر می‌کند. باز شدن قراردادها تعداد قراردادهای آپشن یا آتی است که توسط معامله‌گران در موقعیت‌های فعال نگهداری می‌شود. این موقعیت‌ها باز شده‌اند، اما بسته نشده‌اند، منقضی نشده‌اند یا استفاده نشده‌اند.",
+          "بهره باز زمانی کاهش می‌یابد که خریداران (یا دارندگان) و فروشندگان (یا نویسندگان) قراردادها، موقعیت‌های بیشتری را نسبت به آنچه در آن روز باز شده بود، ببندند. برای بستن یک موقعیت، یک معامله‌گر باید یک موقعیت جبرانی اتخاذ کند یا از اختیار خود استفاده کند.",
+          "سطح باز دوباره افزایش می‌یابد زمانی که سرمایه‌گذاران و معامله‌گران موقعیت‌های بلند جدید بیشتری باز می‌کنند یا فروشندگان موقعیت‌های کوتاه جدیدی برمی‌دارند که بیشتر از تعداد قراردادهایی است که در آن روز بسته شده‌اند.",
+          "در اینجا یک سناریوی ساده وجود دارد — فرض کنید که باز بودن موقعیت (Open Interest) اختیار خرید ABC برابر با 0 است. روز بعد یک معامله‌گر 10 قرارداد اختیار خرید ABC را به عنوان یک موقعیت جدید خریداری می‌کند. باز بودن موقعیت برای این اختیار خرید خاص اکنون 10 است. روز بعد، پنج قرارداد ABC بسته شد و 10 قرارداد باز شد. این بدان معناست که باز بودن موقعیت پنج واحد افزایش یافته و به 15 رسیده است."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Fast Fact",
+        "title_fa": "حقیقت سریع",
+        "paragraphs_en": [
+          "A common misconception about open interest lies in its ability to make predictions. New traders might be led to believe that it can forecast price action, but it cannot. High or low open interest only reflects trader interest and sentiments."
+        ],
+        "paragraphs_fa": [
+          "یک تصور غلط رایج درباره حجم باز، مربوط به توانایی آن در پیش‌بینی است. معامله‌گران تازه‌کار ممکن است باور کنند که این ابزار قادر به پیش‌بینی حرکت قیمت است، اما این طور نیست. حجم باز بالا یا پایین تنها بیانگر علاقه و احساسات معامله‌گران است."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Comparing Open Interest and Trading Volume",
+        "title_fa": "مقایسه بهره باز و حجم معاملات",
+        "paragraphs_en": [
+          "Open interest is sometimes confused with tradingvolume, but the two terms refer todifferent measures. For example, imagine one trader holds 10 option contracts and sells them to a new trader entering the market. The transfer of these contracts does not create any change in the open interest because positions were transferred, not closed or opened.",
+          "Trading volume, on the other hand, increased by 10 because of the transferral."
+        ],
+        "paragraphs_fa": [
+          "میزان باز بودن موقعیت‌ها گاهی با حجم معاملات اشتباه گرفته می‌شود، اما این دو اصطلاح به معیارهای متفاوتی اشاره دارند. به عنوان مثال، فرض کنید یک معامله‌گر ۱۰ قرارداد اختیار دارد و آن‌ها را به معامله‌گر جدیدی که وارد بازار می‌شود می‌فروشد. انتقال این قراردادها هیچ تغییری در میزان باز بودن موقعیت‌ها ایجاد نمی‌کند زیرا موقعیت‌ها منتقل شده‌اند، نه بسته یا باز شده‌اند.",
+          "از سوی دیگر، حجم معاملات به دلیل انتقال، ۱۰ افزایش یافت."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Why Open Interest Matters in Markets",
+        "title_fa": "چرا علاقه باز در بازارها مهم است",
+        "paragraphs_en": [
+          "Open interest is a measure of market activity. Little or no open interest means there are no opening positions, or that nearly all the positions have been closed. High open interest means there are many contracts still open, which means market participants will be watching that market closely.",
+          "Open interest measures money flow into or out of a futures or options market. Increasing open interest represents new or additional money coming into the market, while decreasing open interest indicates money flowing out of the market.",
+          "Open interest is significant tooptions tradersas it provides key information regarding theliquidityof an option."
+        ],
+        "paragraphs_fa": [
+          "باز بودن موقعیت یک معیار از فعالیت بازار است. باز بودن موقعیت کم یا صفر به این معنی است که هیچ موقعیت بازی وجود ندارد، یا تقریباً تمام موقعیت‌ها بسته شده‌اند. باز بودن موقعیت بالا به این معنی است که قراردادهای زیادی هنوز باز هستند، که به این معناست که شرکت‌کنندگان بازار آن بازار را با دقت دنبال خواهند کرد.",
+          "بهره باز، جریان پول به داخل یا خارج از بازار معاملات آتی یا اختیار معامله را اندازه‌گیری می‌کند. افزایش بهره باز نشان‌دهنده ورود پول جدید یا اضافی به بازار است، در حالی که کاهش بهره باز نشان‌دهنده خروج پول از بازار می‌باشد.",
+          "بهره باز برای معامله‌گران آپشن اهمیت دارد زیرا اطلاعات کلیدی در مورد نقدینگی یک آپشن فراهم می‌کند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Important",
+        "title_fa": "مهم",
+        "paragraphs_en": [
+          "High open interest creates opportunities to buy and sell. This liquidity helps traders move into and out of positions quickly. If liquidity is low (low open interest), traders are less able to get in and out of the market."
+        ],
+        "paragraphs_fa": [
+          "دارایی باز بالا فرصت‌هایی برای خرید و فروش ایجاد می‌کند. این نقدینگی به معامله‌گران کمک می‌کند تا به سرعت وارد و خارج از موقعیت‌ها شوند. اگر نقدینگی کم باشد (دارایی باز کم)، معامله‌گران کمتر قادر به ورود و خروج از بازار خواهند بود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Open Interest: Real-World Example",
+        "title_fa": "موقعیت باز: مثال واقعی",
+        "paragraphs_en": [
+          "Below is a table of trading activity in the options market for traders A, B, C, D, and E. Open interest is calculated following the trading activity for each day. The key to understanding how this works is whether the trader bought or sold to open or close positions."
+        ],
+        "paragraphs_fa": [
+          "در زیر جدولی از فعالیت‌های معاملاتی در بازار اختیار معامله برای معامله‌گران A، B، C، D و E آمده است. بهره باز پس از هر روز معاملاتی بر اساس فعالیت معاملاتی محاسبه می‌شود. کلید فهم نحوه کار این است که معامله‌گر برای باز یا بستن موقعیت‌ها خرید کرده یا فروخته است."
+        ],
+        "items_en": [
+          "Jan. 1: Trader A buys one option to open a position from Trader B, increasing open interest by one.",
+          "Jan. 2: Trader C buys five options to open a position from D, which increases open interest to six.",
+          "Jan. 3: Trader A sells one option to D to close a position, decreasing open interest by one.",
+          "Jan. 4: Trader E bought five options from C to open positions, who sold the five purchased from D to close positions."
+        ],
+        "items_fa": [
+          "۱ ژانویه: معامله‌گر A یک اختیار خرید برای باز کردن موقعیت از معامله‌گر B خریداری می‌کند و تعداد موقعیت‌های باز را به میزان یک افزایش می‌دهد.",
+          "۲ ژانویه: معامله‌گر C پنج اختیار خرید برای باز کردن موقعیت از D خریداری می‌کند، که باعث افزایش موقعیت‌های باز به شش می‌شود.",
+          "۳ ژانویه: معامله‌گر A یک اختیار را به D می‌فروشد تا یک موقعیت را ببندد و تعداد موقعیت‌های باز را به اندازه یک کاهش دهد.",
+          "۴ ژانویه: معامله‌گر E پنج قرارداد اختیار از C خرید تا موقعیت‌ها را باز کند، کسی که پنج قرارداد خریداری‌شده را از D فروخت تا موقعیت‌ها را ببندد."
+        ]
+      },
+      {
+        "title_en": "Is Higher Open Interest Better?",
+        "title_fa": "آیا علاقه باز بالاتر بهتر است؟",
+        "paragraphs_en": [
+          "High open interest usually indicates higher liquidity for a contract. This generally means there will be less difference between how much a trader wants for an option and how much another will pay. This can make it easier to buy and sell. If open interest is increasing and becoming higher, this signals that the market trends around that option are likely to continue."
+        ],
+        "paragraphs_fa": [
+          "بهره باز بالا معمولاً نشان‌دهنده نقدینگی بالاتر برای یک قرارداد است. این معمولاً به این معناست که تفاوت بین میزان مبلغی که یک معامله‌گر برای یک اختیار معامله می‌خواهد و میزان مبلغی که دیگری می‌پردازد کمتر خواهد بود. این می‌تواند خرید و فروش را آسان‌تر کند. اگر بهره باز در حال افزایش و بالاتر شدن باشد، این نشان می‌دهد که روندهای بازار حول آن اختیار معامله احتمالاً ادامه خواهند داشت."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Is Open Interest Bearish or Bullish?",
+        "title_fa": "آیا علاقه باز نزولی است یا صعودی؟",
+        "paragraphs_en": [
+          "Rising open interest usually means that there is new buying happening, which is a bullish trend. However, if open interest grows too high, it can sometimes be abearish signalthat indicates a coming change in market trends."
+        ],
+        "paragraphs_fa": [
+          "افزایش بهره باز معمولاً به این معناست که خرید جدیدی در حال رخ دادن است، که یک روند صعودی محسوب می‌شود. با این حال، اگر بهره باز بیش از حد افزایش یابد، گاهی می‌تواند یک علامت نزولی باشد که نشان‌دهنده تغییر قریب‌الوقوع در روندهای بازار است."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "What Happens When Open Interest Increases?",
+        "title_fa": "چه اتفاقی می‌افتد وقتی که علاقه باز افزایش می‌یابد؟",
+        "paragraphs_en": [
+          "When open interest increases, it usually means new money is coming into the market for that option. As long as this is happening, the current trend will continue. When open interest decreases, it is usually a sign that the market is liquidating and more investors are leaving. This often means that the current price trend is ending."
+        ],
+        "paragraphs_fa": [
+          "وقتی علاقه باز افزایش می‌یابد، معمولاً به این معناست که پول جدید وارد بازار آن اختیار معامله می‌شود. تا زمانی که این اتفاق می‌افتد، روند فعلی ادامه خواهد داشت. وقتی علاقه باز کاهش می‌یابد، معمولاً نشانه‌ای است که بازار در حال نقد کردن است و سرمایه‌گذاران بیشتری در حال خروج هستند. این اغلب به این معناست که روند قیمت فعلی در حال پایان است."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "The Bottom Line",
+        "title_fa": "نتیجه‌گیری نهایی",
+        "paragraphs_en": [
+          "Open interest is the total number of open derivative contracts that haven’t been settled. They haven’t been exercised, closed out, or expired. This measurement is associated with the options and futures market rather than the stock market. Open interest is equal to the total number of open contracts, not the sum of all transactions between buyers and sellers.",
+          "When open interest goes up, it represents new money coming into the market. When open interest decreases, it means money is flowing out of the market. Open interest is not generally viewed as an indicator of trends or price action."
+        ],
+        "paragraphs_fa": [
+          "باز بودن علاقه به مجموع قراردادهای مشتقه باز اشاره دارد که هنوز تسویه نشده‌اند. این قراردادها اجرا، بسته یا منقضی نشده‌اند. این اندازه‌گیری با بازار گزینه‌ها و قراردادهای آتی مرتبط است تا بازار سهام. باز بودن علاقه برابر با تعداد کل قراردادهای باز است، نه مجموع تمام معاملات بین خریداران و فروشندگان.",
+          "وقتی حجم موقعیت‌های باز افزایش می‌یابد، نشان‌دهنده ورود پول جدید به بازار است. وقتی حجم موقعیت‌های باز کاهش می‌یابد، به این معناست که پول از بازار خارج می‌شود. حجم موقعیت‌های باز معمولاً به عنوان یک شاخص از روندها یا تغییرات قیمتی دیده نمی‌شود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      }
+    ]
+  },
+  {
+    "id": 365,
     "term_en": "Open Market Operations",
     "term_fa": "Open بازار Operations",
     "letter": "O",
@@ -75934,7 +76118,7 @@
     "deep_enriched": true
   },
   {
-    "id": "operatingincome",
+    "id": 366,
     "term_en": "Operating Income",
     "term_fa": "Operating درآمد / سود",
     "letter": "O",
@@ -76144,7 +76328,7 @@
     "deep_enriched": true
   },
   {
-    "id": "operatingleverage",
+    "id": 367,
     "term_en": "Operating Leverage",
     "term_fa": "Operating Leverage",
     "letter": "O",
@@ -76296,7 +76480,7 @@
     "deep_enriched": true
   },
   {
-    "id": "operatingmargin",
+    "id": 368,
     "term_en": "Operating Margin",
     "term_fa": "Operating حاشیه سود / مارجین",
     "letter": "O",
@@ -76446,7 +76630,7 @@
     "deep_enriched": true
   },
   {
-    "id": "operations-management",
+    "id": 369,
     "term_en": "Operations Management",
     "term_fa": "Operations Management",
     "letter": "O",
@@ -76574,7 +76758,7 @@
     "deep_enriched": true
   },
   {
-    "id": "opportunitycost",
+    "id": 370,
     "term_en": "Opportunity Cost",
     "term_fa": "Opportunity هزینه",
     "letter": "O",
@@ -76812,7 +76996,7 @@
     "deep_enriched": true
   },
   {
-    "id": "option",
+    "id": 371,
     "term_en": "Option",
     "term_fa": "اختیار معامله",
     "letter": "O",
@@ -77194,7 +77378,7 @@
     "deep_enriched": true
   },
   {
-    "id": "opec",
+    "id": 372,
     "term_en": "Organization of the Petroleum Exporting Countries (OPEC)",
     "term_fa": "سازمان کشورهای صادرکننده نفت (اوپک) (OPEC)",
     "letter": "O",
@@ -77430,7 +77614,7 @@
     "deep_enriched": true
   },
   {
-    "id": "organizational-behavior",
+    "id": 373,
     "term_en": "Organizational Behavior (OB)",
     "term_fa": "Organizational Behavior (OB)",
     "letter": "O",
@@ -77732,7 +77916,7 @@
     "deep_enriched": true
   },
   {
-    "id": "organizational-structure",
+    "id": 374,
     "term_en": "Organizational Structure",
     "term_fa": "Organizational Structure",
     "letter": "O",
@@ -77986,7 +78170,7 @@
     "deep_enriched": true
   },
   {
-    "id": "oem",
+    "id": 375,
     "term_en": "Original Equipment Manufacturer (OEM)",
     "term_fa": "تولیدکننده تجهیزات اصلی (OEM)",
     "letter": "O",
@@ -78158,7 +78342,7 @@
     "deep_enriched": true
   },
   {
-    "id": "oid",
+    "id": 376,
     "term_en": "Original Issue Discount (OID)",
     "term_fa": "Original Issue تنزیل / تخفیف (OID)",
     "letter": "O",
@@ -78364,7 +78548,7 @@
     "deep_enriched": true
   },
   {
-    "id": "outofthemoney",
+    "id": 377,
     "term_en": "Out Of The Money (OTM)",
     "term_fa": "با ارزش ذاتی منفی (OTM)",
     "letter": "O",
@@ -78510,7 +78694,7 @@
     "deep_enriched": true
   },
   {
-    "id": "outsourcing",
+    "id": 378,
     "term_en": "Outsourcing",
     "term_fa": "Outsourcing",
     "letter": "O",
@@ -78642,7 +78826,7 @@
     "deep_enriched": true
   },
   {
-    "id": "otc",
+    "id": 379,
     "term_en": "Over-The-Counter (OTC)",
     "term_fa": "داروهای بدون نسخه (OTC)",
     "letter": "O",
@@ -78880,7 +79064,7 @@
     "deep_enriched": true
   },
   {
-    "id": "over-the-countermarket",
+    "id": 380,
     "term_en": "Over-The-Counter Market",
     "term_fa": "بازار فرابورس",
     "letter": "O",
@@ -79200,7 +79384,7 @@
     "deep_enriched": true
   },
   {
-    "id": "overdraft",
+    "id": 381,
     "term_en": "Overdraft",
     "term_fa": "Overdraft",
     "letter": "O",
@@ -79304,7 +79488,7 @@
     "deep_enriched": true
   },
   {
-    "id": "overhead",
+    "id": 382,
     "term_en": "Overhead",
     "term_fa": "Overhead",
     "letter": "O",
@@ -79578,7 +79762,7 @@
     "deep_enriched": true
   },
   {
-    "id": "overnightindexswap",
+    "id": 383,
     "term_en": "Overnight Index Swap",
     "term_fa": "Overnight شاخص سوآپ (قرارداد معاوضه)",
     "letter": "O",
@@ -79696,7 +79880,7 @@
     "deep_enriched": true
   },
   {
-    "id": "p-value",
+    "id": 384,
     "term_en": "P-Value",
     "term_fa": "P-Value",
     "letter": "P",
@@ -79850,7 +80034,7 @@
     "deep_enriched": true
   },
   {
-    "id": "partnership",
+    "id": 385,
     "term_en": "Partnership",
     "term_fa": "Partnership",
     "letter": "P",
@@ -80066,7 +80250,7 @@
     "deep_enriched": true
   },
   {
-    "id": "pennystock",
+    "id": 386,
     "term_en": "Penny Stocks Trade",
     "term_fa": "Penny سهام تجارت / معامله",
     "letter": "P",
@@ -80446,7 +80630,7 @@
     "deep_enriched": true
   },
   {
-    "id": "per-capita-gdp",
+    "id": 387,
     "term_en": "Per Capita GDP",
     "term_fa": "تولید ناخالص داخلی سرانه",
     "letter": "P",
@@ -80640,7 +80824,7 @@
     "deep_enriched": true
   },
   {
-    "id": "perfectcompetition",
+    "id": 388,
     "term_en": "Perfect Competition",
     "term_fa": "Perfect Competition",
     "letter": "P",
@@ -80966,7 +81150,7 @@
     "deep_enriched": true
   },
   {
-    "id": "phillipscurve",
+    "id": 389,
     "term_en": "Phillips Curve",
     "term_fa": "Phillips منحنی",
     "letter": "P",
@@ -81094,7 +81278,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ponzischeme",
+    "id": 390,
     "term_en": "Ponzi Scheme",
     "term_fa": "Ponzi Scheme",
     "letter": "P",
@@ -81266,7 +81450,7 @@
     "deep_enriched": true
   },
   {
-    "id": "porter",
+    "id": 391,
     "term_en": "Porter's 5 Forces",
     "term_fa": "Porter's 5 Forces",
     "letter": "P",
@@ -81614,7 +81798,7 @@
     "deep_enriched": true
   },
   {
-    "id": "positive-correlation",
+    "id": 392,
     "term_en": "Positive Correlation",
     "term_fa": "Positive Correlation",
     "letter": "P",
@@ -81794,7 +81978,7 @@
     "deep_enriched": true
   },
   {
-    "id": "premarket",
+    "id": 393,
     "term_en": "Pre-Market",
     "term_fa": "Pre-Market",
     "letter": "P",
@@ -82028,7 +82212,7 @@
     "deep_enriched": true
   },
   {
-    "id": "preference-shares",
+    "id": 394,
     "term_en": "Preference Shares",
     "term_fa": "Preference سهام",
     "letter": "P",
@@ -82122,7 +82306,7 @@
     "deep_enriched": true
   },
   {
-    "id": "preferredstock",
+    "id": 395,
     "term_en": "Preferred Stock",
     "term_fa": "Preferred سهم / سهام",
     "letter": "P",
@@ -82488,7 +82672,7 @@
     "deep_enriched": true
   },
   {
-    "id": "presentvalue",
+    "id": 396,
     "term_en": "Present Value",
     "term_fa": "Present ارزش",
     "letter": "P",
@@ -82702,7 +82886,7 @@
     "deep_enriched": true
   },
   {
-    "id": "price-earningsratio",
+    "id": 397,
     "term_en": "Price-to-Earnings Ratio (P/E Ratio)",
     "term_fa": "Price-to-Earnings نسبت (P/E نسبت",
     "letter": "P",
@@ -83052,7 +83236,7 @@
     "deep_enriched": true
   },
   {
-    "id": "pegratio",
+    "id": 398,
     "term_en": "Price/Earnings-to-Growth (PEG) Ratio",
     "term_fa": "نسبت قیمت/درآمد به رشد (PEG)",
     "letter": "P",
@@ -83234,7 +83418,7 @@
     "deep_enriched": true
   },
   {
-    "id": "pro-rata",
+    "id": 399,
     "term_en": "Pro Rata",
     "term_fa": "Pro Rata",
     "letter": "P",
@@ -83430,7 +83614,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ppi",
+    "id": 400,
     "term_en": "Producer Price Index (PPI)",
     "term_fa": "شاخص قیمت تولیدکننده (PPI)",
     "letter": "P",
@@ -83608,7 +83792,7 @@
     "deep_enriched": true
   },
   {
-    "id": "profit",
+    "id": 401,
     "term_en": "Profit",
     "term_fa": "سود",
     "letter": "P",
@@ -83734,7 +83918,7 @@
     "deep_enriched": true
   },
   {
-    "id": "plstatement",
+    "id": 402,
     "term_en": "Profit and Loss Statement (P&L)",
     "term_fa": "سود and Loss صورت مالی / گزارش (P&L)",
     "letter": "P",
@@ -83958,7 +84142,7 @@
     "deep_enriched": true
   },
   {
-    "id": "promissorynote",
+    "id": 403,
     "term_en": "Promissory Note",
     "term_fa": "Promissory سفته / اسناد خزانه",
     "letter": "P",
@@ -84238,7 +84422,7 @@
     "deep_enriched": true
   },
   {
-    "id": "prospectus",
+    "id": 404,
     "term_en": "Prospectus",
     "term_fa": "Prospectus",
     "letter": "P",
@@ -84404,7 +84588,7 @@
     "deep_enriched": true
   },
   {
-    "id": "plc",
+    "id": 405,
     "term_en": "Public Limited Company (PLC)",
     "term_fa": "شرکت سهامی عام (PLC)",
     "letter": "P",
@@ -84596,7 +84780,7 @@
     "deep_enriched": true
   },
   {
-    "id": "putoption",
+    "id": 406,
     "term_en": "Put Option",
     "term_fa": "Put اختیار معامله",
     "letter": "P",
@@ -84828,7 +85012,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qratio",
+    "id": 407,
     "term_en": "Q Ratio (Tobin's Q)",
     "term_fa": "Q نسبت (Tobin's Q)",
     "letter": "Q",
@@ -84990,7 +85174,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quadruplewitching",
+    "id": 408,
     "term_en": "Quadruple Witching",
     "term_fa": "Quadruple Witching",
     "letter": "Q",
@@ -85266,7 +85450,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qualifieddividend",
+    "id": 409,
     "term_en": "Qualified Dividend",
     "term_fa": "Qualified سود نقدی تقسیمی (DPS)",
     "letter": "Q",
@@ -85396,7 +85580,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qib",
+    "id": 410,
     "term_en": "Qualified Institutional Buyer (QIB)",
     "term_fa": "خریدار سازمانی واجد شرایط (QIB)",
     "letter": "Q",
@@ -85504,7 +85688,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qip",
+    "id": 411,
     "term_en": "Qualified Institutional Placement (QIP)",
     "term_fa": "تخصیص نهادی واجد شرایط (QIP)",
     "letter": "Q",
@@ -85622,7 +85806,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qualified-longevity-annuity-contract-qlac",
+    "id": 412,
     "term_en": "Qualified Longevity Annuity Contract (QLAC)",
     "term_fa": "Qualified Longevity مستمری / سالانه قرارداد (QLAC)",
     "letter": "Q",
@@ -85760,7 +85944,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qualifiedopinion",
+    "id": 413,
     "term_en": "Qualified Opinion",
     "term_fa": "Qualified Opinion",
     "letter": "Q",
@@ -85866,7 +86050,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qrp",
+    "id": 414,
     "term_en": "Qualified Retirement Plan",
     "term_fa": "طرح بازنشستگی واجد شرایط",
     "letter": "Q",
@@ -86024,7 +86208,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qtip",
+    "id": 415,
     "term_en": "Qualified Terminable Interest Property (QTIP) Trust",
     "term_fa": "تراست اموال منقضی‌شدنی واجد شرایط (QTIP)",
     "letter": "Q",
@@ -86190,7 +86374,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qualitativeanalysis",
+    "id": 416,
     "term_en": "Qualitative Analysis",
     "term_fa": "Qualitative تحلیل",
     "letter": "Q",
@@ -86344,7 +86528,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quality-control",
+    "id": 417,
     "term_en": "Quality Control",
     "term_fa": "Quality Control",
     "letter": "Q",
@@ -86588,7 +86772,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quality-management",
+    "id": 418,
     "term_en": "Quality Management",
     "term_fa": "Quality Management",
     "letter": "Q",
@@ -86676,7 +86860,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qualityofearnings",
+    "id": 419,
     "term_en": "Quality of Earnings",
     "term_fa": "Quality of Earnings",
     "letter": "Q",
@@ -86792,7 +86976,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quantitativeanalysis",
+    "id": 420,
     "term_en": "Quantitative Analysis (QA)",
     "term_fa": "Quantitative تحلیل (QA)",
     "letter": "Q",
@@ -86994,7 +87178,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quantitative-easing",
+    "id": 421,
     "term_en": "Quantitative Easing",
     "term_fa": "Quantitative Easing",
     "letter": "Q",
@@ -87184,7 +87368,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quantitative-trading",
+    "id": 422,
     "term_en": "Quantitative Trading",
     "term_fa": "Quantitative معاملات",
     "letter": "Q",
@@ -87306,7 +87490,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quantitydemanded",
+    "id": 423,
     "term_en": "Quantity Demanded",
     "term_fa": "Quantity Demanded",
     "letter": "Q",
@@ -87468,7 +87652,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quarter",
+    "id": 424,
     "term_en": "Quarter (Q1, Q2, Q3, Q4)",
     "term_fa": "Quarter (Q1, Q2, Q3, Q4)",
     "letter": "Q",
@@ -87744,7 +87928,7 @@
     "deep_enriched": true
   },
   {
-    "id": "qoq",
+    "id": 425,
     "term_en": "Quarter on Quarter (QOQ)",
     "term_fa": "فصل به فصل (QOQ)",
     "letter": "Q",
@@ -87876,7 +88060,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quasi-contract",
+    "id": 426,
     "term_en": "Quasi Contract",
     "term_fa": "Quasi قرارداد",
     "letter": "Q",
@@ -88106,7 +88290,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quickassets",
+    "id": 427,
     "term_en": "Quick Assets",
     "term_fa": "Quick دارایی‌ها",
     "letter": "Q",
@@ -88214,7 +88398,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quickratio",
+    "id": 428,
     "term_en": "Quick Ratio",
     "term_fa": "Quick نسبت",
     "letter": "Q",
@@ -88500,7 +88684,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quintile",
+    "id": 429,
     "term_en": "Quintiles",
     "term_fa": "Quintiles",
     "letter": "Q",
@@ -88608,7 +88792,7 @@
     "deep_enriched": true
   },
   {
-    "id": "quota",
+    "id": 430,
     "term_en": "Quota",
     "term_fa": "Quota",
     "letter": "Q",
@@ -88852,7 +89036,7 @@
     "deep_enriched": true
   },
   {
-    "id": "r-squared",
+    "id": 431,
     "term_en": "R-Squared",
     "term_fa": "R-Squared",
     "letter": "R",
@@ -89036,7 +89220,7 @@
     "deep_enriched": true
   },
   {
-    "id": "racketeering",
+    "id": 432,
     "term_en": "Racketeering",
     "term_fa": "Racketeering",
     "letter": "R",
@@ -89220,7 +89404,7 @@
     "deep_enriched": true
   },
   {
-    "id": "rateofreturn",
+    "id": 433,
     "term_en": "Rate of Return",
     "term_fa": "نرخ of بازده",
     "letter": "R",
@@ -89402,7 +89586,7 @@
     "deep_enriched": true
   },
   {
-    "id": "rational-choice-theory",
+    "id": 434,
     "term_en": "Rational Choice Theory",
     "term_fa": "نظریه انتخاب عقلانی",
     "letter": "R",
@@ -89556,7 +89740,7 @@
     "deep_enriched": true
   },
   {
-    "id": "realestate",
+    "id": 435,
     "term_en": "Real Estate",
     "term_fa": "Real Estate",
     "letter": "R",
@@ -89708,7 +89892,7 @@
     "deep_enriched": true
   },
   {
-    "id": "reit",
+    "id": 436,
     "term_en": "Real Estate Investment Trust (REIT)",
     "term_fa": "Real Estate سرمایه‌گذاری تراست / امانت‌داری (REIT)",
     "letter": "R",
@@ -90058,7 +90242,7 @@
     "deep_enriched": true
   },
   {
-    "id": "realgdp",
+    "id": 437,
     "term_en": "Real Gross Domestic Product (GDP)",
     "term_fa": "تولید ناخالص داخلی واقعی (GDP)",
     "letter": "R",
@@ -90198,7 +90382,7 @@
     "deep_enriched": true
   },
   {
-    "id": "receivableturnoverratio",
+    "id": 438,
     "term_en": "Receivables Turnover Ratio",
     "term_fa": "Receivables Turnover نسبت",
     "letter": "R",
@@ -90422,7 +90606,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ria",
+    "id": 439,
     "term_en": "Registered Investment Advisor (RIA)",
     "term_fa": "Registered سرمایه‌گذاری Advisor (RIA)",
     "letter": "R",
@@ -90790,7 +90974,7 @@
     "deep_enriched": true
   },
   {
-    "id": "regression",
+    "id": 440,
     "term_en": "Regression",
     "term_fa": "Regression",
     "letter": "R",
@@ -90954,7 +91138,7 @@
     "deep_enriched": true
   },
   {
-    "id": "rsi",
+    "id": 441,
     "term_en": "Relative Strength Index (RSI)",
     "term_fa": "شاخص قدرت نسبی (RSI)",
     "letter": "R",
@@ -91284,7 +91468,7 @@
     "deep_enriched": true
   },
   {
-    "id": "renewable_resource",
+    "id": 442,
     "term_en": "Renewable Resource",
     "term_fa": "Renewable Resource",
     "letter": "R",
@@ -91568,7 +91752,7 @@
     "deep_enriched": true
   },
   {
-    "id": "repurchaseagreement",
+    "id": 443,
     "term_en": "Repurchase Agreement (Repo)",
     "term_fa": "Repurchase توافق‌نامه (Repo)",
     "letter": "R",
@@ -91906,7 +92090,7 @@
     "deep_enriched": true
   },
   {
-    "id": "request-for-proposal",
+    "id": 444,
     "term_en": "Requests for Proposal (RFP)",
     "term_fa": "درخواست پیشنهاد (RFP)",
     "letter": "R",
@@ -92124,7 +92308,7 @@
     "deep_enriched": true
   },
   {
-    "id": "requiredminimumdistribution",
+    "id": 445,
     "term_en": "Required Minimum Distribution (RMD)",
     "term_fa": "توزیع حداقل مورد نیاز (RMD)",
     "letter": "R",
@@ -92286,7 +92470,7 @@
     "deep_enriched": true
   },
   {
-    "id": "retainedearnings",
+    "id": 446,
     "term_en": "Retained Earnings",
     "term_fa": "Retained Earnings",
     "letter": "R",
@@ -92534,7 +92718,7 @@
     "deep_enriched": true
   },
   {
-    "id": "returnonassets",
+    "id": 447,
     "term_en": "Return on Assets (ROA)",
     "term_fa": "بازده on دارایی‌ها (ROA)",
     "letter": "R",
@@ -92756,7 +92940,7 @@
     "deep_enriched": true
   },
   {
-    "id": "returnonequity",
+    "id": 448,
     "term_en": "Return on Equity (ROE)",
     "term_fa": "بازده on حقوق صاحبان سهام / حقوق مالکانه (ROE)",
     "letter": "R",
@@ -93040,7 +93224,7 @@
     "deep_enriched": true
   },
   {
-    "id": "returnoninvestmentcapital",
+    "id": 449,
     "term_en": "Return on Invested Capital (ROIC)",
     "term_fa": "بازده on Invested سرمایه (ROIC)",
     "letter": "R",
@@ -93240,7 +93424,7 @@
     "deep_enriched": true
   },
   {
-    "id": "returnoninvestment",
+    "id": 450,
     "term_en": "Return on Investment (ROI)",
     "term_fa": "بازده on سرمایه‌گذاری (ROI)",
     "letter": "R",
@@ -93420,7 +93604,7 @@
     "deep_enriched": true
   },
   {
-    "id": "roth401k",
+    "id": 451,
     "term_en": "Roth 401(k)",
     "term_fa": "Roth 401(k)",
     "letter": "R",
@@ -93656,7 +93840,7 @@
     "deep_enriched": true
   },
   {
-    "id": "rothira",
+    "id": 452,
     "term_en": "Roth IRA",
     "term_fa": "Roth IRA",
     "letter": "R",
@@ -94022,7 +94206,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ruleof72",
+    "id": 453,
     "term_en": "Rule of 72",
     "term_fa": "Rule of 72",
     "letter": "R",
@@ -94132,7 +94316,7 @@
     "deep_enriched": true
   },
   {
-    "id": "russell2000",
+    "id": 454,
     "term_en": "Russell 2000 Index",
     "term_fa": "Russell 2000 شاخص",
     "letter": "R",
@@ -94256,7 +94440,7 @@
     "deep_enriched": true
   },
   {
-    "id": "sp500",
+    "id": 455,
     "term_en": "S&P 500 Index (Standard & Poor's 500 Index)",
     "term_fa": "شاخص اس‌اند‌پی ۵۰۰ (S&P 500)",
     "letter": "S",
@@ -94468,7 +94652,7 @@
     "deep_enriched": true
   },
   {
-    "id": "sarbanesoxleyact",
+    "id": 456,
     "term_en": "Sarbanes-Oxley (SOX) Act of 2002",
     "term_fa": "قانون ساربانز-آکسلی (SOX) سال ۲۰۰۲",
     "letter": "S",
@@ -94582,7 +94766,7 @@
     "deep_enriched": true
   },
   {
-    "id": "sec",
+    "id": 457,
     "term_en": "Securities and Exchange Commission (SEC)",
     "term_fa": "کمیسیون بورس و اوراق بهادار آمریکا (SEC)",
     "letter": "S",
@@ -94834,7 +95018,7 @@
     "deep_enriched": true
   },
   {
-    "id": "security",
+    "id": 458,
     "term_en": "Security",
     "term_fa": "ورقه بهادار",
     "letter": "S",
@@ -95196,7 +95380,7 @@
     "deep_enriched": true
   },
   {
-    "id": "series63",
+    "id": 459,
     "term_en": "Series 63",
     "term_fa": "Series 63",
     "letter": "S",
@@ -95504,7 +95688,7 @@
     "deep_enriched": true
   },
   {
-    "id": "series7",
+    "id": 460,
     "term_en": "Series 7",
     "term_fa": "Series 7",
     "letter": "S",
@@ -95614,7 +95798,7 @@
     "deep_enriched": true
   },
   {
-    "id": "sharperatio",
+    "id": 461,
     "term_en": "Sharpe Ratio",
     "term_fa": "Sharpe نسبت",
     "letter": "S",
@@ -95808,7 +95992,7 @@
     "deep_enriched": true
   },
   {
-    "id": "shortselling",
+    "id": 462,
     "term_en": "Short Selling",
     "term_fa": "Short Selling",
     "letter": "S",
@@ -96104,7 +96288,7 @@
     "deep_enriched": true
   },
   {
-    "id": "social-media",
+    "id": 463,
     "term_en": "Social Media",
     "term_fa": "Social Media",
     "letter": "S",
@@ -96328,7 +96512,7 @@
     "deep_enriched": true
   },
   {
-    "id": "socialresponsibility",
+    "id": 464,
     "term_en": "Social Responsibility",
     "term_fa": "Social Responsibility",
     "letter": "S",
@@ -96472,7 +96656,7 @@
     "deep_enriched": true
   },
   {
-    "id": "solvencyratio",
+    "id": 465,
     "term_en": "Solvency Ratio",
     "term_fa": "Solvency نسبت",
     "letter": "S",
@@ -96704,7 +96888,7 @@
     "deep_enriched": true
   },
   {
-    "id": "spread",
+    "id": 466,
     "term_en": "Spread",
     "term_fa": "اسپرد / اختلاف قیمت",
     "letter": "S",
@@ -97112,7 +97296,7 @@
     "deep_enriched": true
   },
   {
-    "id": "standarddeviation",
+    "id": 467,
     "term_en": "Standard Deviation",
     "term_fa": "Standard Deviation",
     "letter": "S",
@@ -97530,7 +97714,7 @@
     "deep_enriched": true
   },
   {
-    "id": "stochasticoscillator",
+    "id": 468,
     "term_en": "Stochastic Oscillator",
     "term_fa": "Stochastic Oscillator",
     "letter": "S",
@@ -97700,7 +97884,7 @@
     "deep_enriched": true
   },
   {
-    "id": "stock",
+    "id": 469,
     "term_en": "Stock",
     "term_fa": "سهم / سهام",
     "letter": "S",
@@ -97854,7 +98038,7 @@
     "deep_enriched": true
   },
   {
-    "id": "stock-keeping-unit-sku",
+    "id": 470,
     "term_en": "Stock Keeping Unit (SKU)",
     "term_fa": "واحد نگهداری موجودی (SKU)",
     "letter": "S",
@@ -97970,7 +98154,7 @@
     "deep_enriched": true
   },
   {
-    "id": "stockmarket",
+    "id": 471,
     "term_en": "Stock Market",
     "term_fa": "سهم / سهام بازار",
     "letter": "S",
@@ -98306,7 +98490,7 @@
     "deep_enriched": true
   },
   {
-    "id": "stop-limitorder",
+    "id": 472,
     "term_en": "Stop-Limit Order",
     "term_fa": "سفارش توقف-حد",
     "letter": "S",
@@ -98556,7 +98740,7 @@
     "deep_enriched": true
   },
   {
-    "id": "straddle",
+    "id": 473,
     "term_en": "Straddle",
     "term_fa": "Straddle",
     "letter": "S",
@@ -98734,7 +98918,7 @@
     "deep_enriched": true
   },
   {
-    "id": "swot",
+    "id": 474,
     "term_en": "Strength, Weakness, Opportunity, and Threat (SWOT) Analysis",
     "term_fa": "تحلیل نقاط قوت، ضعف، فرصت و تهدید (SWOT)",
     "letter": "S",
@@ -99034,7 +99218,7 @@
     "deep_enriched": true
   },
   {
-    "id": "subsidiary",
+    "id": 475,
     "term_en": "Subsidiary",
     "term_fa": "Subsidiary",
     "letter": "S",
@@ -99234,7 +99418,7 @@
     "deep_enriched": true
   },
   {
-    "id": "supplychain",
+    "id": 476,
     "term_en": "Supply Chain",
     "term_fa": "Supply Chain",
     "letter": "S",
@@ -99486,7 +99670,7 @@
     "deep_enriched": true
   },
   {
-    "id": "sustainability",
+    "id": 477,
     "term_en": "Sustainability",
     "term_fa": "Sustainability",
     "letter": "S",
@@ -99706,7 +99890,7 @@
     "deep_enriched": true
   },
   {
-    "id": "systematic-sampling",
+    "id": 478,
     "term_en": "Systematic Sampling",
     "term_fa": "Systematic Sampling",
     "letter": "S",
@@ -99956,7 +100140,7 @@
     "deep_enriched": true
   },
   {
-    "id": "t-test",
+    "id": 479,
     "term_en": "T-Test",
     "term_fa": "T-Test",
     "letter": "T",
@@ -100226,7 +100410,7 @@
     "deep_enriched": true
   },
   {
-    "id": "tariff",
+    "id": 480,
     "term_en": "Tariff",
     "term_fa": "Tariff",
     "letter": "T",
@@ -100536,7 +100720,7 @@
     "deep_enriched": true
   },
   {
-    "id": "technicalanalysis",
+    "id": 481,
     "term_en": "Technical Analysis",
     "term_fa": "تحلیل تکنیکال (فنی)",
     "letter": "T",
@@ -100756,7 +100940,7 @@
     "deep_enriched": true
   },
   {
-    "id": "tenancy_in_common",
+    "id": 482,
     "term_en": "Tenancy in Common (TIC)",
     "term_fa": "مالکیت مشترک (TIC)",
     "letter": "T",
@@ -100984,7 +101168,7 @@
     "deep_enriched": true
   },
   {
-    "id": "termlife",
+    "id": 483,
     "term_en": "Term Life Insurance",
     "term_fa": "Term Life بیمه",
     "letter": "T",
@@ -101276,7 +101460,7 @@
     "deep_enriched": true
   },
   {
-    "id": "terminalvalue",
+    "id": 484,
     "term_en": "Terminal Value (TV)",
     "term_fa": "Terminal ارزش (TV)",
     "letter": "T",
@@ -101456,7 +101640,7 @@
     "deep_enriched": true
   },
   {
-    "id": "kyoto",
+    "id": 485,
     "term_en": "The Kyoto Protocol",
     "term_fa": "پروتکل کیوتو",
     "letter": "K",
@@ -101696,7 +101880,7 @@
     "deep_enriched": true
   },
   {
-    "id": "third-world",
+    "id": 486,
     "term_en": "Third World",
     "term_fa": "Third World",
     "letter": "T",
@@ -101970,7 +102154,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ter",
+    "id": 487,
     "term_en": "Total Expense Ratio (TER)",
     "term_fa": "نسبت کل هزینه‌ها (TER)",
     "letter": "T",
@@ -102104,7 +102288,7 @@
     "deep_enriched": true
   },
   {
-    "id": "total-quality-management-tqm",
+    "id": 488,
     "term_en": "Total Quality Management (TQM)",
     "term_fa": "مدیریت کیفیت جامع (TQM)",
     "letter": "T",
@@ -102426,7 +102610,7 @@
     "deep_enriched": true
   },
   {
-    "id": "tsr",
+    "id": 489,
     "term_en": "Total Shareholder Return (TSR)",
     "term_fa": "بازده کل سهامداران (TSR)",
     "letter": "T",
@@ -102626,7 +102810,7 @@
     "deep_enriched": true
   },
   {
-    "id": "totaldebttototalassets",
+    "id": 490,
     "term_en": "Total-Debt-to-Total-Assets",
     "term_fa": "نسبت بدهی کل به دارایی کل",
     "letter": "T",
@@ -102806,7 +102990,7 @@
     "deep_enriched": true
   },
   {
-    "id": "trade_deficit",
+    "id": 491,
     "term_en": "Trade Deficit",
     "term_fa": "تجارت / معامله کسری",
     "letter": "T",
@@ -102952,7 +103136,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ttm",
+    "id": 492,
     "term_en": "Trailing 12 Months (TTM)",
     "term_fa": "۱۲ ماه گذشته (TTM)",
     "letter": "T",
@@ -103116,7 +103300,7 @@
     "deep_enriched": true
   },
   {
-    "id": "tranches",
+    "id": 493,
     "term_en": "Tranches",
     "term_fa": "Tranches",
     "letter": "T",
@@ -103260,7 +103444,7 @@
     "deep_enriched": true
   },
   {
-    "id": "transaction",
+    "id": 494,
     "term_en": "Transaction",
     "term_fa": "Transaction",
     "letter": "T",
@@ -103426,7 +103610,7 @@
     "deep_enriched": true
   },
   {
-    "id": "treasurybill",
+    "id": 495,
     "term_en": "Treasury Bills (T-Bills)",
     "term_fa": "اسناد خزانه (T-Bills)",
     "letter": "T",
@@ -103650,7 +103834,7 @@
     "deep_enriched": true
   },
   {
-    "id": "tips",
+    "id": 496,
     "term_en": "Treasury Inflation-Protected Security (TIPS)",
     "term_fa": "اوراق قرضه محافظت‌شده در برابر تورم خزانه‌داری (TIPS)",
     "letter": "T",
@@ -103922,7 +104106,7 @@
     "deep_enriched": true
   },
   {
-    "id": "triple-bottom-line",
+    "id": 497,
     "term_en": "Triple Bottom Line (TBL)",
     "term_fa": "خط پایین سه‌گانه (TBL)",
     "letter": "T",
@@ -104300,7 +104484,7 @@
     "deep_enriched": true
   },
   {
-    "id": "troubled-asset-relief-program-tarp",
+    "id": 498,
     "term_en": "Troubled Asset Relief Program (TARP)",
     "term_fa": "برنامه نجات دارایی‌های مشکل‌دار (TARP)",
     "letter": "T",
@@ -104418,7 +104602,7 @@
     "deep_enriched": true
   },
   {
-    "id": "trust",
+    "id": 499,
     "term_en": "Trust",
     "term_fa": "تراست / امانت‌داری",
     "letter": "T",
@@ -104666,7 +104850,7 @@
     "deep_enriched": true
   },
   {
-    "id": "trust-fund",
+    "id": 500,
     "term_en": "Trust Fund",
     "term_fa": "تراست / امانت‌داری صندوق",
     "letter": "T",
@@ -104868,7 +105052,7 @@
     "deep_enriched": true
   },
   {
-    "id": "trustee",
+    "id": 501,
     "term_en": "Trustee",
     "term_fa": "Trustee",
     "letter": "T",
@@ -105108,7 +105292,7 @@
     "deep_enriched": true
   },
   {
-    "id": "tsa-pre",
+    "id": 502,
     "term_en": "TSA PreCheck",
     "term_fa": "TSA PreCheck",
     "letter": "T",
@@ -105318,7 +105502,7 @@
     "deep_enriched": true
   },
   {
-    "id": "turnover",
+    "id": 503,
     "term_en": "Turnover",
     "term_fa": "Turnover",
     "letter": "T",
@@ -105474,7 +105658,7 @@
     "deep_enriched": true
   },
   {
-    "id": "usdx",
+    "id": 504,
     "term_en": "U.S. Dollar Index (USDX)",
     "term_fa": "U.S. Dollar شاخص (USDX)",
     "letter": "U",
@@ -105656,7 +105840,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ussavingsbonds",
+    "id": 505,
     "term_en": "U.S. Savings Bonds",
     "term_fa": "U.S. Savings اوراق قرضه",
     "letter": "U",
@@ -105824,7 +106008,7 @@
     "deep_enriched": true
   },
   {
-    "id": "underlying-asset",
+    "id": 506,
     "term_en": "Underlying Asset",
     "term_fa": "Underlying دارایی",
     "letter": "U",
@@ -105922,7 +106106,7 @@
     "deep_enriched": true
   },
   {
-    "id": "underwriter",
+    "id": 507,
     "term_en": "Underwriter",
     "term_fa": "Underwriter",
     "letter": "U",
@@ -106086,7 +106270,7 @@
     "deep_enriched": true
   },
   {
-    "id": "underwriting",
+    "id": 508,
     "term_en": "Underwriting",
     "term_fa": "Underwriting",
     "letter": "U",
@@ -106324,7 +106508,7 @@
     "deep_enriched": true
   },
   {
-    "id": "unearnedincome",
+    "id": 509,
     "term_en": "Unearned Income",
     "term_fa": "Unearned درآمد / سود",
     "letter": "U",
@@ -106540,7 +106724,7 @@
     "deep_enriched": true
   },
   {
-    "id": "unemployment",
+    "id": 510,
     "term_en": "Unemployment",
     "term_fa": "Unemployment",
     "letter": "U",
@@ -106776,7 +106960,7 @@
     "deep_enriched": true
   },
   {
-    "id": "unemploymentrate",
+    "id": 511,
     "term_en": "Unemployment Rate",
     "term_fa": "Unemployment نرخ",
     "letter": "U",
@@ -106982,7 +107166,7 @@
     "deep_enriched": true
   },
   {
-    "id": "unicorn",
+    "id": 512,
     "term_en": "Unicorn",
     "term_fa": "Unicorn",
     "letter": "U",
@@ -107182,7 +107366,7 @@
     "deep_enriched": true
   },
   {
-    "id": "uma",
+    "id": 513,
     "term_en": "Unified Managed Account (UMA)",
     "term_fa": "حساب مدیریت‌شده یکپارچه (UMA)",
     "letter": "U",
@@ -107272,7 +107456,7 @@
     "deep_enriched": true
   },
   {
-    "id": "uniform-distribution",
+    "id": 514,
     "term_en": "Uniform Distribution",
     "term_fa": "Uniform Distribution",
     "letter": "U",
@@ -107476,7 +107660,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ugma",
+    "id": 515,
     "term_en": "Uniform Gifts to Minors Ac (UGMA)",
     "term_fa": "هدایای یکنواخت به حساب‌های خردسالان (UGMA)",
     "letter": "U",
@@ -107708,7 +107892,7 @@
     "deep_enriched": true
   },
   {
-    "id": "utma",
+    "id": 516,
     "term_en": "Uniform Transfers to Minors Act (UTMA)",
     "term_fa": "قانون انتقال یکنواخت به خردسالان (UTMA)",
     "letter": "U",
@@ -107834,7 +108018,7 @@
     "deep_enriched": true
   },
   {
-    "id": "unilateral-contract",
+    "id": 517,
     "term_en": "Unilateral Contract",
     "term_fa": "Unilateral قرارداد",
     "letter": "U",
@@ -108034,7 +108218,7 @@
     "deep_enriched": true
   },
   {
-    "id": "uit",
+    "id": 518,
     "term_en": "Unit Investment Trust (UIT)",
     "term_fa": "Unit سرمایه‌گذاری تراست / امانت‌داری (UIT)",
     "letter": "U",
@@ -108310,7 +108494,7 @@
     "deep_enriched": true
   },
   {
-    "id": "united-nations-un",
+    "id": 519,
     "term_en": "United Nations (UN)",
     "term_fa": "United Nations (UN)",
     "letter": "U",
@@ -108496,7 +108680,7 @@
     "deep_enriched": true
   },
   {
-    "id": "universallife",
+    "id": 520,
     "term_en": "Universal Life Insurance",
     "term_fa": "Universal Life بیمه",
     "letter": "U",
@@ -108752,7 +108936,7 @@
     "deep_enriched": true
   },
   {
-    "id": "unleveredbeta",
+    "id": 521,
     "term_en": "Unlevered Beta",
     "term_fa": "Unlevered Beta",
     "letter": "U",
@@ -108890,7 +109074,7 @@
     "deep_enriched": true
   },
   {
-    "id": "unlevered-free-cash-flow-ufcf",
+    "id": 522,
     "term_en": "Unlevered Free Cash Flow (UFCF)",
     "term_fa": "جریان نقدی آزاد بدون اهرم (UFCF)",
     "letter": "U",
@@ -109022,7 +109206,7 @@
     "deep_enriched": true
   },
   {
-    "id": "unlimited-liability",
+    "id": 523,
     "term_en": "Unlimited Liability",
     "term_fa": "Unlimited بدهی / تعهد",
     "letter": "U",
@@ -109144,7 +109328,7 @@
     "deep_enriched": true
   },
   {
-    "id": "unsecuredloan",
+    "id": 524,
     "term_en": "Unsecured Loan",
     "term_fa": "Unsecured وام",
     "letter": "U",
@@ -109306,7 +109490,7 @@
     "deep_enriched": true
   },
   {
-    "id": "upside",
+    "id": 525,
     "term_en": "Upside",
     "term_fa": "Upside",
     "letter": "U",
@@ -109448,7 +109632,7 @@
     "deep_enriched": true
   },
   {
-    "id": "utilities_sector",
+    "id": 526,
     "term_en": "Utilities Sector",
     "term_fa": "Utilities Sector",
     "letter": "U",
@@ -109628,7 +109812,7 @@
     "deep_enriched": true
   },
   {
-    "id": "utility",
+    "id": 527,
     "term_en": "Utility",
     "term_fa": "Utility",
     "letter": "U",
@@ -109732,7 +109916,7 @@
     "deep_enriched": true
   },
   {
-    "id": "valuation",
+    "id": 528,
     "term_en": "Valuation",
     "term_fa": "ارزش‌گذاری (تعیین ارزش دارایی)",
     "letter": "V",
@@ -109940,7 +110124,7 @@
     "deep_enriched": true
   },
   {
-    "id": "valueadded",
+    "id": 529,
     "term_en": "Value Added",
     "term_fa": "ارزش افزوده (Value Added)",
     "letter": "V",
@@ -110046,7 +110230,7 @@
     "deep_enriched": true
   },
   {
-    "id": "var",
+    "id": 530,
     "term_en": "Value at Risk (VaR)",
     "term_fa": "ارزش at ریسک (VaR)",
     "letter": "V",
@@ -110258,7 +110442,7 @@
     "deep_enriched": true
   },
   {
-    "id": "valuechain",
+    "id": 531,
     "term_en": "Value Chain",
     "term_fa": "زنجیره ارزش (مایکل پورتر)",
     "letter": "V",
@@ -110444,7 +110628,7 @@
     "deep_enriched": true
   },
   {
-    "id": "valueinvesting",
+    "id": 532,
     "term_en": "Value Investing",
     "term_fa": "ارزش Investing",
     "letter": "V",
@@ -110986,7 +111170,7 @@
     "deep_enriched": true
   },
   {
-    "id": "valueproposition",
+    "id": 533,
     "term_en": "Value Proposition",
     "term_fa": "ارزش Proposition",
     "letter": "V",
@@ -111114,7 +111298,7 @@
     "deep_enriched": true
   },
   {
-    "id": "valueaddedtax",
+    "id": 534,
     "term_en": "Value-Added Tax (VAT)",
     "term_fa": "مالیات بر ارزش افزوده (VAT)",
     "letter": "V",
@@ -111366,7 +111550,7 @@
     "deep_enriched": true
   },
   {
-    "id": "variability",
+    "id": 535,
     "term_en": "Variability",
     "term_fa": "Variability",
     "letter": "V",
@@ -111436,7 +111620,7 @@
     "deep_enriched": true
   },
   {
-    "id": "variableannuity",
+    "id": 536,
     "term_en": "Variable Annuity",
     "term_fa": "Variable مستمری / سالانه",
     "letter": "V",
@@ -111648,7 +111832,7 @@
     "deep_enriched": true
   },
   {
-    "id": "variablecost",
+    "id": 537,
     "term_en": "Variable Cost",
     "term_fa": "Variable هزینه",
     "letter": "V",
@@ -111984,7 +112168,7 @@
     "deep_enriched": true
   },
   {
-    "id": "variance",
+    "id": 538,
     "term_en": "Variance",
     "term_fa": "Variance",
     "letter": "V",
@@ -112162,7 +112346,7 @@
     "deep_enriched": true
   },
   {
-    "id": "vega",
+    "id": 539,
     "term_en": "Vega",
     "term_fa": "Vega",
     "letter": "V",
@@ -112384,7 +112568,7 @@
     "deep_enriched": true
   },
   {
-    "id": "velocity",
+    "id": 540,
     "term_en": "Velocity of Money",
     "term_fa": "Velocity of Money",
     "letter": "V",
@@ -112564,7 +112748,7 @@
     "deep_enriched": true
   },
   {
-    "id": "venturecapital",
+    "id": 541,
     "term_en": "Venture Capital",
     "term_fa": "Venture سرمایه",
     "letter": "V",
@@ -112810,7 +112994,7 @@
     "deep_enriched": true
   },
   {
-    "id": "venturecapitalist",
+    "id": 542,
     "term_en": "Venture Capitalist (VC)",
     "term_fa": "Venture Capitalist (VC)",
     "letter": "V",
@@ -113056,7 +113240,7 @@
     "deep_enriched": true
   },
   {
-    "id": "vertical_analysis",
+    "id": 543,
     "term_en": "Vertical Analysis",
     "term_fa": "Vertical تحلیل",
     "letter": "V",
@@ -113174,7 +113358,7 @@
     "deep_enriched": true
   },
   {
-    "id": "verticalintegration",
+    "id": 544,
     "term_en": "Vertical Integration",
     "term_fa": "Vertical Integration",
     "letter": "V",
@@ -113368,7 +113552,7 @@
     "deep_enriched": true
   },
   {
-    "id": "vesting",
+    "id": 545,
     "term_en": "Vesting",
     "term_fa": "Vesting",
     "letter": "V",
@@ -113494,7 +113678,7 @@
     "deep_enriched": true
   },
   {
-    "id": "visual-basic-for-applications-vba",
+    "id": 546,
     "term_en": "Visual Basic for Applications (VBA)",
     "term_fa": "ویژوال بیسیک برای برنامه‌ها (VBA)",
     "letter": "V",
@@ -113754,7 +113938,7 @@
     "deep_enriched": true
   },
   {
-    "id": "vix",
+    "id": 547,
     "term_en": "VIX (CBOE Volatility Index)",
     "term_fa": "VIX (CBOE نوسان‌پذیری شاخص",
     "letter": "V",
@@ -113946,7 +114130,7 @@
     "deep_enriched": true
   },
   {
-    "id": "volatility",
+    "id": 548,
     "term_en": "Volatility",
     "term_fa": "نوسان‌پذیری",
     "letter": "V",
@@ -114200,7 +114384,7 @@
     "deep_enriched": true
   },
   {
-    "id": "volcker-rule",
+    "id": 549,
     "term_en": "Volcker Rule",
     "term_fa": "Volcker Rule",
     "letter": "V",
@@ -114380,7 +114564,7 @@
     "deep_enriched": true
   },
   {
-    "id": "vwap",
+    "id": 550,
     "term_en": "Volume Weighted Average Price (VWAP)",
     "term_fa": "میانگین قیمت وزنی بر اساس حجم (VWAP)",
     "letter": "V",
@@ -114554,7 +114738,7 @@
     "deep_enriched": true
   },
   {
-    "id": "voluntaryemployeesassoc",
+    "id": 551,
     "term_en": "Voluntary Employees Beneficiary Association Plan (VEBA)",
     "term_fa": "طرح انجمن بهره‌مندی کارکنان داوطلبانه (VEBA)",
     "letter": "V",
@@ -114700,7 +114884,7 @@
     "deep_enriched": true
   },
   {
-    "id": "w2form",
+    "id": 552,
     "term_en": "W-2 Form",
     "term_fa": "W-2 Form",
     "letter": "W",
@@ -114904,7 +115088,7 @@
     "deep_enriched": true
   },
   {
-    "id": "w4form",
+    "id": 553,
     "term_en": "W-4 Form",
     "term_fa": "W-4 Form",
     "letter": "W",
@@ -115036,7 +115220,7 @@
     "deep_enriched": true
   },
   {
-    "id": "w8form",
+    "id": 554,
     "term_en": "W-8 Form",
     "term_fa": "W-8 Form",
     "letter": "W",
@@ -115272,7 +115456,7 @@
     "deep_enriched": true
   },
   {
-    "id": "waiver-of-subrogation",
+    "id": 555,
     "term_en": "Waiver of Subrogation",
     "term_fa": "Waiver of Subrogation",
     "letter": "W",
@@ -115436,7 +115620,7 @@
     "deep_enriched": true
   },
   {
-    "id": "wallstreet",
+    "id": 556,
     "term_en": "Wall Street",
     "term_fa": "Wall Street",
     "letter": "W",
@@ -115762,7 +115946,7 @@
     "deep_enriched": true
   },
   {
-    "id": "warbonds",
+    "id": 557,
     "term_en": "War Bond",
     "term_fa": "War اوراق قرضه",
     "letter": "W",
@@ -115940,7 +116124,7 @@
     "deep_enriched": true
   },
   {
-    "id": "warrant",
+    "id": 558,
     "term_en": "Warrant",
     "term_fa": "Warrant",
     "letter": "W",
@@ -116062,7 +116246,7 @@
     "deep_enriched": true
   },
   {
-    "id": "washsale",
+    "id": 559,
     "term_en": "Wash Sale",
     "term_fa": "Wash Sale",
     "letter": "W",
@@ -116218,7 +116402,7 @@
     "deep_enriched": true
   },
   {
-    "id": "wealthmanagement",
+    "id": 560,
     "term_en": "Wealth Management",
     "term_fa": "Wealth Management",
     "letter": "W",
@@ -116388,7 +116572,7 @@
     "deep_enriched": true
   },
   {
-    "id": "wearable-technology",
+    "id": 561,
     "term_en": "Wearable Technology",
     "term_fa": "Wearable Technology",
     "letter": "W",
@@ -116496,7 +116680,7 @@
     "deep_enriched": true
   },
   {
-    "id": "weightedaverage",
+    "id": 562,
     "term_en": "Weighted Average",
     "term_fa": "Weighted میانگین",
     "letter": "W",
@@ -116696,7 +116880,7 @@
     "deep_enriched": true
   },
   {
-    "id": "wacc",
+    "id": 563,
     "term_en": "Weighted Average Cost of Capital (WACC)",
     "term_fa": "Weighted میانگین هزینه of سرمایه (WACC)",
     "letter": "W",
@@ -116930,7 +117114,7 @@
     "deep_enriched": true
   },
   {
-    "id": "personalfinance",
+    "id": 564,
     "term_en": "What Is Personal Finance, and Why Is It Important?",
     "term_fa": "مالی شخصی چیست و چرا مهم است؟",
     "letter": "P",
@@ -117628,7 +117812,7 @@
     "deep_enriched": true
   },
   {
-    "id": "whitepaper",
+    "id": 565,
     "term_en": "White Paper",
     "term_fa": "White Paper",
     "letter": "W",
@@ -117758,7 +117942,7 @@
     "deep_enriched": true
   },
   {
-    "id": "white-collar-crime",
+    "id": 566,
     "term_en": "White-Collar Crime",
     "term_fa": "جرم‌های سفید‌پوش",
     "letter": "W",
@@ -117934,7 +118118,7 @@
     "deep_enriched": true
   },
   {
-    "id": "wpi",
+    "id": 567,
     "term_en": "Wholesale Price Index (WPI)",
     "term_fa": "شاخص قیمت عمده‌فروشی (WPI)",
     "letter": "W",
@@ -118020,7 +118204,7 @@
     "deep_enriched": true
   },
   {
-    "id": "wirefraud",
+    "id": 568,
     "term_en": "Wire Fraud",
     "term_fa": "Wire Fraud",
     "letter": "W",
@@ -118146,7 +118330,7 @@
     "deep_enriched": true
   },
   {
-    "id": "wiretransfer",
+    "id": 569,
     "term_en": "Wire Transfers",
     "term_fa": "Wire Transfers",
     "letter": "W",
@@ -118346,7 +118530,7 @@
     "deep_enriched": true
   },
   {
-    "id": "withholdingallowance",
+    "id": 570,
     "term_en": "Withholding Allowance",
     "term_fa": "Withholding Allowance",
     "letter": "W",
@@ -118504,7 +118688,7 @@
     "deep_enriched": true
   },
   {
-    "id": "withholdingtax",
+    "id": 571,
     "term_en": "Withholding Tax",
     "term_fa": "Withholding مالیات",
     "letter": "W",
@@ -118718,7 +118902,7 @@
     "deep_enriched": true
   },
   {
-    "id": "workingcapital",
+    "id": 572,
     "term_en": "Working Capital (NWC)",
     "term_fa": "Working سرمایه (NWC)",
     "letter": "W",
@@ -118984,7 +119168,7 @@
     "deep_enriched": true
   },
   {
-    "id": "workinprogress",
+    "id": 573,
     "term_en": "Works-in-Progress (WIP)",
     "term_fa": "کارهای در حال پیشرفت (WIP)",
     "letter": "W",
@@ -119118,7 +119302,7 @@
     "deep_enriched": true
   },
   {
-    "id": "wto",
+    "id": 574,
     "term_en": "World Trade Organization (WTO)",
     "term_fa": "World تجارت / معامله Organization (WTO)",
     "letter": "W",
@@ -119226,7 +119410,7 @@
     "deep_enriched": true
   },
   {
-    "id": "worldcom",
+    "id": 575,
     "term_en": "WorldCom",
     "term_fa": "WorldCom",
     "letter": "W",
@@ -119416,7 +119600,7 @@
     "deep_enriched": true
   },
   {
-    "id": "x-efficiency",
+    "id": 576,
     "term_en": "X-Efficiency",
     "term_fa": "X-Efficiency",
     "letter": "X",
@@ -119532,7 +119716,7 @@
     "deep_enriched": true
   },
   {
-    "id": "x-mark-signature",
+    "id": 577,
     "term_en": "X-Mark Signature",
     "term_fa": "X-Mark Signature",
     "letter": "X",
@@ -119634,7 +119818,7 @@
     "deep_enriched": true
   },
   {
-    "id": "xbrl",
+    "id": 578,
     "term_en": "XBRL (eXtensible Business Reporting Language)",
     "term_fa": "زبان گزارش‌دهی کسب‌وکار قابل توسعه (XBRL) (eXtensible Business Reporting Language)",
     "letter": "X",
@@ -119720,7 +119904,7 @@
     "deep_enriched": true
   },
   {
-    "id": "xcd-eastern-caribbean-dollar",
+    "id": 579,
     "term_en": "XCD (Eastern Caribbean Dollar)",
     "term_fa": "دلار کارائیب شرقی (XCD) (Eastern Caribbean Dollar)",
     "letter": "X",
@@ -119798,7 +119982,7 @@
     "deep_enriched": true
   },
   {
-    "id": "xd",
+    "id": 580,
     "term_en": "XD",
     "term_fa": "XD",
     "letter": "X",
@@ -119890,7 +120074,7 @@
     "deep_enriched": true
   },
   {
-    "id": "xenocurrency",
+    "id": 581,
     "term_en": "Xenocurrency",
     "term_fa": "Xenocurrency",
     "letter": "X",
@@ -119946,7 +120130,7 @@
     "deep_enriched": true
   },
   {
-    "id": "xetra",
+    "id": 582,
     "term_en": "Xetra",
     "term_fa": "Xetra",
     "letter": "X",
@@ -120028,7 +120212,7 @@
     "deep_enriched": true
   },
   {
-    "id": "business-essentials-4689832",
+    "id": 583,
     "term_en": "XML (Extensible Markup Language)",
     "term_fa": "زبان نشانه‌گذاری توسعه‌پذیر (XML)",
     "letter": "X",
@@ -120134,7 +120318,7 @@
     "deep_enriched": true
   },
   {
-    "id": "xrt",
+    "id": 584,
     "term_en": "XRT",
     "term_fa": "XRT",
     "letter": "X",
@@ -120202,7 +120386,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yacht-insurance",
+    "id": 585,
     "term_en": "Yacht Insurance",
     "term_fa": "Yacht بیمه",
     "letter": "Y",
@@ -120328,7 +120512,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yale-school-of-management",
+    "id": 586,
     "term_en": "Yale School of Management",
     "term_fa": "مدرسه مدیریت ییل",
     "letter": "Y",
@@ -120496,7 +120680,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yankeebond",
+    "id": 587,
     "term_en": "Yankee Bond",
     "term_fa": "Yankee اوراق قرضه",
     "letter": "Y",
@@ -120582,7 +120766,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yankee-market",
+    "id": 588,
     "term_en": "Yankee Market",
     "term_fa": "Yankee بازار",
     "letter": "Y",
@@ -120682,7 +120866,7 @@
     "deep_enriched": true
   },
   {
-    "id": "ytd",
+    "id": 589,
     "term_en": "Year to Date (YTD)",
     "term_fa": "سال تا کنون (YTD)",
     "letter": "Y",
@@ -120924,7 +121108,7 @@
     "deep_enriched": true
   },
   {
-    "id": "years-maximum-pensionable-earnings",
+    "id": 590,
     "term_en": "Year's Maximum Pensionable Earnings (YMPE)",
     "term_fa": "حداکثر درآمد مشمول حقوق بازنشستگی سالانه (YMPE)",
     "letter": "Y",
@@ -121004,7 +121188,7 @@
     "deep_enriched": true
   },
   {
-    "id": "year-end-bonus",
+    "id": 591,
     "term_en": "Year-End Bonus",
     "term_fa": "پاداش پایان سال",
     "letter": "Y",
@@ -121144,7 +121328,7 @@
     "deep_enriched": true
   },
   {
-    "id": "year-over-year",
+    "id": 592,
     "term_en": "Year-Over-Year (YOY)",
     "term_fa": "سالانه به سال (YOY)",
     "letter": "Y",
@@ -121276,7 +121460,7 @@
     "deep_enriched": true
   },
   {
-    "id": "annual-return",
+    "id": 593,
     "term_en": "Yearly Rate Of Return Method",
     "term_fa": "Yearly نرخ Of بازده Method",
     "letter": "Y",
@@ -121408,7 +121592,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yearly-renewable-term-yrt",
+    "id": 594,
     "term_en": "Yearly Renewable Term (YRT)",
     "term_fa": "با مدت تمدید سالانه (YRT)",
     "letter": "Y",
@@ -121522,7 +121706,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yield",
+    "id": 595,
     "term_en": "Yield",
     "term_fa": "بازده / سود",
     "letter": "Y",
@@ -121768,7 +121952,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yield_basis",
+    "id": 596,
     "term_en": "Yield Basis",
     "term_fa": "بازده / سود Basis",
     "letter": "Y",
@@ -121860,7 +122044,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yieldcurve",
+    "id": 597,
     "term_en": "Yield Curve",
     "term_fa": "بازده / سود منحنی",
     "letter": "Y",
@@ -121998,7 +122182,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yieldcurverisk",
+    "id": 598,
     "term_en": "Yield Curve Risk",
     "term_fa": "بازده / سود منحنی ریسک",
     "letter": "Y",
@@ -122128,7 +122312,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yieldmaintenance",
+    "id": 599,
     "term_en": "Yield Maintenance",
     "term_fa": "بازده / سود Maintenance",
     "letter": "Y",
@@ -122242,7 +122426,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yield-on-cost",
+    "id": 600,
     "term_en": "Yield on Cost (YOC)",
     "term_fa": "بازده / سود on هزینه (YOC)",
     "letter": "Y",
@@ -122322,7 +122506,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yield-earning-assets",
+    "id": 601,
     "term_en": "Yield on Earning Assets",
     "term_fa": "بازده / سود on Earning دارایی‌ها",
     "letter": "Y",
@@ -122428,7 +122612,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yieldspread",
+    "id": 602,
     "term_en": "Yield Spread",
     "term_fa": "بازده / سود اسپرد / اختلاف قیمت",
     "letter": "Y",
@@ -122642,7 +122826,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yieldtocall",
+    "id": 603,
     "term_en": "Yield to Call",
     "term_fa": "بازده / سود to Call",
     "letter": "Y",
@@ -122778,7 +122962,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yieldtomaturity",
+    "id": 604,
     "term_en": "Yield to Maturity (YTM)",
     "term_fa": "بازده / سود to Maturity (YTM)",
     "letter": "Y",
@@ -122986,7 +123170,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yieldtoworst",
+    "id": 605,
     "term_en": "Yield to Worst (YTW)",
     "term_fa": "بازده / سود to Worst (YTW)",
     "letter": "Y",
@@ -123078,7 +123262,7 @@
     "deep_enriched": true
   },
   {
-    "id": "business-4689640",
+    "id": 606,
     "term_en": "Yield Variance",
     "term_fa": "انحراف بازده تولید (واریانس بازده)",
     "letter": "Y",
@@ -123182,7 +123366,7 @@
     "deep_enriched": true
   },
   {
-    "id": "york-antwerp-rules",
+    "id": 607,
     "term_en": "York Antwerp Rules",
     "term_fa": "قوانین یورک آنتورپ",
     "letter": "Y",
@@ -123278,7 +123462,7 @@
     "deep_enriched": true
   },
   {
-    "id": "yuppie",
+    "id": 608,
     "term_en": "Yuppie",
     "term_fa": "Yuppie",
     "letter": "Y",
@@ -123406,7 +123590,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zscore",
+    "id": 609,
     "term_en": "Z-Score",
     "term_fa": "Z-Score",
     "letter": "Z",
@@ -123600,7 +123784,7 @@
     "deep_enriched": true
   },
   {
-    "id": "z-test",
+    "id": 610,
     "term_en": "Z-Test",
     "term_fa": "Z-Test",
     "letter": "Z",
@@ -123708,7 +123892,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zacks-investment-research",
+    "id": 611,
     "term_en": "Zacks Investment Research",
     "term_fa": "Zacks سرمایه‌گذاری Research",
     "letter": "Z",
@@ -123840,7 +124024,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zcash",
+    "id": 612,
     "term_en": "ZCash",
     "term_fa": "ZCash",
     "letter": "Z",
@@ -123968,7 +124152,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zba",
+    "id": 613,
     "term_en": "Zero Balance Account (ZBA)",
     "term_fa": "Zero تراز / مانده حساب (ZBA)",
     "letter": "Z",
@@ -124132,7 +124316,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zerocostcollar",
+    "id": 614,
     "term_en": "Zero Cost Collar",
     "term_fa": "Zero هزینه Collar",
     "letter": "Z",
@@ -124250,7 +124434,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zero-coupon-inflation-swap",
+    "id": 615,
     "term_en": "Zero Coupon Inflation Swap",
     "term_fa": "Zero Coupon تورم سوآپ (قرارداد معاوضه)",
     "letter": "Z",
@@ -124416,7 +124600,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zero-coupon-swap",
+    "id": 616,
     "term_en": "Zero Coupon Swap",
     "term_fa": "Zero Coupon سوآپ (قرارداد معاوضه)",
     "letter": "Z",
@@ -124492,7 +124676,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zbb",
+    "id": 617,
     "term_en": "Zero-Based Budgeting (ZBB)",
     "term_fa": "بودجه‌بندی مبتنی بر صفر (ZBB)",
     "letter": "Z",
@@ -124620,7 +124804,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zero-betaportfolio",
+    "id": 618,
     "term_en": "Zero-Beta Portfolio",
     "term_fa": "Zero-Beta پورتفوی / سبد سرمایه‌گذاری",
     "letter": "Z",
@@ -124718,7 +124902,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zero-bound",
+    "id": 619,
     "term_en": "Zero-Bound",
     "term_fa": "Zero-Bound",
     "letter": "Z",
@@ -124806,7 +124990,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zero-couponbond",
+    "id": 620,
     "term_en": "Zero-Coupon Bond",
     "term_fa": "Zero-Coupon اوراق قرضه",
     "letter": "Z",
@@ -124972,7 +125156,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zero-lot-line-house",
+    "id": 621,
     "term_en": "Zero-Lot-Line House",
     "term_fa": "خانه با خط صفر زمین",
     "letter": "Z",
@@ -125072,7 +125256,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zero-one-integer-programming",
+    "id": 622,
     "term_en": "Zero-One Integer Programming",
     "term_fa": "برنامه‌ریزی صحیح صفر و یک",
     "letter": "Z",
@@ -125146,7 +125330,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zero-rated-goods",
+    "id": 623,
     "term_en": "Zero-Rated Goods",
     "term_fa": "کالاهای صفر درصد مالیات",
     "letter": "Z",
@@ -125264,7 +125448,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zero-sumgame",
+    "id": 624,
     "term_en": "Zero-Sum Game",
     "term_fa": "بازی جمع صفر",
     "letter": "Z",
@@ -125444,7 +125628,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zspread",
+    "id": 625,
     "term_en": "Zero-Volatility Spread (Z-spread)",
     "term_fa": "Zero-Volatility اسپرد / اختلاف قیمت (Z-spread)",
     "letter": "Z",
@@ -125552,7 +125736,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zeta_model",
+    "id": 626,
     "term_en": "Zeta Model",
     "term_fa": "Zeta الگو / مدل",
     "letter": "Z",
@@ -125616,7 +125800,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zig_zag_indicator",
+    "id": 627,
     "term_en": "Zig Zag Indicator",
     "term_fa": "Zig Zag اندیکاتور / شاخص فنی",
     "letter": "Z",
@@ -125730,7 +125914,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zksnark",
+    "id": 628,
     "term_en": "zk-SNARK",
     "term_fa": "zk-SNARK",
     "letter": "Z",
@@ -125882,7 +126066,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zombies",
+    "id": 629,
     "term_en": "Zombies",
     "term_fa": "Zombies",
     "letter": "Z",
@@ -125970,7 +126154,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zoning",
+    "id": 630,
     "term_en": "Zoning",
     "term_fa": "Zoning",
     "letter": "Z",
@@ -126166,7 +126350,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zoning-ordinance",
+    "id": 631,
     "term_en": "Zoning Ordinance",
     "term_fa": "Zoning Ordinance",
     "letter": "Z",
@@ -126300,7 +126484,7 @@
     "deep_enriched": true
   },
   {
-    "id": "zzzzbest",
+    "id": 632,
     "term_en": "ZZZZ Best",
     "term_fa": "کلاهبرداری زدزدزدزد بست (رسوایی ZZZZ Best)",
     "letter": "Z",
