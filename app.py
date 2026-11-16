@@ -226,4 +226,4 @@ if __name__ == "__main__":
     print(f"🚀 MarketDict Web App is running!")
     print(f"👉 Local URL: http://localhost:{port}")
     print(f"=======================================================\n")
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(host="0.0.0.0", port=port, debug=False, threaded=True)

@@ -26,6 +26,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Dict, List, Optional, Set
 
 try:
+    from formula_registry import inject_formula_if_known
+except ImportError:
+    def inject_formula_if_known(x): return x
+
+try:
     from bs4 import BeautifulSoup
 except ImportError:
     print("[ERROR] beautifulsoup4 is required.", file=sys.stderr)
@@ -347,7 +352,7 @@ def parse_and_enrich_term(item: Dict, session=None) -> Optional[Dict]:
     term_fa = f"{term_fa_raw} ({term_en})" if term_en not in term_fa_raw and len(term_en) <= 30 else term_fa_raw
     category = classify_category(term_en, def_en)
 
-    return {
+    term_obj = {
         "letter": item.get("letter", "OTHER"),
         "category": category,
         "term_en": term_en,
@@ -363,6 +368,7 @@ def parse_and_enrich_term(item: Dict, session=None) -> Optional[Dict]:
         "sections": sections,
         "deep_enriched": True
     }
+    return inject_formula_if_known(term_obj)
 
 def run_pipeline(batch_limit=None, letters_filter=None):
     logger.info("Starting Full Alphabet Continuous Ingestion Engine...")
