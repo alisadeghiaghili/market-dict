@@ -207,35 +207,11 @@ def clean_element_html(el) -> str:
     raw = "".join(str(c) for c in el.contents).strip()
     return re.sub(r"\s+", " ", raw)
 
-def classify_category(title: str, text: str) -> str:
-    content = (title + " " + text).lower()
-    if any(k in content for k in ["crypto", "bitcoin", "blockchain", "token", "wallet", "nft", "protocol", "ethereum", "mining"]):
-        return "ارزهای دیجیتال و فین‌تک"
-    if any(k in content for k in ["option", "future", "derivative", "swap", "spread", "open interest", "call option", "put option", "gamma", "delta"]):
-        return "ابزارهای مشتقه و آپشن"
-    if any(k in content for k in ["bond", "treasury", "yield", "coupon", "debt security", "fixed-income", "mortgage-backed"]):
-        return "اوراق بدهی و اسناد خزانه"
-    if any(k in content for k in ["technical analysis", "moving average", "candlestick", "stochastic", "oscillator", "bollinger", "rsi", "macd"]):
-        return "تحلیل تکنیکال و نموداری"
-    if any(k in content for k in ["valuation", "discounted cash flow", "p/e ratio", "intrinsic value", "dcf", "multiple"]):
-        return "ارزش‌گذاری و تحلیل بنیادی"
-    if any(k in content for k in ["accounting", "balance sheet", "depreciation", "gaap", "ebitda", "income statement", "audit", "cogs", "inventory"]):
-        return "حسابداری و صورت‌های مالی"
-    if any(k in content for k in ["inflation", "gdp", "macroeconomic", "monetary policy", "unemployment", "fiscal policy", "central bank", "stimulus"]):
-        return "اقتصاد کلان و سیاست پولی"
-    if any(k in content for k in ["bank", "loan", "mortgage", "credit", "interest rate", "lender", "deposit", "ach", "cofi"]):
-        return "بانکداری، وام و اعتبارات"
-    if any(k in content for k in ["insurance", "risk management", "annuity", "underwriting", "actuarial", "coverage", "policyholder"]):
-        return "مدیریت ریسک و بیمه"
-    if any(k in content for k in ["etf", "mutual fund", "portfolio", "index fund", "hedge fund", "reit", "asset management"]):
-        return "سرمایه‌گذاری و صندوق‌ها"
-    if any(k in content for k in ["tax", "irs", "sec rule", "regulation", "compliance", "form 1040", "statutory", "legal"]):
-        return "مالیات، مقررات و قوانین"
-    if any(k in content for k in ["tariff", "forex", "currency", "export", "import", "exchange rate", "trade agreement", "wto"]):
-        return "تجارت بین‌الملل و بازرگانی"
-    if any(k in content for k in ["stock", "share", "dividend", "trading", "equities", "ipo", "nasdaq", "nyse", "market maker"]):
-        return "بازار سهام و معاملات"
-    return "کسب‌وکار و مدیریت استراتژیک"
+from categories_engine import classify_term
+
+def classify_category(title: str, text: str):
+    res = classify_term({"term_en": title, "definition_en": text})
+    return {"fa": res["fa"], "en": res["en"]}
 
 def fetch_page_with_retry(url: str, session=None, max_retries=2) -> Optional[str]:
     """Dual-layer ultra-fast fetcher using system curl.exe with curl_cffi fallback."""
@@ -355,11 +331,15 @@ def parse_and_enrich_term(item: Dict, session=None) -> Optional[Dict]:
     slug = item.get("slug") or url.rstrip("/").split("/")[-1].replace(".asp", "").lower()
     term_fa_raw = tr(term_en)
     term_fa = f"{term_fa_raw} ({term_en})" if term_en not in term_fa_raw and len(term_en) <= 30 else term_fa_raw
-    category = classify_category(term_en, def_en)
+    cat_res = classify_category(term_en, def_en)
+    category = cat_res["fa"]
+    category_en = cat_res["en"]
 
     term_obj = {
         "letter": item.get("letter", "OTHER"),
         "category": category,
+        "category_fa": category,
+        "category_en": category_en,
         "term_en": term_en,
         "term_fa": term_fa,
         "slug": slug,
@@ -398,7 +378,7 @@ def run_pipeline(batch_limit=None, letters_filter=None):
 
     if total_to_process == 0:
         logger.info("All terms in the dictionary are 100% deep enriched with TOC sections!")
-        return
+        return True
 
     # Map by id / url for fast in-place update
     dict_map = {t.get("url"): t for t in dict_data if t.get("url")}
@@ -422,6 +402,8 @@ def run_pipeline(batch_limit=None, letters_filter=None):
                 target_entry["deep_enriched"] = True
                 if term_obj.get("category"):
                     target_entry["category"] = term_obj["category"]
+                    target_entry["category_fa"] = term_obj.get("category_fa", term_obj["category"])
+                    target_entry["category_en"] = term_obj.get("category_en", "")
 
                 enriched_count += 1
                 logger.info(f"[{idx}/{total_to_process}] Enriched: {term_obj['term_en']} -> {term_obj['term_fa']} ({len(term_obj['sections'])} sections, slug: {term_obj['slug']})")
@@ -467,7 +449,8 @@ def run_pipeline(batch_limit=None, letters_filter=None):
         except Exception as e:
             logger.error(f"Error processing {item.get('term_en', item.get('term'))}: {e}")
 
-    logger.info(f"Pipeline run finished! Successfully enriched {enriched_count} terms.")
+    logger.info(f"Pipeline run batch completed! Enriched {enriched_count} terms in this pass.")
+    return False
 
 if __name__ == "__main__":
     import argparse
@@ -477,4 +460,15 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     letters = args.letters.split(",") if args.letters else None
-    run_pipeline(batch_limit=args.limit, letters_filter=letters)
+    
+    while True:
+        try:
+            is_done = run_pipeline(batch_limit=args.limit, letters_filter=letters)
+            if is_done or args.limit:
+                break
+        except KeyboardInterrupt:
+            logger.info("Pipeline stopped by user.")
+            break
+        except Exception as e:
+            logger.error(f"Unexpected error in pipeline runner: {e}. Resuming in 5s...", exc_info=True)
+            time.sleep(5)
