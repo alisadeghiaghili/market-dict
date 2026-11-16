@@ -74,10 +74,12 @@ def is_mostly_english(text: str) -> bool:
     return total > 0 and (en_chars / total > 0.5)
 
 def tr(text: str) -> str:
-    """Translates text with cache and multi-provider fallback, preserving HTML tags."""
+    """Translates text with cache and multi-provider fallback, preserving HTML tags and math formulas."""
     if not text or not text.strip():
         return ""
     cleaned = text.strip()
+    if cleaned.startswith("$$") and cleaned.endswith("$$"):
+        return cleaned
     if cleaned in cache and not is_mostly_english(cache[cleaned]):
         return cache[cleaned]
 
@@ -122,7 +124,10 @@ def tr_chunks(texts: List[str]) -> List[str]:
     uncached = []
     for idx, t in enumerate(texts):
         c = t.strip()
-        if c in cache and not is_mostly_english(cache[c]):
+        if c.startswith("$$") and c.endswith("$$"):
+            # Math formulas must never be mangled by translation
+            results.append(c)
+        elif c in cache and not is_mostly_english(cache[c]):
             results.append(cache[c])
         else:
             results.append(None)
@@ -151,12 +156,27 @@ def tr_chunks(texts: List[str]) -> List[str]:
 def clean_element_html(el) -> str:
     """
     Cleans an HTML element (p, li) by:
-    1. Removing unwanted tags (scripts, styles, figures, buttons, ads)
-    2. Converting internal Investopedia /terms/ links into internal app links:
+    1. Converting KaTeX math formulas into standardized $$...$$ blocks
+    2. Removing unwanted tags (scripts, styles, figures, buttons, ads)
+    3. Converting internal Investopedia /terms/ links into internal app links:
        <a href="#term/{slug}" class="internal-term-link" data-slug="{slug}">{text}</a>
-    3. Unwrapping external links to avoid taking users out of the dictionary.
-    4. Normalizing whitespace.
+    4. Unwrapping external links to avoid taking users out of the dictionary.
+    5. Normalizing whitespace.
     """
+    # 1. Clean and isolate KaTeX math formulas into standard $$...$$
+    for k in el.find_all("span", class_="katex"):
+        tex = ""
+        annot = k.find("annotation", attrs={"encoding": "application/x-tex"})
+        if annot:
+            tex = annot.get_text().strip()
+        else:
+            tex = k.get_text().strip()
+        if tex:
+            tex = tex.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
+            k.replace_with(f" $${tex}$$ ")
+        else:
+            k.decompose()
+
     for bad in el.find_all(["script", "style", "figure", "img", "button", "svg", "iframe", "form"]):
         bad.decompose()
 

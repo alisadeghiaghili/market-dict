@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- KaTeX for Professional Financial Formula Rendering (Self-Hosted + CDN Fallback) -->
+    <link rel="stylesheet" href="/static/katex/katex.min.css">
+    <script src="/static/katex/katex.min.js"></script>
+    <script src="/static/katex/auto-render.min.js"></script>
+    
     <!-- Tailwind CSS CDN with extended Dark Mode Palette -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -94,6 +99,54 @@
         .dark .internal-term-link:hover {
             color: #6ee7b7;
             background-color: rgba(16, 185, 129, 0.24);
+        }
+
+        /* High-Precision Math Formula Styling */
+        .formula-container {
+            direction: ltr !important;
+            text-align: center;
+            margin: 1.25rem 0;
+            padding: 1.25rem 1.5rem;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.05);
+            overflow-x: auto;
+            position: relative;
+        }
+        .dark .formula-container {
+            background: #0f172a;
+            border-color: #334155;
+            box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.35);
+        }
+        .formula-container .katex-display {
+            margin: 0.35rem 0 !important;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        .formula-container .katex {
+            font-size: 1.15em !important;
+        }
+        .dark .formula-container .katex {
+            color: #f8fafc !important;
+        }
+        .formula-badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #059669;
+            background: #ecfdf5;
+            padding: 0.15rem 0.6rem;
+            border-radius: 9999px;
+            border: 1px solid #a7f3d0;
+            margin-bottom: 0.5rem;
+        }
+        .dark .formula-badge {
+            color: #34d399;
+            background: #064e3b;
+            border-color: #065f46;
         }
     </style>
 </head>
@@ -1105,6 +1158,7 @@
             setTimeout(() => {
                 card.classList.remove('scale-95', 'opacity-0');
                 card.classList.add('scale-100', 'opacity-100');
+                renderAllFormulas();
             }, 10);
         }
 
@@ -1155,8 +1209,8 @@
             // 2. Definitions Boxes Visibility
             const boxDefFa = document.getElementById('boxDefFa');
             const boxDefEn = document.getElementById('boxDefEn');
-            document.getElementById('modalDefFa').innerHTML = term.definition_fa || 'توضیحات در حال تکمیل...';
-            document.getElementById('modalDefEn').innerHTML = term.definition_en || 'English definition pending...';
+            document.getElementById('modalDefFa').innerHTML = formatRichParagraph(term.definition_fa || 'توضیحات در حال تکمیل...', 'fa');
+            document.getElementById('modalDefEn').innerHTML = formatRichParagraph(term.definition_en || 'English definition pending...', 'en');
 
             if (currentViewMode === 'fa') {
                 boxDefFa.classList.remove('hidden');
@@ -1208,17 +1262,11 @@
                         const pEn = pEnList[i] || '';
 
                         if (currentViewMode === 'fa') {
-                            if (pFa) pContent += `<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed">${pFa}</p>`;
-                            else if (pEn) pContent += `<p class="font-en text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed" dir="ltr">${pEn}</p>`;
+                            pContent += formatRichParagraph(pFa || pEn, 'fa');
                         } else if (currentViewMode === 'en') {
-                            if (pEn) pContent += `<p class="font-en text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed" dir="ltr">${pEn}</p>`;
+                            pContent += formatRichParagraph(pEn || pFa, 'en');
                         } else {
-                            pContent += `
-                                <div class="space-y-1 py-1 border-b border-slate-100 dark:border-slate-700/50 last:border-none">
-                                    <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed">${pFa || ''}</p>
-                                    <p class="font-en text-xs text-slate-600 dark:text-slate-400 leading-relaxed" dir="ltr">${pEn || ''}</p>
-                                </div>
-                            `;
+                            pContent += renderParagraphPair(pFa, pEn);
                         }
                     }
 
@@ -1280,8 +1328,8 @@
                 bottomBox.classList.remove('hidden');
                 const pFa = document.getElementById('modalBottomLineFa');
                 const pEn = document.getElementById('modalBottomLineEn');
-                pFa.innerHTML = blFa;
-                pEn.innerHTML = blEn;
+                pFa.innerHTML = formatRichParagraph(blFa, 'fa');
+                pEn.innerHTML = formatRichParagraph(blEn, 'en');
 
                 if (currentViewMode === 'fa') {
                     pFa.classList.remove('hidden');
@@ -1296,6 +1344,121 @@
             } else {
                 bottomBox.classList.add('hidden');
             }
+
+            // Trigger KaTeX math rendering across the modal card
+            setTimeout(() => {
+                renderAllFormulas();
+            }, 30);
+        }
+
+        function renderAllFormulas(container = null) {
+            const target = container || document.getElementById('detailModal');
+            if (!target) return;
+            if (window.renderMathInElement) {
+                try {
+                    renderMathInElement(target, {
+                        delimiters: [
+                            {left: '$$', right: '$$', display: true},
+                            {left: '\\[', right: '\\]', display: true},
+                            {left: '\\(', right: '\\)', display: false},
+                            {left: '\\begin{aligned}', right: '\\end{aligned}', display: true},
+                            {left: '\\begin{equation}', right: '\\end{equation}', display: true},
+                            {left: '\\begin{matrix}', right: '\\end{matrix}', display: true}
+                        ],
+                        throwOnError: false,
+                        errorColor: '#cc0000',
+                        strict: false
+                    });
+                } catch (err) {
+                    console.error('KaTeX rendering error:', err);
+                }
+            }
+        }
+
+        function sanitizeAndDetectMath(text) {
+            if (!text || typeof text !== 'string') return text;
+            let str = text;
+
+            // Auto-repair any Persian corrupted LaTeX keywords
+            str = str.replace(/\\begin\{تراز شده\}/g, '\\begin{aligned}')
+                     .replace(/\\شروع\{تراز شده\}/g, '\\begin{aligned}')
+                     .replace(/\\end\{تراز شده\}/g, '\\end{aligned}')
+                     .replace(/\\ بار/g, ' \\times ')
+                     .replace(/\\wER:b/g, '')
+                     .replace(/&amp;/g, '&');
+
+            // If it contains \begin{aligned} ... \end{aligned} without $$, wrap in $$
+            if (str.includes('\\begin{aligned}') && !str.includes('$$\\begin{aligned}')) {
+                str = str.replace(/(\\begin\{aligned\}.*?\\end\{aligned\})/gs, '$$$1$$');
+            }
+
+            return str;
+        }
+
+        function formatRichParagraph(rawText, lang = 'fa') {
+            if (!rawText) return '';
+            const text = sanitizeAndDetectMath(rawText);
+            const trimmed = text.trim();
+
+            // 1. If paragraph is a pure formula: $$...$$
+            if (trimmed.startsWith('$$') && trimmed.endsWith('$$') && trimmed.lastIndexOf('$$') === trimmed.length - 2) {
+                const latex = trimmed.slice(2, -2).trim();
+                return `
+                    <div class="formula-container" dir="ltr">
+                        <span class="formula-badge">فرمول محاسباتی / Formula</span>
+                        <div class="katex-math">$$${latex}$$</div>
+                    </div>
+                `;
+            }
+
+            // 2. If paragraph contains $$...$$ embedded
+            if (trimmed.includes('$$')) {
+                const parts = trimmed.split(/(\$\$.*?\$\$)/s);
+                let out = '';
+                for (const part of parts) {
+                    if (part.startsWith('$$') && part.endsWith('$$')) {
+                        const latex = part.slice(2, -2).trim();
+                        out += `
+                            <div class="formula-container" dir="ltr">
+                                <span class="formula-badge">فرمول محاسباتی / Formula</span>
+                                <div class="katex-math">$$${latex}$$</div>
+                            </div>
+                        `;
+                    } else if (part.trim()) {
+                        const fontClass = lang === 'en' ? 'font-en' : '';
+                        const dir = lang === 'en' ? 'dir="ltr"' : '';
+                        out += `<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed ${fontClass}" ${dir}>${part.trim()}</p>`;
+                    }
+                }
+                return out;
+            }
+
+            const fontClass = lang === 'en' ? 'font-en' : '';
+            const dir = lang === 'en' ? 'dir="ltr"' : '';
+            return `<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed ${fontClass}" ${dir}>${text}</p>`;
+        }
+
+        function renderParagraphPair(pFa, pEn) {
+            const isFaFormula = pFa && pFa.trim().startsWith('$$') && pFa.trim().endsWith('$$');
+            const isEnFormula = pEn && pEn.trim().startsWith('$$') && pEn.trim().endsWith('$$');
+
+            if (isFaFormula || isEnFormula) {
+                const formula = isFaFormula ? pFa.trim() : pEn.trim();
+                const latex = formula.slice(2, -2).trim();
+                return `
+                    <div class="formula-container" dir="ltr">
+                        <span class="formula-badge">فرمول محاسباتی / Formula</span>
+                        <div class="katex-math">$$${latex}$$</div>
+                    </div>
+                `;
+            }
+
+            return `
+                <div class="space-y-1 py-1 border-b border-slate-100 dark:border-slate-700/50 last:border-none">
+                    ${pFa ? formatRichParagraph(pFa, 'fa') : ''}
+                    ${pEn ? formatRichParagraph(pEn, 'en') : ''}
+                </div>
+            `;
         }
 
         function closeModal() {

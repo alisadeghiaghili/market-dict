@@ -36,11 +36,23 @@ CATEGORY_ICONS = {
 def get_dictionary() -> List[Dict[str, Any]]:
     if not os.path.exists(DATA_FILE):
         return []
-    current_mtime = os.path.getmtime(DATA_FILE)
+    try:
+        current_mtime = os.path.getmtime(DATA_FILE)
+    except OSError:
+        return _CACHE["data"]
+
     if current_mtime != _CACHE["mtime"]:
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
-            _CACHE["data"] = json.load(f)
-            _CACHE["mtime"] = current_mtime
+        for attempt in range(4):
+            try:
+                with open(DATA_FILE, "r", encoding="utf-8") as f:
+                    loaded = json.load(f)
+                    _CACHE["data"] = loaded
+                    _CACHE["mtime"] = current_mtime
+                    break
+            except (json.JSONDecodeError, PermissionError, OSError):
+                import time
+                time.sleep(0.15)
+
     return _CACHE["data"]
 
 def normalize_text(text: str) -> str:
