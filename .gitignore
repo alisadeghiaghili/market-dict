@@ -11,4 +11,5 @@ Thumbs.db
 translation_cache.json
 *.argosmodel
 *.tmp
+dist/
 

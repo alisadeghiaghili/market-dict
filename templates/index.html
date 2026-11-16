@@ -6,8 +6,8 @@
     <title>Market Dict</title>
     
     <!-- Meaningful Financial Market & Dictionary Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
-    <link rel="alternate icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
+    <link rel="alternate icon" href="static/favicon.svg">
     
     <!-- Google Fonts: Vazirmatn (FA) & Inter (EN) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,9 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- KaTeX for Professional Financial Formula Rendering (Self-Hosted + CDN Fallback) -->
-    <link rel="stylesheet" href="/static/katex/katex.min.css">
-    <script src="/static/katex/katex.min.js"></script>
-    <script src="/static/katex/auto-render.min.js"></script>
+    <link rel="stylesheet" href="static/katex/katex.min.css">
+    <script src="static/katex/katex.min.js"></script>
+    <script src="static/katex/auto-render.min.js"></script>
     
     <!-- Tailwind CSS CDN with extended Dark Mode Palette -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -57,7 +57,27 @@
         .font-en {
             font-family: 'Inter', sans-serif;
             direction: ltr;
+        }
+        .font-en:not(.text-justify) {
             text-align: left;
+        }
+
+        /* Justified text styling for Persian and English content */
+        .text-justify,
+        .term-def-text,
+        #modalDefFa,
+        #modalDefFa p,
+        #modalDefEn,
+        #modalDefEn p,
+        #modalBottomLineFa,
+        #modalBottomLineFa p,
+        #modalBottomLineEn,
+        #modalBottomLineEn p,
+        #modalTakeawaysList li,
+        #modalSectionsList p,
+        #modalSectionsList li {
+            text-align: justify;
+            text-justify: inter-word;
         }
         ::-webkit-scrollbar {
             width: 8px;
@@ -445,8 +465,8 @@
                             <span>🇮🇷</span>
                             <span>تعریف و مفهوم به زبان فارسی:</span>
                         </div>
-                        <p id="modalDefFa" class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-normal whitespace-pre-line">
-                        </p>
+                        <div id="modalDefFa" class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-normal whitespace-pre-line text-justify">
+                        </div>
                     </div>
 
                     <!-- English Definition Box -->
@@ -455,8 +475,8 @@
                             <span>🇬🇧</span>
                             <span>Original Definition:</span>
                         </div>
-                        <p id="modalDefEn" class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-line">
-                        </p>
+                        <div id="modalDefEn" class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-line text-justify font-en" dir="ltr">
+                        </div>
                     </div>
                 </div>
 
@@ -477,10 +497,10 @@
                         <span>🎯</span>
                         <span>جمع‌بندی و نتیجه‌گیری نهایی (The Bottom Line):</span>
                     </div>
-                    <p id="modalBottomLineFa" class="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                    </p>
-                    <p id="modalBottomLineEn" class="text-xs sm:text-sm text-slate-400 leading-relaxed font-en pt-1 border-t border-slate-800" dir="ltr">
-                    </p>
+                    <div id="modalBottomLineFa" class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
+                    </div>
+                    <div id="modalBottomLineEn" class="text-xs sm:text-sm text-slate-400 leading-relaxed font-en pt-1 border-t border-slate-800 text-justify" dir="ltr">
+                    </div>
                 </div>
 
             </div>
@@ -686,10 +706,151 @@
             loadTerms();
         }
 
+        // Static Data & API Hybrid Adapter
+        let marketDictBundle = null;
+        let bundlePromise = null;
+        const termDetailsCache = new Map();
+
+        function normalizeText(text) {
+            if (!text) return '';
+            let t = String(text).toLowerCase();
+            t = t.replace(/ي/g, 'ی').replace(/ك/g, 'ک').replace(/ة/g, 'ه').replace(/ۀ/g, 'ه');
+            t = t.replace(/\u200c/g, ' ');
+            t = t.replace(/[\u064B-\u065F\u0670]/g, '');
+            return t.replace(/\s+/g, ' ').trim();
+        }
+
+        async function initBundleData() {
+            if (marketDictBundle) return marketDictBundle;
+            if (!bundlePromise) {
+                bundlePromise = (async () => {
+                    try {
+                        const res = await fetch('data/bundle.json');
+                        if (res.ok) {
+                            marketDictBundle = await res.json();
+                            return marketDictBundle;
+                        }
+                    } catch (e) {}
+                    return null;
+                })();
+            }
+            return bundlePromise;
+        }
+
+        function queryBundleTerms(query, letter, category, idSet, page, limit) {
+            let filtered = marketDictBundle.terms || [];
+
+            // Filter by IDs (favorites)
+            if (idSet && idSet.size > 0) {
+                filtered = filtered.filter(t => idSet.has(String(t.id)) || idSet.has(String(t.slug)));
+            }
+
+            // Filter by Letter
+            if (letter && letter !== 'ALL') {
+                filtered = filtered.filter(t => (t.letter || '').toUpperCase() === letter);
+            }
+
+            // Filter by Category
+            if (category && category !== 'ALL') {
+                filtered = filtered.filter(t => t.category === category);
+            }
+
+            // Filter by Query
+            if (query) {
+                const normQuery = normalizeText(query);
+                const scored = [];
+                for (let i = 0; i < filtered.length; i++) {
+                    const item = filtered[i];
+                    const termEn = normalizeText(item.term_en);
+                    const termFa = normalizeText(item.term_fa);
+                    const cat = normalizeText(item.category);
+                    const defFa = normalizeText(item.definition_fa);
+                    const defEn = normalizeText(item.definition_en);
+
+                    let score = 0;
+                    if (normQuery === termEn || normQuery === termFa) {
+                        score += 100;
+                    } else if (termEn.startsWith(normQuery) || termFa.startsWith(normQuery)) {
+                        score += 50;
+                    } else if (termEn.includes(normQuery) || termFa.includes(normQuery)) {
+                        score += 30;
+                    } else if (cat.includes(normQuery)) {
+                        score += 15;
+                    } else if (defFa.includes(normQuery) || defEn.includes(normQuery)) {
+                        score += 10;
+                    }
+
+                    if (score > 0) {
+                        scored.push({ score, item });
+                    }
+                }
+                scored.sort((a, b) => b.score - a.score);
+                filtered = scored.map(x => x.item);
+            }
+
+            const total = filtered.length;
+            const startIdx = (page - 1) * limit;
+            const endIdx = startIdx + limit;
+            const pageTerms = filtered.slice(startIdx, endIdx);
+
+            return {
+                terms: pageTerms,
+                total: total,
+                page: page,
+                limit: limit,
+                has_more: endIdx < total
+            };
+        }
+
+        async function fetchTermDetails(slugOrId) {
+            if (!slugOrId) return null;
+            const strId = String(slugOrId).trim();
+            const cleanSlug = strId.toLowerCase().replace('.asp', '');
+            const cleanKey = cleanSlug.replace(/[^a-z0-9]/g, '');
+
+            let targetSlug = cleanSlug;
+            const bundle = await initBundleData();
+            if (bundle && bundle.lookup) {
+                targetSlug = bundle.lookup[strId] || bundle.lookup[cleanSlug] || bundle.lookup[cleanKey] || targetSlug;
+            }
+
+            if (termDetailsCache.has(targetSlug)) {
+                return termDetailsCache.get(targetSlug);
+            }
+
+            // 1. Try static json file
+            try {
+                const res = await fetch(`data/terms/${encodeURIComponent(targetSlug)}.json`);
+                if (res.ok) {
+                    const data = await res.json();
+                    termDetailsCache.set(targetSlug, data);
+                    return data;
+                }
+            } catch (e) {}
+
+            // 2. Try backend API fallback
+            try {
+                const res = await fetch(`/api/terms/${encodeURIComponent(cleanSlug)}`);
+                if (res.ok) {
+                    const data = await res.json();
+                    termDetailsCache.set(targetSlug, data);
+                    return data;
+                }
+            } catch (e) {}
+
+            return null;
+        }
+
         async function loadStats() {
             try {
-                const res = await fetch('/api/stats');
-                const data = await res.json();
+                const bundle = await initBundleData();
+                let data;
+                if (bundle && bundle.stats) {
+                    data = bundle.stats;
+                } else {
+                    const res = await fetch('/api/stats');
+                    data = await res.json();
+                }
                 document.getElementById('statTotalTerms').innerText = data.total_terms.toLocaleString('fa-IR');
                 document.getElementById('statTotalCats').innerText = data.total_categories.toLocaleString('fa-IR');
                 if (data.deep_enriched_count) {
@@ -706,11 +867,18 @@
 
         async function loadLetters() {
             try {
-                const res = await fetch('/api/letters');
-                const letters = await res.json();
+                const bundle = await initBundleData();
+                let letters;
+                if (bundle && bundle.letters) {
+                    letters = bundle.letters;
+                } else {
+                    const res = await fetch('/api/letters');
+                    letters = await res.json();
+                }
                 const container = document.getElementById('alphabetContainer');
 
                 letters.forEach(item => {
+                    if (document.getElementById(`letter-${item.letter}`)) return;
                     const btn = document.createElement('button');
                     btn.id = `letter-${item.letter}`;
                     btn.className = 'letter-btn px-2.5 py-1 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-1';
@@ -725,8 +893,14 @@
 
         async function loadCategories() {
             try {
-                const res = await fetch('/api/categories');
-                const cats = await res.json();
+                const bundle = await initBundleData();
+                let cats;
+                if (bundle && bundle.categories) {
+                    cats = bundle.categories;
+                } else {
+                    const res = await fetch('/api/categories');
+                    cats = await res.json();
+                }
                 const container = document.getElementById('categoriesContainer');
 
                 // Preserve the "cat-ALL" button and reload category pills
@@ -774,14 +948,21 @@
             }
 
             try {
-                let url = `/api/terms?page=${currentPage}&limit=24`;
-                if (currentQuery) url += `&q=${encodeURIComponent(currentQuery)}`;
-                if (currentLetter !== 'ALL') url += `&letter=${encodeURIComponent(currentLetter)}`;
-                if (currentCategory !== 'ALL') url += `&category=${encodeURIComponent(currentCategory)}`;
-                if (onlyFavorites) url += `&ids=${encodeURIComponent(favorites.join(','))}`;
+                const bundle = await initBundleData();
+                let data;
+                if (bundle) {
+                    const idSet = onlyFavorites ? new Set(favorites.map(String)) : null;
+                    data = queryBundleTerms(currentQuery, currentLetter, currentCategory, idSet, currentPage, 24);
+                } else {
+                    let url = `/api/terms?page=${currentPage}&limit=24`;
+                    if (currentQuery) url += `&q=${encodeURIComponent(currentQuery)}`;
+                    if (currentLetter !== 'ALL') url += `&letter=${encodeURIComponent(currentLetter)}`;
+                    if (currentCategory !== 'ALL') url += `&category=${encodeURIComponent(currentCategory)}`;
+                    if (onlyFavorites) url += `&ids=${encodeURIComponent(favorites.join(','))}`;
 
-                const res = await fetch(url);
-                const data = await res.json();
+                    const res = await fetch(url);
+                    data = await res.json();
+                }
                 let terms = data.terms;
 
                 if (!append) grid.innerHTML = '';
@@ -822,7 +1003,7 @@
             card.onclick = () => openModal(term);
 
             const favActive = isFavorite(term.id);
-            const hasDeep = (term.sections && term.sections.length > 0) || term.deep_enriched;
+            const hasDeep = (term.sections && term.sections.length > 0) || term.deep_enriched || term.has_deep;
 
             card.innerHTML = `
                 <div class="space-y-3">
@@ -852,7 +1033,7 @@
                         </h4>
                     </div>
 
-                    <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">
+                    <p class="term-def-text text-xs text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed text-justify">
                         ${term.definition_fa}
                     </p>
                 </div>
@@ -1089,18 +1270,13 @@
                 }
             }
 
-            try {
-                const res = await fetch(`/api/terms/${encodeURIComponent(cleanSlug)}`);
-                if (res.ok) {
-                    const term = await res.json();
-                    openModal(term, false);
-                    history.pushState(null, '', `#term/${term.slug || cleanSlug}`);
-                } else {
-                    showToast(`اصطلاح «${cleanSlug}» هنوز در این پایگاه ثبت نشده است.`);
-                }
-            } catch (err) {
-                console.error(err);
-                showToast('خطا در بارگذاری اصطلاح.');
+            const term = await fetchTermDetails(cleanSlug);
+            if (term) {
+                term._is_full = true;
+                openModal(term, false);
+                history.pushState(null, '', `#term/${term.slug || cleanSlug}`);
+            } else {
+                showToast(`اصطلاح «${cleanSlug}» هنوز در این پایگاه ثبت نشده است.`);
             }
         }
 
@@ -1122,7 +1298,7 @@
             }
         }
 
-        function openModal(term, clearHistory = true) {
+        async function openModal(term, clearHistory = true) {
             activeModalTerm = term;
             if (clearHistory) {
                 modalHistory = [];
@@ -1134,7 +1310,7 @@
             document.getElementById('modalLetterBadge').innerText = term.letter;
             document.getElementById('modalCategoryBadge').innerText = term.category;
 
-            const hasDeep = (term.sections && term.sections.length > 0) || term.deep_enriched;
+            const hasDeep = (term.sections && term.sections.length > 0) || term.deep_enriched || term.has_deep;
             const deepBadge = document.getElementById('modalDeepBadge');
             if (hasDeep) deepBadge.classList.remove('hidden');
             else deepBadge.classList.add('hidden');
@@ -1160,6 +1336,17 @@
                 card.classList.add('scale-100', 'opacity-100');
                 renderAllFormulas();
             }, 10);
+
+            // If term was opened from summary and doesn't have sections loaded yet, fetch full details asynchronously
+            if (!term._is_full && (!term.sections || term.sections.length === 0) && (term.has_deep || hasDeep) && term.slug) {
+                const full = await fetchTermDetails(term.slug);
+                if (full && activeModalTerm && (activeModalTerm.slug === term.slug || activeModalTerm.id === term.id)) {
+                    full._is_full = true;
+                    activeModalTerm = full;
+                    renderModalBody(full);
+                    setTimeout(renderAllFormulas, 10);
+                }
+            }
         }
 
         function renderModalBody(term) {
@@ -1202,6 +1389,13 @@
                     `;
                     takeawaysList.appendChild(li);
                 }
+            } else if (!term._is_full && (term.has_deep || term.deep_enriched)) {
+                document.getElementById('modalTakeawaysBox').classList.remove('hidden');
+                takeawaysList.innerHTML = `
+                    <li class="p-3 bg-slate-50 dark:bg-slate-800/40 rounded-xl animate-pulse text-xs text-slate-400">
+                        در حال بارگذاری نکات کلیدی...
+                    </li>
+                `;
             } else {
                 document.getElementById('modalTakeawaysBox').classList.add('hidden');
             }
@@ -1315,6 +1509,15 @@
                     `;
                     sectionsList.appendChild(secCard);
                 });
+            } else if (!term._is_full && (term.has_deep || term.deep_enriched)) {
+                sectionsCont.classList.remove('hidden');
+                sectionsList.innerHTML = `
+                    <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 animate-pulse space-y-3">
+                        <div class="h-4 bg-slate-200 dark:bg-slate-700 rounded w-1/3"></div>
+                        <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-3/4"></div>
+                        <div class="h-3 bg-slate-200 dark:bg-slate-700 rounded w-1/2"></div>
+                    </div>
+                `;
             } else {
                 sectionsCont.classList.add('hidden');
             }
@@ -1542,9 +1745,22 @@ ${(activeModalTerm.takeaways_en || []).map(t => '• ' + t).join('\n')}
 
         async function fetchRandomTerm() {
             try {
+                const bundle = await initBundleData();
+                if (bundle && bundle.terms && bundle.terms.length > 0) {
+                    const pool = bundle.terms.filter(t => t.has_deep);
+                    const list = (pool.length > 0 && Math.random() < 0.8) ? pool : bundle.terms;
+                    const randomItem = list[Math.floor(Math.random() * list.length)];
+                    const fullTerm = await fetchTermDetails(randomItem.slug);
+                    if (fullTerm) {
+                        openModal(fullTerm);
+                        return;
+                    }
+                }
                 const res = await fetch('/api/random');
-                const term = await res.json();
-                openModal(term);
+                if (res.ok) {
+                    const term = await res.json();
+                    openModal(term);
+                }
             } catch (err) {
                 console.error(err);
             }
