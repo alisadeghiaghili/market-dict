@@ -423,8 +423,13 @@ def run_pipeline(batch_limit=None, letters_filter=None):
 
             # Save incrementally every 5 terms
             if enriched_count > 0 and (enriched_count % 5 == 0 or idx == total_to_process):
-                with open(DICT_FILE, "w", encoding="utf-8") as f:
+                tmp_dict = DICT_FILE + ".tmp"
+                with open(tmp_dict, "w", encoding="utf-8") as f:
                     json.dump(dict_data, f, ensure_ascii=False, indent=2)
+                if os.path.exists(DICT_FILE):
+                    os.replace(tmp_dict, DICT_FILE)
+                else:
+                    os.rename(tmp_dict, DICT_FILE)
 
                 with open(CACHE_FILE, "w", encoding="utf-8") as f:
                     json.dump(cache, f, ensure_ascii=False, indent=2)
