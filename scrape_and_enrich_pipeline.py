@@ -16,6 +16,10 @@ import os
 os.environ["translators_default_region"] = "EN"
 
 import sys
+try:
+    sys.stdout.reconfigure(line_buffering=True)
+except Exception:
+    pass
 import re
 import time
 import json
@@ -51,7 +55,8 @@ except ImportError:
 logging.basicConfig(
     level=logging.INFO,
     format="[%(asctime)s] [%(levelname)s] %(message)s",
-    datefmt="%H:%M:%S"
+    datefmt="%H:%M:%S",
+    handlers=[logging.StreamHandler(sys.stdout)]
 )
 logger = logging.getLogger("Pipeline")
 
@@ -420,6 +425,8 @@ def run_pipeline(batch_limit=None, letters_filter=None):
 
                 enriched_count += 1
                 logger.info(f"[{idx}/{total_to_process}] Enriched: {term_obj['term_en']} -> {term_obj['term_fa']} ({len(term_obj['sections'])} sections, slug: {term_obj['slug']})")
+            else:
+                logger.warning(f"[{idx}/{total_to_process}] Skipped or empty: {item.get('term_en')}")
 
             # Save incrementally every 5 terms
             if enriched_count > 0 and (enriched_count % 5 == 0 or idx == total_to_process):
@@ -437,6 +444,25 @@ def run_pipeline(batch_limit=None, letters_filter=None):
                 elapsed = time.time() - t0
                 rate = enriched_count / max(elapsed, 0.1)
                 logger.info(f"--- Checkpoint saved: {enriched_count} terms enriched ({rate:.2f} terms/sec) ---")
+
+            # Milestone: Every 100 enriched terms, trigger automatic GitHub Pages deployment
+            if enriched_count > 0 and (enriched_count % 100 == 0 or idx == total_to_process):
+                logger.info(f"🚀 Milestone reached: {enriched_count} terms enriched! Triggering GitHub Pages deployment...")
+                try:
+                    subprocess.run([sys.executable, "build_static.py"], check=False)
+                    subprocess.run(["git", "add", DICT_FILE], check=False)
+                    msg = f"Auto-enrichment milestone: +{enriched_count} terms enriched (Deployed to GitHub Pages)"
+                    commit_res = subprocess.run(["git", "commit", "-m", msg], capture_output=True, text=True)
+                    if commit_res.returncode == 0:
+                        push_res = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True, timeout=45)
+                        if push_res.returncode == 0:
+                            logger.info(f"✅ Milestone +{enriched_count} successfully pushed to GitHub! GitHub Pages deploying.")
+                        else:
+                            logger.warning(f"Git push warning: {push_res.stderr}")
+                    else:
+                        logger.info("Git commit: Working tree clean or nothing to commit.")
+                except Exception as ex:
+                    logger.error(f"Error during milestone deployment: {ex}")
 
         except Exception as e:
             logger.error(f"Error processing {item.get('term_en', item.get('term'))}: {e}")
