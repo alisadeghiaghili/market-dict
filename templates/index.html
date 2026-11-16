@@ -159,15 +159,31 @@
                     <span id="favoritesCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
                 </button>
 
-                <!-- Dark Mode Toggle -->
-                <button onclick="toggleDarkMode()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 transition" title="تغییر تم روز / شب">
-                    <svg id="themeMoon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                    </svg>
-                    <svg id="themeSun" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-                    </svg>
-                </button>
+                <!-- Theme Selector (System Default, Light, Dark) -->
+                <div class="relative" id="themeDropdownContainer">
+                    <button id="themeMenuBtn" onclick="toggleThemeMenu(event)" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition" title="تنظیم تم نمایشی (سیستم / روشن / تاریک)">
+                        <span id="themeActiveIcon" class="text-sm">💻</span>
+                        <span id="themeActiveLabel" class="hidden md:inline text-xs font-semibold">سیستم</span>
+                        <svg class="w-3.5 h-3.5 text-slate-400 transition-transform" id="themeChevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <!-- Theme Dropdown Panel -->
+                    <div id="themeMenu" class="hidden absolute left-0 mt-2 w-48 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl py-1.5 z-50 text-xs font-medium space-y-0.5">
+                        <button onclick="setTheme('system')" id="themeOptSystem" class="w-full text-right px-3.5 py-2 flex items-center justify-between hover:bg-emerald-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 transition rounded-xl">
+                            <span class="flex items-center gap-2"><span>💻</span><span>سیستم (پیش‌فرض)</span></span>
+                            <span id="checkSystem" class="text-emerald-500 font-bold">✓</span>
+                        </button>
+                        <button onclick="setTheme('light')" id="themeOptLight" class="w-full text-right px-3.5 py-2 flex items-center justify-between hover:bg-emerald-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 transition rounded-xl">
+                            <span class="flex items-center gap-2"><span>☀️</span><span>حالت روشن</span></span>
+                            <span id="checkLight" class="text-emerald-500 font-bold hidden">✓</span>
+                        </button>
+                        <button onclick="setTheme('dark')" id="themeOptDark" class="w-full text-right px-3.5 py-2 flex items-center justify-between hover:bg-emerald-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 transition rounded-xl">
+                            <span class="flex items-center gap-2"><span>🌙</span><span>حالت تاریک</span></span>
+                            <span id="checkDark" class="text-emerald-500 font-bold hidden">✓</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -208,9 +224,9 @@
 
             <!-- Stats Bar -->
             <div class="flex items-center justify-center gap-6 pt-2 text-xs text-slate-500 dark:text-slate-400">
-                <div>📚 <span id="statTotalTerms" class="font-bold text-slate-700 dark:text-slate-300">۶۳۱</span> اصطلاح مالی</div>
+                <div>📚 <span id="statTotalTerms" class="font-bold text-slate-700 dark:text-slate-300">۶۳۳</span> اصطلاح مالی</div>
                 <div>🏷️ <span id="statTotalCats" class="font-bold text-slate-700 dark:text-slate-300">۱۴</span> دسته تخصصی بازار سرمایه</div>
-                <div>📑 <span id="statDeepCount" class="font-bold text-emerald-600 dark:text-emerald-400">۵۶+</span> مقاله تحلیلی جامع</div>
+                <div>📑 <span id="statDeepCount" class="font-bold text-emerald-600 dark:text-emerald-400">۶۳۳</span> مقاله تحلیلی جامع</div>
             </div>
         </div>
     </section>
@@ -261,7 +277,7 @@
                 <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-600 text-white shadow-sm transition flex items-center gap-1.5 border border-emerald-600">
                     <span>🏛️</span>
                     <span>همه دسته‌ها</span>
-                    <span class="bg-emerald-700/60 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">۶۳۱</span>
+                    <span id="catTotalAllCount" class="bg-emerald-700/60 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">۶۳۳</span>
                 </button>
                 <!-- Dynamic Category Pills inserted here -->
             </div>
@@ -287,8 +303,8 @@
         <!-- Empty State -->
         <div id="emptyState" class="hidden text-center py-16 space-y-3 bg-white dark:bg-slate-900 rounded-3xl border border-dashed border-slate-300 dark:border-slate-800">
             <div class="w-16 h-16 mx-auto rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 text-2xl">🔍</div>
-            <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200">اصطلاحی با این مشخصات یافت نشد!</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400 max-w-sm mx-auto">می‌توانید املای واژه را بررسی کنید یا عبارت جستجو و فیلتر الفبا را تغییر دهید.</p>
+            <h3 id="emptyTitle" class="text-lg font-bold text-slate-800 dark:text-slate-200">اصطلاحی با این مشخصات یافت نشد!</h3>
+            <p id="emptyDesc" class="text-sm text-slate-500 dark:text-slate-400 max-w-sm mx-auto">می‌توانید املای واژه را بررسی کنید یا عبارت جستجو و فیلتر الفبا را تغییر دهید.</p>
             <button onclick="resetFilters()" class="mt-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-semibold shadow transition">
                 نمایش تمام اصطلاحات
             </button>
@@ -501,21 +517,97 @@
 
         window.addEventListener('hashchange', checkUrlHash);
 
+        // 3-Mode Theme Management (System default, Light, Dark)
+        let currentThemeMode = localStorage.getItem('theme_mode') || 'system';
+
         function initTheme() {
-            if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            applyTheme(currentThemeMode, false);
+
+            // Real-time synchronization with OS color-scheme changes
+            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            mediaQuery.addEventListener('change', (e) => {
+                if (currentThemeMode === 'system') {
+                    if (e.matches) {
+                        document.documentElement.classList.add('dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                    }
+                }
+            });
+
+            // Close theme menu dropdown on outside click
+            document.addEventListener('click', (e) => {
+                const container = document.getElementById('themeDropdownContainer');
+                const menu = document.getElementById('themeMenu');
+                if (container && !container.contains(e.target) && menu && !menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                    const chevron = document.getElementById('themeChevron');
+                    if (chevron) chevron.classList.remove('rotate-180');
+                }
+            });
+        }
+
+        function toggleThemeMenu(event) {
+            if (event) event.stopPropagation();
+            const menu = document.getElementById('themeMenu');
+            const chevron = document.getElementById('themeChevron');
+            if (menu) {
+                const isHidden = menu.classList.contains('hidden');
+                if (isHidden) {
+                    menu.classList.remove('hidden');
+                    if (chevron) chevron.classList.add('rotate-180');
+                } else {
+                    menu.classList.add('hidden');
+                    if (chevron) chevron.classList.remove('rotate-180');
+                }
+            }
+        }
+
+        function setTheme(mode) {
+            currentThemeMode = mode;
+            localStorage.setItem('theme_mode', mode);
+            applyTheme(mode, true);
+            const menu = document.getElementById('themeMenu');
+            if (menu) menu.classList.add('hidden');
+            const chevron = document.getElementById('themeChevron');
+            if (chevron) chevron.classList.remove('rotate-180');
+        }
+
+        function applyTheme(mode, showFeedback = false) {
+            const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (mode === 'dark' || (mode === 'system' && isSystemDark)) {
                 document.documentElement.classList.add('dark');
             } else {
                 document.documentElement.classList.remove('dark');
             }
-        }
 
-        function toggleDarkMode() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
+            // Update UI Icons & Labels
+            const iconEl = document.getElementById('themeActiveIcon');
+            const labelEl = document.getElementById('themeActiveLabel');
+            const checkSystem = document.getElementById('checkSystem');
+            const checkLight = document.getElementById('checkLight');
+            const checkDark = document.getElementById('checkDark');
+
+            if (checkSystem) checkSystem.classList.add('hidden');
+            if (checkLight) checkLight.classList.add('hidden');
+            if (checkDark) checkDark.classList.add('hidden');
+
+            if (mode === 'system') {
+                if (iconEl) iconEl.innerText = '💻';
+                if (labelEl) labelEl.innerText = 'سیستم';
+                if (checkSystem) checkSystem.classList.remove('hidden');
+                if (showFeedback) showToast('تم هماهنگ با سیستم (پیش‌فرض) فعال شد.');
+            } else if (mode === 'light') {
+                if (iconEl) iconEl.innerText = '☀️';
+                if (labelEl) labelEl.innerText = 'روشن';
+                if (checkLight) checkLight.classList.remove('hidden');
+                if (showFeedback) showToast('حالت روشن فعال شد.');
+            } else if (mode === 'dark') {
+                if (iconEl) iconEl.innerText = '🌙';
+                if (labelEl) labelEl.innerText = 'تاریک';
+                if (checkDark) checkDark.classList.remove('hidden');
+                if (showFeedback) showToast('حالت تاریک فعال شد.');
             }
         }
 
@@ -524,16 +616,17 @@
         }
 
         function isFavorite(id) {
-            return favorites.includes(id);
+            return favorites.some(fav => String(fav) === String(id));
         }
 
         function toggleFavorite(id, event) {
             if (event) event.stopPropagation();
-            if (favorites.includes(id)) {
-                favorites = favorites.filter(item => item !== id);
+            const idStr = String(id);
+            if (isFavorite(idStr)) {
+                favorites = favorites.filter(item => String(item) !== idStr);
                 showToast('از نشان‌شده‌ها حذف شد.');
             } else {
-                favorites.push(id);
+                favorites.push(idStr);
                 showToast('به نشان‌شده‌ها اضافه شد!');
             }
             localStorage.setItem('marketdict_favs', JSON.stringify(favorites));
@@ -541,20 +634,23 @@
 
             const starSvg = document.getElementById(`star-icon-${id}`);
             if (starSvg) {
-                if (isFavorite(id)) {
+                if (isFavorite(idStr)) {
                     starSvg.classList.add('fill-amber-400', 'text-amber-500');
-                    starSvg.classList.remove('text-slate-400');
+                    starSvg.classList.remove('text-slate-300', 'dark:text-slate-600');
                 } else {
                     starSvg.classList.remove('fill-amber-400', 'text-amber-500');
-                    starSvg.classList.add('text-slate-400');
+                    starSvg.classList.add('text-slate-300', 'dark:text-slate-600');
                 }
             }
 
-            if (activeModalTerm && activeModalTerm.id === id) {
+            if (activeModalTerm && String(activeModalTerm.id) === idStr) {
                 updateModalStarUI();
             }
 
-            if (onlyFavorites) loadTerms();
+            if (onlyFavorites) {
+                currentPage = 1;
+                loadTerms();
+            }
         }
 
         function toggleFavoritesFilter() {
@@ -579,7 +675,11 @@
                 document.getElementById('statTotalTerms').innerText = data.total_terms.toLocaleString('fa-IR');
                 document.getElementById('statTotalCats').innerText = data.total_categories.toLocaleString('fa-IR');
                 if (data.deep_enriched_count) {
-                    document.getElementById('statDeepCount').innerText = `${data.deep_enriched_count.toLocaleString('fa-IR')} مقاله تحلیلی جامع`;
+                    document.getElementById('statDeepCount').innerText = data.deep_enriched_count.toLocaleString('fa-IR');
+                }
+                const catAllBadge = document.getElementById('catTotalAllCount');
+                if (catAllBadge) {
+                    catAllBadge.innerText = data.total_terms.toLocaleString('fa-IR');
                 }
             } catch (err) {
                 console.error(err);
@@ -611,6 +711,11 @@
                 const cats = await res.json();
                 const container = document.getElementById('categoriesContainer');
 
+                // Preserve the "cat-ALL" button and reload category pills
+                const allBtn = document.getElementById('cat-ALL');
+                container.innerHTML = '';
+                if (allBtn) container.appendChild(allBtn);
+
                 cats.forEach(item => {
                     const btn = document.createElement('button');
                     btn.id = `cat-${encodeURIComponent(item.name)}`;
@@ -638,35 +743,49 @@
                 grid.innerHTML = '<div class="col-span-full text-center py-12 text-slate-400">در حال جستجو و بارگذاری...</div>';
             }
 
+            // Handle empty favorites state immediately
+            if (onlyFavorites && favorites.length === 0) {
+                if (!append) grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                document.getElementById('emptyTitle').innerText = 'هنوز اصطلاحی نشان نشده است!';
+                document.getElementById('emptyDesc').innerText = 'برای افزودن هر اصطلاح به فهرست نشان‌شده‌ها، روی علامت ستاره بالای کارت آن کلیک کنید.';
+                loadMoreContainer.classList.add('hidden');
+                countLabel.innerText = 'هیچ اصطلاحی نشان نشده است';
+                updateResetFilterButton();
+                return;
+            }
+
             try {
                 let url = `/api/terms?page=${currentPage}&limit=24`;
                 if (currentQuery) url += `&q=${encodeURIComponent(currentQuery)}`;
                 if (currentLetter !== 'ALL') url += `&letter=${encodeURIComponent(currentLetter)}`;
                 if (currentCategory !== 'ALL') url += `&category=${encodeURIComponent(currentCategory)}`;
+                if (onlyFavorites) url += `&ids=${encodeURIComponent(favorites.join(','))}`;
 
                 const res = await fetch(url);
                 const data = await res.json();
-
                 let terms = data.terms;
-                if (onlyFavorites) terms = terms.filter(t => isFavorite(t.id));
 
                 if (!append) grid.innerHTML = '';
 
                 if (terms.length === 0 && !append) {
                     emptyState.classList.remove('hidden');
+                    document.getElementById('emptyTitle').innerText = 'اصطلاحی با این مشخصات یافت نشد!';
+                    document.getElementById('emptyDesc').innerText = 'می‌توانید املای واژه را بررسی کنید یا عبارت جستجو و فیلتر الفبا را تغییر دهید.';
                     loadMoreContainer.classList.add('hidden');
                     countLabel.innerText = 'نتیجه‌ای یافت نشد';
                     return;
                 }
 
                 emptyState.classList.add('hidden');
-                countLabel.innerText = `نمایش ${terms.length} از ${data.total} اصطلاح`;
+                const favSuffix = onlyFavorites ? ' نشان‌شده' : '';
+                countLabel.innerText = `نمایش ${terms.length} از ${data.total} اصطلاح${favSuffix}`;
 
                 terms.forEach(term => {
                     grid.appendChild(createTermCard(term));
                 });
 
-                if (data.has_more && !onlyFavorites) {
+                if (data.has_more) {
                     loadMoreContainer.classList.remove('hidden');
                 } else {
                     loadMoreContainer.classList.add('hidden');

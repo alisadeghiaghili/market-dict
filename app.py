@@ -107,10 +107,16 @@ def search_terms():
     query = request.args.get("q", "").strip()
     letter = request.args.get("letter", "").strip().upper()
     category = request.args.get("category", "").strip()
+    ids_param = request.args.get("ids", "").strip()
     page = int(request.args.get("page", 1))
     limit = int(request.args.get("limit", 24))
 
     filtered = get_dictionary()
+
+    # Filter by IDs (used by Bookmarks / Favorites)
+    if ids_param:
+        id_set = set(re.split(r"[,;|\s]+", ids_param))
+        filtered = [t for t in filtered if str(t.get("id")) in id_set or str(t.get("slug")) in id_set]
 
     # Filter by Letter
     if letter and letter != "ALL":
