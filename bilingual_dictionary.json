@@ -157194,103 +157194,595 @@
     "term_fa": "American اختیار معامله (American Option)",
     "letter": "A",
     "category": "ابزارهای مشتقه و آپشن",
-    "definition_en": "American Option is a fundamental concept in finance and investing, categorized under ابزارهای مشتقه و آپشن. It plays a key role in market transactions, financial analysis, and economic decision-making.",
-    "definition_fa": "اصطلاح «American اختیار معامله (American Option)» یکی از مفاهیم و تعاریف پایه‌ای در بازارهای مالی و سرمایه‌گذاری در دسته‌بندی «ابزارهای مشتقه و آپشن» است که کاربرد گسترده‌ای در محاسبات تحلیلی، معاملات و تصمیم‌گیری‌های اقتصادی دارد.",
+    "definition_en": "An American option gives investors the flexibility to exercise the rights at any point before and including its expiration date. Investors can take advantage of favorable market conditions and dividend announcements at their convenience, which makes these options popular in active trading strategies. American options are more flexible than European options, which can only be exercised when they expire. Keep reading to learn how American options work, their benefits, mechanics, and strategic use cases.\n\nAmerican options outline the timeframe when the option holder can exercise their <a class=\"internal-term-link\" data-slug=\"optionscontract\" href=\"#term/optionscontract\">option contract</a> rights. These rights allow the holder to buy or sell—depending on if the option is a call or put—the underlying asset, at the set strike price on or before the predetermined <a class=\"internal-term-link\" data-slug=\"expiration-date\" href=\"#term/expiration-date\">expiration date</a>. American-style options are more valuable than European options because investors can exercise them anytime before they expire. However, exercising early comes with an extra cost or premium.",
+    "definition_fa": "یک گزینه آمریکایی به سرمایه گذاران انعطاف پذیری می دهد تا از حقوق در هر نقطه قبل و از جمله تاریخ انقضا استفاده کنند. سرمایه‌گذاران می‌توانند از شرایط مطلوب بازار و اعلام سود سهام به راحتی استفاده کنند، که این گزینه‌ها را در استراتژی‌های معاملاتی فعال محبوب می‌کند. گزینه‌های آمریکایی انعطاف‌پذیرتر از گزینه‌های اروپایی هستند، که تنها زمانی می‌توان از آنها استفاده کرد که منقضی شوند. به خواندن ادامه دهید تا نحوه عملکرد گزینه های آمریکایی، مزایا، مکانیک و موارد استفاده استراتژیک را بدانید. \n\nگزینه های آمریکایی چارچوب زمانی را مشخص می کنند که دارنده اختیار می تواند از حقوق <a class=\"internal-term-link\" data-slug=\"optionscontract\" href=\"#term/optionscontract\">قرارداد اختیار</a> خود استفاده کند. این حقوق به دارنده این امکان را می‌دهد که بسته به این که آیا گزینه خرید یا فروش است، دارایی پایه را با قیمت پیشنهادی تعیین‌شده در تاریخ یا قبل از <a class=\"internal-term-link\" data-slug=\"expiration-date\" href=\"#term/expiration-date\">تاریخ انقضا</a> از پیش تعیین‌شده، خریداری یا بفروشد. گزینه‌های آمریکایی با ارزش‌تر از گزینه‌های اروپایی هستند، زیرا سرمایه‌گذاران می‌توانند هر زمان که بخواهند قبل از انقضا آن‌ها را اعمال کنند. با این حال، ورزش زودهنگام با هزینه یا حق بیمه اضافی همراه است.",
     "takeaways_en": [
-      "Standard financial term: American Option",
-      "Classified under ابزارهای مشتقه و آپشن on Investopedia",
-      "Referenced in capital markets, financial disclosures, and investing strategies"
+      "An American option allows investors to exercise the option any time before or on its expiration date, providing flexibility.",
+      "American-style options are favored for their ability to capture favorable stock price movements and dividends, but generally come with higher premiums.",
+      "Most single-stock options are American-style, whereas index options tend to be European-style.",
+      "Early exercise is often used for deep-in-the-money options or before an ex-dividend date to capitalize on dividend gains.",
+      "While American options offer strategic advantages, they carry the risk of potentially higher costs and foregone option appreciation."
     ],
     "takeaways_fa": [
-      "اصطلاح و مفهوم استاندارد مالی: American اختیار معامله (American Option)",
-      "طبقه‌بندی‌شده در بخش تخصصی ابزارهای مشتقه و آپشن",
-      "کاربرد عملی در تحلیل‌های مالی، گزارشگری و استراتژی‌های سرمایه‌گذاری"
+      "یک گزینه آمریکایی به سرمایه گذاران اجازه می دهد تا قبل یا در تاریخ انقضای آن، از این اختیار استفاده کنند و انعطاف پذیری را فراهم می کند.",
+      "گزینه های سبک آمریکایی به دلیل توانایی آنها در گرفتن حرکات مطلوب قیمت سهام و سود سهام مورد علاقه است، اما به طور کلی با حق بیمه بالاتری همراه است.",
+      "اکثر گزینه‌های تک سهام به سبک آمریکایی هستند، در حالی که گزینه‌های شاخص تمایل دارند به سبک اروپایی باشند.",
+      "تمرین زودهنگام اغلب برای گزینه‌های پولی یا قبل از تاریخ تقسیم سود قبلی برای سرمایه‌گذاری بر سود سهام استفاده می‌شود.",
+      "در حالی که گزینه های آمریکایی مزیت های استراتژیک ارائه می دهند، خطر هزینه های بالقوه بالاتر و قدردانی از گزینه های قبلی را به همراه دارند."
     ],
     "url": "https://www.investopedia.com/terms/a/americanoption.asp",
     "slug": "americanoption",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false
+    "bottom_line_en": "American options offer flexibility for early exercise and compatibility with individual stocks rather than index options. The primary advantage of American options is the possibility for investors to act quickly on favorable price movements and dividend opportunities. The downside is higher premiums for American options and the option to exercise early can sometimes lead to missed profits. While American options provide strategic opportunities, investors should consider their financial goals and be aware of the inherent risks and costs associated with options trading.<br/> <em>Investopedia does not provide tax, investment, or financial services and advice. The information is presented without consideration of the investment objectives, risk tolerance, or financial circumstances of any specific investor and might not be suitable for all investors. Investing involves risk, including the possible loss of principal.</em>",
+    "bottom_line_fa": "گزینه های آمریکایی به جای گزینه های شاخص، انعطاف پذیری را برای تمرین اولیه و سازگاری با سهام فردی ارائه می دهند. مزیت اصلی گزینه های آمریکایی این است که سرمایه گذاران می توانند به سرعت نسبت به حرکات قیمتی مطلوب و فرصت های تقسیم سود اقدام کنند. نکته منفی، حق بیمه های بالاتر برای گزینه های آمریکایی است و انتخاب زودهنگام ورزش گاهی اوقات می تواند منجر به از دست رفتن سود شود. در حالی که گزینه های آمریکایی فرصت های استراتژیک را ارائه می دهند، سرمایه گذاران باید اهداف مالی خود را در نظر بگیرند و از خطرات و هزینه های ذاتی مرتبط با معاملات گزینه ها آگاه باشند.<br/> <em>Investopedia خدمات و مشاوره مالیاتی، سرمایه گذاری یا مالی ارائه نمی دهد. اطلاعات بدون در نظر گرفتن اهداف سرمایه گذاری، تحمل ریسک، یا شرایط مالی یک سرمایه گذار خاص ارائه می شود و ممکن است برای همه سرمایه گذاران مناسب نباشد. سرمایه گذاری مستلزم ریسک است، از جمله از دست دادن احتمالی اصل سرمایه.</em>",
+    "sections": [
+      {
+        "title_en": "What Is an American Option?",
+        "title_fa": "گزینه آمریکایی چیست؟",
+        "paragraphs_en": [
+          "An American option gives investors the flexibility to exercise the rights at any point before and including its expiration date. Investors can take advantage of favorable market conditions and dividend announcements at their convenience, which makes these options popular in active trading strategies. American options are more flexible than European options, which can only be exercised when they expire. Keep reading to learn how American options work, their benefits, mechanics, and strategic use cases."
+        ],
+        "paragraphs_fa": [
+          "یک گزینه آمریکایی به سرمایه گذاران انعطاف پذیری می دهد تا از حقوق در هر نقطه قبل و از جمله تاریخ انقضا استفاده کنند. سرمایه‌گذاران می‌توانند از شرایط مطلوب بازار و اعلام سود سهام به راحتی استفاده کنند، که این گزینه‌ها را در استراتژی‌های معاملاتی فعال محبوب می‌کند. گزینه‌های آمریکایی انعطاف‌پذیرتر از گزینه‌های اروپایی هستند، که تنها زمانی می‌توان از آنها استفاده کرد که منقضی شوند. به خواندن ادامه دهید تا نحوه عملکرد گزینه های آمریکایی، مزایا، مکانیک و موارد استفاده استراتژیک را بدانید."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "How American Options Work",
+        "title_fa": "گزینه های آمریکایی چگونه کار می کنند",
+        "paragraphs_en": [
+          "American options outline the timeframe when the option holder can exercise their option contract rights. These rights allow the holder to buy or sell—depending on if the option is a call or put—the underlying asset, at the set strike price on or before the predetermined expiration date. American-style options are more valuable than European options because investors can exercise them anytime before they expire. However, exercising early comes with an extra cost or premium.",
+          "Generally, the last day to exercise a weekly American option is Friday of its expiration week. For monthly American options, the last exercise day is typically the third Friday of the month.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "The majority of <a class=\"internal-term-link\" data-slug=\"exchangetradedoption\" href=\"#term/exchangetradedoption\">exchange-traded options</a> on single stocks are American, while options on indexes tend to be European style."
+        ],
+        "paragraphs_fa": [
+          "گزینه های آمریکایی چارچوب زمانی را مشخص می کنند که دارنده اختیار می تواند از حقوق قرارداد اختیار خود استفاده کند. این حقوق به دارنده این امکان را می‌دهد که بسته به این که آیا گزینه خرید یا فروش است، دارایی پایه را با قیمت تعیین شده در تاریخ انقضای از پیش تعیین‌شده یا قبل از آن بخرد یا بفروشد. گزینه‌های آمریکایی با ارزش‌تر از گزینه‌های اروپایی هستند، زیرا سرمایه‌گذاران می‌توانند هر زمان که بخواهند قبل از انقضا آن‌ها را اعمال کنند. با این حال، ورزش زودهنگام با هزینه یا حق بیمه اضافی همراه است.",
+          "به طور کلی، آخرین روز برای تمرین یک آپشن هفتگی آمریکایی، جمعه هفته انقضای آن است. برای گزینه‌های ماهانه آمریکایی، آخرین روز تمرین معمولاً سومین جمعه ماه است.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "اکثر <a class=\"internal-term-link\" data-slug=\"exchangetradedoption\" href=\"#term/exchangetradedoption\">گزینه های معامله شده در بورس</a> در تک سهام آمریکایی هستند، در حالی که گزینه های موجود در شاخص ها تمایل به سبک اروپایی دارند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Important",
+        "title_fa": "مهم",
+        "paragraphs_en": [
+          "The names American and European have nothing to do with the geographic location of the option but only apply to the style of rights execution."
+        ],
+        "paragraphs_fa": [
+          "نام آمریکایی و اروپایی هیچ ارتباطی با موقعیت جغرافیایی گزینه ندارد بلکه فقط در مورد سبک اجرای حقوق کاربرد دارد."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Exploring American Call and Put Options",
+        "title_fa": "بررسی گزینه های تماس و قرار دادن آمریکایی",
+        "paragraphs_en": [
+          "A long <a class=\"internal-term-link\" data-slug=\"calloption\" href=\"#term/calloption\">call option</a> gives the holder the right to demand delivery of the underlying security or stock on any day within the contract period. This feature includes any day leading up to and the day of expiration. As with all options, the buyer does not have an obligation to receive the shares and is not required to exercise their right. The strike price remains the same specified value throughout the contract.",
+          "If an investor buys a call option in March that expires in December, they can exercise it anytime before it expires.",
+          "American put options also allow the execution at any point up to and including the expiration date. This ability gives the buyer the freedom to demand the seller takes delivery of the underlying asset whenever the price falls below the specified strike price.<br/>",
+          "One reason for the early exercise has to do with the <a class=\"internal-term-link\" data-slug=\"costofcarry\" href=\"#term/costofcarry\">cost of carry</a> or the opportunity cost associated with not investing the gains from the put option. When investors exercise a put, they get paid the strike price right away. As a result, the proceeds can be invested in another security to earn interest.",
+          "However, the drawback to exercising puts is that the investor would miss out on any dividends since exercising would sell the shares. Also, the option itself might continue to increase in value if held to expiry, and exercising early might lead to missing out on any further gains."
+        ],
+        "paragraphs_fa": [
+          "یک <a class=\"internal-term-link\" data-slug=\"calloption\" href=\"#term/calloption\">اختیار تماس</a> به دارنده این حق را می دهد که در هر روز در طول مدت قرارداد، اوراق بهادار یا سهام اصلی را مطالبه کند. این ویژگی شامل هر روز منتهی به انقضا و روز انقضا می شود. خریدار مانند تمام اختیارات، تعهدی در قبال دریافت سهام ندارد و ملزم به اعمال حق خود نیست. قیمت اعتصاب همان مقدار مشخص شده در طول قرارداد باقی می ماند.",
+          "اگر یک سرمایه‌گذار در ماه مارس یک اختیار خرید خریداری کند که در دسامبر منقضی می‌شود، می‌تواند در هر زمانی قبل از انقضا آن را اعمال کند.",
+          "گزینه های فروش آمریکایی نیز امکان اجرا را در هر نقطه ای تا تاریخ انقضا می دهد. این توانایی به خریدار این آزادی را می دهد که هر زمان که قیمت از قیمت تعیین شده پایین آمد، از فروشنده درخواست کند که دارایی پایه را تحویل دهد.<br/>",
+          "یکی از دلایل تمرین اولیه مربوط به <a class=\"internal-term-link\" data-slug=\"costofcarry\" href=\"#term/costofcarry\">هزینه حمل</a> یا هزینه فرصت مرتبط با سرمایه‌گذاری نکردن سود حاصل از گزینه فروش است. هنگامی که سرمایه گذاران از فروش استفاده می کنند، قیمت اعتصاب را بلافاصله دریافت می کنند. در نتیجه، عواید حاصل را می توان در اوراق بهادار دیگری برای کسب سود سرمایه گذاری کرد.",
+          "با این حال، اشکالی که در استفاده از قراردادها وجود دارد این است که سرمایه‌گذار هر گونه سود سهام را از دست می‌دهد، زیرا اعمال موجب فروش سهام می‌شود. همچنین، در صورت انقضا، ممکن است ارزش خود را افزایش دهد و انجام زودهنگام ممکن است منجر به از دست دادن هرگونه سود بیشتر شود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Optimal Timing for Exercising American Options Early",
+        "title_fa": "زمان بهینه برای تمرین زودهنگام گزینه های آمریکایی",
+        "paragraphs_en": [
+          "In many instances, holders of American-style options do not utilize the early exercise provision, since it's usually more cost-effective to either hold the contract until expiration or exit the position by selling the option contract outright. In other words, as a stock price rises, the value of a call option increases, as does its premium. Traders can sell an option back to the options market if the current premium is higher than the initial premium paid at the onset. The trader would earn the net difference between the two premiums minus any fees or commissions from the broker.",
+          "However, there are times when options are typically exercised early. <a class=\"internal-term-link\" data-slug=\"deepinthemoney\" href=\"#term/deepinthemoney\">Deep-in-the-money</a> call options—where the asset's price is well above the option's strike price—will usually be exercised early. Puts can also be deep-in-the-money when the price is significantly below the strike price. In most cases, deep prices are those that are more than $10 in-the-money. With lower-priced equities, deep-in-the-money might be characterized as a $5 spread between the strike price and market price.",
+          "Early execution can also happen leading up to the date a stock goes <a class=\"internal-term-link\" data-slug=\"ex-dividend\" href=\"#term/ex-dividend\">ex-dividend</a>—the cutoff date by which shareholders must own the stock to receive the next scheduled dividend payment. Option holders do not receive dividend payments. So, many investors will exercise their options before the ex-dividend date to capture the gains from a profitable position and get paid the dividend."
+        ],
+        "paragraphs_fa": [
+          "در بسیاری از موارد، دارندگان اختیار معامله به سبک آمریکایی از مقررات اولیه استفاده نمی کنند، زیرا معمولاً مقرون به صرفه تر است که قرارداد را تا زمان انقضا نگه دارید یا با فروش مستقیم قرارداد اختیار معامله، از موقعیت خارج شوید. به عبارت دیگر، با افزایش قیمت سهام، ارزش یک اختیار خرید و همچنین حق بیمه آن افزایش می‌یابد. معامله گران می توانند در صورتی که حق بیمه فعلی بالاتر از حق بیمه اولیه پرداخت شده در ابتدا باشد، یک گزینه را به بازار اختیار معامله بازگردانند. معامله گر مابه التفاوت خالص بین دو حق بیمه منهای هر گونه کارمزد یا کمیسیون از طرف کارگزار را به دست می آورد.",
+          "با این حال، مواقعی وجود دارد که گزینه‌ها معمولاً زودتر اعمال می‌شوند. گزینه های تماس <a class=\"internal-term-link\" data-slug=\"deepinthemoney\" href=\"#term/deepinthemoney\">عمق پول</a> - که در آن قیمت دارایی بسیار بالاتر از قیمت اعتصاب اختیار است - معمولاً زودتر اعمال می شود. هنگامی که قیمت به طور قابل توجهی کمتر از قیمت اعتصاب باشد، فروش ها می توانند عمیقاً در پول باشند. در بیشتر موارد، قیمت‌های عمیق قیمت‌هایی هستند که بیش از 10 دلار پول دارند. با سهام با قیمت پایین تر، ممکن است عمق پول به عنوان یک اسپرد 5 دلاری بین قیمت اعتصاب و قیمت بازار مشخص شود.",
+          "اجرای زودهنگام همچنین می‌تواند تا زمانی که سهام می‌رود انجام شود <a class=\"internal-term-link\" data-slug=\"ex-dividend\" href=\"#term/ex-dividend\">سود سهام سابق</a>—تاریخ پایانی که سهامداران باید سهام را در اختیار داشته باشند تا پرداخت سود تقسیمی برنامه ریزی شده بعدی را دریافت کنند. دارندگان گزینه سود سهام را دریافت نمی کنند. بنابراین، بسیاری از سرمایه گذاران گزینه های خود را قبل از تاریخ تقسیم سود قبلی اعمال می کنند تا سود حاصل از یک موقعیت سودآور را بدست آورند و سود سهام را دریافت کنند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "American Options: Advantages and Disadvantages",
+        "title_fa": "گزینه های آمریکایی: مزایا و معایب",
+        "paragraphs_en": [
+          "American options are helpful since investors don't have to wait to exercise the option when the asset's price rises above the strike price. However, American-style options carry a <a class=\"internal-term-link\" data-slug=\"option-premium\" href=\"#term/option-premium\">premium</a>—an upfront cost—that investors pay and which must be factored into the overall profitability of the trade.",
+          "Allows exercise at any time",
+          "Allows exercise before an ex-dividend date",
+          "Allows profits to be put back to work",
+          "Charges a higher premium",
+          "Not available for index option contracts",
+          "May miss out on additional option appreciation"
+        ],
+        "paragraphs_fa": [
+          "گزینه های آمریکایی مفید هستند زیرا زمانی که قیمت دارایی بالاتر از قیمت اعتصاب افزایش می یابد، سرمایه گذاران مجبور نیستند برای اعمال اختیار صبر کنند. با این حال، گزینه‌های آمریکایی دارای یک <a class=\"internal-term-link\" data-slug=\"option-premium\" href=\"#term/option-premium\">حق بیمه</a> هستند—هزینه‌ای که سرمایه‌گذاران می‌پردازند و باید در سودآوری کلی تجارت لحاظ شود.",
+          "اجازه ورزش در هر زمان را می دهد",
+          "به ورزش قبل از تاریخ تقسیم سود قبلی اجازه می دهد",
+          "اجازه می دهد تا سود دوباره به کار بازگردانده شود",
+          "حق بیمه بالاتری را شارژ می کند",
+          "برای قراردادهای اختیار شاخص در دسترس نیست",
+          "ممکن است قدردانی گزینه های اضافی را از دست بدهد"
+        ],
+        "items_en": [
+          "<p>Allows exercise at any time</p>",
+          "<p>Allows exercise before an ex-dividend date</p>",
+          "<p>Allows profits to be put back to work</p>",
+          "<p>Charges a higher premium</p>",
+          "<p>Not available for index option contracts</p>",
+          "<p>May miss out on additional option appreciation</p>"
+        ],
+        "items_fa": [
+          "<p>به ورزش در هر زمان اجازه می دهد</p>",
+          "<p>اجازه می دهد قبل از تاریخ تقسیم سود قبلی انجام شود</p>",
+          "<p>اجازه می دهد سود دوباره به کار گرفته شود</p>",
+          "<p>حق بیمه بالاتری را دریافت می کند</p>",
+          "<p>برای قراردادهای اختیار معامله شاخص موجود نیست</p>",
+          "<p>ممکن است قدردانی از گزینه های اضافی را از دست بدهید</p>"
+        ]
+      },
+      {
+        "title_en": "Practical Examples of American Options",
+        "title_fa": "نمونه های عملی گزینه های آمریکایی",
+        "paragraphs_en": [
+          "Say an investor purchased an American-style call option for Apple Inc. (AAPL) in March with an expiration date at the end of December in the same year. The premium is $5 per option contract—one contract is 100 shares ($5 x 100 = $500)—and the strike price on the option is $100. Following the purchase, the stock price rose to $150 per share.",
+          "The investor exercises the call option on Apple before expiration buying 100 shares of Apple for $100 per share. In other words, the investor would be long 100 shares of Apple at the $100 strike price. The investor immediately sells the shares for the current market price of $150 and pockets the $50 per share profit. The investor earned $5,000 in total minus the premium of $500 for buying the option and any broker <a class=\"internal-term-link\" data-slug=\"commission\" href=\"#term/commission\">commission</a>.",
+          "Let's say an investor believes shares of Meta Inc. (META), formerly Facebook, will decline in the upcoming months. The investor purchases an American-style July put option in January, which expires in September of the same year. The option premium is $3 per contract (100 x $3 = $300) and the strike price is $150.",
+          "Meta's stock price falls to $90 per share, and the investor exercises the put option and is short 100 shares of Meta at the $150 strike price. The investor effectively buys 100 Meta shares at $90 and sells them at the $150 strike price. However, in practice, the net difference is settled, and the investor earns a $60 profit on the option contract, which equates to $6,000 minus the premium of $300 and any broker commissions."
+        ],
+        "paragraphs_fa": [
+          "بگوییم که یک سرمایه گذار در ماه مارس یک گزینه تماس به سبک آمریکایی برای شرکت اپل (AAPL) با تاریخ انقضا در پایان دسامبر همان سال خریداری کرد. حق بیمه 5 دلار برای هر قرارداد اختیار معامله است - یک قرارداد 100 سهم (5 دلار در 100 = 500 دلار) - و قیمت اعتصاب اختیار معامله 100 دلار است. پس از خرید، قیمت سهام به 150 دلار برای هر سهم افزایش یافت.",
+          "سرمایه گذار پیش از انقضا، از اختیار خرید اپل استفاده می کند و 100 سهم اپل را به قیمت 100 دلار برای هر سهم خریداری می کند. به عبارت دیگر، سرمایه گذار می تواند 100 سهم اپل در قیمت 100 دلار باشد. سرمایه گذار بلافاصله سهام را به قیمت فعلی بازار 150 دلار می فروشد و 50 دلار سود هر سهم را به جیب می زند. سرمایه‌گذار در مجموع 5000 دلار منهای حق بیمه 500 دلاری برای خرید گزینه و هر کارگزاری <a class=\"internal-term-link\" data-slug=\"commission\" href=\"#term/commission\">کمیسیون</a> به دست آورد.",
+          "فرض کنید یک سرمایه‌گذار معتقد است که سهام شرکت متا (META)، که قبلاً فیسبوک بود، در ماه‌های آینده کاهش خواهد یافت. سرمایه گذار در ماه ژانویه یک گزینه فروش جولای به سبک آمریکایی خریداری می کند که در سپتامبر همان سال منقضی می شود. حق بیمه اختیار معامله 3 دلار برای هر قرارداد (100 x 3 دلار = 300 دلار) و قیمت اعتصاب 150 دلار است.",
+          "قیمت سهام متا به 90 دلار برای هر سهم کاهش می یابد و سرمایه گذار از اختیار فروش استفاده می کند و 100 سهم متا را با قیمت 150 دلاری کوتاه می کند. سرمایه گذار عملاً 100 سهم متا را به قیمت 90 دلار می خرد و آنها را به قیمت 150 دلار می فروشد. با این حال، در عمل، مابه‌التفاوت خالص تسویه می‌شود و سرمایه‌گذار در قرارداد اختیار معامله 60 دلار سود کسب می‌کند که معادل 6000 دلار منهای حق بیمه 300 دلاری و هر کمیسیون کارگزاری است."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "The Bottom Line",
+        "title_fa": "نتیجه‌گیری نهایی",
+        "paragraphs_en": [
+          "American options offer flexibility for early exercise and compatibility with individual stocks rather than index options. The primary advantage of American options is the possibility for investors to act quickly on favorable price movements and dividend opportunities. The downside is higher premiums for American options and the option to exercise early can sometimes lead to missed profits.",
+          "While American options provide strategic opportunities, investors should consider their financial goals and be aware of the inherent risks and costs associated with options trading.<br/>",
+          "<em>Investopedia does not provide tax, investment, or financial services and advice. The information is presented without consideration of the investment objectives, risk tolerance, or financial circumstances of any specific investor and might not be suitable for all investors. Investing involves risk, including the possible loss of principal.</em>"
+        ],
+        "paragraphs_fa": [
+          "گزینه های آمریکایی به جای گزینه های شاخص، انعطاف پذیری را برای تمرین اولیه و سازگاری با سهام فردی ارائه می دهند. مزیت اصلی گزینه های آمریکایی این است که سرمایه گذاران می توانند به سرعت نسبت به حرکات قیمتی مطلوب و فرصت های تقسیم سود اقدام کنند. نکته منفی، حق بیمه های بالاتر برای گزینه های آمریکایی است و انتخاب زودهنگام ورزش گاهی اوقات می تواند منجر به از دست رفتن سود شود.",
+          "در حالی که گزینه های آمریکایی فرصت های استراتژیک را فراهم می کنند، سرمایه گذاران باید اهداف مالی خود را در نظر بگیرند و از خطرات و هزینه های ذاتی مرتبط با معاملات گزینه ها آگاه باشند.<br/>",
+          "<em>Investopedia خدمات و مشاوره مالیاتی، سرمایه گذاری یا مالی ارائه نمی دهد. اطلاعات بدون در نظر گرفتن اهداف سرمایه گذاری، تحمل ریسک، یا شرایط مالی یک سرمایه گذار خاص ارائه می شود و ممکن است برای همه سرمایه گذاران مناسب نباشد. سرمایه گذاری مستلزم ریسک است، از جمله از دست دادن احتمالی اصل سرمایه.</em>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      }
+    ],
+    "deep_enriched": true
   },
   {
     "id": 806,
     "term_en": "American Stock Exchange History: From AMEX to NYSE American",
     "term_fa": "American سهام بورس / صرافی History: From AMEX to NYSE American (American Stock Exchange History: From AMEX to NYSE American)",
     "letter": "A",
-    "category": "بازار سهام و معاملات",
-    "definition_en": "American Stock Exchange History: From AMEX to NYSE American is a fundamental concept in finance and investing, categorized under بازار سهام و معاملات. It plays a key role in market transactions, financial analysis, and economic decision-making.",
-    "definition_fa": "اصطلاح «American سهام بورس / صرافی History: From AMEX to NYSE American (American Stock Exchange History: From AMEX to NYSE American)» یکی از مفاهیم و تعاریف پایه‌ای در بازارهای مالی و سرمایه‌گذاری در دسته‌بندی «بازار سهام و معاملات» است که کاربرد گسترده‌ای در محاسبات تحلیلی، معاملات و تصمیم‌گیری‌های اقتصادی دارد.",
+    "category": "ابزارهای مشتقه و آپشن",
+    "definition_en": "The American Stock Exchange, initially known as the New York Curb Exchange, transitioned into the AMEX and was a key player in the introduction of new financial products like options and ETFs. Acquired by NYSE Euronext in 2008, the AMEX is now called NYSE American, primarily catering to small-cap stocks with a fully electronic trading platform. NYSE American is notable for providing a platform for younger, entrepreneurial companies that may not meet the stringent requirements of larger exchanges like the NYSE.\n\nThe American Stock Exchange (AMEX) was once the third-largest stock exchange in the United States, as measured by trading volume. The exchange, at its height, handled about 10% of all securities traded in the U.S.",
+    "definition_fa": "بورس اوراق بهادار آمریکا، که در ابتدا به عنوان بورس نیویورک کرب شناخته می شد، به AMEX منتقل شد و یک بازیگر کلیدی در معرفی محصولات مالی جدید مانند گزینه ها و ETF ها بود. AMEX که در سال 2008 توسط NYSE Euronext خریداری شد، اکنون NYSE American نامیده می شود، که عمدتاً برای سهام های کوچک با یک پلت فرم معاملاتی کاملاً الکترونیکی سرو می شود. NYSE American به دلیل فراهم کردن بستری برای شرکت‌های جوان‌تر و کارآفرینی که ممکن است الزامات سخت‌گیرانه صرافی‌های بزرگ‌تری مانند NYSE را برآورده نکنند، قابل توجه است. \n\nبورس اوراق بهادار آمریکا (AMEX) زمانی سومین بورس بزرگ در ایالات متحده بود که با حجم معاملات اندازه گیری می شد. این بورس در اوج خود، حدود 10 درصد از کل اوراق بهادار معامله شده در ایالات متحده را اداره می کرد.",
     "takeaways_en": [
-      "Standard financial term: American Stock Exchange History: From AMEX to NYSE American",
-      "Classified under بازار سهام و معاملات on Investopedia",
-      "Referenced in capital markets, financial disclosures, and investing strategies"
+      "The American Stock Exchange (AMEX) was once the third-largest U.S. stock exchange by trading volume, transitioning to NYSE American after a 2008 acquisition.",
+      "Originally called the New York Curb Exchange, AMEX played a crucial role in introducing financial products like options and ETFs.",
+      "NYSE American caters to small-cap stocks with a fully electronic trading platform and uses designated market makers to maintain liquidity.",
+      "The history of AMEX reflects the evolution of American financial markets, with its origins in informal curbside trading during the late 18th century. <br/>"
     ],
     "takeaways_fa": [
-      "اصطلاح و مفهوم استاندارد مالی: American سهام بورس / صرافی History: From AMEX to NYSE American (American Stock Exchange History: From AMEX to NYSE American)",
-      "طبقه‌بندی‌شده در بخش تخصصی بازار سهام و معاملات",
-      "کاربرد عملی در تحلیل‌های مالی، گزارشگری و استراتژی‌های سرمایه‌گذاری"
+      "بورس اوراق بهادار آمریکا (AMEX) زمانی سومین بورس بزرگ ایالات متحده از نظر حجم معاملات بود که پس از خرید در سال 2008 به NYSE آمریکایی منتقل شد.",
+      "AMEX که در ابتدا New York Curb Exchange نامیده می شد، نقش مهمی در معرفی محصولات مالی مانند گزینه ها و ETF ها داشت.",
+      "NYSE آمریکایی با یک پلت فرم معاملاتی کاملاً الکترونیکی به سهام با سرمایه کوچک پاسخ می دهد و از بازارسازان تعیین شده برای حفظ نقدینگی استفاده می کند.",
+      "تاریخچه AMEX منعکس کننده تحولات بازارهای مالی آمریکا است که منشأ آن در معاملات غیررسمی حاشیه ای در اواخر قرن 18 است. <br/>"
     ],
     "url": "https://www.investopedia.com/terms/a/amex.asp",
     "slug": "amex",
     "featured": false,
     "bottom_line_en": "",
     "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false
+    "sections": [
+      {
+        "title_en": "What Was the American Stock Exchange (AMEX)?",
+        "title_fa": "بورس اوراق بهادار آمریکا (AMEX) چه بود؟",
+        "paragraphs_en": [
+          "The American Stock Exchange (AMEX) was once the third-largest stock exchange in the United States, as measured by trading volume. The exchange, at its height, handled about 10% of all securities traded in the U.S.",
+          "Today, the AMEX is known as the NYSE American. In 2008, NYSE <a class=\"internal-term-link\" data-slug=\"euronext\" href=\"#term/euronext\">Euronext</a> acquired the AMEX. In the subsequent years, it also became known as NYSE Amex Equities and NYSE MKT.<span class=\"ql-inline-citation\" data-cite=\"2\"></span>"
+        ],
+        "paragraphs_fa": [
+          "بورس اوراق بهادار آمریکا (AMEX) زمانی سومین بورس بزرگ در ایالات متحده بود که با حجم معاملات اندازه گیری می شد. این بورس در اوج خود، حدود 10 درصد از کل اوراق بهادار معامله شده در ایالات متحده را اداره می کرد.",
+          "امروزه AMEX با نام NYSE American شناخته می شود. در سال 2008، NYSE <a class=\"internal-term-link\" data-slug=\"euronext\" href=\"#term/euronext\">Euronext</a> AMEX را تصاحب کرد. در سال‌های بعد، به نام‌های NYSE Amex Equities و NYSE MKT نیز شناخته شد.<span class=\"ql-inline-citation\" data-cite=\"2\"></span>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "The AMEX's Role and Innovations Explored",
+        "title_fa": "نقش و نوآوری های AMEX بررسی شده است",
+        "paragraphs_en": [
+          "The AMEX developed a reputation over time as an exchange that introduced and traded new products and asset classes. For example, it launched its <a class=\"internal-term-link\" data-slug=\"option\" href=\"#term/option\">options</a> market in 1975. Options are a type of <a class=\"internal-term-link\" data-slug=\"derivative\" href=\"#term/derivative\">derivative</a> security. They are contracts that grant the holder the right to buy or sell an asset at a set price on or before a certain date, without the obligation to do so. When the AMEX launched its options market, it also distributed educational materials to help educate investors as to the potential benefits and risks.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "paragraphs_fa": [
+          "AMEX در طول زمان به عنوان صرافی که محصولات جدید و طبقات دارایی را معرفی و مبادله می کرد، شهرت پیدا کرد. برای مثال، بازار <a class=\"internal-term-link\" data-slug=\"option\" href=\"#term/option\">options</a> خود را در سال 1975 راه اندازی کرد. گزینه ها نوعی امنیت <a class=\"internal-term-link\" data-slug=\"derivative\" href=\"#term/derivative\">مشتق</a> هستند. آنها قراردادهایی هستند که به دارنده آن حق خرید یا فروش دارایی را به قیمت تعیین شده در تاریخ معین یا قبل از آن، بدون الزام به انجام آن، می دهند. هنگامی که AMEX بازار گزینه های خود را راه اندازی کرد، همچنین مطالب آموزشی را برای کمک به آموزش سرمایه گذاران در مورد مزایا و خطرات احتمالی توزیع کرد.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Important",
+        "title_fa": "مهم",
+        "paragraphs_en": [
+          "The AMEX used to be a larger competitor of the New York Stock Exchange (NYSE), but over time the Nasdaq filled that role.",
+          "In 1993, the AMEX introduced the first <a class=\"internal-term-link\" data-slug=\"etf\" href=\"#term/etf\">exchange traded fund (ETF)</a>. The ETF, now a popular investment, is a type of security that tracks an <a class=\"internal-term-link\" data-slug=\"index\" href=\"#term/index\">index</a> or a basket of assets. They are much like mutual funds but differ in that they trade like stocks on an exchange.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "AMEX became known for listing companies that couldn't meet NYSE's stricter requirements. Today, a good portion of trading on the NYSE American is in <a class=\"internal-term-link\" data-slug=\"small-cap\" href=\"#term/small-cap\">small-cap</a> stocks. It operates as a fully electronic exchange."
+        ],
+        "paragraphs_fa": [
+          "AMEX قبلاً رقیب بزرگ‌تری برای بورس نیویورک (NYSE) بود، اما به مرور زمان نزدک این نقش را ایفا کرد.",
+          "در سال 1993، AMEX اولین <a class=\"internal-term-link\" data-slug=\"etf\" href=\"#term/etf\">صندوق قابل معامله در بورس (ETF)</a> را معرفی کرد. ETF که اکنون یک سرمایه گذاری محبوب است، نوعی امنیت است که <a class=\"internal-term-link\" data-slug=\"index\" href=\"#term/index\">index</a> یا سبدی از دارایی ها را ردیابی می کند. آنها بسیار شبیه به صندوق های سرمایه گذاری مشترک هستند، اما از این جهت متفاوت هستند که مانند سهام در بورس معامله می کنند.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "AMEX به دلیل فهرست کردن شرکت‌هایی که نمی‌توانستند الزامات سخت‌گیرانه‌تر NYSE را برآورده کنند، شناخته شد. امروزه، بخش خوبی از معاملات در NYSE آمریکا در سهام <a class=\"internal-term-link\" data-slug=\"small-cap\" href=\"#term/small-cap\">small-cap</a> است. این به عنوان یک صرافی کاملاً الکترونیکی عمل می کند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "How the AMEX Evolved Over Time",
+        "title_fa": "چگونه AMEX در طول زمان تکامل یافت",
+        "paragraphs_en": [
+          "AMEX originated in the late 18th century as the American trading market was evolving. Without a formal exchange, <a class=\"internal-term-link\" data-slug=\"stockbroker\" href=\"#term/stockbroker\">stockbrokers</a> traded in coffeehouses and on the street. For this reason, the AMEX became known at one time as the New York Curb Exchange.<span class=\"ql-inline-citation\" data-cite=\"3\"></span>",
+          "Traders who initially met on New York streets were called curbstone brokers. They specialized in trading stocks of emerging companies. At the time, many of these emerging businesses were in industries such as railroads, oil, and textiles, while those industries were still getting off the ground.<span class=\"ql-inline-citation\" data-cite=\"3\"></span>",
+          "In the 19th century, this type of curbside trading was informal and quite disorganized. In 1908, the New York Curb Market Agency was established in order to bring rules and regulations to trading practices.<span class=\"ql-inline-citation\" data-cite=\"3\"></span>",
+          "In 1929, the New York Curb Market became the New York Curb Exchange. It had a formalized trading floor and a set of rules and regulations. In the 1950s, more and more emerging businesses began trading their stocks on the New York Curb Exchange. The value of companies listed on the exchange almost doubled between 1950 and 1960, going from $12 billion to $23 billion during that time. The New York Curb Exchange changed its name to the American Stock Exchange in 1953.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "paragraphs_fa": [
+          "AMEX در اواخر قرن 18 و زمانی که بازار تجاری آمریکا در حال تکامل بود، سرچشمه گرفت. بدون تبادل رسمی، <a class=\"internal-term-link\" data-slug=\"stockbroker\" href=\"#term/stockbroker\">دلالان سهام</a> در قهوه خانه ها و خیابان ها معامله می کردند. به همین دلیل، AMEX زمانی به عنوان مبادله محدود نیویورک شناخته شد.<span class=\"ql-inline-citation\" data-cite=\"3\"></span>",
+          "تاجرانی که در ابتدا در خیابان های نیویورک گرد هم می آمدند، دلالان کرب استون نامیده می شدند. آنها در تجارت سهام شرکت های نوظهور تخصص داشتند. در آن زمان، بسیاری از این مشاغل نوظهور در صنایعی مانند راه‌آهن، نفت، و نساجی بودند، در حالی که این صنایع هنوز در حال رشد بودند.<span class=\"ql-inline-citation\" data-cite=\"3\"></span>",
+          "در قرن نوزدهم، این نوع تجارت در حاشیه، غیررسمی و کاملاً بی نظم بود. در سال 1908، آژانس بازار کرب نیویورک تأسیس شد تا قوانین و مقرراتی را در شیوه های تجاری ایجاد کند.<span class=\"ql-inline-citation\" data-cite=\"3\"></span>",
+          "در سال 1929، بازار کرب نیویورک به بورس نیویورک تبدیل شد. دارای یک طبقه تجاری رسمی و مجموعه ای از قوانین و مقررات بود. در دهه 1950، کسب و کارهای نوظهور بیشتری شروع به معامله سهام خود در بورس نیویورک کرب کردند. ارزش شرکت های فهرست شده در بورس بین سال های 1950 و 1960 تقریباً دو برابر شد و در این مدت از 12 میلیارد دلار به 23 میلیارد دلار رسید. بورس نیویورک کرب در سال 1953 نام خود را به بورس اوراق بهادار آمریکا تغییر داد.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Essential Factors and Benefits of Listing on NYSE American",
+        "title_fa": "فاکتورهای اساسی و مزایای فهرست شدن در NYSE American",
+        "paragraphs_en": [
+          "Over the years, the NYSE American has become an attractive listing place for younger, entrepreneurial companies, some of whom are in the early stages of their growth and certainly not as well-known as <a class=\"internal-term-link\" data-slug=\"bluechip\" href=\"#term/bluechip\">blue chip</a> companies. Compared to the NYSE and <a class=\"internal-term-link\" data-slug=\"nasdaq\" href=\"#term/nasdaq\">Nasdaq</a>, the NYSE American trades at much smaller volumes.",
+          "These factors may cause concerns about investors' ability to quickly trade some securities. To ensure market liquidity—which is the ease at which a security can be converted to cash without impacting its market price—the NYSE American offers electronic designated <a class=\"internal-term-link\" data-slug=\"marketmaker\" href=\"#term/marketmaker\">market makers</a>.",
+          "Market makers are individuals or firms that are available to buy and sell a particular security as needed throughout the trading session. These designated market makers have quoting obligations for specific NYSE American-listed companies. In return for making a market for a security, market makers earn money through the <a class=\"internal-term-link\" data-slug=\"bid-askspread\" href=\"#term/bid-askspread\">bid-ask spread</a> and from fees and commissions. So, despite the fact that the NYSE American is a smaller-volume exchange specializing in listing smaller companies, its use of market makers enables it to maintain <a class=\"internal-term-link\" data-slug=\"liquidity\" href=\"#term/liquidity\">liquidity</a> and an orderly market."
+        ],
+        "paragraphs_fa": [
+          "در طول سال‌ها، NYSE American به مکان جذابی برای فهرست‌بندی شرکت‌های جوان‌تر و کارآفرین تبدیل شده است، که برخی از آنها در مراحل اولیه رشد خود هستند و مطمئناً به اندازه شرکت‌های <a class=\"internal-term-link\" data-slug=\"bluechip\" href=\"#term/bluechip\">تراشه‌های آبی</a> شناخته شده نیستند. در مقایسه با NYSE و <a class=\"internal-term-link\" data-slug=\"nasdaq\" href=\"#term/nasdaq\">Nasdaq</a>، NYSE آمریکا با حجم بسیار کمتری معامله می شود.",
+          "این عوامل ممکن است باعث نگرانی در مورد توانایی سرمایه گذاران برای معامله سریع برخی از اوراق بهادار شود. برای اطمینان از نقدشوندگی بازار - که به راحتی می توان یک اوراق بهادار را بدون تأثیر بر قیمت بازار آن به پول تبدیل کرد - <a class=\"internal-term-link\" data-slug=\"marketmaker\" href=\"#term/marketmaker\">سازندگان بازار</a> الکترونیکی را ارائه می دهد.",
+          "بازارسازان افراد یا شرکت هایی هستند که در طول جلسه معاملاتی برای خرید و فروش یک اوراق بهادار خاص در صورت نیاز در دسترس هستند. این بازارسازان تعیین شده برای شرکت های خاص بورس آمریکا در NYSE تعهداتی دارند. در ازای ایجاد بازار برای یک اوراق بهادار، بازارسازان از طریق <a class=\"internal-term-link\" data-slug=\"bid-askspread\" href=\"#term/bid-askspread\">پرداخت پیشنهادی</a> و از کارمزدها و کمیسیون ها درآمد کسب می کنند. بنابراین، علی‌رغم این واقعیت که NYSE آمریکا یک بورس با حجم کمتر و متخصص در فهرست‌بندی شرکت‌های کوچک‌تر است، استفاده آن از سازندگان بازار این امکان را به آن می‌دهد تا <a class=\"internal-term-link\" data-slug=\"liquidity\" href=\"#term/liquidity\">نقدیت</a> و یک بازار منظم را حفظ کند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      }
+    ],
+    "deep_enriched": true
   },
   {
     "id": 807,
     "term_en": "Americans with Disabilities Act (ADA)",
     "term_fa": "Americans with Disabilities Act (ADA)",
     "letter": "A",
-    "category": "کسب‌وکار و مدیریت استراتژیک",
-    "definition_en": "Americans with Disabilities Act (ADA) is a fundamental concept in finance and investing, categorized under کسب‌وکار و مدیریت استراتژیک. It plays a key role in market transactions, financial analysis, and economic decision-making.",
-    "definition_fa": "اصطلاح «Americans with Disabilities Act (ADA)» یکی از مفاهیم و تعاریف پایه‌ای در بازارهای مالی و سرمایه‌گذاری در دسته‌بندی «کسب‌وکار و مدیریت استراتژیک» است که کاربرد گسترده‌ای در محاسبات تحلیلی، معاملات و تصمیم‌گیری‌های اقتصادی دارد.",
+    "category": "مالیات، مقررات و قوانین",
+    "definition_en": "The Americans with Disabilities Act (ADA) was passed in 1990 to prevent workplace and hiring discrimination against people with disabilities. The act applies to all private businesses with 15 or more employees. It also covers government employers, employment agencies, and <a class=\"internal-term-link\" data-slug=\"labor-union\" href=\"#term/labor-union\">labor unions</a>.<span class=\"ql-inline-citation\" data-cite=\"5\"></span>\n\nThe ADA also had the effect of increasing broad accessibility and mobility for people with disabilities by mandating reasonable accommodation such as automatic doorways, ramps, and elevators to accommodate wheelchairs in public places and businesses.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+    "definition_fa": "قانون آمریکایی های دارای معلولیت (ADA) در سال 1990 برای جلوگیری از تبعیض در محل کار و استخدام افراد دارای معلولیت به تصویب رسید. این قانون برای تمام مشاغل خصوصی با 15 کارمند یا بیشتر اعمال می شود. همچنین کارفرمایان دولتی، آژانس‌های کاریابی و <a class=\"internal-term-link\" data-slug=\"labor-union\" href=\"#term/labor-union\">اتحادیه‌های کارگری</a> را پوشش می‌دهد.<span class=\"ql-inline-citation\" data-cite=\"5\"></span> \n\nADA همچنین با اجباری کردن اقامتگاه‌های معقول مانند درهای خودکار، رمپ‌ها و آسانسورها برای قرار دادن صندلی‌های چرخدار در مکان‌های عمومی و کسب‌وکار، تأثیری بر افزایش دسترسی و تحرک گسترده برای افراد دارای معلولیت داشت.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
     "takeaways_en": [
-      "Standard financial term: Americans with Disabilities Act (ADA)",
-      "Classified under کسب‌وکار و مدیریت استراتژیک on Investopedia",
-      "Referenced in capital markets, financial disclosures, and investing strategies"
+      "The ADA provides civil rights protections for individuals with disabilities.",
+      "The ADA prohibits discrimination in employment, transportation, and public services.",
+      "It applies to employers with 15 or more employees.",
+      "Title I to IV cover employment, government services, public venues, and telecommunications.",
+      "Websites must comply with ADA accessibility standards."
     ],
     "takeaways_fa": [
-      "اصطلاح و مفهوم استاندارد مالی: Americans with Disabilities Act (ADA)",
-      "طبقه‌بندی‌شده در بخش تخصصی کسب‌وکار و مدیریت استراتژیک",
-      "کاربرد عملی در تحلیل‌های مالی، گزارشگری و استراتژی‌های سرمایه‌گذاری"
+      "ADA از حقوق مدنی برای افراد دارای معلولیت حمایت می کند.",
+      "ADA تبعیض در استخدام، حمل و نقل و خدمات عمومی را ممنوع می کند.",
+      "برای کارفرمایان با 15 کارمند یا بیشتر اعمال می شود.",
+      "عنوان I تا IV استخدام، خدمات دولتی، اماکن عمومی و مخابرات را پوشش می دهد.",
+      "وب سایت ها باید با استانداردهای دسترسی ADA مطابقت داشته باشند."
     ],
     "url": "https://www.investopedia.com/terms/a/americans-with-disabilities-act-ada.asp",
     "slug": "americans-with-disabilities-act-ada",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false
+    "bottom_line_en": "The 1990 Americans with Disabilities Act ensures that Americans with disabilities are guaranteed equal opportunities to participate in mainstream life. This act prohibits discrimination against people with disabilities with regard to employment, transportation, communication, public accommodations, and government activities.",
+    "bottom_line_fa": "قانون 1990 آمریکایی‌های دارای معلولیت تضمین می‌کند که آمریکایی‌های دارای معلولیت از فرصت‌های برابر برای مشارکت در زندگی اصلی تضمین می‌شوند. این قانون تبعیض علیه افراد دارای معلولیت را در زمینه اشتغال، حمل و نقل، ارتباطات، اقامتگاه های عمومی و فعالیت های دولتی ممنوع می کند.",
+    "sections": [
+      {
+        "title_en": "What Is the Americans With Disabilities Act (ADA)?",
+        "title_fa": "قانون آمریکایی های دارای معلولیت (ADA) چیست؟",
+        "paragraphs_en": [
+          "The Americans with Disabilities Act (ADA) was passed in 1990 to prevent workplace and hiring discrimination against people with disabilities. The act applies to all private businesses with 15 or more employees. It also covers government employers, employment agencies, and labor unions.<span class=\"ql-inline-citation\" data-cite=\"5\"></span>",
+          "The ADA also had the effect of increasing broad accessibility and mobility for people with disabilities by mandating reasonable accommodation such as automatic doorways, ramps, and elevators to accommodate wheelchairs in public places and businesses.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "paragraphs_fa": [
+          "قانون آمریکایی های دارای معلولیت (ADA) در سال 1990 برای جلوگیری از تبعیض در محل کار و استخدام افراد دارای معلولیت به تصویب رسید. این قانون برای تمام مشاغل خصوصی با 15 کارمند یا بیشتر اعمال می شود. همچنین کارفرمایان دولتی، آژانس‌های کاریابی و اتحادیه‌های کارگری را پوشش می‌دهد.<span class=\"ql-inline-citation\" data-cite=\"5\"></span>",
+          "ADA همچنین با اجباری کردن اقامتگاه‌های معقول مانند درهای خودکار، رمپ‌ها و آسانسورها برای قرار دادن صندلی‌های چرخدار در مکان‌های عمومی و کسب‌وکار، تأثیری بر افزایش دسترسی و تحرک گسترده برای افراد دارای معلولیت داشت.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "In-Depth Analysis of the Americans With Disabilities Act (ADA)",
+        "title_fa": "تجزیه و تحلیل عمیق قانون آمریکایی های دارای معلولیت (ADA)",
+        "paragraphs_en": [
+          "To be covered by the ADA, a person must have a physical or mental impairment that substantially limits one or more major life activities. Four major sections comprise the primary protections introduced by the ADA.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "Title I of the law prohibits discrimination against qualified individuals with disabilities during job application procedures, hiring, firing, the pursuit of career advancement, compensation, job training, and other aspects of employment. It holds authority over employers who have 15 or more employees.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "Title II applies to state and local government entities. This part of the law further extends the protection from discrimination to qualified individuals with disabilities. It requires that these individuals have reasonable access to services, programs, and activities provided by the government.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "paragraphs_fa": [
+          "برای اینکه فرد تحت پوشش ADA قرار گیرد، باید دارای یک نقص جسمی یا ذهنی باشد که به طور قابل ملاحظه ای یک یا چند فعالیت اصلی زندگی را محدود می کند. چهار بخش اصلی شامل حفاظت های اولیه معرفی شده توسط ADA است.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "عنوان یک قانون تبعیض علیه افراد واجد شرایط دارای معلولیت را در طی مراحل درخواست شغل، استخدام، اخراج، پیگیری پیشرفت شغلی، جبران خسارت، آموزش شغلی و سایر جنبه های استخدام ممنوع می کند. بر کارفرمایانی که 15 کارمند یا بیشتر دارند، اختیار دارد.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "عنوان دوم برای نهادهای ایالتی و محلی اعمال می شود. این بخش از قانون بیشتر حمایت از تبعیض را به افراد دارای معلولیت واجد شرایط گسترش می دهد. این امر مستلزم آن است که این افراد به خدمات، برنامه ها و فعالیت های ارائه شده توسط دولت دسترسی معقول داشته باشند.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Fast Fact",
+        "title_fa": "حقیقت سریع",
+        "paragraphs_en": [
+          "The Americans with Disabilities Act Amendments Act of 2008 allowed for a broader legal definition of “disability.” It made it easier for people seeking protection under the ADA to establish that they have a disability. Before the amendment, people with disabilities including cancer, diabetes, epilepsy, attention deficit hyperactivity disorder (ADHD), and learning disabilities could be excluded from ADA coverage.",
+          "Title III prohibits discrimination against people with disabilities regarding access to activities at public venues. This includes businesses that are generally open to the public, such as restaurants, schools, daycare facilities, movie theaters, recreation facilities, and doctors’ offices.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "The law also requires newly constructed, rebuilt, or refurbished places of public accommodation to comply with ADA standards. In addition, Title III applies to commercial facilities that include privately owned, nonresidential facilities such as factories, warehouses, or office buildings.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "Title IV oversees telephone and television access for individuals with hearing and speech disabilities. Common carriers, such as telephone companies, are required to establish interstate and intrastate telecommunications relay services (TRS) 24 hours a day, seven days a week.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "Different government agencies play a role in enforcing the ADA. The <a class=\"internal-term-link\" data-slug=\"equal-employment-opportunity-commission-eeoc\" href=\"#term/equal-employment-opportunity-commission-eeoc\">Equal Employment Opportunity Commission</a> (EEOC) enforces Title I. The <a class=\"internal-term-link\" data-slug=\"dol\" href=\"#term/dol\">Department of Labor</a> enforces state and local government services under Title II and public accommodations under Title III. Title IV is enforced by the Federal Communications Commission (FCC).<span class=\"ql-inline-citation\" data-cite=\"2\"></span>"
+        ],
+        "paragraphs_fa": [
+          "قانون اصلاحات قانون آمریکایی‌های دارای معلولیت در سال 2008 امکان تعریف حقوقی گسترده‌تری از «ناتوانی» را فراهم کرد. این امر برای افرادی که به دنبال حمایت تحت ADA هستند، تشخیص معلولیت خود را آسان تر کرد. قبل از این اصلاحیه، افراد دارای معلولیت از جمله سرطان، دیابت، صرع، اختلال نقص توجه و بیش فعالی (ADHD) و ناتوانی های یادگیری می توانند از پوشش ADA مستثنی شوند.",
+          "عنوان III تبعیض علیه افراد دارای معلولیت را در مورد دسترسی به فعالیت در اماکن عمومی ممنوع می کند. این شامل مشاغلی است که عموماً برای عموم باز هستند، مانند رستوران‌ها، مدارس، مهدکودک‌ها، سینماها، امکانات تفریحی، و مطب پزشکان.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "این قانون همچنین مکان‌های تازه ساخته، بازسازی‌شده یا بازسازی‌شده اماکن عمومی را ملزم می‌کند که با استانداردهای ADA مطابقت داشته باشند. علاوه بر این، عنوان III برای تسهیلات تجاری که شامل تاسیسات غیرمسکونی، خصوصی مانند کارخانه‌ها، انبارها، یا ساختمان‌های اداری است، اعمال می‌شود.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "عنوان IV بر دسترسی به تلفن و تلویزیون برای افراد دارای ناتوانی شنوایی و گفتار نظارت می کند. اپراتورهای معمولی، مانند شرکت های تلفن، ملزم به ایجاد خدمات رله مخابراتی بین ایالتی و درون دولتی (TRS) هستند 24 ساعت شبانه روز، هفت روز هفته.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "سازمان های دولتی مختلف در اجرای ADA نقش دارند. <a class=\"internal-term-link\" data-slug=\"equal-employment-opportunity-commission-eeoc\" href=\"#term/equal-employment-opportunity-commission-eeoc\">کمیسیون فرصت های شغلی برابر</a> (EEOC) عنوان I را اجرا می کند. <a class=\"internal-link\"slu-term href=\"#term/dol\">وزارت کار</a> خدمات دولت ایالتی و محلی را تحت عنوان II و مسکن های عمومی را تحت عنوان III اعمال می کند. عنوان IV توسط کمیسیون ارتباطات فدرال (FCC) اجرا می شود.<span class=\"ql-inline-citation\" data-cite=\"2\"></span>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Enhancing Accessibility: The Impact of the Americans With Disabilities Act",
+        "title_fa": "افزایش دسترسی: تأثیر قانون آمریکایی های دارای معلولیت",
+        "paragraphs_en": [
+          "The ADA established standards for accessible design for public accommodations that include creating automatic doorways, ramps, and elevators to accommodate wheelchairs. Water fountains must be made available at heights that individuals with disabilities can reach.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "Some examples of accommodations in the workplace include supplying a hearing-impaired applicant with a sign language interpreter during a job interview, modifying a work schedule to meet the needs of a person who needs treatment, or restructuring an existing facility to make it readily accessible to people with disabilities."
+        ],
+        "paragraphs_fa": [
+          "ADA استانداردهایی را برای طراحی در دسترس برای اماکن عمومی ایجاد کرد که شامل ایجاد درهای اتوماتیک، رمپ ها و آسانسورها برای جا دادن ویلچرها می شود. فواره های آب باید در ارتفاعاتی در دسترس افراد دارای معلولیت قرار گیرند.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "برخی از نمونه‌های اقامتگاه در محل کار عبارتند از: ارائه مترجم زبان اشاره برای متقاضیان کم شنوایی در طول مصاحبه شغلی، اصلاح برنامه کاری برای پاسخگویی به نیازهای فردی که نیاز به درمان دارد، یا بازسازی یک مرکز موجود برای دسترسی آسان به افراد دارای معلولیت."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Important",
+        "title_fa": "مهم",
+        "paragraphs_en": [
+          "Websites are required by law to be accessible to people with disabilities and must comply with ADA accessibility standards.<span class=\"ql-inline-citation\" data-cite=\"4\"></span>",
+          "An employer is not required by the ADA to make reasonable accommodations if doing so presents an undue hardship for the business and requires significant expenses compared with the size of the company.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "Title IV of the ADA requires telephone companies to provide telephone relay services, or similar devices, for the hearing- and speech-impaired.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "paragraphs_fa": [
+          "طبق قانون، وب‌سایت‌ها باید برای افراد دارای معلولیت قابل دسترسی باشند و باید با استانداردهای دسترسی ADA مطابقت داشته باشند.<span class=\"ql-inline-citation\" data-cite=\"4\"></span>",
+          "ADA در صورتی که انجام این کار برای کسب و کار سختی بی دلیل ایجاد کند و در مقایسه با اندازه شرکت مستلزم هزینه های قابل توجهی باشد، توسط ADA ملزم به ایجاد تطابق منطقی نیست.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "عنوان چهارم ADA شرکت‌های تلفن را ملزم می‌کند تا خدمات رله تلفن یا دستگاه‌های مشابه را برای افراد دارای اختلال شنوایی و گفتار ارائه دهند.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "What Does the Americans With Disabilities Act Do?",
+        "title_fa": "قانون آمریکایی های دارای معلولیت چه می کند؟",
+        "paragraphs_en": [
+          "The Americans with Disabilities Act seeks to prevent discrimination against people with disabilities in the areas of employment, communication, transportation, state and government programs, and public accommodation. It seeks to ensure people with disabilities are able to participate equally in everyday life."
+        ],
+        "paragraphs_fa": [
+          "قانون آمریکایی های دارای معلولیت به دنبال جلوگیری از تبعیض علیه افراد دارای معلولیت در زمینه های اشتغال، ارتباطات، حمل و نقل، برنامه های ایالتی و دولتی و اسکان عمومی است. به دنبال این است که اطمینان حاصل شود که افراد دارای معلولیت قادر به مشارکت برابر در زندگی روزمره هستند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Is Anxiety Covered by ADA?",
+        "title_fa": "آیا اضطراب تحت پوشش ADA است؟",
+        "paragraphs_en": [
+          "Yes, anxiety disorders are covered by the ADA and are considered disabilities. If you suffer from anxiety disorders, you are not allowed to be discriminated against in the workplace or any other area of your life."
+        ],
+        "paragraphs_fa": [
+          "بله، اختلالات اضطرابی تحت پوشش ADA هستند و معلولیت محسوب می شوند. اگر از اختلالات اضطرابی رنج می برید، اجازه ندارید در محل کار یا هر حوزه دیگری از زندگی خود مورد تبعیض قرار بگیرید."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "What Are the Types of ADA?",
+        "title_fa": "انواع ADA چیست؟",
+        "paragraphs_en": [
+          "The Americans with Disabilities Act (ADA) is broken down into four main sections: Title I, which covers employment; Title II, which covers public entities and transportation; Title III, which covers public accommodations and public facilities, and Title IV, which covers telecommunications."
+        ],
+        "paragraphs_fa": [
+          "قانون آمریکایی‌های دارای معلولیت (ADA) به چهار بخش اصلی تقسیم می‌شود: عنوان I که اشتغال را پوشش می‌دهد. عنوان دوم، که نهادهای عمومی و حمل و نقل را پوشش می دهد. عنوان III که مسکن های عمومی و امکانات عمومی را پوشش می دهد و عنوان IV که مخابرات را پوشش می دهد."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "The Bottom Line",
+        "title_fa": "نتیجه‌گیری نهایی",
+        "paragraphs_en": [
+          "The 1990 Americans with Disabilities Act ensures that Americans with disabilities are guaranteed equal opportunities to participate in mainstream life. This act prohibits discrimination against people with disabilities with regard to employment, transportation, communication, public accommodations, and government activities."
+        ],
+        "paragraphs_fa": [
+          "قانون 1990 آمریکایی‌های دارای معلولیت تضمین می‌کند که آمریکایی‌های دارای معلولیت از فرصت‌های برابر برای مشارکت در زندگی اصلی تضمین می‌شوند. این قانون تبعیض علیه افراد دارای معلولیت را در زمینه اشتغال، حمل و نقل، ارتباطات، اقامتگاه های عمومی و فعالیت های دولتی ممنوع می کند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      }
+    ],
+    "deep_enriched": true
   },
   {
     "id": 808,
     "term_en": "Amortizable Bond Premium",
     "term_fa": "Amortizable اوراق قرضه پرمیوم / حق بیمه (Amortizable Bond Premium)",
     "letter": "A",
-    "category": "اوراق بدهی و اسناد خزانه",
-    "definition_en": "Amortizable Bond Premium is a fundamental concept in finance and investing, categorized under اوراق بدهی و اسناد خزانه. It plays a key role in market transactions, financial analysis, and economic decision-making.",
-    "definition_fa": "اصطلاح «Amortizable اوراق قرضه پرمیوم / حق بیمه (Amortizable Bond Premium)» یکی از مفاهیم و تعاریف پایه‌ای در بازارهای مالی و سرمایه‌گذاری در دسته‌بندی «اوراق بدهی و اسناد خزانه» است که کاربرد گسترده‌ای در محاسبات تحلیلی، معاملات و تصمیم‌گیری‌های اقتصادی دارد.",
+    "category": "ابزارهای مشتقه و آپشن",
+    "definition_en": "An amortizable bond premium refers to the extra amount an investor pays when buying a bond above its face value. This happens when its interest rate is higher than market rates. Investors can reduce, or “amortize,” this premium over the bond's lifetime, which may lower taxable interest income and give you tax benefits. The premium is calculated using the constant yield method, which spreads the extra cost evenly based on the bond’s return over time. Keep reading to learn how bond premiums work, how they're calculated, and the financial advantages associated with them.<br/>\n\nA bond premium happens when its price goes up in the market because interest rates fall. A bond sold <a class=\"internal-term-link\" data-slug=\"at-a-premium\" href=\"#term/at-a-premium\">at a premium</a> to par has a market price that is above the <a class=\"internal-term-link\" data-slug=\"facevalue\" href=\"#term/facevalue\">face value</a> amount.",
+    "definition_fa": "حق بیمه اوراق قرضه قابل استهلاک به مبلغ اضافی اشاره دارد که سرمایه گذار هنگام خرید اوراق قرضه بالاتر از ارزش اسمی آن می پردازد. این زمانی اتفاق می افتد که نرخ بهره آن بالاتر از نرخ های بازار باشد. سرمایه‌گذاران می‌توانند این حق بیمه را در طول عمر اوراق کاهش دهند، یا «استهلاک» کنند، که ممکن است درآمد مشمول مالیات را کاهش دهد و مزایای مالیاتی به شما بدهد. حق بیمه با استفاده از روش بازده ثابت محاسبه می شود که هزینه اضافی را به طور مساوی بر اساس بازده اوراق در طول زمان پخش می کند. به خواندن ادامه دهید تا بدانید حق بیمه اوراق قرضه چگونه کار می کند، چگونه محاسبه می شود و مزایای مالی مرتبط با آنها.<br/> \n\nحق بیمه اوراق قرضه زمانی اتفاق می افتد که قیمت آن در بازار بالا می رود زیرا نرخ بهره کاهش می یابد. اوراق قرضه‌ای که <a class=\"internal-term-link\" data-slug=\"at-a-premium\" href=\"#term/at-a-premium\">به‌میزان</a> فروخته می‌شود دارای قیمت بازاری بالاتر از <a class=\"internal-term-link\" data-slug=\"facevalue\" href=\"#term/facevalue\">مقدار است.",
     "takeaways_en": [
-      "Standard financial term: Amortizable Bond Premium",
-      "Classified under اوراق بدهی و اسناد خزانه on Investopedia",
-      "Referenced in capital markets, financial disclosures, and investing strategies"
+      "An amortizable bond premium is the excess price paid for a bond over its face value, which can be amortized over the bond's life.",
+      "The constant yield method required by the IRS is used to calculate the annual amortization of bond premiums.",
+      "Amortizing the bond premium reduces taxable income by offsetting interest income, especially beneficial for taxable bonds.",
+      "The process of amortization differs between bonds with taxable and tax-exempt interest, affecting the cost-basis adjustment.",
+      "Over time, as the bond approaches maturity, the premium is amortized, bringing the bond's price closer to its face value."
     ],
     "takeaways_fa": [
-      "اصطلاح و مفهوم استاندارد مالی: Amortizable اوراق قرضه پرمیوم / حق بیمه (Amortizable Bond Premium)",
-      "طبقه‌بندی‌شده در بخش تخصصی اوراق بدهی و اسناد خزانه",
-      "کاربرد عملی در تحلیل‌های مالی، گزارشگری و استراتژی‌های سرمایه‌گذاری"
+      "حق بیمه اوراق قرضه قابل استهلاک، مازاد قیمتی است که برای اوراق قرضه بیش از ارزش اسمی آن پرداخت می شود که می تواند در طول عمر اوراق مستهلک شود.",
+      "روش بازده ثابت مورد نیاز IRS برای محاسبه استهلاک سالانه حق بیمه اوراق قرضه استفاده می شود.",
+      "استهلاک حق بیمه اوراق قرضه با جبران سود سود، درآمد مشمول مالیات را کاهش می دهد، به ویژه برای اوراق مشمول مالیات سودمند.",
+      "روند استهلاک بین اوراق قرضه با بهره مشمول مالیات و بهره معاف از مالیات متفاوت است و بر تعدیل هزینه تأثیر می گذارد.",
+      "با گذشت زمان، با نزدیک شدن به سررسید اوراق، حق بیمه مستهلک می شود و قیمت اوراق را به ارزش اسمی آن نزدیک می کند."
     ],
     "url": "https://www.investopedia.com/terms/a/amortizable-bond-premium.asp",
     "slug": "amortizable-bond-premium",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false
+    "bottom_line_en": "Amortizable bond premium involves paying more than the face value of a bond, which can be amortized over its life. Amortizing the bond premium can reduce taxable income by offsetting interest income, and this is especially advantageous for bonds paying taxable interest. The IRS mandates the use of the constant yield method for amortizing bond premiums annually. The process can vary slightly depending on whether bonds generate taxable or tax-exempt interest, impacting how the cost basis is adjusted.",
+    "bottom_line_fa": "حق بیمه اوراق قابل استهلاک شامل پرداخت بیش از ارزش اسمی اوراق است که می تواند در طول عمر آن مستهلک شود. استهلاک حق بیمه اوراق قرضه می تواند درآمد مشمول مالیات را با جبران سود سود کاهش دهد و این امر به ویژه برای اوراق قرضه ای که سود مشمول مالیات پرداخت می کنند سودمند است. IRS استفاده از روش بازده ثابت را برای استهلاک سالانه حق بیمه اوراق قرضه الزامی می کند. این فرآیند بسته به اینکه آیا اوراق قرضه سود مشمول مالیات یا معاف از مالیات ایجاد می کند، می تواند کمی متفاوت باشد و بر نحوه تعدیل مبنای هزینه تأثیر بگذارد.",
+    "sections": [
+      {
+        "title_en": "What Is an Amortizable Bond Premium?",
+        "title_fa": "حق بیمه اوراق قرضه قابل استهلاک چیست؟",
+        "paragraphs_en": [
+          "An amortizable bond premium refers to the extra amount an investor pays when buying a bond above its face value. This happens when its interest rate is higher than market rates. Investors can reduce, or “amortize,” this premium over the bond's lifetime, which may lower taxable interest income and give you tax benefits. The premium is calculated using the constant yield method, which spreads the extra cost evenly based on the bond’s return over time. Keep reading to learn how bond premiums work, how they're calculated, and the financial advantages associated with them.<br/>"
+        ],
+        "paragraphs_fa": [
+          "حق بیمه اوراق قرضه قابل استهلاک به مبلغ اضافی اشاره دارد که سرمایه گذار هنگام خرید اوراق قرضه بالاتر از ارزش اسمی آن می پردازد. این زمانی اتفاق می افتد که نرخ بهره آن بالاتر از نرخ های بازار باشد. سرمایه‌گذاران می‌توانند این حق بیمه را در طول عمر اوراق کاهش دهند، یا «استهلاک» کنند، که ممکن است درآمد مشمول مالیات را کاهش دهد و مزایای مالیاتی به شما بدهد. حق بیمه با استفاده از روش بازده ثابت محاسبه می شود که هزینه اضافی را به طور مساوی بر اساس بازده اوراق در طول زمان پخش می کند. به خواندن ادامه دهید تا بدانید حق بیمه اوراق قرضه چگونه کار می کند، چگونه محاسبه می شود و مزایای مالی مرتبط با آنها.<br/>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Mechanism of Amortizable Bond Premiums",
+        "title_fa": "مکانیسم حق بیمه اوراق قرضه قابل استهلاک",
+        "paragraphs_en": [
+          "A bond premium happens when its price goes up in the market because interest rates fall. A bond sold at a premium to par has a market price that is above the face value amount.",
+          "The bond's premium is the difference between its current price and its face value. For example, a bond that has a face value of $1,000 but is sold for $1,050 has a $50 premium. Over time, as the bond premium approaches maturity, the value of the bond falls <a class=\"internal-term-link\" data-slug=\"pull-to-par\" href=\"#term/pull-to-par\">until it is at par on the maturity date</a>. The gradual decrease in the value of the bond is called amortization."
+        ],
+        "paragraphs_fa": [
+          "حق بیمه اوراق قرضه زمانی اتفاق می افتد که قیمت آن در بازار بالا می رود زیرا نرخ بهره کاهش می یابد. اوراق قرضه ای که با قیمتی معادل قیمت بازار به فروش می رسد بالاتر از ارزش اسمی است.",
+          "حق بیمه اوراق قرضه تفاوت بین قیمت فعلی و ارزش اسمی آن است. به عنوان مثال، اوراق قرضه ای که ارزش اسمی آن 1000 دلار است اما به قیمت 1050 دلار فروخته می شود دارای 50 دلار حق بیمه است. با گذشت زمان، با نزدیک شدن به سررسید حق بیمه اوراق، ارزش اوراق <a class=\"internal-term-link\" data-slug=\"pull-to-par\" href=\"#term/pull-to-par\">تا زمانی که در تاریخ سررسید برابر شود</a> کاهش می یابد. کاهش تدریجی ارزش اوراق قرضه استهلاک نامیده می شود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Calculating Cost Basis of Amortizable Bonds",
+        "title_fa": "محاسبه مبنای بهای تمام شده اوراق قابل استهلاک",
+        "paragraphs_en": [
+          "For a bond investor, the premium paid for a bond represents part of the <a class=\"internal-term-link\" data-slug=\"costbasis\" href=\"#term/costbasis\">cost basis</a> of the bond, which is important for tax purposes. If the bond pays taxable interest, the bondholder can choose to amortize the premium—that is, use a part of the premium to reduce the amount of interest income included for taxes.<span class=\"ql-inline-citation\" data-cite=\"2\"></span>",
+          "Investors in taxable premium bonds can benefit by amortizing the premium to offset interest income. This, in turn, will reduce the amount of <a class=\"internal-term-link\" data-slug=\"taxableincome\" href=\"#term/taxableincome\">taxable income</a> the bond generates, and thus any income tax due on it as well. The cost basis of the taxable bond is reduced by the amount of premium amortized each year.<span class=\"ql-inline-citation\" data-cite=\"2\"></span>",
+          "If a bond pays <a class=\"internal-term-link\" data-slug=\"tax_exempt\" href=\"#term/tax_exempt\">tax-exempt</a> interest, the investor must amortize the premium. The amortized amount isn't deductible for taxable income, but it reduces the bond's basis..<span class=\"ql-inline-citation\" data-cite=\"2\"></span> The IRS requires using the constant yield method to amortize a bond premium yearly.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>"
+        ],
+        "paragraphs_fa": [
+          "برای یک سرمایه گذار اوراق قرضه، حق بیمه پرداختی برای اوراق قرضه نشان دهنده بخشی از <a class=\"internal-term-link\" data-slug=\"costbasis\" href=\"#term/costbasis\">مبنای هزینه</a> اوراق قرضه است که برای اهداف مالیاتی مهم است. اگر اوراق سود مشمول مالیات پرداخت کند، دارنده اوراق می‌تواند حق بیمه را مستهلک کند—یعنی بخشی از حق بیمه را برای کاهش میزان درآمد سود مشمول مالیات استفاده کند.<span class=\"ql-inline-citation\" data-cite=\"2\"></span>",
+          "سرمایه گذاران در اوراق حق بیمه مشمول مالیات می توانند با استهلاک حق بیمه برای جبران درآمد بهره سود ببرند. این به نوبه خود، مقدار <a class=\"internal-term-link\" data-slug=\"taxableincome\" href=\"#term/taxableincome\">درآمد مشمول مالیات</a> را که اوراق ایجاد می‌کند، و در نتیجه هرگونه مالیات بر درآمد متعلق به آن را نیز کاهش می‌دهد. مبنای هزینه اوراق مشمول مالیات به میزان حق بیمه مستهلک شده هر سال کاهش می یابد.<span class=\"ql-inline-citation\" data-cite=\"2\"></span>",
+          "اگر اوراق قرضه سود <a class=\"internal-term-link\" data-slug=\"tax_exempt\" href=\"#term/tax_exempt\">معاف از مالیات</a> بپردازد، سرمایه گذار باید حق بیمه را مستهلک کند. مبلغ مستهلک‌شده برای درآمد مشمول مالیات کسر نمی‌شود، اما مبنای اوراق قرضه را کاهش می‌دهد.<span class=\"ql-inline-citation\" data-cite=\"2\"></span> IRS باید از روش بازده ثابت برای استهلاک سالانه حق بیمه اوراق قرضه استفاده کند.<span class=\"ql-inline-citation>1\" data."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Bond Premium Amortization Using the Constant Yield Method",
+        "title_fa": "استهلاک حق بیمه اوراق قرضه با استفاده از روش بازده ثابت",
+        "paragraphs_en": [
+          "The constant yield method is used to determine the bond premium amortization for each accrual period.<span class=\"ql-inline-citation\" data-cite=\"1\"></span> It amortizes a bond premium by multiplying the adjusted basis by the yield at issuance and then subtracting the <a class=\"internal-term-link\" data-slug=\"coupon\" href=\"#term/coupon\">coupon interest</a>. Or in formula form:",
+          "The first step in calculating the premium amortization is to determine the <a class=\"internal-term-link\" data-slug=\"yieldtomaturity\" href=\"#term/yieldtomaturity\">yield to maturity</a> (YTM), which is the <a class=\"internal-term-link\" data-slug=\"discountrate\" href=\"#term/discountrate\">discount rate</a> that equates the present value of all remaining payments to be made on the bond to the basis in the bond.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "For example, consider an investor that purchased a bond for $10,150. The bond has a five-year maturity date and a par value of $10,000. It pays a 5% coupon rate semi-annually and has a yield to maturity of 3.5%. Let’s calculate the amortization for the first period and second period."
+        ],
+        "paragraphs_fa": [
+          "روش بازده ثابت برای تعیین استهلاک حق بیمه اوراق قرضه برای هر دوره تعهدی استفاده می‌شود.<span class=\"ql-inline-citation\" data-cite=\"1\"></span> این روش با ضرب مبنای تعدیل‌شده در بازده در هنگام انتشار و سپس کم کردن <a class=\"internal-upslu-link\"، حق بیمه اوراق را مستهلک می‌کند. href=\"#term/coupon\">سود کوپن</a>. یا به صورت فرمول:",
+          "اولین قدم در محاسبه استهلاک حق بیمه، تعیین <a class=\"internal-term-link\" data-slug=\"yieldtomaturity\" href=\"#term/yieldtomaturity\">بازده تا سررسید</a> (YTM) است، که <a class=\"internal-term-link\" data-slug=\"discountrate\" rate e href=\"#e\" است. از تمام پرداخت‌های باقی‌مانده که باید بر اساس اوراق قرضه به پایه اوراق قرضه انجام شود.<span class=\"ql-inline-citation\" data-cite=\"1\"></span>",
+          "به عنوان مثال، سرمایه‌گذاری را در نظر بگیرید که اوراق قرضه را به قیمت 10150 دلار خریداری کرده است. تاریخ سررسید این اوراق پنج ساله و ارزش اسمی آن 10000 دلار است. نرخ کوپن 5% را به صورت شش ماهه پرداخت می کند و بازدهی تا سررسید 3.5% دارد. بیایید استهلاک دوره اول و دوم را محاسبه کنیم."
+        ],
+        "items_en": [
+          "<strong>Accrual</strong> = Purchase Basis x (YTM /Accrual periods per year) - Coupon Interest"
+        ],
+        "items_fa": [
+          "<strong>اقلام تعهدی</strong> = مبنای خرید x (YTM /دوره‌های تعهدی در سال) - سود کوپن"
+        ]
+      },
+      {
+        "title_en": "Amortization in the First Period",
+        "title_fa": "استهلاک در دوره اول",
+        "paragraphs_en": [
+          "Since this bond makes semi-annual payments, the first period is the first six months after which the first coupon payment is made; the second period is the next six months, after which the investor receives the second coupon payment, and so on. Since we’re assuming a six-month accrual period, the yield and coupon rate will be divided by 2.",
+          "Following our example, the yield used to amortize the bond premium is 3.5%/2 = 1.75%, and the coupon payment per period is 5% / 2 x $10,000 = $250. The amortization for period 1 is as follows:"
+        ],
+        "paragraphs_fa": [
+          "از آنجایی که این اوراق به صورت شش ماهه پرداخت می کند، اولین دوره شش ماهه اول است که پس از آن اولین پرداخت کوپن انجام می شود. دوره دوم شش ماه آینده است و پس از آن سرمایه گذار دومین پرداخت کوپن را دریافت می کند و غیره. از آنجایی که ما یک دوره تعهدی شش ماهه را فرض می کنیم، بازده و نرخ کوپن بر 2 تقسیم می شود.",
+          "به دنبال مثال ما، بازده مورد استفاده برای استهلاک حق بیمه اوراق قرضه 3.5%/2 = 1.75% است و پرداخت کوپن در هر دوره 5% / 2 x 10,000 دلار = 250 دلار است. استهلاک دوره 1 به شرح زیر است:"
+        ],
+        "items_en": [
+          "Accrual<sub>period1</sub> = ($10,150 x 1.75%) - $250",
+          "Accrual<sub>period1</sub> = $177.63 - $250",
+          "Accrual<sub>period1</sub> = -$72.38"
+        ],
+        "items_fa": [
+          "تعهدی<sub>دوره 1</sub> = (10,150$ x 1.75%) - 250$",
+          "تعهدی<sub>دوره 1</sub> = 177.63 دلار - 250 دلار",
+          "تعهدی<sub>دوره 1</sub> = -72.38$"
+        ]
+      },
+      {
+        "title_en": "Amortization in the Second Period",
+        "title_fa": "استهلاک در دوره دوم",
+        "paragraphs_en": [
+          "The bond’s basis for the second period is the purchase price plus the accrual in the first period—that is, $10,150 - $72.38 = $10,077.62:",
+          "For the remaining eight periods (there are 10 accrual or payment periods for a semi-annual bond with a maturity of five years), use the same structure presented above to calculate the amortizable bond premium.",
+          "Intrinsically, a bond purchased at a premium has a negative accrual; in other words, the basis amortizes."
+        ],
+        "paragraphs_fa": [
+          "مبنای اوراق قرضه برای دوره دوم، قیمت خرید به اضافه اقلام تعهدی در دوره اول است - یعنی 10150 - 72.38 دلار = 10077.62 دلار:",
+          "برای هشت دوره باقیمانده (10 دوره تعهدی یا پرداختی برای اوراق قرضه شش ماهه با سررسید پنج ساله وجود دارد)، از همان ساختار ارائه شده در بالا برای محاسبه حق بیمه اوراق قابل استهلاک استفاده کنید.",
+          "ذاتاً، اوراق قرضه ای که با حق بیمه خریداری می شود دارای اقلام تعهدی منفی است. به عبارت دیگر، مبنا مستهلک می شود."
+        ],
+        "items_en": [
+          "Accrual<sub>period2</sub> = ($10,077.62 x 1.75%) - $250",
+          "Accrual<sub>period2</sub> = $176.36 - $250",
+          "Accrual<sub>period2</sub> = -$73.64"
+        ],
+        "items_fa": [
+          "تعهدی<sub>دوره2</sub> = (10,077.62$ x 1.75%) - 250$",
+          "تعهدی<sub>دوره2</sub> = 176.36 دلار - 250 دلار",
+          "تعهدی<sub>دوره2</sub> = -73.64$"
+        ]
+      },
+      {
+        "title_en": "The Bottom Line",
+        "title_fa": "نتیجه‌گیری نهایی",
+        "paragraphs_en": [
+          "Amortizable bond premium involves paying more than the face value of a bond, which can be amortized over its life. Amortizing the bond premium can reduce taxable income by offsetting interest income, and this is especially advantageous for bonds paying taxable interest.",
+          "The IRS mandates the use of the constant yield method for amortizing bond premiums annually. The process can vary slightly depending on whether bonds generate taxable or tax-exempt interest, impacting how the cost basis is adjusted."
+        ],
+        "paragraphs_fa": [
+          "حق بیمه اوراق قابل استهلاک شامل پرداخت بیش از ارزش اسمی اوراق است که می تواند در طول عمر آن مستهلک شود. استهلاک حق بیمه اوراق قرضه می تواند درآمد مشمول مالیات را با جبران سود سود کاهش دهد و این امر به ویژه برای اوراق قرضه ای که سود مشمول مالیات پرداخت می کنند سودمند است.",
+          "IRS استفاده از روش بازده ثابت را برای استهلاک سالانه حق بیمه اوراق قرضه الزامی می کند. این فرآیند بسته به اینکه آیا اوراق قرضه سود مشمول مالیات یا معاف از مالیات ایجاد می کند، می تواند کمی متفاوت باشد و بر نحوه تعدیل مبنای هزینه تأثیر بگذارد."
+        ],
+        "items_en": [],
+        "items_fa": []
+      }
+    ],
+    "deep_enriched": true
   },
   {
     "id": 809,
@@ -157298,25 +157790,204 @@
     "term_fa": "استهلاک دارایی نامشهود of Intangibles (Amortization of Intangibles)",
     "letter": "A",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "Amortization of Intangibles is a fundamental concept in finance and investing, categorized under حسابداری و صورت‌های مالی. It plays a key role in market transactions, financial analysis, and economic decision-making.",
-    "definition_fa": "اصطلاح «استهلاک دارایی نامشهود of Intangibles (Amortization of Intangibles)» یکی از مفاهیم و تعاریف پایه‌ای در بازارهای مالی و سرمایه‌گذاری در دسته‌بندی «حسابداری و صورت‌های مالی» است که کاربرد گسترده‌ای در محاسبات تحلیلی، معاملات و تصمیم‌گیری‌های اقتصادی دارد.",
+    "definition_en": "Amortization of intangibles, also simply known as amortization, is the process of expensing the cost of an <a class=\"internal-term-link\" data-slug=\"intangibleasset\" href=\"#term/intangibleasset\">intangible asset</a> over the projected life of the asset for tax or accounting purposes. Intangible assets, such as patents and trademarks, are amortized into an expense account called amortization.\n\nTangible assets are instead written off through depreciation. Also, the <a class=\"internal-term-link\" data-slug=\"amortization\" href=\"#term/amortization\">amortization</a> process for corporate accounting purposes may differ from the amount of amortization used for tax purposes.",
+    "definition_fa": "استهلاک دارایی های نامشهود، که به سادگی به عنوان استهلاک نیز شناخته می شود، فرآیندی است که هزینه یک <a class=\"internal-term-link\" data-slug=\"intangibleasset\" href=\"#term/intangibleasset\">دارایی نامشهود</a> در طول عمر پیش بینی شده دارایی برای اهداف مالیاتی یا حسابداری هزینه می شود. دارایی های نامشهود، مانند اختراعات و علائم تجاری، در حساب هزینه ای به نام استهلاک مستهلک می شوند. \n\nدارایی های مشهود در عوض از طریق استهلاک حذف می شوند. همچنین، فرآیند <a class=\"internal-term-link\" data-slug=\"amortization\" href=\"#term/amortization\">استهلاک</a> برای اهداف حسابداری شرکتی ممکن است با مقدار استهلاک استفاده شده برای اهداف مالیاتی متفاوت باشد.",
     "takeaways_en": [
-      "Standard financial term: Amortization of Intangibles",
-      "Classified under حسابداری و صورت‌های مالی on Investopedia",
-      "Referenced in capital markets, financial disclosures, and investing strategies"
+      "Amortization of intangible assets is a process by which the cost of such an asset is incrementally expensed or written off over time.",
+      "Amortization applies to intangible (nonphysical) assets, while depreciation applies to tangible (physical) assets.",
+      "Intangible assets may include various types of intellectual property—patents, goodwill, trademarks, etc.",
+      "Most intangibles are required to be amortized over a 15-year period for tax purposes.",
+      "For accounting purposes, there are six amortization methods: straight line, declining balance, annuity, bullet, balloon, and negative amortization."
     ],
     "takeaways_fa": [
-      "اصطلاح و مفهوم استاندارد مالی: استهلاک دارایی نامشهود of Intangibles (Amortization of Intangibles)",
-      "طبقه‌بندی‌شده در بخش تخصصی حسابداری و صورت‌های مالی",
-      "کاربرد عملی در تحلیل‌های مالی، گزارشگری و استراتژی‌های سرمایه‌گذاری"
+      "استهلاک دارایی های نامشهود فرآیندی است که طی آن بهای تمام شده چنین دارایی به صورت فزاینده هزینه یا در طول زمان حذف می شود.",
+      "استهلاک در مورد دارایی های نامشهود (غیر فیزیکی) اعمال می شود، در حالی که استهلاک برای دارایی های مشهود (فیزیکی) اعمال می شود.",
+      "دارایی های نامشهود ممکن است شامل انواع مختلفی از مالکیت فکری باشد - حق اختراع، سرقفلی، علائم تجاری و غیره.",
+      "بیشتر دارایی های نامشهود برای مقاصد مالیاتی باید طی یک دوره 15 ساله مستهلک شوند.",
+      "برای اهداف حسابداری، شش روش استهلاک وجود دارد: خط مستقیم، مانده نزولی، سالیانه، گلوله، بالون و استهلاک منفی."
     ],
     "url": "https://www.investopedia.com/terms/a/amortization-of-intangibles.asp",
     "slug": "amortization-of-intangibles",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false
+    "bottom_line_en": "Amortization of intangibles, or simply amortization, is the process of expensing an intangible asset’s cost over that asset’s projected life for tax or accounting purposes. Intangible assets (which may include various types of intellectual property, such as goodwill, patents, and trademarks) are amortized into an expense account called amortization.<br/>",
+    "bottom_line_fa": "استهلاک دارایی‌های نامشهود یا صرفاً استهلاک، فرآیند هزینه کردن بهای تمام شده دارایی نامشهود در طول عمر پیش‌بینی شده آن دارایی برای اهداف مالیاتی یا حسابداری است. دارایی های نامشهود (که ممکن است شامل انواع مختلفی از دارایی های معنوی مانند سرقفلی، حق ثبت اختراع و علائم تجاری باشد) در حساب هزینه ای به نام استهلاک مستهلک می شود.<br/>",
+    "sections": [
+      {
+        "title_en": "What Is the Amortization of Intangibles?",
+        "title_fa": "استهلاک دارایی های نامشهود چیست؟",
+        "paragraphs_en": [
+          "Amortization of intangibles, also simply known as amortization, is the process of expensing the cost of an intangible asset over the projected life of the asset for tax or accounting purposes. Intangible assets, such as patents and trademarks, are amortized into an expense account called amortization.",
+          "Tangible assets are instead written off through depreciation. Also, the amortization process for corporate accounting purposes may differ from the amount of amortization used for tax purposes."
+        ],
+        "paragraphs_fa": [
+          "استهلاک دارایی های نامشهود که به سادگی به عنوان استهلاک نیز شناخته می شود، فرآیند هزینه کردن بهای تمام شده یک دارایی نامشهود در طول عمر پیش بینی شده دارایی برای اهداف مالیاتی یا حسابداری است. دارایی های نامشهود، مانند اختراعات و علائم تجاری، در حساب هزینه ای به نام استهلاک مستهلک می شوند.",
+          "دارایی های مشهود در عوض از طریق استهلاک حذف می شوند. همچنین، فرآیند استهلاک برای اهداف حسابداری شرکتی ممکن است با مقدار استهلاک مورد استفاده برای مقاصد مالیاتی متفاوت باشد."
+        ],
+        "items_en": [
+          "Amortization of intangible assets is a process by which the cost of such an asset is incrementally expensed or written off over time.",
+          "Amortization applies to intangible (nonphysical) assets, while depreciation applies to tangible (physical) assets.",
+          "Intangible assets may include various types of intellectual property—patents, goodwill, trademarks, etc.",
+          "Most intangibles are required to be amortized over a 15-year period for tax purposes.",
+          "For accounting purposes, there are six amortization methods: straight line, declining balance, annuity, bullet, balloon, and negative amortization."
+        ],
+        "items_fa": [
+          "استهلاک دارایی های نامشهود فرآیندی است که طی آن بهای تمام شده چنین دارایی به صورت فزاینده هزینه یا در طول زمان حذف می شود.",
+          "استهلاک در مورد دارایی های نامشهود (غیر فیزیکی) اعمال می شود، در حالی که استهلاک برای دارایی های مشهود (فیزیکی) اعمال می شود.",
+          "دارایی های نامشهود ممکن است شامل انواع مختلفی از مالکیت فکری باشد - حق اختراع، سرقفلی، علائم تجاری و غیره.",
+          "بیشتر دارایی های نامشهود برای مقاصد مالیاتی باید طی یک دوره 15 ساله مستهلک شوند.",
+          "برای اهداف حسابداری، شش روش استهلاک وجود دارد: خط مستقیم، مانده نزولی، سالیانه، گلوله، بالون و استهلاک منفی."
+        ]
+      },
+      {
+        "title_en": "Understanding the Amortization of Intangibles",
+        "title_fa": "درک استهلاک دارایی های نامشهود",
+        "paragraphs_en": [
+          "For tax purposes, the <a class=\"internal-term-link\" data-slug=\"costbasis\" href=\"#term/costbasis\">cost basis</a> of an intangible asset is amortized over a specific number of years, regardless of the actual useful life of the asset (as most intangibles don’t have a set useful life). The <a class=\"internal-term-link\" data-slug=\"irs\" href=\"#term/irs\">Internal Revenue Service (IRS)</a> allows intangibles to be amortized over a 15-year period if it’s one of the ones included in Section 197.<span class=\"ql-inline-citation\" data-cite=\"4\"></span>",
+          "Intangible assets are nonphysical assets that can be assigned an economic value. <a class=\"internal-term-link\" data-slug=\"intellectualproperty\" href=\"#term/intellectualproperty\">Intellectual property (IP)</a> is considered to be an intangible asset and is a broad term that encompasses most intangible assets. Most IP is covered under Section 197. Examples of these Section 197 intangible assets include <a class=\"internal-term-link\" data-slug=\"patent\" href=\"#term/patent\">patents</a>, goodwill, <a class=\"internal-term-link\" data-slug=\"trademark\" href=\"#term/trademark\">trademarks</a>, and trade and franchise names.<span class=\"ql-inline-citation\" data-cite=\"3\"></span>",
+          "Not all IP is amortized over the 15-year period set by the IRS, however. There are certain exclusions, such as software acquired in a transaction that is readily available for purchase by the general public, subject to a nonexclusive license, and has not been substantially modified. In those cases and select others, the intangibles are amortized under Section 167.<span class=\"ql-inline-citation\" data-cite=\"6\"></span><span class=\"ql-inline-citation\" data-cite=\"5\"></span><br/>"
+        ],
+        "paragraphs_fa": [
+          "برای اهداف مالیاتی، <a class=\"internal-term-link\" data-slug=\"costbasis\" href=\"#term/costbasis\">مبنای بهای تمام شده</a> یک دارایی نامشهود، صرف نظر از عمر مفید واقعی دارایی، طی چند سال مستهلک می‌شود (زیرا بیشتر دارایی‌های نامشهود عمر مفید مشخصی ندارند). <a class=\"internal-term-link\" data-slug=\"irs\" href=\"#term/irs\">سرویس درآمد داخلی (IRS)</a> اجازه می‌دهد که دارایی‌های نامشهود در یک دوره 15 ساله مستهلک شوند، اگر یکی از موارد مندرج در بخش 197 باشد.<span class=\"ql-inline-citation\"-span class=\"ql-inline-citation\"-span",
+          "دارایی های نامشهود دارایی های غیر فیزیکی هستند که می توان به آنها یک ارزش اقتصادی اختصاص داد. <a class=\"internal-term-link\" data-slug=\"intellectualproperty\" href=\"#term/intellectualproperty\">مالکیت معنوی (IP)</a> به عنوان یک دارایی نامشهود در نظر گرفته می شود و یک اصطلاح گسترده است که اکثر دارایی های نامشهود را در بر می گیرد. بیشتر IP تحت بخش 197 پوشش داده می‌شود. نمونه‌هایی از این دارایی‌های نامشهود بخش 197 عبارتند از <a class=\"internal-term-link\" data-slug=\"patent\" href=\"#term/patent\">اختراعات</a>، سرقفلی، <a class=\"internal-term-link\" data-slug=\"trademark\" href=\"#trademark، و \"trademark\" href=\"#trade/ نام‌ها.<span class=\"ql-inline-citation\" data-cite=\"3\"></span>",
+          "با این حال، تمام IP در دوره 15 ساله تعیین شده توسط IRS مستهلک نمی شود. استثنائات خاصی وجود دارد، مانند نرم‌افزاری که در یک معامله به‌دست می‌آید که به‌راحتی برای خرید در دسترس عموم است، مشروط به مجوز غیر انحصاری، و به‌طور اساسی اصلاح نشده است. در این موارد و موارد دیگر، دارایی‌های نامشهود طبق بخش 167 مستهلک می‌شوند.<span class=\"ql-inline-citation\" data-cite=\"6\"></span><span class=\"ql-inline-citation\" data-cite=\"5\"></span><br/>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Important",
+        "title_fa": "مهم",
+        "paragraphs_en": [
+          "Per <a class=\"internal-term-link\" data-slug=\"gaap\" href=\"#term/gaap\">generally accepted accounting principles (GAAP)</a>, businesses amortize intangibles over time to help tie the cost of an asset to the <a class=\"internal-term-link\" data-slug=\"revenue\" href=\"#term/revenue\">revenues</a> it generates in the same <a class=\"internal-term-link\" data-slug=\"accountingperiod\" href=\"#term/accountingperiod\">accounting period</a>."
+        ],
+        "paragraphs_fa": [
+          "طبق <a class=\"internal-term-link\" data-slug=\"gaap\" href=\"#term/gaap\">اصول حسابداری پذیرفته شده عمومی (GAAP)</a>، کسب‌وکارها دارایی‌های نامشهود را در طول زمان مستهلک می‌کنند تا کمک کنند هزینه یک دارایی را به <a class=\"internal-term-link\" data-slug=\"revenue\" revenue< hrefa\"#revenue</a>revenue</a href=\"revenue\" hrefa\"#re/. class=\"internal-term-link\" data-slug=\"accountingperiod\" href=\"#term/accountingperiod\">دوره حسابداری</a>."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Special Considerations",
+        "title_fa": "ملاحظات خاص",
+        "paragraphs_en": [
+          "When a parent company purchases a subsidiary company and pays more than the <a class=\"internal-term-link\" data-slug=\"fairmarketvalue\" href=\"#term/fairmarketvalue\">fair market value (FMV)</a> of the subsidiary’s net assets, the amount over fair market value is posted to <a class=\"internal-term-link\" data-slug=\"goodwill\" href=\"#term/goodwill\">goodwill</a> (an intangible asset). IP is initially posted as an asset on the firm’s <a class=\"internal-term-link\" data-slug=\"balancesheet\" href=\"#term/balancesheet\">balance sheet</a> when it is purchased.",
+          "IP can also be internally generated by a company’s own <a class=\"internal-term-link\" data-slug=\"randd\" href=\"#term/randd\">research and development (R&amp;D)</a> efforts. For instance, a company may win a patent for a newly developed process, which has some value. That value, in turn, increases the value of the company and so must be recorded appropriately.",
+          "In either case, the process of amortization allows the company to write off annually a part of the value of that intangible asset according to a defined schedule.<br/>"
+        ],
+        "paragraphs_fa": [
+          "هنگامی که یک شرکت مادر یک شرکت تابعه را خریداری می کند و بیش از <a class=\"internal-term-link\" data-slug=\"fairmarketvalue\" href=\"#term/fairmarketvalue\">ارزش منصفانه بازار (FMV)</a> دارایی خالص شرکت تابعه پرداخت می کند، مبلغ بیش از ارزش بازار منصفانه به <a class=\"internal-term-link\" داده می شود. href=\"#term/goodwill\">سرقفلی</a> (یک دارایی نامشهود). IP در ابتدا هنگام خرید به عنوان دارایی در <a class=\"internal-term-link\" data-slug=\"balancesheet\" href=\"#term/balancesheet\">ترازنامه</a> شرکت پست می شود.",
+          "IP همچنین می‌تواند توسط تلاش‌های <a class=\"internal-term-link\" data-slug=\"randd\" href=\"#term/randd\">تحقیق و توسعه (R&amp;D)</a> خود شرکت تولید شود. به عنوان مثال، یک شرکت ممکن است برای یک فرآیند جدید توسعه یافته، که دارای ارزشی است، حق ثبت اختراع کسب کند. این ارزش به نوبه خود ارزش شرکت را افزایش می دهد و بنابراین باید به طور مناسب ثبت شود.",
+          "در هر صورت، فرآیند استهلاک به شرکت این امکان را می دهد که سالانه بخشی از ارزش دارایی نامشهود را طبق یک برنامه زمان بندی مشخص حذف کند.<br/>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Amortization vs. Depreciation",
+        "title_fa": "استهلاک در مقابل استهلاک",
+        "paragraphs_en": [
+          "<a class=\"internal-term-link\" data-slug=\"asset\" href=\"#term/asset\">Assets</a> are used by businesses to generate revenue and produce income. Over a period of time, the costs related to the assets are moved into an expense account as the useful life of the asset dwindles. By expensing the cost of the asset over a period of time, the company is complying with GAAP, which requires the matching of revenue with the expense incurred to generate the revenue.",
+          "Tangible assets are expensed using <a class=\"internal-term-link\" data-slug=\"depreciation\" href=\"#term/depreciation\">depreciation</a>, and intangible assets are expensed through amortization. Depreciation generally includes a <a class=\"internal-term-link\" data-slug=\"salvagevalue\" href=\"#term/salvagevalue\">salvage value</a> for the physical asset—the value that the asset can be sold for at the end of its useful life. Amortization doesn’t take into account a salvage value."
+        ],
+        "paragraphs_fa": [
+          "<a class=\"internal-term-link\" data-slug=\"asset\" href=\"#term/asset\">دارایی‌ها</a> توسط کسب‌وکارها برای درآمدزایی و تولید درآمد استفاده می‌شوند. در طی یک دوره زمانی، با کاهش عمر مفید دارایی، هزینه های مربوط به دارایی ها به حساب هزینه منتقل می شود. شرکت با هزینه کردن بهای تمام شده دارایی در یک دوره زمانی، با GAAP مطابقت دارد که برای ایجاد درآمد مستلزم تطبیق درآمد با هزینه انجام شده است.",
+          "دارایی های مشهود با استفاده از <a class=\"internal-term-link\" data-slug=\"depreciation\" href=\"#term/depreciation\">استهلاک</a> هزینه می شود و دارایی های نامشهود از طریق استهلاک هزینه می شود. استهلاک معمولاً شامل <a class=\"internal-term-link\" data-slug=\"salvagevalue\" href=\"#term/salvagevalue\">ارزش نجات</a> برای دارایی فیزیکی می‌شود—مقداری که دارایی در پایان عمر مفید آن می‌تواند به آن فروخته شود. استهلاک ارزش نجات را در نظر نمی گیرد."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Fast Fact",
+        "title_fa": "حقیقت سریع",
+        "paragraphs_en": [
+          "Intangible amortization is reported to the IRS using <a class=\"internal-term-link\" data-slug=\"form-4562\" href=\"#term/form-4562\">Form 4562</a>.<span class=\"ql-inline-citation\" data-cite=\"8\"></span><span class=\"ql-inline-citation\" data-cite=\"4\"></span> <br/>"
+        ],
+        "paragraphs_fa": [
+          "استهلاک نامشهود با استفاده از <a class=\"internal-term-link\" data-slug=\"form-4562\" href=\"#term/form-4562\">فرم 4562</a> به IRS گزارش می‌شود.<span class=\"ql-inline-citation\" data-cite=\"8\"></span><span class=\"ql-inline-inline\">"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Types of Amortization",
+        "title_fa": "انواع استهلاک",
+        "paragraphs_en": [
+          "For accounting (financial statement) purposes, a company can choose from six amortization methods: straight line, declining balance, annuity, bullet, balloon, and negative amortization. There are only four depreciation methods that can be used for accounting purposes: straight line, declining balance, <a class=\"internal-term-link\" data-slug=\"sum-of-the-years-digits\" href=\"#term/sum-of-the-years-digits\">sum-of-the-years’ digits</a>, and units of production.",
+          "For tax purposes, there are two options for amortization of intangibles that the IRS allows. These are straight line and the income forecast method. The income forecast method can be used instead of the straight-line method if the asset is motion picture films, videotapes, sound recordings, copyrights, books, or patents. For depreciation of physical assets, the IRS only allows the <a class=\"internal-term-link\" data-slug=\"macrs\" href=\"#term/macrs\">Modified Accelerated Cost Recovery System (MACRS)</a>.<span class=\"ql-inline-citation\" data-cite=\"7\"></span>"
+        ],
+        "paragraphs_fa": [
+          "برای اهداف حسابداری (صورت مالی)، یک شرکت می تواند از شش روش استهلاک انتخاب کند: خط مستقیم، مانده نزولی، مستمری، گلوله، بالون و استهلاک منفی. تنها چهار روش استهلاک وجود دارد که می‌توان برای اهداف حسابداری استفاده کرد: خط مستقیم، مانده نزولی، <a class=\"internal-term-link\" data-slug=\"sum-of-the-years-digits\" href=\"#term/sum-of-the-years-digits\">ارقام مجموع سال‌ها</a>، و واحدهای تولید.",
+          "برای اهداف مالیاتی، دو گزینه برای استهلاک دارایی های نامشهود وجود دارد که IRS اجازه می دهد. اینها خط مستقیم و روش پیش بینی درآمد هستند. اگر دارایی فیلم های سینمایی، نوارهای ویدئویی، ضبط صدا، حق چاپ، کتاب یا حق ثبت اختراع باشد، می توان از روش پیش بینی درآمد به جای روش مستقیم استفاده کرد. برای استهلاک دارایی‌های فیزیکی، IRS فقط به <a class=\"internal-term-link\" data-slug=\"macrs\" href=\"#term/macrs\">سیستم بازیابی سریع هزینه اصلاح‌شده (MACRS)</a> اجازه می‌دهد.<span class=\"ql-inline-citation\" data-cite=\"7\"></span>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Example of Amortization",
+        "title_fa": "نمونه ای از استهلاک",
+        "paragraphs_en": [
+          "Assume, for example, that a construction company buys a $32,000 truck for contractor work, and that the truck has a useful life of eight years. The annual depreciation expense on a <a class=\"internal-term-link\" data-slug=\"straightlinebasis\" href=\"#term/straightlinebasis\">straight-line basis</a> is the $32,000 cost basis minus the expected salvage value—in this case, $4,000—divided by eight years. The annual deprecation for the truck would be $3,500 per year, or ($32,000 - $4,000) ÷ 8.",
+          "On the other hand, assume that a corporation pays $300,000 for a patent that allows the firm exclusive rights over the intellectual property for 30 years. The firm’s accounting department posts a $10,000 amortization expense each year for 30 years.",
+          "Both the truck and the <a class=\"internal-term-link\" data-slug=\"patent\" href=\"#term/patent\">patent</a> are used to generate revenue and profit over a particular number of years. Since the truck is a physical asset, depreciation is used, and since the rights are intangible, amortization is used."
+        ],
+        "paragraphs_fa": [
+          "به عنوان مثال فرض کنید که یک شرکت ساختمانی یک کامیون 32000 دلاری برای کارهای پیمانکاری می خرد و عمر مفید کامیون 8 سال است. هزینه استهلاک سالانه بر اساس <a class=\"internal-term-link\" data-slug=\"straightlinebasis\" href=\"#term/straightlinebasis\">بر اساس خط مستقیم</a> بر مبنای هزینه 32000 دلار منهای ارزش نجات مورد انتظار - در این مورد، 4000 دلار - تقسیم بر هشت سال است. استهلاک سالانه کامیون 3500 دلار در سال یا (32000 - 4000 دلار) ÷ 8 خواهد بود.",
+          "از سوی دیگر، فرض کنید که یک شرکت 300000 دلار برای یک حق اختراع می پردازد که به شرکت حق انحصاری مالکیت معنوی را برای 30 سال می دهد. بخش حسابداری شرکت هر سال 10000 دلار هزینه استهلاک را به مدت 30 سال ثبت می کند.",
+          "هم کامیون و هم <a class=\"internal-term-link\" data-slug=\"patent\" href=\"#term/patent\">پتنت</a> برای ایجاد درآمد و سود در طول چند سال خاص استفاده می شود. از آنجایی که کامیون یک دارایی فیزیکی است، از استهلاک استفاده می شود و از آنجایی که حقوق نامشهود است، از استهلاک استفاده می شود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "How Do You Define Amortization of Intangibles?",
+        "title_fa": "استهلاک دارایی های نامشهود را چگونه تعریف می کنید؟",
+        "paragraphs_en": [
+          "The term “amortization of intangibles” describes the process of expensing costs associated with intangible assets, such as patents and trademarks, over the course of their life. This is done for tax or accounting purposes. Simply referred to as amortization, these assets are expensed into an amortization account."
+        ],
+        "paragraphs_fa": [
+          "اصطلاح «استهلاک دارایی‌های نامشهود» فرآیند هزینه‌کردن هزینه‌های مرتبط با دارایی‌های نامشهود، مانند اختراعات و علائم تجاری، را در طول عمرشان توصیف می‌کند. این برای اهداف مالیاتی یا حسابداری انجام می شود. این دارایی ها صرفاً به عنوان استهلاک نامیده می شوند، در حساب استهلاک هزینه می شوند."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "How Do You Compute Amortization of Intangibles?",
+        "title_fa": "چگونه استهلاک دارایی های نامشهود را محاسبه می کنید؟",
+        "paragraphs_en": [
+          "There are several ways to calculate the amortization of intangibles. The most common way to do so is by using the straight line method, which involves expensing the asset over a period of time. Amortization is calculated by taking the difference between the cost of the asset and its anticipated salvage or book value and dividing that figure by the total number of years that it will be used."
+        ],
+        "paragraphs_fa": [
+          "روش های مختلفی برای محاسبه استهلاک دارایی های نامشهود وجود دارد. رایج ترین روش برای انجام این کار استفاده از روش خط مستقیم است که شامل هزینه کردن دارایی در یک دوره زمانی مشخص است. استهلاک با در نظر گرفتن تفاوت بین بهای تمام شده دارایی و نجات یا ارزش دفتری پیش بینی شده آن و تقسیم آن رقم بر تعداد کل سالهایی که از آن استفاده می شود محاسبه می شود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "Where Do You Find Amortization of Intangibles on a Company’s Financial Statements?",
+        "title_fa": "استهلاک دارایی های نامشهود در صورت های مالی یک شرکت را از کجا پیدا می کنید؟",
+        "paragraphs_en": [
+          "Amortization of intangibles (or amortization for short) appears on a company’s <a class=\"internal-term-link\" data-slug=\"plstatement\" href=\"#term/plstatement\">profit and loss statement</a> under the expenses category. This figure is also recorded on corporate balance sheets under the non-current assets section."
+        ],
+        "paragraphs_fa": [
+          "استهلاک دارایی های نامشهود (یا به اختصار استهلاک) در <a class=\"internal-term-link\" data-slug=\"plstatement\" href=\"#term/plstatement\">صورت سود و زیان</a> شرکت در طبقه بندی هزینه ها ظاهر می شود. این رقم نیز در ترازنامه شرکت ها در قسمت دارایی های غیرجاری ثبت می شود."
+        ],
+        "items_en": [],
+        "items_fa": []
+      },
+      {
+        "title_en": "The Bottom Line",
+        "title_fa": "نتیجه‌گیری نهایی",
+        "paragraphs_en": [
+          "Amortization of intangibles, or simply amortization, is the process of expensing an intangible asset’s cost over that asset’s projected life for tax or accounting purposes. Intangible assets (which may include various types of intellectual property, such as goodwill, patents, and trademarks) are amortized into an expense account called amortization.<br/>"
+        ],
+        "paragraphs_fa": [
+          "استهلاک دارایی‌های نامشهود یا صرفاً استهلاک، فرآیند هزینه کردن بهای تمام شده دارایی نامشهود در طول عمر پیش‌بینی شده آن دارایی برای اهداف مالیاتی یا حسابداری است. دارایی های نامشهود (که ممکن است شامل انواع مختلفی از دارایی های معنوی مانند سرقفلی، حق ثبت اختراع و علائم تجاری باشد) در حساب هزینه ای به نام استهلاک مستهلک می شود.<br/>"
+        ],
+        "items_en": [],
+        "items_fa": []
+      }
+    ],
+    "deep_enriched": true
   },
   {
     "id": 810,

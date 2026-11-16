@@ -1370,15 +1370,15 @@
 
                     let contentHtml = '';
                     if (currentViewMode === 'fa') {
-                        contentHtml = `<span class="text-slate-800 dark:text-slate-100 font-medium text-xs sm:text-sm leading-relaxed">${faText || enText}</span>`;
+                        contentHtml = `<span class="text-slate-800 dark:text-slate-100 font-medium text-xs sm:text-sm leading-relaxed text-justify block">${faText || enText}</span>`;
                     } else if (currentViewMode === 'en') {
-                        contentHtml = `<span class="font-en text-slate-800 dark:text-slate-100 font-medium text-xs sm:text-sm leading-relaxed" dir="ltr">${enText || faText}</span>`;
+                        contentHtml = `<span class="font-en text-slate-800 dark:text-slate-100 font-medium text-xs sm:text-sm leading-relaxed text-justify block" dir="ltr">${enText || faText}</span>`;
                     } else {
                         // Both
                         contentHtml = `
-                            <div class="space-y-1">
-                                <span class="block text-slate-900 dark:text-white font-medium text-xs sm:text-sm">${faText}</span>
-                                <span class="block font-en text-slate-600 dark:text-slate-300 text-xs" dir="ltr">${enText}</span>
+                            <div class="space-y-1 w-full">
+                                <span class="block text-slate-900 dark:text-white font-medium text-xs sm:text-sm text-justify">${faText}</span>
+                                <span class="block font-en text-slate-600 dark:text-slate-300 text-xs text-justify" dir="ltr">${enText}</span>
                             </div>
                         `;
                     }
@@ -1477,14 +1477,14 @@
                             const itemEn = itEn[i] || '';
 
                             if (currentViewMode === 'fa') {
-                                listItems += `<li class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">${itemFa || itemEn}</li>`;
+                                listItems += `<li class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">${itemFa || itemEn}</li>`;
                             } else if (currentViewMode === 'en') {
-                                listItems += `<li class="font-en text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed" dir="ltr">${itemEn || itemFa}</li>`;
+                                listItems += `<li class="font-en text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify" dir="ltr">${itemEn || itemFa}</li>`;
                             } else {
                                 listItems += `
                                     <li class="space-y-0.5 py-1">
-                                        <span class="block text-xs sm:text-sm text-slate-800 dark:text-slate-200">${itemFa || itemEn}</span>
-                                        ${itemEn ? `<span class="block font-en text-xs text-slate-500 dark:text-slate-400" dir="ltr">${itemEn}</span>` : ''}
+                                        <span class="block text-xs sm:text-sm text-slate-800 dark:text-slate-200 text-justify">${itemFa || itemEn}</span>
+                                        ${itemEn ? `<span class="block font-en text-xs text-slate-500 dark:text-slate-400 text-justify" dir="ltr">${itemEn}</span>` : ''}
                                     </li>
                                 `;
                             }
@@ -1630,7 +1630,7 @@
                     } else if (part.trim()) {
                         const fontClass = lang === 'en' ? 'font-en' : '';
                         const dir = lang === 'en' ? 'dir="ltr"' : '';
-                        out += `<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed ${fontClass}" ${dir}>${part.trim()}</p>`;
+                        out += `<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed text-justify ${fontClass}" ${dir}>${part.trim()}</p>`;
                     }
                 }
                 return out;
@@ -1638,7 +1638,7 @@
 
             const fontClass = lang === 'en' ? 'font-en' : '';
             const dir = lang === 'en' ? 'dir="ltr"' : '';
-            return `<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed ${fontClass}" ${dir}>${text}</p>`;
+            return `<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed text-justify ${fontClass}" ${dir}>${text}</p>`;
         }
 
         function renderParagraphPair(pFa, pEn) {
