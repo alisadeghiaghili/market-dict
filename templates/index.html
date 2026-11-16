@@ -159,31 +159,21 @@
                     <span id="favoritesCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
                 </button>
 
-                <!-- Theme Selector (System Default, Light, Dark) -->
-                <div class="relative" id="themeDropdownContainer">
-                    <button id="themeMenuBtn" onclick="toggleThemeMenu(event)" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition" title="تنظیم تم نمایشی (سیستم / روشن / تاریک)">
-                        <span id="themeActiveIcon" class="text-sm">💻</span>
-                        <span id="themeActiveLabel" class="hidden md:inline text-xs font-semibold">سیستم</span>
-                        <svg class="w-3.5 h-3.5 text-slate-400 transition-transform" id="themeChevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <!-- Theme Dropdown Panel -->
-                    <div id="themeMenu" class="hidden absolute left-0 mt-2 w-48 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl py-1.5 z-50 text-xs font-medium space-y-0.5">
-                        <button onclick="setTheme('system')" id="themeOptSystem" class="w-full text-right px-3.5 py-2 flex items-center justify-between hover:bg-emerald-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 transition rounded-xl">
-                            <span class="flex items-center gap-2"><span>💻</span><span>سیستم (پیش‌فرض)</span></span>
-                            <span id="checkSystem" class="text-emerald-500 font-bold">✓</span>
-                        </button>
-                        <button onclick="setTheme('light')" id="themeOptLight" class="w-full text-right px-3.5 py-2 flex items-center justify-between hover:bg-emerald-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 transition rounded-xl">
-                            <span class="flex items-center gap-2"><span>☀️</span><span>حالت روشن</span></span>
-                            <span id="checkLight" class="text-emerald-500 font-bold hidden">✓</span>
-                        </button>
-                        <button onclick="setTheme('dark')" id="themeOptDark" class="w-full text-right px-3.5 py-2 flex items-center justify-between hover:bg-emerald-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 transition rounded-xl">
-                            <span class="flex items-center gap-2"><span>🌙</span><span>حالت تاریک</span></span>
-                            <span id="checkDark" class="text-emerald-500 font-bold hidden">✓</span>
-                        </button>
-                    </div>
-                </div>
+                <!-- Theme Cycle Button (System Default -> Light -> Dark) -->
+                <button id="themeCycleBtn" onclick="cycleTheme()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95" title="تغییر حالت نمایش (سیستم / روشن / تاریک)">
+                    <!-- System Icon (Monitor) -->
+                    <svg id="themeIconSystem" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <!-- Light Icon (Sun) -->
+                    <svg id="themeIconLight" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <!-- Dark Icon (Moon) -->
+                    <svg id="themeIconDark" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
@@ -534,32 +524,15 @@
                     }
                 }
             });
-
-            // Close theme menu dropdown on outside click
-            document.addEventListener('click', (e) => {
-                const container = document.getElementById('themeDropdownContainer');
-                const menu = document.getElementById('themeMenu');
-                if (container && !container.contains(e.target) && menu && !menu.classList.contains('hidden')) {
-                    menu.classList.add('hidden');
-                    const chevron = document.getElementById('themeChevron');
-                    if (chevron) chevron.classList.remove('rotate-180');
-                }
-            });
         }
 
-        function toggleThemeMenu(event) {
-            if (event) event.stopPropagation();
-            const menu = document.getElementById('themeMenu');
-            const chevron = document.getElementById('themeChevron');
-            if (menu) {
-                const isHidden = menu.classList.contains('hidden');
-                if (isHidden) {
-                    menu.classList.remove('hidden');
-                    if (chevron) chevron.classList.add('rotate-180');
-                } else {
-                    menu.classList.add('hidden');
-                    if (chevron) chevron.classList.remove('rotate-180');
-                }
+        function cycleTheme() {
+            if (currentThemeMode === 'system') {
+                setTheme('light');
+            } else if (currentThemeMode === 'light') {
+                setTheme('dark');
+            } else {
+                setTheme('system');
             }
         }
 
@@ -567,10 +540,6 @@
             currentThemeMode = mode;
             localStorage.setItem('theme_mode', mode);
             applyTheme(mode, true);
-            const menu = document.getElementById('themeMenu');
-            if (menu) menu.classList.add('hidden');
-            const chevron = document.getElementById('themeChevron');
-            if (chevron) chevron.classList.remove('rotate-180');
         }
 
         function applyTheme(mode, showFeedback = false) {
@@ -582,32 +551,28 @@
                 document.documentElement.classList.remove('dark');
             }
 
-            // Update UI Icons & Labels
-            const iconEl = document.getElementById('themeActiveIcon');
-            const labelEl = document.getElementById('themeActiveLabel');
-            const checkSystem = document.getElementById('checkSystem');
-            const checkLight = document.getElementById('checkLight');
-            const checkDark = document.getElementById('checkDark');
+            // Update UI Icons & Tooltip
+            const iconSystem = document.getElementById('themeIconSystem');
+            const iconLight = document.getElementById('themeIconLight');
+            const iconDark = document.getElementById('themeIconDark');
+            const cycleBtn = document.getElementById('themeCycleBtn');
 
-            if (checkSystem) checkSystem.classList.add('hidden');
-            if (checkLight) checkLight.classList.add('hidden');
-            if (checkDark) checkDark.classList.add('hidden');
+            if (iconSystem) iconSystem.classList.add('hidden');
+            if (iconLight) iconLight.classList.add('hidden');
+            if (iconDark) iconDark.classList.add('hidden');
 
             if (mode === 'system') {
-                if (iconEl) iconEl.innerText = '💻';
-                if (labelEl) labelEl.innerText = 'سیستم';
-                if (checkSystem) checkSystem.classList.remove('hidden');
-                if (showFeedback) showToast('تم هماهنگ با سیستم (پیش‌فرض) فعال شد.');
+                if (iconSystem) iconSystem.classList.remove('hidden');
+                if (cycleBtn) cycleBtn.title = 'پوسته: هماهنگ با سیستم (کلیک برای حالت روشن)';
+                if (showFeedback) showToast('تم: هماهنگ با سیستم (پیش‌فرض)');
             } else if (mode === 'light') {
-                if (iconEl) iconEl.innerText = '☀️';
-                if (labelEl) labelEl.innerText = 'روشن';
-                if (checkLight) checkLight.classList.remove('hidden');
-                if (showFeedback) showToast('حالت روشن فعال شد.');
+                if (iconLight) iconLight.classList.remove('hidden');
+                if (cycleBtn) cycleBtn.title = 'پوسته: روشن (کلیک برای حالت تاریک)';
+                if (showFeedback) showToast('تم: حالت روشن');
             } else if (mode === 'dark') {
-                if (iconEl) iconEl.innerText = '🌙';
-                if (labelEl) labelEl.innerText = 'تاریک';
-                if (checkDark) checkDark.classList.remove('hidden');
-                if (showFeedback) showToast('حالت تاریک فعال شد.');
+                if (iconDark) iconDark.classList.remove('hidden');
+                if (cycleBtn) cycleBtn.title = 'پوسته: تاریک (کلیک برای هماهنگ با سیستم)';
+                if (showFeedback) showToast('تم: حالت تاریک');
             }
         }
 

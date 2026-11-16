@@ -321,7 +321,7 @@ def parse_and_enrich_term(item: Dict, session=None) -> Optional[Dict]:
         sec["paragraphs_fa"] = tr_chunks(sec["paragraphs_en"])
         sec["items_fa"] = tr_chunks(sec["items_en"])
 
-    term_en = item["term"]
+    term_en = item.get("term_en") or item.get("term", "")
     slug = item.get("slug") or url.rstrip("/").split("/")[-1].replace(".asp", "").lower()
     term_fa_raw = tr(term_en)
     term_fa = f"{term_fa_raw} ({term_en})" if term_en not in term_fa_raw and len(term_en) <= 30 else term_fa_raw
@@ -347,49 +347,56 @@ def parse_and_enrich_term(item: Dict, session=None) -> Optional[Dict]:
 def run_pipeline(batch_limit=None, letters_filter=None):
     logger.info("Starting Full Alphabet Continuous Ingestion Engine...")
 
-    with open(CATALOG_FILE, "r", encoding="utf-8") as f:
-        catalog = json.load(f)
-
     with open(DICT_FILE, "r", encoding="utf-8") as f:
         dict_data = json.load(f)
 
-    existing_urls = set(t.get("url") for t in dict_data)
     logger.info(f"Existing terms in dictionary: {len(dict_data)}")
 
-    # Filter missing terms
-    missing_terms = [t for t in catalog if t["url"] not in existing_urls]
+    # Identify terms requiring deep TOC section enrichment
+    unenriched_terms = [t for t in dict_data if not t.get("deep_enriched") or not t.get("sections")]
+
     if letters_filter:
         letters_filter = [l.strip().upper() for l in letters_filter]
-        missing_terms = [t for t in missing_terms if t["letter"].upper() in letters_filter]
+        unenriched_terms = [t for t in unenriched_terms if t.get("letter", "").upper() in letters_filter]
 
     if batch_limit:
-        missing_terms = missing_terms[:batch_limit]
+        unenriched_terms = unenriched_terms[:batch_limit]
 
-    total_to_process = len(missing_terms)
-    logger.info(f"Total missing terms to process in this run: {total_to_process}")
+    total_to_process = len(unenriched_terms)
+    logger.info(f"Total terms queued for deep enrichment: {total_to_process}")
 
     if total_to_process == 0:
-        logger.info("No missing terms found! Dictionary is 100% complete!")
+        logger.info("All terms in the dictionary are 100% deep enriched with TOC sections!")
         return
 
-    added_count = 0
+    # Map by id / url for fast in-place update
+    dict_map = {t.get("url"): t for t in dict_data if t.get("url")}
+
+    enriched_count = 0
     t0 = time.time()
 
-    for idx, item in enumerate(missing_terms, 1):
+    for idx, item in enumerate(unenriched_terms, 1):
         try:
+            target_url = item.get("url")
             term_obj = parse_and_enrich_term(item)
-            if term_obj:
-                dict_data.append(term_obj)
-                added_count += 1
-                logger.info(f"[{idx}/{total_to_process}] Enriched: {term_obj['term_en']} -> {term_obj['term_fa']} ({len(term_obj['sections'])} secs, slug: {term_obj['slug']})")
+            if term_obj and target_url in dict_map:
+                target_entry = dict_map[target_url]
+                target_entry["definition_en"] = term_obj["definition_en"]
+                target_entry["definition_fa"] = term_obj["definition_fa"]
+                target_entry["takeaways_en"] = term_obj["takeaways_en"]
+                target_entry["takeaways_fa"] = term_obj["takeaways_fa"]
+                target_entry["bottom_line_en"] = term_obj.get("bottom_line_en", "")
+                target_entry["bottom_line_fa"] = term_obj.get("bottom_line_fa", "")
+                target_entry["sections"] = term_obj["sections"]
+                target_entry["deep_enriched"] = True
+                if term_obj.get("category"):
+                    target_entry["category"] = term_obj["category"]
+
+                enriched_count += 1
+                logger.info(f"[{idx}/{total_to_process}] Enriched: {term_obj['term_en']} -> {term_obj['term_fa']} ({len(term_obj['sections'])} sections, slug: {term_obj['slug']})")
 
             # Save incrementally every 5 terms
-            if added_count > 0 and (added_count % 5 == 0 or idx == total_to_process):
-                # Sort alphabetically
-                dict_data.sort(key=lambda x: x.get("term_en", "").lower())
-                for i, t in enumerate(dict_data, 1):
-                    t["id"] = i
-
+            if enriched_count > 0 and (enriched_count % 5 == 0 or idx == total_to_process):
                 with open(DICT_FILE, "w", encoding="utf-8") as f:
                     json.dump(dict_data, f, ensure_ascii=False, indent=2)
 
@@ -397,13 +404,13 @@ def run_pipeline(batch_limit=None, letters_filter=None):
                     json.dump(cache, f, ensure_ascii=False, indent=2)
 
                 elapsed = time.time() - t0
-                rate = added_count / max(elapsed, 0.1)
-                logger.info(f"--- Checkpoint saved: {len(dict_data)} total terms in dictionary ({rate:.2f} terms/sec) ---")
+                rate = enriched_count / max(elapsed, 0.1)
+                logger.info(f"--- Checkpoint saved: {enriched_count} terms enriched ({rate:.2f} terms/sec) ---")
 
         except Exception as e:
-            logger.error(f"Error processing {item['term']}: {e}")
+            logger.error(f"Error processing {item.get('term_en', item.get('term'))}: {e}")
 
-    logger.info(f"Pipeline finished! Successfully enriched and added {added_count} new terms. Total dictionary size: {len(dict_data)}")
+    logger.info(f"Pipeline run finished! Successfully enriched {enriched_count} terms.")
 
 if __name__ == "__main__":
     import argparse
