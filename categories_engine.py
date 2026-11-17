@@ -20,7 +20,8 @@ TAXONOMY = [
             "proof of work", "proof of stake", "halving", "satoshi", "gas fee", "dapp", "dao",
             "cold storage", "hard fork", "soft fork", "web3", "hashrate", "lightning network",
             "memecoin", "dex", "hodl", "cryptocurrency", "airdrop", "ledgerx", "cryptographic",
-            "erc-20", "tether", "stablecoin"
+            "erc", "tether", "stablecoin", "hyperledger", "digital money", "digital currency",
+            "byzantine", "solana", "binance", "cardano", "xrp", "ripple", "cbdc", "distributed ledger"
         ]
     },
     {
@@ -35,8 +36,10 @@ TAXONOMY = [
             "breakouts", "doji", "momentum", "relative strength", "vwap", "ichimoku", "cup and handle",
             "price action", "average true range", "atr", "overbought", "oversold", "divergence",
             "swing", "scalp", "scalping", "pattern", "patterns", "moving average", "pullback",
-            "pivot point", "channel", "flag pattern", "pennant", "trailing stop", "reversal",
-            "dead cat bounce", "golden cross", "death cross", "keltner", "parabolic"
+            "pivot point", "pivot", "channel", "flag pattern", "pennant", "trailing stop", "reversal",
+            "dead cat bounce", "golden cross", "death cross", "keltner", "parabolic", "fractal",
+            "elliott wave", "volume profile", "accumulation distribution", "chaikin", "heikin ashi",
+            "correction", "consolidation"
         ]
     },
     {
@@ -51,7 +54,8 @@ TAXONOMY = [
             "at-the-money", "straddle", "strangle", "spread", "collar", "iron condor", "forward contract",
             "forward contracts", "forwards", "hedging", "hedged", "hedge", "underlying asset",
             "warrant", "warrants", "implied volatility", "black-scholes", "expiration", "contango",
-            "backwardation", "naked option", "covered call", "synthetic"
+            "backwardation", "naked option", "covered call", "synthetic", "interest rate swap",
+            "basis risk", "contract for differences", "cfd", "contingent value right", "cvr"
         ]
     },
     {
@@ -69,7 +73,9 @@ TAXONOMY = [
             "secondary market", "otc", "order book", "listing", "delisting", "volume", "rally",
             "sell-off", "odd lot", "round lot", "blue chip", "penny stock", "market cap",
             "securities", "security", "exchange-traded", "floor trader", "quote", "clearinghouse",
-            "spread", "market-on-close", "overbought", "oversold", "fill"
+            "market-on-close", "direct market access", "dma", "high frequency trading", "hft",
+            "short interest", "squeeze", "bag holder", "wash trade", "pump and dump", "circuit breaker",
+            "order execution", "bid-ask", "market order", "over-the-counter"
         ]
     },
     {
@@ -86,7 +92,9 @@ TAXONOMY = [
             "statistical", "sampling", "sample", "samples", "z-score", "t-test", "p-value",
             "coefficient", "formula", "algorithm", "hypothesis testing", "hypothesis", "geometric mean",
             "null hypothesis", "standard error", "covariance", "econometrics", "logarithm",
-            "bell curve", "correlation coefficient", "stochastic"
+            "bell curve", "correlation coefficient", "stochastic", "lorenz curve", "gini coefficient",
+            "poisson", "binomial", "matrix", "optimization", "markov", "compounding", "continuous compounding",
+            "cost-benefit", "benefit-cost", "error term", "growth rates", "growth curve"
         ]
     },
     {
@@ -100,7 +108,9 @@ TAXONOMY = [
             "debentures", "municipal bond", "corporate bond", "junk bond", "sovereign debt",
             "t-bill", "t-note", "maturity", "par value", "duration", "convexity", "zero-coupon",
             "mortgage-backed", "mbs", "credit default swap", "cds", "accrued interest", "gilt",
-            "bund", "us treasury", "yield curve", "face value", "callable bond", "convertible bond"
+            "bund", "us treasury", "yield curve", "face value", "callable bond", "convertible bond",
+            "commercial paper", "certificate of deposit", "debt instrument", "contingent convertible",
+            "coco bond", "euro medium term notes", "emtn", "convertible"
         ]
     },
     {
@@ -114,7 +124,8 @@ TAXONOMY = [
             "fair market value", "fair value", "book value", "cost of capital", "wacc", "capm",
             "terminal value", "enterprise value", "free cash flow", "ddm", "dividend discount",
             "economic value added", "eva", "multiples", "net asset value", "graham", "buffett",
-            "price-to-sales", "financial ratio", "financial ratios", "residual income"
+            "price-to-sales", "financial ratio", "financial ratios", "residual income", "dupont",
+            "margin of safety", "ev/r", "enterprise-value-to-revenue"
         ]
     },
     {
@@ -130,7 +141,11 @@ TAXONOMY = [
             "fifo", "lifo", "journal entry", "journal", "bookkeeping", "cost of goods",
             "revenue recognition", "overhead", "operating expense", "operating expenses",
             "gross margin", "net income", "financial statement", "financial statements", "footnote",
-            "footnotes", "salvage value", "cost basis", "bad debt", "contra account", "deferred tax"
+            "footnotes", "salvage value", "cost basis", "bad debt", "contra account", "deferred tax",
+            "direct cost", "indirect cost", "cost accounting", "trial balance", "reconciliation",
+            "contingent asset", "contingent liability", "contributed capital", "controller",
+            "cook the books", "cost of revenue", "cost control", "operating cost", "fixed cost",
+            "variable cost", "engagement letter", "gross earnings", "gross receipts", "gross value added"
         ]
     },
     {
@@ -145,7 +160,9 @@ TAXONOMY = [
             "libor", "sofr", "usury", "commercial bank", "investment bank", "credit union",
             "fractional reserve", "fdic", "clearing", "syndicate", "promissory note",
             "letter of credit", "debt service", "creditworthiness", "default", "subprime",
-            "interbank", "central bank", "bank run", "liquidity ratio"
+            "interbank", "central bank", "bank run", "liquidity ratio", "repurchase agreement",
+            "reverse repurchase", "repo", "reverse repo", "payment interface", "origination fee",
+            "equated monthly installment", "emi"
         ]
     },
     {
@@ -158,7 +175,8 @@ TAXONOMY = [
             "landlord", "tenant", "foreclosure", "appraisal", "deed", "zoning", "home equity",
             "escrow", "title", "commercial real estate", "residential", "closing cost", "lease",
             "leasing", "sublease", "rent", "rental", "realtor", "homeowner", "housing",
-            "easement", "lien", "condominium", "subprime mortgage"
+            "easement", "lien", "condominium", "subprime mortgage", "property tax", "tenancy",
+            "encroachment", "encumbrance", "gross income multiplier"
         ]
     },
     {
@@ -172,7 +190,10 @@ TAXONOMY = [
             "deductions", "tax credit", "capital gain", "estate tax", "finra", "insider",
             "sarbanes", "dodd-frank", "antitrust", "lawsuit", "tax bracket", "withholding",
             "audit", "statute of limitations", "fiduciary", "securities law", "litigation",
-            "subpoena", "tax shelter", "tariff", "tax avoidance", "tax evasion", "jurisdiction"
+            "subpoena", "tax shelter", "tariff", "tax avoidance", "tax evasion", "jurisdiction",
+            "loss carryforward", "carryback", "uniform commercial code", "ucc", "partnership act",
+            "simultaneous death act", "court", "attorney", "contract law", "form 10-k", "form 8-k",
+            "employer identification number", "ein", "enrolled agent", "equitable relief", "escheat"
         ]
     },
     {
@@ -184,7 +205,8 @@ TAXONOMY = [
             "401k", "401(k)", "401a", "403b", "403(b)", "roth", "ira", "pension", "pensions",
             "retirement", "social security", "annuity", "annuities", "defined benefit",
             "defined contribution", "vesting", "vested", "medicare", "457 plan", "keogh",
-            "retiree", "pensioner", "post-retirement", "annuitant", "required minimum distribution", "rmd"
+            "retiree", "pensioner", "post-retirement", "annuitant", "required minimum distribution",
+            "rmd", "four percent rule", "4 percent rule", "nest egg", "pension fund", "beneficiary"
         ]
     },
     {
@@ -197,7 +219,8 @@ TAXONOMY = [
             "budget", "budgeting", "student loan", "student loans", "emergency fund", "debt",
             "wealth", "estate plan", "trust fund", "inheritance", "inherit", "living will",
             "net worth", "fico", "spending", "savings", "consumer debt", "paycheck",
-            "identity theft", "personal loan", "household", "living expense", "frugal", "allowance"
+            "identity theft", "personal loan", "household", "living expense", "frugal", "allowance",
+            "debt consolidation", "payday loan", "family trust", "probate", "estate", "gross estate"
         ]
     },
     {
@@ -211,7 +234,8 @@ TAXONOMY = [
             "divestiture", "spinoff", "poison pill", "corporate finance", "capital budget",
             "joint venture", "bankruptcy", "chapter 11", "liquidation", "buyback", "synergy",
             "conglomerate", "hostile", "tender offer", "recapitalization", "flotation",
-            "follow-on offering", "fpo", "carve-out", "reverse merger", "spin-off"
+            "follow-on offering", "fpo", "carve-out", "reverse merger", "spin-off", "golden parachute",
+            "white knight", "crown jewels"
         ]
     },
     {
@@ -225,7 +249,9 @@ TAXONOMY = [
             "asset allocation", "diversification", "endowment", "nav", "net asset value",
             "expense ratio", "sharpe", "sortino", "treynor", "active management", "passive investing",
             "benchmark", "alpha", "beta", "assets under management", "aum", "fund manager",
-            "closed-end fund", "open-end fund"
+            "closed-end fund", "open-end fund", "management company", "tracking error",
+            "growth fund", "income fund", "growth investing", "value investing", "equal weight",
+            "funds", "growth and income fund"
         ]
     },
     {
@@ -239,7 +265,7 @@ TAXONOMY = [
             "startup", "startups", "incubator", "accelerator", "unicorn", "term sheet",
             "pre-money", "post-money", "bootstrapping", "pitch deck", "founder", "founders",
             "venture debt", "cap table", "burn rate", "runway", "exit strategy", "crowdfunding",
-            "sweat equity", "accredited investor"
+            "sweat equity", "accredited investor", "convertible note", "safe agreement"
         ]
     },
     {
@@ -253,7 +279,9 @@ TAXONOMY = [
             "casualty", "indemnity", "moral hazard", "reinsurance", "value at risk", "var",
             "copay", "liability insurance", "life insurance", "health insurance", "premium",
             "claim", "claims", "idiosyncratic risk", "systemic risk", "adverse selection",
-            "risk tolerance", "underinsured"
+            "risk tolerance", "underinsured", "loss adjustment", "open cover", "loss development",
+            "umbrella policy", "contingency", "counterparty", "universal life", "group universal life",
+            "gulp", "gross exposure"
         ]
     },
     {
@@ -267,7 +295,11 @@ TAXONOMY = [
             "stagflation", "cpi", "deflation", "money supply", "recession", "recessionary",
             "depression", "quantitative easing", "hyperinflation", "central bank", "central banks",
             "federal reserve", "keynesian", "monetarism", "economic growth", "phillips curve",
-            "aggregate demand", "aggregate supply", "sovereign debt"
+            "aggregate demand", "aggregate supply", "sovereign debt", "hyperdeflation", "development economics",
+            "fourth world", "third world", "national income", "contractionary", "expansionary",
+            "cost-push", "demand-pull", "cost-of-living", "cola", "living adjustment", "gross domestic",
+            "gdi", "gross national", "group of 20", "g-20", "group of 8", "g-8", "group of 7", "g-7",
+            "equation of exchange", "endogenous growth", "environmental economics"
         ]
     },
     {
@@ -282,7 +314,8 @@ TAXONOMY = [
             "marginal utility", "marginal cost", "marginal revenue", "economies of scale",
             "scarcity", "externality", "externalities", "market failure", "say's law",
             "price ceiling", "price floor", "indifference curve", "pareto", "coase theorem",
-            "diminishing returns", "price elasticity"
+            "diminishing returns", "price elasticity", "monopolistic competition", "engel's law",
+            "equilibrium quantity", "market equilibrium"
         ]
     },
     {
@@ -296,7 +329,8 @@ TAXONOMY = [
             "overconfidence", "fomo", "confirmation bias", "sentiment", "heuristics",
             "heuristic", "framing", "panic selling", "euphoria", "market sentiment",
             "sunk cost", "endowment effect", "status quo bias", "hyperbolic discounting",
-            "irrational exuberance", "investor psychology", "gambler's fallacy"
+            "irrational exuberance", "investor psychology", "gambler's fallacy", "hindsight bias",
+            "contrarian", "fear and greed", "groupthink"
         ]
     },
     {
@@ -308,7 +342,8 @@ TAXONOMY = [
             "commodity", "commodities", "crude oil", "oil", "petroleum", "brent", "wti",
             "gold", "silver", "natural gas", "agriculture", "precious metal", "precious metals",
             "spot price", "energy market", "opec", "wheat", "corn", "copper", "raw material",
-            "raw materials", "barrel", "grain", "livestock", "soft commodity"
+            "raw materials", "barrel", "grain", "livestock", "soft commodity", "diamonds",
+            "gsci", "energy return", "eroi"
         ]
     },
     {
@@ -322,7 +357,8 @@ TAXONOMY = [
             "wto", "balance of payment", "balance of payments", "current account", "trade deficit",
             "trade surplus", "customs", "devaluation", "purchasing power parity", "ppp",
             "protectionism", "cross rate", "peg", "international trade", "brexit", "currency war",
-            "imf", "world bank"
+            "imf", "world bank", "free trade", "comparative advantage", "dumping", "euro", "emtn",
+            "euro medium term notes"
         ]
     },
     {
@@ -336,7 +372,8 @@ TAXONOMY = [
             "code of ethics", "business ethic", "business ethics", "executive compensation",
             "whistleblower", "csr", "esg", "stakeholder", "stakeholders", "chief executive",
             "corporate culture", "conflict of interest", "corporate charter", "corporate citizenship",
-            "corporate governance", "golden parachute", "staggered board", "annual meeting", "bylaws"
+            "corporate governance", "staggered board", "annual meeting", "bylaws", "clawback",
+            "enron", "ethical investing"
         ]
     },
     {
@@ -348,7 +385,8 @@ TAXONOMY = [
             "supply chain", "logistic", "logistics", "lean", "six sigma", "procurement",
             "vendor", "warehouse", "manufacturing", "production", "capacity", "lead time",
             "bottleneck", "quality control", "distribution center", "freight", "cfr", "cif",
-            "just in time", "jit", "scalability", "idle time", "bill of lading", "incoterms"
+            "just in time", "jit", "scalability", "idle time", "bill of lading", "incoterms",
+            "total quality management", "tqm", "inventory management", "eoq", "kanban"
         ]
     },
     {
@@ -361,7 +399,9 @@ TAXONOMY = [
             "customer", "consumer", "pricing", "market penetration", "market orientation",
             "market share", "promotion", "crm", "distribution channel", "telemarketing",
             "direct marketing", "public relations", "pr", "b2b", "b2c", "target market",
-            "value proposition", "conversion rate", "churn"
+            "value proposition", "conversion rate", "churn", "loss leader", "online shoplifting",
+            "ecommerce", "brand equity", "cost per click", "cpc", "cost per thousand", "cpm",
+            "click-through", "ctr", "gross merchandise value", "gmv"
         ]
     },
     {
@@ -373,7 +413,8 @@ TAXONOMY = [
             "human resources", "hr", "labor", "employee", "employees", "employment",
             "wage", "wages", "salary", "salaries", "bonus", "hiring", "workforce",
             "labor union", "union", "severance", "onboarding", "collective bargaining",
-            "minimum wage", "worker", "workers", "job", "payroll", "headcount", "turnover rate"
+            "minimum wage", "worker", "workers", "job", "payroll", "headcount", "turnover rate",
+            "workplace safety"
         ]
     },
     {
@@ -381,7 +422,7 @@ TAXONOMY = [
         "fa": "مدیریت کسب‌وکار و استراتژی",
         "en": "Business Strategy & Management",
         "icon": "💡",
-        "roots": [] # Fallback for strategic management, business models, etc.
+        "roots": [] # Fallback for strategic frameworks, business models, etc.
     }
 ]
 
@@ -413,10 +454,11 @@ def classify_term(term: Dict[str, Any]) -> Dict[str, Any]:
         if pattern and pattern.search(title_slug):
             return cat
             
-    # Priority 2: Match Definition & Takeaways if available and not placeholder
+    # Priority 2: Match Definition & Takeaways
     defn = (term.get("definition_en") or "")
-    if "fundamental concept in finance and investing" not in defn:
-        defn_text = f"{defn[:350]} {' '.join(term.get('takeaways_en') or [])[:200]}".lower()
+    if "fundamental concept in finance and investing" not in defn and len(defn) > 15:
+        takeaways = " ".join(term.get("takeaways_en") or [])[:200]
+        defn_text = f"{defn[:350]} {takeaways}".lower()
         for cat, pattern in COMPILED_RULES:
             if pattern and pattern.search(defn_text):
                 return cat
