@@ -336,6 +336,34 @@ def get_dictionary() -> List[Dict[str, Any]]:
 # Preload cache immediately at module load
 ensure_cache()
 
+from api_v1 import init_api_v1
+init_api_v1(
+    app=app,
+    cache_dict=_CACHE,
+    detail_cache_dict=_DETAIL_CACHE,
+    get_db_func=get_db_connection,
+    ensure_cache_func=ensure_cache,
+    norm_func=normalize_text,
+    clean_func=clean_key
+)
+
+@app.after_request
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS, HEAD"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization, X-Requested-With, Accept"
+    return response
+
+@app.route("/docs")
+def docs_redirect():
+    from flask import redirect
+    return redirect("/api/v1/docs")
+
+@app.route("/docs/guide")
+@app.route("/api/v1/guide")
+def api_guide():
+    return render_template("api_guide.html")
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -466,7 +494,9 @@ def get_random_term():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     print(f"\n=======================================================")
-    print(f"🚀 MarketDict Web App is running!")
-    print(f"👉 Local URL: http://localhost:{port}")
+    print(f"🚀 MarketDict Web App & API are running!")
+    print(f"👉 Web App:  http://localhost:{port}")
+    print(f"👉 REST API: http://localhost:{port}/api/v1")
+    print(f"👉 API Docs: http://localhost:{port}/docs")
     print(f"=======================================================\n")
     app.run(host="0.0.0.0", port=port, debug=False, threaded=True)

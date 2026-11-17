@@ -198,6 +198,69 @@ def build():
     with open(dist_404, "w", encoding="utf-8") as f:
         f.write(html_content)
 
+    # 7. Generate static API v1 endpoints for serverless environments (GitHub Pages)
+    dist_api_v1 = os.path.join(dist_dir, "api", "v1")
+    os.makedirs(dist_api_v1, exist_ok=True)
+    try:
+        from openapi_spec import get_openapi_spec
+        from formula_registry import FORMULA_DB
+
+        with open(os.path.join(dist_api_v1, "openapi.json"), "w", encoding="utf-8") as f:
+            json.dump(get_openapi_spec(), f, ensure_ascii=False, indent=2)
+
+        stats_data = {
+            "status": "success",
+            "data": {
+                "total_terms": total_terms,
+                "total_categories": len(category_counts),
+                "total_letters": len(letter_counts),
+                "deep_enriched_count": deep_count,
+                "formulas_count": len(FORMULA_DB),
+                "languages": ["fa", "en"]
+            }
+        }
+        with open(os.path.join(dist_api_v1, "stats.json"), "w", encoding="utf-8") as f:
+            json.dump(stats_data, f, ensure_ascii=False, indent=2)
+
+        categories_data = {
+            "status": "success",
+            "data": [
+                {
+                    "id": TAXONOMY_BY_FA.get(cat_fa, {}).get("id", "other"),
+                    "name_fa": cat_fa,
+                    "name_en": TAXONOMY_BY_FA.get(cat_fa, {}).get("en", ""),
+                    "icon": TAXONOMY_BY_FA.get(cat_fa, {}).get("icon", CATEGORY_ICONS.get(cat_fa, "🏷️")),
+                    "count": cnt,
+                    "terms_url": f"api/v1/categories/{TAXONOMY_BY_FA.get(cat_fa, {}).get('id', 'other')}/terms"
+                }
+                for cat_fa, cnt in sorted(category_counts.items(), key=lambda x: -x[1])
+            ]
+        }
+        with open(os.path.join(dist_api_v1, "categories.json"), "w", encoding="utf-8") as f:
+            json.dump(categories_data, f, ensure_ascii=False, indent=2)
+
+        letters_data = {
+            "status": "success",
+            "data": [
+                {"letter": l, "count": c, "terms_url": f"api/v1/letters/{l}/terms"}
+                for l, c in sorted(letter_counts.items(), key=lambda x: (x[0] != "#", x[0]))
+            ]
+        }
+        with open(os.path.join(dist_api_v1, "letters.json"), "w", encoding="utf-8") as f:
+            json.dump(letters_data, f, ensure_ascii=False, indent=2)
+
+        # Copy interactive guide HTML
+        guide_src = os.path.join(base_dir, "templates", "api_guide.html")
+        if os.path.exists(guide_src):
+            dist_docs_dir = os.path.join(dist_dir, "docs")
+            os.makedirs(dist_docs_dir, exist_ok=True)
+            shutil.copy2(guide_src, os.path.join(dist_docs_dir, "guide.html"))
+            shutil.copy2(guide_src, os.path.join(dist_api_v1, "guide.html"))
+
+        print(f"✅ Generated static API v1 files -> {dist_api_v1}")
+    except Exception as e:
+        print(f"⚠️ Warning: could not generate all static API files: {e}")
+
     elapsed = time.time() - start_time
     print(f"🎉 Build completed successfully in {elapsed:.2f} seconds!")
     print(f"🌟 Output ready in: {dist_dir}")

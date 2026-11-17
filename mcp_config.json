@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "marketdict": {
+      "command": "python",
+      "args": [
+        "c:/Users/IME/Desktop/Projects/Market-Dict/mcp_server.py"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

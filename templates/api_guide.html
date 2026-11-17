@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarketDict REST API - Interactive Developer Guide & Docs</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="/static/tailwind.min.js"></script>
+  <script>
+    if (!window.tailwind) {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              900: '#064e3b',
+            },
+            slate: {
+              750: '#243044',
+              850: '#151f32',
+              950: '#0b1120',
+            }
+          },
+          fontFamily: {
+            fa: ['Vazirmatn', 'system-ui', 'sans-serif'],
+            en: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0b1120;
+      color: #e2e8f0;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+    html[dir="ltr"] {
+      font-family: 'Inter', sans-serif;
+    }
+    pre, code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .endpoint-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.375rem;
+    }
+    .badge-get { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-post { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-slate-950 text-slate-200">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur border-b border-slate-800 px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <a href="/" class="flex items-center gap-2 text-brand-400 font-bold text-xl hover:opacity-80 transition">
+        <span>📈 MarketDict</span>
+        <span class="text-xs bg-brand-500/20 text-brand-400 border border-brand-500/30 px-2 py-0.5 rounded-full font-mono">API v1</span>
+      </a>
+      <span class="text-slate-600">|</span>
+      <span id="header-title" class="text-sm text-slate-400 font-medium">مستندات و راهنمای جامع توسعه‌دهندگان</span>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <!-- Language Switcher -->
+      <div class="bg-slate-800 border border-slate-700 p-0.5 rounded-lg flex items-center text-xs font-semibold">
+        <button id="lang-fa" onclick="setLang('fa')" class="px-3 py-1.5 rounded-md bg-brand-500 text-slate-950 font-bold transition">فارسی</button>
+        <button id="lang-en" onclick="setLang('en')" class="px-3 py-1.5 rounded-md text-slate-400 hover:text-white transition">English</button>
+      </div>
+
+      <a href="/docs" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md transition font-medium flex items-center gap-1">
+        <span>Swagger UI</span>
+      </a>
+      <a href="/api/v1/openapi.json" target="_blank" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md transition font-medium">
+        <span>OpenAPI JSON</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="flex-1 max-w-7xl w-full mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="lg:col-span-1 hidden lg:block sticky top-24 self-start space-y-6 text-sm">
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4">
+        <div id="nav-header" class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">فهرست موضوعات</div>
+        <nav class="space-y-1 text-slate-400" id="sidebar-nav">
+          <a href="#overview" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">۱. معرفی و آدرس‌ها</a>
+          <a href="#system" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">۲. سلامت سیستم و آمار</a>
+          <a href="#terms" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">۳. جستجو و اصطلاحات</a>
+          <a href="#suggest" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">۴. تکمیل خودکار (Suggest)</a>
+          <a href="#categories" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">۵. دسته‌بندی‌های مالی</a>
+          <a href="#formulas" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">۶. فرمول‌های ریاضیاتی (LaTeX)</a>
+          <a href="#batch" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">۷. دریافت دسته‌ای اصطلاحات</a>
+          <a href="#sdks" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">۸. کتابخانه‌ها و نمونه کدها</a>
+        </nav>
+      </div>
+
+      <div class="bg-brand-950/40 border border-brand-500/20 rounded-xl p-4 text-xs text-brand-300 space-y-2">
+        <div class="font-bold flex items-center gap-1.5 text-brand-400">
+          <span>⚡ دسترسی آزاد و بدون کلید</span>
+        </div>
+        <p id="auth-note">این API کاملاً Open Access بوده و بدون نیاز به کلید یا لاگین برای همه در دسترس است.</p>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="lg:col-span-3 space-y-12">
+      
+      <!-- Section 1: Overview -->
+      <section id="overview" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4">
+        <h1 id="sec-overview-title" class="text-2xl sm:text-3xl font-extrabold text-white flex items-center gap-3">
+          <span>📈 مستندات REST API دیکشنری مالی MarketDict</span>
+        </h1>
+        <p id="sec-overview-desc" class="text-slate-400 leading-relaxed">
+          دیکشنری مالی MarketDict دارای بیش از ۶,۱۰۸ اصطلاح مالی غنی‌شده، ۳۲ دسته‌بندی تخصصی، ۴۴ فرمول محاسباتی ریاضی و موتور جستجوی هوشمند فازی به دو زبان انگلیسی و فارسی است. این API برای ادغام آسان با اپلیکیشن‌های وب، موبایل، بات‌های معاملاتی و هوش مصنوعی طراحی شده است.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 text-xs font-mono">
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="text-slate-500 block">BASE URL</span>
+            <span class="text-emerald-400 font-bold">http://localhost:5000/api/v1</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="text-slate-500 block">AUTH</span>
+            <span class="text-cyan-400 font-bold">Open Access (None)</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="text-slate-500 block">CORS</span>
+            <span class="text-amber-400 font-bold">Access-Control: *</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: System & Health -->
+      <section id="system" class="space-y-6">
+        <div class="border-b border-slate-800 pb-2">
+          <h2 id="sec-system-title" class="text-xl font-bold text-white">۱. وضعیت سیستم و آمار (System Status)</h2>
+        </div>
+
+        <!-- Health endpoint -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3 font-mono">
+              <span class="endpoint-badge badge-get">GET</span>
+              <span class="text-brand-400 font-bold">/api/v1/health</span>
+            </div>
+            <span id="badge-health" class="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">وضعیت سلامت و پایداری سرور</span>
+          </div>
+          <p id="desc-health" class="text-sm text-slate-400">اطلاعات سلامت سرویس، مدت زمان آپ‌تایم، وضعیت دیتابیس SQLite و تعداد کل اصطلاحات را برمی‌گرداند.</p>
+          <div class="bg-slate-950 rounded-lg p-3 text-xs font-mono text-slate-300 overflow-x-auto border border-slate-800">
+            <pre>{"status": "success", "data": {"service": "MarketDict API", "status": "healthy", "uptime_seconds": 182.4, "total_terms": 6108, "database": "sqlite_wal_active"}}</pre>
+          </div>
+        </div>
+
+        <!-- Stats endpoint -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3 font-mono">
+              <span class="endpoint-badge badge-get">GET</span>
+              <span class="text-brand-400 font-bold">/api/v1/stats</span>
+            </div>
+            <span id="badge-stats" class="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">آمار محتوایی</span>
+          </div>
+          <p id="desc-stats" class="text-sm text-slate-400">آمار کل اصطلاحات، تعداد دسته‌بندی‌ها، تعداد حروف الفبا و تعداد اصطلاحات دارای فرمول محاسباتی.</p>
+        </div>
+      </section>
+
+      <!-- Section 3: Terms -->
+      <section id="terms" class="space-y-6">
+        <div class="border-b border-slate-800 pb-2">
+          <h2 id="sec-terms-title" class="text-xl font-bold text-white">۲. جستجو و اصطلاحات (Terms Search & Lookup)</h2>
+        </div>
+
+        <!-- GET /terms -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3 font-mono">
+              <span class="endpoint-badge badge-get">GET</span>
+              <span class="text-brand-400 font-bold">/api/v1/terms</span>
+            </div>
+            <span id="badge-search" class="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">جستجو و فیلتر با صفحه‌بندی</span>
+          </div>
+          <p id="desc-search" class="text-sm text-slate-400">جستجوی فازی هوشمند به دو زبان فارسی و انگلیسی همراه با فیلتر دسته‌بندی، حرف الفبا، اصطلاحات غنی‌شده و صفحه‌بندی.</p>
+          
+          <!-- Parameters Table -->
+          <div class="overflow-x-auto text-xs">
+            <table class="w-full text-right border-collapse border border-slate-800">
+              <thead class="bg-slate-800/60 text-slate-300">
+                <tr>
+                  <th class="p-2 border border-slate-800">پارامتر</th>
+                  <th class="p-2 border border-slate-800">نوع</th>
+                  <th class="p-2 border border-slate-800">پیش‌فرض</th>
+                  <th class="p-2 border border-slate-800">توضیحات</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800 text-slate-400 font-mono">
+                <tr>
+                  <td class="p-2 font-bold text-brand-400">q</td>
+                  <td class="p-2 text-sky-400">string</td>
+                  <td class="p-2">""</td>
+                  <td class="p-2 font-sans">عبارت جستجو به فارسی یا انگلیسی (دارای نرمال‌سازی خودکار حروف فارسی)</td>
+                </tr>
+                <tr>
+                  <td class="p-2 font-bold text-brand-400">category</td>
+                  <td class="p-2 text-sky-400">string</td>
+                  <td class="p-2">-</td>
+                  <td class="p-2 font-sans">اسلاگ دسته‌بندی (مانند crypto) یا نام فارسی آن</td>
+                </tr>
+                <tr>
+                  <td class="p-2 font-bold text-brand-400">letter</td>
+                  <td class="p-2 text-sky-400">string</td>
+                  <td class="p-2">-</td>
+                  <td class="p-2 font-sans">حرف ابتدایی انگلیسی ('A'-'Z' یا '#')</td>
+                </tr>
+                <tr>
+                  <td class="p-2 font-bold text-brand-400">has_deep</td>
+                  <td class="p-2 text-sky-400">bool</td>
+                  <td class="p-2">-</td>
+                  <td class="p-2 font-sans">فیلتر اصطلاحات دارای مقاله کامل و چندبخشی (true/false)</td>
+                </tr>
+                <tr>
+                  <td class="p-2 font-bold text-brand-400">has_formula</td>
+                  <td class="p-2 text-sky-400">bool</td>
+                  <td class="p-2">-</td>
+                  <td class="p-2 font-sans">فیلتر اصطلاحات دارای فرمول ریاضیاتی لاتک (true/false)</td>
+                </tr>
+                <tr>
+                  <td class="p-2 font-bold text-brand-400">page</td>
+                  <td class="p-2 text-sky-400">int</td>
+                  <td class="p-2">1</td>
+                  <td class="p-2 font-sans">شماره صفحه (شروع از ۱)</td>
+                </tr>
+                <tr>
+                  <td class="p-2 font-bold text-brand-400">limit</td>
+                  <td class="p-2 text-sky-400">int</td>
+                  <td class="p-2">20</td>
+                  <td class="p-2 font-sans">تعداد آیتم در هر صفحه (حداکثر ۱۰۰)</td>
+                </tr>
+                <tr>
+                  <td class="p-2 font-bold text-brand-400">fields</td>
+                  <td class="p-2 text-sky-400">string</td>
+                  <td class="p-2">-</td>
+                  <td class="p-2 font-sans">انتخاب فیلدهای دلخواه با کاما (مانند id,slug,term_en,term_fa)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- GET /terms/{identifier} -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3 font-mono">
+              <span class="endpoint-badge badge-get">GET</span>
+              <span class="text-brand-400 font-bold">/api/v1/terms/{identifier}</span>
+            </div>
+            <span id="badge-detail" class="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">جزئیات کامل اصطلاح</span>
+          </div>
+          <p id="desc-detail" class="text-sm text-slate-400">دریافت اطلاعات غنی اصطلاح بر اساس شناسه عددی (مانند 461)، اسلاگ (مانند sharperatio) یا عنوان انگلیسی همراه با فرمول لاتک، نکات کلیدی و بخش‌های تفصیلی.</p>
+        </div>
+
+        <!-- GET /terms/random -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3 font-mono">
+              <span class="endpoint-badge badge-get">GET</span>
+              <span class="text-brand-400 font-bold">/api/v1/terms/random</span>
+            </div>
+            <span id="badge-random" class="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">اصطلاح تصادفی</span>
+          </div>
+          <p id="desc-random" class="text-sm text-slate-400">دریافت یک یا چند اصطلاح به صورت رندوم با پارامترهای اختیاری `count` (۱ تا ۱۰) و `category` (بسیار کاربردی برای ویجت اصطلاح روز و بات‌های آموزشی).</p>
+        </div>
+      </section>
+
+      <!-- Section 4: Autocomplete -->
+      <section id="suggest" class="space-y-6">
+        <div class="border-b border-slate-800 pb-2">
+          <h2 id="sec-suggest-title" class="text-xl font-bold text-white">۳. تکمیل خودکار جستجو (Suggest / Autocomplete)</h2>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3 font-mono">
+              <span class="endpoint-badge badge-get">GET</span>
+              <span class="text-brand-400 font-bold">/api/v1/suggest?q={prefix}&limit=10</span>
+            </div>
+            <span id="badge-suggest" class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-1 rounded font-mono">&lt;5ms Latency</span>
+          </div>
+          <p id="desc-suggest" class="text-sm text-slate-400">سرویس فوق‌سریع سبک برای جعبه‌های جستجو، Typeahead و پیشنهاد لحظه‌ای به محض تایپ کاربر.</p>
+        </div>
+      </section>
+
+      <!-- Section 5: Formulas -->
+      <section id="formulas" class="space-y-6">
+        <div class="border-b border-slate-800 pb-2">
+          <h2 id="sec-formulas-title" class="text-xl font-bold text-white">۴. فرمول‌های محاسباتی مالی (LaTeX Formulas)</h2>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3 font-mono">
+              <span class="endpoint-badge badge-get">GET</span>
+              <span class="text-brand-400 font-bold">/api/v1/formulas</span>
+            </div>
+            <span class="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">۴۴ فرمول مالی با لاتک</span>
+          </div>
+          <p id="desc-formulas" class="text-sm text-slate-400">فهرست کامل فرمول‌های کمی مالی (شامل نسبت شارپ، سورتینو، ترینور، CAPM، بلک-شولز، نقطه سربه‌سر، CAGR و غیره) به همراه معادلات استاندارد لاتک و ترجمه فارسی متغیرها.</p>
+        </div>
+      </section>
+
+      <!-- Section 6: Code Examples & SDKs -->
+      <section id="sdks" class="space-y-6">
+        <div class="border-b border-slate-800 pb-2">
+          <h2 id="sec-sdks-title" class="text-xl font-bold text-white">۵. کتابخانه‌های اختصاصی و نمونه کدها (SDKs & Examples)</h2>
+        </div>
+
+        <!-- Code Tabs -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
+          <div class="bg-slate-800/80 px-4 py-2.5 flex items-center justify-between border-b border-slate-700">
+            <div class="flex items-center gap-2" id="code-tabs">
+              <button onclick="switchTab('py')" id="tab-py" class="px-3 py-1 text-xs font-semibold rounded bg-brand-500 text-slate-950">Python</button>
+              <button onclick="switchTab('cs')" id="tab-cs" class="px-3 py-1 text-xs font-semibold rounded text-slate-300 hover:bg-slate-700">C# (.NET)</button>
+              <button onclick="switchTab('js')" id="tab-js" class="px-3 py-1 text-xs font-semibold rounded text-slate-300 hover:bg-slate-700">JavaScript</button>
+              <button onclick="switchTab('curl')" id="tab-curl" class="px-3 py-1 text-xs font-semibold rounded text-slate-300 hover:bg-slate-700">cURL</button>
+            </div>
+            <button onclick="copyCode()" class="text-xs text-slate-400 hover:text-white flex items-center gap-1 font-mono">
+              <span id="copy-text">کپی کد</span>
+            </button>
+          </div>
+
+          <div class="p-4 bg-slate-950 overflow-x-auto text-xs font-mono text-slate-300">
+            <!-- Python Block -->
+            <pre id="code-py"><code>from marketdict_client import MarketDict
+
+client = MarketDict("http://localhost:5000/api/v1")
+
+# 1. جستجوی اصطلاحات مالی
+results = client.search(query="نسبت شارپ", limit=3)
+for term in results["data"]:
+    print(f"{term['term_en']} ({term['term_fa']}) - {term['category_icon']}")
+
+# 2. دریافت جزئیات اصطلاح با فرمول لاتک
+sharpe = client.get_term("sharperatio")
+print(sharpe["formula"]["formula_en"])
+
+# 3. پیشنهاد لحظه‌ای جستجو
+suggestions = client.suggest("bit", limit=5)
+
+# 4. اصطلاح تصادفی روز
+daily = client.get_random(has_deep=True)
+print("اصطلاح روز:", daily["term_en"])</code></pre>
+
+            <!-- C# Block -->
+            <pre id="code-cs" class="hidden"><code>using MarketDict;
+
+using var client = new MarketDictClient("http://localhost:5000/api/v1");
+
+// ۱. جستجوی اصطلاحات مالی
+var search = await client.SearchTermsAsync(query: "نسبت شارپ", limit: 3);
+foreach (var term in search.Data)
+{
+    Console.WriteLine($"{term.TermEn} ({term.TermFa}) - {term.CategoryIcon}");
+}
+
+// ۲. دریافت جزئیات و فرمول لاتک
+var sharpe = await client.GetTermAsync("sharperatio");
+Console.WriteLine(sharpe.Formula?.FormulaEn);
+
+// ۳. تکمیل خودکار جستجو
+var suggestions = await client.SuggestAsync("bit", limit: 5);
+
+// ۴. دریافت اصطلاح روز
+var daily = await client.GetRandomTermAsync(hasDeep: true);
+Console.WriteLine($"اصطلاح روز: {daily.TermEn}");</code></pre>
+
+            <!-- JS Block -->
+            <pre id="code-js" class="hidden"><code>// جستجوی اصطلاحات مالی با fetch
+const response = await fetch('http://localhost:5000/api/v1/terms?q=inflation&limit=5');
+const { data, pagination } = await response.json();
+console.log(data);
+
+// تکمیل خودکار (<5ms)
+const suggestRes = await fetch('http://localhost:5000/api/v1/suggest?q=cap');
+const suggestions = await suggestRes.json();
+console.log(suggestions.data);</code></pre>
+
+            <!-- cURL Block -->
+            <pre id="code-curl" class="hidden"><code># بررسی سلامت سرویس
+curl -s http://localhost:5000/api/v1/health
+
+# جستجوی اصطلاحات در حوزه کریپتو
+curl -s "http://localhost:5000/api/v1/terms?category=crypto&limit=2"
+
+# دریافت اصطلاح بر اساس شناسه عددی
+curl -s http://localhost:5000/api/v1/terms/461
+
+# دریافت فهرست ۴۴ فرمول مالی با لاتک
+curl -s http://localhost:5000/api/v1/formulas</code></pre>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-6 text-center text-xs text-slate-500">
+    <p>MarketDict REST API &copy; 2026 Ali Sadeghi Aghili. Licensed under the Apache License 2.0.</p>
+  </footer>
+
+  <script>
+    // Tab switching logic
+    let activeTab = 'py';
+    function switchTab(lang) {
+      activeTab = lang;
+      ['py', 'cs', 'js', 'curl'].forEach(t => {
+        const btn = document.getElementById('tab-' + t);
+        const code = document.getElementById('code-' + t);
+        if (t === lang) {
+          btn.className = 'px-3 py-1 text-xs font-semibold rounded bg-brand-500 text-slate-950';
+          code.classList.remove('hidden');
+        } else {
+          btn.className = 'px-3 py-1 text-xs font-semibold rounded text-slate-300 hover:bg-slate-700';
+          code.classList.add('hidden');
+        }
+      });
+    }
+
+    function copyCode() {
+      const codeEl = document.getElementById('code-' + activeTab);
+      navigator.clipboard.writeText(codeEl.innerText).then(() => {
+        const text = document.getElementById('copy-text');
+        text.innerText = currentLang === 'fa' ? 'کپی شد! ✓' : 'Copied! ✓';
+        setTimeout(() => {
+          text.innerText = currentLang === 'fa' ? 'کپی کد' : 'Copy Code';
+        }, 2000);
+      });
+    }
+
+    // Bilingual switching
+    let currentLang = 'fa';
+    const translations = {
+      fa: {
+        dir: 'rtl',
+        headerTitle: 'مستندات و راهنمای جامع توسعه‌دهندگان',
+        navHeader: 'فهرست موضوعات',
+        authNote: 'این API کاملاً Open Access بوده و بدون نیاز به کلید یا لاگین برای همه در دسترس است.',
+        secOverviewTitle: '📈 مستندات REST API دیکشنری مالی MarketDict',
+        secOverviewDesc: 'دیکشنری مالی MarketDict دارای بیش از ۶,۱۰۸ اصطلاح مالی غنی‌شده، ۳۲ دسته‌بندی تخصصی، ۴۴ فرمول محاسباتی ریاضی و موتور جستجوی هوشمند فازی به دو زبان انگلیسی و فارسی است.',
+        secSystemTitle: '۱. وضعیت سیستم و آمار (System Status)',
+        secTermsTitle: '۲. جستجو و اصطلاحات (Terms Search & Lookup)',
+        secSuggestTitle: '۳. تکمیل خودکار جستجو (Suggest / Autocomplete)',
+        secFormulasTitle: '۴. فرمول‌های محاسباتی مالی (LaTeX Formulas)',
+        secSdksTitle: '۵. کتابخانه‌های اختصاصی و نمونه کدها (SDKs & Examples)',
+        copyText: 'کپی کد'
+      },
+      en: {
+        dir: 'ltr',
+        headerTitle: 'Interactive Developer Guide & API Documentation',
+        navHeader: 'TABLE OF CONTENTS',
+        authNote: 'This API is completely Open Access. No API key, token, or signup is required.',
+        secOverviewTitle: '📈 MarketDict Financial REST API Documentation',
+        secOverviewDesc: 'MarketDict provides 6,108 enriched financial terms, 32 specialized taxonomy categories, 44 KaTeX mathematical formulas, and a fuzzy bilingual search engine.',
+        secSystemTitle: '1. System Status & Statistics',
+        secTermsTitle: '2. Terms Search & Lookup',
+        secSuggestTitle: '3. Autocomplete Suggestions (<5ms)',
+        secFormulasTitle: '4. Quantitative Mathematical Formulas (LaTeX)',
+        secSdksTitle: '5. Client SDKs & Code Examples',
+        copyText: 'Copy Code'
+      }
+    };
+
+    function setLang(lang) {
+      currentLang = lang;
+      const t = translations[lang];
+      document.documentElement.dir = t.dir;
+      document.documentElement.lang = lang;
+
+      const btnFa = document.getElementById('lang-fa');
+      const btnEn = document.getElementById('lang-en');
+      if (lang === 'fa') {
+        btnFa.className = 'px-3 py-1.5 rounded-md bg-brand-500 text-slate-950 font-bold transition';
+        btnEn.className = 'px-3 py-1.5 rounded-md text-slate-400 hover:text-white transition';
+      } else {
+        btnEn.className = 'px-3 py-1.5 rounded-md bg-brand-500 text-slate-950 font-bold transition';
+        btnFa.className = 'px-3 py-1.5 rounded-md text-slate-400 hover:text-white transition';
+      }
+
+      document.getElementById('header-title').innerText = t.headerTitle;
+      document.getElementById('nav-header').innerText = t.navHeader;
+      document.getElementById('auth-note').innerText = t.authNote;
+      document.getElementById('sec-overview-title').innerText = t.secOverviewTitle;
+      document.getElementById('sec-overview-desc').innerText = t.secOverviewDesc;
+      document.getElementById('sec-system-title').innerText = t.secSystemTitle;
+      document.getElementById('sec-terms-title').innerText = t.secTermsTitle;
+      document.getElementById('sec-suggest-title').innerText = t.secSuggestTitle;
+      document.getElementById('sec-formulas-title').innerText = t.secFormulasTitle;
+      document.getElementById('sec-sdks-title').innerText = t.secSdksTitle;
+      document.getElementById('copy-text').innerText = t.copyText;
+    }
+  </script>
+</body>
+</html>
