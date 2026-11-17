@@ -2,7 +2,9 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![CI Verification](https://github.com/alisadeghiaghili/market-dict/actions/workflows/ci.yml/badge.svg)](https://github.com/alisadeghiaghili/market-dict/actions/workflows/ci.yml)
 [![Deploy to GitHub Pages](https://github.com/alisadeghiaghili/market-dict/actions/workflows/deploy.yml/badge.svg)](https://github.com/alisadeghiaghili/market-dict/actions/workflows/deploy.yml)
+[![MCP](https://img.shields.io/badge/MCP-Enabled-purple)](MCP_DOCUMENTATION.md)
 [![Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-emerald?logo=github)](https://alisadeghiaghili.github.io/market-dict/)
 
 A modern bilingual (English & Persian) financial dictionary — **6,108 market & investing terms** across 14 domains with real-time fuzzy search, KaTeX mathematical formulas, and internal term cross-linking — deployed as a zero-latency static web app on GitHub Pages and paired with an Investopedia enrichment pipeline.
