@@ -187,6 +187,7 @@ def build():
     html_content = html_content.replace('href="/static/', 'href="static/')
     html_content = html_content.replace('src="/static/', 'src="static/')
     html_content = html_content.replace('href="/favicon.ico"', 'href="static/favicon.svg"')
+    html_content = html_content.replace('window.HAS_BACKEND_API = true;', 'window.HAS_BACKEND_API = false;')
 
     dist_index = os.path.join(dist_dir, "index.html")
     with open(dist_index, "w", encoding="utf-8") as f:

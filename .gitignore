@@ -12,4 +12,6 @@ translation_cache.json
 *.argosmodel
 *.tmp
 dist/
+cache_index.pkl
+market_dict.db*
 

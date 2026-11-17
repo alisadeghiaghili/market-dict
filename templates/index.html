@@ -9,18 +9,27 @@
     <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
     <link rel="alternate icon" href="static/favicon.svg">
     
-    <!-- Google Fonts: Vazirmatn (FA) & Inter (EN) -->
+    <!-- Google Fonts: Vazirmatn (FA) & Inter (EN) with Non-Blocking Asynchronous Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
     
-    <!-- KaTeX for Professional Financial Formula Rendering (Self-Hosted + CDN Fallback) -->
+    <!-- KaTeX for Professional Financial Formula Rendering (Self-Hosted) -->
     <link rel="stylesheet" href="static/katex/katex.min.css">
-    <script src="static/katex/katex.min.js"></script>
-    <script src="static/katex/auto-render.min.js"></script>
+    <script defer src="static/katex/katex.min.js"></script>
+    <script defer src="static/katex/auto-render.min.js"></script>
     
-    <!-- Tailwind CSS CDN with extended Dark Mode Palette -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Local Self-Hosted Tailwind CSS with CDN Fallback -->
+    <script src="static/tailwind.min.js"></script>
+    <script>
+        if (!window.tailwind) {
+            document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+        }
+    </script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -319,32 +328,64 @@
             </div>
         </div>
 
-        <!-- Redesigned Comprehensive Categories Panel (Multi-row Grid/Wrap Layout) -->
-        <div id="categoriesCard" class="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-6 border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200 space-y-3.5">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2 flex-wrap">
-                    <span class="text-lg">🗂️</span>
-                    <h3 class="text-sm font-bold text-slate-800 dark:text-slate-200">دسته‌بندی‌های تخصصی بازار سرمایه:</h3>
-                    <span id="activeCategoryBadge" class="hidden text-[11px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800"></span>
+        <!-- Structured Responsive Categories Panel -->
+        <div id="categoriesCard" class="bg-white dark:bg-slate-900 rounded-3xl p-4 sm:p-5 border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200 space-y-3.5">
+            <div class="flex items-center justify-between gap-3 flex-wrap">
+                <!-- Title & Active Category Indicator -->
+                <div class="flex items-center gap-2 flex-wrap min-w-0">
+                    <div class="flex items-center gap-2">
+                        <span class="text-lg">🗂️</span>
+                        <h3 class="text-sm font-bold text-slate-800 dark:text-slate-200">دسته‌بندی‌های تخصصی بازار سرمایه:</h3>
+                        <span id="catCountPill" class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">۲۸ دسته</span>
+                    </div>
+                    <span id="activeCategoryBadge" class="hidden text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center gap-1"></span>
                 </div>
-                <button onclick="toggleCategoriesCollapse()" id="catCollapseBtn" class="text-xs text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="کوچک‌نمایی یا باز کردن فیلتر دسته‌بندی‌ها">
-                    <span id="catCollapseLabel">بستن فیلترها</span>
-                    <svg id="catChevron" class="w-4 h-4 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
+
+                <!-- Controls: Category Search + Expand/Collapse -->
+                <div class="flex items-center gap-2 mr-auto sm:mr-0">
+                    <!-- Quick category search input -->
+                    <div class="relative w-36 sm:w-48">
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-2.5 pointer-events-none text-slate-400">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <input 
+                            type="text" 
+                            id="catSearchInput" 
+                            oninput="filterCategoriesInUI()" 
+                            placeholder="جستجوی دسته‌ها..." 
+                            class="w-full text-xs py-1.5 pr-8 pl-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-1 focus:ring-emerald-500 placeholder-slate-400"
+                        />
+                    </div>
+
+                    <!-- Show More/Less Toggle -->
+                    <button onclick="toggleCategoriesExpansion()" id="catExpandBtn" class="text-xs text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="نمایش همه یا فشرده‌سازی دسته‌ها">
+                        <span id="catExpandLabel">نمایش همه (۲۸)</span>
+                        <svg id="catExpandChevron" class="w-3.5 h-3.5 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Collapse Entire Panel Button -->
+                    <button onclick="toggleCategoriesCollapse()" id="catCollapseBtn" class="p-1.5 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="کوچک‌نمایی یا بستن کامل پنل دسته‌ها">
+                        <svg id="catChevron" class="w-4 h-4 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            <!-- Multi-Row Categories Container -->
-            <div id="categoriesContainer" class="flex flex-wrap gap-2 sm:gap-2.5 transition-all duration-200">
-                <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-600 text-white shadow-sm transition flex items-center gap-2 border border-emerald-600 text-right">
-                    <span class="text-base sm:text-lg shrink-0">🏛️</span>
-                    <div class="flex flex-col text-right leading-tight">
-                        <div class="flex items-center gap-1.5">
-                            <span class="font-bold">همه دسته‌ها</span>
-                            <span id="catTotalAllCount" class="cat-count-badge bg-emerald-700/60 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold"></span>
+            <!-- Responsive Uniform Grid Layout for Category Cards -->
+            <div id="categoriesContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-2.5 transition-all duration-200">
+                <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active p-2.5 rounded-2xl text-xs font-semibold bg-emerald-600 text-white shadow-sm transition flex items-start gap-2.5 border border-emerald-600 text-right h-full cursor-pointer">
+                    <span class="text-lg sm:text-xl shrink-0 mt-0.5">🏛️</span>
+                    <div class="flex flex-col text-right leading-tight min-w-0 flex-1">
+                        <div class="flex items-center justify-between gap-1">
+                            <span class="font-bold truncate">همه دسته‌ها</span>
+                            <span id="catTotalAllCount" class="cat-count-badge bg-emerald-700/60 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold shrink-0"></span>
                         </div>
-                        <span class="cat-en-sub font-en text-[10px] text-emerald-100/90 font-medium tracking-tight">All Categories</span>
+                        <span class="cat-en-sub font-en text-[10px] text-emerald-100/90 font-medium tracking-tight truncate mt-0.5">All Categories</span>
                     </div>
                 </button>
                 <!-- Dynamic Category Pills inserted here -->
@@ -352,15 +393,16 @@
         </div>
 
         <!-- Active Filter Indicator & Count -->
-        <div class="flex items-center justify-between text-xs sm:text-sm text-slate-600 dark:text-slate-400 px-1">
+        <div class="flex items-center justify-between text-xs sm:text-sm text-slate-600 dark:text-slate-400 px-1 py-1">
             <div class="flex items-center gap-2 sm:gap-3 flex-wrap">
-                <div id="resultsCount">در حال بارگذاری اصطلاحات...</div>
+                <div id="resultsCount" class="font-bold text-slate-800 dark:text-slate-200">در حال بارگذاری اصطلاحات...</div>
+                <div id="activeFiltersContainer" class="flex items-center gap-1.5 flex-wrap"></div>
                 <button onclick="toggleAllFilters()" id="toggleAllFiltersBtn" class="text-xs text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 font-medium flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="بستن یا باز کردن یکپارچه همه فیلترها">
                     <span id="toggleAllFiltersLabel">🎛️ بستن همه فیلترها</span>
                 </button>
             </div>
-            <button id="resetFiltersBtn" onclick="resetFilters()" class="hidden text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 font-medium">
-                پاک کردن فیلترها ✕
+            <button id="resetFiltersBtn" onclick="resetFilters()" class="hidden text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 font-semibold text-xs sm:text-sm bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-emerald-800 transition">
+                پاک کردن همه فیلترها ✕
             </button>
         </div>
 
@@ -539,6 +581,7 @@
     </div>
 
     <script>
+        window.HAS_BACKEND_API = true;
         let currentQuery = '';
         let currentLetter = 'ALL';
         let currentCategory = 'ALL';
@@ -547,6 +590,9 @@
         let activeModalTerm = null;
         let currentViewMode = 'fa'; // 'fa', 'en', 'both'
         let debounceTimer = null;
+        let searchSeq = 0;
+        const searchCache = new Map();
+        let searchAbortCtrl = null;
 
         let favorites = JSON.parse(localStorage.getItem('marketdict_favs') || '[]');
         let categoriesCollapsed = false;
@@ -673,6 +719,7 @@
                 showToast('به نشان‌شده‌ها اضافه شد!');
             }
             localStorage.setItem('marketdict_favs', JSON.stringify(favorites));
+            searchCache.clear();
             updateFavoritesCount();
 
             const starSvg = document.getElementById(`star-icon-${id}`);
@@ -698,6 +745,7 @@
 
         function toggleFavoritesFilter() {
             onlyFavorites = !onlyFavorites;
+            searchCache.clear();
             const btn = document.getElementById('favoritesBtn');
             const icon = document.getElementById('favIcon');
             if (onlyFavorites) {
@@ -726,6 +774,7 @@
         }
 
         async function initBundleData() {
+            if (window.HAS_BACKEND_API) return null;
             if (marketDictBundle) return marketDictBundle;
             if (!bundlePromise) {
                 bundlePromise = (async () => {
@@ -733,6 +782,16 @@
                         const res = await fetch('data/bundle.json');
                         if (res.ok) {
                             marketDictBundle = await res.json();
+                            if (marketDictBundle && marketDictBundle.terms) {
+                                for (let i = 0; i < marketDictBundle.terms.length; i++) {
+                                    const t = marketDictBundle.terms[i];
+                                    t._norm_en = normalizeText(t.term_en);
+                                    t._norm_fa = normalizeText(t.term_fa);
+                                    t._norm_cat = normalizeText(t.category);
+                                    t._norm_def_fa = normalizeText(t.definition_fa);
+                                    t._norm_def_en = normalizeText(t.definition_en);
+                                }
+                            }
                             return marketDictBundle;
                         }
                     } catch (e) {}
@@ -766,11 +825,11 @@
                 const scored = [];
                 for (let i = 0; i < filtered.length; i++) {
                     const item = filtered[i];
-                    const termEn = normalizeText(item.term_en);
-                    const termFa = normalizeText(item.term_fa);
-                    const cat = normalizeText(item.category);
-                    const defFa = normalizeText(item.definition_fa);
-                    const defEn = normalizeText(item.definition_en);
+                    const termEn = item._norm_en !== undefined ? item._norm_en : normalizeText(item.term_en);
+                    const termFa = item._norm_fa !== undefined ? item._norm_fa : normalizeText(item.term_fa);
+                    const cat = item._norm_cat !== undefined ? item._norm_cat : normalizeText(item.category);
+                    const defFa = item._norm_def_fa !== undefined ? item._norm_def_fa : normalizeText(item.definition_fa);
+                    const defEn = item._norm_def_en !== undefined ? item._norm_def_en : normalizeText(item.definition_en);
 
                     let score = 0;
                     if (normQuery === termEn || normQuery === termFa) {
@@ -823,25 +882,27 @@
                 return termDetailsCache.get(targetSlug);
             }
 
-            // 1. Try static json file
-            try {
-                const res = await fetch(`data/terms/${encodeURIComponent(targetSlug)}.json`);
-                if (res.ok) {
-                    const data = await res.json();
-                    termDetailsCache.set(targetSlug, data);
-                    return data;
-                }
-            } catch (e) {}
-
-            // 2. Try backend API fallback
-            try {
-                const res = await fetch(`/api/terms/${encodeURIComponent(cleanSlug)}`);
-                if (res.ok) {
-                    const data = await res.json();
-                    termDetailsCache.set(targetSlug, data);
-                    return data;
-                }
-            } catch (e) {}
+            // 1. Direct Backend API call if available
+            if (window.HAS_BACKEND_API || !bundle) {
+                try {
+                    const res = await fetch(`/api/terms/${encodeURIComponent(cleanSlug)}`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        termDetailsCache.set(targetSlug, data);
+                        return data;
+                    }
+                } catch (e) {}
+            } else {
+                // 2. Static json file fallback for GitHub Pages
+                try {
+                    const res = await fetch(`data/terms/${encodeURIComponent(targetSlug)}.json`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        termDetailsCache.set(targetSlug, data);
+                        return data;
+                    }
+                } catch (e) {}
+            }
 
             return null;
         }
@@ -896,6 +957,8 @@
             }
         }
 
+        let categoriesExpanded = false;
+
         async function loadCategories() {
             try {
                 const bundle = await initBundleData();
@@ -909,6 +972,14 @@
                 window.allCategoriesData = cats;
                 const container = document.getElementById('categoriesContainer');
 
+                // Update count badges and labels in panel header
+                const countPill = document.getElementById('catCountPill');
+                if (countPill) countPill.innerText = `${cats.length.toLocaleString('fa-IR')} دسته`;
+                const expandLabel = document.getElementById('catExpandLabel');
+                if (expandLabel && !categoriesExpanded) {
+                    expandLabel.innerText = `نمایش همه (${cats.length.toLocaleString('fa-IR')})`;
+                }
+
                 // Preserve the "cat-ALL" button and reload category pills
                 const allBtn = document.getElementById('cat-ALL');
                 container.innerHTML = '';
@@ -919,18 +990,24 @@
                     if (totalBadge) totalBadge.innerText = totalAll.toLocaleString('fa-IR');
                 }
 
-                cats.forEach(item => {
+                cats.forEach((item, index) => {
                     const btn = document.createElement('button');
                     btn.id = `cat-${encodeURIComponent(item.name)}`;
-                    btn.className = 'cat-pill px-3.5 py-2 rounded-xl text-xs font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-sm transition flex items-center gap-2 text-right';
+                    btn.dataset.categoryName = (item.name || '').toLowerCase();
+                    btn.dataset.categoryFa = (item.name_fa || item.name || '').toLowerCase();
+                    btn.dataset.categoryEn = (item.name_en || '').toLowerCase();
+                    btn.dataset.index = index;
+
+                    const isHiddenInCompact = !categoriesExpanded && index >= 11 && currentCategory !== item.name;
+                    btn.className = `cat-pill cat-overflow-item ${isHiddenInCompact ? 'hidden' : ''} p-2.5 rounded-2xl text-xs font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-sm transition flex items-start gap-2.5 text-right h-full cursor-pointer`;
                     btn.innerHTML = `
-                        <span class="text-base sm:text-lg shrink-0">${item.icon || '🏷️'}</span>
-                        <div class="flex flex-col text-right leading-tight">
-                            <div class="flex items-center gap-1.5">
-                                <span class="font-bold text-xs">${item.name_fa || item.name}</span>
-                                <span class="cat-count-badge opacity-75 text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-1.5 py-0.2 rounded-full font-bold">(${item.count})</span>
+                        <span class="text-lg sm:text-xl shrink-0 mt-0.5">${item.icon || '🏷️'}</span>
+                        <div class="flex flex-col text-right leading-tight min-w-0 flex-1">
+                            <div class="flex items-center justify-between gap-1">
+                                <span class="font-bold text-xs truncate" title="${item.name_fa || item.name}">${item.name_fa || item.name}</span>
+                                <span class="cat-count-badge opacity-80 text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-1.5 py-0.2 rounded-full font-bold shrink-0">(${item.count.toLocaleString('fa-IR')})</span>
                             </div>
-                            <span class="cat-en-sub font-en text-[10px] text-slate-500 dark:text-slate-400 tracking-tight font-medium">${item.name_en || ''}</span>
+                            <span class="cat-en-sub font-en text-[10px] text-slate-400 dark:text-slate-500 tracking-tight font-medium truncate mt-0.5" title="${item.name_en || ''}">${item.name_en || ''}</span>
                         </div>
                     `;
                     btn.onclick = () => setCategoryFilter(item.name);
@@ -941,15 +1018,51 @@
             }
         }
 
-        async function loadTerms(append = false) {
+        function renderLoadedTerms(data, append) {
             const grid = document.getElementById('termsGrid');
             const emptyState = document.getElementById('emptyState');
             const loadMoreContainer = document.getElementById('loadMoreContainer');
             const countLabel = document.getElementById('resultsCount');
 
-            if (!append) {
-                grid.innerHTML = '<div class="col-span-full text-center py-12 text-slate-400">در حال جستجو و بارگذاری...</div>';
+            grid.classList.remove('opacity-50', 'pointer-events-none');
+
+            let terms = data.terms || [];
+
+            if (!append) grid.innerHTML = '';
+
+            if (terms.length === 0 && !append) {
+                emptyState.classList.remove('hidden');
+                document.getElementById('emptyTitle').innerText = 'اصطلاحی با این مشخصات یافت نشد!';
+                document.getElementById('emptyDesc').innerText = 'می‌توانید املای واژه را بررسی کنید یا عبارت جستجو و فیلتر الفبا را تغییر دهید.';
+                loadMoreContainer.classList.add('hidden');
+                countLabel.innerText = 'نتیجه‌ای یافت نشد';
+                return;
             }
+
+            emptyState.classList.add('hidden');
+            const favSuffix = onlyFavorites ? ' نشان‌شده' : '';
+            countLabel.innerText = `نمایش ${terms.length} از ${data.total} اصطلاح${favSuffix}`;
+
+            const frag = document.createDocumentFragment();
+            terms.forEach(term => {
+                frag.appendChild(createTermCard(term));
+            });
+            grid.appendChild(frag);
+
+            if (data.has_more) {
+                loadMoreContainer.classList.remove('hidden');
+            } else {
+                loadMoreContainer.classList.add('hidden');
+            }
+
+            updateResetFilterButton();
+        }
+
+        async function loadTerms(append = false) {
+            const grid = document.getElementById('termsGrid');
+            const emptyState = document.getElementById('emptyState');
+            const loadMoreContainer = document.getElementById('loadMoreContainer');
+            const countLabel = document.getElementById('resultsCount');
 
             // Handle empty favorites state immediately
             if (onlyFavorites && favorites.length === 0) {
@@ -962,6 +1075,27 @@
                 updateResetFilterButton();
                 return;
             }
+
+            const currentSeq = ++searchSeq;
+            const cacheKey = `${currentQuery}|${currentLetter}|${currentCategory}|${currentPage}|${onlyFavorites ? favorites.join(',') : ''}`;
+
+            if (searchCache.has(cacheKey)) {
+                renderLoadedTerms(searchCache.get(cacheKey), append);
+                return;
+            }
+
+            if (!append) {
+                if (grid.children.length > 0) {
+                    grid.classList.add('opacity-50', 'pointer-events-none');
+                } else {
+                    grid.innerHTML = '<div class="col-span-full text-center py-12 text-slate-400">در حال جستجو و بارگذاری...</div>';
+                }
+            }
+
+            if (searchAbortCtrl) {
+                try { searchAbortCtrl.abort(); } catch (e) {}
+            }
+            searchAbortCtrl = new AbortController();
 
             try {
                 const bundle = await initBundleData();
@@ -976,40 +1110,26 @@
                     if (currentCategory !== 'ALL') url += `&category=${encodeURIComponent(currentCategory)}`;
                     if (onlyFavorites) url += `&ids=${encodeURIComponent(favorites.join(','))}`;
 
-                    const res = await fetch(url);
+                    const res = await fetch(url, { signal: searchAbortCtrl.signal });
                     data = await res.json();
                 }
-                let terms = data.terms;
 
-                if (!append) grid.innerHTML = '';
+                if (currentSeq !== searchSeq) return;
 
-                if (terms.length === 0 && !append) {
-                    emptyState.classList.remove('hidden');
-                    document.getElementById('emptyTitle').innerText = 'اصطلاحی با این مشخصات یافت نشد!';
-                    document.getElementById('emptyDesc').innerText = 'می‌توانید املای واژه را بررسی کنید یا عبارت جستجو و فیلتر الفبا را تغییر دهید.';
-                    loadMoreContainer.classList.add('hidden');
-                    countLabel.innerText = 'نتیجه‌ای یافت نشد';
-                    return;
+                if (searchCache.size > 80) {
+                    const firstKey = searchCache.keys().next().value;
+                    searchCache.delete(firstKey);
                 }
+                searchCache.set(cacheKey, data);
 
-                emptyState.classList.add('hidden');
-                const favSuffix = onlyFavorites ? ' نشان‌شده' : '';
-                countLabel.innerText = `نمایش ${terms.length} از ${data.total} اصطلاح${favSuffix}`;
-
-                terms.forEach(term => {
-                    grid.appendChild(createTermCard(term));
-                });
-
-                if (data.has_more) {
-                    loadMoreContainer.classList.remove('hidden');
-                } else {
-                    loadMoreContainer.classList.add('hidden');
-                }
-
-                updateResetFilterButton();
+                renderLoadedTerms(data, append);
             } catch (err) {
+                if (err.name === 'AbortError') return;
                 console.error(err);
-                grid.innerHTML = '<div class="col-span-full text-center py-12 text-rose-500">خطا در بارگذاری.</div>';
+                if (currentSeq === searchSeq && !append) {
+                    grid.classList.remove('opacity-50', 'pointer-events-none');
+                    grid.innerHTML = '<div class="col-span-full text-center py-12 text-rose-500">خطا در بارگذاری.</div>';
+                }
             }
         }
 
@@ -1078,19 +1198,59 @@
             }
         }
 
+        function toggleCategoriesExpansion() {
+            categoriesExpanded = !categoriesExpanded;
+            const label = document.getElementById('catExpandLabel');
+            const chevron = document.getElementById('catExpandChevron');
+            const totalCats = (window.allCategoriesData || []).length;
+
+            if (categoriesExpanded) {
+                if (label) label.innerText = 'نمایش فشرده';
+                if (chevron) chevron.classList.add('rotate-180');
+            } else {
+                if (label) label.innerText = `نمایش همه (${totalCats.toLocaleString('fa-IR')})`;
+                if (chevron) chevron.classList.remove('rotate-180');
+            }
+
+            filterCategoriesInUI();
+        }
+
+        function filterCategoriesInUI() {
+            const query = (document.getElementById('catSearchInput')?.value || '').trim().toLowerCase();
+            const pills = document.querySelectorAll('#categoriesContainer .cat-overflow-item');
+            pills.forEach(pill => {
+                const fa = pill.dataset.categoryFa || '';
+                const en = pill.dataset.categoryEn || '';
+                const orig = pill.dataset.categoryName || '';
+                const isSelected = (currentCategory === orig || currentCategory === fa);
+
+                if (query) {
+                    if (fa.includes(query) || en.includes(query) || orig.includes(query)) {
+                        pill.classList.remove('hidden');
+                    } else {
+                        pill.classList.add('hidden');
+                    }
+                } else {
+                    const index = parseInt(pill.dataset.index || '0', 10);
+                    if (!categoriesExpanded && index >= 11 && !isSelected) {
+                        pill.classList.add('hidden');
+                    } else {
+                        pill.classList.remove('hidden');
+                    }
+                }
+            });
+        }
+
         function toggleCategoriesCollapse(forceState = null) {
             categoriesCollapsed = (forceState !== null) ? forceState : !categoriesCollapsed;
             const container = document.getElementById('categoriesContainer');
-            const label = document.getElementById('catCollapseLabel');
             const chevron = document.getElementById('catChevron');
 
             if (categoriesCollapsed) {
                 container.classList.add('hidden');
-                if (label) label.innerText = 'باز کردن فیلترها (۱۴ دسته)';
                 if (chevron) chevron.classList.add('rotate-180');
             } else {
                 container.classList.remove('hidden');
-                if (label) label.innerText = 'بستن فیلترها';
                 if (chevron) chevron.classList.remove('rotate-180');
             }
             localStorage.setItem('marketdict_cat_collapsed', categoriesCollapsed ? 'true' : 'false');
@@ -1142,7 +1302,7 @@
             const letterBadge = document.getElementById('activeLetterBadge');
             if (letterBadge) {
                 if (currentLetter !== 'ALL') {
-                    letterBadge.innerText = `حرف ${currentLetter}`;
+                    letterBadge.innerHTML = `<span>حرف ${currentLetter}</span> <button onclick="setLetterFilter('ALL')" class="hover:text-red-500 font-bold ml-1">✕</button>`;
                     letterBadge.classList.remove('hidden');
                 } else {
                     letterBadge.classList.add('hidden');
@@ -1153,14 +1313,68 @@
             if (catBadge) {
                 if (currentCategory !== 'ALL') {
                     const catObj = (window.allCategoriesData || []).find(c => c.name === currentCategory || c.name_fa === currentCategory);
-                    if (catObj && catObj.name_en) {
-                        catBadge.innerHTML = `<span>${catObj.name_fa || catObj.name}</span> <span class="font-en text-[10px] opacity-80 mr-1.5 font-normal">(${catObj.name_en})</span>`;
-                    } else {
-                        catBadge.innerText = currentCategory;
-                    }
+                    const catFa = catObj ? (catObj.name_fa || catObj.name) : currentCategory;
+                    const catEn = catObj && catObj.name_en ? ` <span class="font-en text-[10px] opacity-80 mr-1 font-normal">(${catObj.name_en})</span>` : '';
+                    catBadge.innerHTML = `<span>${catFa}</span>${catEn} <button onclick="setCategoryFilter('ALL')" class="hover:text-red-500 font-bold mr-1">✕</button>`;
                     catBadge.classList.remove('hidden');
                 } else {
                     catBadge.classList.add('hidden');
+                }
+            }
+
+            // Update Active Filter Bar chips
+            const filtersBar = document.getElementById('activeFiltersContainer');
+            const resetBtn = document.getElementById('resetFiltersBtn');
+            if (filtersBar) {
+                let chipsHtml = '';
+                let hasFilters = false;
+
+                if (currentCategory !== 'ALL') {
+                    hasFilters = true;
+                    const catObj = (window.allCategoriesData || []).find(c => c.name === currentCategory || c.name_fa === currentCategory);
+                    const labelFa = catObj ? (catObj.name_fa || catObj.name) : currentCategory;
+                    chipsHtml += `
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 shadow-xs">
+                            <span>دسته: <strong>${labelFa}</strong></span>
+                            <button onclick="setCategoryFilter('ALL')" class="hover:text-red-600 font-bold text-sm leading-none mr-0.5" title="حذف این فیلتر">✕</button>
+                        </span>
+                    `;
+                }
+
+                if (currentLetter !== 'ALL') {
+                    hasFilters = true;
+                    chipsHtml += `
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 shadow-xs">
+                            <span class="font-en">حرف: <strong>${currentLetter}</strong></span>
+                            <button onclick="setLetterFilter('ALL')" class="hover:text-red-600 font-bold text-sm leading-none mr-0.5" title="حذف این فیلتر">✕</button>
+                        </span>
+                    `;
+                }
+
+                if (currentQuery) {
+                    hasFilters = true;
+                    chipsHtml += `
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 shadow-xs">
+                            <span>جستجو: "<strong>${currentQuery}</strong>"</span>
+                            <button onclick="clearSearch()" class="hover:text-red-600 font-bold text-sm leading-none mr-0.5" title="حذف جستجو">✕</button>
+                        </span>
+                    `;
+                }
+
+                if (favoritesOnly) {
+                    hasFilters = true;
+                    chipsHtml += `
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-800 shadow-xs">
+                            <span>⭐ نشان‌شده‌ها</span>
+                            <button onclick="toggleFavoritesFilter()" class="hover:text-red-600 font-bold text-sm leading-none mr-0.5" title="نمایش همه">✕</button>
+                        </span>
+                    `;
+                }
+
+                filtersBar.innerHTML = chipsHtml;
+                if (resetBtn) {
+                    if (hasFilters) resetBtn.classList.remove('hidden');
+                    else resetBtn.classList.add('hidden');
                 }
             }
         }
@@ -1190,7 +1404,7 @@
                 const sub = btn.querySelector('.cat-en-sub');
                 if (sub) {
                     sub.classList.remove('text-emerald-100');
-                    sub.classList.add('text-slate-500', 'dark:text-slate-400');
+                    sub.classList.add('text-slate-400', 'dark:text-slate-500');
                 }
                 const cnt = btn.querySelector('.cat-count-badge');
                 if (cnt) {
@@ -1200,11 +1414,12 @@
             });
             const activeBtn = document.getElementById(category === 'ALL' ? 'cat-ALL' : `cat-${encodeURIComponent(category)}`);
             if (activeBtn) {
+                activeBtn.classList.remove('hidden');
                 activeBtn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
                 activeBtn.classList.add('bg-emerald-600', 'text-white', 'border-emerald-600', 'active');
                 const sub = activeBtn.querySelector('.cat-en-sub');
                 if (sub) {
-                    sub.classList.remove('text-slate-500', 'dark:text-slate-400');
+                    sub.classList.remove('text-slate-400', 'dark:text-slate-500');
                     sub.classList.add('text-emerald-100');
                 }
                 const cnt = activeBtn.querySelector('.cat-count-badge');
@@ -1228,7 +1443,7 @@
             debounceTimer = setTimeout(() => {
                 currentPage = 1;
                 loadTerms();
-            }, 250);
+            }, 120);
         }
 
         function clearSearch() {
