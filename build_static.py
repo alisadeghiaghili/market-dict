@@ -16,7 +16,7 @@ def clean_key(text):
         return ""
     return re.sub(r"[^a-z0-9]", "", str(text).lower().replace(".asp", ""))
 
-from categories_engine import TAXONOMY, TAXONOMY_BY_FA
+from categories_engine import TAXONOMY, TAXONOMY_BY_FA, normalize_category
 
 CATEGORY_ICONS = {item["fa"]: item["icon"] for item in TAXONOMY}
 
@@ -85,7 +85,13 @@ def build():
             with open(term_file, "w", encoding="utf-8") as f:
                 json.dump(item, f, ensure_ascii=False)
 
-        cat = item.get("category", "سایر")
+        raw_cat = item.get("category", "")
+        canon_cat = normalize_category(raw_cat)
+        cat = canon_cat["fa"]
+        cat_en = canon_cat["en"]
+        item["category"] = cat
+        item["category_fa"] = cat
+        item["category_en"] = cat_en
         category_counts[cat] = category_counts.get(cat, 0) + 1
 
         ltr = (item.get("letter") or "#").strip().upper()
@@ -101,8 +107,8 @@ def build():
             "term_fa": item.get("term_fa", ""),
             "letter": ltr,
             "category": cat,
-            "category_fa": item.get("category_fa", cat),
-            "category_en": item.get("category_en", ""),
+            "category_fa": cat,
+            "category_en": cat_en,
             "definition_fa": item.get("definition_fa", "")[:240],
             "definition_en": item.get("definition_en", "")[:240],
             "slug": slug,

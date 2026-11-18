@@ -237,6 +237,77 @@ TAXONOMY = [
 TAXONOMY_BY_ID: Dict[str, Dict[str, Any]] = {c["id"]: c for c in TAXONOMY}
 TAXONOMY_BY_FA: Dict[str, Dict[str, Any]] = {c["fa"]: c for c in TAXONOMY}
 
+# Comprehensive mapping of legacy or variant category names to canonical Persian names
+CATEGORY_ALIASES: Dict[str, str] = {
+    # Stock market variants
+    "بورس، سهام و بازار سرمایه": "بازار سهام و معاملات",
+    "stock_capital_markets": "بازار سهام و معاملات",
+    "stock & capital markets": "بازار سهام و معاملات",
+
+    # Macroeconomics variants
+    "اقتصاد کلان و سیاست‌های پولی": "اقتصاد کلان و سیاست پولی",
+    "macroeconomics_alt": "اقتصاد کلان و سیاست پولی",
+
+    # Banking variants
+    "بانکداری و خدمات مالی": "بانکداری، وام و اعتبارات",
+
+    # Forex variants
+    "ارزها و بازارهای فارکس": "تجارت بین‌الملل و فارکس (FX)",
+
+    # Technical analysis variants
+    "تحلیل تکنیکال و نموداری": "تحلیل تکنیکال و پرایس اکشن",
+
+    # Accounting & Tax variants
+    "قوانین و صورت‌های مالی": "مالیات، حقوق مالی و مقررات",
+    "accounting_regulations": "مالیات، حقوق مالی و مقررات",
+    "حسابداری و استانداردهای مالی": "حسابداری و صورت‌های مالی",
+    "accounting_standards": "حسابداری و صورت‌های مالی",
+
+    # Real estate variants
+    "املاک، مستغلات و مسکن": "املاک، مستغلات و تأمین مسکن",
+
+    # Crypto variants
+    "بلاکچین، ارز دیجیتال و رمزدارایی‌ها": "ارزهای دیجیتال و بلاک‌چین",
+}
+
+def normalize_category(cat_name: Any) -> Dict[str, Any]:
+    """
+    Given any category identifier, Persian name, English name, or legacy variant,
+    returns the canonical category dictionary from TAXONOMY (with id, fa, en, icon).
+    Defaults to the fallback category if unrecognized.
+    """
+    if not cat_name or not isinstance(cat_name, str):
+        return TAXONOMY[-1]
+
+    name = cat_name.strip()
+    # 1. Exact match in canonical Persian names
+    if name in TAXONOMY_BY_FA:
+        return TAXONOMY_BY_FA[name]
+
+    # 2. Match in legacy aliases
+    if name in CATEGORY_ALIASES:
+        canonical_fa = CATEGORY_ALIASES[name]
+        if canonical_fa in TAXONOMY_BY_FA:
+            return TAXONOMY_BY_FA[canonical_fa]
+
+    # 3. Match by ID (case-insensitive)
+    name_lower = name.lower()
+    if name_lower in TAXONOMY_BY_ID:
+        return TAXONOMY_BY_ID[name_lower]
+
+    # 4. Match in alias by lowercase
+    for alias, canon in CATEGORY_ALIASES.items():
+        if alias.lower() == name_lower and canon in TAXONOMY_BY_FA:
+            return TAXONOMY_BY_FA[canon]
+
+    # 5. Match by English name (case-insensitive)
+    for cat in TAXONOMY:
+        if cat["en"].lower() == name_lower:
+            return cat
+
+    # Default fallback
+    return TAXONOMY[-1]
+
 COMPILED_RULES = [(cat, re.compile(cat["regex"], re.IGNORECASE)) for cat in TAXONOMY]
 
 def classify_term(term: Dict[str, Any]) -> Dict[str, Any]:

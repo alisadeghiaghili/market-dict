@@ -181429,7 +181429,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
-    "category_en": "Fixed Income & Debt Securities"
+    "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 940,
@@ -196481,7 +196481,7 @@
     "term_en": "Bear Stearns",
     "term_fa": "خرسی Stearns (Bear Stearns)",
     "letter": "B",
-    "category": "بانکداری و خدمات مالی",
+    "category": "بانکداری، وام و اعتبارات",
     "definition_en": "Bear Stearns was a prominent global investment bank and securities trading brokerage whose catastrophic collapse in March 2008 due to subprime mortgage exposure signaled the onset of the Global Financial Crisis.",
     "definition_fa": "بر استرنز یکی از بزرگ‌ترین بانک‌های سرمایه‌گذاری وال‌استریت بود که فروپاشی ناگهانی آن در مارس ۲۰۰۸ در پی سرمایه‌گذاری‌های سنگین روی وام‌های مسکن پرریسک، آغازگر بحران مالی جهانی شد.",
     "takeaways_en": [
@@ -196514,8 +196514,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بانکداری و خدمات مالی",
-    "category_en": "Banking & Financial Services"
+    "category_fa": "بانکداری، وام و اعتبارات",
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 1022,
@@ -213011,7 +213011,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
-    "category_en": "Fixed Income & Debt Securities"
+    "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 1104,
@@ -220497,7 +220497,7 @@
     "term_en": "Brazil, Russia, India and China (BRIC)",
     "term_fa": "Brazil, Russia, India and China (BRIC)",
     "letter": "B",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "BRIC is an acronym coined in 2001 by Goldman Sachs economist Jim O'Neill to designate Brazil, Russia, India, and China as the four rapidly growing emerging market economies projected to dominate global manufacturing, services, and raw material supply in the 21st century.",
     "definition_fa": "بریک (BRIC) نام اختصاری چهار اقتصاد نوظهور برزیل، روسیه، هند و چین است که اولین بار در سال ۲۰۰۱ توسط جیم اونیل، اقتصاددان گلدمن ساکس ابداع شد و نشان‌دهنده قطب‌های نوظهور رشد اقتصادی و تجارت جهان در قرن بیست و یکم است.",
     "takeaways_en": [
@@ -220530,7 +220530,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -224158,7 +224158,7 @@
     "term_en": "Budget Variance",
     "term_fa": "Budget Variance",
     "letter": "B",
-    "category": "حسابداری و استانداردهای مالی",
+    "category": "حسابداری و صورت‌های مالی",
     "definition_en": "Budget variance is the periodic difference between the baseline budgeted financial figures (revenues or expenditures) and the actual financial results achieved by an organization.",
     "definition_fa": "انحراف از بودجه عبارت است از اختلاف میان ارقام پیش‌بینی‌شده در بودجه مصوب (درآمدها یا هزینه‌ها) و ارقام واقعی محقق‌شده در طول دوره مالی سازمان.",
     "takeaways_en": [
@@ -224195,8 +224195,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "حسابداری و استانداردهای مالی",
-    "category_en": "Accounting & Financial Standards"
+    "category_fa": "حسابداری و صورت‌های مالی",
+    "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 1161,
@@ -224503,7 +224503,7 @@
     "term_en": "Bull",
     "term_fa": "گاوی (Bull)",
     "letter": "B",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "A bull is an investor or market participant who expects prices of financial assets, indices, or commodities to rise, typically executing long positions to profit from upward market momentum.",
     "definition_fa": "گاو (Bull) در اصطلاح بازار سرمایه به معامله‌گر یا سرمایه‌گذاری اطلاق می‌شود که انتظار رشد قیمت دارایی‌ها را دارد و با اتخاذ موقعیت‌های خرید (Long) به دنبال کسب سود از روند صعودی است.",
     "takeaways_en": [
@@ -224536,8 +224536,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 1164,
@@ -227662,7 +227662,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
-    "category_en": "Risk Management, Insurance & Actuarial"
+    "category_en": "Risk Management & Insurance"
   },
   {
     "id": 1183,
@@ -227826,7 +227826,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "سرمایه‌گذاری خطرپذیر و استارتاپ",
-    "category_en": "Venture Capital & Startups"
+    "category_en": "Venture Capital & Private Equity"
   },
   {
     "id": 1187,
@@ -227908,7 +227908,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
-    "category_en": "Risk Management, Insurance & Actuarial"
+    "category_en": "Risk Management & Insurance"
   },
   {
     "id": 1189,
@@ -228072,7 +228072,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
-    "category_en": "Risk Management, Insurance & Actuarial"
+    "category_en": "Risk Management & Insurance"
   },
   {
     "id": 1193,
@@ -228206,7 +228206,7 @@
     "term_en": "Buy and Hold",
     "term_fa": "Buy and Hold",
     "letter": "B",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "Buy and hold is a passive investment strategy in which an investor purchases securities—such as stocks or index funds—and holds them for long horizons regardless of short-term market fluctuations.",
     "definition_fa": "استراتژی بخر و نگه دار یک استراتژی غیرفعال و سنتی در سرمایه‌گذاری است که در آن فرد دارایی‌های باکیفیت یا صندوق‌های شاخصی را خریداری کرده و بدون توجه به نوسانات کوتاه‌مدت، سال‌ها نگهداری می‌کند.",
     "takeaways_en": [
@@ -228239,8 +228239,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 1197,
@@ -228288,7 +228288,7 @@
     "term_en": "Buy-In",
     "term_fa": "Buy-In",
     "letter": "B",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "A buy-in occurs in securities trading when a seller fails to deliver sold shares to the buyer by the mandated settlement date, prompting the clearinghouse or broker to purchase replacement shares in the open market at the seller's expense.",
     "definition_fa": "خرید اجباری زمانی در تالار معاملات رخ می‌دهد که فروشنده نتواند اوراق فروخته‌شده را در موعد تسویه تحویل دهد؛ در این حالت اتاق پایاپای سهام را در بازار آزاد خریده و مازاد هزینه را از فروشنده اخذ می‌کند.",
     "takeaways_en": [
@@ -228321,8 +228321,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 1199,
@@ -228370,7 +228370,7 @@
     "term_en": "Buy Limit Order",
     "term_fa": "Buy Limit Order",
     "letter": "B",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "A buy limit order is an order placed with a broker to purchase a specified security at or below a predetermined maximum price threshold, ensuring the trader does not pay more than their designated limit.",
     "definition_fa": "سفارش خرید لیمیت دستوری است که به کارگزار داده می‌شود تا سهم یا اوراق را در قیمتی مشخص یا پایین‌تر از آن بخرد و مانع از پرداخت قیمتی بیش از سقف مدنظر معامله‌گر می‌شود.",
     "takeaways_en": [
@@ -228403,15 +228403,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 1201,
     "term_en": "Buy-Side",
     "term_fa": "Buy-Side",
     "letter": "B",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "The buy-side refers to institutional investors and asset management firms—such as mutual funds, pension funds, hedge funds, and private equity sponsors—that deploy capital to purchase financial assets to generate returns for their clients.",
     "definition_fa": "طرف خریدار (Buy-Side) به نهادها و شرکت‌های مدیریت دارایی (نظیر صندوق‌های سرمایه‌گذاری، صندوق‌های بازنشستگی و پوشش ریسک) اطلاق می‌شود که سرمایه مشتریان را جهت خرید اوراق بهادار مدیریت می‌کنند.",
     "takeaways_en": [
@@ -228444,15 +228444,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 1202,
     "term_en": "Buy Stop Order",
     "term_fa": "Buy Stop Order",
     "letter": "B",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "A buy stop order is an order entered above the current market price that converts into a market order to buy once the stock trades at or through the specified stop price trigger.",
     "definition_fa": "سفارش بای استاپ دستوری است که بالاتر از نرخ فعلی بازار ثبت می‌شود و به محض رسیدن قیمت به سطح مشخص، تبدیل به یک سفارش خرید فوری به قیمت بازار می‌گردد.",
     "takeaways_en": [
@@ -228485,15 +228485,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 1203,
     "term_en": "Buy the Dips",
     "term_fa": "Buy the Dips",
     "letter": "B",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "Buying the dip is a market trading strategy of purchasing shares of an asset following a short-term temporary price drop within an ongoing long-term bullish trend.",
     "definition_fa": "خرید در افت به معنای خرید دارایی پس از یک اصلاح قیمتی کوتاه‌مدت است، با این فرض که روند صعودی کلی همچنان معتبر بوده و قیمت مجدداً اوج خواهد گرفت.",
     "takeaways_en": [
@@ -228526,15 +228526,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 1204,
     "term_en": "Buy to Cover",
     "term_fa": "Buy to Cover",
     "letter": "B",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "Buy to cover is an order to purchase identical securities to close out an existing short position, returning the borrowed shares back to the lending brokerage.",
     "definition_fa": "خرید جهت بستن موقعیت دستوری است که برای بازخرید سهام استقراضی و بستن پوزیشن شورت در بازار ثبت می‌شود تا سهام قرض‌گرفته‌شده به کارگزاری عودت داده شود.",
     "takeaways_en": [
@@ -228567,8 +228567,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 1205,
@@ -228657,7 +228657,7 @@
     "term_en": "Buyer's Market",
     "term_fa": "Buyer's بازار (Buyer's Market)",
     "letter": "B",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "A buyer's market is a market condition in which the supply of an asset, commodity, or real estate property exceeds buyer demand, giving purchasers superior pricing power and leverage in negotiations.",
     "definition_fa": "بازار خریدار شرایطی از بازار است که در آن حجم عرضه کالا یا دارایی از تقاضای خرید بیشتر است؛ در نتیجه خریداران از قدرت چانه‌زنی بالا برخوردار بوده و قیمت‌ها تمایل به کاهش دارند.",
     "takeaways_en": [
@@ -228690,7 +228690,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -228698,7 +228698,7 @@
     "term_en": "Buying on Margin",
     "term_fa": "Buying on حاشیه سود / مارجین (Buying on Margin)",
     "letter": "B",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "Buying on margin is the practice of purchasing securities using borrowed funds provided by a brokerage firm, using the investor's cash and existing securities as loan collateral.",
     "definition_fa": "خرید اعتباری (مارجین) فرآیند خرید اوراق بهادار با استفاده از اعتبار دریافتی از کارگزاری است که در آن موجودی نقد و سهام معامله‌گر به عنوان وثیقه تسهیلات نزد کارگزار عمل می‌کند.",
     "takeaways_en": [
@@ -228731,15 +228731,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 1209,
     "term_en": "Buying Power",
     "term_fa": "Buying Power",
     "letter": "B",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "Buying power represents the total dollar value of securities that an investor can purchase in their trading account, consisting of available unencumbered cash plus any available margin credit.",
     "definition_fa": "قدرت خرید بیانگر کل ارزش دلاری یا ریالی است که معامله‌گر می‌تواند با تکیه بر موجودی نقد آزاد و اعتبارات کارگزاری برای خرید اوراق در حساب خود استفاده نماید.",
     "takeaways_en": [
@@ -228776,8 +228776,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 1210,
@@ -289372,7 +289372,7 @@
     "term_en": "Jackpot",
     "term_fa": "Jackpot",
     "letter": "J",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "A jackpot in finance refers to an exceptionally large, unexpected windfall or windfall return generated from an investment, speculative trade, or commercial transaction that far exceeds normal market averages.",
     "definition_fa": "جک‌پات در ادبیات مالی به سود فوق‌العاده بزرگ و بادآورده‌ای اطلاق می‌شود که از یک سرمایه‌گذاری یا معامله سوداگرانه به دست می‌آید و بسیار فراتر از بازدهی متعارف بازار است.",
     "takeaways_en": [
@@ -289405,15 +289405,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3095,
     "term_en": "Jackson Hole Economic Symposium",
     "term_fa": "Jackson Hole Economic Symposium",
     "letter": "J",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "The Jackson Hole Economic Symposium is an elite annual conference hosted since 1981 by the <a href=\"#term/federalreservebank\" class=\"internal-term-link\" data-slug=\"federalreservebank\">Federal Reserve Bank</a> of Kansas City in Jackson Hole, Wyoming, gathering international central bankers, finance ministers, and academics to discuss global macroeconomic monetary policy.",
     "definition_fa": "سمپوزیوم اقتصادی جکسون هول یک نشست سالانه معتبر بین‌المللی است که از سال ۱۹۸۱ توسط فدرال رزرو کانزاس‌سیتی در دره جکسون هول ایالت وایومینگ برگزار می‌شود و رؤسای بانک‌های مرکزی و اقتصاددانان برجسته جهان را برای تبیین سیاست‌های پولی گرد هم می‌آورد.",
     "takeaways_en": [
@@ -289446,7 +289446,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -289488,14 +289488,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "سرمایه‌گذاری خطرپذیر و استارتاپ",
-    "category_en": "Venture Capital & Startups"
+    "category_en": "Venture Capital & Private Equity"
   },
   {
     "id": 3097,
     "term_en": "James M. Buchanan Jr.",
     "term_fa": "James M. Buchanan Jr.",
     "letter": "J",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "James M. Buchanan Jr. was an influential American economist who won the 1986 Nobel Memorial Prize in Economic Sciences for developing Public Choice Theory, applying economic self-interest models to political and bureaucratic decision-making.",
     "definition_fa": "جیمز بوکانان اقتصاددان برجسته آمریکایی و برنده جایزه نوبل اقتصاد در سال ۱۹۸۶ برای پایه‌گذاری «نظریه انتخاب عمومی» بود؛ او نشان داد سیاست‌مداران و بوروکرات‌ها نیز همانند فعالان بازار بر مبنای نفع شخصی عقلانی تصمیم‌گیری می‌کنند.",
     "takeaways_en": [
@@ -289528,7 +289528,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -289574,7 +289574,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
-    "category_en": "Quantitative Methods & Financial Mathematics"
+    "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 3099,
@@ -289871,7 +289871,7 @@
     "term_en": "Japan Association of Securities Dealers Automated Quotation",
     "term_fa": "Japan Association of اوراق بهادار Dealers Automated Quotation (Japan Association of Securities Dealers Automated Quotation)",
     "letter": "J",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "JASDAQ (Japan Association of Securities Dealers Automated Quotation) was an electronic securities exchange in Japan modeled after the US NASDAQ, serving as the premier listing venue for emerging Japanese tech and growth companies before integrating into the Tokyo Stock Exchange (TSE).",
     "definition_fa": "جاسداک (JASDAQ) بازار بورس الکترونیکی سهام در ژاپن بود که با الهام از بورس نزدک آمریکا تأسیس شد و تالار اصلی تأمین مالی برای استارتاپ‌ها و شرکت‌های رشدبنیان ژاپنی به شمار می‌رفت، پیش از آنکه در ساختار بورس توکیو ادغام شود.",
     "takeaways_en": [
@@ -289904,8 +289904,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3102,
@@ -289946,7 +289946,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
-    "category_en": "Fixed Income & Debt Securities"
+    "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 3103,
@@ -290265,14 +290265,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
-    "category_en": "Quantitative Methods & Financial Mathematics"
+    "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 3106,
     "term_en": "Jean-Baptiste Say",
     "term_fa": "Jean-Baptiste Say",
     "letter": "J",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "Jean-Baptiste Say was an influential French classical economist and businessman best known for formulating 'Say's Law of Markets', which asserts that 'supply creates its own demand', arguing against the possibility of general macroeconomic overproduction crises.",
     "definition_fa": "ژان باتیست سه اقتصاددان و کارآفرین برجسته مکتب کلاسیک فرانسه در قرن نوزدهم بود که به خاطر ابداع «قانون بازارهای سه» شهرت دارد؛ قانونی که بیان می‌کند «عرضه، تقاضای خود را ایجاد می‌کند» و بحران اضافه تولید عمومی در بلندمدت ناممکن است.",
     "takeaways_en": [
@@ -290305,7 +290305,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -290313,7 +290313,7 @@
     "term_en": "Jekyll and Hyde",
     "term_fa": "Jekyll and Hyde",
     "letter": "J",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "Jekyll and Hyde in financial markets describes a stock, market environment, or investment vehicle that displays drastic behavioral dichotomy—swinging unpredictably between calm, stable profitability and violent, volatile drawdown periods.",
     "definition_fa": "جکیل و هاید در اصطلاحات بازارهای مالی به سهم، دارایی یا شرایط بازاری گفته می‌شود که رفتاری کاملاً دوگانه و غیرقابل پیش‌بینی دارد؛ در یک دوره بسیار آرام و سودآور ظاهر می‌شود و ناگهان به وضعیتی فوق‌العاده پرریسک، پرنوسان و ریزشی تغییر فاز می‌دهد.",
     "takeaways_en": [
@@ -290346,8 +290346,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3108,
@@ -290388,14 +290388,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
-    "category_en": "Risk Management, Insurance & Actuarial"
+    "category_en": "Risk Management & Insurance"
   },
   {
     "id": 3109,
     "term_en": "Jesse L. Livermore",
     "term_fa": "Jesse L. Livermore",
     "letter": "J",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "Jesse L. Livermore (1877–1940), known as the 'Great Bear of Wall Street', was a legendary American pioneer of day trading and momentum speculation, famous for making and losing multiple multi-million-dollar fortunes during the market panics of 1907 and the 1929 Great Crash.",
     "definition_fa": "جسی لیورمور معروف به «خرس بزرگ وال‌استریت» یکی از سرشناس‌ترین معامله‌گران تاریخ بازار سهام آمریکا بود که با تکیه بر تحلیل پرایس اکشن و خواندن نوار معاملات، ثروت‌های افسانه‌ای در سقوط بازارهای ۱۹۰۷ و ۱۹۲۹ به دست آورد و قوانین ماندگاری در روانشناسی معامله‌گری تدوین کرد.",
     "takeaways_en": [
@@ -290428,8 +290428,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3110,
@@ -290470,7 +290470,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
-    "category_en": "Risk Management, Insurance & Actuarial"
+    "category_en": "Risk Management & Insurance"
   },
   {
     "id": 3111,
@@ -290518,7 +290518,7 @@
     "term_en": "Jitney",
     "term_fa": "Jitney",
     "letter": "J",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "A jitney in securities markets is a brokerage firm that executes trades on behalf of another non-clearing broker that does not hold direct trading access or seats on a major stock exchange, routing the transactions for a split commission fee.",
     "definition_fa": "جیتنی در بازارهای مالی به کارگزاری واسطه‌ای گفته می‌شود که معاملات را به نیابت از یک کارگزار دیگر (که عضو مستقیم تالار پایاپای بورس نیست) با دریافت درصدی از کارمزد اجرا و تسویه می‌کند.",
     "takeaways_en": [
@@ -290551,8 +290551,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3113,
@@ -290593,14 +290593,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
-    "category_en": "Quantitative Methods & Financial Mathematics"
+    "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 3114,
     "term_en": "JMD (Jamaican Dollar)",
     "term_fa": "JMD (Jamaican Dollar)",
     "letter": "J",
-    "category": "ارزها و بازارهای فارکس",
+    "category": "تجارت بین‌الملل و فارکس (FX)",
     "definition_en": "The Jamaican Dollar (JMD) is the official legal tender currency of the island nation of Jamaica, issued and managed by the Bank of Jamaica, abbreviated as J$ and traded across regional Caribbean foreign exchange desks.",
     "definition_fa": "دلار جامائیکا (با کد ایزو JMD و نماد $J) واحد پول رسمی کشور جامائیکا است که توسط بانک مرکزی جامائیکا چاپ و نظارت می‌شود و ارز مرجع تجاری در حوزه کارائیب به شمار می‌رود.",
     "takeaways_en": [
@@ -290633,8 +290633,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "ارزها و بازارهای فارکس",
-    "category_en": "Currencies & Foreign Exchange"
+    "category_fa": "تجارت بین‌الملل و فارکس (FX)",
+    "category_en": "Forex & International Trade"
   },
   {
     "id": 3115,
@@ -290851,7 +290851,7 @@
     "term_en": "Jobber",
     "term_fa": "Jobber",
     "letter": "J",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "A jobber (stockjobber) was an independent market maker on the London Stock Exchange who traded securities on their own account rather than on behalf of clients, holding inventory and quoting bid and ask prices to broker-dealers prior to the 1986 Big Bang deregulation.",
     "definition_fa": "جابِر یا معامله‌گر مستقل تالار در بورس لندن به فعالانی گفته می‌شد که به حساب شخصی خود به بازارگردانی و معامله سهام می‌پرداختند و برخلاف کارگزاران، مستقیماً با عموم مردم معامله نمی‌کردند، بلکه نرخ‌های خرید و فروش (Bid/Ask) را به کارگزاران اعلام می‌نمودند.",
     "takeaways_en": [
@@ -290888,15 +290888,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3118,
     "term_en": "Jobless Claims",
     "term_fa": "Jobless Claims",
     "letter": "J",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "Jobless claims is a high-frequency macroeconomic indicator published weekly by the US Department of Labor measuring the number of unemployed individuals filing initial claims for state unemployment insurance benefits.",
     "definition_fa": "شاخص مدعیان بیمه بیکاری گزارشی است که به صورت هفتگی توسط وزارت کار آمریکا منتشر می‌شود و تعداد افرادی را که برای نخستین بار فرم درخواست دریافت مستمری بیکاری پر کرده‌اند، شمارش می‌کند.",
     "takeaways_en": [
@@ -290929,7 +290929,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -291083,7 +291083,7 @@
     "term_en": "Jobs Growth",
     "term_fa": "Jobs رشد (Jobs Growth)",
     "letter": "J",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "Jobs growth refers to the net expansion in the total number of employed persons within a macroeconomic jurisdiction over a given monthly, quarterly, or annual reporting period.",
     "definition_fa": "رشد اشتغال به خالص افزایش در تعداد کل شاغلین و فرصت‌های شغلی ایجادشده در اقتصاد یک کشور طی دوره‌های ماهانه، فصلی یا سالانه گفته می‌شود که مهم‌ترین شاخص ارزیابی رونق یا انقباض چرخه اقتصادی است.",
     "takeaways_en": [
@@ -291118,7 +291118,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -291167,7 +291167,7 @@
     "term_en": "Johannesburg Interbank Average Rate (JIBAR)",
     "term_fa": "Johannesburg Interbank میانگین نرخ (JIBAR) (Johannesburg Interbank Average Rate (JIBAR))",
     "letter": "J",
-    "category": "بانکداری و خدمات مالی",
+    "category": "بانکداری، وام و اعتبارات",
     "definition_en": "The Johannesburg Interbank Average Rate (JIBAR) is the benchmark money market interest rate for the South African Rand (ZAR), calculated and published daily by the Johannesburg Stock Exchange (JSE) as the average rate at which primary South African banks lend unsecured funds to each other.",
     "definition_fa": "نرخ جیبار (JIBAR) نرخ بهره مرجع بازار پول آفریقای جنوبی برای رند (ZAR) است که روزانه توسط بورس ژوهانسبورگ بر اساس نرخ وام‌دهی بدون وثیقه بانک‌های تجاری تراز اول به یکدیگر محاسبه و منتشر می‌شود.",
     "takeaways_en": [
@@ -291200,15 +291200,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بانکداری و خدمات مالی",
-    "category_en": "Banking & Financial Services"
+    "category_fa": "بانکداری، وام و اعتبارات",
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3124,
     "term_en": "John B. Taylor",
     "term_fa": "John B. Taylor",
     "letter": "J",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "John B. Taylor is a renowned American monetary economist, Stanford University professor, and former Under Secretary of the Treasury, globally famous for formulating the 'Taylor Rule' in 1993—a seminal mathematical guideline dictating how central banks should systematically adjust interest rates in response to inflation gaps and output slack.",
     "definition_fa": "جان تیلور اقتصاددان برجسته آمریکایی، استاد دانشگاه استنفورد و مبدع «قاعده تیلور» در سال ۱۹۹۳ است؛ فرمولی ریاضی که مشخص می‌کند بانک‌های مرکزی باید نرخ بهره سیاستی را متناسب با شکاف تورم و شکاف تولید به چه میزانی تنظیم کنند.",
     "takeaways_en": [
@@ -291245,7 +291245,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -291253,7 +291253,7 @@
     "term_en": "John Bogle",
     "term_fa": "John Bogle",
     "letter": "J",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "John C. 'Jack' Bogle (1929–2019) was an American visionary investor and author who founded The Vanguard Group in 1974 and created the world's first retail index mutual fund in 1976 (the First Index Investment Trust, now Vanguard 500 Index Fund), revolutionizing low-cost passive investing for individual savers.",
     "definition_fa": "جان بوگل ملقب به جک بوگل بنیان‌گذار افسانه‌ای گروه ونگارد و پدر صندوق‌های سرمایه‌گذاری شاخصی است که در سال ۱۹۷۶ نخستین صندوق شاخصی جهان را تأسیس کرد و با حذف کارمزدهای سنگین مدیران وال‌استریت، انقلابی در سرمایه‌گذاری غیرفعال کم‌هزینه پدید آورد.",
     "takeaways_en": [
@@ -291286,8 +291286,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3126,
@@ -291373,14 +291373,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
-    "category_en": "Quantitative Methods & Financial Mathematics"
+    "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 3128,
     "term_en": "John R. Hicks",
     "term_fa": "John R. Hicks",
     "letter": "J",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "Sir John Richard Hicks (1904–1989) was a British economist who was awarded the 1972 Nobel Memorial Prize in Economic Sciences for his pioneering contributions to <a href=\"#term/general-equilibrium-theory\" class=\"internal-term-link\" data-slug=\"general-equilibrium-theory\">general equilibrium theory</a>, value theory, and the creation of the IS-LM model synthesizing Keynesian macroeconomics.",
     "definition_fa": "سر جان ریچارد هیکس اقتصاددان نام‌آور بریتانیایی و برنده نوبل اقتصاد در سال ۱۹۷۲ به خاطر نظریه تعادل عمومی، نظریه ارزش و به ویژه طراحی مدل معروف IS-LM بود که نظریات جان مینارد کینز را در قالب نموداری ساختاریافته از تعادل همزمان بازار کالا و بازار پول صورتبندی کرد.",
     "takeaways_en": [
@@ -291417,7 +291417,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -291425,7 +291425,7 @@
     "term_en": "John Stuart Mill",
     "term_fa": "John Stuart Mill",
     "letter": "J",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "John Stuart Mill (1806–1873) was a preeminent British philosopher, political economist, and civil servant whose 1848 treatise 'Principles of Political Economy' served as the definitive economic textbook of the 19th century, advocating classical trade theory, individual liberty, and utilitarian social reforms.",
     "definition_fa": "جان استوارت میل فیلسوف، اقتصاددان و نظریه‌پرداز نامدار بریتانیایی در قرن نوزدهم بود که کتاب مشهور او «اصول اقتصاد سیاسی» در سال ۱۸۴۸ به عنوان مرجع اصلی علم اقتصاد در جهان شناخته شد؛ او ضمن تبیین نظریه تجارت آزاد، عدالت اجتماعی و آزادی‌های فردی را با تحلیل‌های اقتصادی درآمیخت.",
     "takeaways_en": [
@@ -291458,7 +291458,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -291466,7 +291466,7 @@
     "term_en": "Joint",
     "term_fa": "Joint",
     "letter": "J",
-    "category": "بانکداری و خدمات مالی",
+    "category": "بانکداری، وام و اعتبارات",
     "definition_en": "Joint in legal, banking, and financial terminology describes an asset, liability, account, or contractual agreement shared equally or concurrently by two or more participating parties with indivisible rights and co-equal legal duties.",
     "definition_fa": "مشترک (Joint) در اصطلاحات حقوقی، بانکی و مالی به دارایی، بدهی، حساب بانکی یا قراردادی اطلاق می‌شود که میان دو یا چند شخص حقیقی یا حقوقی به طور مشترک منعقد شده و حقوق و تعهدات قانونی متقابلی برای همه طرف‌ها ایجاد می‌کند.",
     "takeaways_en": [
@@ -291499,8 +291499,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بانکداری و خدمات مالی",
-    "category_en": "Banking & Financial Services"
+    "category_fa": "بانکداری، وام و اعتبارات",
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3131,
@@ -291541,7 +291541,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
-    "category_en": "Banking, Loans & Credit"
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3132,
@@ -291586,7 +291586,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
-    "category_en": "Risk Management, Insurance & Actuarial"
+    "category_en": "Risk Management & Insurance"
   },
   {
     "id": 3133,
@@ -291627,7 +291627,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
-    "category_en": "Fixed Income & Debt Securities"
+    "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 3134,
@@ -291670,7 +291670,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
-    "category_en": "Banking, Loans & Credit"
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3135,
@@ -291711,7 +291711,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
-    "category_en": "Banking, Loans & Credit"
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3136,
@@ -291793,14 +291793,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
-    "category_en": "Risk Management, Insurance & Actuarial"
+    "category_en": "Risk Management & Insurance"
   },
   {
     "id": 3138,
     "term_en": "Joint Owned Property",
     "term_fa": "Joint Owned Property",
     "letter": "J",
-    "category": "املاک، مستغلات و مسکن",
+    "category": "املاک، مستغلات و تأمین مسکن",
     "definition_en": "Joint owned property is real estate, personal property, or financial assets held concurrently by two or more legal owners under defined legal tenancies such as Joint Tenancy, Tenancy in Common, or <a href=\"#term/tenancy-by-the-entirety\" class=\"internal-term-link\" data-slug=\"tenancy-by-the-entirety\">Tenancy by the Entirety</a>.",
     "definition_fa": "مال مشاع یا ملک دارای مالکیت مشترک به املاک، دارایی‌ها یا حساب‌هایی گفته می‌شود که همزمان در مالکیت دو یا چند نفر قرار دارد و سهم هر یک بر اساس ساختارهایی نظیر اشاعه، حق بقا یا مالکیت زوجین اداره می‌شود.",
     "takeaways_en": [
@@ -291833,8 +291833,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "املاک، مستغلات و مسکن",
-    "category_en": "Real Estate & Housing Markets"
+    "category_fa": "املاک، مستغلات و تأمین مسکن",
+    "category_en": "Real Estate & Mortgage Finance"
   },
   {
     "id": 3139,
@@ -293428,7 +293428,7 @@
     "term_en": "K-Percent Rule",
     "term_fa": "K-Percent Rule",
     "letter": "K",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "The K-Percent Rule is a monetary policy rule proposed by Nobel laureate Milton Friedman proposing that a central bank should increase the money supply by a constant, predictable annual percentage (k%) equal to the long-term rate of economic growth.",
     "definition_fa": "قاعده کا-درصد یک سیاست پولی پیشنهادی میلتون فریدمن، برنده نوبل اقتصاد است که بیان می‌کند بانک مرکزی باید عرضه پول را با نرخ رشد سالانه ثابت، مشخص و قابل پیش‌بینی (معادل k درصد) هماهنگ با رشد بالقوه اقتصادی افزایش دهد.",
     "takeaways_en": [
@@ -293461,7 +293461,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -293507,14 +293507,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
-    "category_en": "Quantitative Methods & Financial Mathematics"
+    "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 3168,
     "term_en": "Kagi Chart",
     "term_fa": "Kagi Chart",
     "letter": "K",
-    "category": "تحلیل تکنیکال و نموداری",
+    "category": "تحلیل تکنیکال و پرایس اکشن",
     "definition_en": "A Kagi chart is a Japanese technical charting method that tracks pure price action without regard to time, utilizing vertical lines of varying thickness connected by short horizontal inflection lines that flip when price reverses by a specified reversal threshold.",
     "definition_fa": "نمودار کاگی یک تکنیک نموداری سنتی ژاپنی در تحلیل تکنیکال است که زمان را نادیده گرفته و تنها نوسانات خالص قیمت را با خطوط عمودی نازک (یانگ) و ضخیم (یین) ثبت می‌کند که در صورت بازگشت قیمت از یک آستانه مشخص، تغییر جهت می‌دهند.",
     "takeaways_en": [
@@ -293547,7 +293547,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "تحلیل تکنیکال و نموداری",
+    "category_fa": "تحلیل تکنیکال و پرایس اکشن",
     "category_en": "Technical Analysis & Charting"
   },
   {
@@ -293555,7 +293555,7 @@
     "term_en": "Kairi Relative Index",
     "term_fa": "Kairi Relative شاخص (Kairi Relative Index)",
     "letter": "K",
-    "category": "تحلیل تکنیکال و نموداری",
+    "category": "تحلیل تکنیکال و پرایس اکشن",
     "definition_en": "The Kairi Relative Index (KRI) is a technical momentum oscillator developed in Japan that calculates the percentage deviation of an asset's current price from its <a href=\"#term/sma\" class=\"internal-term-link\" data-slug=\"sma\">simple moving average</a>, highlighting overbought and oversold conditions.",
     "definition_fa": "شاخص کایری (KRI) یک اسیلاتور تکنیکال ژاپنی است که درصد فاصله و انحراف قیمت جاری یک دارایی را از میانگین متحرک ساده آن محاسبه کرده و نواحی اشباع خرید و اشباع فروش را نمایان می‌سازد.",
     "takeaways_en": [
@@ -293592,7 +293592,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "تحلیل تکنیکال و نموداری",
+    "category_fa": "تحلیل تکنیکال و پرایس اکشن",
     "category_en": "Technical Analysis & Charting"
   },
   {
@@ -293787,7 +293787,7 @@
     "term_en": "Kangaroos",
     "term_fa": "Kangaroos",
     "letter": "K",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "Kangaroos is Wall Street trading slang used interchangeably to describe Australian stocks comprising the All Ordinaries index, foreign bonds issued in the Australian domestic market (Kangaroo Bonds), or colloquially the Australian dollar (AUD).",
     "definition_fa": "کانگوروها در ادبیات وال‌استریت و بازارهای مالی بین‌المللی اصطلاحی است که به سهام شاخص کل بازار بورس استرالیا، اوراق قرضه خارجی منتشره به دلار استرالیا (Kangaroo Bonds) یا خود دلار استرالیا (AUD) اطلاق می‌شود.",
     "takeaways_en": [
@@ -293820,8 +293820,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3174,
@@ -293895,7 +293895,7 @@
     "term_en": "Kazakhstan National Fund",
     "term_fa": "Kazakhstan National صندوق (Kazakhstan National Fund)",
     "letter": "K",
-    "category": "بانکداری و خدمات مالی",
+    "category": "بانکداری، وام و اعتبارات",
     "definition_en": "The National Fund of the Republic of Kazakhstan (NFRK) is a <a href=\"#term/sovereign_wealth_fund\" class=\"internal-term-link\" data-slug=\"sovereign_wealth_fund\">sovereign wealth fund</a> established in 2000 to manage windfall revenues from crude oil, natural gas, and mineral exports for intergenerational savings and fiscal stabilization.",
     "definition_fa": "صندوق ملی جمهوری قزاقستان یک صندوق ثروت ملی است که در سال ۲۰۰۰ برای جمع‌آوری و مدیریت درآمدهای حاصل از صادرات نفت، گاز و منابع معدنی با هدف تثبیت بودجه دولت و پس‌انداز برای نسل‌های آینده تأسیس شد.",
     "takeaways_en": [
@@ -293928,15 +293928,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بانکداری و خدمات مالی",
-    "category_en": "Banking & Financial Services"
+    "category_fa": "بانکداری، وام و اعتبارات",
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3176,
     "term_en": "KBW Bank Index",
     "term_fa": "KBW بانک شاخص (KBW Bank Index)",
     "letter": "K",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "The KBW Bank Index (BKX) is a benchmark equity index developed by Keefe, Bruyette & Woods tracking the stock performance of 24 prominent American national money-center banks and regional banking institutions.",
     "definition_fa": "شاخص بانکی KBW (با نماد BKX) یک شاخص تخصصی سهام در بازار سرمایه آمریکا است که توسط شرکت سرمایه‌گذاری کیف، برویت و وودز طراحی شده و عملکرد ۲۴ غول بانکی و نهادهای مالی منطقه‌ای پیشرو در وال‌استریت را رصد می‌کند.",
     "takeaways_en": [
@@ -293969,8 +293969,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3177,
@@ -294011,7 +294011,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
-    "category_en": "Banking, Loans & Credit"
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3178,
@@ -294179,7 +294179,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
-    "category_en": "Quantitative Methods & Financial Mathematics"
+    "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 3182,
@@ -294224,14 +294224,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
-    "category_en": "Risk Management, Insurance & Actuarial"
+    "category_en": "Risk Management & Insurance"
   },
   {
     "id": 3183,
     "term_en": "KES (Kenyan Shilling)",
     "term_fa": "KES (Kenyan Shilling)",
     "letter": "K",
-    "category": "ارزها و بازارهای فارکس",
+    "category": "تجارت بین‌الملل و فارکس (FX)",
     "definition_en": "The Kenyan Shilling (KES) is the official national currency of the Republic of Kenya, regulated by the Central Bank of Kenya (CBK) and functioning as the dominant economic anchor currency across East Africa.",
     "definition_fa": "شیلینگ کنیا (با کد ایزو KES) واحد پول رسمی کشور کنیا است که توسط بانک مرکزی کنیا انتشار یافته و به عنوان یکی از ارزهای تجاری و اقتصادی پیشرو در شرق آفریقا شناخته می‌شود.",
     "takeaways_en": [
@@ -294264,15 +294264,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "ارزها و بازارهای فارکس",
-    "category_en": "Currencies & Foreign Exchange"
+    "category_fa": "تجارت بین‌الملل و فارکس (FX)",
+    "category_en": "Forex & International Trade"
   },
   {
     "id": 3184,
     "term_en": "Key Currency",
     "term_fa": "Key Currency",
     "letter": "K",
-    "category": "ارزها و بازارهای فارکس",
+    "category": "تجارت بین‌الملل و فارکس (FX)",
     "definition_en": "A key currency is a globally dominant, stable, and highly liquid national currency that serves as a primary standard of value, medium of exchange, and reserve asset in international trade, foreign exchange markets, and central bank reserves.",
     "definition_fa": "ارز کلیدی به ارزهای پرقدرت، پایدار و با نقدشوندگی بسیار بالا (مانند دلار آمریکا و یورو) گفته می‌شود که به عنوان استاندارد جهانی مبادلات تجاری، تسویه حساب‌های بین‌المللی و ذخایر ارزی بانک‌های مرکزی به کار می‌روند.",
     "takeaways_en": [
@@ -294305,8 +294305,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "ارزها و بازارهای فارکس",
-    "category_en": "Currencies & Foreign Exchange"
+    "category_fa": "تجارت بین‌الملل و فارکس (FX)",
+    "category_en": "Forex & International Trade"
   },
   {
     "id": 3185,
@@ -294354,7 +294354,7 @@
     "term_en": "Key Money",
     "term_fa": "Key Money",
     "letter": "K",
-    "category": "املاک، مستغلات و مسکن",
+    "category": "املاک، مستغلات و تأمین مسکن",
     "definition_en": "Key money is an upfront, non-refundable cash payment made by a prospective commercial or residential tenant to a landlord or outgoing tenant to secure the right to lease a coveted commercial space or rent-controlled property.",
     "definition_fa": "حق کلید یا سرقفلی وجه نقد اولیه‌ای است که مستأجر علاوه بر اجاره‌بها، به موجر یا مستأجر قبلی می‌پردازد تا حق تقدم در تصرف یک ملک تجاری با موقعیت عالی را به دست آورد.",
     "takeaways_en": [
@@ -294387,15 +294387,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "املاک، مستغلات و مسکن",
-    "category_en": "Real Estate & Housing Markets"
+    "category_fa": "املاک، مستغلات و تأمین مسکن",
+    "category_en": "Real Estate & Mortgage Finance"
   },
   {
     "id": 3187,
     "term_en": "Key Rate",
     "term_fa": "Key نرخ (Key Rate)",
     "letter": "K",
-    "category": "بانکداری و خدمات مالی",
+    "category": "بانکداری، وام و اعتبارات",
     "definition_en": "The key rate (policy rate) is the benchmark interest rate set by a sovereign central bank—such as the Federal Reserve's Federal Funds Target Rate—that determines borrowing costs across the interbank system and macroeconomic economy.",
     "definition_fa": "نرخ بهره کلیدی نرخی سیاستی و مبنا است که توسط بانک مرکزی تعیین می‌شود (نظیر نرخ وجوه فدرال در آمریکا) و هزینه استقراض بین‌بانکی و نرخ‌های بهره سراسر اقتصاد را هدایت می‌کند.",
     "takeaways_en": [
@@ -294428,8 +294428,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بانکداری و خدمات مالی",
-    "category_en": "Banking & Financial Services"
+    "category_fa": "بانکداری، وام و اعتبارات",
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3188,
@@ -294591,7 +294591,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "کالاها، انرژی و فلزات گرانبها",
-    "category_en": "Commodities, Energy & Precious Metals"
+    "category_en": "Commodities, Energy & Metals"
   },
   {
     "id": 3190,
@@ -294632,14 +294632,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
-    "category_en": "Banking, Loans & Credit"
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3191,
     "term_en": "Kicker Pattern",
     "term_fa": "Kicker الگو / پترن (Kicker Pattern)",
     "letter": "K",
-    "category": "تحلیل تکنیکال و نموداری",
+    "category": "تحلیل تکنیکال و پرایس اکشن",
     "definition_en": "A kicker pattern is an exceptionally reliable two-bar Japanese candlestick reversal pattern characterized by a sharp gap in price between two candles of opposite color with no overlapping shadows, signaling a dramatic, sudden shift in market sentiment.",
     "definition_fa": "الگوی کیکر یکی از قدرتمندترین الگوهای دو کندلی بازگشتی در تحلیل تکنیکال است که در آن کندل دوم با یک شکاف قیمتی (گپ) قوی نسبت به کندل قبلی و در جهت کاملاً معکوس باز شده و بدون هیچ هم‌پوشانی بسته می‌شود.",
     "takeaways_en": [
@@ -294672,7 +294672,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "تحلیل تکنیکال و نموداری",
+    "category_fa": "تحلیل تکنیکال و پرایس اکشن",
     "category_en": "Technical Analysis & Charting"
   },
   {
@@ -294721,7 +294721,7 @@
     "term_en": "Kijun Line (Base Line)",
     "term_fa": "Kijun Line (Base Line)",
     "letter": "K",
-    "category": "تحلیل تکنیکال و نموداری",
+    "category": "تحلیل تکنیکال و پرایس اکشن",
     "definition_en": "The Kijun Line (Kijun-sen), or Base Line, is a foundational component of the Japanese Ichimoku Kinko Hyo technical indicator, calculated as the midpoint of the highest high and lowest low over the past 26 trading periods.",
     "definition_fa": "خط کیجون (کیجون‌سن) یا خط پایه یکی از ستون‌های اصلی سیستم ایچیموکو در تحلیل تکنیکال است که با محاسبه نقطه میانی بالاترین سقف و پایین‌ترین کف قیمتی در ۲۶ دوره گذشته به دست می‌آید و روند میان‌مدت و تعادل بازار را نشان می‌دهد.",
     "takeaways_en": [
@@ -294758,7 +294758,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "تحلیل تکنیکال و نموداری",
+    "category_fa": "تحلیل تکنیکال و پرایس اکشن",
     "category_en": "Technical Analysis & Charting"
   },
   {
@@ -294766,7 +294766,7 @@
     "term_en": "Kijun-Sen (Base Line)",
     "term_fa": "Kijun-Sen (Base Line)",
     "letter": "K",
-    "category": "تحلیل تکنیکال و نموداری",
+    "category": "تحلیل تکنیکال و پرایس اکشن",
     "definition_en": "Kijun-Sen is the Japanese term for the Base Line in Ichimoku Kinko Hyo charting, reflecting the true medium-term price equilibrium and prevailing trend direction based on the midpoint of the 26-period range.",
     "definition_fa": "کیجون‌سن عنوان ژاپنی خط پایه در سیستم معاملاتی ایچیموکو است که تعادل میان‌مدت و تمایلات حرکتی بازار را از طریق محاسبه میانه دامنه نوسان ۲۶ کندل اخیر مشخص می‌سازد.",
     "takeaways_en": [
@@ -294799,7 +294799,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "تحلیل تکنیکال و نموداری",
+    "category_fa": "تحلیل تکنیکال و پرایس اکشن",
     "category_en": "Technical Analysis & Charting"
   },
   {
@@ -295128,7 +295128,7 @@
     "term_en": "Kin",
     "term_fa": "Kin",
     "letter": "K",
-    "category": "بلاکچین، ارز دیجیتال و رمزدارایی‌ها",
+    "category": "ارزهای دیجیتال و بلاک‌چین",
     "definition_en": "Kin is a cryptocurrency token created in 2017 by messaging app developer Kik Interactive designed as an in-app microtransaction currency to monetize content, gaming, and consumer engagement across mobile applications.",
     "definition_fa": "کین (Kin) یک رمزارز است که در سال ۲۰۱۷ توسط شرکت پیام‌رسان کیک (Kik) بر بستر بلاکچین ایجاد شد تا به عنوان واحد پول خرد درون‌برنامه‌ای برای پاداش‌دهی به کاربران، بازی‌ها و خرید محتوای دیجیتال استفاده شود.",
     "takeaways_en": [
@@ -295161,15 +295161,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بلاکچین، ارز دیجیتال و رمزدارایی‌ها",
-    "category_en": "Blockchain, Crypto & Digital Assets"
+    "category_fa": "ارزهای دیجیتال و بلاک‌چین",
+    "category_en": "Cryptocurrency & Blockchain"
   },
   {
     "id": 3199,
     "term_en": "Kiwi",
     "term_fa": "Kiwi",
     "letter": "K",
-    "category": "ارزها و بازارهای فارکس",
+    "category": "تجارت بین‌الملل و فارکس (FX)",
     "definition_en": "Kiwi is the ubiquitous foreign exchange trading nickname for the New Zealand dollar (NZD), named after the flightless national bird depicted on the reverse side of New Zealand's one-dollar coin.",
     "definition_fa": "کیوی اصطلاح پرکاربرد در بازارهای جهانی فارکس برای اشاره به دلار نیوزیلند (NZD) است که نام آن از پرنده ملی و نماد نیوزیلند حک‌شده بر روی سکه یک‌دلاری این کشور برگرفته شده است.",
     "takeaways_en": [
@@ -295202,8 +295202,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "ارزها و بازارهای فارکس",
-    "category_en": "Currencies & Foreign Exchange"
+    "category_fa": "تجارت بین‌الملل و فارکس (FX)",
+    "category_en": "Forex & International Trade"
   },
   {
     "id": 3200,
@@ -295244,14 +295244,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
-    "category_en": "Fixed Income & Debt Securities"
+    "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 3201,
     "term_en": "KMF",
     "term_fa": "KMF",
     "letter": "K",
-    "category": "ارزها و بازارهای فارکس",
+    "category": "تجارت بین‌الملل و فارکس (FX)",
     "definition_en": "KMF is the currency code for the Comorian Franc, the official legal tender of the Union of the Comoros, historically pegged to the French Franc and currently pegged to the Euro under regional monetary agreements.",
     "definition_fa": "فرانک کومور (با کد KMF) واحد پول رسمی کشور مجمع‌الجزایر قمر است که طبق توافقات پولی بین‌المللی دارای نرخ برابری ثابت و پگ‌شده به یورو است.",
     "takeaways_en": [
@@ -295284,8 +295284,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "ارزها و بازارهای فارکس",
-    "category_en": "Currencies & Foreign Exchange"
+    "category_fa": "تجارت بین‌الملل و فارکس (FX)",
+    "category_en": "Forex & International Trade"
   },
   {
     "id": 3202,
@@ -295374,7 +295374,7 @@
     "term_en": "Knuckle-Buster",
     "term_fa": "Knuckle-Buster",
     "letter": "K",
-    "category": "بانکداری و خدمات مالی",
+    "category": "بانکداری، وام و اعتبارات",
     "definition_en": "A knuckle-buster is legacy banking slang for the mechanical credit card imprinter machine used by merchants before electronic point-of-sale (POS) terminals, so named because cashiers frequently scraped their knuckles sliding the physical metal roller over embossed cards.",
     "definition_fa": "ناکل-باستر (دستگاه اتوی دستی) اصطلاحی در صنعت بانکداری برای دستگاه‌های مکانیکی قدیمی ثبت تراکنش کارت اعتباری است که با غلتک فیزیکی، شماره‌های برجسته کارت را روی کاغذهای کاربن کپی می‌کرد؛ نام آن به این دلیل است که دست اپراتور هنگام کشیدن غلتک به لبه‌های فلزی ساییده می‌شد.",
     "takeaways_en": [
@@ -295407,8 +295407,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بانکداری و خدمات مالی",
-    "category_en": "Banking & Financial Services"
+    "category_fa": "بانکداری، وام و اعتبارات",
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3205,
@@ -295540,7 +295540,7 @@
     "term_en": "Kondratieff Wave",
     "term_fa": "Kondratieff Wave",
     "letter": "K",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "The Kondratieff Wave (K-Wave or supercycle) is a hypothesized 40-to-60-year economic cycle proposed by Soviet economist Nikolai Kondratiev, characterized by successive waves of technological innovation, rapid capital expansion, financial speculation, and structural recession.",
     "definition_fa": "موج کندراتیف (سوپرسایکل یا چرخه‌های K) نظریه‌ای در اقتصاد کلان است که توسط نیکلای کندراتیف تبیین شد و بیان می‌کند اقتصادهای صنعتی مدرن چرخه‌های بلندمدت ۴۰ تا ۶۰ ساله‌ای از انقلاب‌های فناوری، رونق زیرساختی، اشباع بدهی و نهایتاً تعدیل رکودی را تجربه می‌کنند.",
     "takeaways_en": [
@@ -295573,7 +295573,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -295581,7 +295581,7 @@
     "term_en": "Kondratiev Wave",
     "term_fa": "Kondratiev Wave",
     "letter": "K",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "Kondratiev waves describe the macro-historical phenomenon of long-duration 50-year structural economic cycles driven by capital accumulation, infrastructure buildouts, commodity supercycles, and subsequent global financial resets.",
     "definition_fa": "چرخه کندراتیف پدیده‌ای تاریخی در تحلیل اقتصاد کلان است که چرخه‌های تقریباً نیم‌قرنی سرمایه‌گذاری‌های سنگین زیربنایی، اوج‌گیری قیمت کالاها و اصلاحات عمیق اقتصادی را مدل‌سازی می‌کند.",
     "takeaways_en": [
@@ -295614,7 +295614,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -295622,7 +295622,7 @@
     "term_en": "Korea Investment Corporation",
     "term_fa": "Korea Investment شرکت سهامی (Korea Investment Corporation)",
     "letter": "K",
-    "category": "بانکداری و خدمات مالی",
+    "category": "بانکداری، وام و اعتبارات",
     "definition_en": "The Korea Investment Corporation (KIC) is the <a href=\"#term/sovereign_wealth_fund\" class=\"internal-term-link\" data-slug=\"sovereign_wealth_fund\">sovereign wealth fund</a> of the Republic of Korea, established in 2005 to preserve and grow the nation's <a href=\"#term/foreign-exchange-reserves\" class=\"internal-term-link\" data-slug=\"foreign-exchange-reserves\">foreign exchange reserves</a> through globally diversified investments in public equities, fixed income, real estate, and private equity.",
     "definition_fa": "شرکت سرمایه‌گذاری کره (KIC) صندوق ثروت ملی جمهوری کره جنوبی است که در سال ۲۰۰۵ با هدف صیانت و رشد ذخایر ارزی کشور از طریق سرمایه‌گذاری بین‌المللی در سهام، اوراق قرضه و دارایی‌های جایگزین تأسیس شد.",
     "takeaways_en": [
@@ -295655,15 +295655,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بانکداری و خدمات مالی",
-    "category_en": "Banking & Financial Services"
+    "category_fa": "بانکداری، وام و اعتبارات",
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3209,
     "term_en": "Korea Stock Exchange (KSC)",
     "term_fa": "Korea سهام بورس / صرافی (KSC) (Korea Stock Exchange (KSC))",
     "letter": "K",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "The Korea Exchange (KRX), formerly the Korea Stock Exchange (KSC), is the sole securities and derivatives exchange operator in South Korea, headquartered in Busan, hosting global tech titans and the benchmark KOSPI index.",
     "definition_fa": "بورس کره (KRX که قبلاً KSC نامیده می‌شد) تنها اپراتور رسمی معاملات بورس و ابزارهای مشتقه در کره جنوبی است که غول‌های فناوری آسیا (مانند سامسونگ و هیوندای) در آن لیست شده و شاخص معیار KOSPI را میزبانی می‌کند.",
     "takeaways_en": [
@@ -295696,8 +295696,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3210,
@@ -295738,14 +295738,14 @@
     ],
     "deep_enriched": true,
     "category_fa": "کالاها، انرژی و فلزات گرانبها",
-    "category_en": "Commodities, Energy & Precious Metals"
+    "category_en": "Commodities, Energy & Metals"
   },
   {
     "id": 3211,
     "term_en": "KSOP",
     "term_fa": "KSOP",
     "letter": "K",
-    "category": "قوانین و صورت‌های مالی",
+    "category": "مالیات، حقوق مالی و مقررات",
     "definition_en": "A KSOP is a qualified hybrid retirement savings plan that combines the features of a 401(k) salary deferral plan with an <a href=\"#term/esop\" class=\"internal-term-link\" data-slug=\"esop\">Employee Stock Ownership Plan</a> (ESOP), allowing corporate employees to hold company shares alongside diversified mutual funds.",
     "definition_fa": "طرح KSOP یک ساختار ترکیبی از مزایای بازنشستگی پرسنل است که ویژگی‌های برنامه پس‌انداز بازنشستگی 401(k) را با طرح سهامداری کارمندان (ESOP) تلفیق کرده و به کارکنان اجازه می‌دهد سهام شرکت کارفرما را با مزایای مالیاتی پس‌انداز کنند.",
     "takeaways_en": [
@@ -295778,15 +295778,15 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "قوانین و صورت‌های مالی",
-    "category_en": "Financial Regulations & Reporting"
+    "category_fa": "مالیات، حقوق مالی و مقررات",
+    "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 3212,
     "term_en": "Kuala Lumpur Stock Exchange (KLS)",
     "term_fa": "Kuala Lumpur سهام بورس / صرافی (KLS) (Kuala Lumpur Stock Exchange (KLS))",
     "letter": "K",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "The Kuala Lumpur Stock Exchange (KLSE), now officially known as Bursa Malaysia, is the primary securities exchange of Malaysia, internationally recognized as a pioneering global hub for Islamic finance, Sukuk listings, and Shariah-compliant equities.",
     "definition_fa": "بورس کوالالامپور (که امروزه با نام بورسا مالزی شناخته می‌شود) بازار بورس اوراق بهادار رسمی کشور مالزی است که به عنوان یکی از قطب‌های برتر و پیشگام جهان در تأمین مالی اسلامی، انتشار اوراق صکوک و سهام منطبق با شریعت شهرت دارد.",
     "takeaways_en": [
@@ -295819,8 +295819,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3213,
@@ -401311,7 +401311,7 @@
     "term_en": "W-Shaped Recovery",
     "term_fa": "W-Shaped Recovery",
     "letter": "W",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "A W-shaped recovery is an economic cycle pattern characterized by an economy falling into recession, rebounding sharply for a brief period, falling back into a second recession, and finally recovering sustainably—often referred to as a double-dip recession.",
     "definition_fa": "بهبود W شکل الگویی از چرخه اقتصادی است که در آن اقتصاد دچار رکود شده، سپس به سرعت و به طور موقت رونق نسبی می‌گیرد، مجدداً وارد رکود دوم می‌شود و نهایتاً به رشد پایدار می‌رسد که به آن رکود دوگانه نیز می‌گویند.",
     "takeaways_en": [
@@ -401344,7 +401344,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -401386,7 +401386,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
-    "category_en": "Banking, Loans & Credit"
+    "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 5835,
@@ -401500,7 +401500,7 @@
     "term_en": "Wage Expense",
     "term_fa": "Wage Expense",
     "letter": "W",
-    "category": "حسابداری و استانداردهای مالی",
+    "category": "حسابداری و صورت‌های مالی",
     "definition_en": "Wage expense represents the total aggregate cost incurred by a business entity to compensate hourly employees, contractors, and production personnel during an accounting period.",
     "definition_fa": "هزینه دستمزد بیانگر کل هزینه‌هایی است که یک واحد تجاری در طول یک دوره مالی برای جبران خدمات کارکنان ساعتی، فریلنسرها و نیروهای تولیدی خود پرداخت می‌کند.",
     "takeaways_en": [
@@ -401533,8 +401533,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "حسابداری و استانداردهای مالی",
-    "category_en": "Accounting & Financial Standards"
+    "category_fa": "حسابداری و صورت‌های مالی",
+    "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 5837,
@@ -401734,7 +401734,7 @@
     "term_en": "Wage Push Inflation",
     "term_fa": "Wage Push تورم (Wage Push Inflation)",
     "letter": "W",
-    "category": "اقتصاد کلان و سیاست‌های پولی",
+    "category": "اقتصاد کلان و سیاست پولی",
     "definition_en": "Wage-push inflation is a form of cost-push inflation where aggregate real wages rise faster than labor productivity, forcing employers to raise prices on goods and services to maintain profit margins.",
     "definition_fa": "تورم ناشی از فشار دستمزد نوعی از تورم فشار هزینه است که در آن دستمزدهای واقعی سریع‌تر از بهره‌وری نیروی کار افزایش می‌یابند و کارفرمایان را مجبور می‌سازند برای حفظ حاشیه سود خود، قیمت کالاها و خدمات را افزایش دهند.",
     "takeaways_en": [
@@ -401767,7 +401767,7 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "اقتصاد کلان و سیاست‌های پولی",
+    "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
@@ -401809,7 +401809,7 @@
     ],
     "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
-    "category_en": "Risk Management, Insurance & Actuarial"
+    "category_en": "Risk Management & Insurance"
   },
   {
     "id": 5840,
@@ -402358,7 +402358,7 @@
     "term_en": "Waiver of Notice",
     "term_fa": "اسقاط حق of Notice (Waiver of Notice)",
     "letter": "W",
-    "category": "قوانین و صورت‌های مالی",
+    "category": "مالیات، حقوق مالی و مقررات",
     "definition_en": "A waiver of notice is a legal corporate document in which directors, shareholders, or committee members formally relinquish their statutory right to advance formal notification before a corporate meeting.",
     "definition_fa": "انصراف از اخطار رسمی یک سند حقوقی شرکتی است که در آن اعضای هیئت‌مدیره، سهامداران یا اعضای کمیته‌ها رسماً از حق قانونی خود مبنی بر دریافت دعوت‌نامه رسمی قبلی برای تشکیل جلسه صرف‌نظر می‌کنند.",
     "takeaways_en": [
@@ -402391,8 +402391,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "قوانین و صورت‌های مالی",
-    "category_en": "Financial Regulations & Reporting"
+    "category_fa": "مالیات، حقوق مالی و مقررات",
+    "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 5845,
@@ -405513,7 +405513,7 @@
     "term_en": "Warranty",
     "term_fa": "Warranty",
     "letter": "W",
-    "category": "قوانین و صورت‌های مالی",
+    "category": "مالیات، حقوق مالی و مقررات",
     "definition_en": "A warranty is a legally binding guarantee issued by a manufacturer, seller, or service provider assuring the purchaser that the good or service meets specified quality, durability, and performance benchmarks.",
     "definition_fa": "ضمانت‌نامه (گارانتی) یک تعهد الزام‌آور قانونی است که توسط سازنده، فروشنده یا ارائه‌دهنده خدمت صادر می‌شود و به خریدار اطمینان می‌دهد کالا یا خدمت از کیفیت، دوام و استانداردهای عملکردی مشخصی برخوردار است.",
     "takeaways_en": [
@@ -405546,8 +405546,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "قوانین و صورت‌های مالی",
-    "category_en": "Financial Regulations & Reporting"
+    "category_fa": "مالیات، حقوق مالی و مقررات",
+    "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 5872,
@@ -414486,7 +414486,7 @@
     "term_en": "Whisper Stock",
     "term_fa": "Whisper سهام (Whisper Stock)",
     "letter": "W",
-    "category": "بورس، سهام و بازار سرمایه",
+    "category": "بازار سهام و معاملات",
     "definition_en": "A whisper stock refers to the equity shares of a company that experiences substantial speculative trading activity driven by circulating rumors, unannounced corporate developments, or leaked earnings forecasts.",
     "definition_fa": "سهم شایعه‌شده به سهام شرکتی اطلاق می‌شود که معاملات آن بر اثر شایعات تأییدنشده، اخبار ادغام یا پیش‌بینی‌های غیررسمی درز کرده از درآمد شرکت (ارقام نجوا)، دستخوش نوسان و رفتارهای سوداگرانه شدید می‌شود.",
     "takeaways_en": [
@@ -414519,8 +414519,8 @@
       }
     ],
     "deep_enriched": true,
-    "category_fa": "بورس، سهام و بازار سرمایه",
-    "category_en": "Stock Markets & Securities"
+    "category_fa": "بازار سهام و معاملات",
+    "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 5939,
