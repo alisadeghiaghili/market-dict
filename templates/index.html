@@ -130,6 +130,73 @@
             background-color: rgba(16, 185, 129, 0.24);
         }
 
+        /* Persistent Text Highlight System */
+        .md-highlight {
+            border-radius: 4px;
+            padding: 1px 3px;
+            margin: 0 -1px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+        .md-highlight:hover {
+            filter: brightness(0.92);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+        }
+        /* Yellow (Default) */
+        .md-highlight-yellow {
+            background-color: #fef08a;
+            color: #713f12;
+        }
+        .dark .md-highlight-yellow {
+            background-color: rgba(234, 179, 8, 0.35);
+            color: #fef08a;
+            border-bottom: 2px solid #eab308;
+        }
+        /* Emerald / Green */
+        .md-highlight-emerald {
+            background-color: #bbf7d0;
+            color: #14532d;
+        }
+        .dark .md-highlight-emerald {
+            background-color: rgba(16, 185, 129, 0.35);
+            color: #a7f3d0;
+            border-bottom: 2px solid #10b981;
+        }
+        /* Blue / Sky */
+        .md-highlight-blue {
+            background-color: #bae6fd;
+            color: #0c4a6e;
+        }
+        .dark .md-highlight-blue {
+            background-color: rgba(14, 165, 233, 0.35);
+            color: #bae6fd;
+            border-bottom: 2px solid #0ea5e9;
+        }
+        /* Purple / Violet */
+        .md-highlight-purple {
+            background-color: #f5d0fe;
+            color: #581c87;
+        }
+        .dark .md-highlight-purple {
+            background-color: rgba(168, 85, 247, 0.35);
+            color: #f5d0fe;
+            border-bottom: 2px solid #a855f7;
+        }
+        /* Amber / Orange */
+        .md-highlight-amber {
+            background-color: #fed7aa;
+            color: #7c2d12;
+        }
+        .dark .md-highlight-amber {
+            background-color: rgba(249, 115, 22, 0.35);
+            color: #fed7aa;
+            border-bottom: 2px solid #f97316;
+        }
+
         /* High-Precision Math Formula Window Styling */
         .formula-window {
             direction: ltr !important;
@@ -404,6 +471,15 @@
                     <span id="recentsCountBadge" class="bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
                 </button>
 
+                <!-- Highlights Filter Toggle -->
+                <button id="highlightsBtn" onclick="toggleHighlightsFilter()" title="اصطلاحات دارای متن هایلایت‌شده" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
+                    <svg id="hlNavIcon" class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                    <span class="hidden md:inline">هایلایت‌ها</span>
+                    <span id="highlightsCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
+                </button>
+
                 <!-- Theme Cycle Button (System Default -> Light -> Dark) -->
                 <button id="themeCycleBtn" onclick="cycleTheme()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95" title="تغییر حالت نمایش (سیستم / روشن / تاریک)">
                     <!-- System Icon (Monitor) -->
@@ -654,6 +730,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                         </svg>
                     </button>
+                    <!-- Modal Highlight Notes Button -->
+                    <button id="modalHighlightBtn" onclick="toggleModalHighlightsDrawer()" class="p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 transition border border-slate-200 dark:border-slate-700 relative flex items-center justify-center" title="مدیریت هایلایت‌های این اصطلاح">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                        </svg>
+                        <span id="modalHighlightCountBadge" class="hidden absolute -top-1 -right-1 text-[9px] font-bold px-1.5 py-0.2 rounded-full bg-amber-500 text-white min-w-[16px] text-center">0</span>
+                    </button>
                     <button onclick="closeModal()" class="p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-300 transition border border-slate-200 dark:border-slate-700">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -678,8 +761,29 @@
                 </div>
             </div>
 
+            <!-- Highlights Drawer inside Modal -->
+            <div id="modalHighlightsDrawer" class="hidden border-b border-slate-200 dark:border-slate-800 bg-amber-50/70 dark:bg-amber-950/20 p-4 transition-all">
+                <div class="flex items-center justify-between pb-2 mb-2 border-b border-amber-200/60 dark:border-amber-900/40">
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm">🖍️</span>
+                        <span class="text-xs font-bold text-amber-900 dark:text-amber-300">بخش‌های هایلایت‌شده در این اصطلاح:</span>
+                        <span id="modalHighlightsDrawerCount" class="text-[11px] font-bold px-2 py-0.5 rounded-md bg-amber-200 dark:bg-amber-900/60 text-amber-900 dark:text-amber-300">۰</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="clearAllTermHighlights()" class="text-[11px] font-medium text-rose-600 dark:text-rose-400 hover:underline">
+                            پاک کردن همه هایلایت‌ها
+                        </button>
+                        <button type="button" onclick="toggleModalHighlightsDrawer(false)" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 font-bold">
+                            ✕
+                        </button>
+                    </div>
+                </div>
+                <div id="modalHighlightsDrawerList" class="space-y-2 max-h-48 overflow-y-auto pr-1">
+                </div>
+            </div>
+
             <!-- Modal Content (Scrollable) -->
-            <div class="p-5 sm:p-6 overflow-y-auto space-y-6 flex-1 bg-white dark:bg-slate-900">
+            <div id="modalContentArea" class="p-5 sm:p-6 overflow-y-auto space-y-6 flex-1 bg-white dark:bg-slate-900 relative">
 
                 <!-- 1. Key Takeaways Box (نکات کلیدی) -->
                 <div id="modalTakeawaysBox" class="bg-amber-500/10 dark:bg-amber-950/40 p-5 rounded-2xl border border-amber-300/80 dark:border-amber-800/60 space-y-2.5">
@@ -867,6 +971,41 @@
         </div>
     </div>
 
+    <!-- Floating Highlighter Selection Toolbar -->
+    <div id="highlightFloatingToolbar" class="fixed z-[70] hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-2xl px-3 py-2 flex items-center gap-2 transform -translate-x-1/2 transition-opacity duration-150 backdrop-blur-md">
+        <div class="flex items-center gap-1.5 pl-2 border-l border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300">
+            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+            <span class="hidden sm:inline">هایلایت:</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('yellow')" title="هایلایت زرد" class="w-6 h-6 rounded-full bg-yellow-300 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('emerald')" title="هایلایت سبز" class="w-6 h-6 rounded-full bg-emerald-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('blue')" title="هایلایت آبی" class="w-6 h-6 rounded-full bg-sky-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('purple')" title="هایلایت بنفش" class="w-6 h-6 rounded-full bg-purple-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('amber')" title="هایلایت نارنجی" class="w-6 h-6 rounded-full bg-amber-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+        </div>
+    </div>
+
+    <!-- Existing Highlight Action Popover -->
+    <div id="highlightActionPopover" class="fixed z-[70] hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-2xl p-2 flex items-center gap-2 transform -translate-x-1/2 transition-all duration-150">
+        <div class="flex items-center gap-1">
+            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('yellow')" title="تغییر به زرد" class="w-5 h-5 rounded-full bg-yellow-300 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('emerald')" title="تغییر به سبز" class="w-5 h-5 rounded-full bg-emerald-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('blue')" title="تغییر به آبی" class="w-5 h-5 rounded-full bg-sky-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('purple')" title="تغییر به بنفش" class="w-5 h-5 rounded-full bg-purple-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('amber')" title="تغییر به نارنجی" class="w-5 h-5 rounded-full bg-amber-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+        </div>
+        <div class="h-4 w-px bg-slate-200 dark:bg-slate-700"></div>
+        <button type="button" onmousedown="event.preventDefault()" onclick="deleteCurrentHighlight()" class="px-2 py-1 rounded-lg bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-600 dark:text-rose-400 text-xs font-semibold flex items-center gap-1 transition" title="حذف این هایلایت">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+            <span>حذف</span>
+        </button>
+    </div>
+
     <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
         <div class="bg-slate-900 dark:bg-slate-800 text-white px-4 py-2.5 rounded-xl shadow-lg border border-slate-700 flex items-center gap-2 text-sm">
@@ -882,6 +1021,7 @@
         let currentCategory = 'ALL';
         let currentPage = 1;
         let onlyFavorites = false;
+        let onlyRecents = false;
         let activeModalTerm = null;
         let currentViewMode = 'fa'; // 'fa', 'en', 'both'
         let debounceTimer = null;
@@ -898,6 +1038,28 @@
         } catch (e) {
             favorites = [];
         }
+
+        let recentTerms = [];
+        try {
+            const rawRecents = JSON.parse(localStorage.getItem('marketdict_recent_terms') || '[]');
+            if (Array.isArray(rawRecents)) {
+                recentTerms = rawRecents.filter(item => item && (item.id || item.slug));
+            }
+        } catch (e) {
+            recentTerms = [];
+        }
+
+        let onlyHighlights = false;
+        let highlights = [];
+        try {
+            const rawHls = JSON.parse(localStorage.getItem('marketdict_highlights') || '[]');
+            if (Array.isArray(rawHls)) {
+                highlights = rawHls.filter(h => h && h.termKey && h.exact);
+            }
+        } catch (e) {
+            highlights = [];
+        }
+
         let categoriesCollapsed = false;
         let alphabetCollapsed = false;
 
@@ -905,18 +1067,53 @@
             initTheme();
             initFiltersCollapse();
             updateFavoritesCount();
+            updateRecentsUI();
+            updateHighlightsCount();
             loadStats();
             loadLetters();
             loadCategories();
             loadTerms();
             checkUrlHash();
 
+            // Text selection events for persistent highlighter
+            document.addEventListener('selectionchange', () => {
+                const sel = window.getSelection();
+                if (!sel || sel.isCollapsed || !sel.toString().trim()) {
+                    hideSelectionToolbar();
+                }
+            });
+            document.addEventListener('mouseup', handleTextSelection);
+            document.addEventListener('touchend', handleTextSelection);
+
+            const contentArea = document.getElementById('modalContentArea');
+            if (contentArea) {
+                contentArea.addEventListener('scroll', () => {
+                    hideSelectionToolbar();
+                    const popover = document.getElementById('highlightActionPopover');
+                    if (popover) popover.classList.add('hidden');
+                }, { passive: true });
+            }
+
+            document.addEventListener('mousedown', (e) => {
+                if (!e.target.closest('#highlightActionPopover') && !e.target.closest('.md-highlight')) {
+                    const popover = document.getElementById('highlightActionPopover');
+                    if (popover) popover.classList.add('hidden');
+                }
+            });
+
             window.addEventListener('keydown', (e) => {
                 if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                     e.preventDefault();
                     document.getElementById('searchInput').focus();
                 }
-                if (e.key === 'Escape') closeModal();
+                if (e.key === 'Escape') {
+                    const recentsModal = document.getElementById('recentsModal');
+                    if (recentsModal && !recentsModal.classList.contains('hidden')) {
+                        closeRecentsModal();
+                    } else {
+                        closeModal();
+                    }
+                }
             });
 
             // Global Interceptor for internal term links
@@ -1069,6 +1266,11 @@
 
         function toggleFavoritesFilter() {
             onlyFavorites = !onlyFavorites;
+            if (onlyFavorites && onlyRecents) {
+                onlyRecents = false;
+                const rBtn = document.getElementById('recentsBtn');
+                if (rBtn) rBtn.classList.remove('ring-2', 'ring-emerald-400', 'bg-emerald-50', 'dark:bg-emerald-950/40');
+            }
             searchCache.clear();
             const btn = document.getElementById('favoritesBtn');
             const icon = document.getElementById('favIcon');
@@ -1084,6 +1286,302 @@
             loadTerms();
         }
 
+        function toggleRecentsFilter() {
+            onlyRecents = !onlyRecents;
+            if (onlyRecents && onlyFavorites) {
+                onlyFavorites = false;
+                const favBtn = document.getElementById('favoritesBtn');
+                const favIcon = document.getElementById('favIcon');
+                if (favBtn) favBtn.classList.remove('ring-2', 'ring-amber-400', 'bg-amber-50', 'dark:bg-amber-950/40');
+                if (favIcon) favIcon.classList.remove('fill-amber-400');
+            }
+            searchCache.clear();
+            const btn = document.getElementById('recentsBtn');
+            if (btn) {
+                if (onlyRecents) {
+                    btn.classList.add('ring-2', 'ring-emerald-400', 'bg-emerald-50', 'dark:bg-emerald-950/40');
+                } else {
+                    btn.classList.remove('ring-2', 'ring-emerald-400', 'bg-emerald-50', 'dark:bg-emerald-950/40');
+                }
+            }
+            updateFilterBadges();
+            currentPage = 1;
+            loadTerms();
+        }
+
+        function applyRecentsFilterToMainGrid() {
+            closeRecentsModal();
+            if (!onlyRecents) {
+                toggleRecentsFilter();
+            }
+            const target = document.getElementById('termsGrid');
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function updateRecentsUI() {
+            const count = recentTerms.length;
+            const badge = document.getElementById('recentsCountBadge');
+            if (badge) badge.innerText = count.toLocaleString('fa-IR');
+
+            const modalBadge = document.getElementById('recentsModalCountBadge');
+            if (modalBadge) modalBadge.innerText = `${count.toLocaleString('fa-IR')} واژه`;
+
+            const chipsCount = document.getElementById('recentChipsCount');
+            if (chipsCount) chipsCount.innerText = count.toLocaleString('fa-IR');
+
+            const recentBar = document.getElementById('recentBar');
+            const chipsList = document.getElementById('recentChipsList');
+
+            if (recentBar && chipsList) {
+                if (count === 0) {
+                    recentBar.classList.add('hidden');
+                } else {
+                    recentBar.classList.remove('hidden');
+                    const topItems = recentTerms.slice(0, 8);
+                    chipsList.innerHTML = topItems.map(item => {
+                        const safeSlug = (item.slug || item.id || '').replace(/'/g, "\\'");
+                        return `
+                            <div class="group/chip inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 text-slate-700 dark:text-slate-200 hover:text-emerald-700 dark:hover:text-emerald-300 border border-slate-200 dark:border-slate-700 hover:border-emerald-300 dark:hover:border-emerald-700 transition cursor-pointer shrink-0 text-xs shadow-xs" onclick="openTermBySlug('${safeSlug}', true)">
+                                <span class="font-en font-bold">${item.term_en}</span>
+                                ${item.term_fa ? `<span class="text-[11px] text-slate-500 dark:text-slate-400 font-normal max-w-[120px] truncate">· ${item.term_fa}</span>` : ''}
+                                <button type="button" onclick="removeRecentTerm('${safeSlug}', event)" class="opacity-40 group-hover/chip:opacity-100 hover:text-rose-500 hover:bg-rose-100 dark:hover:bg-rose-950/60 p-0.5 rounded-md transition mr-0.5" title="حذف از تاریخچه">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                </button>
+                            </div>
+                        `;
+                    }).join('');
+                }
+            }
+
+            const recentsModal = document.getElementById('recentsModal');
+            if (recentsModal && !recentsModal.classList.contains('hidden')) {
+                renderRecentsModalList();
+            }
+        }
+
+        function addToRecentTerms(term) {
+            if (!term) return;
+            const termId = term.id ? String(term.id) : (term.slug || '');
+            let slug = term.slug || '';
+            if (!slug && term.url) {
+                slug = term.url.replace(/\/$/, '').split('/').pop().replace('.asp', '');
+            }
+            if (!slug) slug = termId;
+
+            const termEn = term.term_en || '';
+            const termFa = term.term_fa || '';
+            const category = term.category_fa || term.category || '';
+            const categoryEn = term.category_en || '';
+            const letter = (term.letter || '#').toUpperCase();
+
+            // Deduplicate: remove any previous entry matching id or slug or term_en
+            recentTerms = recentTerms.filter(item => {
+                if (!item) return false;
+                if (termId && String(item.id) === String(termId)) return false;
+                if (slug && item.slug && item.slug.toLowerCase() === slug.toLowerCase()) return false;
+                if (termEn && item.term_en && item.term_en.toLowerCase() === termEn.toLowerCase()) return false;
+                return true;
+            });
+
+            // Insert newest at beginning
+            recentTerms.unshift({
+                id: term.id || slug,
+                slug: slug,
+                term_en: termEn,
+                term_fa: termFa,
+                category: category,
+                category_en: categoryEn,
+                letter: letter,
+                viewedAt: Date.now()
+            });
+
+            // Cap at 60 terms
+            if (recentTerms.length > 60) {
+                recentTerms = recentTerms.slice(0, 60);
+            }
+
+            try {
+                localStorage.setItem('marketdict_recent_terms', JSON.stringify(recentTerms));
+            } catch (e) {}
+
+            updateRecentsUI();
+        }
+
+        function removeRecentTerm(target, event) {
+            if (event) event.stopPropagation();
+            if (!target) return;
+            const str = String(target).toLowerCase();
+            recentTerms = recentTerms.filter(item => {
+                if (!item) return false;
+                if (String(item.id).toLowerCase() === str) return false;
+                if (item.slug && item.slug.toLowerCase() === str) return false;
+                return true;
+            });
+            try {
+                localStorage.setItem('marketdict_recent_terms', JSON.stringify(recentTerms));
+            } catch (e) {}
+            updateRecentsUI();
+            showToast('از تاریخچه بازدید حذف شد.');
+            if (onlyRecents) {
+                searchCache.clear();
+                currentPage = 1;
+                loadTerms();
+            }
+        }
+
+        function clearRecentTerms() {
+            if (recentTerms.length === 0) return;
+            if (!confirm('آیا از پاک کردن کامل تاریخچه کلمات مشاهده‌شده اطمینان دارید؟')) return;
+            recentTerms = [];
+            try {
+                localStorage.removeItem('marketdict_recent_terms');
+            } catch (e) {}
+            updateRecentsUI();
+            showToast('تاریخچه کلمات مشاهده‌شده پاک شد.');
+            if (onlyRecents) {
+                onlyRecents = false;
+                const btn = document.getElementById('recentsBtn');
+                if (btn) btn.classList.remove('ring-2', 'ring-emerald-400', 'bg-emerald-50', 'dark:bg-emerald-950/40');
+                updateFilterBadges();
+                currentPage = 1;
+                loadTerms();
+            }
+        }
+
+        function formatRelativeTime(timestamp) {
+            if (!timestamp) return 'اخیراً';
+            const now = Date.now();
+            const diffSec = Math.floor((now - timestamp) / 1000);
+            if (diffSec < 60) return 'همین الان';
+            const diffMin = Math.floor(diffSec / 60);
+            if (diffMin < 60) return `${diffMin.toLocaleString('fa-IR')} دقیقه پیش`;
+            const diffHour = Math.floor(diffMin / 60);
+            if (diffHour < 24) return `${diffHour.toLocaleString('fa-IR')} ساعت پیش`;
+            const diffDay = Math.floor(diffHour / 24);
+            if (diffDay === 1) return 'دیروز';
+            if (diffDay < 7) return `${diffDay.toLocaleString('fa-IR')} روز پیش`;
+            const diffWeek = Math.floor(diffDay / 7);
+            if (diffWeek < 4) return `${diffWeek.toLocaleString('fa-IR')} هفته پیش`;
+            try {
+                return new Date(timestamp).toLocaleDateString('fa-IR');
+            } catch (e) {
+                return `${diffDay.toLocaleString('fa-IR')} روز پیش`;
+            }
+        }
+
+        function openRecentsModal() {
+            renderRecentsModalList();
+            const modal = document.getElementById('recentsModal');
+            const card = document.getElementById('recentsModalCard');
+            if (!modal || !card) return;
+            const searchInput = document.getElementById('recentsSearchInput');
+            if (searchInput) searchInput.value = '';
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                card.classList.remove('scale-95', 'opacity-0');
+                card.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeRecentsModal() {
+            const modal = document.getElementById('recentsModal');
+            const card = document.getElementById('recentsModalCard');
+            if (!modal || !card) return;
+            card.classList.remove('scale-100', 'opacity-100');
+            card.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 150);
+        }
+
+        function closeRecentsModalOnBackdrop(e) {
+            if (e.target.id === 'recentsModal') {
+                closeRecentsModal();
+            }
+        }
+
+        function renderRecentsModalList(filterQuery = '') {
+            const list = document.getElementById('recentsModalList');
+            const emptyState = document.getElementById('recentsEmptyState');
+            const modalBadge = document.getElementById('recentsModalCountBadge');
+            if (!list) return;
+
+            if (modalBadge) modalBadge.innerText = `${recentTerms.length.toLocaleString('fa-IR')} واژه`;
+
+            if (recentTerms.length === 0) {
+                list.innerHTML = '';
+                if (emptyState) emptyState.classList.remove('hidden');
+                return;
+            }
+            if (emptyState) emptyState.classList.add('hidden');
+
+            let items = recentTerms;
+            if (filterQuery) {
+                const q = filterQuery.toLowerCase().trim();
+                items = items.filter(t => 
+                    (t.term_en && t.term_en.toLowerCase().includes(q)) ||
+                    (t.term_fa && t.term_fa.toLowerCase().includes(q)) ||
+                    (t.category && t.category.toLowerCase().includes(q))
+                );
+            }
+
+            if (items.length === 0) {
+                list.innerHTML = '<div class="text-center py-8 text-xs text-slate-400">اصطلاحی با این عبارت در تاریخچه یافت نشد.</div>';
+                return;
+            }
+
+            list.innerHTML = items.map(item => {
+                const safeSlug = (item.slug || item.id || '').replace(/'/g, "\\'");
+                const timeAgo = formatRelativeTime(item.viewedAt);
+                const fav = isFavorite(item.id || item.slug);
+
+                return `
+                    <div class="group flex items-center justify-between p-3 sm:p-3.5 rounded-2xl bg-slate-50/80 dark:bg-slate-800/60 hover:bg-emerald-50/70 dark:hover:bg-emerald-950/40 border border-slate-200/80 dark:border-slate-700/60 hover:border-emerald-300 dark:hover:border-emerald-700 transition cursor-pointer" onclick="openRecentTermDetail('${safeSlug}')">
+                        <div class="flex items-center gap-3 min-w-0 flex-1">
+                            <span class="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-en font-bold text-xs flex items-center justify-center shrink-0 border border-emerald-200 dark:border-emerald-800">
+                                ${item.letter || '#'}
+                            </span>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <h4 class="font-en font-bold text-sm text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition truncate">${item.term_en}</h4>
+                                    ${item.category ? `<span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-200/70 dark:bg-slate-700/70 text-slate-600 dark:text-slate-300 font-medium">${item.category}</span>` : ''}
+                                </div>
+                                <p class="text-xs text-emerald-700 dark:text-emerald-400 font-medium truncate mt-0.5">${item.term_fa}</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2 shrink-0 mr-3">
+                            <span class="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1 font-fa">
+                                <svg class="w-3 h-3 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>${timeAgo}</span>
+                            </span>
+                            <button type="button" onclick="toggleFavorite('${item.id || item.slug}', event)" class="p-1.5 rounded-lg hover:bg-white dark:hover:bg-slate-700 transition text-slate-400 hover:text-amber-500" title="${fav ? 'حذف از نشان‌شده‌ها' : 'افزودن به نشان‌شده‌ها'}">
+                                <svg class="w-4 h-4 ${fav ? 'fill-amber-400 text-amber-500' : 'text-slate-300 dark:text-slate-600'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                </svg>
+                            </button>
+                            <button type="button" onclick="removeRecentTerm('${safeSlug}', event)" class="p-1.5 rounded-lg text-slate-400 hover:text-rose-500 hover:bg-white dark:hover:bg-slate-700 transition" title="حذف از تاریخچه">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function openRecentTermDetail(slug) {
+            closeRecentsModal();
+            openTermBySlug(slug, true);
+        }
+
+        function filterRecentsModalList() {
+            const q = document.getElementById('recentsSearchInput')?.value || '';
+            renderRecentsModalList(q);
+        }
+
         // Static Data & API Hybrid Adapter
         let marketDictBundle = null;
         let bundlePromise = null;
@@ -1096,6 +1594,554 @@
             t = t.replace(/\u200c/g, ' ');
             t = t.replace(/[\u064B-\u065F\u0670]/g, '');
             return t.replace(/\s+/g, ' ').trim();
+        }
+
+        // ==========================================
+        // Persistent Text Highlighting & Annotations
+        // ==========================================
+        let currentActiveHighlightId = null;
+
+        function getTermKey(term) {
+            if (!term) return '';
+            return String(term.slug || term.id || term.term_en || '').toLowerCase().trim();
+        }
+
+        function getHighlightsForTerm(term) {
+            if (!term) return [];
+            const key = getTermKey(term);
+            const strId = String(term.id || '');
+            const strSlug = String(term.slug || '').toLowerCase();
+            return highlights.filter(h => {
+                if (!h || !h.termKey) return false;
+                const hKey = String(h.termKey).toLowerCase();
+                return hKey === key || (strSlug && hKey === strSlug) || (strId && hKey === strId);
+            });
+        }
+
+        function getHighlightedTermKeys() {
+            const set = new Set();
+            highlights.forEach(h => {
+                if (h && h.termKey) set.add(String(h.termKey));
+            });
+            return set;
+        }
+
+        function saveHighlights() {
+            try {
+                localStorage.setItem('marketdict_highlights', JSON.stringify(highlights));
+            } catch (e) {}
+            updateHighlightsCount();
+            searchCache.clear();
+        }
+
+        function updateHighlightsCount() {
+            const keys = getHighlightedTermKeys();
+            const count = keys.size;
+            const badge = document.getElementById('highlightsCountBadge');
+            if (badge) {
+                badge.innerText = count.toLocaleString('fa-IR');
+            }
+        }
+
+        function getTermHighlightsCount(term) {
+            return getHighlightsForTerm(term).length;
+        }
+
+        function updateModalHighlightUI(hlCount = null) {
+            if (!activeModalTerm) return;
+            if (hlCount === null) {
+                hlCount = getHighlightsForTerm(activeModalTerm).length;
+            }
+            const btn = document.getElementById('modalHighlightBtn');
+            const badge = document.getElementById('modalHighlightCountBadge');
+            if (badge) {
+                badge.innerText = hlCount.toLocaleString('fa-IR');
+                if (hlCount > 0) {
+                    badge.classList.remove('hidden');
+                    if (btn) {
+                        btn.classList.add('text-amber-500', 'border-amber-300', 'dark:border-amber-700');
+                        btn.classList.remove('text-slate-400');
+                    }
+                } else {
+                    badge.classList.add('hidden');
+                    if (btn) {
+                        btn.classList.remove('text-amber-500', 'border-amber-300', 'dark:border-amber-700');
+                        btn.classList.add('text-slate-400');
+                    }
+                }
+            }
+        }
+
+        function getBgForColor(color) {
+            switch (color) {
+                case 'emerald': return 'bg-emerald-400';
+                case 'blue': return 'bg-sky-400';
+                case 'purple': return 'bg-purple-400';
+                case 'amber': return 'bg-amber-400';
+                case 'yellow':
+                default: return 'bg-yellow-300';
+            }
+        }
+
+        function getTextNodesInRange(range) {
+            const root = (range.commonAncestorContainer.nodeType === Node.TEXT_NODE)
+                ? range.commonAncestorContainer.parentNode
+                : range.commonAncestorContainer;
+
+            if (range.commonAncestorContainer.nodeType === Node.TEXT_NODE) {
+                return [range.commonAncestorContainer];
+            }
+
+            const textNodes = [];
+            const walker = document.createTreeWalker(
+                root,
+                NodeFilter.SHOW_TEXT,
+                {
+                    acceptNode: function(node) {
+                        if (!node.nodeValue) return NodeFilter.FILTER_SKIP;
+                        const p = node.parentElement;
+                        if (!p || ['SCRIPT', 'STYLE', 'BUTTON'].includes(p.tagName)) return NodeFilter.FILTER_REJECT;
+                        if (p.closest('.katex') || p.closest('.katex-display')) return NodeFilter.FILTER_REJECT;
+
+                        const nodeRange = document.createRange();
+                        nodeRange.selectNodeContents(node);
+                        const intersects = (
+                            range.compareBoundaryPoints(Range.END_TO_START, nodeRange) < 0 &&
+                            range.compareBoundaryPoints(Range.START_TO_END, nodeRange) > 0
+                        );
+                        return intersects ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+                    }
+                }
+            );
+
+            let node;
+            while ((node = walker.nextNode())) {
+                textNodes.push(node);
+            }
+            return textNodes;
+        }
+
+        function unwrapExistingHighlights(container) {
+            const marks = container.querySelectorAll('.md-highlight');
+            marks.forEach(mark => {
+                const parent = mark.parentNode;
+                while (mark.firstChild) {
+                    parent.insertBefore(mark.firstChild, mark);
+                }
+                parent.removeChild(mark);
+            });
+            container.normalize();
+        }
+
+        function wrapRangeWithMark(range, hlId, color) {
+            const textNodes = getTextNodesInRange(range);
+            textNodes.forEach(node => {
+                let start = (node === range.startContainer) ? range.startOffset : 0;
+                let end = (node === range.endContainer) ? range.endOffset : node.nodeValue.length;
+                if (start >= end) return;
+
+                let target = node;
+                if (end < target.nodeValue.length) {
+                    target.splitText(end);
+                }
+                if (start > 0) {
+                    target = target.splitText(start);
+                }
+
+                const mark = document.createElement('mark');
+                mark.className = `md-highlight md-highlight-${color}`;
+                mark.dataset.hlId = hlId;
+                mark.dataset.color = color;
+                mark.title = 'کلیک برای مدیریت یا حذف هایلایت';
+                mark.addEventListener('click', onHighlightClick);
+
+                target.parentNode.insertBefore(mark, target);
+                mark.appendChild(target);
+            });
+        }
+
+        function applyHighlightsForActiveTerm() {
+            if (!activeModalTerm) return;
+            const termHighlights = getHighlightsForTerm(activeModalTerm);
+            updateModalHighlightUI(termHighlights.length);
+
+            const rootContainer = document.getElementById('modalContentArea');
+            if (!rootContainer) return;
+
+            unwrapExistingHighlights(rootContainer);
+            if (termHighlights.length === 0) return;
+
+            const textNodes = [];
+            const walker = document.createTreeWalker(
+                rootContainer,
+                NodeFilter.SHOW_TEXT,
+                {
+                    acceptNode: function(node) {
+                        if (!node.nodeValue) return NodeFilter.FILTER_SKIP;
+                        const p = node.parentElement;
+                        if (!p || ['SCRIPT', 'STYLE', 'BUTTON'].includes(p.tagName)) return NodeFilter.FILTER_REJECT;
+                        if (p.closest('.katex') || p.closest('.katex-display')) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                }
+            );
+
+            let n;
+            while ((n = walker.nextNode())) {
+                textNodes.push(n);
+            }
+            if (textNodes.length === 0) return;
+
+            let fullText = '';
+            const nodeMaps = [];
+            textNodes.forEach(node => {
+                const start = fullText.length;
+                const val = node.nodeValue;
+                fullText += val;
+                const end = fullText.length;
+                nodeMaps.push({ node, start, end });
+            });
+
+            const resolvedHighlights = [];
+            termHighlights.forEach(hl => {
+                if (!hl.exact) return;
+                const exact = hl.exact.trim();
+                if (!exact) return;
+
+                const matches = [];
+                let pos = 0;
+                while (true) {
+                    const found = fullText.indexOf(exact, pos);
+                    if (found === -1) break;
+                    matches.push(found);
+                    pos = found + 1;
+                }
+                if (matches.length === 0) return;
+
+                let bestMatch = matches[0];
+                let bestScore = -1;
+                matches.forEach(idx => {
+                    let score = 0;
+                    if (hl.prefix) {
+                        const preSnippet = fullText.slice(Math.max(0, idx - hl.prefix.length), idx);
+                        if (preSnippet === hl.prefix) score += 4;
+                        else if (hl.prefix.endsWith(preSnippet.slice(-10))) score += 2;
+                    }
+                    if (hl.suffix) {
+                        const sufSnippet = fullText.slice(idx + exact.length, idx + exact.length + hl.suffix.length);
+                        if (sufSnippet === hl.suffix) score += 4;
+                        else if (hl.suffix.startsWith(sufSnippet.slice(0, 10))) score += 2;
+                    }
+                    if (score > bestScore) {
+                        bestScore = score;
+                        bestMatch = idx;
+                    }
+                });
+
+                resolvedHighlights.push({
+                    hl: hl,
+                    matchStart: bestMatch,
+                    matchEnd: bestMatch + exact.length
+                });
+            });
+
+            // Descending order of matchStart to avoid offset issues
+            resolvedHighlights.sort((a, b) => b.matchStart - a.matchStart);
+
+            resolvedHighlights.forEach(item => {
+                const { hl, matchStart, matchEnd } = item;
+                let startNode = null, startOffset = 0;
+                let endNode = null, endOffset = 0;
+
+                for (let i = 0; i < nodeMaps.length; i++) {
+                    const m = nodeMaps[i];
+                    if (!startNode && matchStart >= m.start && matchStart < m.end) {
+                        startNode = m.node;
+                        startOffset = matchStart - m.start;
+                    }
+                    if (!endNode && matchEnd > m.start && matchEnd <= m.end) {
+                        endNode = m.node;
+                        endOffset = matchEnd - m.start;
+                    }
+                    if (startNode && endNode) break;
+                }
+
+                if (startNode && endNode) {
+                    try {
+                        const range = document.createRange();
+                        range.setStart(startNode, startOffset);
+                        range.setEnd(endNode, endOffset);
+                        wrapRangeWithMark(range, hl.id, hl.color || 'yellow');
+                    } catch (err) {
+                        console.warn('Error applying highlight:', err);
+                    }
+                }
+            });
+        }
+
+        function handleTextSelection(e) {
+            if (e.target.closest('#highlightFloatingToolbar') || e.target.closest('#highlightActionPopover')) {
+                return;
+            }
+
+            const popover = document.getElementById('highlightActionPopover');
+            if (popover && !popover.classList.contains('hidden')) {
+                popover.classList.add('hidden');
+            }
+
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed) {
+                hideSelectionToolbar();
+                return;
+            }
+
+            const text = selection.toString().trim();
+            if (text.length < 2) {
+                hideSelectionToolbar();
+                return;
+            }
+
+            const contentArea = document.getElementById('modalContentArea');
+            if (!contentArea || !contentArea.contains(selection.anchorNode)) {
+                hideSelectionToolbar();
+                return;
+            }
+
+            if (selection.rangeCount === 0) return;
+            const range = selection.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+            if (rect.width === 0 || rect.height === 0) {
+                hideSelectionToolbar();
+                return;
+            }
+
+            const toolbar = document.getElementById('highlightFloatingToolbar');
+            if (!toolbar) return;
+
+            toolbar.style.left = `${rect.left + rect.width / 2}px`;
+            const topPos = rect.top - 52;
+            if (topPos < 10) {
+                toolbar.style.top = `${rect.bottom + 8}px`;
+            } else {
+                toolbar.style.top = `${topPos}px`;
+            }
+            toolbar.classList.remove('hidden');
+        }
+
+        function hideSelectionToolbar() {
+            const toolbar = document.getElementById('highlightFloatingToolbar');
+            if (toolbar) toolbar.classList.add('hidden');
+        }
+
+        function createHighlightFromSelection(color = 'yellow') {
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed) return;
+            const exact = selection.toString().trim();
+            if (!exact || !activeModalTerm) return;
+
+            const range = selection.getRangeAt(0);
+            const contentArea = document.getElementById('modalContentArea');
+            if (!contentArea || !contentArea.contains(range.commonAncestorContainer)) return;
+
+            const fullText = contentArea.textContent || '';
+            const idx = fullText.indexOf(exact);
+            let prefix = '';
+            let suffix = '';
+            if (idx !== -1) {
+                prefix = fullText.slice(Math.max(0, idx - 25), idx);
+                suffix = fullText.slice(idx + exact.length, idx + exact.length + 25);
+            }
+
+            const hlId = 'hl_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+            const newHl = {
+                id: hlId,
+                termKey: getTermKey(activeModalTerm),
+                termEn: activeModalTerm.term_en || '',
+                termFa: activeModalTerm.term_fa || '',
+                exact: exact,
+                prefix: prefix,
+                suffix: suffix,
+                color: color,
+                createdAt: Date.now()
+            };
+
+            highlights.push(newHl);
+            saveHighlights();
+
+            selection.removeAllRanges();
+            hideSelectionToolbar();
+
+            applyHighlightsForActiveTerm();
+            if (document.getElementById('modalHighlightsDrawer') && !document.getElementById('modalHighlightsDrawer').classList.contains('hidden')) {
+                renderModalHighlightsDrawer();
+            }
+            showToast('متن با موفقیت هایلایت شد 🖍️');
+        }
+
+        function onHighlightClick(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            const mark = e.currentTarget;
+            const hlId = mark.dataset.hlId;
+            if (!hlId) return;
+
+            currentActiveHighlightId = hlId;
+
+            const popover = document.getElementById('highlightActionPopover');
+            if (!popover) return;
+
+            hideSelectionToolbar();
+
+            const rect = mark.getBoundingClientRect();
+            popover.style.left = `${rect.left + rect.width / 2}px`;
+            popover.style.top = `${Math.max(10, rect.top - 46)}px`;
+            popover.classList.remove('hidden');
+        }
+
+        function deleteCurrentHighlight() {
+            if (!currentActiveHighlightId) return;
+            const idToDelete = currentActiveHighlightId;
+            deleteHighlightById(idToDelete);
+            const popover = document.getElementById('highlightActionPopover');
+            if (popover) popover.classList.add('hidden');
+            currentActiveHighlightId = null;
+        }
+
+        function deleteHighlightById(id) {
+            if (!id) return;
+            highlights = highlights.filter(h => h.id !== id);
+            saveHighlights();
+            applyHighlightsForActiveTerm();
+            renderModalHighlightsDrawer();
+            showToast('هایلایت حذف شد.');
+        }
+
+        function changeCurrentHighlightColor(newColor) {
+            if (!currentActiveHighlightId) return;
+            const hl = highlights.find(h => h.id === currentActiveHighlightId);
+            if (hl) {
+                hl.color = newColor;
+                saveHighlights();
+            }
+            const marks = document.querySelectorAll(`mark[data-hl-id="${currentActiveHighlightId}"]`);
+            marks.forEach(mark => {
+                mark.className = `md-highlight md-highlight-${newColor}`;
+                mark.dataset.color = newColor;
+            });
+
+            const popover = document.getElementById('highlightActionPopover');
+            if (popover) popover.classList.add('hidden');
+            showToast('رنگ هایلایت تغییر کرد 🎨');
+        }
+
+        function clearAllTermHighlights() {
+            if (!activeModalTerm) return;
+            const key = getTermKey(activeModalTerm);
+            const strId = String(activeModalTerm.id || '');
+            const strSlug = String(activeModalTerm.slug || '').toLowerCase();
+
+            highlights = highlights.filter(h => {
+                if (!h || !h.termKey) return true;
+                const hKey = String(h.termKey).toLowerCase();
+                return hKey !== key && (!strSlug || hKey !== strSlug) && (!strId || hKey !== strId);
+            });
+            saveHighlights();
+            applyHighlightsForActiveTerm();
+            renderModalHighlightsDrawer();
+            showToast('همه هایلایت‌های این اصطلاح پاک شدند.');
+        }
+
+        function toggleModalHighlightsDrawer(force = null) {
+            const drawer = document.getElementById('modalHighlightsDrawer');
+            if (!drawer) return;
+            const isHidden = drawer.classList.contains('hidden');
+            const show = (force !== null) ? force : isHidden;
+
+            if (show) {
+                renderModalHighlightsDrawer();
+                drawer.classList.remove('hidden');
+            } else {
+                drawer.classList.add('hidden');
+            }
+        }
+
+        function renderModalHighlightsDrawer() {
+            if (!activeModalTerm) return;
+            const termHighlights = getHighlightsForTerm(activeModalTerm);
+            const countBadge = document.getElementById('modalHighlightsDrawerCount');
+            if (countBadge) countBadge.innerText = termHighlights.length.toLocaleString('fa-IR');
+
+            const list = document.getElementById('modalHighlightsDrawerList');
+            if (!list) return;
+            list.innerHTML = '';
+
+            if (termHighlights.length === 0) {
+                list.innerHTML = `<div class="text-xs text-slate-500 dark:text-slate-400 py-3 text-center">هیچ بخشی در این اصطلاح هایلایت نشده است. می‌توانید هر بخشی از متن را با ماوس انتخاب کنید تا دکمه‌های رنگی هایلایت ظاهر شوند.</div>`;
+                return;
+            }
+
+            termHighlights.forEach(hl => {
+                const item = document.createElement('div');
+                item.className = 'flex items-center justify-between gap-3 p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs hover:border-amber-400 transition cursor-pointer';
+
+                const bgDot = getBgForColor(hl.color);
+                item.innerHTML = `
+                    <div class="flex items-center gap-2 flex-1 min-w-0" onclick="scrollToHighlight('${hl.id}')">
+                        <span class="w-3 h-3 rounded-full shrink-0 border border-black/10 ${bgDot}"></span>
+                        <span class="truncate font-medium text-slate-800 dark:text-slate-200">"${hl.exact}"</span>
+                    </div>
+                    <div class="flex items-center gap-1 shrink-0">
+                        <button type="button" onclick="event.stopPropagation(); deleteHighlightById('${hl.id}')" class="p-1 rounded-lg hover:bg-rose-100 dark:hover:bg-rose-950 text-slate-400 hover:text-rose-600 transition" title="حذف این هایلایت">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                        </button>
+                    </div>
+                `;
+                list.appendChild(item);
+            });
+        }
+
+        function scrollToHighlight(hlId) {
+            const mark = document.querySelector(`mark[data-hl-id="${hlId}"]`);
+            if (mark) {
+                mark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                mark.classList.add('ring-4', 'ring-amber-400', 'ring-opacity-70');
+                setTimeout(() => {
+                    mark.classList.remove('ring-4', 'ring-amber-400', 'ring-opacity-70');
+                }, 1500);
+            }
+        }
+
+        function toggleHighlightsFilter() {
+            onlyHighlights = !onlyHighlights;
+            if (onlyHighlights) {
+                onlyFavorites = false;
+                onlyRecents = false;
+                const favBtn = document.getElementById('favoritesBtn');
+                const favIcon = document.getElementById('favIcon');
+                if (favBtn) {
+                    favBtn.classList.remove('ring-2', 'ring-amber-400', 'bg-amber-50', 'dark:bg-amber-950/40');
+                    if (favIcon) favIcon.classList.remove('fill-amber-400');
+                }
+                const recBtn = document.getElementById('recentsBtn');
+                if (recBtn) recBtn.classList.remove('ring-2', 'ring-emerald-400', 'bg-emerald-50', 'dark:bg-emerald-950/40');
+            }
+
+            searchCache.clear();
+            const btn = document.getElementById('highlightsBtn');
+            const icon = document.getElementById('hlNavIcon');
+            if (onlyHighlights) {
+                if (btn) btn.classList.add('ring-2', 'ring-amber-400', 'bg-amber-50', 'dark:bg-amber-950/40');
+                if (icon) icon.classList.add('stroke-2');
+                showToast('نمایش اصطلاحات هایلایت‌شده');
+            } else {
+                if (btn) btn.classList.remove('ring-2', 'ring-amber-400', 'bg-amber-50', 'dark:bg-amber-950/40');
+                if (icon) icon.classList.remove('stroke-2');
+            }
+            currentPage = 1;
+            updateFilterBadges();
+            loadTerms();
         }
 
         async function initBundleData() {
@@ -1377,9 +2423,22 @@
             }
 
             emptyState.classList.add('hidden');
-            const favSuffix = onlyFavorites ? ' نشان‌شده' : '';
+            const favSuffix = onlyFavorites ? ' نشان‌شده' : (onlyRecents ? ' مشاهده‌شده' : (onlyHighlights ? ' هایلایت‌شده' : ''));
             const shownCount = append ? grid.children.length + terms.length : terms.length;
             countLabel.innerText = `نمایش ${shownCount} از ${data.total} اصطلاح${favSuffix}`;
+
+            if (onlyRecents) {
+                const orderMap = new Map();
+                recentTerms.forEach((item, idx) => {
+                    if (item.id) orderMap.set(String(item.id), idx);
+                    if (item.slug) orderMap.set(String(item.slug), idx);
+                });
+                terms.sort((a, b) => {
+                    const orderA = orderMap.has(String(a.id)) ? orderMap.get(String(a.id)) : (orderMap.get(String(a.slug)) ?? 9999);
+                    const orderB = orderMap.has(String(b.id)) ? orderMap.get(String(b.id)) : (orderMap.get(String(b.slug)) ?? 9999);
+                    return orderA - orderB;
+                });
+            }
 
             const frag = document.createDocumentFragment();
             terms.forEach(term => {
@@ -1414,8 +2473,34 @@
                 return;
             }
 
+            // Handle empty recents state immediately
+            if (onlyRecents && recentTerms.length === 0) {
+                if (!append) grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                document.getElementById('emptyTitle').innerText = 'هنوز اصطلاحی مشاهده نشده است!';
+                document.getElementById('emptyDesc').innerText = 'با باز کردن هر اصطلاح، تاریخچه کلمات دیده‌شده شما در این بخش نمایش می‌یابد.';
+                loadMoreContainer.classList.add('hidden');
+                countLabel.innerText = 'تاریخچه بازدید خالی است';
+                updateResetFilterButton();
+                return;
+            }
+
+            // Handle empty highlights state immediately
+            if (onlyHighlights && getHighlightedTermKeys().size === 0) {
+                if (!append) grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                document.getElementById('emptyTitle').innerText = 'هنوز متنی را هایلایت نکرده‌اید!';
+                document.getElementById('emptyDesc').innerText = 'هنگام مطالعه اصطلاحات، می‌توانید هر بخش از متن را با ماوس یا لمس انتخاب کنید تا دکمه‌های هایلایت ظاهر شوند.';
+                loadMoreContainer.classList.add('hidden');
+                countLabel.innerText = 'هیچ اصطلاح هایلایت‌شده‌ای وجود ندارد';
+                updateResetFilterButton();
+                return;
+            }
+
             const currentSeq = ++searchSeq;
-            const cacheKey = `${currentQuery}|${currentLetter}|${currentCategory}|${currentPage}|${onlyFavorites ? favorites.join(',') : ''}`;
+            const recentIds = recentTerms.map(t => String(t.id || t.slug)).filter(Boolean);
+            const hlIds = Array.from(getHighlightedTermKeys());
+            const cacheKey = `${currentQuery}|${currentLetter}|${currentCategory}|${currentPage}|${onlyFavorites ? favorites.join(',') : ''}|${onlyRecents ? recentIds.join(',') : ''}|${onlyHighlights ? hlIds.join(',') : ''}`;
 
             if (searchCache.has(cacheKey)) {
                 renderLoadedTerms(searchCache.get(cacheKey), append);
@@ -1439,7 +2524,10 @@
                 const bundle = await initBundleData();
                 let data;
                 if (bundle) {
-                    const idSet = onlyFavorites ? new Set(favorites.map(String)) : null;
+                    let idSet = null;
+                    if (onlyFavorites) idSet = new Set(favorites.map(String));
+                    else if (onlyRecents) idSet = new Set(recentIds);
+                    else if (onlyHighlights) idSet = new Set(hlIds);
                     data = queryBundleTerms(currentQuery, currentLetter, currentCategory, idSet, currentPage, 24);
                 } else {
                     let url = `/api/terms?page=${currentPage}&limit=24`;
@@ -1447,6 +2535,8 @@
                     if (currentLetter !== 'ALL') url += `&letter=${encodeURIComponent(currentLetter)}`;
                     if (currentCategory !== 'ALL') url += `&category=${encodeURIComponent(currentCategory)}`;
                     if (onlyFavorites) url += `&ids=${encodeURIComponent(favorites.join(','))}`;
+                    else if (onlyRecents) url += `&ids=${encodeURIComponent(recentIds.join(','))}`;
+                    else if (onlyHighlights) url += `&ids=${encodeURIComponent(hlIds.join(','))}`;
 
                     const res = await fetch(url, { signal: searchAbortCtrl.signal });
                     data = await res.json();
@@ -1484,6 +2574,7 @@
 
             const favActive = isFavorite(term.id);
             const hasDeep = (term.sections && term.sections.length > 0) || term.deep_enriched || term.has_deep;
+            const hlCount = getTermHighlightsCount(term);
 
             card.innerHTML = `
                 <div class="space-y-3">
@@ -1497,6 +2588,7 @@
                                 ${term.category_en ? `<span class="font-en text-[9px] text-slate-400 dark:text-slate-500 font-medium">${term.category_en}</span>` : ''}
                             </span>
                             ${hasDeep ? `<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/50">📑 سرفصل‌های جامع</span>` : ''}
+                            ${hlCount > 0 ? `<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800/50">🖍️ ${hlCount.toLocaleString('fa-IR')} هایلایت</span>` : ''}
                         </div>
                         <button onclick="toggleFavorite('${term.id}', event)" class="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="${favActive ? 'حذف از نشان‌شده‌ها' : 'افزودن به نشان‌شده‌ها'}">
                             <svg id="star-icon-${term.id}" class="w-5 h-5 ${favActive ? 'fill-amber-400 text-amber-500' : 'text-slate-300 dark:text-slate-600'} hover:text-amber-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1722,6 +2814,26 @@
                     `;
                 }
 
+                if (onlyRecents) {
+                    hasFilters = true;
+                    chipsHtml += `
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 shadow-xs">
+                            <span>🕒 آخرین بازدیدها</span>
+                            <button onclick="toggleRecentsFilter()" class="hover:text-red-600 font-bold text-sm leading-none mr-0.5" title="نمایش همه">✕</button>
+                        </span>
+                    `;
+                }
+
+                if (onlyHighlights) {
+                    hasFilters = true;
+                    chipsHtml += `
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-800 shadow-xs">
+                            <span>🖍️ اصطلاحات هایلایت‌شده</span>
+                            <button onclick="toggleHighlightsFilter()" class="hover:text-red-600 font-bold text-sm leading-none mr-0.5" title="نمایش همه">✕</button>
+                        </span>
+                    `;
+                }
+
                 filtersBar.innerHTML = chipsHtml;
                 if (resetBtn) {
                     if (hasFilters) resetBtn.classList.remove('hidden');
@@ -1878,6 +2990,18 @@
                 if (btn) btn.classList.remove('ring-2', 'ring-amber-400', 'bg-amber-50', 'dark:bg-amber-950/40');
                 if (icon) icon.classList.remove('fill-amber-400');
             }
+            if (onlyRecents) {
+                onlyRecents = false;
+                const btn = document.getElementById('recentsBtn');
+                if (btn) btn.classList.remove('ring-2', 'ring-emerald-400', 'bg-emerald-50', 'dark:bg-emerald-950/40');
+            }
+            if (onlyHighlights) {
+                onlyHighlights = false;
+                const btn = document.getElementById('highlightsBtn');
+                const icon = document.getElementById('hlNavIcon');
+                if (btn) btn.classList.remove('ring-2', 'ring-amber-400', 'bg-amber-50', 'dark:bg-amber-950/40');
+                if (icon) icon.classList.remove('stroke-2');
+            }
             currentPage = 1;
             updateFilterBadges();
             loadTerms();
@@ -1978,6 +3102,7 @@
                 modalHistory = [];
             }
             updateModalBackBtn();
+            addToRecentTerms(term);
 
             document.getElementById('modalTermEn').innerText = term.term_en;
             document.getElementById('modalTermFa').innerText = term.term_fa;
@@ -2023,6 +3148,7 @@
                 if (full && activeModalTerm && (activeModalTerm.slug === term.slug || activeModalTerm.id === term.id)) {
                     full._is_full = true;
                     activeModalTerm = full;
+                    addToRecentTerms(full);
                     renderModalBody(full);
                     setTimeout(renderAllFormulas, 10);
                 }
@@ -2235,6 +3361,9 @@
             } else {
                 bottomBox.classList.add('hidden');
             }
+
+            // Apply persistent highlights for this term
+            applyHighlightsForActiveTerm();
 
             // Trigger KaTeX math rendering across the modal card
             setTimeout(() => {
@@ -2457,6 +3586,12 @@
         }
 
         function closeModal() {
+            hideSelectionToolbar();
+            const popover = document.getElementById('highlightActionPopover');
+            if (popover) popover.classList.add('hidden');
+            const drawer = document.getElementById('modalHighlightsDrawer');
+            if (drawer) drawer.classList.add('hidden');
+
             const modal = document.getElementById('detailModal');
             const card = document.getElementById('modalCard');
             card.classList.remove('scale-100', 'opacity-100');
