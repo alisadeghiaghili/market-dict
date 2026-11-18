@@ -395,6 +395,15 @@
                     <span id="favoritesCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
                 </button>
 
+                <!-- Recently Viewed Terms Button -->
+                <button id="recentsBtn" onclick="openRecentsModal()" title="تاریخچه آخرین کلمات مشاهده‌شده" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
+                    <svg id="recentIcon" class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="hidden md:inline">آخرین بازدیدها</span>
+                    <span id="recentsCountBadge" class="bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
+                </button>
+
                 <!-- Theme Cycle Button (System Default -> Light -> Dark) -->
                 <button id="themeCycleBtn" onclick="cycleTheme()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95" title="تغییر حالت نمایش (سیستم / روشن / تاریک)">
                     <!-- System Icon (Monitor) -->
@@ -445,6 +454,30 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
+                </div>
+            </div>
+
+            <!-- Quick Recently Viewed Strip -->
+            <div id="recentBar" class="hidden max-w-2xl mx-auto mt-4 transition-all duration-300 text-right">
+                <div class="flex items-center justify-between gap-2 px-1 pb-1.5 text-xs">
+                    <div class="flex items-center gap-1.5 font-bold text-slate-700 dark:text-slate-300">
+                        <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>آخرین بازدیدهای شما:</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="openRecentsModal()" class="text-[11px] text-emerald-600 dark:text-emerald-400 hover:underline font-semibold flex items-center gap-0.5" title="مشاهده فهرست کامل تاریخچه">
+                            <span>نمایش همه (<span id="recentChipsCount">0</span>)</span>
+                        </button>
+                        <span class="text-slate-300 dark:text-slate-700">|</span>
+                        <button onclick="clearRecentTerms()" class="text-[11px] text-slate-400 hover:text-rose-500 transition" title="پاک کردن تاریخچه بازدید">
+                            پاکسازی
+                        </button>
+                    </div>
+                </div>
+                <div id="recentChipsList" class="flex items-center gap-1.5 overflow-x-auto scrollbar-none py-1">
+                    <!-- Dynamic recent term chips -->
                 </div>
             </div>
 
@@ -755,6 +788,82 @@
                 </button>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Recently Viewed Terms Modal -->
+    <div id="recentsModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-md transition-opacity duration-200" onclick="closeRecentsModalOnBackdrop(event)">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="recentsModalCard">
+            <!-- Modal Header -->
+            <div class="p-4 sm:p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white flex items-center gap-2">
+                            <span>آخرین کلمات مشاهده‌شده</span>
+                            <span id="recentsModalCountBadge" class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold">۰ واژه</span>
+                        </h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">فهرست اصطلاحاتی که اخیراً در دانشنامه مشاهده کرده‌اید</p>
+                    </div>
+                </div>
+
+                <button onclick="closeRecentsModal()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white transition" title="بستن (Esc)">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Search & Filter Actions inside Recents Modal -->
+            <div class="px-4 sm:px-5 py-3 bg-slate-50/70 dark:bg-slate-850/60 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2.5 flex-wrap">
+                <!-- Search input inside history -->
+                <div class="relative flex-1 min-w-[180px]">
+                    <input 
+                        type="text" 
+                        id="recentsSearchInput" 
+                        oninput="filterRecentsModalList()" 
+                        placeholder="جستجو در اصطلاحات مشاهده‌شده..." 
+                        class="w-full text-xs py-2 pr-8 pl-3 rounded-xl bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-2.5 pointer-events-none text-slate-400">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Show in Main Grid Button -->
+                <button onclick="applyRecentsFilterToMainGrid()" class="px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900 border border-emerald-200 dark:border-emerald-800 text-xs font-semibold flex items-center gap-1.5 transition" title="نمایش این اصطلاحات در کارت‌های صفحه اصلی">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                    </svg>
+                    <span>نمایش در صفحه اصلی</span>
+                </button>
+
+                <!-- Clear history -->
+                <button onclick="clearRecentTerms()" class="text-xs text-rose-600 dark:text-rose-400 hover:underline flex items-center gap-1 font-semibold px-2 py-1 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950/50 transition" title="پاکسازی تاریخچه">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                    </svg>
+                    <span>پاک کردن</span>
+                </button>
+            </div>
+
+            <!-- Scrollable List -->
+            <div id="recentsModalList" class="p-3 sm:p-5 overflow-y-auto space-y-2 max-h-[55vh]">
+                <!-- Populated dynamically -->
+            </div>
+
+            <!-- Empty State inside Modal -->
+            <div id="recentsEmptyState" class="hidden py-12 text-center space-y-2">
+                <div class="text-4xl text-slate-300 dark:text-slate-600">🕒</div>
+                <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">هنوز اصطلاحی را مشاهده نکرده‌اید</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 max-w-sm mx-auto">با باز کردن و مطالعه هر اصطلاح در دیکشنری، تاریخچه واژگان شما در این بخش ذخیره می‌شود.</p>
+            </div>
         </div>
     </div>
 
