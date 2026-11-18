@@ -147,6 +147,18 @@ Access the web interface at **`http://localhost:5000`**.
 docker compose up -d --build
 ```
 
+### 3. Run Behind a Reverse Proxy (Nginx / Cloudflare / Traefik)
+
+Both `app.py` and `mcp_server.py` natively support reverse proxy headers:
+
+```bash
+# Run Web App & REST API behind reverse proxy
+python app.py --host 0.0.0.0 --port 5000 --proxy-headers --forwarded-allow-ips "*"
+
+# Run MCP Server with SSE transport behind reverse proxy
+python mcp_server.py --transport sse --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips "*"
+```
+
 ---
 
 ## Scraping Investopedia Terms

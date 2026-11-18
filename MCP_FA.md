@@ -199,7 +199,7 @@ python test_mcp_server.py
 
 ---
 
-## ۷. خط فرمان و حالت‌های شبکه (CLI & Transports)
+## ۷. خط فرمان، حالت‌های شبکه و ریورس پروکسی (CLI & Reverse Proxy)
 
 ```bash
 # ارتباط استاندارد ورودی/خروجی (کلاینت‌های دسکتاپ محلی):
@@ -210,7 +210,16 @@ python mcp_server.py --transport sse --host 0.0.0.0 --port 8000
 
 # راه‌اندازی با پروتکل مدرن Streamable HTTP:
 python mcp_server.py --transport streamable-http --host 127.0.0.1 --port 8000
+
+# راه‌اندازی پشت ریورس پروکسی (Nginx / Cloudflare / Traefik / Caddy):
+python mcp_server.py --transport sse --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips "*"
 ```
+
+### فلگ‌های خط فرمان:
+- `--host`: تعیین آدرس IP بایند سرور (پیش‌فرض: `127.0.0.1` یا `$HOST`)
+- `--port`: پورت اتصال (پیش‌فرض: `8000` یا `$PORT`)
+- `--proxy-headers` / `--no-proxy-headers`: فعال/غیرفعال‌سازی پردازش هدرهای پروکسی (`X-Forwarded-*`) (پیش‌فرض: `True`)
+- `--forwarded-allow-ips`: فهرست IPهای مجاز و مورد اعتماد ریورس پروکسی یا `*` (پیش‌فرض: `*` یا `$FORWARDED_ALLOW_IPS`)
 
 ---
 
