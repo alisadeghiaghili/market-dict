@@ -307168,80 +307168,171 @@
   {
     "id": 3529,
     "term_en": "Marginal Utility",
-    "term_fa": "Marginal Utility",
+    "term_fa": "مطلوبیت نهایی (Marginal Utility - MU)",
     "letter": "M",
     "category": "اقتصاد خرد و ساختار بازار",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Marginal utility is the incremental additional satisfaction, pleasure, or economic benefit derived by a consumer from consuming one additional unit of a good or service, mathematically expressed as the derivative of the total utility function.",
+    "definition_fa": "مطلوبیت نهایی (Marginal Utility) به مطلوبیت، لذت یا رضایت خاطری اطلاق می‌شود که یک مصرف‌کننده از مصرف دقیقاً یک واحد بیشتر از یک کالا یا خدمت به دست می‌آورد و از مشتق تابع مطلوبیت کل نسبت به مقدار مصرف محاسبه می‌گردد.",
+    "takeaways_en": [
+      "Governed by the Law of Diminishing Marginal Utility: each successive unit consumed yields less incremental utility.",
+      "Solves the classical Adam Smith diamond-water paradox in economic price theory.",
+      "Consumer optimal basket satisfies the equimarginal principle: $\\frac{MU_x}{P_x} = \\frac{MU_y}{P_y}$."
+    ],
+    "takeaways_fa": [
+      "تابع قانون نزولی بودن مطلوبیت نهایی است؛ هر واحد اضافی رضایت کمتری نسبت به واحد قبلی ایجاد می‌کند.",
+      "پارادوکس کلاسیک آب و الماس آدام اسمیت را در تئوری ارزش و قیمت‌گذاری حل می‌نماید.",
+      "تعادل بهینه مصرف‌کننده بر اصل برابری مطلوبیت نهایی به قیمت استوار است: $\\frac{MU_x}{P_x} = \\frac{MU_y}{P_y}$."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginalutility.asp",
     "slug": "marginalutility",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Marginal utility anchors subjective value theory, dictating downward-sloping demand curves in competitive markets.",
+    "bottom_line_fa": "مطلوبیت نهایی پایه و اساس ارزش‌گذاری ذهنی مصرف‌کننده و توجیه‌کننده شیب منفی تقاضا در علم اقتصاد است.",
+    "sections": [
+      {
+        "title_en": "Mathematical Formulation and Equimarginal Principle",
+        "title_fa": "فرمول ریاضی و اصل برابری نهایی در مصرف",
+        "paragraphs_en": [
+          "For total utility $U(x_1, \\dots, x_n)$, marginal utility with respect to good $i$ is:",
+          "$$MU_i = \\frac{\\partial U}{\\partial x_i}$$",
+          "Constrained utility maximization subject to budget $\\sum P_i x_i = I$ yields the Lagrange multiplier $\\lambda$:",
+          "$$\\frac{MU_1}{P_1} = \\frac{MU_2}{P_2} = \\dots = \\frac{MU_n}{P_n} = \\lambda$$"
+        ],
+        "paragraphs_fa": [
+          "مطلوبیت نهایی مشتق جزئی تابع مطلوبیت کل نسبت به مصرف کالای $i$ است:",
+          "$$MU_i = \\frac{\\partial U}{\\partial x_i}$$",
+          "بیشینه‌سازی مقید مطلوبیت با شرط بودجه ایجاب می‌کند که مطلوبیت نهایی حاصل از آخرین ریال خرج‌شده برای همه کالاها یکسان باشد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد خرد و ساختار بازار",
     "category_en": "Microeconomics & Market Structures"
   },
   {
     "id": 3530,
     "term_en": "Marital Property",
-    "term_fa": "Marital Property",
+    "term_fa": "اموال مشترک زوجین / دارایی‌های دوران زناشویی (Marital Property)",
     "letter": "M",
     "category": "املاک، مستغلات و تأمین مسکن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Marital property encompasses all tangible and intangible assets, real estate holdings, investment accounts, retirement balances, and liabilities acquired by either spouse during the course of a legal marriage, subject to division upon divorce.",
+    "definition_fa": "اموال مشترک زوجین (Marital Property) به کلیه دارایی‌های منقول، غیرمنقول، درآمدهای شغلی، پس‌اندازهای بانکی و سهام خریداری‌شده توسط هر یک از زوجین در طول دوران زندگی مشترک گفته می‌شود که در هنگام طلاق مشمول مقررات تقسیم مساوی یا منصفانه دادگاه قرار می‌گیرد.",
+    "takeaways_en": [
+      "Contrasts with separate property acquired prior to marriage or via individual inheritance/gift.",
+      "Divided under community property regimes (50/50 split) or equitable distribution rules.",
+      "Includes vested pension balances, stock options, and appreciation of commingled separate assets.",
+      "Protected or segregated through prenuptial and postnuptial legal agreements."
+    ],
+    "takeaways_fa": [
+      "در برابر اموال اختصاصی (دارایی‌های پیش از ازدواج، ارث و هدایای شخصی) قرار دارد.",
+      "در نظام‌های حقوقی بر مبنای تقسیم بالمناصفه (۵۰/۵۰) یا توزیع عادلانه بر اساس سهم در زندگی تقسیم می‌شود.",
+      "شامل ارزش بازخرید بیمه‌های عمر، اختیارات خرید سهام و رشد ارزش دارایی‌های مخلوط‌شده است.",
+      "با توافق‌نامه‌های رسمی پیش از ازدواج (Prenuptial) قابل استثنا یا تفکیک حقوقی است."
+    ],
     "url": "https://www.investopedia.com/terms/m/maritalproperty.asp",
     "slug": "maritalproperty",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Marital property establishes the legal pool of assets subject to statutory dissolution and equitable distribution.",
+    "bottom_line_fa": "اموال دوران زناشویی مبنای حقوقی تنصیف دارایی‌ها در زمان انحلال نکاح را تشکیل می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Equitable Distribution vs. Community Property",
+        "title_fa": "تفاوت رژیم اموال مشترک و توزیع منصفانه",
+        "paragraphs_en": [
+          "In Community Property jurisdictions, all marital wealth is strictly bifurcated: $W_{\\text{spouse}} = 0.50 \\times W_{\\text{marital}}$. In Equitable Distribution states, judges evaluate duration, earning capacity, and domestic contributions."
+        ],
+        "paragraphs_fa": [
+          "در رژیم اموال مشترک، کلیه دارایی‌های مکتسبه به طور مساوی نصف می‌شود؛ در حالی که در توزیع منصفانه، دادگاه بر اساس طول ازدواج و توان درآمدزایی هر یک تصمیم‌گیری می‌کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "املاک، مستغلات و تأمین مسکن",
     "category_en": "Real Estate & Mortgage Finance"
   },
   {
     "id": 3531,
     "term_en": "Maritime Law",
-    "term_fa": "Maritime Law",
+    "term_fa": "حقوق دریایی / حقوق بازرگانی دریانوردی (Maritime Law)",
     "letter": "M",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Maritime law (admiralty law) is an autonomous body of national statutes, international conventions, and customary legal doctrines governing legal disputes, commercial navigation, marine shipping contracts, oceanic salvage, and cargo claims occurring on open navigable waters.",
+    "definition_fa": "حقوق دریایی (Maritime Law / Admiralty Law) شاخه‌ای تخصصی از حقوق بین‌الملل و تجارت است که بر قراردادهای کشتیرانی، حمل‌ونقل دریایی کالا، بیمه بدنه و باربری کشتی، تصادفات دریایی، نجات غریق و حل‌وفصل اختلافات در آب‌های سرزمینی و آزاد حاکم است.",
+    "takeaways_en": [
+      "Governed internationally by treaties under the International Maritime Organization (IMO) and Hague-Visby Rules.",
+      "Enforces historic legal doctrines including General Average, Maintenance and Cure, and Maritime Liens.",
+      "Maritime liens attach to the physical vessel itself ('in rem' jurisdiction), permitting vessel arrest.",
+      "Regulates charter parties, bills of lading, and maritime marine insurance policies."
+    ],
+    "takeaways_fa": [
+      "توسط کنوانسیون‌های سازمان بین‌المللی دریانوردی (IMO) و قواعد لاهه-ویزبی هدایت می‌شود.",
+      "شامل اصول کهن حقوقی نظیر «خسارت مشترک دریایی» (General Average) و حقوق وثیقه دریایی است.",
+      "حق وثیقه دریایی مستقیماً بر روی خود کشتی (دعوای عینی In Rem) اعمال شده و امکان توقیف کشتی در بنادر را مهیا می‌سازد.",
+      "تنظیم‌کننده قراردادهای اجاره کشتی (Charter Party)، بارنامه‌های دریایی و بیمه‌نامه‌های پی‌اندآی (P&I) است."
+    ],
     "url": "https://www.investopedia.com/terms/m/maritime-law.asp",
     "slug": "maritime-law",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Maritime law provides the global legal architecture protecting vessel investments, marine cargo, and international sea trade.",
+    "bottom_line_fa": "حقوق دریانوردی چارچوب امن و قابل پیش‌بینی را برای تجارت اقیانوسی و جابجایی کالا در مقیاس جهانی برقرار می‌سازد.",
+    "sections": [
+      {
+        "title_en": "The York-Antwerp Rules of General Average",
+        "title_fa": "قواعد یورک-آنتورپ در تسهیم خسارت مشترک دریایی",
+        "paragraphs_en": [
+          "Under General Average rules, when cargo is intentionally sacrificed to preserve the vessel during perils, all stakeholders contribute proportionally:",
+          "$$\\text{Contribution}_i = \\text{Loss}_{\\text{sacrificed}} \\times \\left(\\frac{V_i}{\\sum V_k}\\right)$$",
+          "where $V_i$ represents the saved sound value of each party's cargo or vessel interest."
+        ],
+        "paragraphs_fa": [
+          "طبق اصل خسارت مشترک دریایی، چنانچه برای نجات کشتی کالایی به دریا ریخته شود، همه صاحبان بار و مالک کشتی به نسبت ارزش دارایی نجات‌یافته خود در جبران خسارت سهیم می‌شوند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 3532,
     "term_en": "Mark Zuckerberg",
-    "term_fa": "Mark Zuckerberg",
+    "term_fa": "مارک زاکربرگ (Mark Zuckerberg)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Mark Zuckerberg is an American technology entrepreneur, software engineer, and philanthropist who co-founded Facebook (now Meta Platforms, Inc.) in 2004, serving as its chairman and chief executive officer and pioneering the modern social networking and digital advertising industries.",
+    "definition_fa": "مارک زاکربرگ (Mark Zuckerberg) کارآفرین، برنامه‌نویس و مدیر ارشد فناوری آمریکایی است که در سال ۲۰۰۴ شرکت فیس‌بوک (متا پلتفرمز کنونی) را بنیان نهاد و با توسعه شبکه‌های اجتماعی اینستاگرام، واتس‌اپ و فناوری‌های هوش مصنوعی و واقعیت مجازی، از تأثیرگذارترین چهره‌های اقتصاد دیجیتال جهان به شمار می‌رود.",
+    "takeaways_en": [
+      "Pioneered programmatic social graph targeted advertising, transforming global corporate marketing.",
+      "Maintains absolute voting control of Meta through a dual-class share structure (Class B 10:1 voting shares).",
+      "Pivoted corporate strategy toward artificial intelligence infrastructure and the immersive metaverse.",
+      "Committed the majority of his wealth to philanthropic scientific research through the Chan Zuckerberg Initiative."
+    ],
+    "takeaways_fa": [
+      "تبلیغات داده‌محور و هدفمند در شبکه‌های اجتماعی را ابداع کرد و مدل درآمدی تبلیغات دیجیتال را دگرگون ساخت.",
+      "با استفاده از ساختار سهام دوگانه (سهام کلاس B با حق رأی ۱۰ برابری) کنترل بلامنازع شرکت متا را حفظ کرده است.",
+      "هدایت استراتژیک شرکت را به سمت مدل‌های زبانی متن‌باز (LLaMA) و واقعیت افزوده تغییر داده است.",
+      "بخش عمده ثروت خود را از طریق بنیاد چان زاکربرگ وقف پروژه‌های سلامت و علوم زیستی کرده است."
+    ],
     "url": "https://www.investopedia.com/terms/m/mark-zuckerberg.asp",
     "slug": "mark-zuckerberg",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Zuckerberg revolutionized global social media communications while championing founder-controlled corporate governance.",
+    "bottom_line_fa": "زاکربرگ نماد کارآفرینی در دره سیلیکون است که با تثبیت کنترل مؤسس، غول فناوری متا را شکل داد.",
+    "sections": [
+      {
+        "title_en": "Dual-Class Share Governance Model",
+        "title_fa": "مدل حاکمیت شرکتی سهام دوگانه",
+        "paragraphs_en": [
+          "Meta's dual-class capital structure disconnects economic ownership from voting sovereignty:",
+          "$$\\text{Voting Share} = \\frac{10 \\cdot Q_B}{Q_A + 10 \\cdot Q_B} > 50\\%$$",
+          "allowing Zuckerberg to maintain undisputed strategic control while holding less than 15% of total common equity."
+        ],
+        "paragraphs_fa": [
+          "ساختار سهام دوگانه متا مالکیت سود را از حق رأی تفکیک کرده و به مؤسس اجازه می‌دهد با در اختیار داشتن کمتر از ۱۵٪ سهام، بیش از ۵۰٪ کل آراء شرکت را در مجمع عمومی کنترل کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -307251,57 +307342,131 @@
     "term_fa": "بازار (Market)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A market is any physical environment, digital platform, or conceptual institutional infrastructure where prospective buyers and willing sellers interact to trade goods, physical services, commodities, or financial securities, establishing equilibrium prices through voluntary exchange.",
+    "definition_fa": "بازار (Market) هرگونه ساختار فیزیکی، پلتفرم الکترونیکی یا نهاد سازمان‌یافته‌ای است که در آن خریداران و فروشندگان برای دادوستد کالاها، خدمات، ارزها، یا اوراق بهادار با یکدیگر تعامل برقرار می‌کنند و نیروهای عرضه و تقاضا قیمت تعادلی مبادلات را تعیین می‌نمایند.",
+    "takeaways_en": [
+      "Facilitates decentralized price discovery through the aggregation of decentralized information.",
+      "Classified by structure: perfect competition, monopolistic competition, oligopoly, and pure monopoly.",
+      "Financial markets encompass equity exchanges, bond markets, foreign exchange (Forex), and derivatives.",
+      "Reduces economic transaction and search costs via centralized bid-ask liquidity pools."
+    ],
+    "takeaways_fa": [
+      "کشف قیمت غیرمتمرکز را از طریق تجمیع اطلاعات عرضه و تقاضا میسر می‌سازد.",
+      "بر اساس ساختار رقابتی به رقابت کامل، رقابت انحصاری، انحصار چندجانبه (اولیگوپولی) و انحصار کامل تقسیم می‌شود.",
+      "بازارهای مالی شامل بورس سهام، بازار بدهی، بازار ارز و ابزارهای مشتقه هستند.",
+      "هزینه‌های مبادله و اصطکاک جستجوی خریدار و فروشنده را به حداقل می‌رساند."
+    ],
     "url": "https://www.investopedia.com/terms/m/market.asp",
     "slug": "market",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Markets serve as the primary institutional mechanisms for efficient capital allocation and price discovery in modern economies.",
+    "bottom_line_fa": "بازارها اساسی‌ترین سازوکار تخصیص بهینه منابع کمیاب و کشف شفاف قیمت‌ها در اقتصاد معاصر به شمار می‌روند.",
+    "sections": [
+      {
+        "title_en": "Equilibrium Price Determination",
+        "title_fa": "تعیین قیمت تعادلی در نقطه برخورد عرضه و تقاضا",
+        "paragraphs_en": [
+          "Market clearing occurs at price $P^*$ where aggregate demand equals aggregate supply:",
+          "$$Q_D(P^*) = Q_S(P^*)$$",
+          "Walrasian tatonnement guarantees that prices adjust dynamically to eliminate shortages ($Q_D > Q_S$) or surpluses ($Q_S > Q_D$)."
+        ],
+        "paragraphs_fa": [
+          "تعادل بازار در قیمتی حاصل می‌شود که مقدار تقاضا با مقدار عرضه برابر باشد:",
+          "$$Q_D(P^*) = Q_S(P^*)$$",
+          "فرایند تعدیل قیمت والراسی مازاد تقاضا یا مازاد عرضه را در بازار خنثی می‌سازد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3534,
     "term_en": "Market Approach",
-    "term_fa": "بازار Approach (Market Approach)",
+    "term_fa": "روش بازار در ارزش‌گذاری (Market Approach Valuation)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The market approach is a business valuation methodology that determines the fair market value of an enterprise, equity stake, patent, or real estate property by analyzing recent market transaction prices of comparable public companies or peer private acquisitions.",
+    "definition_fa": "روش بازار در ارزش‌گذاری (Market Approach) یک متدولوژی استاندارد ارزیابی ارزش بنگاه است که ارزش منصفانه یک شرکت، سهم یا دارایی را بر اساس تحلیل قیمت‌های واقعی معاملات اخیر سهام شرکت‌های مشابه در بورس (Comparable Companies) یا معاملات ادغام و تملیک هم‌گروه (Precedent Transactions) برآورد می‌کند.",
+    "takeaways_en": [
+      "Relies on standardized trading multiples: EV/EBITDA, P/E, Price/Book, and EV/Sales.",
+      "Captures current real-time market sentiment and investor appetite directly.",
+      "Adjusts peer multiples for size discounts, growth differentials, and working capital variances.",
+      "Forms one of the three core valuation pillars alongside the Income Approach (DCF) and Asset Approach."
+    ],
+    "takeaways_fa": [
+      "بر ضرایب و مضارب قیمت‌گذاری استاندارد نظیر P/E، نسبت EV/EBITDA و نسبت ارزش بازار به فروش استوار است.",
+      "احساسات واقعی بازار و تمایل سرمایه‌گذاران در شرایط روز را مستقیماً در ارزش‌گذاری منعکس می‌کند.",
+      "مستلزم اعمال تعدیلات لازم بابت تفاوت اندازه شرکت، رشد سودآوری و نقدشوندگی است.",
+      "یکی از سه رکن اصلی ارزش‌گذاری در کنار روش تنزیل جریانات نقدی (DCF) و روش خالص ارزش دارایی‌هاست."
+    ],
     "url": "https://www.investopedia.com/terms/m/market-approach.asp",
     "slug": "market-approach",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The market approach grounds corporate valuations in real-world market pricing reality, benchmarking multiples against industry peers.",
+    "bottom_line_fa": "روش بازار ارزش تخمینی شرکت را بر مبنای واقعیت‌های ملموس تابلوی بورس و معاملات هم‌ترازان تنظیم می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Trading Multiples Valuation Formula",
+        "title_fa": "فرمول برآورد ارزش بنگاه با استفاده از ضرایب هم‌گروه",
+        "paragraphs_en": [
+          "Enterprise Value ($EV_{\\text{target}}$) is derived from the median peer trading multiple:",
+          "$$EV_{\\text{target}} = \\text{EBITDA}_{\\text{target}} \\times \\left( \\text{Median} \\left[ \\frac{EV_i}{\\text{EBITDA}_i} \\right]_{i \\in \\text{Peers}} \\right)$$",
+          "Equity Value is subsequently resolved via: $\\text{Equity Value} = EV - \\text{Net Debt}$."
+        ],
+        "paragraphs_fa": [
+          "ارزش کل بنگاه هدف از ضرب سود عملیاتی قبل از استهلاک در میانه ضریب EV/EBITDA شرکت‌های رقیب حاصل می‌شود:",
+          "سپس ارزش حقوق صاحبان سهام با کسر خالص بدهی‌ها از ارزش کل بنگاه استخراج می‌گردد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3535,
     "term_en": "Market Basket",
-    "term_fa": "بازار Basket (Market Basket)",
+    "term_fa": "سبد بازار / سبد کالای مصرف‌کننده (Market Basket)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A market basket is a statistically representative permanent sample of consumer goods and services tracked longitudinally over time to measure inflation, track changes in consumer living costs, and calculate the Consumer Price Index (CPI).",
+    "definition_fa": "سبد بازار یا سبد مصرف‌کننده (Market Basket) نمونه آماری ثابتی از صدها قلم کالا و خدمات مصرفی ضروری خانوارها (شامل خوراکی‌ها، مسکن، بهداشت، حمل‌ونقل و آموزش) است که قیمت آنها به طور منظم در طول زمان اندازه‌گیری می‌شود تا نرخ تورم و شاخص بهای کالاها و خدمات مصرفی (CPI) محاسبه گردد.",
+    "takeaways_en": [
+      "Forms the empirical foundation of headline and core Consumer Price Index (CPI) metrics.",
+      "Components are weighted according to periodic household consumer expenditure surveys.",
+      "Subject to substitution bias, mitigated via chained CPI calculations using geometric weighting.",
+      "Directly drives statutory cost-of-living adjustments (COLA) for pensions and government wages."
+    ],
+    "takeaways_fa": [
+      "پایه‌گذار محاسبات رسمی نرخ تورم عمومی و تورم هسته (Core Inflation) در اقتصاد کلان است.",
+      "وزن هر قلم بر اساس سهم آن در بودجه واقعی هزینه خانوارها تعیین می‌گردد.",
+      "تغییر الگوی مصرف و جانشینی کالاها در طول زمان با روش‌های نوین زنجیره‌ای (Chained CPI) تعدیل می‌شود.",
+      "مبنای تعیین درصد افزایش حقوق بازنشستگان و ترمیم دستمزدها بر اساس هزینه زندگی است."
+    ],
     "url": "https://www.investopedia.com/terms/m/market_basket.asp",
     "slug": "market_basket",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The market basket quantifies aggregate consumer purchasing power erosion, guiding central bank inflation mandates.",
+    "bottom_line_fa": "سبد بازار میزان فرسایش قدرت خرید پول را سنجیده و قطب‌نمای بانک‌های مرکزی در کنترل تورم است.",
+    "sections": [
+      {
+        "title_en": "Laspeyres Index Formulation",
+        "title_fa": "فرمول شاخص لاسپیرز در محاسبه سبد کالا",
+        "paragraphs_en": [
+          "The Consumer Price Index ($CPI_t$) based on fixed base-year basket quantities ($q_0$) satisfies the Laspeyres formulation:",
+          "$$CPI_t = \\frac{\\sum_{i=1}^N p_{i,t} \\cdot q_{i,0}}{\\sum_{i=1}^N p_{i,0} \\cdot q_{i,0}} \\times 100$$",
+          "Inflation rate between period $t-1$ and $t$ is: $\\pi_t = \\frac{CPI_t - CPI_{t-1}}{CPI_{t-1}} \\times 100\\%$."
+        ],
+        "paragraphs_fa": [
+          "شاخص قیمت مصرف‌کننده با فرمول شاخص لاسپیرز از تقسیم هزینه سبد در سال جاری بر سال پایه به دست می‌آید:",
+          "$$CPI_t = \\frac{\\sum p_{i,t} \\cdot q_{i,0}}{\\sum p_{i,0} \\cdot q_{i,0}} \\times 100$$",
+          "که نشان‌دهنده درصد افزایش هزینه حفظ سطح مشخصی از سبد مصرفی در طول زمان است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
@@ -307507,60 +307672,130 @@
   {
     "id": 3537,
     "term_en": "Market Cannibalization",
-    "term_fa": "بازار Cannibalization (Market Cannibalization)",
+    "term_fa": "خودخوری بازاریابی / کانیبالیزاسیون بازار (Market Cannibalization)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Market cannibalization is the loss in sales volume, revenue, or market share that a company experiences across its existing legacy product line when it introduces a new product that directly substitutes or competes with its own established offerings.",
+    "definition_fa": "خودخوری بازاریابی یا کانیبالیزاسیون (Market Cannibalization) پدیده‌ای در بازاریابی و استراتژی محصول است که در آن معرفی یک محصول جدید توسط خود شرکت، منجر به افت تقاضا، کاهش فروش و بلعیدن سهم بازار محصولات قدیمی‌تر همان شرکت می‌گردد.",
+    "takeaways_en": [
+      "Occurs when new product variants target overlapping customer segments at similar price tiers.",
+      "Can be strategically intentional to preempt competitor entry or accelerate technological migration.",
+      "Evaluated by calculating net incremental revenue rather than gross new product sales volume.",
+      "Prominent in consumer tech (e.g., iPhone sales cannibalizing iPad or iPod revenues)."
+    ],
+    "takeaways_fa": [
+      "زمانی رخ می‌دهد که محصول جدید همان بخش از مشتریان محصولات قبلی را با ویژگی‌ها یا قیمت مشابه هدف بگیرد.",
+      "گاهی عامدانه و هوشمندانه انجام می‌شود تا شرکت پیش از آنکه رقبا بازارش را تصاحب کنند، خودش بازار قبلی را بازنشسته سازد.",
+      "در محاسبات مالی، فروش افزایشی خالص (نه فروش خام محصول جدید) مبنای توجیه اقتصادی قرار می‌گیرد.",
+      "در شرکت‌های فناوری (نظیر عرضه آیفون جدید که فروش مدل‌های قبلی یا آیپاد را متوقف کرد) بسیار رایج است."
+    ],
     "url": "https://www.investopedia.com/terms/m/marketcannibilization.asp",
     "slug": "marketcannibilization",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Cannibalization demands proactive portfolio orchestration to ensure new offerings expand total corporate gross profit.",
+    "bottom_line_fa": "مدیریت خودخوری محصول مستلزم آن است که درآمد مازاد محصول نوآورانه همواره بیش از حاشیه سود از دست‌رفته محصول پیشین باشد.",
+    "sections": [
+      {
+        "title_en": "Cannibalization Rate and Net Incremental Profit",
+        "title_fa": "نرخ خودخوری و سود خالص افزایشی شرکت",
+        "paragraphs_en": [
+          "The cannibalization rate ($c$) measures lost legacy units ($\\Delta Q_{\\text{old}}$) per new unit sold ($Q_{\\text{new}}$):",
+          "$$c = \\frac{|\\Delta Q_{\\text{old}}|}{Q_{\\text{new}}}$$",
+          "The product launch is value-accretive if net incremental profit is positive:",
+          "$$\\Delta \\Pi = Q_{\\text{new}} \\cdot (P_{\\text{new}} - VC_{\\text{new}}) - c \\cdot Q_{\\text{new}} \\cdot (P_{\\text{old}} - VC_{\\text{old}}) - FC_{\\text{launch}} > 0$$"
+        ],
+        "paragraphs_fa": [
+          "نرخ خودخوری ($c$) نشان‌دهنده تعداد واحدهای از دست رفته محصول قدیم به ازای فروش هر واحد محصول جدید است:",
+          "طرح زمانی ارزش‌آفرین خواهد بود که سود ناخالص حاصل از فروش کالای جدید فراتر از زیان ناشی از خودخوری محصول قبلی باشد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3538,
     "term_en": "Market Capitalization",
-    "term_fa": "بازار Capitalization (Market Capitalization)",
+    "term_fa": "ارزش بازار سهام / ارزش بازار شرکت (Market Capitalization)",
     "letter": "M",
     "category": "مالی شرکتی، ادغام و تملک (M&A)",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Market capitalization (market cap) is the aggregate dollar market value of a publicly traded corporation's outstanding equity shares, computed by multiplying the total number of common shares outstanding by the current market price of one share.",
+    "definition_fa": "ارزش بازار (Market Capitalization) ارزش کل دلاری یا ریالی سهام یک شرکت سهامی عام در بازار بورس است که از حاصل‌ضرب تعداد کل سهام منتشرشده و در دست سهامداران در قیمت روز هر برگ سهم به دست می‌آید و شاخص اصلی اندازه‌گیری بزرگی شرکت در بازار است.",
+    "takeaways_en": [
+      "Calculated as: $\\text{Market Cap} = P_{\\text{share}} \\times Q_{\\text{shares outstanding}}$.",
+      "Categorized into Mega-Cap ($>$ $200B), Large-Cap ($10B - $200B), Mid-Cap ($2B - $10B), Small-Cap ($300M - $2B), and Micro-Cap.",
+      "Differs from Enterprise Value (EV), which incorporates net debt and preferred stock.",
+      "Determines index weighting in major capitalization-weighted equity benchmarks (S&P 500, MSCI World)."
+    ],
+    "takeaways_fa": [
+      "از ضرب قیمت لحظه‌ای سهم در تعداد کل سهام منتشره محاسبه می‌شود: $\\text{Market Cap} = P \\times Q$.",
+      "شرکت‌ها را به غول‌پیکر (Mega-Cap)، بزرگ، متوسط (Mid-Cap)، کوچک (Small-Cap) و میکروکپ طبقه‌بندی می‌نماید.",
+      "با ارزش کل بنگاه (EV) تفاوت دارد زیرا بدهی‌ها و وجوه نقد ترازنامه در ارزش بازار سهام لحاظ نمی‌شوند.",
+      "مبنای وزن‌دهی به سهام در شاخص‌های کل بورس (مانند اس‌اندپی ۵۰۰ و شاخص کل بورس تهران) است."
+    ],
     "url": "https://www.investopedia.com/terms/m/marketcapitalization.asp",
     "slug": "marketcapitalization",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Market capitalization defines equity enterprise scale, dictating institutional investability and index weighting.",
+    "bottom_line_fa": "ارزش بازار مقیاس اقتصادی شرکت را در نگاه سرمایه‌گذاران تعریف کرده و وزن آن را در سبد بازار مشخص می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Market Cap vs. Enterprise Value Mechanics",
+        "title_fa": "تفاوت ارزش بازار سهام با ارزش کل بنگاه (EV)",
+        "paragraphs_en": [
+          "While Market Cap reflects equity market value, Enterprise Value ($EV$) captures the total takeover cost of the firm:",
+          "$$EV = \\text{Market Capitalization} + \\text{Total Debt} + \\text{Preferred Equity} + \\text{Minority Interest} - \\text{Cash and Equivalents}$$"
+        ],
+        "paragraphs_fa": [
+          "ارزش بازار صرفاً نمایانگر ارزش حقوق صاحبان سهام است، در حالی که ارزش کل بنگاه ($EV$) هزینه کامل تصاحب شرکت را با احتساب تسویه بدهی‌ها و کسر وجوه نقد نشان می‌دهد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالی شرکتی، ادغام و تملک (M&A)",
     "category_en": "Corporate Finance & M&A"
   },
   {
     "id": 3539,
     "term_en": "Market Capitalization-to-GDP Ratio",
-    "term_fa": "بازار Capitalization-to-GDP نسبت (Market Capitalization-to-GDP Ratio)",
+    "term_fa": "نسبت ارزش بازار به تولید ناخالص داخلی / شاخص وارن بافت (Buffett Indicator)",
     "letter": "M",
     "category": "ارزش‌گذاری و تحلیل بنیادی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The market capitalization-to-GDP ratio—popularly christened the 'Buffett Indicator'—is a macroeconomic valuation metric that compares the aggregate market value of all publicly traded domestic equities against a nation's nominal Gross Domestic Product (GDP).",
+    "definition_fa": "نسبت ارزش بازار به تولید ناخالص داخلی (Buffett Indicator) سنجه‌ای کلان در تحلیل ارزش‌گذاری بورس است که توسط وارن بافت به عنوان بهترین شاخص برای سنجش حبابی بودن یا ارزندگی کل بازار سهام معرفی شد؛ این نسبت مجموع ارزش بازار کلیه شرکت‌های بورسی را با تولید ناخالص داخلی مقایسه می‌کند.",
+    "takeaways_en": [
+      "Popularized by Warren Buffett as 'the single best measure of where valuations stand at any given moment.'",
+      "Expressed as: $\\text{Buffett Indicator} = \\frac{\\text{Total Market Cap of Equities}}{\\text{Nominal GDP}} \\times 100\\%$.",
+      "Historical baseline: $75\\% - 90\\%$ reflects fair valuation; $> 115\\%$ indicates severe overvaluation; $< 60\\%$ signals undervalued bargains.",
+      "Surpassed historic records ($> 200\\%$) during the ultra-loose monetary policy era following the 2020 pandemic."
+    ],
+    "takeaways_fa": [
+      "توسط وارن بافت به عنوان مطمئن‌ترین سنجه برای کشف زمان حبابی بودن یا ارزندگی کلی بازار سهام توصیف شده است.",
+      "از تقسیم کل ارزش سهام بورس بر تولید ناخالص داخلی نامی به دست می‌آید: $\\frac{\\text{ارزش بازار}}{\\text{GDP}} \\times 100\\%$.",
+      "به طور سنتی محدوده ۷۵٪ تا ۹۰٪ تعادلی، بالای ۱۱۵٪ نشانگر حباب و گران بودن بورس، و زیر ۶۰٪ نشان‌دهنده فرصت عالی خرید است.",
+      "در پی سیاست‌های پولی انبساطی پس از کرونا در بازارهای جهانی رکوردهای بالای ۲۰۰٪ را ثبت نمود."
+    ],
     "url": "https://www.investopedia.com/terms/m/marketcapgdp.asp",
     "slug": "marketcapgdp",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Buffett Indicator provides an overarching macro reality check, comparing financial market paper wealth against real economic output.",
+    "bottom_line_fa": "شاخص بافت دماسنج واقعیت‌سنجی بورس است که رشد دارایی‌های مالی کاغذی را با تولید واقعی ثروت در اقتصاد می‌سنجد.",
+    "sections": [
+      {
+        "title_en": "Mathematical Formulation and Deviation from Trend",
+        "title_fa": "فرمول ریاضی و سنجش انحراف از روند تاریخی",
+        "paragraphs_en": [
+          "For total equity market index $M$ and national output $Y$:",
+          "$$BI_t = \\frac{M_t}{Y_t} \\times 100\\%$$",
+          "Analysts calculate the standardized Z-score deviation against exponential historical trend lines ($BI_{\\text{trend}}$) to predict broad decadal equity market annualized returns."
+        ],
+        "paragraphs_fa": [
+          "شاخص از تقسیم ارزش شاخص سهام ویلشایر ۵۰۰۰ بر تولید ناخالص داخلی به دست می‌آید و انحراف معیار آن از خط روند تاریخی برای پیش‌بینی بازده ده ساله بازار به کار می‌رود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "ارزش‌گذاری و تحلیل بنیادی",
     "category_en": "Valuation & Fundamental Analysis"
   },
@@ -307726,20 +307961,44 @@
   {
     "id": 3541,
     "term_en": "Market Depth",
-    "term_fa": "بازار Depth (Market Depth)",
+    "term_fa": "عمق بازار (Market Depth / Level 2 Order Book)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Market depth is a financial market microstructure metric reflecting an exchange order book's ability to absorb substantial trade order volumes without inducing significant adverse fluctuations in asset prices, evidenced by cumulative limit orders queued across price ticks.",
+    "definition_fa": "عمق بازار (Market Depth) سنجه‌ای از نقدشوندگی و کشش دفترچه سفارش‌های بورس است که نشان می‌دهد چه حجم و چه تعداد سفارش خرید و فروش در سطوح مختلف قیمتی (مظنه‌های بالاتر و پایین‌تر از قیمت جاری) صف بسته‌اند و بازار تا چه حد می‌تواند سفارش‌های سنگین را بدون پرش قیمتی جذب کند.",
+    "takeaways_en": [
+      "Visualized via Level 2 market quote screens and graphical order book depth charts.",
+      "Deep markets feature large cumulative limit volumes closely clustered around the prevailing bid-ask spread.",
+      "Shallow markets suffer high price slippage ($P_{\\text{exec}} - P_{\\text{expected}}$) on institutional block trades.",
+      "Critical operational metric for algorithmic market makers and execution quality analytics."
+    ],
+    "takeaways_fa": [
+      "در سامانه‌های معاملاتی سطح ۲ (Level 2) و نمودارهای گرافیکی عمق عرضه و تقاضا نمایش داده می‌شود.",
+      "بازار با عمق بالا دارای سفارش‌های حجیم متراکم در نزدیک‌ترین قیمت‌ها به بهترین مظنه است.",
+      "بازارهای کم‌عمق با ورود سفارش‌های بزرگ دچار لغزش شدید قیمت (Slippage) و شوک نوسانی می‌شوند.",
+      "معیار اصلی ارزیابی کارایی بازارگردان‌ها و الگوریتم‌های هوشمند اجرای سفارشات است."
+    ],
     "url": "https://www.investopedia.com/terms/m/marketdepth.asp",
     "slug": "marketdepth",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Market depth measures order book liquidity thickness, guarding against severe institutional trade price slippage.",
+    "bottom_line_fa": "عمق بازار سپر محافظتی در برابر لغزش قیمت است و نقدشوندگی واقعی دارایی را در تالار معاملات تعیین می‌کند.",
+    "sections": [
+      {
+        "title_en": "Order Book Liquidity Integration",
+        "title_fa": "تجمیع نقدینگی در سطوح مختلف دفترچه سفارشات",
+        "paragraphs_en": [
+          "Market depth across price bandwidth $\\Delta P$ aggregates visible buy orders ($Q_b$) and sell orders ($Q_a$):",
+          "$$\\text{Depth}_{\\text{Bid}} = \\sum_{P_k \\ge P_0 - \\Delta P} Q_b(P_k), \\quad \\text{Depth}_{\\text{Ask}} = \\sum_{P_k \\le P_0 + \\Delta P} Q_a(P_k)$$",
+          "Order Book Imbalance (OBI) measures short-term price pressure: $OBI = \\frac{\\text{Depth}_{\\text{Bid}} - \\text{Depth}_{\\text{Ask}}}{\\text{Depth}_{\\text{Bid}} + \\text{Depth}_{\\text{Ask}}}$."
+        ],
+        "paragraphs_fa": [
+          "عمق بازار از جمع حجم سفارش‌های خرید و فروش در دامنه قیمتی معین محاسبه می‌شود:",
+          "نابرابری دفترچه سفارشات (OBI) جهت فشار کوتاه‌مدت قیمت را پیش‌بینی می‌نماید."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
@@ -308005,20 +308264,43 @@
   {
     "id": 3543,
     "term_en": "Market Economy",
-    "term_fa": "بازار Economy (Market Economy)",
+    "term_fa": "اقتصاد بازار / اقتصاد بازار آزاد (Market Economy)",
     "letter": "M",
     "category": "اقتصاد کلان و سیاست پولی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A market economy is an economic system in which economic decisions regarding resource production, investment allocation, and goods distribution are guided primarily by the spontaneous price signals generated by decentralized supply and demand interactions rather than state central planning.",
+    "definition_fa": "اقتصاد بازار (Market Economy) نظامی اقتصادی است که در آن تصمیم‌گیری پیرامون اینکه چه کالایی، چگونه و به چه میزان تولید و توزیع شود، بر عهده سازوکار قیمت‌ها و تعامل نیروهای عرضه و تقاضا در بستر مالکیت خصوصی و رقابت آزاد است، نه برنامه‌ریزی دستوری دولت متمرکز.",
+    "takeaways_en": [
+      "Anchored in private property rights, contractual freedom, and self-regulating competitive pricing.",
+      "Contrasts fundamentally with command/socialist economies where production quotas are state-dictated.",
+      "Employs price signals to coordinate supply and demand efficiently (Adam Smith's 'invisible hand').",
+      "Most modern nations operate as mixed market economies blending market forces with state regulatory oversight."
+    ],
+    "takeaways_fa": [
+      "بر سه رکن مالکیت خصوصی دارایی‌ها، آزادی قراردادها و سیستم قیمت‌های انعطاف‌پذیر بنا شده است.",
+      "در نقطه مقابل اقتصاد دستوری و متمرکز سوسیالیستی قرار دارد که دولت تیراژ و سهمیه‌ها را تعیین می‌کند.",
+      "قیمت‌ها مانند سیگنال‌های اطلاعاتی تخصیص منابع را بدون نیاز به دستور مرکزی هماهنگ می‌سازند (دست نامرئی آدام اسمیت).",
+      "بیشتر اقتصادهای جهان امروزه «اقتصاد مختلط» هستند که بازار آزاد را با نظارت‌های تنظیم‌گری دولت تلفیق کرده‌اند."
+    ],
     "url": "https://www.investopedia.com/terms/m/marketeconomy.asp",
     "slug": "marketeconomy",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Market economies harness decentralized price discovery to optimize technological innovation and productive efficiency.",
+    "bottom_line_fa": "اقتصاد بازار با اتکا به انگیزه سود شخصی و رقابت آزاد، نوآوری فنی و بالاترین سطح رفاه مصرف‌کننده را به ارمغان می‌آورد.",
+    "sections": [
+      {
+        "title_en": "First Fundamental Welfare Theorem",
+        "title_fa": "قضیه اول رفاه در اقتصاد بازار آزاد",
+        "paragraphs_en": [
+          "The First Fundamental Theorem of Welfare Economics demonstrates that competitive market equilibria achieve Pareto efficiency in the absence of transaction costs and externalities:",
+          "$$MRS_i^{xy} = \\frac{P_x}{P_y} = MRT^{xy} \\quad \\forall i$$",
+          "proving decentralized price-taking behaviors exhaust all potential gains from trade."
+        ],
+        "paragraphs_fa": [
+          "قضیه اول اقتصاد رفاه اثبات می‌کند که تعادل در بازار رقابتی کامل، منجر به تخصیص بهینه پارتو می‌شود؛ جایی که هیچ فردی نمی‌تواند بدون بدتر شدن وضعیت دیگری، وضعیت بهتری پیدا کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
@@ -308122,40 +308404,90 @@
   {
     "id": 3545,
     "term_en": "Market Exposure",
-    "term_fa": "بازار Exposure (Market Exposure)",
+    "term_fa": "میزان در معرض بازار بودن / ریسک مواجهه با بازار (Market Exposure)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Market exposure represents the aggregate monetary dollar value or proportional percentage of an investment fund, portfolio, or balance sheet that is exposed to the systemic price movements and volatility of a specific asset class, sector, or market benchmark.",
+    "definition_fa": "میزان در معرض بازار بودن (Market Exposure) به ارزش پولی یا درصد سهمی از کل پرتفوی سرمایه‌گذاری گفته می‌شود که تحت تأثیر نوسانات قیمت، ریسک‌های سیستماتیک و روند حرکتی یک بازار، صنعت یا طبقه دارایی خاص قرار دارد.",
+    "takeaways_en": [
+      "Distinguishes between gross exposure ($|\\text{Long}| + |\\text{Short}|$) and net exposure ($\\text{Long} - \\text{Short}$).",
+      "Determines portfolio systemic beta risk sensitivity to broad equity market drawdowns.",
+      "Controlled and modulated using financial derivatives such as index futures and option collars.",
+      "Institutional risk budgets establish maximum limits on sector, sovereign, and asset-class exposures."
+    ],
+    "takeaways_fa": [
+      "به دو سنجه مواجهه ناخالص (مجموع قدر مطلق موقعیت‌های خرید و فروش) و مواجهه خالص (خرید منهای فروش) تفکیک می‌شود.",
+      "تعیین‌کننده حساسیت بتای پرتفوی نسبت به ریزش‌های شاخص کل بازار است.",
+      "با استفاده از ابزارهای مشتقه نظیر قراردادهای آتی و آپشن‌ها قابل کنترل و خنثی‌سازی (هجینگ) است.",
+      "کمیته‌های مدیریت ریسک صندوق‌ها سقف‌های مجاز قرار گرفتن در معرض هر صنعت را الزامی می‌کنند."
+    ],
     "url": "https://www.investopedia.com/terms/m/marketexposure.asp",
     "slug": "marketexposure",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Market exposure quantifies asset vulnerability to systemic macro fluctuations, dictating aggregate portfolio beta.",
+    "bottom_line_fa": "مواجهه بازار میزان آسیب‌پذیری دارایی را در برابر تلاطم‌های کلان اندازه‌گیری کرده و بتای سبد را تعیین می‌کند.",
+    "sections": [
+      {
+        "title_en": "Gross vs. Net Market Exposure Metrics",
+        "title_fa": "محاسبه مواجهه خالص و ناخالص بازار",
+        "paragraphs_en": [
+          "For portfolio long equity value $L$ and short equity value $S$ against total net assets ($NAV$):",
+          "$$\\text{Net Exposure} = \\frac{L - S}{NAV} \\times 100\\%, \\quad \\text{Gross Exposure} = \\frac{L + S}{NAV} \\times 100\\%$$",
+          "Market neutral funds maintain $\\text{Net Exposure} \\approx 0\\%$ while holding $\\text{Gross Exposure} \\ge 150\\%$ via leverage."
+        ],
+        "paragraphs_fa": [
+          "مواجهه خالص تفاوت ارزش خرید و فروش استقراضی را نسبت به ارزش صندوق نشان می‌دهد:",
+          "صندوق‌های بی‌طرف نسبت به بازار با صفر کردن مواجهه خالص، بتای سبد را حذف و صرفاً بازدهی آلفا کسب می‌کنند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3546,
     "term_en": "Market Failure",
-    "term_fa": "بازار Failure (Market Failure)",
+    "term_fa": "شکست بازار (Market Failure)",
     "letter": "M",
     "category": "اقتصاد خرد و ساختار بازار",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Market failure is an economic situation occurring within a free market where the decentralized allocation of goods and services is Pareto-inefficient, leading to a net loss of economic social welfare (deadweight loss) due to market distortions.",
+    "definition_fa": "شکست بازار (Market Failure) وضعیتی در علم اقتصاد است که در آن سازوکار قیمت‌ها و عملکرد بازار آزاد به تنهایی قادر به تخصیص بهینه منابع نیست و منجر به اتلاف رفاه اجتماعی، کمبود تولید کالاهای عمومی یا تولید مازاد آلودگی و اثرات جانبی منفی می‌گردد.",
+    "takeaways_en": [
+      "Primarily caused by four structural failures: externalities, public goods, information asymmetry, and monopoly power.",
+      "Negative externalities (e.g., pollution) create deadweight loss through social marginal cost exceeding private marginal cost ($SMC > PMC$).",
+      "Justifies government economic intervention through Pigouvian taxes, subsidies, antitrust laws, and public provision.",
+      "Public goods suffer chronic under-provision due to non-excludability and free-rider behaviors."
+    ],
+    "takeaways_fa": [
+      "از چهار منشأ ساختاری ناشی می‌شود: پیامدهای خارجی (Externalities)، کالاهای عمومی، عدم تقارن اطلاعاتی و انحصارات.",
+      "پیامدهای منفی خارجی (نظیر آلودگی محیط زیست) باعث می‌شود هزینه نهایی اجتماعی فراتر از هزینه خصوصی رود ($SMC > PMC$).",
+      "مبنای توجیه دخالت‌های اصلاحی دولت از طریق وضع مالیات‌های پیگویی، یارانه‌ها و قوانین ضدانحصار است.",
+      "کالاهای عمومی (مانند امنیت ملی و روشنایی معابر) به دلیل مشکل سواری مجانی (Free-Rider) در بازار آزاد تولید نمی‌شوند."
+    ],
     "url": "https://www.investopedia.com/terms/m/marketfailure.asp",
     "slug": "marketfailure",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Market failure highlights free-market allocation limits, establishing the theoretical necessity of targeted public policy interventions.",
+    "bottom_line_fa": "شکست بازار ناتوانی بازار آزاد در تحقق بهینگی کامل را نشان داده و دخالت‌های ضابطه‌مند دولت را توجیه می‌کند.",
+    "sections": [
+      {
+        "title_en": "Externalities and Social Marginal Cost",
+        "title_fa": "پیامدهای خارجی و هزینه نهایی اجتماعی",
+        "paragraphs_en": [
+          "When negative production externalities ($EMC$) exist:",
+          "$$SMC(Q) = PMC(Q) + EMC(Q) > PMC(Q)$$",
+          "The private market overproduces at $Q_{\\text{private}} > Q_{\\text{social}}$, generating Deadweight Loss ($DWL$):",
+          "$$DWL = \\int_{Q_{\\text{social}}}^{Q_{\\text{private}}} (SMC(Q) - P(Q)) \\, dQ$$"
+        ],
+        "paragraphs_fa": [
+          "در صورت وجود آلودگی، هزینه نهایی اجتماعی فراتر از هزینه خصوصی کارخانه است:",
+          "$$SMC(Q) = PMC(Q) + EMC(Q)$$",
+          "بازار خصوصی بیش از حد بهینه تولید کرده و مثلث اتلاف رفاه اجتماعی (Deadweight Loss) ایجاد می‌نماید."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد خرد و ساختار بازار",
     "category_en": "Microeconomics & Market Structures"
   },
@@ -308375,120 +308707,262 @@
   {
     "id": 3548,
     "term_en": "Market Indicators",
-    "term_fa": "بازار Indicators (Market Indicators)",
+    "term_fa": "شاخص‌های بازار / اندیکاتورهای تحلیلی بازار (Market Indicators)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Market indicators are quantitative statistical and technical metrics designed to interpret aggregate market data—such as price momentum, advance-decline volume ratios, volatility indexes, and moving averages—to forecast broader market direction and investor sentiment.",
+    "definition_fa": "شاخص‌های بازار (Market Indicators) به سنجه‌های آماری، کمّی و تکنیکالی اطلاق می‌شود که داده‌های کل بازار (نظیر حجم معاملات، نسبت نمادهای صعودی به نزولی، شاخص نوسان VIX و میانگین‌های متحرک) را پردازش می‌کنند تا روند آتی، عمق نقدینگی و چرخش احساسات بازار را پیش‌بینی نمایند.",
+    "takeaways_en": [
+      "Encompasses breadth indicators (Advance-Decline Line, Arms TRIN Index, McClellan Oscillator).",
+      "Includes market sentiment gauges (Cboe VIX, Put/Call Ratio, High-Yield Credit Spreads).",
+      "Identifies hidden market divergences between broad index prices and underlying market participation.",
+      "Deploys moving average crossovers (Golden Cross, Death Cross) to confirm macro cycle regimes."
+    ],
+    "takeaways_fa": [
+      "شامل شاخص‌های گستره بازار (خط صعود-نزول، شاخص آرمز TRIN و اسیلاتور مک‌کللان) است.",
+      "سنجه‌های روان‌شناختی سنتیمنت مانند شاخص ترس و طمع، شاخص نوسان VIX و نسبت پوت به کال را پوشش می‌دهد.",
+      "واگرایی‌های پنهان میان صعود شاخص کل و تضعیف تعداد نمادهای پیشرو را آشکار می‌سازد.",
+      "تقاطع میانگین‌های متحرک کلیدی (تقاطع طلایی و تقاطع مرگ) را برای تأیید تغییر فاز بازار به کار می‌گیرد."
+    ],
     "url": "https://www.investopedia.com/terms/m/market_indicators.asp",
     "slug": "market_indicators",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Market indicators provide statistical diagnostic clarity, verifying the internal structural health of aggregate price movements.",
+    "bottom_line_fa": "اندیکاتورهای بازار با واکاوی داده‌های زیربنایی، سلامت و اصالت روندهای صعودی و نزولی بورس را راستی‌آزمایی می‌کنند.",
+    "sections": [
+      {
+        "title_en": "Advance-Decline Breadth Accumulation",
+        "title_fa": "فرمول انباشت خط صعود-نزول (AD Line)",
+        "paragraphs_en": [
+          "The cumulative Advance-Decline Line ($AD_t$) tracks underlying market participation across trading sessions:",
+          "$$AD_t = AD_{t-1} + (\\text{Advancing Issues}_t - \\text{Declining Issues}_t)$$",
+          "Bearish divergence occurs when index prices reach new record highs while $AD_t$ fails to confirm, warning of impending market breakdown."
+        ],
+        "paragraphs_fa": [
+          "خط صعود-نزول از حاصل‌جمع جبری نمادهای مثبت منهای نمادهای منفی هر روز تشکیل می‌شود:",
+          "واگرایی منفی زمانی رخ می‌دهد که شاخص رشد کند اما خط صعود-نزول افت کند، که هشداری از توخالی بودن رالی صعودی است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3549,
     "term_en": "Market Leader",
-    "term_fa": "بازار Leader (Market Leader)",
+    "term_fa": "رهبر بازار / پیشتاز صنعت (Market Leader)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A market leader is a commercial business enterprise that commands the highest market share, largest revenue volume, and strongest brand equity within its specific industry sector, frequently setting pricing standards and pioneering technological innovation.",
+    "definition_fa": "رهبر بازار (Market Leader) به شرکتی در یک صنعت یا بازار گفته می‌شود که بالاترین سهم بازار، بیشترین حجم فروش و قدرتمندترین وفاداری به برند را در اختیار دارد و به دلیل نفوذ و مقیاس خود، روندهای قیمت‌گذاری، استانداردهای کیفی و نوآوری‌های محصول را به کل رقبا دیکته می‌کند.",
+    "takeaways_en": [
+      "Benefits from massive economies of scale and structural low-cost procurement moats.",
+      "Acts as the primary price setter, exercising price leadership over industry competitors.",
+      "Possesses extensive distribution networks, high customer switching costs, and heavy R&D budgets.",
+      "Vulnerable to agile disruption from technological upstarts (the Innovator's Dilemma)."
+    ],
+    "takeaways_fa": [
+      "از صرفه‌های مقیاس عظیم و بهای تمام‌شده پایین‌تر به عنوان خندق اقتصادی (Moat) بهره می‌برد.",
+      "نقش رهبر قیمت را ایفا می‌کند و سایر رقبا از استراتژی‌های قیمت‌گذاری وی تبعیت می‌نمایند.",
+      "شبکه‌های گسترده توزیع، هزینه‌های تعویض بالا برای مشتری و بودجه‌های سنگین تحقیق و توسعه دارد.",
+      "در برابر استارتاپ‌های نوآور چابک بر اساس معمای نوآور کریستنسن آسیب‌پذیر است."
+    ],
     "url": "https://www.investopedia.com/terms/m/market-leader.asp",
     "slug": "market-leader",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Market leaders exploit scale and brand moats to capture outsized industry economic profits.",
+    "bottom_line_fa": "رهبران بازار با تکیه بر مزیت مقیاس و اعتبار برند، سهم شیر از سودآوری کل صنعت را تصاحب می‌کنند.",
+    "sections": [
+      {
+        "title_en": "Market Concentration and Herfindahl Index",
+        "title_fa": "تمرکز بازار و شاخص هرفیندال-هیرشمن",
+        "paragraphs_en": [
+          "A market leader's relative dominance ($s_1$) directly shapes industry concentration via the Herfindahl-Hirschman Index ($HHI$):",
+          "$$HHI = \\sum_{i=1}^N (s_i \\times 100)^2$$",
+          "where $s_1 > s_2 \\ge \\dots \\ge s_N$ reflects market share proportions."
+        ],
+        "paragraphs_fa": [
+          "تسلط رهبر بازار مستقیماً در شاخص تمرکز هرفیندال-هیرشمن (HHI) منعکس می‌شود:",
+          "مقادیر بالای HHI بیانگر انحصار چندجانبه و قدرت بالای رهبر بازار در تعیین قیمت‌ها است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3550,
     "term_en": "Market Maker",
-    "term_fa": "بازار Maker (Market Maker)",
+    "term_fa": "بازارگردان (Market Maker)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A market maker is an authorized broker-dealer firm or specialized institutional liquidity provider that actively quotes continuous two-sided bids and offers for specific tradable securities, standing ready to buy and sell at publicly quoted prices for its own inventory account.",
+    "definition_fa": "بازارگردان (Market Maker) شرکت کارگزاری یا نهاد مالی دارای مجوزی است که با ارائه مداوم مظنه‌های دوطرفه خرید و فروش (Bid/Ask) در تابلوی معاملات، نقدشوندگی مستمر سهم را تضمین کرده و با خرید و فروش روی حساب اختصاصی خود، مانع از قفل شدن معاملات در صف‌های خرید و فروش می‌شود.",
+    "takeaways_en": [
+      "Profits primarily from capturing the bid-ask spread: $\\text{Spread} = \\text{Ask} - \\text{Bid}$.",
+      "Obligated by exchange rules to maintain orderly markets, narrow spreads, and minimum quoting depth.",
+      "Assumes inventory price risk by holding securities that may depreciate during volatile sell-offs.",
+      "Modern market making is dominated by high-frequency algorithmic quantitative trading firms (HFTs)."
+    ],
+    "takeaways_fa": [
+      "درآمد اصلی آن از محل کسب اسپرد قیمت خرید و فروش است: $\\text{اسپرد} = \\text{مظنه فروش} - \\text{مظنه خرید}$.",
+      "طبق قوانین بورس متعهد به برقراری نظم، نقدشوندگی روان و حداقل تعهد روزانه معاملات است.",
+      "ریسک نوسان ارزش موجودی انبار سهام (Inventory Risk) را در هنگام افت‌های شارپ بازار متحمل می‌شود.",
+      "امروزه توسط شرکت‌های معاملاتی پربسامد الگوریتمی (HFT) با سرورهای پرسرعت هدایت می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/m/marketmaker.asp",
     "slug": "marketmaker",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Market makers provide essential trade execution liquidity, stabilizing continuous exchange quotation systems.",
+    "bottom_line_fa": "بازارگردان‌ها رگ حیاتی نقدشوندگی بورس هستند و امکان خرید و فروش فوری را برای معامله‌گران تضمین می‌نمایند.",
+    "sections": [
+      {
+        "title_en": "Inventory Risk and Spread Formulation (Ho-Stoll Model)",
+        "title_fa": "مدل هو-استول در مدیریت ریسک موجودی و اسپرد بازارگردان",
+        "paragraphs_en": [
+          "The Ho-Stoll optimal bid-ask spread ($S$) incorporates inventory risk aversion ($\\gamma$), volatility ($\\sigma$), and trade frequency ($\\lambda$):",
+          "$$S = \\gamma \\cdot \\sigma^2 \\cdot \\Delta t + \\frac{2}{\\gamma} \\ln\\left(1 + \\frac{\\gamma}{\\kappa}\\right)$$",
+          "Market makers skew quotes downward when inventory accumulates to induce buying demand from retail clients."
+        ],
+        "paragraphs_fa": [
+          "بر مبنای مدل هو-استول، اسپرد بهینه بازارگردان مستقیماً تابعی از نوسان قیمت سهم و ریسک انباشت موجودی است؛ بازارگردان با تنظیم هوشمندانه مظنه‌ها، انبار سهام خود را متوازن نگه می‌دارد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3551,
     "term_en": "Market Manipulation",
-    "term_fa": "بازار Manipulation (Market Manipulation)",
+    "term_fa": "دستکاری بازار / تقلب در بازار سرمایه (Market Manipulation)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Market manipulation is the illegal and intentional interference with the free and fair operations of financial markets, deploying deceitful practices such as spoofing, wash trading, pump-and-dump schemes, and quote stuffing to artificially distort asset prices, trading volume, or market quotes.",
+    "definition_fa": "دستکاری بازار (Market Manipulation) اقدام غیرقانونی و فریبکارانه‌ای در بازار سرمایه است که طی آن اشخاص با انجام معاملات صوری (Wash Trading)، سفارش‌گذاری دروغین (Spoofing)، شایعه‌پراکنی و طرح‌های پامپ و دامپ، قیمت یا حجم معاملات سهم را به صورت ساختگی دگرگون کرده تا سرمایه‌گذاران را فریب داده و سودهای نامشروع کسب کنند.",
+    "takeaways_en": [
+      "Prohibited under Section 9(a) and Section 10(b) (Rule 10b-5) of the U.S. Securities Exchange Act of 1934.",
+      "Common tactics include wash trades (self-dealing to fake volume) and painting the tape.",
+      "Pump-and-dump schemes inflate micro-cap prices through false hype before orchestrating aggressive dumping.",
+      "Subject to severe civil asset forfeiture, trading bans, and federal criminal felony imprisonment."
+    ],
+    "takeaways_fa": [
+      "بر اساس مواد ۹ و ۱۰ قانون بورس‌های اوراق بهادار ۱۹۳۴ و قوانین بورس تهران تخلف و جرم سنگین کیفری است.",
+      "شامل ترفندهای معاملات صوری با خود برای نشان دادن کاذب رونق و جابجایی کدهای هماهنگ است.",
+      "طرح پامپ و دامپ با سیگنال‌های دروغین در فضای مجازی قیمت سهم کوچک را پرواز داده و سپس در اوج خالی می‌کنند.",
+      "مشمول مجازات‌های سنگین شامل ابطال معاملات، ضبط سودهای نامشروع و حبس‌های تعزیری است."
+    ],
     "url": "https://www.investopedia.com/terms/m/manipulation.asp",
     "slug": "manipulation",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Market manipulation corrupts fair price discovery, strictly outlawed to preserve market integrity and investor trust.",
+    "bottom_line_fa": "دستکاری بازار سلامت کشف قیمت منصفانه را خدشه‌دار می‌کند و مقابله با آن اولویت اصلی ناظران بازار سرمایه است.",
+    "sections": [
+      {
+        "title_en": "Spoofing and High-Frequency Order Distortion",
+        "title_fa": "دستکاری سفارش‌گذاری کاذب (Spoofing) در معاملات الگوریتمی",
+        "paragraphs_en": [
+          "The Dodd-Frank Act formally outlawed 'spoofing'—bidding or offering with the intent to cancel before execution ($I_{\\text{cancel}} = 1$):",
+          "$$\\text{Spoofing Signal}: \\quad \\Delta \\text{Book Imbalance} \\to \\text{Induce Adverse Quotes} \\to \\text{Rapid Order Cancellation}$$",
+          "Regulatory surveillance uses machine learning to identify anomalous order-to-trade cancellation ratios ($> 99\\%$)."
+        ],
+        "paragraphs_fa": [
+          "اسپوفینگ شامل ارسال سفارش‌های میلیونی و لغو آنی آنها کسری از ثانیه قبل از معامله برای ترساندن بازار و خرید در قیمت ارزان‌تر است که امروزه با الگوریتم‌های هوش مصنوعی کشف و پیگرد می‌شود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3552,
     "term_en": "Market Neutral",
-    "term_fa": "بازار Neutral (Market Neutral)",
+    "term_fa": "استراتژی بی‌طرف نسبت به بازار (Market Neutral)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A market neutral strategy is an institutional investment or hedge fund approach designed to insulate portfolio returns completely from broad market directional movements and systemic beta fluctuations, achieving alpha strictly through matched long and short positions across relative mispriced securities.",
+    "definition_fa": "استراتژی بی‌طرف نسبت به بازار (Market Neutral) یک رویکرد سرمایه‌گذاری پیشرفته در صندوق‌های پوشش ریسک است که تلاش می‌کند بتای کل سبد را به صفر نزدیک کند؛ در این روش همزمان مبالغ مساوی در سهام با پتانسیل بالا موقعیت خرید (Long) و در سهام ضعیف موقعیت فروش استقراضی (Short) اتخاذ می‌شود تا جهت کلی صعود یا نزول بورس هیچ اثری بر سودآوری سبد نگذارد.",
+    "takeaways_en": [
+      "Maintains a systemic portfolio beta equal to approximately zero: $\\beta_{\\text{portfolio}} \\approx 0$.",
+      "Generates pure non-correlated alpha from relative-value long/short selection skill.",
+      "Can be structured as dollar-neutral (equal dollar longs and shorts) or beta-neutral.",
+      "Popularized through statistical arbitrage (pairs trading) and fundamental multi-factor equity models."
+    ],
+    "takeaways_fa": [
+      "بتای سیستماتیک سبد را در حوالی صفر حفظ می‌کند: $\\beta_{\\text{portfolio}} \\approx 0$.",
+      "سود خالص را فارغ از وضعیت کلی اقتصاد و صرفاً بر اساس انتخاب جفت‌سهام برتر (آلفای خالص) به دست می‌آورد.",
+      "به دو صورت بی‌طرفی دلاری (ارزش مساوی خرید و فروش) یا بی‌طرفی بتا ساختاربندی می‌گردد.",
+      "اساس معاملات جفتی (Pairs Trading) و آربیتراژ آماری الگوریتمی وال‌استریت به شمار می‌رود."
+    ],
     "url": "https://www.investopedia.com/terms/m/marketneutral.asp",
     "slug": "marketneutral",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Market neutral investing strips out systemic market volatility, isolating pure idiosyncratic alpha.",
+    "bottom_line_fa": "استراتژی بی‌طرف به بازار ریسک سیستماتیک کل بورس را حذف کرده و عملکرد را منحصراً به مهارت انتخاب سهام پیوند می‌زند.",
+    "sections": [
+      {
+        "title_en": "Beta Neutrality Formulation",
+        "title_fa": "فرمول و الزامات ریاضی بی‌طرفی بتا",
+        "paragraphs_en": [
+          "For portfolio weights $w_i$, individual asset betas $\\beta_i$, and market return $R_m$:",
+          "$$\\beta_{\\text{portfolio}} = \\sum_{i \\in \\text{Long}} w_i \\beta_i - \\sum_{j \\in \\text{Short}} w_j \\beta_j = 0$$",
+          "The portfolio expected return satisfies: $\\mathbb{E}[R_p] = R_f + \\sum w_i \\alpha_i$, completely uncoupled from market swings."
+        ],
+        "paragraphs_fa": [
+          "در پرتفوی بی‌طرف، جمع موزون بتای موقعیت‌های خرید دقیقاً بتای موقعیت‌های فروش را خنثی می‌سازد:",
+          "$$\\beta_{\\text{portfolio}} = 0$$",
+          "در نتیجه بازده سبد کاملاً مستقل از نوسانات شاخص کل بازار بوده و فقط تابع آلفای سهام برگزیده است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3553,
     "term_en": "Market-On-Close Order (MOC)",
-    "term_fa": "بازار-On-Close Order (MOC) (Market-On-Close Order (MOC))",
+    "term_fa": "سفارش در مظنه بسته شدن بازار (MOC - Market-On-Close Order)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A Market-On-Close (MOC) order is a specialized non-cancellable market order submitted by traders to execute automatically at the official closing price determined during an exchange's designated terminal closing auction.",
+    "definition_fa": "سفارش به قیمت بسته شدن (Market-On-Close / MOC) نوعی سفارش بازار است که معامله‌گر ارسال می‌کند تا دقیقاً در حراج پایانی رسمی تالار بورس و با قیمت بسته شدن پایانی همان روز اجرا گردد و معمولاً پس از زمان مشخصی قبل از پایان بازار غیرقابل لغو است.",
+    "takeaways_en": [
+      "Guarantees trade execution at the official published end-of-day closing price.",
+      "Essential for index funds, mutual funds, and ETFs rebalancing to minimize benchmark tracking error.",
+      "Subject to strict exchange cutoff deadlines (e.g., 3:50 PM ET on NYSE) to prevent last-minute quote gaming.",
+      "Matches orders alongside Limit-On-Close (LOC) orders in the closing cross auction."
+    ],
+    "takeaways_fa": [
+      "اجرای معامله را دقیقاً با قیمت قطعی بسته شدن بازار تضمین می‌نماید.",
+      "ابزار حیاتی صندوق‌های شاخصی و ETFها در روزهای بازتنظیم پرتفوی برای به صفر رساندن خطای ردیابی شاخص است.",
+      "دارای مهلت پایانی سخت‌گیرانه برای ارسال است (مثلاً ۱۰ دقیقه قبل از پایان در بورس نیویورک) و پس از آن لغو نمی‌شود.",
+      "در فرآیند حراج پایانی با سفارش‌های حد پایان (LOC) متوازن و پایاپای می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/m/marketonclose.asp",
     "slug": "marketonclose",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MOC orders ensure exact closing price execution, eliminating end-of-day tracking discrepancies for institutional funds.",
+    "bottom_line_fa": "سفارش‌های MOC اجرای دقیق در قیمت پایانی را تضمین کرده و اصطکاک بازتنظیم پرتفوی‌های بزرگ را برطرف می‌سازند.",
+    "sections": [
+      {
+        "title_en": "Closing Auction Matching and Imbalance Feeds",
+        "title_fa": "مکانیسم حراج پایانی و خوراک عدم توازن سفارشات",
+        "paragraphs_en": [
+          "Exchanges publish real-time Closing Auction Imbalance data ($I_{\\text{close}}$):",
+          "$$I_{\\text{close}} = \\sum Q_{\\text{MOC/LOC}}^{\\text{Buy}} - \\sum Q_{\\text{MOC/LOC}}^{\\text{Sell}}$$",
+          "The single clearing price ($P^*_{\\text{close}}$) is mathematically solved to maximize the executable volume matched."
+        ],
+        "paragraphs_fa": [
+          "بورس‌ها داده‌های عدم توازن سفارش‌های پایانی را منتشر می‌کنند و قیمت بسته شدن به گونه‌ای کشف می‌شود که بیشترین حجم معاملات ممکن در آن قیمت مچ شود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
@@ -319317,140 +319791,299 @@
   {
     "id": 3772,
     "term_en": "National Association of Investors Corp. (NAIC)",
-    "term_fa": "National Association of سرمایه‌گذاران Corp. (NAIC) (National Association of Investors Corp. (NAIC))",
+    "term_fa": "انجمن ملی سهامداران خرد و کلوپ‌های سرمایه‌گذاری (NAIC / BetterInvesting)",
     "letter": "N",
     "category": "صندوق‌ها و مدیریت سبد دارایی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Association of Investors Corporation (NAIC), operating commercially as BetterInvesting, is a venerable non-profit educational association founded in 1951 that teaches individual retail investors and investment clubs how to analyze and build wealth through disciplined fundamental common stock investing.",
+    "definition_fa": "انجمن ملی سرمایه‌گذاران (NAIC یا BetterInvesting) یک تشکل آموزشی غیرانتفاعی باسابقه در آمریکا است که در سال ۱۹۵۱ تأسیس شد و به سرمایه‌گذاران خرد و کلوپ‌های سرمایه‌گذاری آموزش می‌دهد چگونه با استفاده از تحلیل بنیادی، بررسی صورت‌های مالی و پس‌انداز منظم ماهانه، پرتفوی سهام پربازده تشکیل دهند.",
+    "takeaways_en": [
+      "Pioneered the popularization of retail investment clubs across the United States.",
+      "Promotes the Stock Selection Guide (SSG) methodology focusing on consistent earnings growth.",
+      "Advocates four core investing principles: invest regularly, reinvest all dividends, buy growth stocks, and diversify.",
+      "Empowers individual households to build long-term generational equity wealth independent of institutional brokers."
+    ],
+    "takeaways_fa": [
+      "پیشگام تشکیل کلوپ‌های سرمایه‌گذاری خانوادگی و جمعی در ایالات متحده است.",
+      "ابزار مشهور «راهنمای انتخاب سهام» (SSG) را بر مبنای رشد تاریخی سودآوری سالانه شرکت‌ها ترویج نمود.",
+      "بر چهار اصل بنیادی تأکید دارد: سرمایه‌گذاری منظم دوره‌ای، سرمایه‌گذاری مجدد سود نقدی (DRIP)، خرید سهام رشد و تنوع‌بخشی پرتفوی.",
+      "خانواده‌های عادی را توانمند می‌سازد تا بدون وابستگی به کارگزاران وال‌استریت، ثروت خود را در بازار سهام بارور سازند."
+    ],
     "url": "https://www.investopedia.com/terms/n/naic.asp",
     "slug": "naic",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NAIC democratized fundamental equity analysis, equipping retail investment clubs with institutional evaluation tools.",
+    "bottom_line_fa": "انجمن NAIC دانش تحلیل بنیادی سهام را در میان عموم مردم نهادینه ساخت و فرهنگ سرمایه‌گذاری بلندمدت را ترویج کرد.",
+    "sections": [
+      {
+        "title_en": "Stock Selection Guide (SSG) Compound Growth Rule",
+        "title_fa": "قاعده رشد مرکب در راهنمای انتخاب سهام (SSG)",
+        "paragraphs_en": [
+          "The SSG framework targets companies capable of doubling earnings every five years, requiring an annualized compound EPS growth rate ($g$):",
+          "$$g = (2.0)^{1/5} - 1 \\approx 14.87\\%$$",
+          "coupled with disciplined P/E relative valuation zones (Buy, Maybe, Sell)."
+        ],
+        "paragraphs_fa": [
+          "راهنمای انتخاب سهام شرکت‌هایی را برمی‌گزیند که بتوانند سود هر سهم (EPS) خود را ظرف ۵ سال دو برابر کنند که مستلزم رشد مرکب سالانه حدود ۱۵٪ است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "صندوق‌ها و مدیریت سبد دارایی",
     "category_en": "Funds & Portfolio Management"
   },
   {
     "id": 3773,
     "term_en": "National Association of Real Estate Investment Trusts (Nareit)",
-    "term_fa": "National Association of Real Estate Investment Trusts (Nareit)",
+    "term_fa": "انجمن ملی صندوق‌های سرمایه‌گذاری املاک و مستغلات (Nareit)",
     "letter": "N",
     "category": "املاک، مستغلات و تأمین مسکن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Nareit (National Association of Real Estate Investment Trusts) is the worldwide representative trade association for REITs and publicly traded real estate companies with an interest in U.S. real estate and global commercial property capital markets.",
+    "definition_fa": "انجمن ملی صندوق‌های املاک و مستغلات (Nareit) تشکل جهانی و مرجع سیاست‌گذاری، تدوین استانداردها و لابی‌گری برای صندوق‌های سرمایه‌گذاری در املاک و مستغلات (REITs) است که شاخص‌های تخصصی املاک و سنجه‌های مالی استاندارد نظیر سود حاصل از عملیات (FFO) را معرفی و منتشر می‌نماید.",
+    "takeaways_en": [
+      "Created and formalized industry standard non-GAAP metrics: Funds From Operations (FFO) and Adjusted FFO (AFFO).",
+      "Co-sponsors the FTSE Nareit U.S. Real Estate Index Series tracking commercial property sectors.",
+      "Advocates for statutory REIT tax-exempt status: distributing $\\ge 90\\%$ of taxable income to eliminate corporate entity taxes.",
+      "Encompasses equity REITs, mortgage REITs (mREITs), and specialized infrastructure/data center REITs."
+    ],
+    "takeaways_fa": [
+      "ابداع‌کننده سنجه‌های رسمی عملکرد صندوق‌های املاک نظیر «سود ناشی از عملیات» (FFO) و سود تعدیل‌شده (AFFO) است.",
+      "مشارکت‌کننده در طراحی سری شاخص‌های معتبر FTSE Nareit برای رصد بازده بخش‌های مختلف املاک تجاری، اداری و مسکونی است.",
+      "حامی حفظ معافیت مالیاتی صندوق‌های املاک به شرط تقسیم حداقل ۹۰ درصد از سود خالص میان سهامداران است.",
+      "صندوق‌های املاک مالکیتی، صندوق‌های وام مسکن (mREIT) و مراکز داده و برج‌های مخابراتی را پوشش می‌دهد."
+    ],
     "url": "https://www.investopedia.com/terms/n/nareit.asp",
     "slug": "nareit",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Nareit establishes the accounting transparency and benchmark metrics governing publicly traded global commercial real estate.",
+    "bottom_line_fa": "ناریت استانداردساز شفافیت مالی صنعت املاک بورسی است و ابزارهای لازم را برای جریان درآمد نقدی پایدار سرمایه‌گذاران تدوین می‌کند.",
+    "sections": [
+      {
+        "title_en": "Funds From Operations (FFO) Formula",
+        "title_fa": "فرمول سود حاصل از عملیات (FFO) مصوب ناریت",
+        "paragraphs_en": [
+          "Nareit defines Funds From Operations ($FFO$) to eliminate historical real estate accounting depreciation distortions:",
+          "$$FFO = \\text{GAAP Net Income} + \\text{Real Estate Depreciation \\& Amortization} - \\text{Gains on Sale of Real Estate}$$",
+          "Adjusted FFO ($AFFO$) further deducts recurring capitalized maintenance expenditures: $AFFO = FFO - \\text{Routine CapEx}$."
+        ],
+        "paragraphs_fa": [
+          "سازمان ناریت سنجه FFO را برای خنثی کردن هزینه استهلاک دفتری (که در املاک ماهیت کاهنده واقعی ندارد) تعریف نمود:",
+          "$$FFO = \\text{سود خالص} + \\text{هزینه استهلاک املاک} - \\text{سود ناشی از فروش دارایی}$$",
+          "سود تعدیل‌شده (AFFO) با کسر مخارج سرمایه‌ای نگهداری، جریان نقد واقعی در دسترس برای تقسیم سود را نشان می‌دهد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "املاک، مستغلات و تأمین مسکن",
     "category_en": "Real Estate & Mortgage Finance"
   },
   {
     "id": 3774,
     "term_en": "National Association of Realtors (NAR)",
-    "term_fa": "National Association of Realtors (NAR)",
+    "term_fa": "انجمن ملی مشاوران املاک آمریکا (NAR)",
     "letter": "N",
     "category": "املاک، مستغلات و تأمین مسکن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Association of Realtors (NAR) is the largest trade association in North America, representing over 1.5 million licensed residential and commercial real estate brokers, agents, property managers, appraisers, and counselors across the United States.",
+    "definition_fa": "انجمن ملی مشاوران املاک (NAR) بزرگ‌ترین تشکل صنفی و بازرگانی در آمریکای شمالی است که نمایندگی بیش از ۱.۵ میلیون کارگزار و مشاور املاک مجاز، مدیران املاک و کارشناسان رسمی ارزیابی ملک را بر عهده دارد و مالک حقوقی نشان تجاری REALTOR® و ناشر شاخص‌های کلیدی مسکن است.",
+    "takeaways_en": [
+      "Enforces a strict mandatory Code of Ethics on all members holding the registered trademark title 'REALTOR®'.",
+      "Publishes premier national housing market data reports including Existing-Home Sales and Pending Home Sales Index.",
+      "Historically managed localized Multiple Listing Services (MLS) databases linking property buyers and sellers.",
+      "Settled a landmark 2024 federal antitrust commission lawsuit altering traditional buyer-broker fee structures."
+    ],
+    "takeaways_fa": [
+      "کد اخلاق حرفه‌ای الزام‌آوری را برای کلیه اعضای دارای عنوان رسمی REALTOR® اعمال می‌نماید.",
+      "گزارش‌های ماهانه معتبر بازار مسکن شامل شاخص فروش مسکن دست دوم و شاخص قراردادهای در جریان را منتشر می‌کند.",
+      "شبکه‌های ملی پایگاه داده املاک (MLS) را برای اشتراک‌گذاری اطلاعات فایل‌های ملکی مدیریت می‌کند.",
+      "در سال ۲۰۲۴ با توافق در پرونده تاریخی ضد‌انحصار، ساختار سنتی پرداخت کمیسیون مشاوران خریدار را دگرگون ساخت."
+    ],
     "url": "https://www.investopedia.com/terms/n/national-association-of-realtors.asp",
     "slug": "national-association-of-realtors",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NAR establishes transactional standards and publishes the baseline macroeconomic health metrics of the U.S. housing market.",
+    "bottom_line_fa": "انجمن NAR نبض معاملات مسکن را ثبت کرده و شاخص‌های آماری آن دماسنج رونق یا رکود بخش ساختمان است.",
+    "sections": [
+      {
+        "title_en": "Housing Affordability Index (HAI) Formulation",
+        "title_fa": "فرمول شاخص مقرون‌به‌صرفه بودن مسکن (HAI)",
+        "paragraphs_en": [
+          "NAR publishes the monthly Housing Affordability Index ($HAI$), measuring if a median-income family qualifies for a median-priced mortgage:",
+          "$$HAI = \\frac{\\text{Median Family Income}}{\\text{Qualifying Income}} \\times 100$$",
+          "An index value of 100 indicates a family earning the median income has exactly enough income to qualify for a conventional mortgage on a median-priced home."
+        ],
+        "paragraphs_fa": [
+          "شاخص توانمندی مالی خرید مسکن از تقسیم درآمد میانه خانواده بر درآمد لازم برای اخذ وام مسکن محاسبه می‌شود:",
+          "عدد ۱۰۰ نشان می‌دهد درآمد خانواده دقیقاً تکافوی پرداخت اقساط خرید یک واحد مسکونی متوسط را می‌دهد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "املاک، مستغلات و تأمین مسکن",
     "category_en": "Real Estate & Mortgage Finance"
   },
   {
     "id": 3775,
     "term_en": "National Association of Securities Dealers (NASD)",
-    "term_fa": "National Association of اوراق بهادار Dealers (NASD) (National Association of Securities Dealers (NASD))",
+    "term_fa": "انجمن ملی فروشندگان اوراق بهادار (NASD / پیشگام FINRA)",
     "letter": "N",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Association of Securities Dealers (NASD) was an influential self-regulatory organization (SRO) for the U.S. securities industry, established under the Maloney Act of 1938, which founded the automated Nasdaq stock market in 1971 before consolidating with NYSE regulation to form FINRA in 2007.",
+    "definition_fa": "انجمن ملی فروشندگان اوراق بهادار (NASD) نهاد خودانتظام و رگولاتوری اصلی صنعت اوراق بهادار در آمریکا بود که بر اساس قانون مالونی در ۱۹۳۸ تأسیس شد و در سال ۱۹۷۱ بورس الکترونیکی نزدک (Nasdaq) را بنیان نهاد و سرانجام در سال ۲۰۰۷ با ادغام در بخش نظارتی بورس نیویورک، نهاد FINRA را پدید آورد.",
+    "takeaways_en": [
+      "Pioneered the world's first fully electronic quotation and trading exchange: the Nasdaq (NASD Automated Quotations).",
+      "Administered industry-wide professional qualification examinations, including the Series 7 and Series 63 licenses.",
+      "Enforced ethical business rules and disciplined member broker-dealers for fraud or improper market conduct.",
+      "Merged its regulatory operations with the New York Stock Exchange in 2007 to establish FINRA."
+    ],
+    "takeaways_fa": [
+      "اولین تالار معاملات کاملاً الکترونیکی جهان یعنی بورس نزدک (Nasdaq) را پایه‌گذاری کرد.",
+      "برگزارکننده آزمون‌های جامع صلاحیت حرفه‌ای و مدارک بین‌المللی کارگزاری نظیر سری ۷ و سری ۶۳ بود.",
+      "مسئول رسیدگی به تخلفات اخلاقی، بازرسی کارگزاری‌ها و صیانت از سلامت جریان معاملات بود.",
+      "در سال ۲۰۰۷ با بخش نظارت بورس نیویورک ادغام شد و سازمان فراگیر FINRA را تشکیل داد."
+    ],
     "url": "https://www.investopedia.com/terms/n/nasd.asp",
     "slug": "nasd",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NASD founded electronic equity trading via Nasdaq and shaped the modern self-regulatory compliance framework.",
+    "bottom_line_fa": "سازمان NASD پدر معاملات الکترونیکی مدرن و معمار ساختار خودانتظامی بازارهای مالی معاصر به شمار می‌رود.",
+    "sections": [
+      {
+        "title_en": "Nasdaq Genesis and Electronic Market Microstructure",
+        "title_fa": "تولد نزدک و تحول ریزساختار بازار الکترونیک",
+        "paragraphs_en": [
+          "NASD eliminated traditional physical floor specialists by deploying automated telecommunication quotation terminals connecting competitive competing dealer market makers nationwide, drastically compressing bid-ask spreads."
+        ],
+        "paragraphs_fa": [
+          "این انجمن با اتصال رایانه‌ای بازارگردان‌های سراسر کشور، بورس کاغذی را منسوخ و معاملات سریع بدون کف تالار را خلق کرد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3776,
     "term_en": "National Association of State Boards of Accountancy (NASBA)",
-    "term_fa": "National Association of State Boards of Accountancy (NASBA)",
+    "term_fa": "انجمن ملی هیئت‌های حسابداری ایالتی آمریکا (NASBA)",
     "letter": "N",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Association of State Boards of Accountancy (NASBA) is the national coordinating organization representing the 55 state and territorial boards of accountancy in the United States, administering the Uniform CPA Examination and overseeing state accountancy licensing standards.",
+    "definition_fa": "انجمن ملی هیئت‌های حسابداری ایالتی (NASBA) نهاد هماهنگ‌کننده ۵۵ هیئت حسابداری ایالت‌های آمریکا است که مسئولیت استانداردسازی الزامات آموزشی، نظارت بر آزمون سراسری حسابدار رسمی (Uniform CPA Exam) و تبادل مجوزهای فعالیت حرفه‌ای حسابداران را بر عهده دارد.",
+    "takeaways_en": [
+      "Co-administers the Uniform CPA Examination alongside the AICPA and Prometric testing centers.",
+      "Operates the National Candidate Database (NCD) and CPAverify national licensing database.",
+      "Promotes substantial equivalency practice mobility, allowing CPAs to practice across state lines without separate licenses.",
+      "Maintains the National Registry of Continuing Professional Education (CPE) Sponsors."
+    ],
+    "takeaways_fa": [
+      "برگزارکننده مشترک آزمون جامع سراسری CPA با همکاری انجمن حسابداران رسمی آمریکا (AICPA) است.",
+      "بانک‌های اطلاعاتی سراسری برای استعلام صلاحیت و اعتبارسنجی مدارک حسابداران رسمی اداره می‌کند.",
+      "اصل هم‌ارزی مدارک را مستقر کرد تا حسابداران بتوانند در تمام ایالت‌ها خدمات حسابرسی ارائه دهند.",
+      "برنامه‌های آموزش مداوم حرفه‌ای (CPE) را برای به‌روز نگه‌داشتن دانش حسابرسان پایش و تأیید می‌نماید."
+    ],
     "url": "https://www.investopedia.com/terms/n/nasba.asp",
     "slug": "nasba",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NASBA guarantees uniform rigorous competency testing and interstate regulatory mobility for certified public accountants.",
+    "bottom_line_fa": "سازمان NASBA اعتبار حرفه حسابرسی رسمی را تضمین کرده و یکپارچگی استانداردهای احراز صلاحیت را برقرار می‌سازد.",
+    "sections": [
+      {
+        "title_en": "The 150-Hour Educational Standard",
+        "title_fa": "استاندارد آموزشی ۱۵۰ ساعت برای اخذ مدرک CPA",
+        "paragraphs_en": [
+          "NASBA enforce the mandatory 150-semester-hour educational rule (the equivalent of a Master's degree) prior to CPA licensure, raising technical accounting standards across public auditing firms."
+        ],
+        "paragraphs_fa": [
+          "این انجمن گذراندن ۱۵۰ ساعت واحد درسی دانشگاهی (معادل مدرک کارشناسی ارشد) را به عنوان شرط لازم برای اخذ پروانه حسابداری رسمی الزامی ساخت."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3777,
     "term_en": "National Average Wage Index (NAWI)",
-    "term_fa": "National میانگین Wage شاخص (NAWI) (National Average Wage Index (NAWI))",
+    "term_fa": "شاخص میانگین ملی دستمزد (NAWI)",
     "letter": "N",
     "category": "منابع انسانی و روابط کارگری",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Average Wage Index (NAWI) is an annual economic metric calculated by the U.S. Social Security Administration (SSA) based on aggregate national wages, utilized to index past earnings, adjust the Social Security benefit formula bend points, and calculate retirement annuities.",
+    "definition_fa": "شاخص میانگین ملی دستمزد (NAWI) سنجه‌ای اقتصادی است که سالانه توسط اداره تأمین اجتماعی آمریکا (SSA) بر مبنای کل دستمزدهای مشمول مالیات کشور محاسبه می‌شود تا درآمدهای گذشته کارگران را با تورم واقعی دستمزد تعدیل کرده و حقوق بازنشستگی عادلانه را تعیین نماید.",
+    "takeaways_en": [
+      "Calculated annually from Form W-2 gross taxable wage data reported to the Internal Revenue Service.",
+      "Indexes nominal historical career wages into real terms when computing Average Indexed Monthly Earnings (AIME).",
+      "Adjusts the statutory primary insurance amount (PIA) progressive benefit formula bend points.",
+      "Determines the annual maximum taxable earnings limit subject to Social Security payroll tax."
+    ],
+    "takeaways_fa": [
+      "سالانه از داده‌های فرم‌های مالیات بر درآمد حقوق ارسالی به اداره مالیات استخراج می‌گردد.",
+      "دستمزدهای اسمی سال‌های گذشته فرد را به ارزش روز تعدیل کرده و میانگین دستمزد ماهانه تعدیل‌شده (AIME) را می‌سازد.",
+      "نقاط شکست (Bend Points) در فرمول بازتوزیعی مستمری بازنشستگی را متناسب با رشد جامعه به‌روز می‌کند.",
+      "سقف سالانه دستمزد مشمول کسر حق بیمه تأمین اجتماعی را مشخص می‌سازد."
+    ],
     "url": "https://www.investopedia.com/terms/n/national-average-wage-index-nawi.asp",
     "slug": "national-average-wage-index-nawi",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NAWI anchors the sovereign pension architecture, indexing historical labor income against national wage productivity growth.",
+    "bottom_line_fa": "شاخص NAWI ستون فقرات محاسبات بازنشستگی است و حفظ قدرت خرید مستمری‌بگیران را همگام با رشد دستمزدها تضمین می‌کند.",
+    "sections": [
+      {
+        "title_en": "Wage Indexation Factor Formulation",
+        "title_fa": "فرمول فاکتور تعدیل دستمزد در محاسبات مستمری",
+        "paragraphs_en": [
+          "To convert nominal earnings in year $t$ to indexed earnings at indexing year $Y$ (typically age 60):",
+          "$$\\text{Indexed Earnings}_{t} = \\text{Nominal Wage}_t \\times \\left( \\frac{\\text{NAWI}_{Y}}{\\text{NAWI}_t} \\right)$$",
+          "The top 35 years of indexed earnings are averaged to resolve the Average Indexed Monthly Earnings (AIME)."
+        ],
+        "paragraphs_fa": [
+          "دستمزد اسمی سال $t$ با نسبت شاخص دستمزد سال ۶۰ سالگی به سال $t$ تعدیل می‌شود:",
+          "میانگین ۳۵ سال از بالاترین دستمزدهای تعدیل‌شده فرد، پایه محاسبه نهایی حقوق بازنشستگی را تشکیل می‌دهد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "منابع انسانی و روابط کارگری",
     "category_en": "Human Resources & Labor Relations"
   },
   {
     "id": 3778,
     "term_en": "National Bank",
-    "term_fa": "National بانک (National Bank)",
+    "term_fa": "بانک ملی تحت نظارت فدرال (National Bank)",
     "letter": "N",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A national bank in the United States is a commercial depository financial institution chartered, authorized, and comprehensively regulated by the federal Office of the Comptroller of the Currency (OCC) under the National Bank Act of 1863, distinct from state-chartered banks.",
+    "definition_fa": "بانک ملی (National Bank) در نظام بانکی ایالات متحده به بانک تجاری بزرگی اطلاق می‌شود که اساسنامه و مجوز فعالیت خود را مستقیماً از دولت فدرال (دفتر OCC خزانه‌داری) بر اساس قانون تاریخی بانک ملی ۱۸۶۳ دریافت نموده، عضو اجباری فدرال رزرو و FDIC بوده و موظف به درج کلمه «National» یا پسوند «N.A.» در نام رسمی خود است.",
+    "takeaways_en": [
+      "Chartered and examined exclusively by the Office of the Comptroller of the Currency (OCC).",
+      "Mandated to maintain membership in the Federal Reserve System and Federal Deposit Insurance Corporation (FDIC).",
+      "Required by statutory law to include 'National' or 'N.A.' (National Association) in its corporate legal title.",
+      "Benefits from federal preemption doctrines, shielding institutions from conflicting state banking restrictions."
+    ],
+    "takeaways_fa": [
+      "منحصراً توسط دفتر کنترل‌کننده ارز (OCC) بازرسی و هدایت می‌شود.",
+      "ملزم به عضویت اجباری در سامانه فدرال رزرو و صندوق بیمه سپرده‌های فدرال (FDIC) است.",
+      "قانوناً موظف است عبارت «National» یا اختصار «.N.A» را در نام ثبتی خود داشته باشد.",
+      "از اصل تقدم حقوق فدرال بهره‌مند است و قوانین محدودکننده ایالتی بر فعالیت‌های یکپارچه آن حاکم نیست."
+    ],
     "url": "https://www.investopedia.com/terms/n/national-bank.asp",
     "slug": "national-bank",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "National banks form the institutional backbone of federal wholesale liquidity and nationwide commercial banking.",
+    "bottom_line_fa": "بانک‌های ملی ستون فقرات شبکه بانکداری سراسری هستند و گردش نقدینگی و اعتبارات تجاری کلان را مدیریت می‌کنند.",
+    "sections": [
+      {
+        "title_en": "Federal Preemption and National Banking Act",
+        "title_fa": "اصل تقدم فدرال و قانون بانکداری ملی",
+        "paragraphs_en": [
+          "Under Supreme Court jurisprudence (e.g., McCulloch v. Maryland and Barnett Bank), national banks operate under federal preemption, allowing nationwide uniform lending rates and product rollouts without compliance friction from 50 disparate state banking commissions."
+        ],
+        "paragraphs_fa": [
+          "اصل تقدم فدرال به بانک‌های ملی اجازه می‌دهد خدمات و نرخ‌های بهره خود را به طور یکنواخت در سراسر کشور بدون درگیر شدن در بوروکراسی ایالت‌ها ارائه کنند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
@@ -319866,80 +320499,173 @@
   {
     "id": 3782,
     "term_en": "National Credit Union Administration (NCUA)",
-    "term_fa": "National اعتبار Union Administration (NCUA) (National Credit Union Administration (NCUA))",
+    "term_fa": "سازمان ملی تعاونی‌های اعتباری آمریکا (NCUA)",
     "letter": "N",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Credit Union Administration (NCUA) is the independent federal regulatory agency created by Congress to charter, supervise, and regulate federal credit unions, as well as administer the National Credit Union Share Insurance Fund (NCUSIF) to protect consumer deposits.",
+    "definition_fa": "سازمان ملی تعاونی‌های اعتباری (NCUA) یک نهاد مستقل فدرال در آمریکا است که وظیفه صدور اساسنامه، بازرسی و نظارت بر تعاونی‌های اعتباری و همچنین اداره صندوق ملی بیمه سهام تعاونی‌ها (NCUSIF) را بر عهده دارد و امنیت پس‌اندازهای اعضا را تا سقف ۲۵۰ هزار دلار تضمین می‌نماید.",
+    "takeaways_en": [
+      "Operates as the credit union equivalent of the Federal Deposit Insurance Corporation (FDIC).",
+      "Backs member deposits up to $250,000 via the full faith and credit of the United States government.",
+      "Administers the National Credit Union Share Insurance Fund (NCUSIF).",
+      "Supervises safety and soundness across member-owned, non-profit cooperative banking institutions."
+    ],
+    "takeaways_fa": [
+      "معادل سازمان FDIC در نظام تعاونی‌های اعتباری است.",
+      "پس‌اندازهای مردم را تا سقف ۲۵۰ هزار دلار با پشتوانه اعتبار رسمی دولت فدرال بیمه می‌کند.",
+      "صندوق بیمه سهام تعاونی‌های اعتباری (NCUSIF) را با تودیع منابع توسط خود تعاونی‌ها اداره می‌کند.",
+      "سلامت مالی و انضباط وام‌دهی مؤسسات مالی تعاونی غیرانتفاعی را پایش می‌نماید."
+    ],
     "url": "https://www.investopedia.com/terms/n/ncua.asp",
     "slug": "ncua",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The NCUA safeguards cooperative depositors, maintaining structural stability across member-owned credit unions.",
+    "bottom_line_fa": "سازمان NCUA ضامن اعتماد عمومی به تعاونی‌های اعتباری و بیمه‌گر پس‌اندازهای میلیون‌ها عضو تعاونی‌هاست.",
+    "sections": [
+      {
+        "title_en": "NCUSIF Equity Capitalization Ratio",
+        "title_fa": "نسبت کفایت سرمایه صندوق بیمه NCUSIF",
+        "paragraphs_en": [
+          "The NCUA mandates that the National Credit Union Share Insurance Fund maintains a statutory normal operating equity ratio ($ER$):",
+          "$$ER = \\frac{\\text{Total NCUSIF Equity}}{\\text{Total Insured Shares in System}} \\approx 1.30\\% \\text{ to } 1.38\\%$$",
+          "ensuring reserves are fully capitalized to absorb systemic cooperative credit losses."
+        ],
+        "paragraphs_fa": [
+          "سازمان نسبت سرمایه صندوق بیمه به کل پس‌اندازهای بیمه‌شده را در محدوده استاندارد ۱.۳٪ حفظ می‌کند تا در برابر ورشکستگی‌های بحرانی تعاونی‌ها تاب‌آوری کامل داشته باشد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3783,
     "term_en": "National Currency",
-    "term_fa": "National Currency",
+    "term_fa": "پول ملی / ارز رسمی کشور (National Currency)",
     "letter": "N",
     "category": "تجارت بین‌الملل و فارکس (FX)",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A national currency is the sovereign, officially recognized legal tender issued and regulated by a nation's government or central bank, functioning within that geographic jurisdiction as the primary medium of exchange, standard unit of account, and store of value.",
+    "definition_fa": "پول ملی (National Currency) پول قانونی و رسمی یک کشور مستقل است که توسط بانک مرکزی یا ضرابخانه دولتی منتشر و کنترل می‌شود و به عنوان وسیله اصلی مبادله، واحد شمارش سنجش قیمت‌ها و ذخیره ارزش در قلمرو حاکمیتی آن کشور رسمیت دارد.",
+    "takeaways_en": [
+      "Backed by the sovereign full faith and credit and taxing authority of the issuing government (fiat money).",
+      "Endowed with legal tender status, obligating creditors to accept it for the settlement of all public and private debts.",
+      "Managed via central bank monetary policy targeting domestic price stability and economic growth.",
+      "Valued globally on foreign exchange (Forex) markets through floating, pegged, or managed regimes."
+    ],
+    "takeaways_fa": [
+      "با اعتبار حاکمیتی و قدرت مالیات‌ستانی دولت صادرکننده پشتیبانی می‌شود (پول بی‌پشتوانه / فیات).",
+      "دارای وضعیت «وجه قانونی» (Legal Tender) است و طلبکاران ملزم به پذیرش آن برای تسویه دیون هستند.",
+      "عرضه آن توسط سیاست پولی بانک مرکزی با هدف ثبات قیمت‌ها و مهار تورم هدایت می‌شود.",
+      "ارزش بین‌المللی آن در بازار فارکس بر مبنای نظام‌های شناور آزاد یا میخکوب ارزی تعیین می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/n/national-currency.asp",
     "slug": "national-currency",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A national currency defines sovereign economic independence and anchors domestic financial infrastructure.",
+    "bottom_line_fa": "پول ملی نماد استقلال اقتصادی حاکمیت است و رگ حیاتی دادوستدها و محاسبات مالی کشور را تشکیل می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Purchasing Power Parity (PPP) Valuation",
+        "title_fa": "فرمول برابری قدرت خرید (PPP) پول ملی",
+        "paragraphs_en": [
+          "Under Absolute Purchasing Power Parity, the equilibrium exchange rate ($S_{A/B}$) between two national currencies equals their relative price levels:",
+          "$$S_{A/B} = \\frac{P_A}{P_B}$$",
+          "Persistent inflation differentials cause secular currency depreciation at rate $\\Delta S / S \\approx \\pi_A - \\pi_B$."
+        ],
+        "paragraphs_fa": [
+          "طبق نظریه برابری قدرت خرید، نرخ تعادلی دو ارز با نسبت سطح عمومی قیمت‌ها در دو کشور برابری می‌کند:",
+          "تفاوت نرخ تورم میان دو کشور، عامل بنیادین کاهش ارزش پول ملی دارای تورم بالاتر است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "تجارت بین‌الملل و فارکس (FX)",
     "category_en": "Forex & International Trade"
   },
   {
     "id": 3784,
     "term_en": "National Futures Association (NFA)",
-    "term_fa": "National معاملات آتی Association (NFA) (National Futures Association (NFA))",
+    "term_fa": "انجمن ملی معاملات آتی آمریکا (NFA)",
     "letter": "N",
     "category": "ابزارهای مشتقه، آپشن و آتی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Futures Association (NFA) is the premier independent self-regulatory organization (SRO) for the U.S. derivatives industry—including exchange-traded futures, commodity options, over-the-counter retail foreign exchange (Forex), and cleared swaps.",
+    "definition_fa": "انجمن ملی معاملات آتی (NFA) نهاد خودانتظام و رگولاتوری اصلی صنعت مشتقات و بازارهای آتی در آمریکا است که به عنوان بازوی اجرایی کمیسیون معاملات آتی کالا (CFTC) فعالیت می‌کند و وظیفه صدور مجوز، بازرسی کارگزاران فارکس و فیوچرز و حمایت از معامله‌گران را بر عهده دارد.",
+    "takeaways_en": [
+      "Mandatory membership organization for all registered futures commission merchants (FCMs), swap dealers, and retail Forex brokers.",
+      "Enforces strict net capital financial requirements and segregated customer fund regulations.",
+      "Operates dispute arbitration tribunals to resolve conflicts between investors and brokerage firms.",
+      "Regulates maximum leverage ceilings on retail currency trading (e.g., 50:1 leverage cap on major pairs)."
+    ],
+    "takeaways_fa": [
+      "عضویت در آن برای تمام کارگزاران فیوچرز، دلالان سوآپ و بروکر‌های خرده‌فروشی فارکس الزامی است.",
+      "الزامات سخت‌گیرانه حداقل کفایت سرمایه و تفکیک حساب‌های مشتریان از سرمایه کارگزاری را اعمال می‌کند.",
+      "دادگاه‌های داوری رسمی را برای حل‌وفصل اختلافات مالی میان مشتریان و بروکرها اداره می‌نماید.",
+      "سقف اهرم معاملاتی برای معامله‌گران خرد فارکس را (حداکثر ۱:۵۰ برای جفت‌ارزهای اصلی) محدود کرده است."
+    ],
     "url": "https://www.investopedia.com/terms/n/nfa.asp",
     "slug": "nfa",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The NFA protects market integrity across high-risk derivatives, enforcing rigorous financial compliance standards.",
+    "bottom_line_fa": "انجمن NFA سدی نفوذناپذیر در برابر کلاهبرداری در بازارهای پرریسک اهرمی فیوچرز و فارکس ایجاد کرده است.",
+    "sections": [
+      {
+        "title_en": "Net Capital Rule for Futures Commission Merchants (FCMs)",
+        "title_fa": "قانون حداقل سرمایه خالص برای کارگزاران فیوچرز",
+        "paragraphs_en": [
+          "NFA Financial Requirements mandate FCMs maintain adjusted net capital ($NC$) exceeding regulatory thresholds:",
+          "$$NC \\ge \\max\\left( \\$1,000,000, \\quad 8\\% \\text{ of customer maintenance margin requirements} \\right)$$",
+          "safeguarding customer collateral against brokerage insolvency."
+        ],
+        "paragraphs_fa": [
+          "کارگزاری‌های تحت نظارت ملزمند همواره سرمایه خالص تعدیل‌شده بالایی فراتر از حداقل یک میلیون دلار یا ۸ درصد کل مارجین مشتریان حفظ کنند تا در برابر نوسانات ناگهانی بیمه باشند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "ابزارهای مشتقه، آپشن و آتی",
     "category_en": "Derivatives, Options & Futures"
   },
   {
     "id": 3785,
     "term_en": "National Housing Act",
-    "term_fa": "National Housing Act",
+    "term_fa": "قانون ملی مسکن سال ۱۹۳۴ آمریکا (National Housing Act)",
     "letter": "N",
     "category": "املاک، مستغلات و تأمین مسکن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Housing Act of 1934 is a transformative New Deal federal statute signed by President Franklin D. Roosevelt that created the Federal Housing Administration (FHA) and the Federal Savings and Loan Insurance Corporation (FSLIC) to revive residential mortgage lending.",
+    "definition_fa": "قانون ملی مسکن سال ۱۹۳۴ (National Housing Act) یکی از اثرگذارترین قوانین اقتصادی دوران «نیو دیل» در آمریکا بود که توسط فرانکلین روزولت امضا شد و با تأسیس اداره مسکن فدرال (FHA)، ساختار وام مسکن مدرن با اقساط ماهانه بلندمدت و استهلاک اصل و سود را پایه‌گذاری کرد.",
+    "takeaways_en": [
+      "Created the Federal Housing Administration (FHA) to insure private commercial residential mortgages.",
+      "Introduced long-term, fixed-rate, fully amortizing 15-year and 30-year home mortgages.",
+      "Dramatically lowered required homebuyer cash down payments from 50% down to 10% or less.",
+      "Formed the bedrock of the 20th-century American middle-class homeownership boom."
+    ],
+    "takeaways_fa": [
+      "اداره مسکن فدرال (FHA) را برای بیمه کردن بازپرداخت وام‌های مسکن بانک‌ها تأسیس نمود.",
+      "وام‌های مسکن مدرن بلندمدت ۱۵ و ۳۰ ساله با نرخ بهره ثابت و اقساط مستهلک‌شونده ماهانه را ابداع کرد.",
+      "پیش‌پرداخت سنگین خرید خانه را از ۵۰٪ به ۱۰٪ یا کمتر کاهش داد و دسترسی عمومی به مسکن را دگرگون ساخت.",
+      "پایه‌گذار جهش عظیم مالکیت مسکن در میان طبقه متوسط در قرن بیستم به شمار می‌رود."
+    ],
     "url": "https://www.investopedia.com/terms/n/national-housing-act.asp",
     "slug": "national-housing-act",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The 1934 National Housing Act engineered the modern residential mortgage financing system, expanding broad homeownership.",
+    "bottom_line_fa": "این قانون معماری وام‌های مسکن معاصر را خلق کرد و خرید خانه با پیش‌پرداخت کم را برای میلیون‌ها خانواده مهیا ساخت.",
+    "sections": [
+      {
+        "title_en": "Transformation of Mortgage Amortization Architecture",
+        "title_fa": "تحول در معماری استهلاک اقساط مسکن",
+        "paragraphs_en": [
+          "Prior to 1934, mortgages were short-term (3-5 years) interest-only balloon loans requiring 50% down. The Act institutionalized fully amortizing monthly payments ($M$):",
+          "$$M = P \\cdot \\frac{r(1+r)^N}{(1+r)^N - 1}$$",
+          "spreading repayment over decades and eradicating recurring refinancing panics."
+        ],
+        "paragraphs_fa": [
+          "پیش از این قانون، وام‌های مسکن ۳ ساله غیرمستهلک‌شونده با پیش‌پرداخت ۵۰ درصدی بودند؛ این قانون با فرمول اقساط ثابت ماهانه بلندمدت، امکان بازپرداخت تدریجی اصل و سود را برقرار ساخت."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "املاک، مستغلات و تأمین مسکن",
     "category_en": "Real Estate & Mortgage Finance"
   },
@@ -320201,20 +320927,42 @@
   {
     "id": 3787,
     "term_en": "National Insurance Contributions (NIC)",
-    "term_fa": "National بیمه Contributions (NIC) (National Insurance Contributions (NIC))",
+    "term_fa": "کسورات بیمه ملی بریتانیا (NIC - National Insurance Contributions)",
     "letter": "N",
     "category": "مدیریت ریسک، بیمه و اکچوئری",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "National Insurance Contributions (NICs) are mandatory sovereign payroll taxes levied by HM Revenue & Customs (HMRC) in the United Kingdom on workers' earnings and employers' payrolls to build entitlement to state welfare benefits, the National Health Service (NHS), and the State Pension.",
+    "definition_fa": "کسورات بیمه ملی (NICs) مالیات و حق بیمه اجباری حقوق و دستمزد در بریتانیا است که توسط اداره درآمد و گمرک پادشاهی (HMRC) از دستمزد کارکنان و سهم کارفرمایان کسر می‌شود تا هزینه‌های درمان خدمات ملی سلامت (NHS)، مستمری بازنشستگی دولتی و بیمه بیکاری را تأمین نماید.",
+    "takeaways_en": [
+      "Subdivided into Class 1 (employed employees/employers), Class 2/4 (self-employed), and Class 3 (voluntary).",
+      "Functions as the United Kingdom's second-largest sovereign revenue stream after general Income Tax.",
+      "Accruing sufficient qualifying years of NIC contributions is legally mandatory to receive the full UK State Pension.",
+      "Deducted directly from monthly gross pay alongside PAYE (Pay As You Earn) income tax."
+    ],
+    "takeaways_fa": [
+      "به کلاس‌های مختلف شامل کارمندی و کارفرمایی (کلاس ۱)، خوداشتغالی (کلاس ۲ و ۴) و داوطلبانه تقسیم می‌شود.",
+      "دومین منبع بزرگ درآمد مالیاتی دولت بریتانیا پس از مالیات بر درآمد عمومی است.",
+      "تکمیل حداقل سال‌های واریز حق بیمه (معمولاً ۳۵ سال) برای دریافت مستمری کامل بازنشستگی الزامی است.",
+      "مستقیماً از فیش حقوقی ماهانه به همراه مالیات بر درآمد کسر می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/n/national-insurance-contributions-nic.asp",
     "slug": "national-insurance-contributions-nic",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NICs fund the British welfare state and state pension system through direct progressive payroll contributions.",
+    "bottom_line_fa": "کسورات بیمه ملی بریتانیا تأمین‌کننده مالی رفاه اجتماعی و خدمات درمانی همگانی از محل کارکرد نیروی کار است.",
+    "sections": [
+      {
+        "title_en": "Class 1 Employee Contribution Tiers",
+        "title_fa": "پلکان‌های کسر حق بیمه کارکنان کلاس یک",
+        "paragraphs_en": [
+          "Employees pay rate $\\tau_1$ on earnings between the Primary Threshold ($PT$) and Upper Earnings Limit ($UEL$), and $\\tau_2$ above $UEL$:",
+          "$$NIC = \\tau_1 \\cdot \\max(0, \\min(W, UEL) - PT) + \\tau_2 \\cdot \\max(0, W - UEL)$$"
+        ],
+        "paragraphs_fa": [
+          "محاسبه بر مبنای درآمدهای بین حداقل آستانه مشمول و سقف نهایی با دو نرخ متفاوت انجام می‌گیرد تا اثر بازتوزیعی داشته باشد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
     "category_en": "Risk Management & Insurance"
   },
@@ -320348,80 +321096,168 @@
   {
     "id": 3789,
     "term_en": "National Registration Database (NRD)",
-    "term_fa": "National Registration Database (NRD)",
+    "term_fa": "پایگاه ملی ثبت اطلاعات کارگزاران بورس کانادا (NRD)",
     "letter": "N",
     "category": "فین‌تک، فناوری و داده‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Registration Database (NRD) is an integrated, web-based regulatory filing system in Canada administered by the Canadian Securities Administrators (CSA) that allows financial broker-dealers, investment advisors, and securities representatives to file registration applications electronically across multiple provincial jurisdictions.",
+    "definition_fa": "پایگاه ملی ثبت (NRD) یک سامانه جامع الکترونیکی نظارتی در کانادا است که توسط مجمع ناظران اوراق بهادار کانادا (CSA) و سازمان نظارت بر صنعت سرمایه‌گذاری (CIRO) اداره می‌شود و به شرکت‌های کارگزاری، سبدگردان‌ها و مشاوران سرمایه‌گذاری اجازه می‌دهد پرونده‌های ثبت، سوابق حرفه‌ای و مجوزهای فعالیت خود را در تمامی استان‌های کانادا به صورت متمرکز مدیریت کنند.",
+    "takeaways_en": [
+      "Operates under National Instrument 31-102 of the Canadian Securities Administrators.",
+      "Streamlines multi-jurisdictional licensing across Canada's 10 provinces and 3 territories.",
+      "Maintains comprehensive regulatory disciplinary histories and background checks on registered representatives.",
+      "Facilitates public searches of licensed financial advisors via the National Registration Search portal."
+    ],
+    "takeaways_fa": [
+      "بر اساس دستورالعمل ملی ۳۱-۱۰۲ ناظران اوراق بهادار کانادا فعالیت می‌کند.",
+      "فرآیند اخذ مجوز فعالیت همزمان در تمامی ۱۰ استان و ۳ قلمرو کانادا را در یک درگاه واحد تسهیل می‌سازد.",
+      "سوابق انضباطی، شکایات مشتریان و آزمون‌های گذرانده‌شده مشاوران مالی را ثبت و نگهداری می‌کند.",
+      "امکان استعلام آنلاین وضعیت اعتبار کارگزاران را برای عموم سرمایه‌گذاران مهیا می‌سازد."
+    ],
     "url": "https://www.investopedia.com/terms/n/nrd.asp",
     "slug": "nrd",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The NRD unifies decentralized provincial securities licensing into an efficient centralized electronic registry.",
+    "bottom_line_fa": "پایگاه NRD نظام چندگانه استانی بورس‌های کانادا را در یک سیستم هوشمند واحد برای نظارت بر کارگزاران یکپارچه کرده است.",
+    "sections": [
+      {
+        "title_en": "Multi-Jurisdictional Passport System Integration",
+        "title_fa": "یکپارچگی با سیستم گذرنامه نظارتی بین‌استانی",
+        "paragraphs_en": [
+          "Through NRD, Canada's 'Passport System' allows an advisor registered with their principal home regulator to gain automatic recognition across other participating provincial jurisdictions."
+        ],
+        "paragraphs_fa": [
+          "سامانه پاسپورت با اتکا به پایگاه NRD، به مشاور مالی اجازه می‌دهد با دریافت مجوز از استان مبدا، به طور خودکار در سایر استان‌ها نیز فعالیت تجاری داشته باشد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "فین‌تک، فناوری و داده‌های مالی",
     "category_en": "Fintech, Technology & Financial Data"
   },
   {
     "id": 3790,
     "term_en": "National Retail Federation (NRF)",
-    "term_fa": "National Retail Federation (NRF)",
+    "term_fa": "فدراسیون ملی خرده‌فروشی آمریکا (NRF)",
     "letter": "N",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Retail Federation (NRF) is the world's largest retail trade association, representing department stores, specialty retailers, discount merchants, independent grocers, and digital internet retailers across the United States and worldwide.",
+    "definition_fa": "فدراسیون ملی خرده‌فروشی (NRF) بزرگ‌ترین تشکل صنفی و صنعتی تجارت خرده‌فروشی در جهان است که فروشگاه‌های زنجیره‌ای، هایپرمارکت‌ها، خرده‌فروشان مستقل و پلتفرم‌های تجارت الکترونیک را پوشش داده و شاخص‌های پیش‌بینی فروش ایام تعطیلات، جمعه سیاه (Black Friday) و دوشنبه سایبری را منتشر می‌سازد.",
+    "takeaways_en": [
+      "Represents an industry supporting one in four American jobs and contributing $5.3 trillion to annual GDP.",
+      "Publishes definitive consumer spending forecasts for Black Friday, Cyber Monday, and the winter holiday shopping season.",
+      "Conducts national surveys on retail theft, inventory loss (shrinkage), and organized retail crime (ORC).",
+      "Serves as the primary retail legislative lobbyist in Washington on trade tariffs and interchange swipe fees."
+    ],
+    "takeaways_fa": [
+      "نماینده صنعتی است که یک‌چهارم کل مشاغل آمریکا را ایجاد کرده و سهم ۵.۳ تریلیون دلاری در اقتصاد دارد.",
+      "پیش‌بینی‌های معتبر فروش خرید فصل تعطیلات، بلک فرایدی و سایبر ماندی را برای تحلیل‌گران مالی منتشر می‌کند.",
+      "پایش سالانه میزان سرقت کالا و کسری انبار (Shrinkage) فروشگاه‌ها را گزارش می‌نماید.",
+      "لابی‌گر ارشد دفاع از حقوق تجار در برابر تعرفه‌های وارداتی و کارمزدهای سنگین کارت‌های اعتباری است."
+    ],
     "url": "https://www.investopedia.com/terms/n/national-retail-federation-nrf.asp",
     "slug": "national-retail-federation-nrf",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The NRF quantifies consumer spending vitality, providing premier economic indicators for the consumer discretionary sector.",
+    "bottom_line_fa": "فدراسیون NRF دماسنج رفتار مصرف‌کننده است و پیش‌بینی‌های آن جهت حرکت سهام بخش خرده‌فروشی را رقم می‌زند.",
+    "sections": [
+      {
+        "title_en": "Retail Inventory Shrinkage Rate",
+        "title_fa": "فرمول نرخ کسری و ضایعات انبار خرده‌فروشی",
+        "paragraphs_en": [
+          "NRF monitors inventory loss (theft, damage, admin error) via the Shrinkage Percentage ($S_{\\%}$):",
+          "$$S_{\\%} = \\frac{\\text{Booked Accounting Inventory} - \\text{Physical Counted Inventory}}{\\text{Total Retail Sales}} \\times 100\\%$$",
+          "Surging shrink rates erode operating operating margins for major discount retailers."
+        ],
+        "paragraphs_fa": [
+          "نرخ کسری موجودی از کسر موجودی فیزیکی از موجودی دفتری تقسیم بر کل فروش محاسبه می‌شود که شاخصی از آسیب سرقت‌ها بر حاشیه سود است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3791,
     "term_en": "National Securities Clearing Corporation (NSCC)",
-    "term_fa": "National اوراق بهادار پایاپای شرکت سهامی (NSCC) (National Securities Clearing Corporation (NSCC))",
+    "term_fa": "شرکت ملی پایاپای اوراق بهادار آمریکا (NSCC)",
     "letter": "N",
     "category": "حاکمیت شرکتی و ساختار سازمانی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Securities Clearing Corporation (NSCC) is a specialized subsidiary of the Depository Trust & Clearing Corporation (DTCC) that provides centralized post-trade clearing, trade settlement netting, risk management, and central counterparty (CCP) services for virtually all U.S. cash equity trades.",
+    "definition_fa": "شرکت ملی پایاپای اوراق بهادار (NSCC) شرکت تابعه و قلب تپنده هلدینگ DTCC در ایالات متحده است که وظیفه پایاپای، تهاتر و تسویه کلیه معاملات نقدی سهام، اوراق قرضه شرکتی و صندوق‌های ETF را با تضمین قطعی معامله در قالب «طرف مقابل مرکزی» (CCP) بر عهده دارد.",
+    "takeaways_en": [
+      "Acts as the Central Counterparty (CCP), interposing itself as the buyer to every seller and seller to every buyer.",
+      "Executes the Continuous Net Settlement (CNS) system, netting millions of transactions down to single daily net obligations.",
+      "Reduces systemic settlement risk and cuts physical monetary transfer volume by upwards of 98%.",
+      "Enforces member clearing fund deposits (margin) to protect markets against member broker insolvencies."
+    ],
+    "takeaways_fa": [
+      "به عنوان طرف مقابل مرکزی (CCP) وارد معامله شده و نقش خریدار را برای هر فروشنده و فروشنده را برای هر خریدار ایفا می‌کند.",
+      "با سامانه تهاتر خالص مستمر (CNS)، میلیون‌ها معامله را در پایان روز به یک تعهد بدهی یا بستانکاری خالص تبدیل می‌کند.",
+      "ریسک تسویه پایاپای را مهار کرده و حجم وجوه نقدی لازم برای تسویه را تا بیش از ۹۸٪ کاهش می‌دهد.",
+      "سپرده‌های تضمینی سنگینی از کارگزاری‌ها برای پوشش نوسانات دوره‌های تسویه ($T+1$) مطالبه می‌نماید."
+    ],
     "url": "https://www.investopedia.com/terms/n/nscc.asp",
     "slug": "nscc",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NSCC guarantees trade settlement execution across U.S. equity markets via central counterparty netting.",
+    "bottom_line_fa": "سازمان NSCC تضمین‌کننده قطعی تسویه معاملات سهام است که ریسک نکول کارگزاران را از بازارهای مالی محو می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Continuous Net Settlement (CNS) Algorithm",
+        "title_fa": "الگوریتم سامانه تهاتر خالص مستمر (CNS)",
+        "paragraphs_en": [
+          "CNS aggregates a broker's gross trades in security $k$ into a single net deliver/receive obligation ($Q_{\\text{net}, k}$):",
+          "$$Q_{\\text{net}, k} = \\sum_{i=1}^M Q_{\\text{buy}, ik} - \\sum_{j=1}^N Q_{\\text{sell}, jk}$$",
+          "Netting reduces systemic gross liquidity exposure exponentially, enabling stable $T+1$ settlement cycles."
+        ],
+        "paragraphs_fa": [
+          "سامانه CNS مجموع سفارش‌های خرید سهم $k$ را از سفارش‌های فروش همان روز کسر کرده و صرفاً خالص سهم بدهکار یا بستانکار را تسویه می‌نماید که نیاز به نقدینگی را به حداقل می‌رساند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حاکمیت شرکتی و ساختار سازمانی",
     "category_en": "Corporate Governance & Organization"
   },
   {
     "id": 3792,
     "term_en": "National Securities Markets Improvement Act (NSMIA)",
-    "term_fa": "National اوراق بهادار بازارها Improvement Act (NSMIA) (National Securities Markets Improvement Act (NSMIA))",
+    "term_fa": "قانون اصلاح بازارهای اوراق بهادار سال ۱۹۹۶ آمریکا (NSMIA)",
     "letter": "N",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The National Securities Markets Improvement Act of 1996 (NSMIA) is a landmark U.S. federal statute that bifurcated and streamlined regulatory oversight between the federal SEC and state securities commissions, preempting state 'blue sky' registration laws for nationally listed securities and large investment advisers.",
+    "definition_fa": "قانون اصلاح بازارهای اوراق بهادار سال ۱۹۹۶ (NSMIA) قانونی سرنوشت‌ساز در بازارهای مالی آمریکا بود که با تفکیک دقیق وظایف نظارتی کمیسیون بورس فدرال (SEC) و ادارات بورس ایالتی، قوانین دست‌وپاگیر محلی (قوانین آسمان آبی) را برای سهام شرکت‌های بورسی ملغی کرد و دوگانگی رگولاتوری را برطرف ساخت.",
+    "takeaways_en": [
+      "Created the category of 'Covered Securities' exempt from state Blue Sky Law registration requirements.",
+      "Divided investment adviser regulation: SEC regulates large advisers ($AUM > \\$100\\text{M}$); states regulate smaller advisers.",
+      "Dramatically reduced the regulatory compliance costs of nationwide initial public offerings and mutual funds.",
+      "Preserved state authority to prosecute securities fraud and investigate localized broker misconduct."
+    ],
+    "takeaways_fa": [
+      "طبقه «اوراق بهادار تحت پوشش» را ایجاد کرد که از تشریفات ثبت موازی در تک‌تک ۵۰ ایالت معاف شدند.",
+      "مشاوران سرمایه‌گذاری را تقسیم کرد: شرکت‌های با دارایی بالای ۱۰۰ میلیون دلار با SEC و شرکت‌های کوچکتر با ایالت‌ها.",
+      "هزینه‌های پذیره‌نویسی عرضه‌های اولیه و صندوق‌های مشترک را به شدت کاهش داد و یکپارچگی ملی ایجاد کرد.",
+      "حق پیگرد قضایی تقلب، کلاهبرداری و رفتارهای غیراخلاقی کارگزاران را همچنان در اختیار دادستان‌های ایالتی حفظ نمود."
+    ],
     "url": "https://www.investopedia.com/terms/n/nsmia.asp",
     "slug": "nsmia",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NSMIA harmonized federal and state securities laws, establishing a unified national capital market.",
+    "bottom_line_fa": "قانون NSMIA بازار سرمایه آمریکا را از تله قوانین متناقض ایالتی رهانید و بستر تأمین مالی ملی یکپارچه را پایه‌گذاری کرد.",
+    "sections": [
+      {
+        "title_en": "Federal Preemption of State Blue Sky Laws",
+        "title_fa": "اصل تقدم فدرال و الغای قوانین آسمان آبی",
+        "paragraphs_en": [
+          "NSMIA added Section 18 to the Securities Act of 1933, stating that no state law, rule, or order may require registration of 'covered securities' listed on national exchanges (NYSE, Nasdaq) or investment companies registered under the Investment Company Act of 1940."
+        ],
+        "paragraphs_fa": [
+          "این قانون ثبت سهام شرکت‌های فهرست‌شده در نزدک و بورس نیویورک را در نهادهای محلی ایالتی ممنوع ساخت و سرعت معاملات را افزایش داد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
@@ -320601,80 +321437,171 @@
   {
     "id": 3794,
     "term_en": "Nationalization",
-    "term_fa": "Nationalization",
+    "term_fa": "ملی‌سازی / انتقال به مالکیت دولت (Nationalization)",
     "letter": "N",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Nationalization is the sovereign process whereby a national government forcibly or voluntarily takes control, ownership, and management of private commercial enterprises, economic assets, or entire industrial sectors (e.g., energy, banking, transportation) into state ownership.",
+    "definition_fa": "ملی‌سازی (Nationalization) اقدام حقوقی و سیاسی یک دولت برای انتقال مالکیت، اداره و کنترل دارایی‌ها، شرکت‌های خصوصی یا کل یک صنعت کلیدی (نظیر نفت، بانکداری، راه‌آهن یا معادن) به بخش عمومی و تحت حاکمیت مستقیم دولت است که می‌تواند با جبران غرامت یا به صورت مصادره بدون پرداخت غرامت صورت گیرد.",
+    "takeaways_en": [
+      "Contrasts with privatization, where state-owned enterprises (SOEs) are transferred to private investors.",
+      "Can occur during financial panics (e.g., government takeovers of insolvent systemic banks during the 2008 crisis).",
+      "Expropriation of foreign-owned assets frequently triggers investor-state international arbitration disputes under ICSID.",
+      "Frequently leads to operational inefficiencies, loss of foreign direct investment (FDI), and international capital flight."
+    ],
+    "takeaways_fa": [
+      "در نقطه مقابل خصوصی‌سازی قرار دارد که دارایی‌های دولتی به بخش خصوصی واگذار می‌شوند.",
+      "در مواقع بحران‌های مالی حاد برای نجات بانک‌های دارای ریسک سیستماتیک اجرا می‌شود (نظیر نجات بانک‌ها در ۲۰۰۸).",
+      "سلب مالکیت از دارایی‌های سرمایه‌گذاران خارجی معمولاً به دعاوی بین‌المللی در داوری بانک جهانی (ICSID) ختم می‌گردد.",
+      "در اغلب موارد به دلیل مدیریت دیوان‌سالار، افت بهره‌وری و فرار سرمایه‌گذاری خارجی (FDI) را به دنبال دارد."
+    ],
     "url": "https://www.investopedia.com/terms/n/nationalization.asp",
     "slug": "nationalization",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Nationalization reshapes property rights, transferring strategic economic infrastructure into sovereign state control.",
+    "bottom_line_fa": "ملی‌سازی مرزهای مالکیت را دگرگون ساخته و ابزارهای استراتژیک تولید ثروت را در انحصار دولت قرار می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Fair Compensation and the Hull Formula",
+        "title_fa": "قاعده فرمول هال در پرداخت غرامت منصفانه",
+        "paragraphs_en": [
+          "Under international customary law (the Hull Doctrine), lawful nationalization mandates compensation ($C$) that is 'prompt, adequate, and effective':",
+          "$$C = \\text{Fair Market Value (FMV)} + \\text{Accrued Interest to Date of Payment}$$",
+          "Uncompensated expropriations violate bilateral investment treaties (BITs)."
+        ],
+        "paragraphs_fa": [
+          "طبق دکترین حقوق بین‌الملل هال، ملی‌سازی قانونی مستلزم پرداخت غرامت سریع، کافی و مؤثر معادل ارزش منصفانه بازار دارایی‌ها به همراه بهره است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3795,
     "term_en": "Natural Gas ETF",
-    "term_fa": "Natural Gas ETF",
+    "term_fa": "صندوق قابل معامله گاز طبیعی (Natural Gas ETF)",
     "letter": "N",
     "category": "صندوق‌ها و مدیریت سبد دارایی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A natural gas ETF is a publicly traded exchange-traded fund that tracks the benchmark spot price movements of natural gas commodities, either directly by holding rolling futures contracts (e.g., Henry Hub futures) or indirectly via equity shares of natural gas exploration and pipeline corporations.",
+    "definition_fa": "صندوق قابل معامله گاز طبیعی (Natural Gas ETF) یک ابزار مشتقه در بازار بورس است که عملکرد قیمتی گاز طبیعی را دنبال می‌کند؛ این صندوق‌ها یا مستقیماً قراردادهای آتی گاز طبیعی در بورس کالای نایمکس را نگهداری و ماهانه تعویض می‌کنند، یا در سبدی از سهام شرکت‌های اکتشاف، تولید و خطوط لوله گاز سرمایه‌گذاری می‌نمایند.",
+    "takeaways_en": [
+      "Futures-based funds (e.g., UNG) are exposed to extreme contango decay during rolling cycles.",
+      "Prices are intensely seasonal, driven by winter heating demand and summer electric cooling loads.",
+      "Exhibits extreme commodity price volatility influenced by weekly EIA underground storage reports.",
+      "Structured frequently as commodity pools issuing Form K-1 tax disclosures in the United States."
+    ],
+    "takeaways_fa": [
+      "صندوق‌های مبتنی بر آتی (نظیر UNG) در فصول ثبات قیمت به دلیل هزینه رول فیوچرز در شرایط کانتانگو افت ارزش شدیدی دارند.",
+      "به شدت فصلی است و از سرمای زمستان (گرمایش) و گرمای تابستان (تولید برق کولرها) تأثیر می‌پذیرد.",
+      "نوسان‌پذیری بسیار بالایی در روزهای پنج‌شنبه با انتشار گزارش رسمی انبار ذخایر گاز طبیعی دارد.",
+      "در آمریکا به عنوان استخر کالایی ثبت شده و گزارش‌های مالیاتی ویژه (Form K-1) صادر می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/n/natural-gas-etf.asp",
     "slug": "natural-gas-etf",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Natural gas ETFs grant liquid access to volatile energy commodity prices, requiring active management against roll yield erosion.",
+    "bottom_line_fa": "صندوق‌های ETF گاز ابزار سریع نوسان‌گیری از قیمت گاز هستند اما نگهداری بلندمدت آنها مستلزم احتیاط در برابر فرسایش کانتانگو است.",
+    "sections": [
+      {
+        "title_en": "Negative Roll Yield Dynamics in Energy Contango",
+        "title_fa": "دینامیک بازده منفی رول در بازار گاز",
+        "paragraphs_en": [
+          "Because natural gas is expensive to store physically, futures curves frequently steepen into contango ($F_2 > F_1$), inflicting roll losses ($L_{\\text{roll}}$) on the fund:",
+          "$$L_{\\text{roll}} = \\frac{F_2 - F_1}{F_1} \\times 100\\%$$",
+          "eroding the ETF's compound Net Asset Value over extended holding durations."
+        ],
+        "paragraphs_fa": [
+          "هزینه بالای انبارداری گاز باعث شیب تند کانتانگو در بازار فیوچرز می‌شود؛ صندوق در هنگام فروش قرارداد جاری و خرید قرارداد گران‌تر بعدی متحمل زیان دفتری می‌گردد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "صندوق‌ها و مدیریت سبد دارایی",
     "category_en": "Funds & Portfolio Management"
   },
   {
     "id": 3796,
     "term_en": "Natural Gas Liquids",
-    "term_fa": "Natural Gas Liquids",
+    "term_fa": "مایعات گاز طبیعی (NGLs - Natural Gas Liquids)",
     "letter": "N",
     "category": "کالاها، انرژی و فلزات گرانبها",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Natural Gas Liquids (NGLs) are heavier hydrocarbon gas components—specifically ethane, propane, normal butane, isobutane, and natural gasoline (pentanes plus)—that are separated as liquid streams from raw wellhead natural gas at specialized gas processing processing facilities.",
+    "definition_fa": "مایعات گاز طبیعی (NGLs) گروهی از هیدروکربن‌های باارزش شامل اتان، پروپان، بوتان، ایزوبوتان و پنتان (بنزین طبیعی) هستند که به صورت مایع از گاز طبیعی خام خروجی چاه در پالایشگاه‌های گاز تفکیک شده و به عنوان خوراک پتروشیمی‌ها، سوخت خانگی و سوخت موتور به فروش می‌رسند.",
+    "takeaways_en": [
+      "Distinct from Liquefied Natural Gas (LNG), which is primarily cooled liquefied methane ($CH_4$).",
+      "Ethane ($C_2H_6$) serves as the primary petrochemical feedstock cracked into ethylene for plastics.",
+      "Propane ($C_3H_8$) and Butane ($C_4H_10$) are commercialized as Liquefied Petroleum Gas (LPG).",
+      "Processed at natural gas processing plants and separated into purity components via fractionation plants."
+    ],
+    "takeaways_fa": [
+      "با گاز طبیعی مایع‌شده (LNG) تفاوت دارد؛ LNG متان مایع در دمای منفی ۱۶۲ درجه است، در حالی که NGL ترکیبات سنگین‌تر نفتی هستند.",
+      "اتان خوراک استراتژیک پتروشیمی‌ها در کوره‌های الفین برای تولید اتیلن و پلیمرهای پلاستیک است.",
+      "پروپان و بوتان به عنوان گاز مایع کپسولی (LPG) سوخت خودروها و گرمایش را تأمین می‌کنند.",
+      "در واحدهای تفکیک گاز (Fractionation Plants) به محصولات خالص پتروشیمیایی تجزیه می‌شوند."
+    ],
     "url": "https://www.investopedia.com/terms/n/natural-gas-liquids.asp",
     "slug": "natural-gas-liquids",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NGLs link upstream hydrocarbon extraction with global chemical processing and plastics manufacturing.",
+    "bottom_line_fa": "مایعات گازی حلقه اتصال تولید بالادستی گاز با صنایع پتروشیمی و پلیمری بوده و درآمد ارزی فوق‌العاده‌ای ایجاد می‌کنند.",
+    "sections": [
+      {
+        "title_en": "The Natural Gas Processing Value Chain",
+        "title_fa": "زنجیره ارزش فرآورش و تفکیک گاز طبیعی",
+        "paragraphs_en": [
+          "The fractionation barrel composite price ($P_{\\text{NGL barrel}}$) evaluates a standard weighted mix of NGL components:",
+          "$$P_{\\text{NGL}} = \\sum_{i} w_i \\cdot P_i = 0.42 P_{\\text{ethane}} + 0.28 P_{\\text{propane}} + 0.11 P_{\\text{butane}} + 0.06 P_{\\text{isobutane}} + 0.13 P_{\\text{gasoline}}$$"
+        ],
+        "paragraphs_fa": [
+          "قیمت هر بشکه مایعات گازی از میانگین وزنی قیمت محصولات تفکیک‌شده (اتان، پروپان، بوتان و بنزین طبیعی) محاسبه می‌شود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "کالاها، انرژی و فلزات گرانبها",
     "category_en": "Commodities, Energy & Metals"
   },
   {
     "id": 3797,
     "term_en": "Natural Gas Storage Indicator (EIA Report)",
-    "term_fa": "Natural Gas Storage اندیکاتور / نشانگر (EIA Report) (Natural Gas Storage Indicator (EIA Report))",
+    "term_fa": "شاخص ذخایر گاز طبیعی / گزارش هفتگی EIA (Natural Gas Storage Indicator)",
     "letter": "N",
     "category": "کالاها، انرژی و فلزات گرانبها",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Natural Gas Storage Indicator is a high-impact weekly macroeconomic report published every Thursday by the U.S. Energy Information Administration (EIA) that measures net weekly changes in working natural gas volumes held in subterranean underground storage facilities across five U.S. regions.",
+    "definition_fa": "شاخص ذخایر گاز طبیعی (گزارش هفتگی EIA) یکی از تأثیرگذارترین گزارش‌های بازار انرژی در جهان است که هر پنج‌شنبه توسط اداره اطلاعات انرژی آمریکا منتشر می‌شود و حجم خالص تزریق یا برداشت گاز طبیعی را در مخازن زیرزمینی پنج منطقه آمریکا گزارش می‌کند و محرک اصلی نوسانات قیمت فیوچرز گاز است.",
+    "takeaways_en": [
+      "Follows a distinct seasonal cycle: Injection Season (April through October) vs. Withdrawal Season (November through March).",
+      "Measures volumes in Billions of Cubic Feet (Bcf) held in depleted gas fields, aquifers, and salt caverns.",
+      "Releases trigger instantaneous high-frequency volatility spikes across CME Henry Hub gas futures.",
+      "Traders benchmark actual reported storage changes against consensus Wall Street survey expectations."
+    ],
+    "takeaways_fa": [
+      "از چرخه فصلی مشخص پیروی می‌کند: فصل تزریق به انبارها (بهار و تابستان) در برابر فصل برداشت از انبارها (پاییز و زمستان).",
+      "بر حسب میلیارد فوت مکعب (Bcf) گاز ذخیره‌شده در میادین تخلیه‌شده، سفره‌های آب و غارهای نمکی اندازه‌گیری می‌شود.",
+      "انتشار هفتگی آن در ساعت ۱۰:۳۰ صبح پنج‌شنبه‌ها شوک‌های قیمتی شدیدی در قراردادهای آتی هنری هاب ایجاد می‌کند.",
+      "تفاوت رقم واقعی با پیش‌بینی تحلیل‌گران جهت نوسان بازار گاز را رقم می‌زند."
+    ],
     "url": "https://www.investopedia.com/terms/n/natural-gas-storage-indicator-eia-report.asp",
     "slug": "natural-gas-storage-indicator-eia-report",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The EIA storage report establishes real-time supply-demand balance, driving benchmark natural gas futures pricing.",
+    "bottom_line_fa": "گزارش ذخایر EIA دماسنج توازن لحظه‌ای عرضه و تقاضای انرژی است و جهت نوسانات قیمت گاز را مشخص می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Inventory Storage Balance Equation",
+        "title_fa": "معادله تراز هفتگی موجودی انبارهای گاز",
+        "paragraphs_en": [
+          "Working gas volume at week $t$ ($W_t$) satisfies the conservation balance:",
+          "$$W_t = W_{t-1} + \\text{Injections}_t - \\text{Withdrawals}_t$$",
+          "Deviation from the 5-year historical average ($\\Delta W = W_t - \\bar{W}_{5\\text{yr}}$) determines structural price premiums or deficits."
+        ],
+        "paragraphs_fa": [
+          "موجودی گاز کاری در انبارها از کسر برداشت‌های مصرفی از گاز تزریق‌شده محاسبه می‌شود؛ انحراف موجودی از میانگین ۵ ساله، جهت گرانی یا ارزانی گاز در فصل سرما را پیش‌بینی می‌کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "کالاها، انرژی و فلزات گرانبها",
     "category_en": "Commodities, Energy & Metals"
   },
@@ -333279,160 +334206,347 @@
   {
     "id": 4071,
     "term_en": "Oil Pollution Act of 1990",
-    "term_fa": "Oil Pollution Act of 1990",
+    "term_fa": "قانون آلودگی نفتی سال ۱۹۹۰ (OPA 90)",
     "letter": "O",
     "category": "کالاها، انرژی و فلزات گرانبها",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Oil Pollution Act of 1990 (OPA 90) is a comprehensive U.S. federal environmental statute passed following the Exxon Valdez disaster that overhauled federal spill prevention, cleanup responsibilities, strict corporate financial liabilities, and double-hull tanker mandates.",
+    "definition_fa": "قانون آلودگی نفتی سال ۱۹۹۰ (OPA 90) یکی از جامع‌ترین قوانین فدرال زیست‌محیطی در آمریکا است که پس از فاجعه نشت نفت نفت‌کش اکسان والدز تصویب شد و مسئولیت مطلق مالی و حقوقی نامحدود را بر شرکت‌های نفتی برای پاکسازی محیط زیست، پرداخت غرامت به صیادان و الزام به ساخت نفت‌کش‌های دوجداره تحمیل کرد.",
+    "takeaways_en": [
+      "Enacted in direct response to the catastrophic 1989 Exxon Valdez Alaskan oil spill.",
+      "Established the national Oil Spill Liability Trust Fund financed by a per-barrel petroleum tax.",
+      "Mandated phase-out of single-hull tankers in favor of double-hull vessel construction by 2015.",
+      "Imposes strict, joint, and several corporate liability on oil vessel owners and operators."
+    ],
+    "takeaways_fa": [
+      "در پاسخ مستقیم به فاجعه نشت نفت اکسان والدز در آلاسکا به تصویب رسید.",
+      "صندوق امانی فدرال جبران خسارت نشت نفت را با وضع مالیات بر هر بشکه نفت ایجاد کرد.",
+      "تردد نفت‌کش‌های تک‌جداره را ممنوع و ساخت بدنه دوجداره (Double Hull) را تا ۲۰۱۵ الزامی ساخت.",
+      "مسئولیت تضامنی، سخت‌گیرانه و مطلق حقوقی برای مالکان شناورها در جبران زیان‌های زیست‌محیطی وضع نمود."
+    ],
     "url": "https://www.investopedia.com/terms/o/oil-pollution-act-of-1990.asp",
     "slug": "oil-pollution-act-of-1990",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OPA 90 revolutionized global maritime petroleum transport safety, internalizing catastrophic ecological spill liabilities.",
+    "bottom_line_fa": "قانون OPA 90 استانداردهای کشتیرانی نفتی را دگرگون ساخت و هزینه‌های فاجعه‌بار زیست‌محیطی را به شرکت‌های نفتی تحمیل کرد.",
+    "sections": [
+      {
+        "title_en": "Liability Limits and Environmental Caps",
+        "title_fa": "حدود مسئولیت مالی و صندوق امانی جبران خسارت",
+        "paragraphs_en": [
+          "Under OPA 90, vessel liability limits were scaled to gross tonnage ($T$):",
+          "$$\\text{Liability Limit} = \\max\\left( \\$17.04\\text{M}, \\quad \\$3,000 \\times T \\right)$$",
+          "Liability limits are completely voided if the discharge resulted from gross negligence, willful misconduct, or safety violation."
+        ],
+        "paragraphs_fa": [
+          "سقف مسئولیت مالی شناورها بر مبنای تناژ ناخالص کشتی ($T$) فرمول‌بندی شده است؛ در صورت اثبات قصور عمدی یا نقض دستورالعمل‌های ایمنی، سقف برداشته شده و شرکت نفت موظف به پرداخت نامحدود کل خسارات خواهد بود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "کالاها، انرژی و فلزات گرانبها",
     "category_en": "Commodities, Energy & Metals"
   },
   {
     "id": 4072,
     "term_en": "Oil Price to Natural Gas Ratio",
-    "term_fa": "Oil قیمت to Natural Gas نسبت (Oil Price to Natural Gas Ratio)",
+    "term_fa": "نسبت قیمت نفت به گاز طبیعی (Oil-to-Gas Ratio)",
     "letter": "O",
     "category": "ارزش‌گذاری و تحلیل بنیادی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The oil price to natural gas ratio is a commodity valuation metric that compares the market dollar price of one barrel of crude oil against the price of one million British thermal units (MMBtu) of natural gas, measuring relative energy parity.",
+    "definition_fa": "نسبت قیمت نفت به گاز طبیعی (Oil-to-Gas Ratio) سنجه‌ای تحلیلی در بازار انرژی است که قیمت یک بشکه نفت خام را با قیمت یک میلیون بی‌تی‌یو (MMBtu) گاز طبیعی مقایسه می‌کند تا برابری ارزش حرارتی و انحرافات قیمت‌گذاری دو حامل انرژی را نسبت به یکدیگر بسنجد.",
+    "takeaways_en": [
+      "Physical energy equivalence ratio is approximately 5.825:1 based on thermal content (1 barrel = ~5.825 MMBtu).",
+      "Trading historically around 6:1 to 10:1 before diverging up to 20:1+ following the U.S. shale fracking revolution.",
+      "Influences petrochemical feedstock switching decisions between crude naphtha and natural gas liquids (ethane).",
+      "Traded by commodity hedge funds via relative-value spread arbitrage strategies."
+    ],
+    "takeaways_fa": [
+      "برابری فیزیکی ارزش حرارتی این دو حامل حدود ۵.۸۲۵ به ۱ است (هر بشکه نفت معادل ۵.۸۲۵ میلیون BTU انرژی است).",
+      "به طور تاریخی در محدوده ۶ تا ۱۰ معامله می‌شد اما با انقلاب نفت و گاز شیل آمریکا تا ارقام بالای ۲۰ جهش کرد.",
+      "مبنای تصمیم‌گیری پتروشیمی‌ها در انتخاب خوراک ارزان‌تر (نفتا یا اتان) در خطوط تولید است.",
+      "توسط صندوق‌های پوشش ریسک کالا برای استراتژی‌های آربیتراژ اسپرد انرژی مورد استفاده قرار می‌گیرد."
+    ],
     "url": "https://www.investopedia.com/terms/o/oil-price-to-natural-gas-ratio.asp",
     "slug": "oil-price-to-natural-gas-ratio",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The oil-to-gas ratio reveals relative energy pricing anomalies, guiding capital deployment across energy sub-sectors.",
+    "bottom_line_fa": "این نسبت ناهماهنگی قیمت‌گذاری در بازار سوخت‌های فسیلی را آشکار ساخته و سودآوری صنایع پتروشیمی را رقم می‌زند.",
+    "sections": [
+      {
+        "title_en": "Mathematical Ratio and Thermal Parity",
+        "title_fa": "فرمول نسبت و برابری انرژی حرارتی",
+        "paragraphs_en": [
+          "The ratio ($R_{\\text{OG}}$) compares West Texas Intermediate (WTI) against Henry Hub gas:",
+          "$$R_{\\text{OG}} = \\frac{P_{\\text{WTI}} \\, (\\$/\\text{barrel})}{P_{\\text{Henry Hub}} \\, (\\$/\\text{MMBtu})}$$",
+          "A ratio exceeding 10:1 reflects abundant natural gas supply relative to crude, incentivizing power generation coal-to-gas switching."
+        ],
+        "paragraphs_fa": [
+          "نسبت از تقسیم قیمت هر بشکه نفت بر قیمت گاز هنری هاب محاسبه می‌شود:",
+          "ثبت ارقام بالای ۱۰ نشان‌دهنده ارزان بودن چشمگیر گاز نسبت به نفت است که شرکت‌های برق را به سمت مصرف گاز ترغیب می‌کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "ارزش‌گذاری و تحلیل بنیادی",
     "category_en": "Valuation & Fundamental Analysis"
   },
   {
     "id": 4073,
     "term_en": "Oil Refinery",
-    "term_fa": "Oil Refinery",
+    "term_fa": "پالایشگاه نفت (Oil Refinery)",
     "letter": "O",
     "category": "کالاها، انرژی و فلزات گرانبها",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An oil refinery is an industrial chemical engineering processing facility where extracted crude oil is converted and refined into commercially usable petroleum end-products, including gasoline, diesel fuel, aviation jet kerosene, heating oil, and petrochemical feedstocks.",
+    "definition_fa": "پالایشگاه نفت (Oil Refinery) یک مجتمع بزرگ صنعتی و مهندسی شیمی در بخش میان‌دستی صنعت نفت است که نفت خام ورودی را از طریق تقطیر جزءبه‌جزء، شکست کاتالیستی (FCC)، هیدروکراکینگ و گوگردزدایی به فرآورده‌های باارزش نظیر بنزین، گازوئیل، سوخت جت و خوراک پتروشیمی تبدیل می‌کند.",
+    "takeaways_en": [
+      "Profitability is dictated by the refining 'Crack Spread' (e.g., the 3:2:1 crack spread).",
+      "Complexity is benchmarked globally using the Nelson Complexity Index (NCI).",
+      "Highly capital-intensive infrastructure with prolonged multi-year planning and regulatory lead times.",
+      "Vulnerable to environmental regulatory compliance mandates and decarbonization transition risks."
+    ],
+    "takeaways_fa": [
+      "سودآوری پالایشگاه مستقیماً بر مبنای کرک اسپرد (Crack Spread ۳:۲:۱) سنجیده می‌شود.",
+      "پیچیدگی فنی و توان پالایش نفت‌های سنگین و ترش با شاخص پیچیدگی نلسون (NCI) ارزیابی می‌گردد.",
+      "صنعتی فوق‌العاده سرمایه‌بر با دوره ساخت و بازگشت سرمایه طولانی‌مدت است.",
+      "تحت فشار الزامات سخت‌گیرانه محیط زیستی و روند گذار به انرژی‌های پاک تجدیدپذیر قرار دارد."
+    ],
     "url": "https://www.investopedia.com/terms/o/oil-refinery.asp",
     "slug": "oil-refinery",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Oil refineries transform unrefined crude into critical liquid fuels, generating crack spread margins.",
+    "bottom_line_fa": "پالایشگاه‌ها نفت خام خاموش را به شریان سوخت و انرژی جهان تبدیل کرده و از مابه‌التفاوت کرک اسپرد سود می‌سازند.",
+    "sections": [
+      {
+        "title_en": "The 3:2:1 Crack Spread Margin Calculation",
+        "title_fa": "فرمول و محاسبه حاشیه سود کرک اسپرد ۳:۲:۱ پالایشگاه",
+        "paragraphs_en": [
+          "Refining economics benchmark the 3:2:1 crack spread ($CS_{321}$), modeling 3 barrels of crude refined into 2 barrels of gasoline and 1 barrel of distillate:",
+          "$$CS_{321} = \\frac{2 \\cdot P_{\\text{gasoline}} + 1 \\cdot P_{\\text{distillate}} - 3 \\cdot P_{\\text{crude}}}{3}$$",
+          "A surging crack spread signals robust consumer demand for refined transportation fuels."
+        ],
+        "paragraphs_fa": [
+          "کرک اسپرد ۳:۲:۱ نشان‌دهنده سود ناخالص پالایش ۳ بشکه نفت به ۲ بشکه بنزین و ۱ بشکه گازوئیل است:",
+          "$$CS_{321} = \\frac{2 \\cdot P_{\\text{بنزین}} + 1 \\cdot P_{\\text{گازوئیل}} - 3 \\cdot P_{\\text{نفت خام}}}{3}$$",
+          "افزایش این رقم حاکی از جهش تقاضای سوخت و رونق چشمگیر سودآوری سهام پالایشی است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "کالاها، انرژی و فلزات گرانبها",
     "category_en": "Commodities, Energy & Metals"
   },
   {
     "id": 4074,
     "term_en": "Oil Reserves",
-    "term_fa": "Oil Reserves",
+    "term_fa": "ذخایر نفتی / طبقه‌بندی ذخایر هیدروکربنی (Oil Reserves)",
     "letter": "O",
     "category": "کالاها، انرژی و فلزات گرانبها",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Oil reserves are the estimated quantities of crude petroleum that geological, geophysical, and engineering data demonstrate with reasonable certainty to be commercially and technologically recoverable from known subsurface reservoirs under existing economic conditions.",
+    "definition_fa": "ذخایر نفتی (Oil Reserves) برآورد مهندسی و زمین‌شناسی از حجم نفت خامی است که با اطمینان معقول در شرایط فنی، قانونی و اقتصادی جاری (قیمت‌های فعلی نفت) قابلیت استخراج تجاری و سودآور را دارند و طبق نظام بین‌المللی PRMS به سه دسته اثبات‌شده، محتمل و ممکن تقسیم می‌شوند.",
+    "takeaways_en": [
+      "Classified under the Petroleum Resources Management System (PRMS) into 1P (Proved), 2P (Probable), and 3P (Possible).",
+      "1P reserves feature $\\ge 90\\%$ statistical probability of commercial extraction.",
+      "Reserve Replacement Ratio (RRR) evaluates if upstream exploration replaces annual depleted output.",
+      "Crucial collateral metric for borrowing base credit facilities in oil and gas reserve-based lending (RBL)."
+    ],
+    "takeaways_fa": [
+      "تحت سیستم بین‌المللی PRMS به ذخایر اثبات‌شده ($1P$)، محتمل ($2P$) و ممکن ($3P$) تفکیک می‌شود.",
+      "ذخایر ۱P دارای حداقل ۹۰ درصد قطعیت آماری برای استخراج اقتصادی در قیمت‌های روز هستند.",
+      "نسبت جایگزینی ذخایر (RRR) ارزیابی می‌کند که آیا اکتشافات جدید افت سالانه تولید را جبران می‌نماید یا خیر.",
+      "وثیقه اصلی شرکت‌های نفتی در اخذ تسهیلات بانکی مبتنی بر ذخایر (RBL) به شمار می‌رود."
+    ],
     "url": "https://www.investopedia.com/terms/o/oil-reserves.asp",
     "slug": "oil-reserves",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Oil reserves quantify the underlying physical asset foundation and future cash generation capacity of energy companies.",
+    "bottom_line_fa": "ذخایر نفتی ستون اصلی ارزش دارایی و جریان نقدی آینده شرکت‌های اکتشاف و تولید انرژی را تعیین می‌سازند.",
+    "sections": [
+      {
+        "title_en": "Reserve Replacement Ratio (RRR) Formulation",
+        "title_fa": "فرمول نسبت جایگزینی ذخایر (RRR)",
+        "paragraphs_en": [
+          "Upstream energy firms track sustainability using the Reserve Replacement Ratio ($RRR$):",
+          "$$RRR = \\frac{\\Delta \\text{Proved Reserves Added through Exploration and EOR}}{\\text{Annual Production Extracted}} \\times 100\\%$$",
+          "An $RRR < 100\\%$ indicates the enterprise is liquidating its hydrocarbon reserves without replacement."
+        ],
+        "paragraphs_fa": [
+          "نسبت جایگزینی ذخایر نشان می‌دهد که چه میزان از نفت تولیدشده با اکتشافات تازه جبران شده است:",
+          "نسبت کمتر از ۱۰۰٪ به معنای پیر شدن میادین و کاهش مستمر دارایی‌های نفتی شرکت در طول زمان است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "کالاها، انرژی و فلزات گرانبها",
     "category_en": "Commodities, Energy & Metals"
   },
   {
     "id": 4075,
     "term_en": "Oil Sands",
-    "term_fa": "Oil Sands",
+    "term_fa": "ماسه نفتی / ماسه‌های قیری (Oil Sands / Tar Sands)",
     "letter": "O",
     "category": "کالاها، انرژی و فلزات گرانبها",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Oil sands (tar sands) are naturally occurring geological mixtures of sand, clay, water, and an exceptionally dense, viscous, semi-solid petroleum form called bitumen, requiring surface mining or thermal in-situ extraction technologies (SAGD) for commercial recovery.",
+    "definition_fa": "ماسه‌های نفتی یا ماسه‌های قیری (Oil Sands) مخلوطی طبیعی از ماسه، خاک رس، آب و نفت خام فوق‌سنگین و چسبنده‌ای به نام «بیتومن» هستند که در لایه‌های کم‌عمق زمین (به ویژه در آلبرتای کانادا) انباشته شده و استخراج آن مستلزم حفر معادن روباز عظیم یا تزریق بخار داغ به اعماق زمین (روش SAGD) است.",
+    "takeaways_en": [
+      "Concentrated predominantly in the Athabasca region of Alberta, Canada and the Orinoco belt in Venezuela.",
+      "Extracted via open-pit strip mining or Steam-Assisted Gravity Drainage (SAGD) in-situ thermal recovery.",
+      "Requires substantial processing upgrading to produce synthetic crude oil (SCO) or blending with diluent (Dilbit).",
+      "Carries high break-even production costs ($40 - $65/bbl) and elevated carbon emission intensity."
+    ],
+    "takeaways_fa": [
+      "بزرگ‌ترین ذخایر جهان در منطقه آتاواسکا در کانادا و کمربند اورینوکو در ونزوئلا قرار دارد.",
+      "با استخراج روباز یا تزریق بخار داغ پرفشار به روش زهکشی ثقلی با کمک بخار (SAGD) به دست می‌آید.",
+      "مستلزم ارتقای سنگین در پالایشگاه‌های اختصاصی برای تولید نفت خام مصنوعی (SCO) یا رقیق‌سازی با میعانات گازی است.",
+      "هزینه سربه‌سر تولید بالایی (۴۰ تا ۶۵ دلار در هر بشکه) داشته و انتشار کربن بالاتری نسبت به نفت سبک دارد."
+    ],
     "url": "https://www.investopedia.com/terms/o/oilsand.asp",
     "slug": "oilsand",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Oil sands hold immense hydrocarbon reserves burdened by heavy capital requirements and carbon emission scrutiny.",
+    "bottom_line_fa": "ماسه‌های نفتی ذخایر عظیم نفتی هستند که بقای اقتصادی آنها به قیمت‌های جهانی نفت و فناوری‌های کاهش کربن وابسته است.",
+    "sections": [
+      {
+        "title_en": "Steam-Oil Ratio (SOR) Energy Efficiency Metric",
+        "title_fa": "شاخص نسبت بخار به نفت (SOR) در کارایی انرژی",
+        "paragraphs_en": [
+          "In SAGD thermal extraction, operating efficiency is measured by the Steam-Oil Ratio ($SOR$):",
+          "$$SOR = \\frac{\\text{Volume of Steam Injected (CWE)}}{\\text{Volume of Bitumen Produced}}$$",
+          "A lower $SOR$ ($\\le 2.0$) indicates optimized energy efficiency, lowering operational cost and carbon footprint per barrel."
+        ],
+        "paragraphs_fa": [
+          "در روش استخراج حرارتی، کارایی فرآیند با نسبت حجم بخار آب تزریقی به نفت تولیدی ($SOR$) سنجیده می‌شود:",
+          "هر چه نسبت بخار به نفت پایین‌تر باشد، هزینه سوخت مصرفی و انتشار گازهای گلخانه‌ای به ازای هر بشکه کمتر خواهد بود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "کالاها، انرژی و فلزات گرانبها",
     "category_en": "Commodities, Energy & Metals"
   },
   {
     "id": 4076,
     "term_en": "Okun's Law",
-    "term_fa": "Okun's Law",
+    "term_fa": "قانون اوکان (Okun's Law)",
     "letter": "O",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Okun's Law is an empirical macroeconomic relationship proposed by economist Arthur Okun observing that a one percentage point increase in the national cyclical unemployment rate is systematically correlated with an approximate two to three percentage point shortfall in real GDP growth relative to potential GDP.",
+    "definition_fa": "قانون اوکان (Okun's Law) یک قاعده تجربی و رابطه معکوس در اقتصاد کلان است که توسط آرتور اوکان کشف شد و نشان می‌دهد که هر یک درصد افزایش در نرخ بیکاری چرخه‌ای جامعه، با کاهشی در حدود ۲ تا ۳ درصد در تولید ناخالص داخلی (GDP) واقعی نسبت به تولید بالقوه همراه است.",
+    "takeaways_en": [
+      "Formulates the trade-off: $\\frac{Y - Y^*}{Y^*} = -c \\cdot (u - u^*)$, where $c \\approx 2.0$ to $3.0$.",
+      "Demonstrates that economic output must grow faster than potential just to keep unemployment steady.",
+      "Vital tool for central banks coordinating monetary policy goals between inflation and maximum employment.",
+      "Empirical elasticity shifts across economic eras due to labor hoarding, automation, and gig employment."
+    ],
+    "takeaways_fa": [
+      "فرمول اساسی: $\\frac{Y - Y^*}{Y^*} = -c \\cdot (u - u^*)$ که در آن ضریب $c$ بین ۲ تا ۳ تخمین زده می‌شود.",
+      "نشان می‌دهد اقتصاد برای ثابت نگه داشتن نرخ بیکاری باید همگام با رشد جمعیت و بهره‌وری رشد کند.",
+      "قطب‌نمای بانک‌های مرکزی در ایجاد توازن میان تورم و اشتغال کامل (دستور کار دوگانه فدرال رزرو) است.",
+      "ضریب آن در طول زمان تحت تأثیر اتوماسیون، احتکار نیروی کار در بحران‌ها و اقتصاد گیگ دستخوش تغییر می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/o/okunslaw.asp",
     "slug": "okunslaw",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Okun's Law bridges labor market health with macroeconomic output loss, quantifying the cost of unemployment.",
+    "bottom_line_fa": "قانون اوکان هزینه اقتصادی گزاف بیکاری را از طریق اندازه‌گیری افت تولید ناخالص داخلی کمّی‌سازی می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Difference and Gap Formulations",
+        "title_fa": "معادلات تفاضلی و شکاف تولید اوکان",
+        "paragraphs_en": [
+          "The difference version relates annual GDP growth ($\\Delta Y/Y$) to change in unemployment ($\\Delta u$):",
+          "$$\\frac{\\Delta Y}{Y} = k - c \\cdot \\Delta u$$",
+          "where $k$ represents the economy's potential secular growth rate ($\u0007pprox 3\\%$) and $c$ is the Okun elasticity coefficient."
+        ],
+        "paragraphs_fa": [
+          "معادله تفاضلی رشد GDP را به تغییرات بیکاری پیوند می‌زند:",
+          "$$\\frac{\\Delta Y}{Y} = k - c \\cdot \\Delta u$$",
+          "که نشان می‌دهد اگر رشد اقتصادی کمتر از پتانسیل $k$ باشد، نرخ بیکاری جامعه رو به افزایش خواهد گذاشت."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 4077,
     "term_en": "Old Economy",
-    "term_fa": "Old Economy",
+    "term_fa": "اقتصاد سنتی / صنایع سنگین قدیمی (Old Economy)",
     "letter": "O",
     "category": "اقتصاد کلان و سیاست پولی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The old economy refers to traditional, capital-intensive manufacturing industries, agricultural sectors, mining, oil refining, and blue-chip heavy industrial corporations that formed the foundation of 20th-century economic industrialization, contrasted with the technology-driven 'New Economy'.",
+    "definition_fa": "اقتصاد سنتی (Old Economy) اصطلاحی است که به بخش‌های صنعتی سنتی، کارخانجات فولادسازی، خودروسازی، کشاورزی، نفت و معادن و صنایع سنگین با دارایی‌های ملموس پرهزینه اطلاق می‌شود که اساس رشد اقتصادی قرن بیستم را ساختند و در برابر «اقتصاد نوین» (New Economy) مبتنی بر نرم‌افزار، هوش مصنوعی و اینترنت قرار دارند.",
+    "takeaways_en": [
+      "Characterized by tangible fixed assets, physical factories, unionized workforces, and debt financing.",
+      "Evaluated primarily via Price-to-Book (P/B), EV/EBITDA, and steady dividend yields.",
+      "Contrasts with the New Economy's reliance on intellectual property, intangible assets, and SaaS metrics.",
+      "Exhibits strong cash flows and cyclical resilience, frequently outperforming during value-rotation regimes."
+    ],
+    "takeaways_fa": [
+      "با دارایی‌های فیزیکی مشهود، خطوط تولید سنگین، تشکل‌های کارگری و تأمین مالی بانکی شناخته می‌شود.",
+      "با نسبت‌های سنتی قیمت به ارزش دفتری (P/B) و بازده نقدی سود سهام ارزش‌گذاری می‌گردد.",
+      "در تضاد با اقتصاد نوین متکی بر داده‌ها، مالکیت فکری و مدل‌های نرم‌افزاری اشتراکی (SaaS) است.",
+      "در دوره‌های تورمی و افزایش نرخ‌های بهره به دلیل جریان‌های نقدی پایدار، عملکرد درخشانی از خود نشان می‌دهد."
+    ],
     "url": "https://www.investopedia.com/terms/o/oldeconomy.asp",
     "slug": "oldeconomy",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The old economy represents foundational physical production, providing cyclical defensive cash flows in volatile markets.",
+    "bottom_line_fa": "اقتصاد سنتی زیرساخت‌های فیزیکی زندگی بشر را تأمین کرده و لنگرگاه ثبات سرمایه‌گذاری در دوران‌های بحران است.",
+    "sections": [
+      {
+        "title_en": "Asset Tangibility and Valuation Dynamics",
+        "title_fa": "عینیت دارایی‌ها و ارزش‌گذاری اقتصاد سنتی",
+        "paragraphs_en": [
+          "Old economy enterprises exhibit high asset tangibility ratios ($AT = \\frac{\\text{PP&E}}{\\text{Total Assets}}$), leading to defensive liquidation values and stable debt capacity relative to digital tech firms."
+        ],
+        "paragraphs_fa": [
+          "شرکت‌های اقتصاد سنتی سهم بالایی از دارایی‌های ثابت مشهود (ماشین‌آلات و ابنیه) دارند که به عنوان وثایق تسهیلات بانکی عمل می‌کنند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
     "id": 4078,
     "term_en": "Old Lady",
-    "term_fa": "Old Lady",
+    "term_fa": "بانوی پیر خیابان تردنیدل / بانک مرکزی انگلستان (Old Lady of Threadneedle Street)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Old Lady of Threadneedle Street is a famous historic colloquial nickname for the Bank of England (BoE), the central bank of the United Kingdom, established in 1694 and located on Threadneedle Street in London since 1734.",
+    "definition_fa": "بانوی پیر خیابان تردنیدل (Old Lady of Threadneedle Street) لقب کنایی، تاریخی و مشهور بانک مرکزی انگلستان (Bank of England) است که در سال ۱۶۹۴ تأسیس شد و از سال ۱۷۳۴ در خیابان تردنیدل لندن مستقر است؛ این نام پس از کاریکاتور انتقادی سال ۱۷۹۷ جیمز گیلری بر این نهاد ماندگار شد.",
+    "takeaways_en": [
+      "Coined in 1797 by political satirist James Gillray depicting the bank defending its gold reserves.",
+      "Functions as the world's eighth-oldest bank and the model for modern central banking architecture.",
+      "Sets UK sovereign benchmark monetary interest rates via its Monetary Policy Committee (MPC).",
+      "Supervises and regulates systemic British banks through the Prudential Regulation Authority (PRA)."
+    ],
+    "takeaways_fa": [
+      "در سال ۱۷۹۷ پس از کاریکاتور جیمز گیلری در دفاع بانک از کیسه‌های طلا در برابر سیاستمداران رایج شد.",
+      "هشتمین بانک کهن جهان و الگوی اولیه ساختار بانک‌های مرکزی نوین است.",
+      "نرخ بهره مرجع پوند انگلیس (Bank Rate) را از طریق کمیته سیاست پولی (MPC) خود تعیین می‌کند.",
+      "از طریق اداره نظارت احتیاطی (PRA) سلامت و پایداری شبکه بانکی و بیمه‌ای بریتانیا را کنترل می‌نماید."
+    ],
     "url": "https://www.investopedia.com/terms/o/old_lady.asp",
     "slug": "old_lady",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Old Lady of Threadneedle Street represents institutional central bank independence and historic monetary leadership.",
+    "bottom_line_fa": "این لقب نماد کهن استقلال نهاد بانک مرکزی و مدیریت انضباط پولی در تاریخ بازارهای مالی جهان است.",
+    "sections": [
+      {
+        "title_en": "Monetary Policy Committee Framework",
+        "title_fa": "چارچوب تصمیم‌گیری کمیته سیاست پولی بانک انگلستان",
+        "paragraphs_en": [
+          "The BoE's MPC targets a symmetric statutory consumer price inflation rate of 2.0% ($\\pi^* = 2.0\\%$) using short-term repo Bank Rate policy instruments and Quantitative Easing/Tightening (QE/QT)."
+        ],
+        "paragraphs_fa": [
+          "کمیته سیاست پولی بانک انگلستان هدف تورم ۲ درصدی را از طریق تغییر نرخ بهره رسمی بانکی و عملیات خرید اوراق قرضه دنبال می‌کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -333859,20 +334973,45 @@
   {
     "id": 4081,
     "term_en": "Omega",
-    "term_fa": "Omega",
+    "term_fa": "نسبت امگا (Omega Ratio)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Omega ratio is a sophisticated, non-parametric risk-adjusted performance measure that evaluates an investment portfolio's return distribution relative to a target threshold by calculating the ratio of probability-weighted gains to probability-weighted losses across all return moments.",
+    "definition_fa": "نسبت امگا (Omega Ratio) یک سنجه آماری پیشرفته برای ارزیابی عملکرد پرتفوی با تعدیل ریسک است که برخلاف نسبت شارپ (که تنها میانگین و واریانس را در نظر می‌گیرد)، کل توزیع بازده شامل چولگی (Skewness) و کشیدگی (Kurtosis) را لحاظ کرده و نسبت احتمال وزنی سودها را به زیان‌ها نسبت به یک نرخ بازده هدف می‌سنجد.",
+    "takeaways_en": [
+      "Formulated by Keating and Shadwick (2002) to capture higher-order return distribution moments.",
+      "Superior to the Sharpe ratio for non-normal return distributions (hedge funds, option strategies, private equity).",
+      "A higher Omega ratio indicates a superior probability of earning returns above the specified target threshold ($L$).",
+      "When target return equals portfolio mean return, Omega strictly equals 1.0."
+    ],
+    "takeaways_fa": [
+      "توسط کیتینگ و شادویک در سال ۲۰۰۲ برای غلبه بر کاستی‌های توزیع نرمال نسبت شارپ ابداع شد.",
+      "بهترین معیار برای صندوق‌های پوشش ریسک و استراتژی‌های مشتقات است که توزیع نامتقارن و دم‌کلفت دارند.",
+      "نسبت امگای بالاتر نشان‌دهنده برتری قطعی احتمال دستیابی به سودهای بالاتر از نرخ هدف ($L$) است.",
+      "اگر نرخ هدف دقیقاً برابر با میانگین بازدهی سبد انتخاب شود، مقدار امگا دقیقاً ۱.۰ خواهد بود."
+    ],
     "url": "https://www.investopedia.com/terms/o/omega.asp",
     "slug": "omega",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Omega ratio captures full return distribution shapes, providing a complete risk metric for non-normal asset payoffs.",
+    "bottom_line_fa": "نسبت امگا با محاسبه تمام گشتاورهای آماری، ارزیابی فوق‌العاده دقیقی از سودآوری استراتژی‌های پیچیده ارائه می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Mathematical Integral Formulation",
+        "title_fa": "فرمول و محاسبات انتگرالی نسبت امگا",
+        "paragraphs_en": [
+          "For cumulative return distribution function $F(x)$ and target return threshold $L$:",
+          "$$\\Omega(L) = \\frac{\\int_L^\\infty (1 - F(x)) \\, dx}{\\int_{-\\infty}^L F(x) \\, dx} = \\frac{\\mathbb{E}[\\max(R - L, 0)]}{\\mathbb{E}[\\max(L - R, 0)]}$$",
+          "where the numerator reflects the expected upside gain and the denominator reflects the expected downside shortfall."
+        ],
+        "paragraphs_fa": [
+          "نسبت امگا از تقسیم امید ریاضی سودهای بالاتر از آستانه بر امید ریاضی زیان‌های زیر آستانه به دست می‌آید:",
+          "$$\\Omega(L) = \\frac{\\int_L^\\infty (1 - F(x)) \\, dx}{\\int_{-\\infty}^L F(x) \\, dx}$$",
+          "که نشان‌دهنده ترازوی دقیق حجم احتمال سود در برابر پتانسیل سقوط سرمایه است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -334018,180 +335157,388 @@
   {
     "id": 4083,
     "term_en": "Oman Rial (OMR)",
-    "term_fa": "Oman Rial (OMR)",
+    "term_fa": "ریال عمان (OMR - Omani Rial)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Omani Rial (OMR) is the sovereign national fiat currency of the Sultanate of Oman, issued by the Central Bank of Oman and pegged to the United States Dollar at a fixed, officially defended parity rate since 1986.",
+    "definition_fa": "ریال عمان (OMR) واحد پول رسمی و قانونی سلطان‌نشین عمان است که توسط بانک مرکزی عمان اداره می‌شود و از سال ۱۹۸۶ با نرخی ثابت و دفاع‌شده به دلار آمریکا متصل (Pegged) است؛ ریال عمان به ۱,۰۰۰ بیضه تقسیم شده و سومین ارز باارزش جهان از نظر ارزش اسمی مبادله است.",
+    "takeaways_en": [
+      "Pegged officially to the U.S. dollar at $1 \\text{ OMR} = 2.6008 \\text{ USD}$ ($1 \\text{ USD} \\approx 0.3845 \\text{ OMR}$).",
+      "Subdivided into 1,000 baisa rather than a centesimal 100-cent fractional unit.",
+      "Ranks as the world's third highest-valued currency unit after the Kuwaiti Dinar and Bahraini Dinar.",
+      "Monetary policy closely mirrors Federal Reserve benchmark interest rate adjustments."
+    ],
+    "takeaways_fa": [
+      "رسماً با نرخ ثابت هر ریال معادل ۲.۶۰۰۸ دلار آمریکا ($1 \\text{ USD} \\approx 0.3845 \\text{ OMR}$) تثبیت شده است.",
+      "به جای تقسیم بر ۱۰۰، به ۱,۰۰۰ جزء کوچکتر به نام «بیضه» تقسیم می‌شود.",
+      "پس از دینار کویت و دینار بحرین، سومین واحد پولی باارزش جهان از نظر نرخ برابری اسمی است.",
+      "سیاست‌های پولی بانک مرکزی عمان برای حفظ اتصال ارزی، تغییرات نرخ بهره فدرال رزرو را عینا دنبال می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/o/omr.asp",
     "slug": "omr",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Omani Rial leverages fixed dollar parity backed by petroleum reserves, guaranteeing regional currency stability.",
+    "bottom_line_fa": "ریال عمان با اتکا به درآمدهای نفتی و اتصال به دلار، لنگرگاه ثبات ارزی و جذب سرمایه‌گذاری خارجی است.",
+    "sections": [
+      {
+        "title_en": "Currency Peg Mechanics and Reserve Coverage",
+        "title_fa": "مکانیسم تثبیت ارزی و پوشش ذخایر خارجی",
+        "paragraphs_en": [
+          "Maintaining the peg requires the Central Bank of Oman to hold foreign currency reserves ($NFA$) exceeding statutory minimum ratios of domestic currency liabilities: $\\frac{NFA}{\\text{Currency Issued}} \\ge 100\\%$."
+        ],
+        "paragraphs_fa": [
+          "حفظ نرخ ثابت مستلزم آن است که بانک مرکزی عمان همواره حداقل ۱۰۰ درصد اسکناس و مسکوکات منتشره را با ذخایر ارزی دلاری خالص پشتیبانی کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4084,
     "term_en": "On Account",
-    "term_fa": "On حساب (On Account)",
+    "term_fa": "به حساب / معامله نسیه و دفتری (On Account)",
     "letter": "O",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "On account is a commercial accounting and trade credit term denoting that goods or services have been received or provided with settlement deferred on credit, creating an Account Receivable for the seller or an Account Payable for the buyer without immediate cash exchange.",
+    "definition_fa": "به حساب (On Account) اصطلاحی در حسابداری بازرگانی است که نشان می‌دهد کالا یا خدماتی تحویل داده شده اما تسویه نقدی آن به آینده موکول گردیده است؛ این رویداد در دفاتر فروشنده منجر به ثبت «حساب‌های دریافتنی» و در دفاتر خریدار موجب ثبت «حساب‌های پرداختنی» دفتری می‌گردد.",
+    "takeaways_en": [
+      "Underpins commercial business-to-business (B2B) trade credit terms (e.g., Net 30, Net 60).",
+      "Reflects accrual accounting revenue recognition rather than cash-basis accounting.",
+      "Requires creditworthiness verification to mitigate bad debt write-offs ($D_{\\text{bad}}$).",
+      "Cash flow statements adjust net income for changes in operating working capital on-account balances."
+    ],
+    "takeaways_fa": [
+      "بستر اصلی معاملات اعتباری شرکتی (B2B) با مهلت‌های تسویه ۳۰ تا ۶۰ روزه را تشکیل می‌دهد.",
+      "مبتنی بر اصل حسابداری تعهدی است که درآمد در زمان تحویل خدمت (نه زمان دریافت پول) شناسایی می‌شود.",
+      "نیازمند اعتبارسنجی مشتری برای جلوگیری از ایجاد مطالبات سوخت‌شده و مشکوک‌الوصول است.",
+      "در صورت جریان وجوه نقد، تغییرات مانده این حساب‌ها به عنوان سرمایه در گردش عملیاتی تعدیل می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/o/on-account.asp",
     "slug": "on-account",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Transacting on account facilitates commercial commerce velocity by disconnecting consumption from immediate cash settlement.",
+    "bottom_line_fa": "معاملات دفتری به حساب، نقدینگی و سرعت گردش تجارت را با جدا کردن تحویل کالا از پرداخت فوری وجه ارتقا می‌بخشد.",
+    "sections": [
+      {
+        "title_en": "Days Sales Outstanding (DSO) Formulation",
+        "title_fa": "فرمول دوره وصول مطالبات (DSO)",
+        "paragraphs_en": [
+          "Firms monitor collection velocity of sales made on account using Days Sales Outstanding ($DSO$):",
+          "$$DSO = \\frac{\\text{Accounts Receivable}}{\\text{Total Credit Sales}} \\times 365$$",
+          "An increasing $DSO$ warns of delayed customer payments and deteriorating operational working capital liquidity."
+        ],
+        "paragraphs_fa": [
+          "مدیریت وصول مطالبات دفتری با شاخص دوره وصول مطالبات (DSO) ارزیابی می‌شود:",
+          "افزایش این رقم هشداری از خواب سرمایه و تعلل خریداران در تسویه بدهی‌های دفتری است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 4085,
     "term_en": "On-Balance Volume (OBV)",
-    "term_fa": "On-تراز / مانده Volume (OBV) (On-Balance Volume (OBV))",
+    "term_fa": "اندیکاتور حجم تعادلی (OBV - On-Balance Volume)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "On-Balance Volume (OBV) is a foundational technical analysis momentum indicator created by Joseph Granville in 1963 that calculates cumulative volume flow by adding volume on days when the price closes up and subtracting volume on days when the price closes down.",
+    "definition_fa": "اندیکاتور حجم تعادلی (On-Balance Volume - OBV) یک اندیکاتور پیشرو در تحلیل تکنیکال است که در سال ۱۹۶۳ توسط جوزف گرانویل ابداع شد؛ این شاخص با جمع جبری حجم معاملات در روزهای مثبت و کسر حجم در روزهای منفی، جریان ورود و خروج پول هوشمند و نهادی را ردیابی و پیش‌بینی می‌کند.",
+    "takeaways_en": [
+      "Premised on the doctrine that 'volume precedes price'—volume thrusts signal impending trend movements.",
+      "Bullish divergence occurs when OBV forms higher highs while asset price makes lower highs (accumulation).",
+      "Bearish divergence occurs when OBV makes lower lows while asset price reaches higher highs (distribution).",
+      "Used to confirm breakout legitimacy: valid price breakouts must be corroborated by matching OBV peaks."
+    ],
+    "takeaways_fa": [
+      "بر این فرضیه استوار است که «حجم همواره مقدم بر قیمت حرکت می‌کند» و جریان نقدینگی جهت بازار را رقم می‌زند.",
+      "واگرایی مثبت زمانی رخ می‌دهد که OBV کف‌های بالاتر می‌زند اما قیمت سهم نزولی است (نشانگر جمع‌آوری سهم).",
+      "واگرایی منفی زمانی رخ می‌دهد که OBV سقف‌های پایین‌تر ثبت کند در حالی که قیمت صعودی است (نشانگر توزیع و خروج پول).",
+      "اعتبار شکست‌های خطوط حمایت و مقاومت با تأیید همزمان شکست سقف‌های OBV سنجیده می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/o/onbalancevolume.asp",
     "slug": "onbalancevolume",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OBV tracks smart money accumulation and distribution, providing leading indicators of future price breakouts.",
+    "bottom_line_fa": "اندیکاتور OBV با رصد ردپای پول هوشمند، تغییر فاز بازار را پیش از انعکاس کامل در نمودار قیمت فاش می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Recursive Mathematical Algorithm",
+        "title_fa": "الگوریتم بازگشتی و فرمول محاسبه OBV",
+        "paragraphs_en": [
+          "The recursive algorithm for On-Balance Volume at time $t$ given close $C_t$ and volume $V_t$ is:",
+          "$$OBV_t = \\begin{cases} OBV_{t-1} + V_t & \\text{if } C_t > C_{t-1} \\\\ OBV_{t-1} - V_t & \\text{if } C_t < C_{t-1} \\\\ OBV_{t-1} & \\text{if } C_t = C_{t-1} \\end{cases}$$",
+          "The absolute level of OBV is arbitrary; technical analysts monitor the direction and slope of its trend."
+        ],
+        "paragraphs_fa": [
+          "فرمول بازگشتی اندیکاتور حجم تعادلی به صورت زیر تعریف می‌شود:",
+          "$$OBV_t = \\begin{cases} OBV_{t-1} + V_t & \\text{اگر } C_t > C_{t-1} \\\\ OBV_{t-1} - V_t & \\text{اگر } C_t < C_{t-1} \\\\ OBV_{t-1} & \\text{اگر } C_t = C_{t-1} \\end{cases}$$",
+          "مقدار عددی مطلق OBV اهمیتی ندارد، بلکه شیب حرکت و جهت خط اندیکاتور ملاک تشخیص جریان پول است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4086,
     "term_en": "On-Chain Governance",
-    "term_fa": "On-Chain حاکمیت شرکتی (On-Chain Governance)",
+    "term_fa": "حاکمیت روی زنجیره / حاکمیت آن‌چین (On-Chain Governance)",
     "letter": "O",
     "category": "حاکمیت شرکتی و ساختار سازمانی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "On-chain governance is a decentralized organizational decision-making framework utilized by blockchain networks and Decentralized Autonomous Organizations (DAOs) where proposed protocol modifications and treasury spending are voted on and executed automatically via programmed smart contracts.",
+    "definition_fa": "حاکمیت روی زنجیره (On-Chain Governance) سازوکار تصمیم‌گیری غیرمتمرکز در شبکه‌های بلاکچین و سازمان‌های خودگردان (DAO) است که در آن پیشنهادات بهبود، تغییر قوانین پروتکل و تخصیص بودجه مستقیماً از طریق رأی‌گیری رمزارزی روی بستر دفتر کل انجام شده و با کدهای قرارداد هوشمند به صورت خودکار اجرا می‌گردد.",
+    "takeaways_en": [
+      "Votes are cast cryptographically using native governance tokens (e.g., UNI, COMP, MKR).",
+      "Eliminates reliance on off-chain social coordination, foundation executives, or hard fork debates.",
+      "Employs mechanisms like token-weighted voting, quadratic voting, and timelock delays.",
+      "Vulnerable to governance exploits, plutocratic voting capture, and flash loan governance attacks."
+    ],
+    "takeaways_fa": [
+      "آراء به صورت امضای رمزنگاری‌شده با استفاده از توکن‌های حاکمیتی در شبکه ثبت می‌شوند.",
+      "نیاز به هماهنگی‌های پشت‌پرده بنیادها و انشعاب‌های سخت (Hard Fork) مناقشه‌برانگیز را از بین می‌برد.",
+      "از روش‌های نوین نظیر رأی‌گیری مربعی (Quadratic Voting) و قفل زمانی تأخیر برای بررسی کد بهره می‌برد.",
+      "در برابر حملات تصاحب ثروتمندان و حملات وام آنی (Flash Loan) به صندوق خزانه آسیب‌پذیر است."
+    ],
     "url": "https://www.investopedia.com/terms/o/onchain-governance.asp",
     "slug": "onchain-governance",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "On-chain governance automates decentralized consensus, translating token-holder ballots into enforceable protocol code.",
+    "bottom_line_fa": "حاکمیت آن‌چین دموکراسی دیجیتال را بر بستر کد برنامه‌نویسی نشانده و اراده مالکان توکن را بدون واسطه اجرایی می‌کند.",
+    "sections": [
+      {
+        "title_en": "Quadratic Voting Algorithmic Cost",
+        "title_fa": "الگوریتم هزینه رأی‌گیری مربعی در حاکمیت غیرمتمرکز",
+        "paragraphs_en": [
+          "To prevent plutocracy where whales dictate outcomes, Quadratic Voting dictates that the token cost ($C$) scales quadratically with votes purchased ($V$):",
+          "$$C(V) = V^2 \\implies V = \\sqrt{C}$$",
+          "amplifying the voice of distributed communities over concentrated capital holders."
+        ],
+        "paragraphs_fa": [
+          "در رأی‌گیری مربعی، هزینه توکنی لازم برای خرید $V$ رأی، به صورت توانی رشد می‌کند:",
+          "$$C(V) = V^2 \\implies V = \\sqrt{C}$$",
+          "این فرمول مانع از آن می‌شود که نهنگ‌های ثروتمند بتوانند با سرمایه زیاد، نظرات عموم جامعه را زیر پا بگذارند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حاکمیت شرکتی و ساختار سازمانی",
     "category_en": "Corporate Governance & Organization"
   },
   {
     "id": 4087,
     "term_en": "On-the-Run Treasury",
-    "term_fa": "On-the-Run Treasury",
+    "term_fa": "اوراق خزانه‌داری اولیه / اوراق معیار آن‌دِران (On-the-Run Treasuries)",
     "letter": "O",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "On-the-run Treasuries are the most recently issued sovereign United States debt securities of a designated maturity (e.g., 2-year, 5-year, 10-year, or 30-year), commanding the highest secondary market liquidity, tightest bid-ask spreads, and status as global risk-free pricing benchmarks.",
+    "definition_fa": "اوراق خزانه‌داری اولیه (On-the-Run Treasuries) به آخرین و جدیدترین سری از اوراق بدهی دولت آمریکا در هر سررسید (نظیر اوراق ۱۰ ساله یا ۳۰ ساله) گفته می‌شود که در آخرین حراج خزانه عرضه شده‌اند؛ این اوراق به دلیل بالاترین نقدشوندگی و کمترین اسپرد قیمتی، بنچمارک نرخ بهره بدون ریسک جهان هستند.",
+    "takeaways_en": [
+      "Account for over 70% of daily secondary government debt trading volume despite representing a fraction of total debt.",
+      "Trade at a liquidity premium (slightly lower yields) relative to seasoned off-the-run Treasuries.",
+      "Serve as the foundational underlying delivery grade for CME Treasury futures contracts.",
+      "Lose on-the-run status immediately upon the auction and issuance of the subsequent replacement series."
+    ],
+    "takeaways_fa": [
+      "بیش از ۷۰ درصد از کل معاملات روزانه اوراق قرضه دولتی را با وجود حجم اندک اسمی خود به خود اختصاص می‌دهند.",
+      "به دلیل صرف نقدشوندگی بالا، با قیمتی گران‌تر و بازدهی تا سررسید (YTM) اندکی پایین‌تر معامله می‌شوند.",
+      "مبنای تحویل فیزیکی قراردادهای آتی اوراق خزانه در بورس کالای شیکاگو (CME) هستند.",
+      "به محض برگزاری حراج دوره بعد و ورود اوراق جدید، جایگاه بنچمارک را واگذار کرده و به اوراق «غیراولیه» تبدیل می‌شوند."
+    ],
     "url": "https://www.investopedia.com/terms/o/on-the-runtreasuries.asp",
     "slug": "on-the-runtreasuries",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "On-the-run Treasuries anchor global fixed income price discovery, defining sovereign risk-free interest rates.",
+    "bottom_line_fa": "اوراق آن‌دِران خزانه‌داری قطب‌نمای هزینه پول در جهان هستند و نرخ بازدهی آنها مبنای قیمت‌گذاری تمام دارایی‌هاست.",
+    "sections": [
+      {
+        "title_en": "Liquidity Yield Differential Formulation",
+        "title_fa": "اسپرد بازدهی نقدشوندگی نسبت به اوراق قدیمی",
+        "paragraphs_en": [
+          "The on-the-run liquidity spread ($\\Delta y$) captures the premium investors willingly pay for hyper-liquidity:",
+          "$$\\Delta y = y_{\\text{off-the-run}} - y_{\\text{on-the-run}} > 0$$",
+          "During market panics (flight-to-quality), $\\Delta y$ blows out dramatically as capital rushes into on-the-run issues."
+        ],
+        "paragraphs_fa": [
+          "تفاوت بازدهی اوراق اولیه و غیراولیه هزینه نقدشوندگی آنی را نشان می‌دهد؛ در هنگام بحران‌ها با هجوم سرمایه به امن‌ترین دارایی، بازدهی اوراق آن‌دِران به شدت افت می‌کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 4088,
     "term_en": "On-the-Run Treasury Yield Curve",
-    "term_fa": "On-the-Run Treasury بازده منحنی (On-the-Run Treasury Yield Curve)",
+    "term_fa": "منحنی بازدهی اوراق معیار خزانه (On-the-Run Yield Curve)",
     "letter": "O",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The on-the-run yield curve is the graphical and mathematical plot of the yield to maturity (YTM) against maturity for exclusively the most recently issued sovereign U.S. Treasury securities, providing a pristine, highly liquid benchmark curve for pricing all fixed-income debt.",
+    "definition_fa": "منحنی بازدهی اوراق معیار (On-the-Run Yield Curve) نمودار ترسیم‌شده نرخ بازده تا سررسید در برابر زمان سررسید است که منحصراً از داده‌های بازدهی جدیدترین اوراق منتشره خزانه‌داری (از اسناد ۱ ماهه تا اوراق ۳۰ ساله) تشکیل می‌شود و زلال‌ترین منحنی بهره بدون ریسک را برای ارزش‌گذاری اوراق قرضه شرکتی و وام‌های مسکن فراهم می‌سازد.",
+    "takeaways_en": [
+      "Constructed across standard par tenors: 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 7Y, 10Y, 20Y, and 30Y.",
+      "Free of idiosyncratic coupon distortions and illiquidity discounts seen in seasoned bonds.",
+      "Serves as the baseline curve for credit spread calculations: $\\text{Spread} = y_{\\text{corp}} - y_{\\text{benchmark}}$.",
+      "Inversions (e.g., 2Y yield exceeding 10Y yield) historically forecast macroeconomic recessions."
+    ],
+    "takeaways_fa": [
+      "در طول سررسیدهای استاندارد از ۱ ماهه تا ۳۰ ساله رسم می‌شود.",
+      "عاری از انحرافات ناشی از کمبود نقدشوندگی یا مالیات کوپن‌های کهنه اوراق قدیمی است.",
+      "مبنای استخراج اسپرد اعتباری شرکت‌ها است: اسپرد اعتباری = بازده اوراق شرکتی منهای بازده اوراق معیار متناظر.",
+      "معکوس شدن این منحنی (بالاتر رفتن بازده ۲ ساله از ۱۰ ساله) مطمئن‌ترین پیش‌نشانگر وقوع رکود اقتصادی است."
+    ],
     "url": "https://www.investopedia.com/terms/o/on_the_run_curve.asp",
     "slug": "on_the_run_curve",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The on-the-run yield curve provides the definitive sovereign benchmark term structure for global financial modeling.",
+    "bottom_line_fa": "منحنی بازدهی اوراق معیار اساسی‌ترین خط‌کش ساختار زمانی نرخ بهره در اقتصاد جهانی و مدلسازی‌های ارزش‌گذاری است.",
+    "sections": [
+      {
+        "title_en": "Nelson-Siegel Term Structure Fitting",
+        "title_fa": "مدل برازش ساختار زمانی نلسون-سیگل",
+        "paragraphs_en": [
+          "Econometricians fit the on-the-run par yield curve using the Nelson-Siegel parametric model:",
+          "$$y(\\tau) = \\beta_0 + \\beta_1 \\left( \\frac{1 - e^{-\\tau/\\lambda}}{\\tau/\\lambda} \\right) + \\beta_2 \\left( \\frac{1 - e^{-\\tau/\\lambda}}{\\tau/\\lambda} - e^{-\\tau/\\lambda} \\right)$$",
+          "where $\\beta_0$ represents level, $\\beta_1$ represents slope, and $\\beta_2$ governs curvature (hump)."
+        ],
+        "paragraphs_fa": [
+          "اقتصاددانان منحنی بازده را با مدل سه‌عاملی نلسون-سیگل برازش می‌دهند:",
+          "که در آن ضرایب سه‌گانه به ترتیب سطح افقی نرخ بهره، شیب منحنی (تفاضل بلندمدت و کوتاه‌مدت) و انحنای برآمدگی منحنی را مدل‌سازی می‌کنند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 4089,
     "term_en": "On-Us Item",
-    "term_fa": "On-Us Item",
+    "term_fa": "چک درون‌بانکی / سند بانکی داخلی (On-Us Item)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An on-us item is a negotiable check, draft, or electronic debit presented for payment or deposit at the very same financial depository institution upon which it was originally drawn, allowing instantaneous internal book settlement without transiting external clearing house networks.",
+    "definition_fa": "چک درون‌بانکی (On-Us Item) به چک، حواله یا سند مالی گفته می‌شود که شخص ذینفع آن را جهت نقد کردن یا واریز، به همان بانکی ارائه می‌دهد که حساب صادرکننده چک نیز در همان بانک افتتاح شده است؛ این اسناد بدون نیاز به ارسال به سامانه پایاپای بین‌بانکی (چکاوک یا اتاق پایاپای)، با یک سند حسابداری داخلی آنی تسویه می‌شوند.",
+    "takeaways_en": [
+      "Bypasses external automated clearinghouse (ACH) and federal transit clearing systems entirely.",
+      "Settles instantaneously via internal intra-bank debit and credit balance sheet accounting entries.",
+      "Subject to zero interbank interchange transaction fees or external transit settlement delays.",
+      "Funds are credited with accelerated availability, often cleared immediately on the same business day."
+    ],
+    "takeaways_fa": [
+      "سامانه‌های تسویه بین‌بانکی را کاملاً دور زده و بار پردازش شبکه بانکی را سبک می‌سازد.",
+      "با یک سند دفتر روزنامه ساده (بدهکار کردن حساب صادرکننده و بستانکار کردن واریزکننده) آنی تسویه می‌شود.",
+      "مشمول کارمزدهای تبادل پایاپای بین‌بانکی نشده و هزینه عملیاتی صفر دارد.",
+      "وجه آن بلافاصله و بدون فوت وقت در همان روز به موجودی قابل برداشت واریزکننده اضافه می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/o/on-us-item.asp",
     "slug": "on-us-item",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "On-us items settle frictionlessly within a single bank's general ledger, eliminating transit times and clearing expenses.",
+    "bottom_line_fa": "اسناد درون‌بانکی با تسویه داخلی آنی، هزینه مبادله و زمان معطلی وصول چک‌ها را به صفر می‌رسانند.",
+    "sections": [
+      {
+        "title_en": "General Ledger Internal Transfer Mechanics",
+        "title_fa": "مکانیسم حسابداری دفتر کل در تسویه چک داخلی",
+        "paragraphs_en": [
+          "The transaction executes via symmetric internal ledger journal entries without reserve outflow: $$\\text{Debit: Customer A (Drawer)} \\quad \\parallel \\quad \\text{Credit: Customer B (Payee)}$$",
+          "Total bank reserves ($MB$) held at the central bank remain completely unchanged: $\\Delta MB = 0$."
+        ],
+        "paragraphs_fa": [
+          "تسویه این چک هیچ اثری بر ذخایر بانک نزد بانک مرکزی ندارد زیرا ذخیره نقدی جابجا نمی‌شود، بلکه صرفاً مانده دو مشتری درون بانک تعدیل می‌گردد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4090,
     "term_en": "One Bank Holding Company",
-    "term_fa": "One بانک هلدینگ Company (One Bank Holding Company)",
+    "term_fa": "شرکت هلدینگ تک‌بانکی (One-Bank Holding Company - OBHC)",
     "letter": "O",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A One-Bank Holding Company (OBHC) is a corporate parent entity that holds controlling voting stock in exactly one commercial subsidiary bank, enabling the enterprise to diversify into closely related non-banking financial activities (such as insurance, leasing, and advisory).",
+    "definition_fa": "شرکت هلدینگ تک‌بانکی (OBHC) یک ساختار هلدینگ شرکتی است که سهام کنترلی و مدیریتی منحصراً یک بانک تجاری را در اختیار دارد؛ این ساختار به سهامداران اجازه می‌دهد از طریق تأسیس شرکت‌های فرعی در کنار بانک، وارد حوزه‌های لیزینگ، بیمه و مشاوره سرمایه‌گذاری شوند بدون آنکه قوانین محدودکننده فعالیت مستقیم بانک‌ها را نقض کنند.",
+    "takeaways_en": [
+      "Regulated under the Bank Holding Company Act of 1956 and its watershed 1970 Amendments.",
+      "Subject to comprehensive Federal Reserve supervisory and consolidated capital adequacy oversight.",
+      "Permits capital optimization via issuance of commercial paper and non-bank debt securities.",
+      "Contrasts with multi-bank holding companies that control networks of multiple chartered depository institutions."
+    ],
+    "takeaways_fa": [
+      "بر اساس قانون شرکت‌های هلدینگ بانکی ۱۹۵۶ و اصلاحیه تاریخی ۱۹۷۰ تحت نظارت فدرال رزرو قرار دارد.",
+      "امکان تجمیع صورت‌های مالی و تأمین مالی ارزان از طریق انتشار اوراق تجاری هلدینگ را فراهم می‌سازد.",
+      "دیوار قانونی میان بانکداری سنتی سپرده‌پذیر و فعالیت‌های بازرگانی غیربانکی را مدیریت می‌کند.",
+      "در برابر هلدینگ‌های چندبانکی قرار دارد که چندین بانک مستقل را تحت تملک خود اداره می‌نمایند."
+    ],
     "url": "https://www.investopedia.com/terms/o/one-bank-holding-company.asp",
     "slug": "one-bank-holding-company",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "One-bank holding structures provide operational agility, allowing single-bank sponsors to expand into ancillary financial lines.",
+    "bottom_line_fa": "هلدینگ‌های تک‌بانکی انعطاف عملیاتی ایجاد کرده و امکان ارائه خدمات جامع مالی را در کنار بانکداری تجاری مهیا می‌سازند.",
+    "sections": [
+      {
+        "title_en": "Regulatory Firewall and Section 23A/23B Restrictions",
+        "title_fa": "دیوار آتشین نظارتی و محدودیت‌های مواد ۲۳A و ۲۳B",
+        "paragraphs_en": [
+          "Federal statutes enforce strict firewalls preventing the insured bank subsidiary from subsidizing non-bank affiliates ($Section 23A$), capping inter-affiliate credit to 10% of capital and requiring 100% to 130% qualifying collateral backing."
+        ],
+        "paragraphs_fa": [
+          "قوانین فدرال موانع سخت‌گیرانه‌ای وضع کرده‌اند تا بانک نتواند منابع سپرده‌گذاران را بدون وثایق سنگین صرف اعطای وام به شرکت‌های خواهر و غیربانکی هلدینگ کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 4091,
     "term_en": "One Belt One Road (OBOR)",
-    "term_fa": "One Belt One Road (OBOR)",
+    "term_fa": "طرح یک کمربند، یک جاده چین (One Belt One Road - OBOR / BRI)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "One Belt One Road (OBOR)—officially designated the Belt and Road Initiative (BRI)—is an immense, multi-trillion-dollar global infrastructure development and geopolitical economic strategy launched by China in 2013 to interconnect Asia, Europe, and Africa via overland rail/pipeline corridors and maritime sea lanes.",
+    "definition_fa": "طرح یک کمربند، یک جاده (OBOR یا BRI) کلان‌پروژه چند تریلیون دلاری توسعه زیرساخت و راهبرد ژئوپلیتیک اقتصادی چین است که در سال ۲۰۱۳ معرفی شد تا از طریق احداث شبکه‌ای عظیم از راه‌آهن‌ها، بنادر، خطوط انتقال انرژی و جاده‌ها، کشورهای آسیا، اروپا و آفریقا را در قالب احیای جاده ابریشم نوین به بازار و اقتصاد چین پیوند دهد.",
+    "takeaways_en": [
+      "Comprises the overland 'Silk Road Economic Belt' and the oceanic '21st Century Maritime Silk Road'.",
+      "Financed predominantly through the Asian Infrastructure Investment Bank (AIIB) and Silk Road Fund.",
+      "Expands international trade corridors, secures Chinese commodity import supply lines, and internationalizes the Yuan (RMB).",
+      "Criticized by Western analysts over 'debt-trap diplomacy' concerns and environmental sustainability."
+    ],
+    "takeaways_fa": [
+      "از دو بخش اصلی «کمربند اقتصادی جاده ابریشم» در خشکی و «راه ابریشم دریایی قرن بیست و یکم» تشکیل می‌شود.",
+      "تأمین مالی آن از طریق بانک سرمایه‌گذاری زیرساخت آسیا (AIIB) و صندوق جاده ابریشم صورت می‌پذیرد.",
+      "امنیت تأمین انرژی چین را تضمین کرده، بازارهای صادراتی را توسعه داده و بین‌المللی‌سازی یوآن چین را سرعت می‌بخشد.",
+      "مورد مناقشه منتقدان غربی پیرامون ادعای ایجاد «تله بدهی» برای کشورهای در حال توسعه قرار دارد."
+    ],
     "url": "https://www.investopedia.com/terms/o/one-belt-one-road-obor.asp",
     "slug": "one-belt-one-road-obor",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Belt and Road Initiative is reshaping Eurasian global trade architecture, projecting Chinese geo-economic influence.",
+    "bottom_line_fa": "طرح کمربند و جاده بزرگ‌ترین برنامه توسعه زیرساختی تاریخ بشر است که جغرافیای تجارت جهانی را بازآرایی می‌کند.",
+    "sections": [
+      {
+        "title_en": "Trade Gravity Model and Infrastructure Cost Reductions",
+        "title_fa": "مدل جاذبه تجارت و کاهش هزینه‌های لجستیک بین‌الملل",
+        "paragraphs_en": [
+          "Under Tinbergen's economic Gravity Model, bilateral trade ($T_{ij}$) expands as transit infrastructure lowers transport friction ($d_{ij}$):",
+          "$$T_{ij} = G \\cdot \\frac{Y_i^\\alpha \\cdot Y_j^\\beta}{d_{ij}^\\theta}$$",
+          "BRI high-speed rail and deepwater port networks compress transit times, lowering parameter $\\theta$ and boosting cross-border output."
+        ],
+        "paragraphs_fa": [
+          "طبق مدل جاذبه تجارت، توسعه بنادر و راه‌آهن با کاهش هزینه‌های لجستیک و زمان حمل، جریان مبادلات بازرگانی دو کشور را با شتابی هندسی افزایش می‌دهد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -334261,40 +335608,86 @@
   {
     "id": 4093,
     "term_en": "One-Child Policy",
-    "term_fa": "One-Child سیاست / بیمه‌نامه (One-Child Policy)",
+    "term_fa": "سیاست تک‌فرزندی چین (One-Child Policy)",
     "letter": "O",
     "category": "اقتصاد کلان و سیاست پولی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The One-Child Policy was a sovereign demographic family planning program implemented by the government of China between 1979 and 2015 that legally restricted most urban Chinese couples to having only a single offspring, enforced to curb population growth and accelerate per-capita GDP expansion.",
+    "definition_fa": "سیاست تک‌فرزندی چین (One-Child Policy) برنامه‌ای سخت‌گیرانه در مهندسی جمعیت بود که از سال ۱۹۷۹ تا ۲۰۱۵ توسط دولت چین برای مهار رشد جمعیت و افزایش تولید ناخالص داخلی سرانه به اجرا گذاشته شد و با جرایم سنگین مالی خانواده‌های شهری را به داشتن تنها یک فرزند محدود می‌کرد؛ این سیاست در بلندمدت به بحران سالمندی و کاهش نیروی کار منجر گردید.",
+    "takeaways_en": [
+      "Introduced under Deng Xiaoping in 1979; formally abolished and shifted to a two-child policy in 2016.",
+      "Averted an estimated 400 million births, accelerating China's demographic transition.",
+      "Generated long-term macroeconomic distortions: severe population aging, shrinking labor force, and skewed gender ratios.",
+      "Created the '4-2-1' societal problem where a single working child must financially support two parents and four grandparents."
+    ],
+    "takeaways_fa": [
+      "در سال ۱۹۷۹ در دوران دنگ شیائوپینگ تصویب شد و سرانجام در سال ۲۰۱۶ با هدف مهار بحران پیری رسماً ملغی گردید.",
+      "از تولد تخمینی ۴۰۰ میلیون نوزاد جلوگیری کرد و تغییر ساختار جمعیتی چین را شتاب بخشید.",
+      "پیامدهای منفی اقتصادی سنگینی نظیر انقباض نیروی کار فعال، بحران صندوق‌های بازنشستگی و عدم تعادل جنسیتی بر جای گذاشت.",
+      "پدیده هرم جمعیتی معکوس ۱-۲-۴ را خلق کرد که در آن یک فرد شاغل باید هزینه نگهداری دو والد و چهار پدربزرگ و مادربزرگ را تقبل کند."
+    ],
     "url": "https://www.investopedia.com/terms/o/one-child-policy.asp",
     "slug": "one-child-policy",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The One-Child Policy constrained short-term dependency ratios at the cost of long-term structural demographic decline.",
+    "bottom_line_fa": "این سیاست در کوتاه‌مدت باعث رشد سرانه شد اما در بلندمدت بحران سالخوردگی و کمبود نیروی کار را بر اقتصاد چین تحمیل کرد.",
+    "sections": [
+      {
+        "title_en": "Demographic Dependency Ratio Shift",
+        "title_fa": "معادله نرخ وابستگی جمعیتی در اقتصاد کلان",
+        "paragraphs_en": [
+          "The Old-Age Dependency Ratio ($OADR$) measures economic retirement burden on the active workforce ($L_{\\text{active}}$):",
+          "$$OADR = \\frac{\\text{Population Age } 65+}{L_{\\text{active}} (15-64)} \\times 100$$",
+          "The policy's legacy is driving China's $OADR$ toward European peaks, threatening state pension solvency and manufacturing labor costs."
+        ],
+        "paragraphs_fa": [
+          "نرخ وابستگی سالمندان نسبت مستمری‌بگیران به نیروی کار فعال جامعه را نشان می‌دهد؛ انقباض جمعیت جوان تأمین کسری صندوق‌های بازنشستگی را با بحران مواجه می‌سازد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
     "id": 4094,
     "term_en": "One Percent Rule",
-    "term_fa": "One Percent Rule",
+    "term_fa": "قاعده یک درصد در سرمایه‌گذاری املاک (One Percent Rule)",
     "letter": "O",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The One Percent Rule is a practical real estate investment heuristic and screening rule-of-thumb dictating that the gross monthly rental income generated by a residential investment property should equal or exceed at least one percent (1%) of its total acquisition purchase price.",
+    "definition_fa": "قاعده یک درصد (One Percent Rule) یک قانون سرانگشتی و فیلتر اولیه محبوب در سرمایه‌گذاری املاک و مستغلات است که بیان می‌کند اجاره‌بهای ناخالص ماهانه یک ملک مسکونی یا تجاری باید حداقل برابر یا بیشتر از یک درصد (۱٪) از کل قیمت خرید و نوسازی اولیه آن ملک باشد تا جریان نقدی مثبت آن تضمین گردد.",
+    "takeaways_en": [
+      "Formulated as: $\\text{Gross Monthly Rent} \\ge 0.01 \\times \\text{Total Purchase Price}$.",
+      "Serves as an instantaneous screening tool before conducting rigorous Net Present Value (NPV) and Cap Rate underwriting.",
+      "Properties meeting the rule generally provide sufficient cash flow to cover mortgage P&I, property taxes, insurance, and maintenance.",
+      "Harder to satisfy in expensive primary metropolitan markets (e.g., New York, London, Tehran) where cap rates compress."
+    ],
+    "takeaways_fa": [
+      "فرمول ریاضی: $\\text{اجاره ناخالص ماهانه} \\ge ۰.۰۱ \\times \\text{قیمت کل خرید ملک}$.",
+      "به عنوان فیلتر سریع برای غربال‌گری ده‌ها فایل ملکی قبل از محاسبات پیچیده ارزش خالص فعلی (NPV) به کار می‌رود.",
+      "املاکی که این شرط را دارند معمولاً جریان نقدی مثبتی پس از پرداخت اقساط وام، عوارض، بیمه و هزینه‌های تعمیرات به جا می‌گذارند.",
+      "در کلان‌شهرهای گران‌قیمت به دلیل افزایش شدید قیمت خرید نسبت به اجاره‌بها به سختی محقق می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/o/one-percent-rule.asp",
     "slug": "one-percent-rule",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The one percent rule acts as a reliable preliminary filter for securing positive cash-flow real estate assets.",
+    "bottom_line_fa": "قاعده یک درصد خط‌کش اولیه‌ای است که از ورود سرمایه‌گذاران املاک به پروژه‌های با جریان نقد منفی جلوگیری می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Gross Rent Multiplier Equivalence",
+        "title_fa": "هم‌ارزی با ضریب قیمت به اجاره (GRM)",
+        "paragraphs_en": [
+          "Satisfying the 1% rule requires annual gross rent $R_{\\text{annual}} \\ge 12\\% \\times P_{\\text{purchase}}$, establishing an equivalent Gross Rent Multiplier ($GRM$) ceiling:",
+          "$$GRM = \\frac{P_{\\text{purchase}}}{R_{\\text{annual}}} \\le \\frac{1}{0.12} \\approx 8.33$$",
+          "A GRM below 8.33 indicates a property passing the 1% threshold."
+        ],
+        "paragraphs_fa": [
+          "تطابق با قاعده یک درصد به این معناست که اجاره سالانه حداقل ۱۲ درصد ارزش ملک است؛ که معادل ضریب قیمت به اجاره (GRM) کمتر از ۸.۳۳ است و نشان‌دهنده بازدهی بالای نقدینگی اجاره‌داری است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
