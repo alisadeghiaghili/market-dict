@@ -304392,120 +304392,264 @@
   {
     "id": 3482,
     "term_en": "M1",
-    "term_fa": "M1",
+    "term_fa": "کل پولی M1 / نقدینگی بخش مضیق (M1 Money Supply)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "M1 is a narrow measure of a nation's sovereign money supply that encompasses the most liquid transactional currency components, specifically physical currency and coinage in active public circulation, demand deposits, traveler's checks, and other liquid checkable deposits.",
+    "definition_fa": "کل پولی M1 یا پول در مفهوم مضیق (Narrow Money)، شاخصی از حجم نقدینگی در اقتصاد کلان است که نقدشونده‌ترین اجزای پول شامل اسکناس و مسکوکات در دست اشخاص و سپرده‌های دیداری (حساب‌های جاری و چک‌دار) نزد بانک‌ها را در بر می‌گیرد و مستقیماً برای مبادلات روزمره اقتصادی به کار می‌رود.",
+    "takeaways_en": [
+      "Represents transactional purchasing power immediately available without conversion delays.",
+      "Consists of Currency in Circulation ($C$) plus Demand Deposits ($D$).",
+      "Monitored closely by central banks to evaluate transaction demand and short-term inflationary velocity."
+    ],
+    "takeaways_fa": [
+      "نشان‌دهنده قدرت خرید نقدشونده و آنی جامعه بدون نیاز به تبدیل یا تحمل هزینه فرصت است.",
+      "از جمع اسکناس و مسکوکات در گردش ($C$) و سپرده‌های دیداری ($D$) تشکیل می‌شود.",
+      "توسط بانک‌های مرکزی برای تحلیل تقاضای معاملاتی پول و برآورد سرعت گردش نقدینگی رصد می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/m/m1.asp",
     "slug": "m1",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "M1 measures liquid medium-of-exchange currency, serving as the frontline monetary aggregate driving consumer commerce.",
+    "bottom_line_fa": "کل پولی M1 سنجه مستقیم قدرت خرید آنی در جامعه است که شتاب گردش آن اثر فوری بر شاخص قیمت مصرف‌کننده دارد.",
+    "sections": [
+      {
+        "title_en": "Mathematical Component Breakdown",
+        "title_fa": "فرمول و اجزای تشکیل‌دهنده M1",
+        "paragraphs_en": [
+          "The classical formulation of narrow money is defined as:",
+          "$$M_1 = C + D + \\text{OCD}$$",
+          "where $C$ denotes physical currency held by the non-bank public, $D$ represents demand checking deposits, and $\\text{OCD}$ reflects other checkable liquid deposits.",
+          "In central banking operations, $M_1$ is related to the monetary base ($MB$) via the money multiplier ($m_1$):",
+          "$$M_1 = m_1 \\cdot MB = \\left(\\frac{1 + c}{c + r_d + e}\\right) \\cdot MB$$",
+          "where $c$ is the currency-to-deposit ratio, $r_d$ is the statutory reserve ratio, and $e$ is excess bank reserves."
+        ],
+        "paragraphs_fa": [
+          "فرمول کلاسیک نقدینگی مضیق در اقتصاد به صورت زیر تعریف می‌شود:",
+          "$$M_1 = C + D + \\text{OCD}$$",
+          "که در آن $C$ اسکناس و مسکوک در دست اشخاص، $D$ سپرده‌های دیداری و $\\text{OCD}$ سایر سپرده‌های قابل صدور چک هستند.",
+          "در تحلیل‌های پولی بانک مرکزی، $M_1$ از طریق ضریب فزاینده پول ($m_1$) با پایه پولی ($MB$) پیوند می‌خورد:",
+          "$$M_1 = m_1 \\cdot MB = \\left(\\frac{1 + c}{c + r_d + e}\\right) \\cdot MB$$",
+          "که در آن $c$ نسبت اسکناس به سپرده، $r_d$ نسبت سپرده قانونی و $e$ نسبت ذخایر مازاد بانکی است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3483,
     "term_en": "M2",
-    "term_fa": "M2",
+    "term_fa": "کل پولی M2 / نقدینگی گسترده (M2 Money Supply)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "M2 is a broader calculation of the sovereign money supply that includes all assets in M1 plus 'near money' assets, such as savings deposits, money market mutual funds, small-denomination time certificates of deposit (CDs), and other short-term liquid financial instruments.",
+    "definition_fa": "کل پولی M2 یا نقدینگی به مفهوم گسترده (Broad Money)، شاخصی جامع از حجم کل پول در اقتصاد است که علاوه بر اجزای M1 (اسکناس و سپرده‌های دیداری)، شبه‌پول (Near Money) شامل سپرده‌های پس‌انداز، سپرده‌های سرمایه‌گذاری کوتاه‌مدت و بلندمدت بانکی و وجوه صندوق‌های بازار پول را در بر می‌گیرد.",
+    "takeaways_en": [
+      "Calculated as: $M_2 = M_1 + \\text{Savings Deposits} + \\text{Small Time Deposits} + \\text{Retail MMFs}$.",
+      "Serves as the primary operational gauge of total liquidity and long-term inflation forecasting by the Federal Reserve.",
+      "Reflects both immediate transactional money and short-term capital stores waiting for redeployment."
+    ],
+    "takeaways_fa": [
+      "برابر است با: $M_2 = M_1 + \\text{سپرده‌های پس‌انداز و مدت‌دار} + \\text{شبه‌پول}$.",
+      "معیار اصلی سیاست‌گذاران پولی و بانک‌های مرکزی برای پایش رشد نقدینگی و پیش‌بینی تورم ساختاری است.",
+      "هم ذخیره ارزش کوتاه‌مدت خانوارها و هم نقدینگی بالقوه آماده ورود به بازارهای دارایی را نمایان می‌سازد."
+    ],
     "url": "https://www.investopedia.com/terms/m/m2.asp",
     "slug": "m2",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "M2 captures both transactional and savings liquidity, functioning as the premier macroeconomic compass for money growth and inflation trends.",
+    "bottom_line_fa": "کل پولی M2 تصویر شفافی از کل نقدینگی بالقوه اقتصاد ارائه داده و جهت‌گیری تورمی بلندمدت را مشخص می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Near-Money Expansion and Multiplier Dynamics",
+        "title_fa": "شبه‌پول و دینامیک ضریب فزاینده M2",
+        "paragraphs_en": [
+          "The relationship between broad money $M_2$ and the reserve monetary base $MB$ incorporates time deposit preferences:",
+          "$$M_2 = m_2 \\cdot MB = \\left(\\frac{1 + c + t}{c + r_d + r_t \\cdot t + e}\\right) \\cdot MB$$",
+          "where $t = T/D$ is the ratio of time deposits to demand deposits, and $r_t$ represents reserve requirements on term deposits."
+        ],
+        "paragraphs_fa": [
+          "رابطه کل پولی $M_2$ با پایه پولی $MB$ با در نظر گرفتن تمایل سپرده‌گذاران به نگهداری سپرده‌های مدت‌دار ($t$) به صورت زیر مدل‌سازی می‌شود:",
+          "$$M_2 = m_2 \\cdot MB = \\left(\\frac{1 + c + t}{c + r_d + r_t \\cdot t + e}\\right) \\cdot MB$$",
+          "که در آن $t$ نسبت شبه‌پول به پول دیداری و $r_t$ نرخ ذخیره قانونی سپرده‌های مدت‌دار است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3484,
     "term_en": "M3",
-    "term_fa": "M3",
+    "term_fa": "کل پولی M3 / نقدینگی جامع (M3 Money Supply)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "M3 is the most comprehensive monetary aggregate, encompassing all of M2 plus large-denomination time deposits (typically exceeding $100,000), institutional money market mutual fund balances, short-term repurchase agreements (repos), and larger liquid eurodollar holdings.",
+    "definition_fa": "کل پولی M3 یا نقدینگی بسیار گسترده، جامع‌ترین شاخص حجم پول در اقتصاد کلان است که علاوه بر کل اجزای M2، سپرده‌های کلان مدت‌دار بانکی (بالاتر از ۱۰۰ هزار دلار)، وجوه صندوق‌های سرمایه‌گذاری نهادی، قراردادهای بازخرید کوتاه‌مدت (ریپو) و دارایی‌های یورودلار را پوشش می‌دهد.",
+    "takeaways_en": [
+      "Encompasses large institutional liquidity pools alongside retail domestic balances.",
+      "Federal Reserve discontinued regular publishing of M3 in 2006, citing high data collection costs relative to incremental policy utility.",
+      "Retained and tracked by the European Central Bank (ECB) as a core pillar of eurozone monetary policy strategy."
+    ],
+    "takeaways_fa": [
+      "علاوه بر پس‌اندازهای خرد خانوارها، استخرهای عظیم نقدینگی شرکت‌های بزرگ و سرمایه‌گذاران نهادی را ثبت می‌کند.",
+      "فدرال رزرو آمریکا انتشار منظم آن را در سال ۲۰۰۶ متوقف کرد، اما بانک مرکزی اروپا (ECB) همچنان آن را رکن اصلی سیاست پولی خود قرار داده است.",
+      "شامل قراردادهای ریپو و اعتبارات بین‌المللی ارزی است که نقدینگی نهادی را بازتاب می‌دهد."
+    ],
     "url": "https://www.investopedia.com/terms/m/m3.asp",
     "slug": "m3",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "M3 models deep institutional liquidity and wholesale credit creation across banking and shadow banking ecosystems.",
+    "bottom_line_fa": "شاخص M3 عمیق‌ترین لایه نقدینگی نهادی و خلق اعتبار در بازار بین‌بانکی و نظام بانکی سایه را نمایان می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Structural Formulation of Broadest Money",
+        "title_fa": "ساختار فرمولی گسترده‌ترین کل پولی",
+        "paragraphs_en": [
+          "The structural formulation of $M_3$ aggregates retail and wholesale liquid balances:",
+          "$$M_3 = M_2 + \\text{Large CDs} + \\text{Institutional MMFs} + \\text{Repo Agreements} + \\text{Eurodollars}$$",
+          "Changes in $M_3$ signal shifts in corporate cash management and shadow banking credit pipelines."
+        ],
+        "paragraphs_fa": [
+          "فرمول ساختاری $M_3$ تجمیع مانده‌های پولی خرد و عمده‌فروشی نهادی را نشان می‌دهد:",
+          "$$M_3 = M_2 + \\text{سپرده‌های کلان بانکی} + \\text{صندوق‌های نهادی} + \\text{اوراق ریپو} + \\text{یورودلار}$$",
+          "نوسانات $M_3$ بیانگر تغییر رفتار مدیریت وجوه شرکت‌های هلدینگ و شبکه اعتباری نظام بانکی سایه است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3485,
     "term_en": "M-Pesa",
-    "term_fa": "M-Pesa",
+    "term_fa": "ام-پسا / سیستم پرداخت موبایلی خرد (M-Pesa)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "M-Pesa is a pioneering mobile-phone-based money transfer, financing, and microfinancing service launched in Kenya in 2007 by Vodafone and Safaricom, enabling branchless banking through a decentralized network of authorized retail airtime agents.",
+    "definition_fa": "ام-پسا (M-Pesa) یک سرویس نوآورانه پرداخت و بانکداری بر بستر تلفن همراه است که در سال ۲۰۰۷ توسط شرکت‌های وودافون و سافاریکام در کنیا راه‌اندازی شد و بدون نیاز به افتتاح حساب بانکی سنتی، امکان واریز، برداشت، انتقال وجه و اخذ ریزتسهیلات را از طریق شبکه گسترده نمایندگان خرد فراهم ساخت.",
+    "takeaways_en": [
+      "Catalyzed financial inclusion across Sub-Saharan Africa, banking over 70% of Kenya's unbanked population.",
+      "Operates via simple SMS text messaging and SIM toolkit encryption without requiring smartphone internet connectivity.",
+      "Serves as the global model for leapfrogging traditional brick-and-mortar retail banking infrastructure."
+    ],
+    "takeaways_fa": [
+      "بزرگ‌ترین جهش در فراگیری مالی (Financial Inclusion) در قاره آفریقا را رقم زد و بیش از ۷۰٪ جامعه فاقد حساب بانکی کنیا را به چرخه مالی متصل کرد.",
+      "بر بستر پیامک ساده متنی و کدهای امنیتی سیم‌کارت کار می‌کند و نیازی به اینترنت پرسرعت یا گوشی هوشمند ندارد.",
+      "الگوی جهانی جهش مستقیم از جامعه سنتی به اقتصاد پرداخت دیجیتال بدون نیاز به شعب فیزیکی بانک‌ها شناخته می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/m/mpesa.asp",
     "slug": "mpesa",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "M-Pesa proved that telecommunications networks can effectively decentralize retail banking and spark financial inclusion in emerging markets.",
+    "bottom_line_fa": "ام-پسا اثبات کرد که بستر مخابراتی می‌تواند جایگزین نظام شعب سنتی بانکی شده و دسترسی همگانی به خدمات پولی را محقق کند.",
+    "sections": [
+      {
+        "title_en": "Network Economics and Velocity of Circulation",
+        "title_fa": "اقتصاد شبکه و سرعت گردش پول در ام-پسا",
+        "paragraphs_en": [
+          "The economic velocity ($V_{\\text{M-Pesa}}$) in the platform's closed-loop float operates with near-zero friction:",
+          "$$V_{\\text{M-Pesa}} = \\frac{\\text{Total Mobile Transaction Volume}}{\\text{Trust Account Escrow Float}}$$",
+          "Deposited fiat is 100% backed by segregated custodial liquid accounts held across regulated commercial banks."
+        ],
+        "paragraphs_fa": [
+          "سرعت گردش پول در چرخه تراکنش‌های دیجیتال ام-پسا با اصطکاک بسیار ناچیز عمل می‌کند:",
+          "$$V_{\\text{M-Pesa}} = \\frac{\\text{حجم کل تراکنش‌های موبایلی}}{\\text{مانده حساب امانی در بانک}}$$ ",
+          "وجوه معادل پول الکترونیکی منتشرشده به صورت ۱۰۰٪ در حساب‌های امانی نزد بانک‌های تجاری معتبر نگهداری می‌شود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3486,
     "term_en": "Macaulay Duration",
-    "term_fa": "Macaulay Duration",
+    "term_fa": "دیرش مکالی (Macaulay Duration)",
     "letter": "M",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Macaulay duration is the weighted average term to maturity of the cash flows from a fixed-income bond, where the weights are determined by the present value of each cash flow divided by the bond's total market price.",
+    "definition_fa": "دیرش مکالی (Macaulay Duration) میانگین موزون زمان دریافت جریان‌های نقدی (کوپن‌ها و اصل سرمایه) یک اوراق قرضه با درآمد ثابت بر حسب سال است که در آن وزن هر دوره با ارزش فعلی جریان نقدی آن دوره نسبت به کل قیمت بازار اوراق سنجیده می‌شود.",
+    "takeaways_en": [
+      "Expressed in units of time (years), measuring when an investor will recoup their initial bond investment.",
+      "For a zero-coupon bond, Macaulay duration is strictly equal to its calendar maturity ($D_{\\text{mac}} = T$).",
+      "Forms the basis of Modified Duration: $D_{\\text{mod}} = \\frac{D_{\\text{mac}}}{1 + y / k}$, which measures bond price volatility."
+    ],
+    "takeaways_fa": [
+      "بر حسب واحد سال بیان می‌شود و افق زمانی مؤثر استرداد ارزش حال سرمایه‌گذاری را اندازه می‌گیرد.",
+      "برای اوراق قرضه بدون کوپن (صفر)، دیرش مکالی دقیقاً برابر با سررسید اسمی تقویمی اوراق است ($D_{\\text{mac}} = T$).",
+      "پایه محاسباتی دیرش تعدیل‌شده است ($D_{\\text{mod}} = \\frac{D_{\\text{mac}}}{1 + y / k}$) که حساسیت قیمت اوراق به نوسانات نرخ بهره را تعیین می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/m/macaulayduration.asp",
     "slug": "macaulayduration",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Macaulay duration measures the effective temporal horizon of a bond's discounted cash flows, anchoring modern interest rate immunization.",
+    "bottom_line_fa": "دیرش مکالی افق زمانی بازیابی سرمایه در اوراق بدهی را اندازه‌گیری کرده و ابزار اصلی ایمن‌سازی پرتفوی اوراق قرضه است.",
+    "sections": [
+      {
+        "title_en": "Mathematical Derivation and Formula",
+        "title_fa": "فرمول و محاسبات ریاضی دیرش مکالی",
+        "paragraphs_en": [
+          "For a bond with market price $P$, coupon cash flows $C_t$ at periods $t=1, \\dots, T$, face value $M$, and periodic yield to maturity $y$:",
+          "$$D_{\\text{mac}} = \\frac{\\sum_{t=1}^T \\frac{t \\cdot C_t}{(1 + y)^t} + \\frac{T \\cdot M}{(1 + y)^T}}{P}$$",
+          "where total bond price satisfies $P = \\sum_{t=1}^T \\frac{C_t}{(1+y)^t} + \\frac{M}{(1+y)^T}$."
+        ],
+        "paragraphs_fa": [
+          "برای اوراق قرضه با قیمت بازار $P$، کوپن‌های $C_t$، ارزش اسمی سررسید $M$ و نرخ بازده تا سررسید $y$:",
+          "$$D_{\\text{mac}} = \\frac{\\sum_{t=1}^T \\frac{t \\cdot C_t}{(1 + y)^t} + \\frac{T \\cdot M}{(1 + y)^T}}{P}$$",
+          "که در آن قیمت کل اوراق برابر است با $P = \\sum_{t=1}^T \\frac{C_t}{(1+y)^t} + \\frac{M}{(1+y)^T}$."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 3487,
     "term_en": "Macro Environment",
-    "term_fa": "Macro Environment",
+    "term_fa": "محیط کلان کسب‌وکار / متغیرهای فراسازمانی (Macro Environment)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The macro environment refers to the overarching external, economy-wide factors and broad societal conditions—including economic, political, legal, technological, sociocultural, and demographic forces—that impact a business enterprise's operating performance and strategy but remain beyond its direct control.",
+    "definition_fa": "محیط کلان کسب‌وکار (Macro Environment) به مجموعه نیروها و شرایط برون‌سازمانی، سراسری و فراگیر در سطح اقتصاد و جامعه اطلاق می‌شود که بر عملکرد، ریسک و سودآوری تمامی بنگاه‌های اقتصادی تأثیر می‌گذارند اما بنگاه‌ها کنترل مستقیمی بر تغییر آنها ندارند.",
+    "takeaways_en": [
+      "Analyzed strategically using the PESTEL framework (Political, Economic, Social, Technological, Environmental, Legal).",
+      "Shaped by fiscal policies, monetary interest rate regimes, international geopolitical alliances, and demographics.",
+      "Requires dynamic organizational adaptability and contingency scenario risk planning."
+    ],
+    "takeaways_fa": [
+      "در برنامه‌ریزی استراتژیک از طریق چارچوب تحلیلی PESTEL (سیاسی، اقتصادی، اجتماعی، فناوری، محیطی، حقوقی) ارزیابی می‌شود.",
+      "مستقیماً از تصمیمات سیاست مالی دولت، رژیم‌های نرخ بهره بانک مرکزی و تکانه‌های ژئوپلیتیک اثر می‌پذیرد.",
+      "سازگاری چابک و سناریونویسی مدیریت بحران را برای بقای بلندمدت شرکت‌ها الزامی می‌سازد."
+    ],
     "url": "https://www.investopedia.com/terms/m/macro-environment.asp",
     "slug": "macro-environment",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The macro environment dictates external systemic business boundaries, necessitating proactive scenario hedging.",
+    "bottom_line_fa": "محیط کلان بستر ناگزیر فعالیت‌های اقتصادی را تعریف می‌کند و بنگاه‌ها باید استراتژی خود را با تحولات آن همسو سازند.",
+    "sections": [
+      {
+        "title_en": "PESTEL Strategic Matrix",
+        "title_fa": "ماتریس استراتژیک PESTEL در تحلیل محیط کلان",
+        "paragraphs_en": [
+          "Enterprises formalize macro exposures by evaluating systemic factor elasticities:",
+          "$$\\Delta \\Pi = \\sum_{k=1}^K \\epsilon_k \\cdot \\Delta F_k^{\\text{macro}}$$",
+          "where $\\epsilon_k$ represents corporate earnings sensitivity to macro shock $F_k$ (e.g., inflation, foreign exchange devaluation, statutory tax reform)."
+        ],
+        "paragraphs_fa": [
+          "بنگاه‌ها حساسیت سودآوری خود را نسبت به تکانه‌های محیط کلان از طریق کشش متغیرها مدل‌سازی می‌کنند:",
+          "$$\\Delta \\Pi = \\sum_{k=1}^K \\epsilon_k \\cdot \\Delta F_k^{\\text{macro}}$$",
+          "که در آن $\\epsilon_k$ حساسیت سود شرکت به نوسان متغیر کلان $F_k$ (نظیر جهش نرخ ارز، تورم، یا تغییر قوانین مالیاتی) است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -304601,200 +304745,434 @@
   {
     "id": 3489,
     "term_en": "Macroeconomic Factor",
-    "term_fa": "Macroeconomic Factor",
+    "term_fa": "عامل اقتصاد کلان (Macroeconomic Factor)",
     "letter": "M",
     "category": "اقتصاد کلان و سیاست پولی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A macroeconomic factor is an economy-wide statistical metric, structural pattern, or systemic phenomenon—such as gross domestic product (GDP), the inflation rate, unemployment figures, or benchmark interest rates—that broadly influences corporate earnings, capital markets, and national output.",
+    "definition_fa": "عامل اقتصاد کلان (Macroeconomic Factor) به هرگونه متغیر بنیادی، سنجه آماری یا رویداد فراگیر در سطح اقتصاد ملی یا جهانی (نظیر رشد تولید ناخالص داخلی GDP، نرخ تورم، نرخ بیکاری، تراز تجاری و نرخ‌های بهره بین‌بانکی) گفته می‌شود که بر رفتار بازارها و بازدهی دارایی‌ها اثر می‌گذارد.",
+    "takeaways_en": [
+      "Central inputs into multi-factor asset pricing models such as the Arbitrage Pricing Theory (APT).",
+      "Categorized into leading indicators (stock market, yield curve), lagging indicators (unemployment), and coincident indicators (GDP).",
+      "Systematic factors cannot be hedged away through simple equity portfolio diversification."
+    ],
+    "takeaways_fa": [
+      "ورودی‌های بنیادین در مدل‌های چندعاملی قیمت‌گذاری دارایی‌ها از جمله نظریه قیمت‌گذاری آربیتراژ (APT) هستند.",
+      "به شاخص‌های پیشرو (منحنی بازدهی و بازار سهام)، متأخر (نرخ بیکاری) و همزمان (تولید صنعتی و GDP) تقسیم می‌شوند.",
+      "این عوامل منشأ ریسک سیستماتیک بوده و صرفاً با تنوع‌بخشی عادی سهام قابل حذف نیستند."
+    ],
     "url": "https://www.investopedia.com/terms/m/macroeconomic-factor.asp",
     "slug": "macroeconomic-factor",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Macroeconomic factors generate systematic market betas, establishing foundational benchmark valuations across asset classes.",
+    "bottom_line_fa": "عوامل اقتصاد کلان جهت‌دهنده بتای سیستماتیک بازار هستند و بازده مورد انتظار در تمامی طبقات دارایی را تعیین می‌کنند.",
+    "sections": [
+      {
+        "title_en": "Arbitrage Pricing Theory (APT) Modeling",
+        "title_fa": "مدل‌سازی نظریه قیمت‌گذاری آربیتراژ (APT)",
+        "paragraphs_en": [
+          "Stephen Ross's APT formalizes how multiple macroeconomic factor surprises influence expected asset returns:",
+          "$$\\mathbb{E}[R_i] = R_f + \\sum_{j=1}^K \\beta_{i,j} \\cdot \\lambda_j$$",
+          "where $\\lambda_j$ is the risk premium associated with macro factor $j$, and $\\beta_{i,j} = \\frac{\\text{Cov}(R_i, F_j)}{\\sigma_j^2}$."
+        ],
+        "paragraphs_fa": [
+          "نظریه قیمت‌گذاری آربیتراژ (APT) استیون راس نحوه تأثیر عوامل کلان بر بازده مورد انتظار دارایی را چنین بیان می‌کند:",
+          "$$\\mathbb{E}[R_i] = R_f + \\sum_{j=1}^K \\beta_{i,j} \\cdot \\lambda_j$$",
+          "که در آن $\\lambda_j$ صرف ریسک فاکتور کلان $j$ و $\\beta_{i,j}$ حساسیت بازده سهم به تکانه‌های آن عامل است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
     "id": 3490,
     "term_en": "Magic Formula Investing",
-    "term_fa": "Magic Formula Investing",
+    "term_fa": "سرمایه‌گذاری فرمول جادویی (Magic Formula Investing)",
     "letter": "M",
     "category": "روش‌های کمی و ریاضیات مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Magic Formula Investing is a systematic, quantitative value investing strategy formulated by hedge fund manager Joel Greenblatt that ranks companies based on a combination of two key financial metrics: high return on capital (ROC) and high earnings yield (EY).",
+    "definition_fa": "سرمایه‌گذاری فرمول جادویی (Magic Formula Investing) یک استراتژی سرمایه‌گذاری ارزشی کمّی و قاعده‌مند است که توسط جوئل گرینبلات در کتاب معروف «کتاب کوچکی که بازار را شکست می‌دهد» ابداع شد؛ این روش شرکت‌ها را بر اساس تلفیق دو سنجه کلیدی رتبه‌بندی می‌کند: بازده سرمایه بالا (کیفیت شرکت) و بازده سودآوری بالا (قیمت ارزان).",
+    "takeaways_en": [
+      "Formulated by Joel Greenblatt to systematically identify high-quality companies selling at bargain prices.",
+      "Ranks stocks by Return on Capital: $\\text{ROC} = \\frac{\\text{EBIT}}{\\text{Net Working Capital} + \\text{Net Fixed Assets}}$.",
+      "Ranks stocks by Earnings Yield: $\\text{Earnings Yield} = \\frac{\\text{EBIT}}{\\text{Enterprise Value}}$.",
+      "Combines ranks to construct a focused 20 to 30 stock portfolio rebalanced annually."
+    ],
+    "takeaways_fa": [
+      "برای شناسایی سهام شرکت‌های عالی با قیمت‌های فوق‌العاده ارزان به صورت کاملاً مکانیکی طراحی شده است.",
+      "رتبه‌بندی شرکت‌ها بر مبنای بازده سرمایه: $\\text{ROC} = \\frac{\\text{EBIT}}{\\text{سرمایه در گردش خالص} + \\text{دارایی‌های ثابت خالص}}$.",
+      "رتبه‌بندی بر مبنای بازده سودآوری: $\\text{Earnings Yield} = \\frac{\\text{EBIT}}{\\text{ارزش کل بنگاه (EV)}}$.",
+      "با جمع دو رتبه، ۲۰ تا ۳۰ شرکت برتر انتخاب شده و پرتفوی به طور سالانه بازتنظیم (Rebalance) می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/m/magic-formula-investing.asp",
     "slug": "magic-formula-investing",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Magic Formula blends Benjamin Graham's value discipline with Warren Buffett's quality moats through automated ranking.",
+    "bottom_line_fa": "فرمول جادویی اصول ارزان‌خری بنجامین گراهام را با خرید شرکت‌های باکیفیت وارن بافت در قالب الگوریتمی منظم ترکیب می‌کند.",
+    "sections": [
+      {
+        "title_en": "Mathematical Ranking Algorithm",
+        "title_fa": "الگوریتم ریاضی رتبه‌بندی فرمول جادویی",
+        "paragraphs_en": [
+          "For a universe of $N$ eligible stocks, compute:",
+          "1. $\\text{Rank}_{\\text{ROC}, i} \\in \\{1, \\dots, N\\}$ sorted descending by $\\frac{\\text{EBIT}}{\\text{Tangible Capital Employed}}$",
+          "2. $\\text{Rank}_{\\text{EY}, i} \\in \\{1, \\dots, N\\}$ sorted descending by $\\frac{\\text{EBIT}}{\\text{Enterprise Value}}$",
+          "The Composite Magic Score ($S_i$) is:",
+          "$$S_i = \\text{Rank}_{\\text{ROC}, i} + \\text{Rank}_{\\text{EY}, i}$$",
+          "The investor purchases the top 20-30 stocks possessing the lowest aggregate rank sum ($S_i$)."
+        ],
+        "paragraphs_fa": [
+          "برای مجموعه‌ای از سهام واجد شرایط، دو رتبه محاسبه می‌شود:",
+          "۱. رتبه بازده سرمایه به ترتیب نزولی نسبت EBIT به سرمایه ملموس به‌کاررفته.",
+          "۲. رتبه بازده عایدی به ترتیب نزولی نسبت EBIT به ارزش کل بنگاه (EV).",
+          "امتیاز مرکب فرمول جادویی ($S_i$) از حاصل‌جمع این دو رتبه به دست می‌آید:",
+          "$$S_i = \\text{Rank}_{\\text{ROC}, i} + \\text{Rank}_{\\text{EY}, i}$$",
+          "سرمایه‌گذار سهامی را که دارای کمترین مجموع رتبه هستند خریداری کرده و به مدت یک سال نگهداری می‌کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
     "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 3491,
     "term_en": "MICR: What Is a Magnetic Ink Character Recognition Line?",
-    "term_fa": "MICR: What Is a Magnetic Ink Character Recognition Line?",
+    "term_fa": "خط شناسایی کاراکتر با جوهر مغناطیسی (MICR Line)",
     "letter": "M",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A Magnetic Ink Character Recognition (MICR) line is a standardized band of characters printed in specialized magnetic ink or toner at the bottom of bank checks and negotiable drafts, containing the bank routing transit number, account number, and check serial number.",
+    "definition_fa": "خط شناسایی کاراکتر با جوهر مغناطیسی (MICR Line) نوار کدگذاری‌شده استانداردی در پایین چک‌های بانکی و اسناد تجاری است که با جوهر یا تونر مغناطیسی ویژه چاپ شده و شامل شماره ترانزیت بین‌بانکی، شماره حساب و سریال چک جهت پردازش و خوانش خودکار توسط دستگاه‌های سورتینگ چک است.",
+    "takeaways_en": [
+      "Utilizes standardized E-13B or CMC-7 magnetic font sets recognized globally.",
+      "Enables ultra-fast automated mechanical sorting and optical scanning of paper checks.",
+      "Serves as a vital security barrier against counterfeit checks and fraudulent alterations."
+    ],
+    "takeaways_fa": [
+      "از فونت‌های استاندارد بین‌المللی E-13B یا CMC-7 بهره می‌برد که خاصیت مغناطیسی دارند.",
+      "امکان اسکن اپتیکال و سورتینگ مکانیکی سریع صدها چک در دقیقه را در سامانه‌های پایاپای چک فراهم می‌سازد.",
+      "مانع کلیدی در برابر جعل چک، دستکاری ارقام و کپی‌های غیرمجاز به شمار می‌رود."
+    ],
     "url": "https://www.investopedia.com/terms/m/magnetic-ink-character-recognition-line-micr.asp",
     "slug": "magnetic-ink-character-recognition-line-micr",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MICR technology bridges physical paper checks with automated interbank clearing networks through magnetic character encoding.",
+    "bottom_line_fa": "فناوری MICR اسناد کاغذی چک را به داده‌های دیجیتال سامانه‌های پایاپای چک بانکی پیوند می‌زند.",
+    "sections": [
+      {
+        "title_en": "MICR Character Structure and Check Clearing",
+        "title_fa": "ساختار داده‌های خط MICR و تسویه چک",
+        "paragraphs_en": [
+          "A standard check's MICR line contains four structured fields:",
+          "$$\\text{MICR} = [\\text{Transit Routing Code}] \\parallel [\\text{Customer Account Number}] \\parallel [\\text{Check Number}] \\parallel [\\text{Amount Field}]$$",
+          "Magnetic reading heads decipher signal wave patterns even if the physical check is obscured by stamps, endorsements, or writing."
+        ],
+        "paragraphs_fa": [
+          "خط استاندارد MICR شامل چهار فیلد ساختاریافته است: کد ترانزیت شعبه بانک، شماره حساب، سریال چک و فیلد مبلغ.",
+          "حسگرهای مغناطیسی حتی در صورت خط‌خوردگی یا کثیفی فیزیکی چک، قادر به قرائت امواج مغناطیسی کاراکترها هستند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3492,
     "term_en": "Main Street",
-    "term_fa": "Main Street",
+    "term_fa": "مین استریت / اقتصاد بخش واقعی و مشاغل خرد (Main Street)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Main Street is a metaphorical term representing the real economy of everyday local businesses, independent merchants, regional commercial enterprises, and working-class citizens, frequently contrasted with 'Wall Street' representing global investment banking and high finance.",
+    "definition_fa": "مین استریت (Main Street) اصطلاحی کنایی و نمادین در اقتصاد سیاسی است که بخش واقعی اقتصاد شامل مشاغل کوچک، کسب‌وکارهای محلی، کارآفرینان مستقل و عموم حقوق‌بگیران را نمایندگی می‌کند و در برابر «وال استریت» (نهادهای بزرگ مالی، بانک‌های سرمایه‌گذاری و سفته‌بازان بازار سهام) قرار دارد.",
+    "takeaways_en": [
+      "Focuses on tangible employment, real wage growth, and local domestic consumption.",
+      "Contrasts sharply with Wall Street's focus on capital gains, derivatives, and financial engineering.",
+      "Became central to political debates during government bailout programs (e.g., TARP, PPP)."
+    ],
+    "takeaways_fa": [
+      "بر اشتغال واقعی، رشد دستمزدهای حقیقی و تولید و مصرف داخلی تمرکز دارد.",
+      "در تضاد با تمرکز وال استریت بر عایدی سرمایه، ابزارهای مشتقه و مهندسی مالی قرار می‌گیرد.",
+      "در جریان بسته‌های نجات مالی دولتی پس از بحران‌ها کانون اصلی مناقشات تخصیص منابع بود."
+    ],
     "url": "https://www.investopedia.com/terms/m/mainstreet.asp",
     "slug": "mainstreet",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Main Street reflects the fundamental engine of real economic activity and community-based commerce.",
+    "bottom_line_fa": "مین استریت بیانگر قلب تپنده اقتصاد واقعی، اشتغال مستقیم و تجارت خرد در بطن جامعه است.",
+    "sections": [
+      {
+        "title_en": "Wall Street vs. Main Street Divergence",
+        "title_fa": "شکاف بازده میان وال استریت و مین استریت",
+        "paragraphs_en": [
+          "Economists analyze the divergence index ($DI$) comparing financial market asset growth ($A_{\\text{financial}}$) against real wage and GDP growth ($Y_{\\text{real}}$):",
+          "$$DI = \\frac{\\Delta A_{\\text{financial}}}{\\Delta Y_{\\text{real}}}$$",
+          "Elevated $DI$ reflects expanding wealth inequality fueled by central bank monetary liquidity injection."
+        ],
+        "paragraphs_fa": [
+          "اقتصاددانان شکاف میان رشد ارزش دارایی‌های مالی وال استریت و دستمزدهای واقعی مین استریت را بررسی می‌کنند:",
+          "$$DI = \\frac{\\Delta A_{\\text{مالی}}}{\\Delta Y_{\\text{واقعی}}}$$",
+          "افزایش این نسبت نشان‌دهنده تعمیق نابرابری ناشی از سیاست‌های انبساطی تزریق نقدینگی است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3493,
     "term_en": "Maintenance Expenses",
-    "term_fa": "Maintenance Expenses",
+    "term_fa": "هزینه‌های تعمیر و نگهداری (Maintenance Expenses)",
     "letter": "M",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Maintenance expenses are recurring operational expenditures incurred by a business to inspect, repair, preserve, and sustain fixed tangible assets (such as machinery, equipment, vehicles, and real estate) in standard operating condition without extending their useful life.",
+    "definition_fa": "هزینه‌های تعمیر و نگهداری (Maintenance Expenses) به مخارج عملیاتی و جاری دوره‌ای گفته می‌شود که برای سرویس، نگهداری، تعمیرات جزئی و حفظ کارایی عادی دارایی‌های ثابت مشهود (تجهیزات، ماشین‌آلات، ابنیه و تأسیسات) پرداخت می‌شود بدون آنکه ظرفیت جدیدی ایجاد کند یا عمر مفید دارایی را افزایش دهد.",
+    "takeaways_en": [
+      "Expensed immediately on the income statement as operating expenses (OpEx) during the period incurred.",
+      "Contrasts with capital expenditures (CapEx) which improve asset functionality or extend asset useful life.",
+      "Crucial for calculating Free Cash Flow to Firm (FCFF) and maintenance capital requirements."
+    ],
+    "takeaways_fa": [
+      "مستقیماً در صورت سود و زیان دوره به عنوان هزینه عملیاتی (OpEx) ثبت شده و کسر مالیاتی ایجاد می‌کند.",
+      "در برابر مخارج سرمایه‌ای (CapEx) قرار دارد که باعث ارتقای اساسی ظرفیت یا تمدید عمر مفید دارایی می‌شود.",
+      "نقش حیاتی در تفکیک مخارج سرمایه‌ای توسعه‌ای از مخارج حفظ وضع موجود در جریان نقد آزاد (FCF) دارد."
+    ],
     "url": "https://www.investopedia.com/terms/m/maintenance-expenses.asp",
     "slug": "maintenance-expenses",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Maintenance expenses preserve baseline operational efficiency, treated as period OpEx rather than balance sheet capitalization.",
+    "bottom_line_fa": "هزینه‌های نگهداری مانع از توقف خطوط تولید شده و به عنوان هزینه دوره‌ای در محاسبات سودآوری منظور می‌گردد.",
+    "sections": [
+      {
+        "title_en": "Accounting Classification: OpEx vs. CapEx",
+        "title_fa": "تمایز حسابداری: هزینه عملیاتی در برابر سرمایه‌ای",
+        "paragraphs_en": [
+          "Under GAAP and IFRS, the classification rule evaluates future economic benefit enhancement ($\\Delta E$):",
+          "$$\\text{Treatment} = \\begin{cases} \\text{CapEx (Capitalized)} & \\text{if } \\Delta E > 0 \\text{ (extending useful life)} \\\\ \\text{OpEx (Maintenance)} & \\text{if } \\Delta E = 0 \\text{ (restoring original state)} \\end{cases}$$"
+        ],
+        "paragraphs_fa": [
+          "بر اساس استانداردهای بین‌المللی حسابداری، چنانچه مخارج صرفاً وضعیت اولیه را بازیابی کند هزینه جاری (OpEx) و اگر موجب ارتقای ظرفیت یا تمدید عمر دارایی شود مخارج سرمایه‌ای (CapEx) خواهد بود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 3494,
     "term_en": "Maintenance Margin",
-    "term_fa": "Maintenance حاشیه سود / مارجین (Maintenance Margin)",
+    "term_fa": "حداقل مارجین نگهداری (Maintenance Margin)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Maintenance margin is the minimum amount of equity that an investor must maintain in a margin account at all times after purchasing securities on credit, typically set by regulatory bodies (e.g., FINRA Rule 4210) at 25% and often higher by individual brokerages.",
+    "definition_fa": "حداقل مارجین نگهداری (Maintenance Margin) حداقل نسبت ارزش ویژه (ارزش بازار منهای بدهی وام) است که یک معامله‌گر در حساب اهرمی (مارجین) خود باید همواره نزد کارگزاری حفظ کند؛ طبق قوانین مالی (نظیر قانون ۴۲۱۰ فینرا) این رقم حداقل ۲۵٪ است که افت به زیر آن منجر به صدور کال مارجین می‌گردد.",
+    "takeaways_en": [
+      "Mandated at a statutory minimum of 25% by FINRA Rule 4210; brokerages frequently enforce 30% to 40%.",
+      "Breaching the maintenance threshold triggers an immediate Margin Call requiring cash deposit or asset liquidation.",
+      "Calculated dynamically as: $\\text{Margin \\%} = \\frac{\\text{Total Market Value} - \\text{Borrowed Loan}}{\\text{Total Market Value}}$."
+    ],
+    "takeaways_fa": [
+      "حداقل قانونی آن ۲۵٪ است اما کارگزاری‌ها معمولاً آستانه ایمنی را روی ۳۰٪ تا ۴۰٪ تنظیم می‌نمایند.",
+      "نقض این آستانه باعث صدور اخطاریه کسری وجه (Margin Call) و مهلت چند ساعته برای تسویه می‌شود.",
+      "به صورت لحظه‌ای بر اساس فرمول: نسبت مارجین = (ارزش بازار دارایی منهای بدهی وامی) تقسیم بر ارزش کل بازار سنجیده می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/m/maintenancemargin.asp",
     "slug": "maintenancemargin",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Maintenance margin protects brokerage lenders against borrower default during aggressive downside market volatility.",
+    "bottom_line_fa": "مارجین نگهداری سپر ایمنی کارگزاری در برابر افت سنگین قیمت‌ها و ریسک نکول سرمایه‌گذار اهرمی است.",
+    "sections": [
+      {
+        "title_en": "Margin Call Trigger Price Calculation",
+        "title_fa": "فرمول محاسبه قیمت محرک اخطاریه کسری وجه (Margin Call)",
+        "paragraphs_en": [
+          "For an investor who purchases $N$ shares at price $P_0$ using initial loan balance $L$, the margin call price ($P_{\\text{call}}$) where maintenance margin $MM$ is breached satisfies:",
+          "$$P_{\\text{call}} = \\frac{L}{N \\cdot (1 - MM)} = \\frac{P_0 \\cdot (1 - \\text{Initial Margin})}{1 - MM}$$",
+          "If the market price drops to or below $P_{\\text{call}}$, forced liquidation commences unless additional equity is transferred."
+        ],
+        "paragraphs_fa": [
+          "برای خریداری که $N$ سهم را در قیمت $P_0$ با استفاده از تسهیلات اعتباری $L$ خریده است، قیمت بحرانی کال مارجین ($P_{\\text{call}}$) چنین به دست می‌آید:",
+          "$$P_{\\text{call}} = \\frac{L}{N \\cdot (1 - MM)} = \\frac{P_0 \\cdot (1 - \\text{مارجین اولیه})}{1 - MM}$$",
+          "با لمس این قیمت، کارگزاری در صورت عدم واریز وجه، سهم را برای تسویه بدهی به صورت خودکار به فروش می‌رساند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3495,
     "term_en": "Majority Shareholder",
-    "term_fa": "Majority سهامدار (Majority Shareholder)",
+    "term_fa": "سهامدار عمده / دارنده اکثریت سهام (Majority Shareholder)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A majority shareholder (controlling shareholder) is an individual, parent company, or financial institution that owns and controls more than 50% of an enterprise's outstanding voting shares, possessing absolute corporate voting power to elect directors and dictate strategic decisions.",
+    "definition_fa": "سهامدار عمده یا سهامدار کنترلی (Majority Shareholder) به شخص حقیقی، شرکت هلدینگ یا نهادی اطلاق می‌شود که مالکیت بیش از ۵۰ درصد از سهام دارای حق رأی یک شرکت سهامی را در اختیار دارد و بنابراین از قدرت رأی قطعی برای تعیین اعضای هیئت مدیره و هدایت استراتژی شرکت برخوردار است.",
+    "takeaways_en": [
+      "Commands definitive corporate control over board appointments, executive hiring, and merger decisions.",
+      "Owes legal fiduciary duties to minority shareholders to prevent oppressive self-dealing or value extraction.",
+      "Can approve major charter amendments and corporate restructuring without outside shareholder consent."
+    ],
+    "takeaways_fa": [
+      "کنترل اجرایی کامل بر انتخاب اعضای هیئت مدیره، عزل و نصب مدیران ارشد و ادغام‌ها دارد.",
+      "دارای مسئولیت امانی قانونی نسبت به سهامداران خرد (اقلیت) است و نباید منافع شخصی را بر منافع کل شرکت ارجحیت دهد.",
+      "قادر به تصویب افزایش سرمایه‌ها، تغییر اساسنامه و تقسیم سود در مجمع عمومی است."
+    ],
     "url": "https://www.investopedia.com/terms/m/majorityshareholder.asp",
     "slug": "majorityshareholder",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Majority shareholders exercise decisive corporate sovereignty, held check by statutory fiduciary protections for minority investors.",
+    "bottom_line_fa": "سهامدار عمده سکان هدایت راهبردی شرکت را در دست دارد و قوانین بورس از حقوق اقلیت در برابر تصمیمات وی صیانت می‌کنند.",
+    "sections": [
+      {
+        "title_en": "Control Premium Valuation",
+        "title_fa": "ارزش‌گذاری صرف کنترل (Control Premium)",
+        "paragraphs_en": [
+          "Controlling stakes command a financial premium over minority trading prices due to operational authority:",
+          "$$\\text{Value}_{\\text{Majority}} = \\text{Value}_{\\text{Minority}} \\cdot (1 + \\text{Control Premium})$$",
+          "where the control premium typically reflects the present value of prospective operational enhancements and capital restructuring."
+        ],
+        "paragraphs_fa": [
+          "بلوک‌های مدیریتی سهامداران عمده در بازار به دلیل داشتن حق کنترل، همواره با «صرف کنترل» و قیمتی بالاتر از قیمت خرد معامله می‌شوند:",
+          "$$\\text{ارزش بلوک مدیریتی} = \\text{ارزش سهم خرد} \\cdot (1 + \\text{صرف کنترل})$$"
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3496,
     "term_en": "Make-or-Buy Decision",
-    "term_fa": "Make-or-Buy Decision",
+    "term_fa": "تصمیم‌گیری ساخت یا خرید (Make-or-Buy Decision)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A make-or-buy decision is a strategic managerial accounting determination of whether to manufacture a component part, assemble a product, or provide a service internally within the company, or to procure and outsource it from an external third-party vendor.",
+    "definition_fa": "تصمیم ساخت یا خرید (Make-or-Buy Decision) یک انتخاب استراتژیک در حسابداری مدیریت است که طی آن شرکت بر اساس تحلیل‌های تفاضلی هزینه، کیفیت، زمان تحویل و حفظ مزیت رقابتی تعیین می‌کند که آیا یک قطعه یا خدمت را درون‌سازمانی تولید کند یا از تأمین‌کنندگان خارجی برون‌سپاری نماید.",
+    "takeaways_en": [
+      "Evaluates incremental variable costs, avoidable fixed costs, and opportunity costs of capacity.",
+      "Considers non-financial criteria including supplier reliability, proprietary IP protection, and supply chain vulnerability.",
+      "Unavoidable sunk fixed overhead costs are excluded from the quantitative differential analysis."
+    ],
+    "takeaways_fa": [
+      "هزینه‌های متغیر نهایی، هزینه‌های ثابت قابل اجتناب و هزینه فرصت ظرفیت تولید را ارزیابی می‌کند.",
+      "عوامل غیرمالی نظیر امنیت فناوری، کنترل کیفیت و وابستگی به زنجیره تأمین را لحاظ می‌نماید.",
+      "هزینه‌های ثابت غیرقابل اجتناب و غرق‌شده (Sunk Costs) از تحلیل تفاضلی تصمیم‌گیری کنار گذاشته می‌شوند."
+    ],
     "url": "https://www.investopedia.com/terms/m/make-or-buy-decision.asp",
     "slug": "make-or-buy-decision",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Make-or-buy optimization weighs internal production efficiencies against external supplier economies of scale.",
+    "bottom_line_fa": "تصمیم ساخت یا خرید، هزینه‌های نهایی درون شرکت را در برابر صرفه‌های مقیاس تأمین‌کنندگان بیرونی می‌سنجد.",
+    "sections": [
+      {
+        "title_en": "Differential Cost Formulation",
+        "title_fa": "مدل ریاضی تحلیل هزینه تفاضلی",
+        "paragraphs_en": [
+          "The decision threshold compares total relevant costs across output volume $Q$:",
+          "$$\\text{Cost}_{\\text{make}} = VC_{\\text{internal}} \\cdot Q + FC_{\\text{avoidable}} + \\text{Opportunity Cost}$$",
+          "$$\\text{Cost}_{\\text{buy}} = P_{\\text{purchase}} \\cdot Q + \\text{Procurement/Inspection Overheads}$$",
+          "The firm chooses to 'Make' whenever $\\text{Cost}_{\\text{make}} < \\text{Cost}_{\\text{buy}}$."
+        ],
+        "paragraphs_fa": [
+          "آستانه تصمیم‌گیری بر مبنای مقایسه هزینه‌های مربوط برای تیراژ تولید $Q$ استوار است:",
+          "$$\\text{هزینه ساخت} = VC_{\\text{داخلی}} \\cdot Q + FC_{\\text{قابل اجتناب}} + \\text{هزینه فرصت}$$",
+          "$$\\text{هزینه خرید} = P_{\\text{خرید}} \\cdot Q + \\text{سربار لجستیک و بازرسی}$$",
+          "در صورت کمتر بودن هزینه تمام‌شده ساخت، تولید داخلی انتخاب خواهد شد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3497,
     "term_en": "Make to Order (MTO)",
-    "term_fa": "Make to Order (MTO)",
+    "term_fa": "تولید سفارشی بر مبنای سفارش (Make to Order - MTO)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Make to Order (MTO) is a pull-based manufacturing strategy where production of customized goods only commences after a confirmed commercial customer order is received, minimizing finished-goods inventory holding costs at the expense of longer customer fulfillment lead times.",
+    "definition_fa": "تولید سفارشی بر مبنای سفارش (MTO) یک رویکرد تولیدی کششی (Pull-Based) است که در آن فرآیند ساخت و مونتاژ کالا تنها پس از دریافت قطعی سفارش مشتری آغاز می‌گردد؛ این رویکرد انباشت موجودی کالای ساخته‌شده را به صفر نزدیک می‌کند اما زمان تحویل را طولانی‌تر می‌سازد.",
+    "takeaways_en": [
+      "Eliminates finished-goods inventory carrying costs and obsolete stock depreciation.",
+      "Ideal for highly customized, specialized, low-volume capital equipment (e.g., aircraft, bespoke machinery).",
+      "Relies heavily on agile supply chains and lean manufacturing responsiveness."
+    ],
+    "takeaways_fa": [
+      "هزینه‌های نگهداری انبار و خطر از رده خارج شدن موجودی کالای آماده را کاملاً برطرف می‌سازد.",
+      "بسیار مناسب برای کالاهای سرمایه‌ای با ارزش بالا، هواپیماسازی، ماشین‌آلات خاص صنعتی و محصولات سفارشی است.",
+      "مستلزم زنجیره تأمین فوق‌العاده چابک و انطباق‌پذیر برای پاسخگویی سریع به سفارش‌هاست."
+    ],
     "url": "https://www.investopedia.com/terms/m/make-to-order.asp",
     "slug": "make-to-order",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Make-to-order aligns factory output directly with verified demand, eliminating finished inventory holding exposure.",
+    "bottom_line_fa": "استراتژی MTO خط تولید را مستقیماً به خریدار وصل کرده و خواب سرمایه در انبارها را از بین می‌برد.",
+    "sections": [
+      {
+        "title_en": "Inventory Carrying Cost Tradeoff",
+        "title_fa": "موازنه هزینه‌های انبارداری در رویکرد MTO",
+        "paragraphs_en": [
+          "MTO minimizes inventory carrying expense ($C_{\\text{hold}} \\to 0$):",
+          "$$TC_{\\text{inventory}} = \\underbrace{H \\cdot \\bar{I}_{\\text{finished}}}_{\\approx 0} + C_{\\text{setup}} \\cdot N_{\\text{orders}} + C_{\\text{lead}} \\cdot T_{\\text{wait}}$$",
+          "shifting operational focus toward reducing customer lead time $T_{\\text{wait}}$."
+        ],
+        "paragraphs_fa": [
+          "این استراتژی هزینه نگهداری موجودی محصول نهایی را به حداقل می‌رساند:",
+          "هزینه انبارداری کالا صفر می‌شود اما تمرکز عملیاتی شرکت بر کاهش زمان انتظار و تحویل به مشتری ($T_{\\text{wait}}$) معطوف خواهد بود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3498,
     "term_en": "Make to Stock (MTS)",
-    "term_fa": "Make to سهام (MTS) (Make to Stock (MTS))",
+    "term_fa": "تولید انبوه برای انبار (Make to Stock - MTS)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Make to Stock (MTS) is a push-based manufacturing strategy where products are manufactured in anticipation of future customer demand based on historical data forecasting and held in inventory for rapid off-the-shelf fulfillment.",
+    "definition_fa": "تولید انبوه برای انبار (MTS) یک رویکرد تولیدی فشاری (Push-Based) سنتی است که در آن کارخانه‌ها بر مبنای پیش‌بینی‌های آماری تقاضا در گذشته، کالاها را پیشاپیش در حجم بالا تولید کرده و در انبار نگهداری می‌کنند تا بلافاصله پس از سفارش مشتری تحویل داده شود.",
+    "takeaways_en": [
+      "Maximizes economies of scale and minimizes unit production costs through long manufacturing runs.",
+      "Delivers zero customer wait times, ensuring immediate off-the-shelf product availability.",
+      "Carries high financial risks of inventory obsolescence and dead-stock write-downs if demand forecasts miss."
+    ],
+    "takeaways_fa": [
+      "صرفه‌های ناشی از مقیاس را بیشینه کرده و بهای تمام‌شده تولید هر واحد کالا را کاهش می‌دهد.",
+      "زمان انتظار مشتری را به صفر رسانده و تحویل فوری در قفسه فروشگاه‌ها را تضمین می‌کند.",
+      "در صورت خطای پیش‌بینی بازار، ریسک خواب سرمایه و ابطال ارزش موجودی انبار را به همراه دارد."
+    ],
     "url": "https://www.investopedia.com/terms/m/make-to-stock.asp",
     "slug": "make-to-stock",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Make-to-stock achieves high operational efficiency and immediate fulfillment at the risk of forecast forecasting errors.",
+    "bottom_line_fa": "رویکرد MTS تحویل فوری کالا را تضمین می‌کند اما موفقیت آن کاملاً وابسته به دقت مدل‌های پیش‌بینی فروش است.",
+    "sections": [
+      {
+        "title_en": "Safety Stock and Forecast Error Optimization",
+        "title_fa": "بهینه‌سازی موجودی اطمینان و خطای پیش‌بینی",
+        "paragraphs_en": [
+          "To prevent stockouts under stochastic demand, MTS producers maintain safety stock ($SS$):",
+          "$$SS = Z_{\\alpha} \\cdot \\sigma_L = Z_{\\alpha} \\cdot \\sqrt{L \\cdot \\sigma_D^2 + \\bar{D}^2 \\cdot \\sigma_L^2}$$",
+          "where $Z_{\\alpha}$ is the service level factor, $L$ is lead time, and $\\sigma_D$ is demand standard deviation."
+        ],
+        "paragraphs_fa": [
+          "برای جلوگیری از کمبود کالا، تولیدکنندگان موجودی اطمینان ($SS$) را در سطح بهینه محاسبه می‌کنند:",
+          "$$SS = Z_{\\alpha} \\cdot \\sigma_L = Z_{\\alpha} \\cdot \\sqrt{L \\cdot \\sigma_D^2 + \\bar{D}^2 \\cdot \\sigma_L^2}$$",
+          "که در آن $Z_{\\alpha}$ ضریب سطح خدمت مشتری و $\\sigma_D$ انحراف معیار تقاضای پیش‌بینی‌شده است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
@@ -305052,40 +305430,82 @@
   {
     "id": 3500,
     "term_en": "Malpractice Insurance: Definition, Types, Importance",
-    "term_fa": "Malpractice بیمه Definition, Types, Importance (Malpractice Insurance: Definition, Types, Importance)",
+    "term_fa": "بیمه مسئولیت مدنی و خطای حرفه‌ای (Malpractice Insurance)",
     "letter": "M",
     "category": "مدیریت ریسک، بیمه و اکچوئری",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Malpractice insurance is a specialized professional liability insurance policy purchased by healthcare professionals, attorneys, accountants, and consultants to protect against legal financial liability arising from allegations of negligence, diagnostic errors, or breach of fiduciary duty.",
+    "definition_fa": "بیمه خطای حرفه‌ای و مسئولیت مدنی (Malpractice Insurance) نوعی بیمه‌نامه تخصصی است که پزشکان، جراحان، وکلا، حسابرسان و کارشناسان خریداری می‌کنند تا هزینه‌های دفاع حقوقی و غرامت‌های سنگین ناشی از ادعای قصور، اهمال‌کاری، اشتباه در تشخیص یا نقض تعهدات شغلی را پوشش دهد.",
+    "takeaways_en": [
+      "Covers legal defense litigation fees, expert witness costs, court judgments, and out-of-court settlements.",
+      "Structured primarily as claims-made policies or occurrence-based coverage.",
+      "Essential risk transfer tool for surgeons, specialized physicians, and legal practitioners facing high tort risk."
+    ],
+    "takeaways_fa": [
+      "هزینه‌های وکلای مدافع، کارشناسان رسمی، احکام دادگاه و سازش‌های مالی خارج از دادگاه را پوشش می‌دهد.",
+      "به دو صورت عمده بیمه‌نامه‌های مبتنی بر ادعا (Claims-Made) یا مبتنی بر وقوع حادثه (Occurrence) صادر می‌شود.",
+      "ابزار اصلی انتقال ریسک برای پزشکان و متخصصانی است که در معرض ریسک بالای دعاوی خسارت قرار دارند."
+    ],
     "url": "https://www.investopedia.com/terms/m/malpractice-insurance.asp",
     "slug": "malpractice-insurance",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Malpractice insurance shields specialized professionals from catastrophic financial devastation caused by professional liability litigation.",
+    "bottom_line_fa": "بیمه خطای حرفه‌ای دارایی شخصی و امنیت شغلی متخصصان را در برابر ادعاهای حقوقی و خسارات میلیاردی محافظت می‌کند.",
+    "sections": [
+      {
+        "title_en": "Claims-Made vs. Occurrence Policy Architecture",
+        "title_fa": "تفاوت ساختاری بیمه‌نامه‌های مبتنی بر ادعا و مبتنی بر وقوع",
+        "paragraphs_en": [
+          "Under a claims-made policy, coverage is activated only if both the medical incident and the legal claim reporting occur while the policy is active ($T_{\\text{claim}} \\le T_{\\text{policy}}$), requiring tail coverage (Extended Reporting Period) upon retirement."
+        ],
+        "paragraphs_fa": [
+          "در بیمه‌نامه مبتنی بر ادعا، هم وقوع حادثه و هم طرح شکایت قانونی باید در طول دوره اعتبار بیمه رخ دهد، لذا پس از بازنشستگی خرید پوشش تکمیلی (Tail Coverage) برای پوشش حوادث گذشته الزامی است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
     "category_en": "Risk Management & Insurance"
   },
   {
     "id": 3501,
     "term_en": "Managed Account",
-    "term_fa": "Managed حساب (Managed Account)",
+    "term_fa": "حساب سرمایه‌گذاری تحت مدیریت اختصاصی (Managed Account / SMA)",
     "letter": "M",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A managed account (Separately Managed Account - SMA) is an individualized investment portfolio owned directly by an individual investor but managed on a discretionary basis by a professional investment advisor or institutional asset management firm according to a tailored Investment Policy Statement (IPS).",
+    "definition_fa": "حساب مدیریت اختصاصی (Managed Account / SMA) سبد سرمایه‌گذاری انفرادی است که مالکیت مستقیم دارایی‌ها و سهام منحصراً به نام سرمایه‌گذار است، اما هدایت معاملات و مدیریت استراتژیک آن به یک مدیر حرفه‌ای یا شرکت سبدگردان با اختیارات کامل بر اساس بیانیه سیاست سرمایه‌گذاری (IPS) واگذار شده است.",
+    "takeaways_en": [
+      "Differs fundamentally from mutual funds: the client directly owns individual securities rather than fund pool shares.",
+      "Allows custom tax-loss harvesting and personalized ESG/ethical portfolio exclusion screening.",
+      "Typically commands higher minimum investment thresholds ($100,000+) than pooled mutual funds."
+    ],
+    "takeaways_fa": [
+      "تفاوت بنیادین با صندوق‌های سرمایه‌گذاری مشترک دارد؛ سرمایه‌گذار مستقیماً مالک تک‌تک برگه‌های سهم است نه یونیت صندوق.",
+      "امکان مدیریت بهینه مالیاتی (برداشت زیان سرمایه برای تخفیف مالیاتی) و سفارشی‌سازی پرتفوی را مهیا می‌کند.",
+      "حداقل سرمایه ورودی بالاتری (معمولاً بالای ۱۰۰ هزار دلار) نسبت به ابزارهای جمعی مطالبه می‌نماید."
+    ],
     "url": "https://www.investopedia.com/terms/m/managedaccount.asp",
     "slug": "managedaccount",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Separately managed accounts offer tailored asset allocation and individualized tax management for high-net-worth investors.",
+    "bottom_line_fa": "حساب‌های تحت مدیریت اختصاصی نهایت انعطاف‌پذیری و بهینه‌سازی مالیاتی را برای سرمایه‌گذاران مرفه فراهم می‌سازند.",
+    "sections": [
+      {
+        "title_en": "Tax-Loss Harvesting Alpha Generation",
+        "title_fa": "بهینه‌سازی مالیاتی و ایجاد بازدهی مضاعف در حساب‌های اختصاصی",
+        "paragraphs_en": [
+          "SMAs generate tax alpha ($\\alpha_{\\tau}$) by selectively harvesting individual security capital losses ($L_i = P_{\\text{sale}} - P_{\\text{cost}} < 0$) to offset realized gains elsewhere, satisfying:",
+          "$$\\alpha_{\\tau} = \\tau_{\\text{capital gains}} \\cdot \\sum_{i \\in \\text{Losses}} |L_i|$$",
+          "a structural optimization unavailable inside pooled mutual funds."
+        ],
+        "paragraphs_fa": [
+          "حساب‌های اختصاصی با فروش هوشمندانه سهام در زیان و شناسایی زیان دفتری، تعهدات مالیاتی سود سهامدار را کسر می‌کنند:",
+          "$$\\alpha_{\\tau} = \\tau_{\\text{نرخ مالیات}} \\cdot \\sum |\\text{زیان شناسایی‌شده}|$$",
+          "این مزیت بزرگ مالیاتی در صندوق‌های سرمایه‌گذاری مشترک سنتی امکان‌پذیر نیست."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
@@ -305215,40 +305635,85 @@
   {
     "id": 3503,
     "term_en": "Management Buyout (MBO)",
-    "term_fa": "Management Buyout (MBO)",
+    "term_fa": "خرید سهام شرکت توسط مدیران (Management Buyout - MBO)",
     "letter": "M",
     "category": "مالی شرکتی، ادغام و تملک (M&A)",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A Management Buyout (MBO) is a specialized corporate acquisition transaction wherein a company's existing executive management team pools financial resources, often heavily leveraged with private equity and debt, to purchase all outstanding shares or a controlling business division from the parent company.",
+    "definition_fa": "خرید سهام توسط مدیران (MBO) یک معامله ادغام و تملیک شرکتی است که در آن کادر مدیریت ارشد فعلی شرکت با تجمیع سرمایه‌های خود و استقراض سنگین وامی (با همکاری صندوق‌های Private Equity)، سهام شرکت را از مالکان قبلی یا هلدینگ مادر خریده و شرکت را خصوصی یا مستقل می‌سازند.",
+    "takeaways_en": [
+      "Managers leverage their intimate operational insight to unlock latent enterprise value.",
+      "Heavily financed via mezzanine debt, senior bank loans, and private equity equity sponsor co-investments.",
+      "Poses ethical conflicts of interest, as managers negotiate against shareholders while possessing superior non-public information."
+    ],
+    "takeaways_fa": [
+      "مدیران از اشراف اطلاعاتی عمیق خود بر عملیات برای آزادسازی ارزش‌های پنهان بنگاه استفاده می‌کنند.",
+      "بخش عمده ارزش خرید از طریق بدهی‌های ارشد بانکی، تسهیلات مزانین و سرمایه‌گذاران جسورانه تأمین می‌شود.",
+      "مستلزم پایش دقیق تضاد منافع است زیرا مدیران با اطلاعات نهانی در موقعیت چانه‌زنی بر سر قیمت خرید قرار می‌گیرند."
+    ],
     "url": "https://www.investopedia.com/terms/m/mbo.asp",
     "slug": "mbo",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MBOs align executive incentives with full equity ownership, transforming salaried managers into controlling entrepreneurs.",
+    "bottom_line_fa": "خرید سهام توسط مدیران، مدیران حقوق‌بگیر را به کارآفرینان مالک تبدیل کرده و انگیزه بازدهی را به حداکثر می‌رساند.",
+    "sections": [
+      {
+        "title_en": "Capital Structure and Debt Waterfall in MBOs",
+        "title_fa": "ساختار سرمایه و آبشار تأمین مالی در معاملات MBO",
+        "paragraphs_en": [
+          "A typical MBO financing structure leverages equity and multi-tier debt:",
+          "$$\\text{Enterprise Purchase Price} = \\underbrace{D_{\\text{senior}}}_{50-60\\%} + \\underbrace{D_{\\text{subordinated/mezzanine}}}_{15-25\\%} + \\underbrace{E_{\\text{sponsor}}}_{15-20\\%} + \\underbrace{E_{\\text{management}}}_{2-5\\%}$$",
+          "The high leverage ratio requires robust post-deal operational free cash flows to service principal amortization."
+        ],
+        "paragraphs_fa": [
+          "تأمین مالی در معاملات MBO معمولاً از اهرم بدهی بسیار بالا تشکیل می‌شود: ۵۰ تا ۶۰ درصد بدهی ارشد، ۲۰ درصد بدهی مزانین و بخش کوچکی آورده نقدی مدیران و سرمایه‌گذاران خصوصی.",
+          "جریان‌های نقدی پس از خرید باید به قدری قوی باشند که اقساط سنگین اصل و فرع بدهی‌ها را تسویه کنند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالی شرکتی، ادغام و تملک (M&A)",
     "category_en": "Corporate Finance & M&A"
   },
   {
     "id": 3504,
     "term_en": "Management Discussion and Analysis (MD&A)",
-    "term_fa": "Management Discussion and تحلیل (MD&A) (Management Discussion and Analysis (MD&A))",
+    "term_fa": "بحث و تحلیل مدیریت (MD&A - Management Discussion and Analysis)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Management Discussion and Analysis (MD&A) is an obligatory narrative section of a public company's annual (10-K) and quarterly (10-Q) regulatory SEC filings wherein executive leadership provides comprehensive qualitative and quantitative analysis of the firm's liquidity, capital resources, and operating results.",
+    "definition_fa": "بحث و تحلیل مدیریت (MD&A) بخشی الزامی و تفصیلی در گزارش‌های مالی سالانه و دوره‌ای شرکت‌های سهامی عام (نظیر گزارش تفسیری مدیریت در بورس تهران یا فرم‌های 10-K در SEC) است که در آن مدیران ارشد عملکرد عملیاتی، وضعیت نقدینگی، بدهی‌ها، ریسک‌های آتی و چشم‌انداز بازار را از دیدگاه خود تشریح می‌کنند.",
+    "takeaways_en": [
+      "Mandated by the SEC under Item 303 of Regulation S-K.",
+      "Provides forward-looking context explaining material trends, uncertainties, and capital commitments.",
+      "Unlike the audited financial statements, the MD&A narrative itself is reviewed but not formally audited by independent CPAs."
+    ],
+    "takeaways_fa": [
+      "توسط کمیسیون بورس اوراق بهادار بر اساس ماده ۳۰۳ آیین‌نامه S-K الزامی شده است.",
+      "نگاهی رو به آینده ارائه داده و روندهای حاشیه سود، ریسک‌های احتمالی و برنامه‌های مخارج سرمایه‌ای را توضیح می‌دهد.",
+      "بر خلاف صورت‌های مالی ترازنامه و سود و زیان، متن آن بررسی تحلیلی می‌شود اما مورد حسابرسی رسمی مستقل قرار نمی‌گیرد."
+    ],
     "url": "https://www.investopedia.com/terms/m/mdanalysis.asp",
     "slug": "mdanalysis",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MD&A bridges raw accounting metrics with management's strategic vision, delivering critical narrative transparency for investors.",
+    "bottom_line_fa": "گزارش تفسیری مدیریت، ارقام خشک حسابداری را با استراتژی تجاری مدیران پیوند زده و شفافیت تصمیم‌گیری را ارتقا می‌بخشد.",
+    "sections": [
+      {
+        "title_en": "Core Disclosure Dimensions",
+        "title_fa": "ابعاد چهارگانه افشا در تحلیل مدیریت",
+        "paragraphs_en": [
+          "Regulatory guidance dictates disclosure across four interrelated pillars:",
+          "1. Liquidity and Capital Resources: Internal and external financing commitments and working capital adequacy.",
+          "2. Results of Operations: Underlying revenue drivers, price/volume variances, and cost inflation dynamics.",
+          "3. Off-Balance Sheet Arrangements: Commitments, guarantees, and variable interest entities.",
+          "4. Critical Accounting Estimates: Key valuation assumptions subject to subjective estimation uncertainty."
+        ],
+        "paragraphs_fa": [
+          "چهار محور اصلی این گزارش عبارتند از: وضعیت نقدینگی و منابع سرمایه، نتایج عملیات و تغییرات سودآوری، تعهدات خارج از ترازنامه و برآوردهای حسابداری متکی بر قضاوت مدیریت."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -330000,100 +330465,215 @@
   {
     "id": 4025,
     "term_en": "Obamanomics",
-    "term_fa": "Obamanomics",
+    "term_fa": "اوبامانومیکس / سیاست‌های اقتصادی دولت اوباما (Obamanomics)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Obamanomics refers to the macroeconomic, fiscal, and regulatory policies championed by the 44th U.S. President Barack Obama, characterized by aggressive countercyclical Keynesian fiscal stimulus (ARRA), healthcare reform (Affordable Care Act), progressive taxation, and sweeping financial re-regulation (Dodd-Frank Act) in the wake of the 2008 Great Recession.",
+    "definition_fa": "اوبامانومیکس (Obamanomics) به مجموعه سیاست‌های اقتصادی، مالیاتی و پولی دولت باراک اوباما اطلاق می‌شود که پس از بحران مالی ۲۰۰۸ بر مبنای محرک‌های مالی کینزی (قانون بازسازی و سرمایه‌گذاری مجدد آمریکا ARRA)، اصلاح نظام بیمه سلامت همگانی (ACA)، افزایش مالیات بر درآمدهای بالا و بازآرایی نظارتی عمیق بر وال‌استریت (قانون داد-فرانک) اجرا گردید.",
+    "takeaways_en": [
+      "Introduced the $831 billion American Recovery and Reinvestment Act of 2009 to stimulate aggregate demand.",
+      "Enacted the Dodd-Frank Wall Street Reform and Consumer Protection Act to curb systemic financial risk.",
+      "Expanded universal health insurance coverage through individual mandates and health exchanges under the ACA."
+    ],
+    "takeaways_fa": [
+      "بسته محرک مالی ۸۳۱ میلیارد دلاری بازسازی و سرمایه‌گذاری را برای تحریک تقاضای کل اقتصاد به اجرا گذاشت.",
+      "قانون داد-فرانک را برای ارتقای نظارت بر بانک‌ها، مهار ریسک سیستماتیک و حمایت از مصرف‌کنندگان تصویب نمود.",
+      "پوشش بیمه درمانی همگانی را از طریق الزام انفرادی و یارانه‌های بیمه‌ای در قالب طرح اوباماکر گسترش داد."
+    ],
     "url": "https://www.investopedia.com/terms/o/obamanomics.asp",
     "slug": "obamanomics",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Obamanomics emphasized fiscal demand stabilization, regulatory financial oversight, and progressive income redistribution.",
+    "bottom_line_fa": "اوبامانومیکس با تکیه بر محرک‌های مالی کینزی و تشدید نظارت بر بازارهای مالی، اقتصاد پسا‌بحران را به ثبات رساند.",
+    "sections": [
+      {
+        "title_en": "Macroeconomic Stimulus Multiplier",
+        "title_fa": "ضریب فزاینده مخارج دولت در محرک‌های کینزی",
+        "paragraphs_en": [
+          "The ARRA economic package modeled fiscal demand expansion using the Keynesian government spending multiplier ($k$):",
+          "$$\\Delta Y = k \\cdot \\Delta G = \\left(\\frac{1}{1 - \\text{MPC} \\cdot (1 - \\tau) + \\text{MPM}}\\right) \\cdot \\Delta G$$",
+          "where $\\text{MPC}$ is the marginal propensity to consume, $\\tau$ is the tax rate, and $\\text{MPM}$ is import leakage."
+        ],
+        "paragraphs_fa": [
+          "بسته محرک اقتصادی اوباما رشد تولید ناخالص داخلی را بر مبنای ضریب فزاینده مخارج دولت فرمول‌بندی کرد:",
+          "$$\\Delta Y = k \\cdot \\Delta G = \\left(\\frac{1}{1 - \\text{MPC} \\cdot (1 - \\tau) + \\text{MPM}}\\right) \\cdot \\Delta G$$",
+          "که در آن $\\text{MPC}$ میل نهایی به مصرف، $\\tau$ نرخ مالیات و $\\text{MPM}$ کشش واردات است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4026,
     "term_en": "Objective Probability",
-    "term_fa": "Objective Probability",
+    "term_fa": "احتمال عینی / احتمال فراوانی‌گرا (Objective Probability)",
     "letter": "O",
     "category": "روش‌های کمی و ریاضیات مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Objective probability is the calculated mathematical likelihood of an event occurring based on rigorous mathematical deduction, controlled repeatable empirical experiments, or long-term historical frequency data, completely independent of individual subjective beliefs or personal biases.",
+    "definition_fa": "احتمال عینی (Objective Probability) احتمال ریاضی وقوع یک رویداد بر مبنای شواهد تجربی قابل تکرار، داده‌های فرکانسی بلندمدت یا استنتاج‌های قطعی ریاضی است که کاملاً مستقل از حدس، گمان، قضاوت شهودی یا تمایلات شخصی مشاهده‌گر اندازه‌گیری می‌شود.",
+    "takeaways_en": [
+      "Rooted in the law of large numbers and physical or statistical symmetry.",
+      "Contrasts with subjective probability, which reflects individual conviction and personal sentiment.",
+      "Foundational to quantitative risk metrics including Value at Risk (VaR) and actuarial life expectancy modeling."
+    ],
+    "takeaways_fa": [
+      "ریشه در قانون اعداد بزرگ و تقارن‌های فرکانسی داده‌های آزمون‌پذیر دارد.",
+      "در برابر احتمال ذهنی (Subjective) قرار دارد که بازتاب‌دهنده باور شخصی یا حدسیات معامله‌گر است.",
+      "مبنای محاسبات سنجه‌های کمی مدیریت ریسک از جمله ارزش در معرض ریسک (VaR) و جداول مرگ‌ومیر اکچوئری است."
+    ],
     "url": "https://www.investopedia.com/terms/o/objective-probability.asp",
     "slug": "objective-probability",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Objective probability provides empirical certitude, eliminating behavioral biases in quantitative financial modeling.",
+    "bottom_line_fa": "احتمال عینی با تکیه بر شواهد ریاضی و آماری، خطاهای سوگیری رفتاری را از مدل‌های تحلیل ریسک می‌زداید.",
+    "sections": [
+      {
+        "title_en": "Frequentist Formulation and Law of Large Numbers",
+        "title_fa": "فرمول فراوانی‌گرا و قانون اعداد بزرگ",
+        "paragraphs_en": [
+          "By the frequentist limit definition, the objective probability $P(A)$ of event $A$ equals the asymptotic relative frequency over $n$ independent identical trials:",
+          "$$P(A) = \\lim_{n \\to \\infty} \\frac{n_A}{n}$$",
+          "By Chebyshev's Inequality, sample frequencies converge strictly in probability to the true parameter as $n \\to \\infty$."
+        ],
+        "paragraphs_fa": [
+          "طبق تعریف حدی فراوانی‌گرایان، احتمال عینی وقوع پیشامد $A$ با نسبت تعداد وقوع در جامعه نامتناهی از آزمون‌ها برابری می‌کند:",
+          "$$P(A) = \\lim_{n \\to \\infty} \\frac{n_A}{n}$$",
+          "قانون اعداد بزرگ تضمین می‌کند که با افزایش تعداد مشاهدات، میانگین نمونه‌ای به احتمال واقعی همگرا خواهد شد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
     "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 4027,
     "term_en": "Obligation",
-    "term_fa": "Obligation",
+    "term_fa": "تعهد مالی / الزام حقوقی و قراردادی (Obligation)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An obligation is a legally enforceable duty, contractual requirement, or financial commitment that binds one party (the obligor or debtor) to perform a specific action, transfer monetary consideration, or deliver goods and services to another party (the obligee or creditor).",
+    "definition_fa": "تعهد (Obligation) یک وظیفه قانونی و الزام‌آور قراردادی است که به موجب آن یکی از طرفین (متعهد یا مدیون) ملزم به انجام کاری، پرداخت وجه، تسلیم مال یا خودداری از اقدامی به نفع طرف دیگر (متعهد‌له یا دائن) بر اساس قانون و توافق‌نامه فی‌مابین می‌گردد.",
+    "takeaways_en": [
+      "Forms the core substance of debt securities, loan covenants, leases, and derivative contracts.",
+      "Default occurs when an obligor breaches contractual repayment schedules or performance terms.",
+      "Recorded on the balance sheet as current or non-current financial liabilities depending on maturity."
+    ],
+    "takeaways_fa": [
+      "جوهره اصلی اوراق بهادار بدهی، قراردادهای تسهیلات، اجاره‌نامه‌ها و ابزارهای مشتقه را تشکیل می‌دهد.",
+      "نکول زمانی رخ می‌دهد که متعهد از بازپرداخت اقساط یا ایفای شروط مقرر در قرارداد بازبماند.",
+      "بر اساس سررسید تسویه، به عنوان بدهی جاری یا بدهی بلندمدت در ترازنامه مالی ثبت می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/o/obligation.asp",
     "slug": "obligation",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Obligations define binding legal duties, governing credit claims and corporate liability structures.",
+    "bottom_line_fa": "تعهدات، پایه‌های حقوقی روابط مالی را بنا نهاده و تعیین‌کننده جریان مطالبات و بدهی‌های تجاری هستند.",
+    "sections": [
+      {
+        "title_en": "Default Probability and Credit Valuation",
+        "title_fa": "احتمال نکول و ارزش‌گذاری تعهدات اعتباری",
+        "paragraphs_en": [
+          "The fair value of a financial obligation ($V_{\\text{debt}}$) accounts for the obligor's default hazard rate ($\\lambda$):",
+          "$$V_{\\text{debt}} = \\sum_{t=1}^T \\frac{CF_t}{(1 + r + \\lambda \\cdot (1 - R))^t}$$",
+          "where $R$ represents the expected recovery rate in insolvency."
+        ],
+        "paragraphs_fa": [
+          "ارزش منصفانه یک تعهد بدهی مالی با در نظر گرفتن نرخ خطر نکول متعهد ($\\lambda$) محاسبه می‌شود:",
+          "$$V_{\\text{debt}} = \\sum_{t=1}^T \\frac{CF_t}{(1 + r + \\lambda \\cdot (1 - R))^t}$$",
+          "که در آن $R$ نرخ بازیافت اصل و فرع بدهی در زمان اعسار است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4028,
     "term_en": "Obligatory Reinsurance",
-    "term_fa": "Obligatory Reinsurance",
+    "term_fa": "بیمه اتکایی اجباری / بیمه اتکایی قراردادی (Obligatory Reinsurance / Treaty Reinsurance)",
     "letter": "O",
     "category": "مدیریت ریسک، بیمه و اکچوئری",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Obligatory reinsurance (commonly termed treaty reinsurance) is a formal contractual arrangement whereby the primary insurance company (ceding insurer) is obligated to cede, and the reinsurer is legally bound to accept, all insurance policies falling within specified defined underwriting criteria.",
+    "definition_fa": "بیمه اتکایی اجباری یا قراردادی (Treaty Reinsurance) نوعی قرارداد بیمه اتکایی فراگیر است که در آن شرکت بیمه واگذارنده موظف است کلیه بیمه‌نامه‌های منطبق با ضوابط مصوب در قرارداد را به بیمه‌گر اتکایی واگذار کند و بیمه‌گر اتکایی نیز ملزم و متعهد به پذیرش بدون قید و شرط تمامی آن ریسک‌ها است.",
+    "takeaways_en": [
+      "Contrasts with facultative reinsurance, where risks are negotiated and accepted individually on a case-by-case basis.",
+      "Structured either as proportional treaties (quota share, surplus) or non-proportional treaties (excess of loss).",
+      "Provides primary insurers with predictable automatic underwriting capacity and immediate risk diversification."
+    ],
+    "takeaways_fa": [
+      "در برابر بیمه اتکایی اختیاری (Facultative) قرار دارد که در آن ریسک هر پرونده جداگانه بررسی و توافق می‌شود.",
+      "به دو شیوه تناسبی (سهمیه معین یا مازاد سرمایه) و غیرتناسبی (مازاد خسارت) تنظیم می‌گردد.",
+      "ظرفیت خودکار و پایداری را برای صدور بیمه‌نامه‌های بزرگ بدون نیاز به مذاکره موردی فراهم می‌سازد."
+    ],
     "url": "https://www.investopedia.com/terms/o/obligatory-reinsurance.asp",
     "slug": "obligatory-reinsurance",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Obligatory reinsurance treaties provide seamless, programmatic risk capacity, automating wholesale risk sharing between insurers.",
+    "bottom_line_fa": "بیمه اتکایی اجباری انتقال خودکار و ساختاریافته ریسک را بین بیمه‌گران تضمین کرده و پایداری مالی صنعت را ارتقا می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Quota Share Loss Sharing Formulation",
+        "title_fa": "فرمول تسهیم خسارت در قراردادهای سهمیه معین",
+        "paragraphs_en": [
+          "Under a proportional quota share treaty with retention fraction $1 - q$ and ceded fraction $q$:",
+          "$$L_{\\text{reinsurer}} = q \\cdot L_{\\text{gross}} \\quad \\text{and} \\quad P_{\\text{reinsurer}} = q \\cdot P_{\\text{gross}} - c_{\\text{ceding}} \\cdot P_{\\text{gross}}$$",
+          "where $c_{\\text{ceding}}$ is the ceding commission paid back to the primary insurer."
+        ],
+        "paragraphs_fa": [
+          "در قرارداد اتکایی سهمیه معین با ضریب واگذاری $q$، تعهد بیمه‌گر اتکایی چنین محاسبه می‌شود:",
+          "$$L_{\\text{اتکایی}} = q \\cdot L_{\\text{ناخالص}} \\quad \\text{و} \\quad P_{\\text{حق‌بیمه اتکایی}} = q \\cdot P_{\\text{ناخالص}} - c_{\\text{کارمزد واگذاری}}$$",
+          "که در آن کارمزد واگذاری هزینه‌های اداری شرکت بیمه مستقیم را جبران می‌کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
     "category_en": "Risk Management & Insurance"
   },
   {
     "id": 4029,
     "term_en": "Obligor",
-    "term_fa": "Obligor",
+    "term_fa": "متعهد / بدهکار اصلی (Obligor)",
     "letter": "O",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An obligor is an individual, corporation, municipality, or sovereign state that is legally and contractually bound to fulfill a designated duty or make financial payments to a creditor (the obligee), such as a borrower repaying a promissory note or mortgage debt.",
+    "definition_fa": "متعهد یا مدیون (Obligor) شخص حقیقی یا حقوقی، شهرداری یا دولتی است که بر مبنای قرارداد یا قانون، متعهد به پرداخت بدهی، تسلیم اوراق یا اجرای التزامی مشخص در برابر طرف دیگر قرارداد (متعهد‌له یا دائن) می‌باشد.",
+    "takeaways_en": [
+      "In debt markets, the bond issuer is the primary obligor responsible for principal and coupon disbursements.",
+      "Credit rating agencies evaluate the financial health and debt-service capacity of the obligor.",
+      "Secondary obligors (guarantors or cosigners) become liable if the primary obligor defaults."
+    ],
+    "takeaways_fa": [
+      "در بازار اوراق قرضه، شرکت ناشر متعهد اصلی پرداخت اصل و بهره اوراق شناخته می‌شود.",
+      "مؤسسات اعتبارسنجی بین‌المللی توانگری مالی و ظرفیت بازپرداخت بدهی متعهد را ارزیابی می‌کنند.",
+      "متعهدان ضامن در صورت استنکاف یا ورشکستگی متعهد اصلی، مسئولیت قانونی تسویه بدهی را بر عهده خواهند داشت."
+    ],
     "url": "https://www.investopedia.com/terms/o/obligor.asp",
     "slug": "obligor",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The obligor bears the primary legal burden of debt service and contractual performance.",
+    "bottom_line_fa": "متعهد مسئولیت قانونی اولیه ایفای دین را به دوش دارد و توانایی مالی وی ضامن وصول مطالبات است.",
+    "sections": [
+      {
+        "title_en": "Credit Capacity and Coverage Ratios",
+        "title_fa": "نسبت‌های سنجش توانگری و پوشش بدهی متعهد",
+        "paragraphs_en": [
+          "Creditors assess an obligor's repayment capacity using the Interest Coverage Ratio ($ICR$) and Debt Service Coverage Ratio ($DSCR$):",
+          "$$DSCR = \\frac{\\text{Net Operating Income}}{\\text{Principal Amortization} + \\text{Interest Expense}}$$",
+          "A $DSCR < 1.0$ warns that the obligor's operating cash flows are insufficient to service existing debt obligations."
+        ],
+        "paragraphs_fa": [
+          "بستانکاران توان بازپرداخت متعهد را با نسبت پوشش خدمات بدهی ($DSCR$) می‌سنجند:",
+          "$$DSCR = \\frac{\\text{سود عملیاتی خالص}}{\\text{اقساط اصل وام} + \\text{هزینه بهره}}$$",
+          "مقدار کمتر از ۱.۰ نشان می‌دهد جریان نقدی متعهد برای پرداخت بدهی‌ها ناکافی است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
@@ -330189,20 +330769,43 @@
   {
     "id": 4031,
     "term_en": "Obsolete Inventory",
-    "term_fa": "Obsolete Inventory",
+    "term_fa": "موجودی کالای منسوخ و راکد (Obsolete Inventory)",
     "letter": "O",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Obsolete inventory refers to goods, raw materials, or finished products held in stock that have reached the end of their commercial product life cycle due to technological obsolescence, changes in consumer taste, or physical degradation, retaining zero or minimal resale value.",
+    "definition_fa": "موجودی منسوخ (Obsolete Inventory) به اقلام انبار، مواد اولیه یا محصولات ساخته‌شده‌ای گفته می‌شود که به دلیل تغییر فناوری، کهنگی، انقضای مصرف یا دگرگونی در ترجیحات مشتریان دیگر تقاضایی برای آنها در بازار وجود ندارد و ارزش فروش آنها به صفر یا کمتر از بهای تمام‌شده سقوط کرده است.",
+    "takeaways_en": [
+      "Must be written down or written off under GAAP/IFRS Lower of Cost or Net Realizable Value (LCNRV) rules.",
+      "Generates phantom carrying costs, warehouse occupancy expenses, and capital stagnation.",
+      "The expense recognized upon write-off reduces operating gross margin in the income statement."
+    ],
+    "takeaways_fa": [
+      "بر اساس استانداردهای حسابداری باید تحت قاعده «اقل بهای تمام‌شده یا خالص ارزش بازیافتنی» کاهش ارزش داده شود.",
+      "هزینه‌های سربار نگهداری انبار و حبس سرمایه در گردش را افزایش می‌دهد.",
+      "کاهش ارزش آن به عنوان هزینه غیرعملیاتی یا هزینه سربار، سود خالص دوره را کاهش می‌دهد."
+    ],
     "url": "https://www.investopedia.com/terms/o/obsoleteinventory.asp",
     "slug": "obsoleteinventory",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Obsolete inventory ties up working capital and demands immediate accounting impairment to reflect true market values.",
+    "bottom_line_fa": "موجودی منسوخ سرمایه در گردش را منجمد کرده و حسابداری محافظه‌کارانه ثبت بلادرنگ زیان کاهش ارزش آن را الزامی می‌داند.",
+    "sections": [
+      {
+        "title_en": "Accounting Impairment and LCNRV Formula",
+        "title_fa": "کاهش ارزش حسابداری و فرمول اقل بهای تمام‌شده و ارزش بازیافتنی",
+        "paragraphs_en": [
+          "Under ASC 330 and IAS 2, inventory carrying value is impaired when Net Realizable Value falls below historical cost:",
+          "$$\\text{Impairment Loss} = \\max\\left(0, \\text{Book Cost} - \\text{NRV}\\right)$$",
+          "where $\\text{NRV} = P_{\\text{estimated sales}} - \\text{Completion/Disposal Costs}$."
+        ],
+        "paragraphs_fa": [
+          "طبق استانداردهای حسابداری، هرگاه خالص ارزش فروش از بهای تاریخی کمتر شود، زیان کاهش ارزش شناسایی می‌شود:",
+          "$$\\text{زیان کاهش ارزش} = \\max\\left(0, \\text{بهای دفتری} - \\text{خالص ارزش بازیافتنی}\\right)$$",
+          "که در آن خالص ارزش فروش از کسر هزینه‌های بازاریابی و فروش از قیمت تخمینی فروش حاصل می‌گردد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
@@ -330292,140 +330895,283 @@
   {
     "id": 4033,
     "term_en": "Occupational Labor Mobility",
-    "term_fa": "Occupational Labor Mobility",
+    "term_fa": "انتقال‌پذیری شغلی نیروی کار (Occupational Labor Mobility)",
     "letter": "O",
     "category": "منابع انسانی و روابط کارگری",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Occupational labor mobility is the ease, speed, and economic feasibility with which workers in an economy can transition between different types of professions, skill specializations, and employment sectors in response to structural shifts in market demand.",
+    "definition_fa": "تحرک یا انتقال‌پذیری شغلی نیروی کار (Occupational Labor Mobility) به توانایی، سهولت و سرعت کارگران و متخصصان در جابجایی میان مشاغل مختلف و تغییر حرفه در پاسخ به تغییرات ساختاری فناوری و تقاضای بازار کار اطلاق می‌شود.",
+    "takeaways_en": [
+      "High occupational mobility alleviates structural unemployment caused by automation and technological obsolescence.",
+      "Restricted by professional licensing barriers, educational prerequisites, and specialized skills mismatches.",
+      "Distinct from geographical labor mobility, which measures relocation across regional borders."
+    ],
+    "takeaways_fa": [
+      "انتقال‌پذیری شغلی بالا نرخ بیکاری ساختاری ناشی از اتوماسیون و تحولات دیجیتال را مهار می‌کند.",
+      "مجوزهای انحصاری حرفه‌ای، مدارک دانشگاهی خاص و کمبود مهارت‌های فنی مانع از جابجایی آسان آن می‌شوند.",
+      "متفاوت از تحرک جغرافیایی است که ناظر بر جابجایی مکانی کارگران میان شهرها و استان‌هاست."
+    ],
     "url": "https://www.investopedia.com/terms/o/occupational-labor-mobility.asp",
     "slug": "occupational-labor-mobility",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Occupational labor mobility accelerates economic restructuring, reallocating human capital toward high-productivity industries.",
+    "bottom_line_fa": "تحرک شغلی بازتخصیص سرمایه انسانی به سمت صنایع نوین را تسهیل کرده و پویایی بازار کار را تضمین می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Human Capital Reallocation Mechanics",
+        "title_fa": "مکانیسم بازتخصیص سرمایه انسانی و هزینه اصطکاک",
+        "paragraphs_en": [
+          "A worker transitions from occupation $A$ to $B$ if the expected wage differential exceeds retraining and friction costs:",
+          "$$\\sum_{t=1}^T \\frac{W_{B,t} - W_{A,t}}{(1 + r)^t} > C_{\\text{retraining}} + C_{\\text{search}}$$"
+        ],
+        "paragraphs_fa": [
+          "یک نیروی کار زمانی تغییر حرفه می‌دهد که ارزش فعلی تفاوت دستمزد آینده از هزینه‌های آموزش مجدد و جستجوی کار فراتر رود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "منابع انسانی و روابط کارگری",
     "category_en": "Human Resources & Labor Relations"
   },
   {
     "id": 4034,
     "term_en": "Occupational Safety And Health Act",
-    "term_fa": "Occupational Safety And Health Act",
+    "term_fa": "قانون ایمنی و سلامت شغلی (OSHA - Occupational Safety and Health Act)",
     "letter": "O",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Occupational Safety and Health Act of 1970 (OSH Act) is a landmark U.S. federal statute that established enforceable workplace safety standards, created the Occupational Safety and Health Administration (OSHA), and mandated employers provide environments free from recognized hazards.",
+    "definition_fa": "قانون ایمنی و بهداشت شغلی سال ۱۹۷۰ (OSHA) یکی از پایه‌ای‌ترین قوانین فدرال کار در ایالات متحده است که استانداردهای الزامی ایمنی کارگاه‌ها را تدوین نموده، سازمان OSHA را تأسیس کرد و کارفرمایان را موظف ساخت محیطی عاری از خطرات جانی و آسیب‌های جسمی برای کارگران مهیا کنند.",
+    "takeaways_en": [
+      "Enforces the 'General Duty Clause' requiring employers to mitigate known physical and toxic workplace hazards.",
+      "Empowers OSHA compliance inspectors to conduct unannounced job site audits and levy punitive regulatory fines.",
+      "Substantially reduced workplace fatality and industrial accident rates across manufacturing and construction."
+    ],
+    "takeaways_fa": [
+      "ماده «تعهد عمومی» را حاکم می‌سازد که کارفرما را ملزم به رفع هرگونه خطر شناسایی‌شده برای سلامت کارکنان می‌کند.",
+      "به بازرسان رسمی اجازه بازرسی‌های سرزده از کارگاه‌ها و اعمال جریمه‌های سنگین مالی و توقف خط تولید را اعطا می‌نماید.",
+      "منجر به کاهش چشمگیر تلفات صنعتی و بیماری‌های ناشی از کار در بخش‌های تولیدی و ساختمانی شده است."
+    ],
     "url": "https://www.investopedia.com/terms/o/occupational-safety-and-health-act.asp",
     "slug": "occupational-safety-and-health-act",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OSHA establishes binding corporate safety protocols, internalizing the human and economic costs of industrial workplace accidents.",
+    "bottom_line_fa": "قانون OSHA استانداردهای سخت‌گیرانه ایمنی را به عنوان تکلیف قانونی بر شرکت‌ها تحمیل کرده و از جان نیروی کار صیانت می‌کند.",
+    "sections": [
+      {
+        "title_en": "Economic Internalization of Workplace Safety",
+        "title_fa": "درونی‌سازی اقتصادی هزینه‌های ایمنی کارگاه",
+        "paragraphs_en": [
+          "Firms balance preventative safety capital investments ($I_{\\text{safety}}$) against expected regulatory penalties and workers' compensation claims ($C_{\\text{accidents}}$):",
+          "$$\\min \\left[ I_{\\text{safety}} + \\mathbb{E}[C_{\\text{accidents}}(I_{\\text{safety}})] \\right]$$",
+          "where proactive safety compliance minimizes expected total operational enterprise liability."
+        ],
+        "paragraphs_fa": [
+          "شرکت‌ها با سرمایه‌گذاری در تجهیزات ایمنی، هزینه‌های احتمالی ناشی از دیه، جریمه‌های قانونی و غرامت حوادث کار را به حداقل می‌رسانند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 4035,
     "term_en": "Occurrence Policy",
-    "term_fa": "Occurrence سیاست / بیمه‌نامه (Occurrence Policy)",
+    "term_fa": "بیمه‌نامه مبتنی بر وقوع حادثه (Occurrence Policy)",
     "letter": "O",
     "category": "اقتصاد کلان و سیاست پولی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An occurrence policy is a liability insurance contract that provides coverage for injury or property damage that physically occurred during the active policy period, regardless of when the resulting financial claim or lawsuit is actually filed—even years or decades after policy expiration.",
+    "definition_fa": "بیمه‌نامه مبتنی بر وقوع حادثه (Occurrence Policy) نوعی بیمه مسئولیت مدنی است که هرگونه خسارت جانی یا مالی را که تاریخ وقوع فیزیکی حادثه در بازه زمانی اعتبار بیمه‌نامه بوده باشد جبران می‌کند، حتی اگر ادعای خسارت یا شکایت قضایی سال‌ها یا دهه‌ها پس از انقضای بیمه‌نامه مطرح گردد.",
+    "takeaways_en": [
+      "Contrasts with 'claims-made' policies which mandate the claim must be reported while the policy remains actively in force.",
+      "Eliminates the requirement to purchase costly 'tail coverage' upon professional retirement or business closure.",
+      "Carries higher annual insurance premiums due to the long-tail liability risk assumed by the underwriter."
+    ],
+    "takeaways_fa": [
+      "در نقطه مقابل بیمه‌نامه‌های «مبتنی بر ادعا» قرار دارد که اعلام خسارت حتماً باید در زمان فعال بودن بیمه‌نامه صورت گیرد.",
+      "نیاز به خرید بیمه تکمیلی گذشته‌نگر (Tail Coverage) پس از بازنشستگی یا تعطیلی کسب‌وکار را برطرف می‌سازد.",
+      "به دلیل تعهدات نامحدود زمانی بیمه‌گر در آینده، حق بیمه سالانه بالاتری نسبت به بیمه‌های مبتنی بر ادعا دارد."
+    ],
     "url": "https://www.investopedia.com/terms/o/occurrence-policy.asp",
     "slug": "occurrence-policy",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Occurrence policies provide permanent historical coverage for incidents taking place during the insured period, locking in long-term peace of mind.",
+    "bottom_line_fa": "بیمه‌نامه مبتنی بر وقوع، مصونیت دائمی در برابر حوادث رخ‌داده در دوره اعتبار بیمه ایجاد کرده و ریسک دعاوی سال‌های بعد را مهار می‌کند.",
+    "sections": [
+      {
+        "title_en": "Coverage Activation Criteria",
+        "title_fa": "معیارهای احراز پوشش در بیمه مبتنی بر وقوع",
+        "paragraphs_en": [
+          "Let $T_{\\text{event}}$ be the date of physical damage and $T_{\\text{claim}}$ be the date of legal lawsuit notice:",
+          "$$\\text{Coverage Valid} \\iff T_{\\text{start}} \\le T_{\\text{event}} \\le T_{\\text{end}}$$",
+          "The filing date $T_{\\text{claim}}$ can be indefinitely in the future without jeopardizing contractual indemnification."
+        ],
+        "paragraphs_fa": [
+          "در بیمه‌نامه مبتنی بر وقوع، شرط لازم و کافی پرداخت خسارت این است که زمان وقوع حادثه ($T_{\\text{event}}$) درون بازه اعتبار بیمه باشد:",
+          "زمان طرح ادعای حقوقی می‌تواند سال‌ها بعد باشد بدون آنکه حق دریافت خسارت خدشه‌دار گردد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
     "id": 4036,
     "term_en": "Ocean Bills of Lading",
-    "term_fa": "Ocean Bills of Lading",
+    "term_fa": "بارنامه حمل دریایی (Ocean Bill of Lading)",
     "letter": "O",
     "category": "مدیریت عملیات و زنجیره تأمین",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An ocean bill of lading (B/L) is a legally binding international shipping document issued by an ocean freight maritime carrier to a shipper, serving concurrently as a receipt for cargo loaded, an enforceable contract for carriage, and a document of title conferring legal ownership of the goods.",
+    "definition_fa": "بارنامه حمل دریایی (Ocean Bill of Lading) یک سند تجاری و حقوقی بنیادین در بازرگانی بین‌المللی است که توسط خط کشتیرانی برای فرستنده کالا صادر می‌شود و همزمان سه کارکرد دارد: رسید رسمی تحویل کالا به کشتی، قرارداد حمل بار دریایی، و سند رسمی مالکیت کالا که قابلیت ظهرنویسی و واگذاری دارد.",
+    "takeaways_en": [
+      "Functions simultaneously as cargo receipt, carriage contract, and negotiable document of title.",
+      "Essential for documentary credit settlements under Uniform Customs and Practice (UCP 600) letter of credit (LC) regimes.",
+      "Negotiable ('to order') bills allow goods to be bought, sold, or financed while physically transit at sea."
+    ],
+    "takeaways_fa": [
+      "همزمان سه نقش رسید کالا، قرارداد حمل‌ونقل و سند مالکیت قابل معامله را ایفا می‌نماید.",
+      "عنصر اصلی در تسویه اعتبارات اسنادی (LC) بانکی بر مبنای مقررات بین‌المللی UCP 600 اتاق بازرگانی است.",
+      "بارنامه‌های قابل انتقال (To Order) امکان خرید و فروش یا توثیق کالا را در حین حرکت کشتی روی آب فراهم می‌سازند."
+    ],
     "url": "https://www.investopedia.com/terms/o/ocean-bill-of-lading.asp",
     "slug": "ocean-bill-of-lading",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The ocean bill of lading anchors international maritime commerce, transferring title and securing documentary bank financing.",
+    "bottom_line_fa": "بارنامه دریایی ستون فقرات تجارت جهانی کالا است که مالکیت و تسویه ارزی محموله‌ها را تضمین می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Legal Typology: Straight vs. Order Bills",
+        "title_fa": "دسته‌بندی حقوقی: بارنامه مستقیم در برابر قابل حواله",
+        "paragraphs_en": [
+          "A 'Straight B/L' is non-negotiable and consigns cargo strictly to a named recipient, whereas an 'Order B/L' is negotiable via commercial endorsement, enabling cargo trade financing under Incoterms rules."
+        ],
+        "paragraphs_fa": [
+          "بارنامه مستقیم غیرقابل معامله بوده و کالا صرفاً به گیرنده نامبرده تحویل می‌شود؛ در حالی که بارنامه در وجه حواله‌کرد قابل ظهرنویسی بوده و امکان تأمین مالی و واگذاری محموله روی آب را ایجاد می‌کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت عملیات و زنجیره تأمین",
     "category_en": "Operations & Supply Chain"
   },
   {
     "id": 4037,
     "term_en": "October Effect",
-    "term_fa": "October Effect",
+    "term_fa": "اثر ماه اکتبر / هراس فصلی بازارهای مالی (October Effect)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The October Effect is a widely recognized financial market psychological anomaly and calendar effect positing that equity markets have a systemic propensity to experience major market crashes or heightened downside volatility during the month of October.",
+    "definition_fa": "اثر ماه اکتبر (October Effect) یک ناهنجاری تقویمی و باور روان‌شناختی در بازارهای مالی است که معتقد است بازار سهام در ماه اکتبر میلادی تمایل غیرعادی به ریزش‌های شدید، نوسانات منفی و سقوط‌های بزرگ دارد (برگرفته از ریزش‌های تاریخی ۱۹۰۷، ۱۹۲۹ و ۱۹۸۷).",
+    "takeaways_en": [
+      "Psychologically reinforced by historic crashes including the Panic of 1907, Black Tuesday (1929), and Black Monday (1987).",
+      "Statistical empirical evidence demonstrates October is not historically the worst-performing month (September exhibits worse mean returns).",
+      "Frequently marks market turnaround bottoms and the initiation of historical year-end fourth-quarter rallies."
+    ],
+    "takeaways_fa": [
+      "با سقوط‌های تاریخی ۱۹۲۹ (سه‌شنبه سیاه) و ۱۹۸۷ (دوشنبه سیاه با افت ۲۲٪ در یک روز) در ذهن معامله‌گران تثبیت شده است.",
+      "شواهد آماری بلندمدت نشان می‌دهد ماه سپتامبر میانگین بازده منفی‌تری نسبت به اکتبر دارد و اثر اکتبر بیشتر جنبه روانی دارد.",
+      "در بسیاری از سال‌ها، ماه اکتبر نقطه پایان اصلاح قیمت‌ها و آغاز رالی صعودی پرقدرت پایان سال میلادی بوده است."
+    ],
     "url": "https://www.investopedia.com/terms/o/octobereffect.asp",
     "slug": "octobereffect",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The October Effect is primarily a psychological market superstition rather than a statistically robust market anomaly.",
+    "bottom_line_fa": "اثر ماه اکتبر بیش از آنکه یک واقعیت پایدار آماری باشد، محصول سوگیری روانی و حافظه تاریخی ریزش‌های گذشته است.",
+    "sections": [
+      {
+        "title_en": "Empirical Returns and Volatility Distribution",
+        "title_fa": "توزیع آماری بازده و نوسانات ماه اکتبر",
+        "paragraphs_en": [
+          "Historical regression testing fails to reject the null hypothesis of equal monthly mean returns ($\\mathbb{E}[R_{\\text{Oct}}] = \\mathbb{E}[R_{\\text{other}}]$), although October exhibits higher historical kurtosis and implied volatility (VIX spikes)."
+        ],
+        "paragraphs_fa": [
+          "آزمون‌های اقتصادسنجی تفاوت معناداری در میانگین بازده ماه اکتبر نسبت به سایر ماه‌ها نشان نمی‌دهند، اما شاخص نوسان‌پذیری (VIX) در این ماه به دلیل پیش‌خور شدن هراس معامله‌گران معمولاً بالاتر است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4038,
     "term_en": "Odd Lot",
-    "term_fa": "Odd Lot",
+    "term_fa": "واحد معامله خرد / سفارش ناقص (Odd Lot)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An odd lot is an order amount for a financial security that is strictly less than the normal standard trading unit (a round lot, which conventionally consists of 100 shares for corporate equities), traditionally executed with slight dealer price premiums or specialized execution routing.",
+    "definition_fa": "واحد معامله خرد یا سفارش ناقص (Odd Lot) به سفارش‌های خرید یا فروشی در بازار سهام گفته می‌شود که تعداد سهام آنها کمتر از مضرب استاندارد مبادلاتی تالار بورس (Round Lot که معمولاً مضرب ۱۰۰ سهم است) باشد و به طور سنتی توسط سرمایه‌گذاران حقیقی خرد ثبت می‌شود.",
+    "takeaways_en": [
+      "Represents order sizes between 1 and 99 shares for standard public equities.",
+      "Traditionally subject to higher execution spreads and broker commissions due to manual matching overhead.",
+      "Modern algorithmic trading and retail fractional share investing have virtually eliminated modern odd-lot execution penalties."
+    ],
+    "takeaways_fa": [
+      "شامل سفارش‌های بین ۱ تا ۹۹ سهم در بازار سهام استاندارد است.",
+      "در گذشته به دلیل زحمت تجمیع و پایاپای، مشمول کارمزد بالاتر و اسپرد نامساعدتر بود.",
+      "با روی کار آمدن معاملات الگوریتمی و کارگزاری‌های بدون کارمزد، تفاوت قیمتی آن با سفارش‌های استاندارد عملاً از بین رفته است."
+    ],
     "url": "https://www.investopedia.com/terms/o/oddlot.asp",
     "slug": "oddlot",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Odd lots denote sub-standard share quantities, historically associated with individual retail investor trading flows.",
+    "bottom_line_fa": "واحدهای خرد نمایانگر سفارش‌های پراکنده سهامداران خرد هستند که امروزه توسط موتورهای هوشمند معاملاتی مدیریت می‌شوند.",
+    "sections": [
+      {
+        "title_en": "Market Microstructure and Round Lot Aggregation",
+        "title_fa": "ریزساختار بازار و تجمیع سفارش‌های خرد",
+        "paragraphs_en": [
+          "Exchange matching engines historically aggregated odd-lot orders ($q_i < 100$) into synthetic round lots ($Q = \\sum q_i = 100k$) to report trades onto the Consolidated Tape, protecting price discovery transparency."
+        ],
+        "paragraphs_fa": [
+          "هسته‌های معاملاتی بورس‌ها سفارش‌های خرد پراکنده را به واحدهای استاندارد تجمیع کرده و سپس در دفترچه رسمی سفارش‌ها ثبت می‌نمایند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4039,
     "term_en": "Odd Lot Theory",
-    "term_fa": "Odd Lot Theory",
+    "term_fa": "نظریه معاملات خرد / شاخص سنتیمنت سرمایه‌گذاران خرد (Odd Lot Theory)",
     "letter": "O",
     "category": "اقتصاد خرد و ساختار بازار",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Odd Lot Theory is a contrarian technical analysis and market sentiment indicator proposing that small, individual retail investors (who typically trade in odd lots of less than 100 shares) are consistently wrong in their market timing, systematically buying at cyclical market peaks and selling in panic at market bottoms.",
+    "definition_fa": "نظریه معاملات خرد (Odd Lot Theory) یک نظریه تکنیکال معکوس (Contrarian) در تحلیل سنتیمنت بازار است که فرض می‌کند سرمایه‌گذاران خرد (که سفارش‌های کوچک ناقص ثبت می‌کنند) معمولاً در زمان‌بندی بازار اشتباه کرده و در اوج قیمت‌ها با طمع خریدار و در کف‌های قیمتی از روی هراس فروشنده می‌شوند، لذا باید خلاف جهت آنها عمل کرد.",
+    "takeaways_en": [
+      "Contrarian strategy: buy when odd-lot selling reaches extremes, and sell when odd-lot buying surges.",
+      "Premised on retail emotional susceptibility to market headlines and herd behavior.",
+      "Diminished in modern market utility as retail traders embrace options, fractional shares, and liquid ETFs."
+    ],
+    "takeaways_fa": [
+      "استراتژی معکوس: خرید در زمان اوج فروش سهامداران خرد، و فروش در زمان اوج خریدهای هیجانی آنان.",
+      "بر این فرضیه استوار است که سرمایه‌گذاران غیرحرفه‌ای اسیر احساسات طمع و ترس رسانه‌ای می‌شوند.",
+      "با رواج سهام کسری و مشتقات در میان معامله‌گران خرد مدرن، کارایی پیش‌بینی این شاخص کاهش یافته است."
+    ],
     "url": "https://www.investopedia.com/terms/o/oddlottheory.asp",
     "slug": "oddlottheory",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Odd Lot Theory exploits retail timing errors, advising institutional traders to take contrary positions to odd-lot volume extremes.",
+    "bottom_line_fa": "نظریه معاملات خرد از خطاهای رفتاری سرمایه‌گذاران غیرحرفه‌ای برای کشف نقاط عطف بازار سهام بهره می‌برد.",
+    "sections": [
+      {
+        "title_en": "Odd Lot Ratio and Contrarian Signals",
+        "title_fa": "فرمول نسبت معاملات خرد و سیگنال‌های معکوس",
+        "paragraphs_en": [
+          "The Odd-Lot Balance Index ($OLBI$) compares purchases ($B_{\\text{odd}}$) against sales ($S_{\\text{odd}}$):",
+          "$$OLBI = \\frac{B_{\\text{odd}}}{S_{\\text{odd}}}$$",
+          "A high $OLBI$ warns of an imminent speculative market top, whereas a collapsed $OLBI$ signals retail capitulation and optimal entry bottoms."
+        ],
+        "paragraphs_fa": [
+          "شاخص تراز معاملات خرد نسبت خریدهای خرد به فروش‌های خرد را اندازه می‌گیرد:",
+          "$$OLBI = \\frac{\\text{خریدهای خرد}}{\\text{فروش‌های خرد}}$$",
+          "مقادیر بسیار بالای این نسبت نشان‌دهنده حباب صعودی موقت، و افت شدید آن حاکی از تسلیم فروشندگان خرد در کف قیمتی است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد خرد و ساختار بازار",
     "category_en": "Microeconomics & Market Structures"
   },
@@ -330555,60 +331301,125 @@
   {
     "id": 4041,
     "term_en": "OEX",
-    "term_fa": "OEX",
+    "term_fa": "او-ای-ایکس / نماد آپشن‌های شاخص اس‌اندپی ۱۰۰ (OEX Index Options)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "OEX is the ticker symbol for American-style options contracts traded on the Chicago Board Options Exchange (Cboe) that track the S&P 100 Index, representing 100 leading U.S. mega-cap blue-chip equities.",
+    "definition_fa": "نماد OEX نماد معاملاتی رسمی قراردادهای اختیار معامله به سبک آمریکایی در بورس اختیار معامله شیکاگو (Cboe) است که بر روی شاخص اس‌اندپی ۱۰۰ (۱۰۰ شرکت برتر و غول‌پیکر بازار سهام آمریکا) معامله می‌شود و به دلیل سبک آمریکایی قابلیت اعمال در هر زمان پیش از سررسید را دارد.",
+    "takeaways_en": [
+      "Introduced by Cboe in 1983, functioning as the foundational vehicle of the modern index options industry.",
+      "Features American-style early exercise capability, in contrast to European-style XEO index options.",
+      "Settled physically via cash index calculation values based on underlying S&P 100 component prices."
+    ],
+    "takeaways_fa": [
+      "در سال ۱۹۸۳ توسط بورس Cboe راه‌اندازی شد و اولین قرارداد موفق آپشن شاخص در تاریخ بازارهای مالی جهان است.",
+      "دارای ویژگی اعمال زودهنگام به سبک آمریکایی است که آن را از نماد XEO (سبک اروپایی) متمایز می‌کند.",
+      "تسویه آن به صورت نقدی بر مبنای ارزش لحظه‌ای ۱۰۰ شرکت غول‌پیکر تشکیل‌دهنده شاخص انجام می‌گیرد."
+    ],
     "url": "https://www.investopedia.com/terms/o/oex.asp",
     "slug": "oex",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OEX pioneered exchange-traded equity index options, providing American-style flexibility for institutional blue-chip hedging.",
+    "bottom_line_fa": "نماد OEX پیشگام بازار آپشن‌های شاخصی جهان است و ابزار کارآمدی برای پوشش ریسک سهام بلوچیپ به شمار می‌رود.",
+    "sections": [
+      {
+        "title_en": "Early Exercise Premium and American Index Option Pricing",
+        "title_fa": "پریمیوم اعمال زودهنگام در قیمت‌گذاری آپشن OEX",
+        "paragraphs_en": [
+          "Because OEX options allow early exercise at any time $t \\le T$, their market premium exceeds European equivalents ($C_{\\text{American}} \\ge C_{\\text{European}}$):",
+          "$$C_{\\text{OEX}}(S, t) = \\max_{\\tau \\in [t, T]} \\mathbb{E}^Q \\left[ e^{-r(\\tau - t)} (S_\\tau - K)^+ \\right]$$"
+        ],
+        "paragraphs_fa": [
+          "به دلیل قابلیت اعمال زودهنگام در سبک آمریکایی، ارزش قراردادهای OEX همواره از قراردادهای مشابه سبک اروپایی بیشتر یا مساوی است:",
+          "سرمایه‌گذار می‌تواند در صورت افزایش سود تقسیمی سهام یا نوسان شدید، پیش از سررسید قرارداد را اعمال نماید."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4042,
     "term_en": "Off-Balance Sheet (OBS)",
-    "term_fa": "Off-تراز / مانده Sheet (OBS) (Off-Balance Sheet (OBS))",
+    "term_fa": "اقلام خارج از ترازنامه (Off-Balance Sheet - OBS)",
     "letter": "O",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Off-balance sheet (OBS) refers to assets, debts, or financial liabilities that are not formally recorded on a company's balance sheet, typically consisting of operating leases, loan commitments, letters of credit, derivative exposures, and variable interest entities (VIEs).",
+    "definition_fa": "اقلام خارج از ترازنامه (Off-Balance Sheet - OBS) به دارایی‌ها، بدهی‌ها، تعهدات یا خطوط اعتباری اطلاق می‌شود که در صورت وضعیت مالی (ترازنامه) رسمی شرکت ثبت نمی‌شوند اما بار مالی، جریان نقدی بالقوه یا ریسک اعتباری برای شرکت به همراه دارند (نظیر ضمانت‌نامه‌ها، مشتقات و قراردادهای لیزینگ سابق).",
+    "takeaways_en": [
+      "Historically utilized by corporations to minimize reported financial leverage and improve return on assets (ROA).",
+      "Subject to rigorous modern disclosure rules following the collapse of Enron and subsequent Sarbanes-Oxley mandates.",
+      "IFRS 16 and ASC 842 brought virtually all operating leases onto corporate balance sheets as right-of-use assets."
+    ],
+    "takeaways_fa": [
+      "در گذشته توسط شرکت‌ها برای پنهان کردن بدهی واقعی، بهبود نسبت‌های اهرمی و ارتقای صوری بازده دارایی‌ها به کار می‌رفت.",
+      "پس از رسوایی شرکت انران و تصویب قانون ساربنز-آکسلی، تحت نظارت و افشای یادداشت‌های توضیحی الزامی قرار گرفت.",
+      "با استانداردهای جدید حسابداری (IFRS 16)، تقریباً تمام اجاره‌های عملیاتی باید در ترازنامه به عنوان حق استفاده از دارایی ثبت شوند."
+    ],
     "url": "https://www.investopedia.com/terms/o/off-balance-sheet-obs.asp",
     "slug": "off-balance-sheet-obs",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Off-balance sheet items obscure nominal leverage, requiring fundamental analysts to reconstruct economic balance sheets.",
+    "bottom_line_fa": "اقلام خارج از ترازنامه اهرم واقعی بدهی را پنهان می‌کنند و تحلیل‌گران بنیادی باید ترازنامه واقعی را با لحاظ آنها بازسازی نمایند.",
+    "sections": [
+      {
+        "title_en": "Adjusted Leverage Reconstruction",
+        "title_fa": "بازسازی نسبت‌های اهرمی تعدیل‌شده",
+        "paragraphs_en": [
+          "Analysts calculate economic debt ($D_{\\text{economic}}$) by capitalizing off-balance sheet commitments ($OBS$):",
+          "$$D_{\\text{economic}} = D_{\\text{reported}} + \\sum_{t=1}^n \\frac{\\text{Commitments}_t}{(1 + k_d)^t}$$",
+          "preventing cosmetic distortion of Debt-to-Equity and interest coverage metrics."
+        ],
+        "paragraphs_fa": [
+          "تحلیل‌گران برای سنجش بدهی واقعی، تعهدات خارج از ترازنامه را با نرخ هزینه استقراض تنزیل کرده و به بدهی دفتری می‌افزایند:",
+          "$$D_{\\text{واقعی}} = D_{\\text{ترازنامه}} + \\sum \\frac{\\text{تعهدات}}{(1 + k_d)^t}$$",
+          "این تعدیل مانع از گمراهی سرمایه‌گذاران در برآورد توان واقعی بازپرداخت بدهی‌های شرکت می‌شود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 4043,
     "term_en": "Off-Balance Sheet Financing (OBSF)",
-    "term_fa": "Off-تراز / مانده Sheet Financing (OBSF) (Off-Balance Sheet Financing (OBSF))",
+    "term_fa": "تأمین مالی خارج از ترازنامه (Off-Balance Sheet Financing - OBSF)",
     "letter": "O",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Off-balance sheet financing (OBSF) is an accounting strategy whereby a corporation structures significant capital investments, asset purchases, or debt borrowings through special purpose vehicles (SPVs), joint ventures, or operating partnerships so that the liabilities do not appear on its formal balance sheet.",
+    "definition_fa": "تأمین مالی خارج از ترازنامه (OBSF) یک استراتژی مهندسی مالی و حسابداری است که در آن شرکت بدهی‌های کلان، خرید دارایی‌ها یا پروژه‌های عمرانی خود را از طریق نهادهای واسط با مقاصد خاص (SPV)، مشارکت‌های انتفاعی یا لیزینگ ساختاربندی می‌کند تا بدهی‌های استقراضی در ترازنامه شرکت مادر منعکس نشود.",
+    "takeaways_en": [
+      "Preserves strong credit ratings and complies with restrictive bank loan covenant ratios.",
+      "Historically utilized through operating leases, contract manufacturing, and unconsolidated partnerships.",
+      "Extensively regulated by modern consolidation standards (ASC 810 for VIEs and IFRS 10)."
+    ],
+    "takeaways_fa": [
+      "برای حفظ رتبه اعتباری مطلوب و جلوگیری از نقض شروط محدودکننده قراردادهای وامی بانکی اجرا می‌شود.",
+      "از طریق قراردادهای ساخت، بهره‌برداری و واگذاری (BOT)، شرکت‌های واسط مالی و شراکت‌های تلفیق‌نشده پیاده‌سازی می‌گردد.",
+      "توسط استانداردهای مدرن تجمیع حساب‌ها (نظیر استاندارد نهادهای با منافع متغیر VIE) به شدت محدود و قانونمند شده است."
+    ],
     "url": "https://www.investopedia.com/terms/o/obsf.asp",
     "slug": "obsf",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OBSF strategies manage debt optical appearance, demanding rigorous accounting scrutiny of hidden liabilities.",
+    "bottom_line_fa": "تأمین مالی خارج از ترازنامه به دنبال بهینه‌سازی ظاهر نسبت‌های مالی است اما ریسک‌های بدهی پنهان را افزایش می‌دهد.",
+    "sections": [
+      {
+        "title_en": "VIE Consolidation Rules (ASC 810)",
+        "title_fa": "قوانین تجمیع نهادهای با منافع متغیر (VIE)",
+        "paragraphs_en": [
+          "Under GAAP ASC 810, an enterprise must consolidate a variable interest entity ($SPV$) onto its primary balance sheet if it possesses both:",
+          "1. The power to direct the activities that most significantly impact the SPV's economic performance.",
+          "2. The obligation to absorb expected losses or the right to receive expected residual returns."
+        ],
+        "paragraphs_fa": [
+          "طبق استانداردهای جدید حسابداری، چنانچه شرکت مادر کنترل عملیاتی نهاد واسط را داشته باشد یا زیان‌های آن را تقبل کند، ملزم است تمام بدهی‌های آن را در ترازنامه تلفیقی خود ثبت و افشا نماید."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
@@ -330774,80 +331585,166 @@
   {
     "id": 4045,
     "term_en": "Off-the-Run Treasuries",
-    "term_fa": "Off-the-Run Treasuries",
+    "term_fa": "اوراق خزانه‌داری غیراولیه / اوراق قدیمی خزانه (Off-the-Run Treasuries)",
     "letter": "O",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Off-the-run Treasuries are all previously issued sovereign United States debt securities of a given maturity that have been superseded by the most recently auctioned issuance (the 'on-the-run' benchmark), resulting in lower secondary trading liquidity and marginally higher yields.",
+    "definition_fa": "اوراق خزانه‌داری غیراولیه یا قدیمی (Off-the-Run Treasuries) به اوراق قرضه خزانه‌داری آمریکا گفته می‌شود که پیش‌تر حراج شده‌اند و با عرضه سری جدیدتر در حراج اخیر، جایگاه شاخص معیار (On-the-Run) را از دست داده‌اند؛ این اوراق به دلیل نقدشوندگی پایین‌تر، با بازدهی اندکی بالاتر و قیمت ارزان‌تر در بازار معامله می‌شوند.",
+    "takeaways_en": [
+      "Account for over 95% of total outstanding marketable U.S. government sovereign debt.",
+      "Trade at a liquidity yield discount relative to freshly minted on-the-run issues.",
+      "Targeted by relative-value fixed income hedge funds executing yield curve arbitrage convergence trades."
+    ],
+    "takeaways_fa": [
+      "بیش از ۹۵ درصد از کل حجم بازار اوراق بدهی دولت آمریکا را اوراق غیراولیه تشکیل می‌دهند.",
+      "به دلیل نقدشوندگی کمتر در بازار ثانویه، دارای صرف نقدینگی بوده و با نرخ بازده بالاتر معامله می‌شوند.",
+      "مبنای استراتژی‌های آربیتراژ همگرایی منحنی بازدهی در صندوق‌های پوشش ریسک (Hedge Funds) هستند."
+    ],
     "url": "https://www.investopedia.com/terms/o/off-the-runtreasuries.asp",
     "slug": "off-the-runtreasuries",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Off-the-run Treasuries offer higher yields for patient investors willing to sacrifice immediate secondary market liquidity.",
+    "bottom_line_fa": "اوراق خزانه‌داری غیراولیه بازده بالاتری به سرمایه‌گذاران بلندمدت می‌دهند که حاضرند نقدشوندگی آنی را فدای سود بیشتر کنند.",
+    "sections": [
+      {
+        "title_en": "Liquidity Spread and Convergence Arbitrage",
+        "title_fa": "اسپرد نقدینگی و آربیتراژ همگرایی بازدهی",
+        "paragraphs_en": [
+          "The on/off-the-run yield spread ($\\Delta y$) captures the market premium for pure liquidity:",
+          "$$\\Delta y = y_{\\text{off-the-run}} - y_{\\text{on-the-run}} > 0$$",
+          "Relative value traders construct long/short trades expecting $\\Delta y$ to compress as issues age toward redemption maturity."
+        ],
+        "paragraphs_fa": [
+          "تفاوت بازده اوراق غیراولیه و اولیه صرفاً منعکس‌کننده صرف نقدشوندگی است:",
+          "$$\\Delta y = y_{\\text{غیراولیه}} - y_{\\text{اولیه}} > 0$$",
+          "آربیتراژگران با اتخاذ موقعیت معکوس روی این دو اوراق، از همگرایی قیمت‌ها در طول زمان سود کسب می‌کنند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 4046,
     "term_en": "Offensive Competitive Strategy",
-    "term_fa": "Offensive Competitive Strategy",
+    "term_fa": "استراتژی رقابتی تهاجمی (Offensive Competitive Strategy)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An offensive competitive strategy is a proactive business approach whereby an enterprise aggressively targets and attacks competitor weaknesses, challenges industry incumbents, secures market share through disruptive pricing or innovation, and forces market rivals into reactive defense.",
+    "definition_fa": "استراتژی رقابتی تهاجمی (Offensive Competitive Strategy) یک رویکرد تجاری فعالانه است که در آن شرکت با حمله مستقیم به نقاط ضعف رقبا، نوآوری ساختارشکن، قیمت‌گذاری تهاجمی یا بازاریابی گسترده، سهم بازار رهبران صنعت را تصاحب کرده و رقبا را در موقعیت انفعالی و تدافعی قرار می‌دهد.",
+    "takeaways_en": [
+      "Employs frontal assaults, flank attacks, guerrilla maneuvers, or leapfrog technological disruptions.",
+      "Focuses on capturing market share and establishing dominant first-mover network effects.",
+      "Requires substantial liquid capital reserves and low unit-cost structures to sustain price battles."
+    ],
+    "takeaways_fa": [
+      "از تاکتیک‌های حمله از روبرو، حملات جناحی، جنگ‌های فرسایشی قیمتی یا جهش فناورانه بهره می‌برد.",
+      "هدف آن تسخیر سریع سهم بازار رقبا و دستیابی به اثر شبکه و صرفه مقیاس پیشتاز است.",
+      "مستلزم پشتوانه مالی نقدینگی قوی و ساختار بهای تمام‌شده پایین‌تر برای مقاومت در جنگ قیمت‌هاست."
+    ],
     "url": "https://www.investopedia.com/terms/o/offensive_competitive_strategy.asp",
     "slug": "offensive_competitive_strategy",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Offensive strategies redefine industry competitive landscapes by aggressively capturing incumbent market share.",
+    "bottom_line_fa": "استراتژی‌های تهاجمی توازن بازار را برهم زده و با پیش‌دستی در نوآوری، برتری تجاری را رقم می‌زنند.",
+    "sections": [
+      {
+        "title_en": "Game Theoretic Payoff in Market Contestation",
+        "title_fa": "ماتریس نظریه بازی‌ها در استراتژی‌های تهاجمی",
+        "paragraphs_en": [
+          "In a Cournot-Nash or Bertrand competitive game, an offensive mover commits capital to lower marginal cost ($c_{\\text{offense}} < c_{\\text{incumbent}}$), securing expanded equilibrium market share ($q^*$) and forcing rivals to scale down capacity."
+        ],
+        "paragraphs_fa": [
+          "در چارچوب نظریه بازی‌ها، مهاجم با سرمایه‌گذاری سنگین هزینه نهایی را کاهش داده و رقیب را وادار به عقب‌نشینی از بازار می‌کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4047,
     "term_en": "Offer",
-    "term_fa": "Offer",
+    "term_fa": "مظنه فروش / قیمت پیشنهادی فروشنده (Offer / Ask Price)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An offer (interchangeably termed the ask price) is the minimum stated price at which a seller, specialist, or market maker is willing to sell a security, derivative contract, or financial asset in an active financial market.",
+    "definition_fa": "مظنه فروش یا قیمت آسک (Offer / Ask Price) کمترین قیمتی است که یک فروشنده، بازارگردان یا معامله‌گر در بازار سرمایه حاضر است سهام، ارز یا کالای خود را در آن قیمت به متقاضیان بفروشد.",
+    "takeaways_en": [
+      "Forms the upper boundary of the bid-ask spread: $\\text{Spread} = \\text{Offer} - \\text{Bid} > 0$.",
+      "Market buy orders execute immediately at the prevailing National Best Offer (NBO).",
+      "Quotes include both the offer price and the associated offer size (shares offered at that price level)."
+    ],
+    "takeaways_fa": [
+      "بخش بالایی اسپرد مظنه قیمت را تشکیل می‌دهد: اسپرد = قیمت فروش (Offer) منهای قیمت خرید (Bid).",
+      "سفارش‌های خرید آنی (مارکت اردر) دقیقاً در تراز مظنه فروش مستقر در بالای تابلوی معاملات اجرا می‌شوند.",
+      "همراه با حجم مظنه فروش در هر سطح قیمت در دفترچه سفارش‌ها نمایش داده می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/o/offer.asp",
     "slug": "offer",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The offer price sets the benchmark cost for immediate market liquidity absorption by buyers.",
+    "bottom_line_fa": "مظنه فروش هزینه نقدشوندگی فوری را برای خریداران مشخص کرده و عمق عرضه بازار را نشان می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Order Book Mechanics and Effective Spread",
+        "title_fa": "ریزساختار دفترچه سفارشات و اسپرد مؤثر",
+        "paragraphs_en": [
+          "For transaction price $P_t$ executed against prevailing midpoint $M_t = \\frac{P_{\\text{bid}, t} + P_{\\text{offer}, t}}{2}$:",
+          "$$\\text{Effective Spread} = 2 \\cdot |P_t - M_t|$$",
+          "Buyers paying the full offer incur instantaneous round-trip liquidity charges."
+        ],
+        "paragraphs_fa": [
+          "خریدارانی که سفارش خود را در مظنه فروش بازار ارسال می‌کنند، هزینه اسپرد نقدینگی بازارگردان را پرداخت می‌نمایند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4048,
     "term_en": "Offer in Compromise",
-    "term_fa": "Offer in Compromise",
+    "term_fa": "مصالحه و توافق مالیاتی (Offer in Compromise - OIC)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An Offer in Compromise (OIC) is a formal statutory agreement between a delinquent taxpayer and the Internal Revenue Service (IRS) that resolves and settles the taxpayer's full outstanding tax liability for an amount strictly less than the total balance owed.",
+    "definition_fa": "مصالحه مالیاتی (Offer in Compromise - OIC) یک قرارداد قانونی رسمی میان مودی بدهکار و سازمان امور مالیاتی (نظیر IRS در آمریکا یا سازمان امور مالیاتی در ایران) است که طی آن بدهی قطعی مالیاتی مودی به دلیل عدم توانایی در پرداخت یا اعسار مالی، با مبلغی کمتر از کل اصل و جرایم بدهی تسویه و مختومه می‌گردد.",
+    "takeaways_en": [
+      "Approved under three statutory grounds: Doubt as to Collectibility, Doubt as to Liability, or Effective Tax Administration.",
+      "Evaluates the taxpayer's Reasonable Collection Potential (RCP) based on realizable equity and disposable future income.",
+      "Requires compliance filing of all delinquent tax returns and maintenance of pristine future tax compliance for five consecutive years."
+    ],
+    "takeaways_fa": [
+      "تحت سه عنوان قانونی پذیرفته می‌شود: ابهام در وصول، ابهام در اصل بدهی، یا رعایت عدالت و توان پرداخت مودی.",
+      "بر مبنای «پتانسیل منطقی وصول بدهی» با ارزیابی دارایی‌های نقدشونده و درآمد مازاد آتی مودی محاسبه می‌شود.",
+      "مودی را ملزم می‌سازد تا تمام اظهارنامه‌های معوقه را تسلیم کرده و تا ۵ سال آینده تخلف مالیاتی نداشته باشد."
+    ],
     "url": "https://www.investopedia.com/terms/o/offer-in-compromise.asp",
     "slug": "offer-in-compromise",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "An Offer in Compromise provides a viable financial restart for insolvent taxpayers while recovering optimal revenue for the sovereign treasury.",
+    "bottom_line_fa": "مصالحه مالیاتی شروعی دوباره برای مودیان درگیر بحران مالی است و همزمان وصول مطالبات دولت را بهینه می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Reasonable Collection Potential (RCP) Formula",
+        "title_fa": "فرمول محاسبه پتانسیل منطقی وصول مالیات (RCP)",
+        "paragraphs_en": [
+          "The IRS determines the minimum acceptable offer threshold via the Reasonable Collection Potential ($RCP$):",
+          "$$RCP = \\text{Net Realizable Equity in Assets} + \\sum_{t=1}^n \\text{Future Monthly Disposable Income}_t$$",
+          "where future income is evaluated over a 12 to 24 month recovery horizon."
+        ],
+        "paragraphs_fa": [
+          "سازمان مالیاتی حداقل مبلغ مصالحه را از طریق پتانسیل منطقی وصول ($RCP$) ارزیابی می‌نماید:",
+          "$$RCP = \\text{ارزش خالص دارایی‌های نقدشونده} + \\sum \\text{درآمد مازاد ماهانه}$$",
+          "پیشنهاد مودی تنها در صورتی پذیرفته می‌شود که برابر یا بیشتر از ارزش محاسباتی RCP باشد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },

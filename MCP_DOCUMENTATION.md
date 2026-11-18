@@ -432,7 +432,7 @@ ALL TESTS PASSED SUCCESSFULLY! 🚀
 
 ---
 
-## ۷. مدهای مختلف راه‌اندازی و CLI
+## ۷. مدهای مختلف راه‌اندازی، خط فرمان (CLI) و ریورس پروکسی (Reverse Proxy)
 
 سرور را می‌توان به حالت‌های گوناگون اجرا کرد:
 
@@ -445,7 +445,16 @@ python mcp_server.py --transport sse --host 0.0.0.0 --port 8000
 
 # مد Streamable HTTP (استاندارد نوین MCP):
 python mcp_server.py --transport streamable-http --host 127.0.0.1 --port 8000
+
+# اجرا پشت ریورس پروکسی (Nginx / Cloudflare / Traefik / Caddy):
+python mcp_server.py --transport sse --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips "*"
 ```
+
+### فلگ‌های خط فرمان پشتیبانی‌شده:
+- `--host`: آدرس بایند سرور (پیش‌فرض: `127.0.0.1` یا متغیر محیطی `$HOST`)
+- `--port`: پورت شنیداری سرور (پیش‌فرض: `8000` یا متغیر محیطی `$PORT`)
+- `--proxy-headers` / `--no-proxy-headers`: فعال/غیرفعال‌سازی پردازش هدرهای ریورس پروکسی (`X-Forwarded-For`، `X-Forwarded-Proto` و ...) (پیش‌فرض: `True`)
+- `--forwarded-allow-ips`: لیست آی‌پی‌های مورد اعتماد پروکسی یا `*` برای همه (پیش‌فرض: `*` یا متغیر محیطی `$FORWARDED_ALLOW_IPS`)
 
 ---
 
@@ -759,7 +768,7 @@ Generates a structured prompt comparing two financial concepts side-by-side with
 
 ---
 
-## 7. CLI Usage & Transport Modes
+## 7. CLI Usage, Transport Modes & Reverse Proxy
 
 ```bash
 # Standard stdio mode (Default for local desktop assistants)
@@ -768,9 +777,20 @@ python mcp_server.py
 # SSE transport mode (For web or networked clients)
 python mcp_server.py --transport sse --host 0.0.0.0 --port 8000
 
-# Streamable HTTP mode (MCP 2025/2026 specification)
+# Streamable HTTP mode (MCP specification)
 python mcp_server.py --transport streamable-http --host 127.0.0.1 --port 8000
+
+# Running behind a reverse proxy (Nginx, Traefik, Caddy, Cloudflare)
+python mcp_server.py --transport sse --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips "*"
 ```
+
+### Supported CLI Options:
+| Flag | Description | Default |
+| :--- | :--- | :--- |
+| `--host` | Bind host address | `127.0.0.1` or `$HOST` |
+| `--port` | Bind port number | `8000` or `$PORT` |
+| `--proxy-headers` / `--no-proxy-headers` | Enable/disable `X-Forwarded-*` header parsing | `True` |
+| `--forwarded-allow-ips` | Comma-separated list of trusted proxy IPs or `*` | `*` or `$FORWARDED_ALLOW_IPS` |
 
 ---
 

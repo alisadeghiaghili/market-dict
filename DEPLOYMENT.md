@@ -128,6 +128,53 @@ sudo certbot --nginx -d your-domain.com -d www.your-domain.com
 
 ---
 
+## Reverse Proxy Configuration & CLI Flags
+
+MarketDict supports full reverse proxy integration (e.g. Nginx, Traefik, Caddy, Cloudflare) for both the **Flask Web App & REST API (`app.py`)** and the **MCP Server (`mcp_server.py`)**.
+
+### Command Line Flags
+
+Both servers accept standard reverse proxy flags:
+
+| Flag | Type / Format | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `--host` | `TEXT` | `0.0.0.0` (app) / `127.0.0.1` (mcp) | Host IP address to bind to (also via `$HOST`) |
+| `--port` | `INTEGER` | `5000` (app) / `8000` (mcp) | Port number to bind to (also via `$PORT`) |
+| `--proxy-headers` / `--no-proxy-headers` | `BOOLEAN` | `False` (app) / `True` (mcp) | Enable processing of `X-Forwarded-*` headers |
+| `--forwarded-allow-ips` | `TEXT` | `*` | Comma-separated list of trusted proxy IPs or `*` (also via `$FORWARDED_ALLOW_IPS`) |
+
+### Example Usages
+
+#### 1. Flask Web App & REST API (`app.py`)
+```bash
+# Run behind Nginx listening on port 5000, trusting localhost
+python app.py --host 0.0.0.0 --port 5000 --proxy-headers --forwarded-allow-ips "127.0.0.1,10.0.0.1"
+
+# Or trust all upstream reverse proxies (Docker / Kubernetes / Cloudflare)
+python app.py --host 0.0.0.0 --port 5000 --proxy-headers --forwarded-allow-ips "*"
+```
+
+#### 2. MCP Server (`mcp_server.py`)
+```bash
+# Run MCP server with SSE transport behind reverse proxy
+python mcp_server.py --transport sse --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips "*"
+
+# Run with Streamable HTTP transport
+python mcp_server.py --transport streamable-http --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips "127.0.0.1"
+```
+
+#### 3. Via Environment Variables
+You can also enable reverse proxy behavior globally without CLI flags:
+```bash
+export PROXY_HEADERS=true
+export FORWARDED_ALLOW_IPS="*"
+python app.py
+# or
+gunicorn --bind 0.0.0.0:5000 --forwarded-allow-ips "*" app:app
+```
+
+---
+
 ## Verification & Health Check
 
 Query the health check / stats endpoint:

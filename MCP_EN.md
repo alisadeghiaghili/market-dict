@@ -204,7 +204,7 @@ In `cline_mcp_settings.json`:
 
 ---
 
-## 7. CLI Options & Transports
+## 7. CLI Options, Transports & Reverse Proxy
 
 ```bash
 # Standard stdio mode (Default for local assistants):
@@ -215,7 +215,16 @@ python mcp_server.py --transport sse --host 0.0.0.0 --port 8000
 
 # Streamable HTTP mode:
 python mcp_server.py --transport streamable-http --host 127.0.0.1 --port 8000
+
+# Running behind Reverse Proxy (Nginx, Caddy, Traefik, Cloudflare):
+python mcp_server.py --transport sse --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips "*"
 ```
+
+### CLI Flags:
+- `--host`: Server host to bind (default: `127.0.0.1` or `$HOST`)
+- `--port`: Server port (default: `8000` or `$PORT`)
+- `--proxy-headers` / `--no-proxy-headers`: Enable/disable reverse proxy header parsing (`X-Forwarded-*`) (default: `True`)
+- `--forwarded-allow-ips`: Comma-separated list of trusted proxy IPs or `*` for all (default: `*` or `$FORWARDED_ALLOW_IPS`)
 
 ---
 
