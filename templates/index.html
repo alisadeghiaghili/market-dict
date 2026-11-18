@@ -530,16 +530,16 @@
                 </div>
             </div>
 
-            <!-- Responsive Uniform Grid Layout for Category Cards -->
-            <div id="categoriesContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-2.5 transition-all duration-200">
-                <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active p-2.5 rounded-2xl text-xs font-semibold bg-emerald-600 text-white shadow-sm transition flex items-start gap-2.5 border border-emerald-600 text-right h-full cursor-pointer">
-                    <span class="text-lg sm:text-xl shrink-0 mt-0.5">🏛️</span>
-                    <div class="flex flex-col text-right leading-tight min-w-0 flex-1">
-                        <div class="flex items-center justify-between gap-1">
-                            <span class="font-bold truncate">همه دسته‌ها</span>
-                            <span id="catTotalAllCount" class="cat-count-badge bg-emerald-700/60 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold shrink-0"></span>
-                        </div>
-                        <span class="cat-en-sub font-en text-[10px] text-emerald-100/90 font-medium tracking-tight truncate mt-0.5">All Categories</span>
+            <!-- Responsive Uniform Grid Layout for Category Cards (Full Names, Zero Truncation) -->
+            <div id="categoriesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-3.5 transition-all duration-200">
+                <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active p-3 sm:p-3.5 rounded-2xl text-xs font-semibold bg-emerald-600 text-white shadow-md transition-all flex flex-col justify-between border border-emerald-600 text-right h-full cursor-pointer min-h-[96px] sm:min-h-[102px]">
+                    <div class="flex items-center justify-between w-full mb-1.5">
+                        <span class="text-xl sm:text-2xl shrink-0 leading-none">🏛️</span>
+                        <span id="catTotalAllCount" class="cat-count-badge bg-emerald-700/80 text-white border border-emerald-500/40 text-[10px] sm:text-[11px] px-2.5 py-0.5 rounded-full font-bold shrink-0"></span>
+                    </div>
+                    <div class="flex flex-col text-right w-full min-w-0">
+                        <span class="cat-title-fa font-bold text-xs sm:text-sm text-white leading-snug break-words">همه دسته‌ها</span>
+                        <span class="cat-en-sub font-en text-[10px] sm:text-[11px] text-emerald-100/90 font-medium tracking-tight mt-1 leading-normal break-words">All Categories</span>
                     </div>
                 </button>
                 <!-- Dynamic Category Pills inserted here -->
@@ -1203,7 +1203,7 @@
                     container.appendChild(allBtn);
                     const totalAll = cats.reduce((acc, c) => acc + (c.count || 0), 0);
                     const totalBadge = document.getElementById('catTotalAllCount');
-                    if (totalBadge) totalBadge.innerText = totalAll.toLocaleString('fa-IR');
+                    if (totalBadge) totalBadge.innerText = `${totalAll.toLocaleString('fa-IR')} واژه`;
                 }
 
                 cats.forEach((item, index) => {
@@ -1215,15 +1215,21 @@
                     btn.dataset.index = index;
 
                     const isHiddenInCompact = !categoriesExpanded && index >= 11 && currentCategory !== item.name;
-                    btn.className = `cat-pill cat-overflow-item ${isHiddenInCompact ? 'hidden' : ''} p-2.5 rounded-2xl text-xs font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-sm transition flex items-start gap-2.5 text-right h-full cursor-pointer`;
+                    btn.className = `cat-pill cat-overflow-item ${isHiddenInCompact ? 'hidden' : ''} p-3 sm:p-3.5 rounded-2xl text-xs font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-md transition-all flex flex-col justify-between text-right h-full cursor-pointer min-h-[96px] sm:min-h-[102px]`;
                     btn.innerHTML = `
-                        <span class="text-lg sm:text-xl shrink-0 mt-0.5">${item.icon || '🏷️'}</span>
-                        <div class="flex flex-col text-right leading-tight min-w-0 flex-1">
-                            <div class="flex items-center justify-between gap-1">
-                                <span class="font-bold text-xs truncate" title="${item.name_fa || item.name}">${item.name_fa || item.name}</span>
-                                <span class="cat-count-badge opacity-80 text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-1.5 py-0.2 rounded-full font-bold shrink-0">(${item.count.toLocaleString('fa-IR')})</span>
-                            </div>
-                            <span class="cat-en-sub font-en text-[10px] text-slate-400 dark:text-slate-500 tracking-tight font-medium truncate mt-0.5" title="${item.name_en || ''}">${item.name_en || ''}</span>
+                        <div class="flex items-center justify-between w-full mb-1.5">
+                            <span class="text-xl sm:text-2xl shrink-0 leading-none">${item.icon || '🏷️'}</span>
+                            <span class="cat-count-badge text-[10px] sm:text-[11px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60 px-2 py-0.5 rounded-full font-bold shrink-0">
+                                ${item.count.toLocaleString('fa-IR')} واژه
+                            </span>
+                        </div>
+                        <div class="flex flex-col text-right w-full min-w-0">
+                            <span class="cat-title-fa font-bold text-xs sm:text-sm text-slate-800 dark:text-slate-100 leading-snug break-words">
+                                ${item.name_fa || item.name}
+                            </span>
+                            <span class="cat-en-sub font-en text-[10px] sm:text-[11px] text-slate-400 dark:text-slate-500 font-medium tracking-tight mt-1 leading-normal break-words">
+                                ${item.name_en || ''}
+                            </span>
                         </div>
                     `;
                     btn.onclick = () => setCategoryFilter(item.name);
@@ -1635,8 +1641,13 @@
             currentCategory = category;
             currentPage = 1;
             document.querySelectorAll('.cat-pill').forEach(btn => {
-                btn.classList.remove('bg-emerald-600', 'text-white', 'border-emerald-600', 'active');
+                btn.classList.remove('bg-emerald-600', 'text-white', 'border-emerald-600', 'shadow-md', 'active');
                 btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
+                const title = btn.querySelector('.cat-title-fa');
+                if (title) {
+                    title.classList.remove('text-white');
+                    title.classList.add('text-slate-800', 'dark:text-slate-100');
+                }
                 const sub = btn.querySelector('.cat-en-sub');
                 if (sub) {
                     sub.classList.remove('text-emerald-100');
@@ -1644,15 +1655,20 @@
                 }
                 const cnt = btn.querySelector('.cat-count-badge');
                 if (cnt) {
-                    cnt.classList.remove('bg-emerald-700/60', 'text-white');
-                    cnt.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+                    cnt.classList.remove('bg-emerald-700/80', 'text-white', 'border-emerald-500/40');
+                    cnt.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400', 'border-slate-200/60', 'dark:border-slate-700/60');
                 }
             });
             const activeBtn = document.getElementById(category === 'ALL' ? 'cat-ALL' : `cat-${encodeURIComponent(category)}`);
             if (activeBtn) {
                 activeBtn.classList.remove('hidden');
                 activeBtn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
-                activeBtn.classList.add('bg-emerald-600', 'text-white', 'border-emerald-600', 'active');
+                activeBtn.classList.add('bg-emerald-600', 'text-white', 'border-emerald-600', 'shadow-md', 'active');
+                const title = activeBtn.querySelector('.cat-title-fa');
+                if (title) {
+                    title.classList.remove('text-slate-800', 'dark:text-slate-100');
+                    title.classList.add('text-white');
+                }
                 const sub = activeBtn.querySelector('.cat-en-sub');
                 if (sub) {
                     sub.classList.remove('text-slate-400', 'dark:text-slate-500');
@@ -1660,8 +1676,8 @@
                 }
                 const cnt = activeBtn.querySelector('.cat-count-badge');
                 if (cnt) {
-                    cnt.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
-                    cnt.classList.add('bg-emerald-700/60', 'text-white');
+                    cnt.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400', 'border-slate-200/60', 'dark:border-slate-700/60');
+                    cnt.classList.add('bg-emerald-700/80', 'text-white', 'border-emerald-500/40');
                 }
             }
             updateFilterBadges();
@@ -1708,8 +1724,13 @@
             }
             currentCategory = 'ALL';
             document.querySelectorAll('.cat-pill').forEach(btn => {
-                btn.classList.remove('bg-emerald-600', 'text-white', 'border-emerald-600', 'active');
+                btn.classList.remove('bg-emerald-600', 'text-white', 'border-emerald-600', 'shadow-md', 'active');
                 btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
+                const title = btn.querySelector('.cat-title-fa');
+                if (title) {
+                    title.classList.remove('text-white');
+                    title.classList.add('text-slate-800', 'dark:text-slate-100');
+                }
                 const sub = btn.querySelector('.cat-en-sub');
                 if (sub) {
                     sub.classList.remove('text-emerald-100');
@@ -1717,14 +1738,29 @@
                 }
                 const cnt = btn.querySelector('.cat-count-badge');
                 if (cnt) {
-                    cnt.classList.remove('bg-emerald-700/60', 'text-white');
-                    cnt.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+                    cnt.classList.remove('bg-emerald-700/80', 'text-white', 'border-emerald-500/40');
+                    cnt.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400', 'border-slate-200/60', 'dark:border-slate-700/60');
                 }
             });
             const allCat = document.getElementById('cat-ALL');
             if (allCat) {
                 allCat.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
-                allCat.classList.add('bg-emerald-600', 'text-white', 'border-emerald-600', 'active');
+                allCat.classList.add('bg-emerald-600', 'text-white', 'border-emerald-600', 'shadow-md', 'active');
+                const title = allCat.querySelector('.cat-title-fa');
+                if (title) {
+                    title.classList.remove('text-slate-800', 'dark:text-slate-100');
+                    title.classList.add('text-white');
+                }
+                const sub = allCat.querySelector('.cat-en-sub');
+                if (sub) {
+                    sub.classList.remove('text-slate-400', 'dark:text-slate-500');
+                    sub.classList.add('text-emerald-100');
+                }
+                const cnt = allCat.querySelector('.cat-count-badge');
+                if (cnt) {
+                    cnt.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400', 'border-slate-200/60', 'dark:border-slate-700/60');
+                    cnt.classList.add('bg-emerald-700/80', 'text-white', 'border-emerald-500/40');
+                }
             }
             if (onlyFavorites) {
                 onlyFavorites = false;
