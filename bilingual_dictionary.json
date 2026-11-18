@@ -305720,360 +305720,772 @@
   {
     "id": 3505,
     "term_en": "Management Fee",
-    "term_fa": "Management Fee",
+    "term_fa": "کارمزد مدیریت دارایی (Management Fee)",
     "letter": "M",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A management fee is a periodic charge levied by professional investment managers, mutual funds, hedge funds, or private equity sponsors to cover administrative overhead, portfolio operational expenses, and continuous investment advisory services, typically expressed as a fixed annual percentage of Assets Under Management (AUM).",
+    "definition_fa": "کارمزد مدیریت (Management Fee) مبلغ ثابتی است که به صورت درصدی از کل دارایی‌های تحت مدیریت (AUM) توسط مدیران صندوق‌های سرمایه‌گذاری مشترک، صندوق‌های پوشش ریسک (Hedge Funds) یا سبدگردان‌ها برای پوشش هزینه‌های اداری، تحلیل بازار و هدایت عملیات پرتفوی از دارایی‌های صندوق کسر می‌گردد.",
+    "takeaways_en": [
+      "Calculated as an annualized percentage deducted periodically from total net assets.",
+      "Standard passive index ETF fees range from 0.03% to 0.20%, whereas hedge funds historically charge 1.5% to 2.0%.",
+      "Distinct from incentive or performance fees, which are only earned when returns exceed designated hurdle rates."
+    ],
+    "takeaways_fa": [
+      "به صورت درصد سالانه تعیین شده و معمولاً روزانه یا ماهانه از ارزش خالص دارایی‌ها (NAV) کسر می‌شود.",
+      "در صندوق‌های غیرفعال (Passive ETF) بین ۰.۰۳٪ تا ۰.۲۰٪ و در صندوق‌های فعال و جسورانه به ۱.۵٪ تا ۲.۰٪ می‌رسد.",
+      "از کارمزد عملکردی (Performance Fee) متمایز است؛ کارمزد مدیریت بدون توجه به سود یا زیان صندوق اخذ می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/m/managementfee.asp",
     "slug": "managementfee",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Management fees compensate asset stewards for ongoing portfolio operations, directly reducing net investor compounding returns.",
+    "bottom_line_fa": "کارمزد مدیریت هزینه مستمر راهبری سرمایه است که کسر آن مستقیماً بازده خالص سرمایه‌گذار را تعدیل می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Mathematical Fee Calculation and Drag",
+        "title_fa": "فرمول محاسبه کارمزد مدیریت و اثر اصطکاکی بازده",
+        "paragraphs_en": [
+          "The periodic management fee ($F_{\\text{mgmt}}$) accrued on day $t$ is formulated as:",
+          "$$F_{\\text{mgmt}, t} = \\text{AUM}_t \\times \\left(\\frac{r_{\\text{fee}}}{365}\\right)$$",
+          "Over an investment horizon $T$, a management fee $f$ compounds to reduce final portfolio terminal wealth ($W_T$):",
+          "$$W_T = W_0 \\cdot \\prod_{t=1}^T (1 + R_t - f)$$"
+        ],
+        "paragraphs_fa": [
+          "کارمزد مدیریت روزانه کسرشده از دارایی تحت مدیریت صندوق به صورت زیر محاسبه می‌شود:",
+          "$$F_{\\text{mgmt}, t} = \\text{AUM}_t \\times \\left(\\frac{r_{\\text{fee}}}{365}\\right)$$",
+          "در افق سرمایه‌گذاری بلندمدت، نرخ کارمزد اثر کاهنده‌ای بر بازده نهایی مرکب پرتفوی دارد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3506,
     "term_en": "Managerial Accounting",
-    "term_fa": "Managerial حسابداری (Managerial Accounting)",
+    "term_fa": "حسابداری مدیریت (Managerial Accounting)",
     "letter": "M",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Managerial accounting is the practice of identifying, measuring, analyzing, interpreting, and communicating financial and operational information to internal business managers and executives to facilitate strategic decision-making, operational planning, performance measurement, and risk control.",
+    "definition_fa": "حسابداری مدیریت (Managerial Accounting) شاخه‌ای تخصصی از حسابداری است که به شناسایی، اندازه‌گیری، تحلیل و ارائه اطلاعات مالی و آماری به مدیران درون‌سازمانی برای تصمیم‌گیری‌های استراتژیک، بودجه‌ریزی، کنترل هزینه‌ها و ارزیابی عملکرد واحدهای عملیاتی اختصاص دارد.",
+    "takeaways_en": [
+      "Tailored strictly for internal corporate decision-makers rather than external regulators or shareholders.",
+      "Exempt from mandatory external GAAP or IFRS standardized reporting frameworks.",
+      "Employs forward-looking forecasts, cost-volume-profit (CVP) models, and variance analysis."
+    ],
+    "takeaways_fa": [
+      "منحصراً برای استفاده مدیران درون بنگاه طراحی شده و برخلاف حسابداری مالی برای عموم منتشر نمی‌شود.",
+      "محدود به رعایت استانداردهای حسابداری رسمی (GAAP یا IFRS) نبوده و تابع نیازهای تحلیلی مدیریت است.",
+      "بر پیش‌بینی‌های رو به آینده، تحلیل نقطه سر‌به‌سر (CVP)، بهای تمام‌شده و کنترل مغایرت‌ها تمرکز دارد."
+    ],
     "url": "https://www.investopedia.com/terms/m/managerialaccounting.asp",
     "slug": "managerialaccounting",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Managerial accounting provides the internal operational analytics required to optimize corporate resource allocation and operational profitability.",
+    "bottom_line_fa": "حسابداری مدیریت با ارزیابی دقیق ساختار هزینه‌ها، قطب‌نمای هدایت عملیات و افزایش بهره‌وری شرکت است.",
+    "sections": [
+      {
+        "title_en": "Cost-Volume-Profit (CVP) Modeling",
+        "title_fa": "مدل‌سازی بهای تمام‌شده-حجم-سود (CVP)",
+        "paragraphs_en": [
+          "Managerial accounting evaluates operating leverage via the Breakeven Quantity ($Q_{\\text{BE}}$):",
+          "$$Q_{\\text{BE}} = \\frac{\\text{Fixed Costs}}{P - VC} = \\frac{FC}{\\text{Contribution Margin per Unit}}$$",
+          "Target operating profit ($\\Pi^*$) dictates production targets: $Q^* = \\frac{FC + \\Pi^*}{P - VC}$."
+        ],
+        "paragraphs_fa": [
+          "در حسابداری مدیریت، نقطه سر‌به‌سر تولید ($Q_{\\text{BE}}$) بر مبنای حاشیه مشارکت هر واحد محاسبه می‌گردد:",
+          "$$Q_{\\text{BE}} = \\frac{FC}{P - VC}$$",
+          "که در آن $FC$ هزینه‌های ثابت، $P$ قیمت فروش و $VC$ هزینه متغیر هر واحد محصول است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 3507,
     "term_en": "Manufacturer's Suggested Retail Price (MSRP)",
-    "term_fa": "Manufacturer's Suggested Retail قیمت (MSRP) (Manufacturer's Suggested Retail Price (MSRP))",
+    "term_fa": "قیمت خرده‌فروشی پیشنهادی تولیدکننده (MSRP)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Manufacturer's Suggested Retail Price (MSRP), also known as the list price or sticker price, is the baseline price that a manufacturing producer recommends retail merchants charge for its goods, establishing pricing consistency across independent distribution channels.",
+    "definition_fa": "قیمت پیشنهادی سازنده (MSRP) قیمتی است که کارخانه سازنده به فروشگاه‌ها و نمایندگی‌های خرده‌فروشی برای فروش محصول توصیه می‌کند تا از جنگ قیمت‌ها جلوگیری شده، یکپارچگی برند حفظ شود و حاشیه سود عادلانه در زنجیره توزیع تضمین گردد.",
+    "takeaways_en": [
+      "Acts as a pricing anchor for retail consumer bargaining and promotional discounts.",
+      "Retailers maintain legal autonomy to discount or markup prices relative to MSRP depending on demand.",
+      "Mandated across automotive dealerships in the U.S. under the Monroney Act sticker requirement."
+    ],
+    "takeaways_fa": [
+      "به عنوان لنگر روانی قیمت در ذهن مصرف‌کننده برای سنجش تخفیف‌های فروشگاهی عمل می‌کند.",
+      "فروشندگان از نظر قانونی مختارند با توجه به میزان عرضه و تقاضا، کالا را زیر یا بالای MSRP بفروشند.",
+      "در صنعت خودرو به صورت برچسب رسمی روی شیشه خودروها الزام قانونی دارد."
+    ],
     "url": "https://www.investopedia.com/terms/m/manufacturers-suggested-retail-price-msrp.asp",
     "slug": "manufacturers-suggested-retail-price-msrp",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MSRP sets a standardized pricing benchmark, stabilizing brand perception across competitive retail networks.",
+    "bottom_line_fa": "قیمت پیشنهادی سازنده معیار شفافی برای مصرف‌کننده فراهم آورده و ثبات ارزش برند را در بازار تضمین می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Channel Markup Architecture",
+        "title_fa": "معماری حاشیه سود در زنجیره توزیع",
+        "paragraphs_en": [
+          "MSRP incorporates manufacturing unit cost ($C_m$), wholesale distributor margin ($m_w$), and retail dealer markup ($m_r$):",
+          "$$\\text{MSRP} = \\frac{C_m}{(1 - m_w)(1 - m_r)}$$",
+          "Discounts below MSRP reflect promotional absorption of the retail gross margin."
+        ],
+        "paragraphs_fa": [
+          "فرمول MSRP حاشیه سود ناخالص کارخانه، بنکدار و خرده‌فروش را در زنجیره ارزش تجمیع می‌نماید:",
+          "تخفیف‌های فصلی فروشگاه‌ها در واقع تعدیل‌کننده حاشیه سود نهایی خرده‌فروش است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3508,
     "term_en": "Manufacturing",
-    "term_fa": "Manufacturing",
+    "term_fa": "تولید صنعتی / ساخت (Manufacturing)",
     "letter": "M",
     "category": "مدیریت عملیات و زنجیره تأمین",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Manufacturing is the industrial processing of raw natural materials, components, and primary inputs into finished consumer goods or intermediate industrial products at scale through mechanical transformation, chemical processing, labor coordination, and automated assembly systems.",
+    "definition_fa": "تولید صنعتی (Manufacturing) فرآیند تبدیل مواد خام، قطعات و نهاده‌های اولیه به محصولات نهایی مصرفی یا کالاهای واسطه‌ای با استفاده از نیروی کار، ابزارآلات، فرآیندهای شیمیایی و خطوط مونتاژ مکانیزه در مقیاس انبوه است که ستون فقرات بخش واقعی اقتصاد را تشکیل می‌دهد.",
+    "takeaways_en": [
+      "Constitutes the primary component of the Secondary Economic Sector.",
+      "Drives technological innovation, capital accumulation, and trade balance dynamics.",
+      "Tracked globally via Purchasing Managers' Indexes (PMI) as a leading economic growth indicator."
+    ],
+    "takeaways_fa": [
+      "رکن بنیادین بخش دوم اقتصاد (صنعت) را تشکیل داده و ایجاد ارزش افزوده حقیقی می‌نماید.",
+      "پیشران اصلی نوآوری‌های فنی، جذب سرمایه‌گذاری ثابت و تقویت تراز تجاری کشورهاست.",
+      "شاخص مدیران خرید (PMI) بخش تولیدی معتبرترین شاخص پیشرو برای سنجش رونق یا رکود اقتصاد است."
+    ],
     "url": "https://www.investopedia.com/terms/m/manufacturing.asp",
     "slug": "manufacturing",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Manufacturing anchors physical value creation, generating multiplier productivity effects across service and logistics ecosystems.",
+    "bottom_line_fa": "صنعت ساخت هسته سخت تولید ثروت در اقتصاد است که صنایع حمل‌ونقل و خدمات مالی را به حرکت درمی‌آورد.",
+    "sections": [
+      {
+        "title_en": "Cobb-Douglas Production Formulation",
+        "title_fa": "تابع تولید کاب-داگلاس در صنایع تولیدی",
+        "paragraphs_en": [
+          "Industrial manufacturing output ($Y$) is modeled via the Cobb-Douglas aggregate production function:",
+          "$$Y = A \\cdot K^\\alpha \\cdot L^\\beta$$",
+          "where $A$ represents Total Factor Productivity (technology), $K$ is capital equipment, $L$ is labor hours, and $\\alpha + \\beta$ defines returns to scale."
+        ],
+        "paragraphs_fa": [
+          "خروجی صنایع ساخت ($Y$) از تابع تولید کل کاب-داگلاس پیروی می‌کند:",
+          "$$Y = A \\cdot K^\\alpha \\cdot L^\\beta$$",
+          "که در آن $A$ بهره‌وری کل عوامل (فناوری)، $K$ ماشین‌آلات سرمایه‌ای و $L$ ساعات کار است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت عملیات و زنجیره تأمین",
     "category_en": "Operations & Supply Chain"
   },
   {
     "id": 3509,
     "term_en": "Manufacturing Resource Planning",
-    "term_fa": "Manufacturing Resource Planning",
+    "term_fa": "برنامه‌ریزی منابع تولید (MRP II - Manufacturing Resource Planning)",
     "letter": "M",
     "category": "مدیریت عملیات و زنجیره تأمین",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Manufacturing Resource Planning (MRP II) is an integrated, computer-based enterprise management system that coordinates operational production scheduling, machine capacity planning, labor allocation, procurement logistics, and real-time financial tracking across industrial manufacturing plants.",
+    "definition_fa": "برنامه‌ریزی منابع تولید (MRP II) یک سیستم جامع نرم‌افزاری و مدیریتی است که برنامه‌ریزی نیازمندی‌های مواد اولیه (MRP I) را به حوزه‌های برنامه‌ریزی ظرفیت ماشین‌آلات، نیروی انسانی، تأمین مالی، بودجه‌ریزی و حسابداری صنعتی گسترش داده و پیش‌درآمد سیستم‌های مدرن ERP محسوب می‌شود.",
+    "takeaways_en": [
+      "Evolved from basic Material Requirements Planning (MRP I) into full shop-floor closed-loop execution.",
+      "Directly synchronizes production scheduling with corporate balance sheet cash flow forecasts.",
+      "Functions as the immediate historical predecessor to Enterprise Resource Planning (ERP) suites."
+    ],
+    "takeaways_fa": [
+      "تکامل‌یافته سیستم برنامه‌ریزی مواد (MRP I) است که حلقه‌های بازخورد مالی و کنترل کارگاهی را یکپارچه کرد.",
+      "برنامه‌ریزی خطوط تولید را با پیش‌بینی جریان وجوه نقد ترازنامه شرکت هماهنگ می‌سازد.",
+      "پایه و بستر اصلی پیدایش نرم‌افزارهای برنامه‌ریزی منابع سازمانی (ERP) در صنایع پیشرفته است."
+    ],
     "url": "https://www.investopedia.com/terms/m/manufacturing-resource-planning.asp",
     "slug": "manufacturing-resource-planning",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MRP II integrates factory shop-floor capacity with corporate financial controllership, optimizing total manufacturing throughput.",
+    "bottom_line_fa": "سیستم MRP II فرآیندهای مهندسی کارخانه را با منابع مالی پیوند زده و ظرفیت تولید را بهینه‌سازی می‌کند.",
+    "sections": [
+      {
+        "title_en": "Closed-Loop Scheduling and Capacity Requirements",
+        "title_fa": "برنامه‌ریزی حلقه بسته و الزامات ظرفیت (CRP)",
+        "paragraphs_en": [
+          "MRP II balances master production schedules against Capacity Requirements Planning (CRP):",
+          "$$\\text{Capacity Load}_k = \\sum_{i=1}^N Q_i \\cdot (t_{\\text{run}, ik} + t_{\\text{setup}, ik}) \\le \\text{Available Work Hours}_k$$",
+          "preventing bottlenecks and idle factory machine time."
+        ],
+        "paragraphs_fa": [
+          "این سیستم بار کاری ماشین‌آلات را با ظرفیت در دسترس تطبیق می‌دهد تا از ایجاد گلوگاه‌های تولیدی و خواب ماشین‌آلات جلوگیری کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت عملیات و زنجیره تأمین",
     "category_en": "Operations & Supply Chain"
   },
   {
     "id": 3510,
     "term_en": "Maquiladora",
-    "term_fa": "Maquiladora",
+    "term_fa": "ماکیلا / کارخانه‌های معاف از عوارض مرزی مکزیک (Maquiladora)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A maquiladora is a manufacturing assembly plant located predominantly along the northern Mexican border that imports raw industrial materials, specialized components, and capital equipment tariff-free, processes or assembles them using local labor, and re-exports the finished goods internationally.",
+    "definition_fa": "ماکیلا یا ماکیلادورا (Maquiladora) به کارخانه‌های تولیدی و مونتاژ مستقر در مناطق آزاد تجاری مکزیک (غالباً در امتداد مرز با آمریکا) گفته می‌شود که قطعات و مواد اولیه را بدون حقوق گمرکی وارد کرده، با بهره‌گیری از دستمزد رقابتی نیروی کار بومی مونتاژ نموده و کالای نهایی را معاف از عوارض صادر می‌کنند.",
+    "takeaways_en": [
+      "Originated under the 1965 Border Industrialization Program and accelerated under NAFTA / USMCA.",
+      "Allows multinational corporations to leverage geographic proximity (nearshoring) and cost-competitive labor.",
+      "Drives significant export revenue and industrial manufacturing employment for Mexico."
+    ],
+    "takeaways_fa": [
+      "در سال ۱۹۶۵ آغاز شد و با پیمان تجارت آزاد آمریکای شمالی (NAFTA / USMCA) رشدی انفجاری یافت.",
+      "به شرکت‌های چندملیتی امکان می‌دهد از مزیت نزدیکی جغرافیایی (Nearshoring) و دستمزد رقابتی بهره ببرند.",
+      "موتور اصلی صادرات صنعتی و اشتغال‌زایی تخصصی در بخش خودروسازی و الکترونیک مکزیک است."
+    ],
     "url": "https://www.investopedia.com/terms/m/maquiladora.asp",
     "slug": "maquiladora",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Maquiladoras provide multinational firms with strategic nearshoring assembly cost efficiencies along international trade corridors.",
+    "bottom_line_fa": "ماکیلادوراها الگوی موفق پیوند مزیت نیروی کار با معافیت‌های گمرکی در امتداد زنجیره تأمین فرامرزی هستند.",
+    "sections": [
+      {
+        "title_en": "Tariff Arbitrage and Value-Added Customs Valuation",
+        "title_fa": "آربیتراژ تعرفه‌ای و ارزش‌گذاری ارزش افزوده گمرکی",
+        "paragraphs_en": [
+          "Under preferential trade rules, re-imported goods incur tariffs only on the incremental value added in processing:",
+          "$$\\text{Customs Duty} = \\tau \\times (V_{\\text{finished}} - V_{\\text{imported inputs}}) = \\tau \\times \\text{Value Added}_{\\text{local}}$$",
+          "lowering total landing cost compared to offshore overseas assembly."
+        ],
+        "paragraphs_fa": [
+          "طبق قوانین گمرکی، هنگام بازگشت کالا صرفاً به ارزش افزوده ایجادشده (نه کل ارزش کالا) تعرفه تعلق می‌گیرد:",
+          "این معافیت، بهای تمام‌شده نهایی محصولات صادراتی را به شدت رقابتی می‌سازد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3511,
     "term_en": "Margin Account",
-    "term_fa": "حاشیه سود / مارجین حساب (Margin Account)",
+    "term_fa": "حساب معاملاتی مارجین / حساب اهرمی کارگزاری (Margin Account)",
     "letter": "M",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A margin account is a brokerage account wherein the broker-dealer lends cash capital to the investor to purchase tradable securities, using the account's existing equity, cash, and securities portfolio as loan collateral.",
+    "definition_fa": "حساب مارجین (Margin Account) نوعی حساب معاملاتی در شرکت کارگزاری است که به سرمایه‌گذار اجازه می‌دهد با دریافت اعتبار و تسهیلات وامی از کارگزار، سهام و اوراق بهاداری فراتر از موجودی نقدی خود خریداری کند و دارایی‌های موجود در حساب را به عنوان وثیقه وام نزد کارگزاری قرار دهد.",
+    "takeaways_en": [
+      "Governed in the United States by Federal Reserve Regulation T, requiring a 50% initial margin deposit.",
+      "Magnifies both potential investment percentage gains and downside percentage losses proportionally.",
+      "Borrowers incur ongoing margin interest expense charged on the daily borrowed debit balance."
+    ],
+    "takeaways_fa": [
+      "در آمریکا تحت نظارت آیین‌نامه Regulation T فدرال رزرو است که حداقل پیش‌پرداخت ۵۰٪ را الزامی می‌کند.",
+      "سود و زیان سرمایه‌گذار را متناسب با ضریب اهرم (Leverage) چند برابر بزرگ‌نمایی می‌کند.",
+      "سرمایه‌گذار موظف به پرداخت بهره روزانه تسهیلات اعتباری بر روی مانده استقراضی است."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginaccount.asp",
     "slug": "marginaccount",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Margin accounts offer financial leverage to amplify buying power, introducing downside default and forced liquidation risks.",
+    "bottom_line_fa": "حساب مارجین قدرت خرید را افزایش می‌دهد اما در صورت افت بازار خطر لیکویید شدن و زیان سنگین را در پی دارد.",
+    "sections": [
+      {
+        "title_en": "Leverage Factor and Return Amplification",
+        "title_fa": "ضریب اهرم و تشدید بازدهی در حساب‌های مارجین",
+        "paragraphs_en": [
+          "If an investor purchases asset $V$ with equity $E$ and debt $L$ ($V = E + L$), the realized return on equity ($R_E$) given asset return $R_A$ and margin interest rate $i$ satisfies:",
+          "$$R_E = R_A \\cdot \\left(\\frac{V}{E}\\right) - i \\cdot \\left(\\frac{L}{E}\\right)$$",
+          "where $\\frac{V}{E}$ represents the leverage multiplier."
+        ],
+        "paragraphs_fa": [
+          "چنانچه سرمایه‌گذار با آورده $E$ و وام $L$ دارایی $V$ را خریداری کند، بازده حقوق صاحبان سهام ($R_E$) برابر است با:",
+          "$$R_E = R_A \\cdot \\left(\\frac{V}{E}\\right) - i \\cdot \\left(\\frac{L}{E}\\right)$$",
+          "که نشان می‌دهد بازده یا زیان دارایی در ضریب اهرم ضرب شده و بهره وام از آن کسر می‌شود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 3512,
     "term_en": "Margin Debt",
-    "term_fa": "حاشیه سود / مارجین بدهی (Margin Debt)",
+    "term_fa": "بدهی مارجین / مانده بدهی اعتباری بازار سهام (Margin Debt)",
     "letter": "M",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Margin debt represents the aggregate monetary dollar value of borrowed funds that investors and financial market participants owe to brokerage firms for purchasing securities on margin across the financial system.",
+    "definition_fa": "بدهی مارجین (Margin Debt) مجموع مانده تسهیلات و بدهی‌های اعتباری است که معامله‌گران و سرمایه‌گذاران بازار سهام بابت خرید اهرمی اوراق بهادار به کارگزاری‌ها بدهکارند؛ این شاخص به عنوان یکی از مهم‌ترین نماگرهای پذیرش ریسک، سفته‌بازی و رونق و حباب در بازارها رصد می‌شود.",
+    "takeaways_en": [
+      "Reported monthly by FINRA, functioning as a leading indicator of speculative equity sentiment.",
+      "Rapid surges in margin debt precede speculative market peaks and euphoria cycles.",
+      "Cascading margin debt liquidations amplify systemic market crashes during broad corrections."
+    ],
+    "takeaways_fa": [
+      "به صورت ماهانه توسط نهاد FINRA گزارش شده و دماسنج اشتیاق به ریسک و سفته‌بازی معامله‌گران است.",
+      "جهش‌های تند این شاخص معمولاً پیش از تشکیل سقف‌های قیمتی و حباب‌های صعودی بازار رخ می‌دهد.",
+      "تسویه اجباری اعتبارات در زمان ریزش، آبشاری از فروش‌های دستوری را ایجاد کرده و سقوط قیمت‌ها را تشدید می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/m/margin_debt.asp",
     "slug": "margin_debt",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Margin debt quantifies system-wide speculative leverage, providing vital foresight into structural liquidity risk.",
+    "bottom_line_fa": "بدهی مارجین حجم اهرم و وام سفته‌بازانه را در بازار سهام می‌سنجد و هشداری از پتانسیل نوسانات ویرانگر است.",
+    "sections": [
+      {
+        "title_en": "Systemic Deleveraging Cascades",
+        "title_fa": "آبشار خروج از اهرم و ریسک سیستماتیک",
+        "paragraphs_en": [
+          "During market declines, falling asset prices breach maintenance thresholds, triggering margin calls:",
+          "$$\\Delta D_{\\text{margin}} < 0 \\implies \\text{Forced Sales} \\implies \\Delta P < 0$$",
+          "This positive feedback loop accelerates self-reinforcing liquidity spirals in credit markets."
+        ],
+        "paragraphs_fa": [
+          "با افت قیمت‌ها و فعال شدن کال مارجین، فروش‌های اجباری آغاز شده و این فشار عرضه موجب افت بیشتر و لیکوییدی گسترده‌تر می‌گردد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3513,
     "term_en": "Margin Loan Availability",
-    "term_fa": "حاشیه سود / مارجین وام Availability (Margin Loan Availability)",
+    "term_fa": "سقف اعتبار وام مارجین / ظرفیت در دسترس تسهیلات (Margin Loan Availability)",
     "letter": "M",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Margin loan availability (also referred to as margin purchasing power or excess equity) is the maximum additional dollar amount of credit that an investor can immediately borrow from a brokerage to buy more securities or withdraw as cash without violating regulatory or house margin requirements.",
+    "definition_fa": "ظرفیت در دسترس وام مارجین (Margin Loan Availability) حداکثر مبلغ اعتباری جدیدی است که یک معامله‌گر بر اساس ارزش وثایق موجود در پرتفوی خود می‌تواند بلافاصله از کارگزاری استقراض کرده و اقدام به خرید سهام یا برداشت وجه کند، بدون آنکه از حد مجاز قانونی تخطی نماید.",
+    "takeaways_en": [
+      "Directly reflects unencumbered excess equity residing in the brokerage account.",
+      "Purchasing power for equities under Reg T (50% margin) equals two times ($2\\times$) excess equity.",
+      "Decreases in real time as market valuations of existing portfolio collateral securities decline."
+    ],
+    "takeaways_fa": [
+      "بازتاب‌دهنده مازاد ارزش ویژه آزاد و غیرمسدود در حساب سرمایه‌گذار است.",
+      "بر اساس قانون مارجین ۵۰ درصدی، قدرت خرید سهام جدید معمولاً معادل ۲ برابر مازاد ارزش ویژه آزاد است.",
+      "با افت ارزش بازار دارایی‌های موجود، این ظرفیت به صورت لحظه‌ای کاهش یافته یا مسدود می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/m/margin_loan_availability.asp",
     "slug": "margin_loan_availability",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Margin availability sets the operational ceiling for immediate portfolio leveraging and cash credit extraction.",
+    "bottom_line_fa": "ظرفیت وام مارجین سقف مجاز اهرم‌گیری جدید را بر مبنای وثایق فعال مشتری تعیین می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Purchasing Power Formulation",
+        "title_fa": "فرمول محاسبه قدرت خرید در حساب مارجین",
+        "paragraphs_en": [
+          "For total portfolio value $V$, loan balance $L$, and initial margin requirement $IM$:",
+          "$$\\text{Excess Equity} = V - L - (IM \\cdot V)$$",
+          "$$\\text{Buying Power} = \\frac{\\text{Excess Equity}}{IM}$$",
+          "Under standard Regulation T where $IM = 0.50$, $\\text{Buying Power} = 2 \\times \\text{Excess Equity}$."
+        ],
+        "paragraphs_fa": [
+          "قدرت خرید جدید بر اساس مازاد ارزش ویژه نسبت به مارجین اولیه ($IM$) محاسبه می‌شود:",
+          "در مارجین اولیه ۵۰ درصدی، قدرت خرید سرمایه‌گذار دو برابر ارزش ویژه آزاد است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3514,
     "term_en": "Margin of Safety",
-    "term_fa": "حاشیه سود / مارجین of Safety (Margin of Safety)",
+    "term_fa": "حاشیه امنیت (Margin of Safety)",
     "letter": "M",
     "category": "ارزش‌گذاری و تحلیل بنیادی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The margin of safety is an investing and managerial accounting principle. In value investing, it represents the percentage discount of a security's market price relative to its estimated intrinsic value. In accounting, it represents the output buffer between actual sales and breakeven sales volume.",
+    "definition_fa": "حاشیه امنیت (Margin of Safety) یک اصل بنیادین دوگانه است: در سرمایه‌گذاری ارزشی (بنجامین گراهام و وارن بافت)، به درصد تخفیف قیمت روز بازار سهم نسبت به ارزش ذاتی برآوردی آن گفته می‌شود؛ در حسابداری صنعتی، به فاصله میان فروش پیش‌بینی‌شده و فروش در نقطه سر‌به‌سر اطلاق می‌گردد.",
+    "takeaways_en": [
+      "Foundational cornerstone of Benjamin Graham's value investing philosophy.",
+      "Protects investors from subjective valuation modeling errors, forecasting bias, and unexpected downturns.",
+      "In managerial cost accounting, measures how far revenue can fall before the firm incurs operational losses."
+    ],
+    "takeaways_fa": [
+      "سنگ بنای اصلی مکتب سرمایه‌گذاری ارزشی بنجامین گراهام و وارن بافت به شمار می‌رود.",
+      "سرمایه‌گذار را در برابر خطاهای محاسباتی در ارزش‌گذاری، رکود اقتصادی و رویدادهای غیرمترقبه بیمه می‌کند.",
+      "در حسابداری صنعتی نشان می‌دهد فروش شرکت چه میزان می‌تواند افت کند پیش از آنکه وارد منطقه زیان شود."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginofsafety.asp",
     "slug": "marginofsafety",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The margin of safety establishes an essential cushion against analytical error and market downside volatility.",
+    "bottom_line_fa": "حاشیه امنیت سپر دفاعی سرمایه‌گذار در برابر خطای تحلیل و ریسک سقوط قیمت‌ها در بازار است.",
+    "sections": [
+      {
+        "title_en": "Mathematical Formulations (Investing vs. Accounting)",
+        "title_fa": "فرمول‌های ریاضی (سرمایه‌گذاری در برابر حسابداری)",
+        "paragraphs_en": [
+          "In Value Investing, the valuation discount margin ($MOS_{\\text{inv}}$) is:",
+          "$$MOS_{\\text{inv}} = \\frac{\\text{Intrinsic Value} - P_{\\text{market}}}{\\text{Intrinsic Value}} \\times 100\\%$$",
+          "In Cost Accounting, the operational sales buffer ($MOS_{\\text{acct}}$) is:",
+          "$$MOS_{\\text{acct}} = \\frac{\\text{Actual Sales} - \\text{Breakeven Sales}}{\\text{Actual Sales}} \\times 100\\%$$"
+        ],
+        "paragraphs_fa": [
+          "در سرمایه‌گذاری ارزشی، حاشیه امنیت از کسر قیمت بازار از ارزش ذاتی به دست می‌آید:",
+          "$$MOS_{\\text{inv}} = \\frac{\\text{ارزش ذاتی} - P_{\\text{قیمت بازار}}}{\\text{ارزش ذاتی}} \\times 100\\%$$",
+          "در حسابداری مدیریت، حاشیه امنیت بیانگر مازاد فروش بر نقطه سر‌به‌سر است:",
+          "$$MOS_{\\text{acct}} = \\frac{\\text{فروش واقعی} - \\text{فروش سر‌به‌سر}}{\\text{فروش واقعی}} \\times 100\\%$$"
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "ارزش‌گذاری و تحلیل بنیادی",
     "category_en": "Valuation & Fundamental Analysis"
   },
   {
     "id": 3515,
     "term_en": "Marginal Analysis",
-    "term_fa": "Marginal تحلیل (Marginal Analysis)",
+    "term_fa": "تحلیل نهایی / تحلیل مارجینال (Marginal Analysis)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Marginal analysis is a fundamental microeconomic decision-making framework that evaluates the incremental additional benefits (marginal benefit) of an activity or production decision against its incremental additional costs (marginal cost).",
+    "definition_fa": "تحلیل نهایی یا مارجینال (Marginal Analysis) یک چارچوب تصمیم‌گیری پایه‌ای در اقتصاد خرد است که منافع افزایشی حاصل از یک واحد تولید یا فعالیت اضافه (منفعت نهایی) را در برابر مخارج اضافه ناشی از همان واحد (هزینه نهایی) مقایسه کرده و نقطه بهینه را می‌یابد.",
+    "takeaways_en": [
+      "Governed by the universal optimization condition: $MR = MC$ (Marginal Revenue equals Marginal Cost).",
+      "Disregards historical sunk costs, focusing strictly on prospective incremental variations.",
+      "Applied universally across pricing strategy, resource allocation, and utility optimization."
+    ],
+    "takeaways_fa": [
+      "بر اصل جهان‌شمول بهینه‌سازی استوار است: برابری درآمد نهایی با هزینه نهایی ($MR = MC$).",
+      "هزینه‌های غرق‌شده و گذشته را نادیده گرفته و منحصراً بر تغییرات آتی ناشی از تصمیم تمرکز می‌کند.",
+      "در قیمت‌گذاری بهینه، تخصیص منابع و حداکثرسازی مطلوبیت مصرف‌کننده و سود بنگاه کاربرد دارد."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginal-analysis.asp",
     "slug": "marginal-analysis",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Marginal analysis optimizes economic allocation by evaluating incremental outcomes rather than gross historical totals.",
+    "bottom_line_fa": "تحلیل مارجینال با تمرکز بر آخرین واحد تولید یا مصرف، تصمیمات عقلایی و سودآور را هدایت می‌نماید.",
+    "sections": [
+      {
+        "title_en": "First-Order Profit Maximization Condition",
+        "title_fa": "شرط مرتبه اول حداکثرسازی سود",
+        "paragraphs_en": [
+          "Let total profit be $\\Pi(Q) = TR(Q) - TC(Q)$. Setting the derivative to zero yields:",
+          "$$\\frac{d \\Pi}{d Q} = \\frac{d TR}{d Q} - \\frac{d TC}{d Q} = 0 \\implies MR(Q^*) = MC(Q^*)$$",
+          "Profits expand when $MR > MC$ and decline when $MR < MC$."
+        ],
+        "paragraphs_fa": [
+          "با مشتق‌گیری از تابع سود نسبت به مقدار تولید $Q$، شرط برابری درآمد نهایی و هزینه نهایی حاصل می‌شود:",
+          "$$\\frac{d \\Pi}{d Q} = 0 \\implies MR(Q^*) = MC(Q^*)$$",
+          "تا زمانی که درآمد نهایی بیش از هزینه نهایی باشد، افزایش تولید سودآور خواهد بود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3516,
     "term_en": "Marginal Benefits",
-    "term_fa": "Marginal Benefits",
+    "term_fa": "منفعت نهایی / فایده مارجینال (Marginal Benefit)",
     "letter": "M",
     "category": "منابع انسانی و روابط کارگری",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Marginal benefit is the incremental additional utility, satisfaction, or financial revenue that an economic agent gains from consuming or producing one additional unit of a good or service.",
+    "definition_fa": "منفعت نهایی (Marginal Benefit) به مطلوبیت، رضایت یا درآمد مازادی اطلاق می‌شود که یک مصرف‌کننده از مصرف، یا یک بنگاه از تولید دقیقاً یک واحد اضافی از یک کالا یا خدمت به دست می‌آورد.",
+    "takeaways_en": [
+      "Subject to the law of diminishing marginal benefit: utility per unit decreases as total consumption expands.",
+      "Reflects the maximum dollar price a consumer is willingly prepared to pay for an incremental unit.",
+      "Forms the theoretical foundation of downward-sloping individual demand curves."
+    ],
+    "takeaways_fa": [
+      "تابع قانون نزولی بودن منفعت نهایی است؛ با افزایش مصرف کل، مطلوبیت هر واحد جدید کاهش می‌یابد.",
+      "حداکثر قیمتی را که خریدار حاضر است برای به دست آوردن یک واحد بیشتر بپردازد تعیین می‌کند.",
+      "پایه‌گذار شیب منفی منحنی‌های تقاضا در بازارهای اقتصادی است."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginalbenefit.asp",
     "slug": "marginalbenefit",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Marginal benefit dictates individual willingness to pay, diminishing naturally with cumulative consumption scale.",
+    "bottom_line_fa": "منفعت نهایی انگیزه و تمایل خریدار به پرداخت را تعیین کرده و با افزایش تعداد مصرف کاهش می‌یابد.",
+    "sections": [
+      {
+        "title_en": "Mathematical Derivation from Utility Function",
+        "title_fa": "استخراج ریاضی از تابع مطلوبیت کل",
+        "paragraphs_en": [
+          "Marginal benefit ($MB$) is defined as the first partial derivative of the total utility function $U(Q)$:",
+          "$$MB(Q) = \\frac{d U(Q)}{d Q}$$",
+          "Diminishing marginal utility requires $\\frac{d^2 U(Q)}{d Q^2} < 0$, guaranteeing a negatively sloped demand schedule."
+        ],
+        "paragraphs_fa": [
+          "منفعت نهایی از مشتق مرتبه اول تابع مطلوبیت کل $U(Q)$ استخراج می‌شود:",
+          "$$MB(Q) = \\frac{d U(Q)}{d Q}$$",
+          "منفی بودن مشتق دوم تضمین می‌کند که مطلوبیت حاصل از واحدهای بعدی پیوسته نزولی است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "منابع انسانی و روابط کارگری",
     "category_en": "Human Resources & Labor Relations"
   },
   {
     "id": 3517,
     "term_en": "Marginal Cost of Production",
-    "term_fa": "Marginal هزینه of Production (Marginal Cost of Production)",
+    "term_fa": "هزینه نهایی تولید (Marginal Cost of Production)",
     "letter": "M",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The marginal cost of production is the incremental total cost incurred by a business to manufacture, assemble, or deliver one additional unit of output, comprising variable material, labor, and direct operational expenses.",
+    "definition_fa": "هزینه نهایی تولید (Marginal Cost of Production) هزینه اضافه و افزایشی است که شرکت برای تولید، بسته‌بندی یا ارائه دقیقاً یک واحد محصول دیگر متحمل می‌شود و مستقیماً از تغییرات در هزینه‌های متغیر ناشی می‌گردد.",
+    "takeaways_en": [
+      "Calculated as: $MC = \\frac{\\Delta TC}{\\Delta Q} = \\frac{\\Delta VC}{\\Delta Q}$ since fixed costs do not vary with output.",
+      "Intersects both Average Variable Cost (AVC) and Average Total Cost (ATC) at their absolute minimum points.",
+      "Serves as the short-run competitive firm supply curve above the minimum AVC shutdown threshold."
+    ],
+    "takeaways_fa": [
+      "از تقسیم تغییرات هزینه کل بر تغییرات مقدار تولید حاصل می‌شود ($MC = \\frac{\\Delta TC}{\\Delta Q}$).",
+      "منحنی‌های هزینه متغیر متوسط (AVC) و هزینه کل متوسط (ATC) را دقیقاً در نقطه مینیمم آنها قطع می‌کند.",
+      "بخش صعودی آن بالاتر از حداقل AVC، منحنی عرضه کوتاه‌مدت بنگاه در بازار رقابتی را می‌سازد."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginalcostofproduction.asp",
     "slug": "marginalcostofproduction",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Marginal cost governs supply pricing, defining the break-even operating frontier for industrial manufacturers.",
+    "bottom_line_fa": "هزینه نهایی ساختار عرضه کالا را شکل داده و مبنای قیمت‌گذاری و تصمیمات افزایش تیراژ خطوط تولید است.",
+    "sections": [
+      {
+        "title_en": "Mathematical Derivation and Minimum Cost Intersections",
+        "title_fa": "فرمول مشتق و تقاطع در حداقل بهای تمام‌شده",
+        "paragraphs_en": [
+          "For total cost function $TC(Q) = TFC + TVC(Q)$:",
+          "$$MC(Q) = \\frac{d TC(Q)}{d Q} = \\frac{d TVC(Q)}{d Q}$$",
+          "When $MC < ATC$, average total cost declines; when $MC > ATC$, average total cost rises, establishing that $MC = ATC$ at $\\min(ATC)$."
+        ],
+        "paragraphs_fa": [
+          "هزینه نهایی برابر با مشتق تابع هزینه کل نسبت به تیراژ است:",
+          "$$MC(Q) = \\frac{d TC(Q)}{d Q}$$",
+          "تا زمانی که هزینه نهایی کمتر از میانگین هزینه باشد، بهای متوسط تولید نزولی خواهد بود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 3518,
     "term_en": "Marginal Profit",
-    "term_fa": "Marginal سود (Marginal Profit)",
+    "term_fa": "سود نهایی (Marginal Profit)",
     "letter": "M",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Marginal profit is the incremental net financial profit earned by an enterprise from the production and commercial sale of one additional unit of output, computed as marginal revenue minus marginal cost.",
+    "definition_fa": "سود نهایی (Marginal Profit) به سود خالصی گفته می‌شود که از فروش یک واحد اضافه محصول عاید شرکت می‌شود و برابر است با مابه‌التفاوت درآمد نهایی (MR) و هزینه نهایی (MC) آن واحد.",
+    "takeaways_en": [
+      "Calculated as: $M\\Pi = MR - MC$.",
+      "When marginal profit is positive ($M\\Pi > 0$), expanding production increases total corporate profits.",
+      "Total profit reaches its absolute mathematical zenith when marginal profit equals zero ($M\\Pi = 0$)."
+    ],
+    "takeaways_fa": [
+      "برابر با تفاضل درآمد نهایی و هزینه نهایی است: $M\\Pi = MR - MC$.",
+      "تا زمانی که سود نهایی مثبت است، گسترش تولید به افزایش سود کل شرکت منجر خواهد شد.",
+      "سود کل شرکت زمانی در نقطه اوج ریاضی قرار می‌گیرد که سود نهایی دقیقاً برابر صفر شود ($M\\Pi = 0$)."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginal-profit.asp",
     "slug": "marginal-profit",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Marginal profit dictates production expansion limits, driving output until incremental gain is exhausted.",
+    "bottom_line_fa": "سود نهایی خط‌کش تعیین تیراژ بهینه است و تا جایی که سود واحد بعدی صفر شود، تولید ادامه می‌یابد.",
+    "sections": [
+      {
+        "title_en": "Mathematical Optimization Formulation",
+        "title_fa": "فرمول ریاضی حداکثرسازی سود",
+        "paragraphs_en": [
+          "Let total profit be $\\Pi(Q)$. Marginal profit is its first derivative:",
+          "$$M\\Pi(Q) = \\frac{d \\Pi(Q)}{d Q} = MR(Q) - MC(Q)$$",
+          "The second-order condition for maximum requires: $\\frac{d^2 \\Pi}{d Q^2} = \\frac{d MR}{d Q} - \\frac{d MC}{d Q} < 0$."
+        ],
+        "paragraphs_fa": [
+          "سود نهایی مشتق اول تابع سود است و نقطه بهینه در جایی حاصل می‌شود که:",
+          "$$M\\Pi(Q) = MR(Q) - MC(Q) = 0$$",
+          "شرط مرتبه دوم منفی بودن مشتق دوم را برای حصول حداکثر سود الزامی می‌سازد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 3519,
     "term_en": "Marginal Propensity to Consume (MPC)",
-    "term_fa": "Marginal Propensity to Consume (MPC)",
+    "term_fa": "میل نهایی به مصرف (MPC - Marginal Propensity to Consume)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Marginal Propensity to Consume (MPC) is a macroeconomic metric that quantifies the proportion of an aggregate raise in disposable consumer income that a household or nation spends on the consumption of goods and services rather than saving.",
+    "definition_fa": "میل نهایی به مصرف (MPC) شاخصی بنیادین در اقتصاد کلان است که نشان می‌دهد با افزایش یک واحد درآمد قابل تصرف، خانوار یا جامعه چه نسبتی از آن را به مصرف کالاها و خدمات اختصاص داده و چه نسبتی را پس‌انداز می‌کند.",
+    "takeaways_en": [
+      "Expressed mathematically as: $MPC = \\frac{\\Delta C}{\\Delta Y}$.",
+      "Bounded typically between zero and one: $0 < MPC < 1$.",
+      "Determines the magnitude of the Keynesian national income fiscal multiplier: $k = \\frac{1}{1 - MPC}$."
+    ],
+    "takeaways_fa": [
+      "از تقسیم تغییرات در مصرف کل بر تغییرات در درآمد قابل تصرف محاسبه می‌شود: $MPC = \\frac{\\Delta C}{\\Delta Y}$.",
+      "همواره عددی بین صفر و یک است ($0 < MPC < 1$).",
+      "اندازه ضریب فزاینده مخارج کینزی را در اقتصاد تعیین می‌کند: $k = \\frac{1}{1 - MPC}$."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginalpropensitytoconsume.asp",
     "slug": "marginalpropensitytoconsume",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MPC reveals consumer spending sensitivity to incremental income, dictating the potency of government fiscal stimulus.",
+    "bottom_line_fa": "میل نهایی به مصرف اثرگذاری بسته‌های محرک مالی دولت بر تحریک تولید ناخالص داخلی را مشخص می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Keynesian Consumption Function and Multiplier",
+        "title_fa": "تابع مصرف کینزی و ضریب فزاینده درآمد ملی",
+        "paragraphs_en": [
+          "In the linear Keynesian consumption function $C = C_0 + c \\cdot Y_d$, parameter $c$ is the MPC:",
+          "$$MPC = \\frac{d C}{d Y_d} = c$$",
+          "Because all income is either consumed or saved ($MPC + MPS = 1$), the simple fiscal multiplier is:",
+          "$$k = \\frac{1}{1 - MPC} = \\frac{1}{MPS}$$"
+        ],
+        "paragraphs_fa": [
+          "در تابع مصرف کینزی $C = C_0 + c \\cdot Y_d$، ضریب $c$ همان میل نهایی به مصرف است:",
+          "با توجه به اینکه درآمد یا مصرف می‌شود یا پس‌انداز ($MPC + MPS = 1$)، ضریب تکاثر به صورت زیر تعریف می‌شود:",
+          "$$k = \\frac{1}{1 - MPC} = \\frac{1}{MPS}$$"
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3520,
     "term_en": "Marginal Propensity to Import (MPM)",
-    "term_fa": "Marginal Propensity to Import (MPM)",
+    "term_fa": "میل نهایی به واردات (MPM - Marginal Propensity to Import)",
     "letter": "M",
     "category": "تجارت بین‌الملل و فارکس (FX)",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Marginal Propensity to Import (MPM) is an open-economy macroeconomic metric measuring the fractional change in national import expenditures resulting from an incremental increase in real national disposable income or GDP.",
+    "definition_fa": "میل نهایی به واردات (MPM) سنجه‌ای در اقتصاد بین‌الملل و اقتصاد کلان باز است که نشان می‌دهد با افزایش یک واحد درآمد ملی یا تولید ناخالص داخلی، مخارج خرید کالاهای وارداتی خارجی چه میزان افزایش می‌یابد.",
+    "takeaways_en": [
+      "Calculated as: $MPM = \\frac{\\Delta M}{\\Delta Y}$.",
+      "Acts as a spending leakage from the domestic economy, dampening the national income fiscal multiplier.",
+      "Economies with elevated MPM experience substantial trade balance degradation during domestic economic expansions."
+    ],
+    "takeaways_fa": [
+      "از تقسیم تغییرات واردات بر تغییرات درآمد ملی به دست می‌آید: $MPM = \\frac{\\Delta M}{\\Delta Y}$.",
+      "به عنوان نشت نقدینگی از چرخه اقتصاد عمل کرده و اثر ضریب فزاینده مالی را کاهش می‌دهد.",
+      "کشورهای با MPM بالا در دوران رونق با تشدید کسری تراز تجاری مواجه می‌شوند."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginal-propensity-import-mpm.asp",
     "slug": "marginal-propensity-import-mpm",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MPM measures external import leakages, moderating domestic fiscal multiplier effects in globalized economies.",
+    "bottom_line_fa": "میل نهایی به واردات شدت وابستگی مصرف داخلی به کالاهای خارجی را در پی رشد درآمد نمایان می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Open-Economy Multiplier Formulation",
+        "title_fa": "ضریب فزاینده در اقتصاد کلان باز",
+        "paragraphs_en": [
+          "In an open economy with imports $M = M_0 + m \\cdot Y$ where $m = MPM$:",
+          "$$k_{\\text{open}} = \\frac{1}{1 - MPC + MPM} = \\frac{1}{MPS + MPM}$$",
+          "A higher MPM accelerates international trade leakages, reducing domestic economic stimulus retention."
+        ],
+        "paragraphs_fa": [
+          "در اقتصاد باز، ضریب فزاینده مخارج با حضور میل نهایی به واردات ($MPM$) تعدیل می‌گردد:",
+          "$$k_{\\text{open}} = \\frac{1}{MPS + MPM}$$",
+          "هر چه تمایل به واردات بیشتر باشد، بخشی از اثر تزریق بودجه دولتی به خارج از کشور منتقل می‌شود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "تجارت بین‌الملل و فارکس (FX)",
     "category_en": "Forex & International Trade"
   },
   {
     "id": 3521,
     "term_en": "Marginal Propensity to Save (MPS)",
-    "term_fa": "Marginal Propensity to Save (MPS)",
+    "term_fa": "میل نهایی به پس‌انداز (MPS - Marginal Propensity to Save)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Marginal Propensity to Save (MPS) is the proportion of an aggregate increase in disposable income that a household or economy channels into personal savings rather than immediate consumption expenditures.",
+    "definition_fa": "میل نهایی به پس‌انداز (MPS) نسبتی از افزایش درآمد قابل تصرف است که اشخاص یا کل جامعه به جای خرج کردن برای مصرف روزمره، به پس‌انداز و انباشت سرمایه اختصاص می‌دهند.",
+    "takeaways_en": [
+      "Expressed as: $MPS = \\frac{\\Delta S}{\\Delta Y}$.",
+      "Forms an identity relation with consumption: $MPC + MPS = 1$.",
+      "Determines national capital formation, loanable funds supply, and the denominator of the fiscal multiplier."
+    ],
+    "takeaways_fa": [
+      "از تقسیم تغییرات پس‌انداز بر تغییرات درآمد ملی حاصل می‌شود: $MPS = \\frac{\\Delta S}{\\Delta Y}$.",
+      "با میل نهایی به مصرف رابطه تکمیلی دارد: $MPC + MPS = 1$.",
+      "میزان تشکیل سرمایه ناخالص داخلی و عرضه وجوه وام‌دادنی در سیستم بانکی را هدایت می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginal-propensity-save.asp",
     "slug": "marginal-propensity-save",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MPS dictates personal capital retention, establishing the macroeconomic ceiling for domestic investment funding.",
+    "bottom_line_fa": "میل نهایی به پس‌انداز بستر تجهیز منابع مالی برای سرمایه‌گذاری‌های زیربنایی اقتصاد را فراهم می‌آورد.",
+    "sections": [
+      {
+        "title_en": "Mathematical Complementarity with MPC",
+        "title_fa": "رابطه مکمل ریاضی با میل به مصرف",
+        "paragraphs_en": [
+          "Because disposable income $Y_d$ strictly splits into consumption $C$ and savings $S$ ($Y_d = C + S$):",
+          "$$\\frac{\\Delta Y_d}{\\Delta Y_d} = \\frac{\\Delta C}{\\Delta Y_d} + \\frac{\\Delta S}{\\Delta Y_d} \\implies 1 = MPC + MPS$$",
+          "Thus, $MPS = 1 - MPC$, serving as the direct leakage in Keynesian income circulation."
+        ],
+        "paragraphs_fa": [
+          "از آنجا که کل درآمد قابل تصرف صرف مصرف یا پس‌انداز می‌شود:",
+          "$$1 = MPC + MPS \\implies MPS = 1 - MPC$$",
+          "که نشان می‌دهد افزایش میل به پس‌انداز به معنی کاهش مستقیم تمایل به مصرف است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3522,
     "term_en": "Marginal Rate of Substitution (MRS)",
-    "term_fa": "Marginal نرخ of Substitution (MRS) (Marginal Rate of Substitution (MRS))",
+    "term_fa": "نرخ نهایی جانشینی (MRS - Marginal Rate of Substitution)",
     "letter": "M",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Marginal Rate of Substitution (MRS) is the rate at which an individual consumer is willing to give up a specific quantity of one good in exchange for one additional unit of another good while maintaining an identical level of overall utility along an indifference curve.",
+    "definition_fa": "نرخ نهایی جانشینی (MRS) سنجه‌ای در نظریه مطلوبیت و رفتار مصرف‌کننده است که نشان می‌دهد خریدار حاضر است چه مقدار از یک کالا (Y) را فدا کند تا یک واحد اضافی از کالای دیگر (X) را به دست آورد بدون آنکه سطح مطلوبیت کل وی در طول منحنی بی‌تفاوتی تغییر کند.",
+    "takeaways_en": [
+      "Graphically represented by the negative slope of an indifference curve: $MRS_{xy} = -\\frac{d Y}{d X}$.",
+      "Equal to the ratio of the marginal utilities of the two goods: $MRS_{xy} = \\frac{MU_x}{MU_y}$.",
+      "Consumer utility maximization occurs where $MRS_{xy} = \\frac{P_x}{P_y}$ (tangency with the budget line)."
+    ],
+    "takeaways_fa": [
+      "از نظر هندسی شیب منفی منحنی بی‌تفاوتی مصرف‌کننده را نشان می‌دهد: $MRS_{xy} = -\\frac{d Y}{d X}$.",
+      "برابر با نسبت مطلوبیت‌های نهایی دو کالا است: $MRS_{xy} = \\frac{MU_x}{MU_y}$.",
+      "تعادل و حداکثر مطلوبیت مصرف‌کننده در نقطه مماس شدن منحنی بی‌تفاوتی با خط بودجه رخ می‌دهد: $MRS = \\frac{P_x}{P_y}$."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginal_rate_substitution.asp",
     "slug": "marginal_rate_substitution",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MRS measures consumer subjective tradeoffs between goods, anchoring microeconomic utility equilibrium.",
+    "bottom_line_fa": "نرخ نهایی جانشینی ترجیحات و انتخاب‌های مصرف‌کننده را در مواجهه با کمیابی کالاها مدل‌سازی می‌کند.",
+    "sections": [
+      {
+        "title_en": "Mathematical Derivation Along Indifference Curve",
+        "title_fa": "استخراج ریاضی در امتداد منحنی بی‌تفاوتی",
+        "paragraphs_en": [
+          "Along an indifference curve, total differential utility is constant ($d U = 0$):",
+          "$$d U = \\left(\\frac{\\partial U}{\\partial X}\\right) d X + \\left(\\frac{\\partial U}{\\partial Y}\\right) d Y = 0$$",
+          "$$-\\frac{d Y}{d X} = \\frac{\\partial U / \\partial X}{\\partial U / \\partial Y} = \\frac{MU_x}{MU_y} = MRS_{xy}$$"
+        ],
+        "paragraphs_fa": [
+          "در امتداد منحنی بی‌تفاوتی، دیفرانسیل کل مطلوبیت برابر صفر است:",
+          "$$MRS_{xy} = -\\frac{d Y}{d X} = \\frac{MU_x}{MU_y}$$",
+          "که نشان می‌دهد نرخ جانشینی دقیقاً برابر با نسبت مطلوبیت‌های نهایی دو کالا است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
@@ -306215,20 +306627,43 @@
   {
     "id": 3524,
     "term_en": "Marginal Rate of Transformation",
-    "term_fa": "Marginal نرخ of Transformation (Marginal Rate of Transformation)",
+    "term_fa": "نرخ نهایی تبدیل (MRT - Marginal Rate of Transformation)",
     "letter": "M",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Marginal Rate of Transformation (MRT) is the rate at which an economy or industrial enterprise must reduce production of one good to produce one additional unit of an alternative good using existing fixed resources along the Production Possibility Frontier (PPF).",
+    "definition_fa": "نرخ نهایی تبدیل (MRT) سنجه‌ای در اقتصاد خرد و نظریه تولید است که نشان می‌دهد یک بنگاه یا اقتصاد برای تولید یک واحد اضافی از یک کالا، ناگزیر است از تولید چه مقدار از کالای دیگر به دلیل محدودیت منابع صرف‌نظر کند؛ این مفهوم نشان‌دهنده شیب منحنی مرز امکانات تولید (PPF) است.",
+    "takeaways_en": [
+      "Represents the absolute slope of the Production Possibility Frontier (PPF): $MRT_{xy} = -\\frac{d Y}{d X}$.",
+      "Equal to the ratio of the marginal costs of producing the two goods: $MRT_{xy} = \\frac{MC_x}{MC_y}$.",
+      "Pareto efficiency in general equilibrium requires: $MRS = MRT$ across all economic agents."
+    ],
+    "takeaways_fa": [
+      "نشان‌دهنده قدر مطلق شیب منحنی مرز امکانات تولید (PPF) است: $MRT_{xy} = -\\frac{d Y}{d X}$.",
+      "برابر با نسبت هزینه‌های نهایی تولید دو کالا است: $MRT_{xy} = \\frac{MC_x}{MC_y}$.",
+      "کارایی پارتو در تعادل عمومی مستلزم برابری نرخ نهایی جانشینی مصرف با نرخ نهایی تبدیل تولید است ($MRS = MRT$)."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginal_rate_transformation.asp",
     "slug": "marginal_rate_transformation",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MRT measures production opportunity cost, defining the technological limits of multi-product resource conversion.",
+    "bottom_line_fa": "نرخ نهایی تبدیل هزینه فرصت تولید را در تخصیص بهینه منابع کمیاب در اقتصاد به تصویر می‌کشد.",
+    "sections": [
+      {
+        "title_en": "Cost Derivation and General Equilibrium",
+        "title_fa": "استخراج هزینه نهایی و تعادل عمومی اقتصاد",
+        "paragraphs_en": [
+          "Assuming full resource utilization ($C = C_x(X) + C_y(Y)$), resource conservation implies:",
+          "$$d C = MC_x \\cdot d X + MC_y \\cdot d Y = 0 \\implies -\\frac{d Y}{d X} = \\frac{MC_x}{MC_y} = MRT_{xy}$$",
+          "Productive allocative efficiency requires $MRT_{xy} = \\frac{P_x}{P_y}$."
+        ],
+        "paragraphs_fa": [
+          "با فرض به‌کارگیری کامل منابع تولید، نرخ تبدیل برابر با نسبت هزینه‌های نهایی خواهد بود:",
+          "$$MRT_{xy} = \\frac{MC_x}{MC_y}$$",
+          "تخصیص بهینه زمانی محقق می‌شود که نرخ تبدیل فیزیکی با نسبت قیمت‌های بازار برابر گردد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
@@ -306424,20 +306859,43 @@
   {
     "id": 3526,
     "term_en": "Marginal Revenue Product (MRP)",
-    "term_fa": "Marginal درآمد عملیاتی Product (MRP) (Marginal Revenue Product (MRP))",
+    "term_fa": "تولید درآمد نهایی نیروی کار / نهاده (MRP - Marginal Revenue Product)",
     "letter": "M",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Marginal Revenue Product (MRP) is the incremental monetary revenue generated by a firm when employing one additional unit of a specific resource or factor input (most commonly labor), calculated as Marginal Product multiplied by Marginal Revenue.",
+    "definition_fa": "تولید درآمد نهایی (MRP) به درآمد پولی اضافه‌ای گفته می‌شود که با به‌کارگیری یک واحد بیشتر از یک نهاده تولیدی (غالباً نیروی کار) برای بنگاه ایجاد می‌شود و از ضرب تولید نهایی آن عامل (MP) در درآمد نهایی حاصل از فروش محصول (MR) محاسبه می‌گردد.",
+    "takeaways_en": [
+      "Calculated as: $MRP_L = MP_L \\times MR = \\frac{\\Delta TR}{\\Delta L}$.",
+      "Under perfect competition where $MR = P$, $MRP$ equals the Value of Marginal Product ($VMP_L = MP_L \\times P$).",
+      "Firms maximize profits by hiring labor up to the threshold where $MRP_L = W$ (wage rate)."
+    ],
+    "takeaways_fa": [
+      "از ضرب تولید نهایی در درآمد نهایی حاصل می‌شود: $MRP_L = MP_L \\times MR = \\frac{\\Delta TR}{\\Delta L}$.",
+      "در بازار رقابت کامل که قیمت با درآمد نهایی برابر است، معادل ارزش تولید نهایی ($VMP_L = MP_L \\times P$) خواهد بود.",
+      "بنگاه برای حداکثرسازی سود تا نقطه‌ای نیروی کار استخدام می‌کند که درآمد نهایی کارگر با دستمزد وی برابر شود ($MRP_L = W$)."
+    ],
     "url": "https://www.investopedia.com/terms/m/marginal-revenue-product-mrp.asp",
     "slug": "marginal-revenue-product-mrp",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MRP dictates factor demand curves, establishing wage determination and optimal labor employment levels.",
+    "bottom_line_fa": "تولید درآمد نهایی منحنی تقاضای نیروی کار بنگاه را شکل داده و سقف دستمزد پرداختی عقلایی را تعیین می‌کند.",
+    "sections": [
+      {
+        "title_en": "Labor Hiring Optimization Rule",
+        "title_fa": "قاعده بهینه استخدام نیروی کار در بنگاه",
+        "paragraphs_en": [
+          "A profit-maximizing firm evaluates labor input ($L$) where profit is $\\Pi = TR(Q(L)) - W \\cdot L$:",
+          "$$\\frac{d \\Pi}{d L} = \\left(\\frac{d TR}{d Q}\\right) \\left(\\frac{d Q}{d L}\\right) - W = 0 \\implies MR \\cdot MP_L = W$$",
+          "Thus, $MRP_L = W$ defines the optimal employment equilibrium."
+        ],
+        "paragraphs_fa": [
+          "شرط بهینگی سود نسبت به تعداد نیروی کار ($L$) ایجاب می‌کند که:",
+          "$$MRP_L = MR \\cdot MP_L = W$$",
+          "که نشان می‌دهد استخدام تا جایی ادامه می‌یابد که عایدی کارگر دقیقاً نرخ دستمزد بازار ($W$) را پوشش دهد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
@@ -331862,220 +332320,470 @@
   {
     "id": 4050,
     "term_en": "Offering Circular",
-    "term_fa": "Offering Circular",
+    "term_fa": "دفترچه اطلاعات عرضه / بیانیه پذیره‌نویسی (Offering Circular)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An offering circular is a formal disclosure document provided to prospective investors that details the financial condition, management biography, business operations, and terms of a new securities offering, typically utilized in exempt transactions such as Regulation A+ or municipal bond issues.",
+    "definition_fa": "دفترچه اطلاعات عرضه (Offering Circular) سند افشای رسمی و مصوب نهادهای ناظر مالی است که برای سرمایه‌گذاران بالقوه تشریح می‌کند شرکت چه نوع اوراق بهاداری را با چه قیمت، شرایط بازپرداخت، ریسک‌های تجاری و صورت‌های مالی منتشر می‌نماید و معمولاً در عرضه‌های معاف از ثبت کامل (نظیر آیین‌نامه Regulation A+ یا اوراق شهرداری‌ها) به کار می‌رود.",
+    "takeaways_en": [
+      "Functions as an abbreviated prospectus for securities exempt from standard full SEC registration.",
+      "Commonly used in Regulation A+ Tier 1 and Tier 2 small business capital raises.",
+      "Contains essential disclosures regarding risk factors, use of capital proceeds, and dilution.",
+      "Protects issuers by establishing formal compliance disclosure defenses against securities fraud allegations."
+    ],
+    "takeaways_fa": [
+      "به عنوان امیدنامه مختصر برای اوراق معاف از تشریفات ثبت کامل در کمیسیون بورس (SEC) عمل می‌کند.",
+      "در افزایش سرمایه شرکت‌های متوسط و استارتاپ‌ها تحت آیین‌نامه Reg A+ کاربرد گسترده دارد.",
+      "شامل گزارش شفاف نحوه مصرف وجوه جمع‌آوری‌شده، ریسک‌های سرمایه‌گذاری و رقیق‌شدگی سهام است.",
+      "با افشای حقایق بنیادین، از ناشر در برابر ادعاهای تقلب یا پنهان‌کاری در مراجع قضایی صیانت می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/o/offeringcircular.asp",
     "slug": "offeringcircular",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "An offering circular provides necessary investor protections while streamlining regulatory costs for exempt capital formation.",
+    "bottom_line_fa": "دفترچه اطلاعات عرضه ضمن تسهیل فرآیند تأمین مالی شرکت‌های نوپا، شفافیت اطلاعاتی را برای خریداران اوراق تضمین می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Regulatory Framework and Capital Limits",
+        "title_fa": "چارچوب مقرراتی و سقف‌های سرمایه‌پذیری",
+        "paragraphs_en": [
+          "Under SEC Regulation A+, Tier 1 permits raises up to $20 million with minimal ongoing reporting, while Tier 2 permits up to $75 million in a 12-month period ($R_{\\text{max}} = \\$75\\text{M}$) with mandatory audited financial statements."
+        ],
+        "paragraphs_fa": [
+          "طبق آیین‌نامه A+، در سطح یک امکان جذب تا سقف ۲۰ میلیون دلار و در سطح دو تا سقف ۷۵ میلیون دلار در سال با ارائه صورت‌های مالی حسابرسی‌شده فراهم شده است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4051,
     "term_en": "Offering Memorandum",
-    "term_fa": "Offering Memorandum",
+    "term_fa": "یادداشت عرضه اختصاصی (Offering Memorandum / PPM)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An offering memorandum, commonly termed a Private Placement Memorandum (PPM), is a legal disclosure document prepared for prospective accredited investors in an unregistered private placement of securities (e.g., under Regulation D Rule 506), detailing corporate risks, deal structures, and financial projections.",
+    "definition_fa": "یادداشت عرضه اختصاصی یا PPM (Private Placement Memorandum) سند حقوقی و افشاگرانه‌ای است که برای پذیره‌نویسی خصوصی اوراق بهادار و جذب سرمایه از سرمایه‌گذاران معتبر و نهادی (فاقد عرضه عمومی در تالار بورس) تدوین می‌شود و شامل ساختار معامله، ریسک‌های پروژه و مدل‌های ارزش‌گذاری است.",
+    "takeaways_en": [
+      "Serves as the private market equivalent of an initial public offering (IPO) prospectus.",
+      "Mandatory under Regulation D Rule 506(b) and 506(c) private placements.",
+      "Strictly tailored for sophisticated institutional buyers and high-net-worth accredited investors.",
+      "Exempt from SEC advance pre-approval, accelerating transaction timing."
+    ],
+    "takeaways_fa": [
+      "معادل امیدنامه عرضه عمومی سهام در بازار معاملات و صندوق‌های خصوصی (Private Equity) است.",
+      "الزام حقوقی عرضه‌های خصوصی تحت ماده ۵۰۶ آیین‌نامه D کمیسیون بورس آمریکا به شمار می‌رود.",
+      "منحصراً برای سرمایه‌گذاران حقوقی، صندوق‌های جسورانه و اشخاص دارای صلاحیت مالی بالا ارسال می‌شود.",
+      "نیازی به اخذ تأییدیه پیشین بورس نداشته و سرعت تأمین مالی را به شدت افزایش می‌دهد."
+    ],
     "url": "https://www.investopedia.com/terms/o/offeringmemorandum.asp",
     "slug": "offeringmemorandum",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A PPM establishes contractually binding disclosures in private financings, mitigating investor fraud litigation risks.",
+    "bottom_line_fa": "یادداشت عرضه اختصاصی سند محوری جذب سرمایه خصوصی است که حقوق سرمایه‌پذیر و سرمایه‌گذار نهادی را تثبیت می‌کند.",
+    "sections": [
+      {
+        "title_en": "Core Structural Components",
+        "title_fa": "بخش‌های ساختاری اصلی در یادداشت عرضه",
+        "paragraphs_en": [
+          "A standard PPM includes a formal Term Sheet detailing share class privileges, voting rights, liquidation preferences, management biographical credentials, and specific capital risk factors."
+        ],
+        "paragraphs_fa": [
+          "سند PPM شامل برگه شروط توافق (Term Sheet)، مشخصات حقوق رأی سهام، اولویت تسویه در ورشکستگی و برنامه‌های مالی پروژه است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4052,
     "term_en": "Offering Price",
-    "term_fa": "Offering قیمت (Offering Price)",
+    "term_fa": "قیمت عرضه عمومی اولیه / قیمت پایه عرضه (Offering Price)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The offering price (Public Offering Price - POP) is the specific per-share dollar price at which an investment banking underwriting syndicate sells newly issued shares of common stock to primary institutional and retail investors during an initial public offering (IPO) or secondary follow-on offering.",
+    "definition_fa": "قیمت عرضه (Offering Price / POP) نرخ قطعی هر برگ سهم جدید است که توسط سندیکای متعهدین پذیره‌نویسی و بانک‌های سرمایه‌گذاری در جریان عرضه عمومی اولیه (IPO) یا افزایش سرمایه‌های عمومی در بازار اولیه تعیین شده و سهام در آن قیمت به خریداران واگذار می‌گردد.",
+    "takeaways_en": [
+      "Determined through institutional book-building, DCF modeling, and comparable peer valuation multiples.",
+      "Public trading opens on the secondary exchange above, at, or below the offering price.",
+      "First-day price spikes above POP generate IPO underpricing returns captured by primary allotment recipients.",
+      "Underwriters receive an underwriting gross spread deducted from the gross offering proceeds."
+    ],
+    "takeaways_fa": [
+      "از طریق فرآیند بوک‌بیلدینگ (Book-Building)، تنزیل جریانات نقدی (DCF) و مقایسه نسبت‌های مالی هم‌گروه‌ها تعیین می‌شود.",
+      "معاملات ثانویه تالار بورس بلافاصله پس از کشف قیمت اولیه با دامنه نوسان حول این قیمت آغاز می‌گردد.",
+      "جهش قیمت در اولین روز معامله نشان‌دهنده ارزان‌فروشی اولیه (Underpricing) و سود شیرین خریداران مرحله اول است.",
+      "کارمزد سندیکای بانک سرمایه‌گذاری از مابه‌التفاوت قیمت عرضه و وجوه تسلیمی به شرکت تأمین می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/o/offeringprice.asp",
     "slug": "offeringprice",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The offering price anchors the primary capital raise valuation, establishing market capitalization upon public flotation.",
+    "bottom_line_fa": "قیمت عرضه ارزش‌گذاری پایه شرکت را رقم زده و ارزش بازار ورودی بنگاه را در تالار بورس تعریف می‌نماید.",
+    "sections": [
+      {
+        "title_en": "IPO Underpricing and First-Day Return",
+        "title_fa": "ارزان‌فروشی اولیه و محاسبه بازده روز نخست",
+        "paragraphs_en": [
+          "The initial abnormal first-day return ($R_{\\text{day1}}$) captures underpricing:",
+          "$$R_{\\text{day1}} = \\frac{P_{\\text{close, day 1}} - P_{\\text{offer}}}{P_{\\text{offer}}} \\times 100\\%$$",
+          "Net proceeds to the issuing firm equal $Q_{\\text{shares}} \\times (P_{\\text{offer}} - \\text{Gross Spread})$.",
+          "Historical academic studies show an average global IPO underpricing spread ranging between 10% and 20%."
+        ],
+        "paragraphs_fa": [
+          "بازده روز اول ناشی از ارزان‌فروشی در عرضه اولیه از فرمول زیر به دست می‌آید:",
+          "$$R_{\\text{day1}} = \\frac{P_{\\text{پایانی روز اول}} - P_{\\text{قیمت عرضه}}}{P_{\\text{قیمت عرضه}}} \\times 100\\%$$",
+          "خالص وجوه دریافتی شرکت ناشر از ضرب تعداد سهام در قیمت عرضه منهای کارمزد پذیره‌نویسی به دست می‌آید."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4053,
     "term_en": "Office of Foreign Asset Control (OFAC)",
-    "term_fa": "Office of Foreign دارایی Control (OFAC) (Office of Foreign Asset Control (OFAC))",
+    "term_fa": "دفتر کنترل دارایی‌های خارجی خزانه‌داری آمریکا (OFAC)",
     "letter": "O",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Office of Foreign Assets Control (OFAC) is a financial intelligence and enforcement agency of the U.S. Department of the Treasury that administers and enforces economic and trade sanctions based on U.S. foreign policy and national security goals against targeted foreign countries, terrorists, and international narcotics traffickers.",
+    "definition_fa": "دفتر کنترل دارایی‌های خارجی (OFAC) یک سازمان نظارتی، اطلاعات مالی و مجری قانون در وزارت خزانه‌داری ایالات متحده است که وظیفه اعمال تحریم‌های اقتصادی، تجاری، بانکی و توقیف دارایی‌های هدفمند را در سطح بین‌المللی بر عهده داشته و رعایت مصوبات آن برای نظام بانکی جهان الزام‌آور است.",
+    "takeaways_en": [
+      "Maintains the Specially Designated Nationals (SDN) and Blocked Persons list.",
+      "Violations carry strict civil liability and massive financial penalties for global commercial banks.",
+      "Enforces both primary sanctions (U.S. entities) and extraterritorial secondary sanctions on global SWIFT transactions.",
+      "Financial institutions deploy automated AML/OFAC screening algorithms on all wire transfers."
+    ],
+    "takeaways_fa": [
+      "لیست سیاه تحریمی معروف به اشخاص ویژه تعیین‌شده (SDN List) را منتشر و به‌روزرسانی می‌کند.",
+      "نقض قوانین آن جریمه‌های سرسام‌آور نقدی و تعلیق مجوزهای دلاری برای بانک‌های بین‌المللی در پی دارد.",
+      "هم تحریم‌های اولیه و هم تحریم‌های ثانویه برون‌مرزی را بر تسویه تراکنش‌های مالی در شبکه بین‌المللی اعمال می‌کند.",
+      "تمام بانک‌ها موظف به غربال‌گری آنی نام ذینفعان حواله‌های ارزی با پایگاه داده اوفک هستند."
+    ],
     "url": "https://www.investopedia.com/terms/o/ofac.asp",
     "slug": "ofac",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OFAC weaponizes sovereign dollar clearing infrastructure to project financial foreign policy and enforce economic sanctions.",
+    "bottom_line_fa": "اوفک با تسلط بر شاهرگ‌های تسویه دلار، سیاست‌های تحریم اقتصادی را در سطح شبکه مالی بین‌الملل به اجرا می‌گذارد.",
+    "sections": [
+      {
+        "title_en": "Strict Liability Enforcement Dynamics",
+        "title_fa": "مسئولیت مطلق حقوقی و الگوریتم‌های غربال‌گری",
+        "paragraphs_en": [
+          "OFAC penalties operate under strict liability regimes: financial institutions are liable regardless of whether the violation was intentional or accidental, mandating automated transaction matching algorithms with zero tolerance."
+        ],
+        "paragraphs_fa": [
+          "مسئولیت در قبال تحریم‌های اوفک از نوع «مسئولیت مطلق» است؛ بدین معنا که حتی عدم سوءنیت یا اشتباه سهوی نیز مانع از تحمیل جریمه‌های سنگین نقدی بر مؤسسات مالی نخواهد شد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 4054,
     "term_en": "Office of the Comptroller of the Currency (OCC)",
-    "term_fa": "Office of the Comptroller of the Currency (OCC)",
+    "term_fa": "دفتر کنترل‌کننده ارز آمریکا (OCC)",
     "letter": "O",
     "category": "تجارت بین‌الملل و فارکس (FX)",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Office of the Comptroller of the Currency (OCC) is an independent bureau of the U.S. Department of the Treasury that charters, regulates, and supervises all national banks, federal savings associations, and federal branches of foreign banks, ensuring a safe and sound banking system.",
+    "definition_fa": "دفتر کنترل‌کننده ارز (OCC) اداره‌ای مستقل درون وزارت خزانه‌داری ایالات متحده است که وظیفه صدور مجوز، وضع مقررات بانکی و بازرسی مداوم تمامی بانک‌های ملی سراسری و مؤسسات پس‌انداز فدرال را جهت تضمین سلامت ساختار مالی و کفایت سرمایه بر عهده دارد.",
+    "takeaways_en": [
+      "Charters and supervises large institutions holding roughly two-thirds of all U.S. commercial bank assets.",
+      "Conducts onsite periodic examinations evaluating capital adequacy, asset quality, management, earnings, liquidity, and sensitivity (CAMELS).",
+      "Enforces strict anti-money laundering (BSA/AML) compliance and fair lending laws (CRA).",
+      "Possesses authority to remove executive bank officers and issue cease-and-desist orders."
+    ],
+    "takeaways_fa": [
+      "بر بانک‌های ملی آمریکا که بیش از دو سوم کل دارایی‌های بانکی کشور را در اختیار دارند نظارت مستقیم دارد.",
+      "ارزیابی‌های دوره‌ای خود را بر مبنای استاندارد نظارتی CAMELS (سرمایه، کیفیت دارایی، مدیریت، سودآوری، نقدینگی و حساسیت) انجام می‌دهد.",
+      "مجری قوانین مبارزه با پولشویی (BSA/AML) و قانون شفافیت سرمایه‌گذاری در جوامع محلی (CRA) است.",
+      "اختیار قانونی عزل مدیران متخلف بانکی، پلمب شعب و صدور احکام توقف عملیات را داراست."
+    ],
     "url": "https://www.investopedia.com/terms/o/office-comptroller-currency-occ.asp",
     "slug": "office-comptroller-currency-occ",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The OCC safeguards systemic liquidity and prudential safety across the national commercial banking architecture.",
+    "bottom_line_fa": "سازمان OCC با نظارت احتیاطی مستمر، پایداری ساختاری شبکه بانکداری ملی و حمایت از سپرده‌گذاران را تضمین می‌کند.",
+    "sections": [
+      {
+        "title_en": "CAMELS Regulatory Rating System",
+        "title_fa": "سیستم رتبه‌بندی نظارتی CAMELS در ارزیابی بانک‌ها",
+        "paragraphs_en": [
+          "Bank examination scores range from 1 (soundest) to 5 (critically deficient) across six core operational pillars:",
+          "$$\\text{CAMELS} = \\{ \\text{Capital}, \\text{Assets}, \\text{Management}, \\text{Earnings}, \\text{Liquidity}, \\text{Sensitivity} \\}$$",
+          "Institutions scoring 3 or worse face mandatory corrective supervisory capital plans."
+        ],
+        "paragraphs_fa": [
+          "بازرسان OCC بانک‌ها را در ۶ بعد کلیدی از نمره ۱ (عالی) تا ۵ (بحرانی) ارزیابی می‌کنند:",
+          "کفایت سرمایه، کیفیت سبد تسهیلات، کارایی مدیریت، کیفیت سودآوری، کفایت نقدینگی و حساسیت به ریسک بازار."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "تجارت بین‌الملل و فارکس (FX)",
     "category_en": "Forex & International Trade"
   },
   {
     "id": 4055,
     "term_en": "Office of the Superintendent of Financial Institutions (OSFI)",
-    "term_fa": "Office of the Superintendent of Financial Institutions (OSFI)",
+    "term_fa": "اداره بازرسی مؤسسات مالی کانادا (OSFI)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Office of the Superintendent of Financial Institutions (OSFI) is the sole independent federal regulatory agency in Canada responsible for supervising and regulating all federally registered commercial banks, insurance companies, trust corporations, and private pension plans.",
+    "definition_fa": "اداره بازرسی مؤسسات مالی (OSFI) نهاد مستقل فدرال ناظر بر بخش مالی در کانادا است که مسئولیت بازرسی، تدوین ضوابط توانگری مالی و پایش ریسک تمامی بانک‌های تجاری، شرکت‌های بیمه اتکایی، مؤسسات اعتباری و صندوق‌های بازنشستگی فدرال را بر عهده دارد.",
+    "takeaways_en": [
+      "Regulates Canada's 'Big Six' schedule I domestic banks under Basel III capital accords.",
+      "Enforces strict residential mortgage underwriting standards including the B-20 Mortgage Stress Test.",
+      "Supervises life and property-casualty insurance solvency through the LICAT framework.",
+      "Maintains Canadian banking reputation as one of the most structurally stable financial systems globally."
+    ],
+    "takeaways_fa": [
+      "نظارت بر ۶ بانک بزرگ تجاری کانادا را بر اساس آخرین استانداردهای کفایت سرمایه بال ۳ (Basel III) اعمال می‌کند.",
+      "آزمون استرس سخت‌گیرانه وام مسکن (Guideline B-20) را برای مهار بدهی خانوارها در بازار املاک وضع کرد.",
+      "توانگری مالی شرکت‌های بیمه را از طریق مدل جامع LICAT پایش می‌نماید.",
+      "عملکرد مقتدرانه آن باعث شد نظام بانکی کانادا در بحران مالی ۲۰۰۸ کمترین آسیب را در میان کشورهای توسعه‌یافته ببیند."
+    ],
     "url": "https://www.investopedia.com/terms/o/office-of-the-superintendent-of-financial-institutions-osfi.asp",
     "slug": "office-of-the-superintendent-of-financial-institutions-osfi",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OSFI enforces conservative prudential banking and insurance solvency, anchoring Canadian macroeconomic stability.",
+    "bottom_line_fa": "این نهاد با اعمال مقررات محافظه‌کارانه و کنترل اهرم بدهی، استحکام کم‌نظیر بخش مالی کانادا را رقم زده است.",
+    "sections": [
+      {
+        "title_en": "Guideline B-20 Mortgage Stress Test Rule",
+        "title_fa": "آزمون استرس وام مسکن بر اساس دستورالعمل B-20",
+        "paragraphs_en": [
+          "Under OSFI Guideline B-20, mortgage borrowers must qualify at the qualifying interest rate ($r_{\\text{qual}}$):",
+          "$$r_{\\text{qual}} = \\max\\left(r_{\\text{contract}} + 2.0\\%, \\quad r_{\\text{benchmark}} \\right)$$",
+          "preventing consumer default cascades in the event of rising central bank interest rates."
+        ],
+        "paragraphs_fa": [
+          "طبق آزمون استرس مسکن، متقاضی وام باید توانایی بازپرداخت اقساط را با نرخی حداقل ۲ درصد بالاتر از نرخ توافقی قرارداد اثبات کند تا در صورت جهش نرخ بهره دچار نکول نشود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4056,
     "term_en": "Office of Thrift Supervision (OTS)",
-    "term_fa": "Office of Thrift Supervision (OTS)",
+    "term_fa": "دفتر نظارت بر مؤسسات پس‌انداز و وام مسکن (OTS)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Office of Thrift Supervision (OTS) was a former bureau of the U.S. Department of the Treasury established by the Financial Institutions Reform, Recovery, and Enforcement Act of 1989 (FIRREA) to regulate federal savings and loan associations (thrifts), abolished in 2011 by the Dodd-Frank Act.",
+    "definition_fa": "دفتر نظارت بر مؤسسات پس‌انداز و وام (OTS) یک سازمان فدرال در وزارت خزانه‌داری آمریکا بود که در سال ۱۹۸۹ پس از بحران بزرگ مؤسسات پس‌انداز و وام (S&L Crisis) تأسیس شد تا بر این تعاونی‌های اعتباری مسکن نظارت کند، اما پس از بحران مسکن ۲۰۰۸ به دلیل سهل‌انگاری در نظارت منحل و وظایف آن به سازمان OCC منتقل گردید.",
+    "takeaways_en": [
+      "Created by FIRREA in 1989 to replace the defunct Federal Home Loan Bank Board.",
+      "Supervised massive savings associations including Washington Mutual, IndyMac, and AIG's thrift arm.",
+      "Criticized heavily for regulatory capture, leniency toward subprime mortgage originations, and failure to stop collapse.",
+      "Formally dissolved on July 21, 2011, under Title III of the Dodd-Frank Wall Street Reform Act."
+    ],
+    "takeaways_fa": [
+      "پس از ورشکستگی‌های گسترده دهه ۸۰ جهت برقراری انضباط در وام‌های پس‌انداز مسکن پایه‌گذاری شد.",
+      "بر غول‌های مالی بحران‌زده نظیر واشنگتن میوچوال، ایندی‌مک و واحد بانکی شرکت بیمه AIG نظارت داشت.",
+      "به دلیل سهل‌انگاری در نظارت بر وام‌های بدون وثیقه (Subprime) و جانبداری از مؤسسات تحت نظارت به شدت مورد انتقاد قرار گرفت.",
+      "در سال ۲۰۱۱ بر اساس قانون اصلاح ساختار وال‌استریت (داد-فرانک) منحل و ادغام شد."
+    ],
     "url": "https://www.investopedia.com/terms/o/ots.asp",
     "slug": "ots",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The OTS illustrates regulatory failure in subprime mortgage oversight, prompting modern supervisory consolidation into the OCC.",
+    "bottom_line_fa": "انحلال OTS نماد بازنگری بنیادین در ساختار نظارت بر بخش مسکن و پایان چنددستگی در رگولاتوری بانکی آمریکا بود.",
+    "sections": [
+      {
+        "title_en": "Regulatory Arbitrage and Dissolution Under Dodd-Frank",
+        "title_fa": "آربیتراژ نظارتی و ادغام بر اساس قانون داد-فرانک",
+        "paragraphs_en": [
+          "OTS relied heavily on examination fees collected directly from the thrifts it regulated, generating structural conflict of interest. Dodd-Frank Title III eliminated this arbitrage by transferring all powers to the OCC and FDIC."
+        ],
+        "paragraphs_fa": [
+          "وابستگی بودجه این سازمان به کارمزدهای دریافتی از همان بانک‌های تحت نظارت، تضاد منافع ساختاری ایجاد کرده بود که کنگره با ادغام آن در OCC به این شکاف نظارتی پایان داد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4057,
     "term_en": "Official Settlement Account",
-    "term_fa": "Official تسویه حساب حساب (Official Settlement Account)",
+    "term_fa": "حساب تسویه رسمی / حساب ذخایر بین‌المللی بانک مرکزی (Official Settlement Account)",
     "letter": "O",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The official settlement account (official settlements balance) is an essential sub-component of a nation's Balance of Payments (BOP) accounting ledger that records transactions made by the sovereign central bank in international reserve assets, including gold, foreign currencies, Special Drawing Rights (SDRs), and IMF reserve positions.",
+    "definition_fa": "حساب تسویه رسمی (Official Settlement Account) بخشی کلیدی در تراز پرداخت‌های خارجی (BOP) یک کشور است که کلیه مبادلات، خرید و فروش‌ها و انتقالات دارایی‌های ذخیره بین‌المللی توسط بانک مرکزی شامل طلا، ارزهای جهان‌روا، حق برداشت مخصوص (SDR) و موقعیت ذخیره نزد صندوق بین‌المللی پول را ثبت می‌کند.",
+    "takeaways_en": [
+      "Balances the sum of the Current Account ($CA$) and Capital/Financial Account ($KA$): $CA + KA + OSB = 0$.",
+      "Reflects official foreign exchange intervention by the monetary authority to stabilize domestic exchange rates.",
+      "Accumulates foreign reserves during persistent sovereign trade and capital account surpluses.",
+      "Drains rapidly during speculative currency crises when defending a pegged nominal currency rate."
+    ],
+    "takeaways_fa": [
+      "ترازکننده حساب جاری و حساب سرمایه در معادله تراز پرداخت‌ها است: $CA + KA + OSB = 0$.",
+      "انعکاس‌دهنده مستقیم مداخلات ارزی بانک مرکزی در بازار فارکس برای مهار نوسان یا دفاع از ارزش پول ملی است.",
+      "در دوران مازاد تراز تجاری و جذب سرمایه خارجی، نشان‌دهنده افزایش حجم ذخایر ارزی کشور است.",
+      "در هنگام حملات سفته‌بازانه ارزی، خالی شدن سریع این حساب علامت نزدیک شدن به بحران ارزی است."
+    ],
     "url": "https://www.investopedia.com/terms/o/official-settlement-account.asp",
     "slug": "official-settlement-account",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The official settlement balance records central bank reserve intervention, balancing sovereign external payments.",
+    "bottom_line_fa": "حساب تسویه رسمی ترازنامه ارزی بانک مرکزی در مواجهه با دنیای خارج و سنجه ذخایر استراتژیک کشور است.",
+    "sections": [
+      {
+        "title_en": "Balance of Payments Accounting Identity",
+        "title_fa": "اتحاد حسابداری تراز پرداخت‌های بین‌المللی",
+        "paragraphs_en": [
+          "Under standard IMF balance of payments identity constraints:",
+          "$$\\text{Current Account (CA)} + \\text{Capital Account (KA)} + \\text{Official Settlements Balance (OSB)} = 0$$",
+          "$$\\text{OSB} = -(\\text{CA} + \\text{KA}) = \\Delta \\text{Foreign Exchange Reserves}$$",
+          "A negative OSB denotes a net accumulation of sovereign foreign reserve assets by the central bank."
+        ],
+        "paragraphs_fa": [
+          "در حسابداری تراز پرداخت‌ها، جمع سه بخش باید دقیقاً صفر شود:",
+          "تغییرات ذخایر رسمی ارزی بانک مرکزی کسری یا مازاد مبادلات تجاری و سرمایه‌ای بخش خصوصی و دولتی را پوشش می‌دهد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 4058,
     "term_en": "Official Strike",
-    "term_fa": "Official Strike",
+    "term_fa": "اعتصاب رسمی کارگری (Official Strike)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An official strike is a collective, organized cessation of work by unionized employees that has been formally authorized, voted on, and endorsed by the executive governing leadership of a recognized trade union in full compliance with statutory labor laws.",
+    "definition_fa": "اعتصاب رسمی (Official Strike) به توقف هماهنگ و دسته‌جمعی کار توسط کارگران عضو اتحادیه صنفی گفته می‌شود که طبق موازین قانونی و اساسنامه اتحادیه، به تصویب اکثریت اعضا رسیده و توسط کادر رهبری سندیکا رسماً تایید و اعلام شده است.",
+    "takeaways_en": [
+      "Contrasts with an 'unofficial strike' or 'wildcat strike' executed without union approval.",
+      "Workers qualify for strike pay from the union's designated collective dispute reserve fund.",
+      "Provides statutory legal protections against immediate dismissal or breach-of-contract lawsuits.",
+      "Preceded by legally mandatory mediation, cooling-off periods, and formal strike authorization ballots."
+    ],
+    "takeaways_fa": [
+      "در نقطه مقابل اعتصابات خودسرانه یا گربه‌وحشی (Wildcat Strike) فاقد تأییدیه اتحادیه قرار دارد.",
+      "کارگران اعتصاب‌کننده در طول مدت توقف کار از صندوق حمایت مالی اتحادیه حقوق اعتصاب دریافت می‌کنند.",
+      "مصونیت قانونی برای کارگران در برابر اخراج فوری یا شکایات خسارت کارفرما ایجاد می‌کند.",
+      "مستلزم طی مراحل قانونی نظیر دوره‌های خنک‌سازی، میانجی‌گری و رأی‌گیری رسمی کتبی است."
+    ],
     "url": "https://www.investopedia.com/terms/o/official-strike.asp",
     "slug": "official-strike",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Official strikes provide legitimate collective bargaining leverage, protected by institutional labor dispute statutes.",
+    "bottom_line_fa": "اعتصاب رسمی ابزار قدرتمند چانه‌زنی تشکل‌های کارگری برای بهبود دستمزد و شرایط کار در چارچوب قانون است.",
+    "sections": [
+      {
+        "title_en": "Economic Cost and Strike Pay Dynamics",
+        "title_fa": "تحلیل هزینه اقتصادی و حقوق اعتصاب",
+        "paragraphs_en": [
+          "Unions sustain an official strike over duration $T$ days if strike fund reserves ($R_{\\text{fund}}$) support daily strike disbursements ($S_{\\text{day}}$) across $N$ participating members: $T_{\\text{max}} = \\frac{R_{\\text{fund}}}{N \\cdot S_{\\text{day}}}$."
+        ],
+        "paragraphs_fa": [
+          "مدت زمان پایداری اعتصاب به ذخایر مالی صندوق اعتصاب اتحادیه و تعداد کارگران بستگی دارد:",
+          "کارفرمایان و اتحادیه‌ها معمولاً با محاسبه هزینه توقف خط تولید در برابر افزایش دستمزد به مصالحه می‌رسند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4059,
     "term_en": "Offline Debit Card",
-    "term_fa": "Offline Debit Card",
+    "term_fa": "کارت بدهی غیربرخط / دِیت‌کارت آفلاین (Offline Debit Card)",
     "letter": "O",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An offline debit card (signature debit) is a bank payment card where transaction authorizations do not require real-time electronic PIN verification against the cardholder's bank account, processing instead through credit card networks (e.g., Visa or Mastercard) and settling 1 to 3 days later.",
+    "definition_fa": "کارت بدهی غیربرخط (Offline Debit Card) نوعی کارت بانکی متصل به حساب جاری است که در هنگام خرید نیازی به استعلام لحظه‌ای و وارد کردن رمز الکترونیکی (PIN) ندارد، بلکه مشابه کارت‌های اعتباری با امضا یا تأیید شبکه‌ای (Visa/Mastercard) پردازش شده و مبلغ خرید پس از ۲۴ تا ۷۲ ساعت از حساب دارنده کسر می‌گردد.",
+    "takeaways_en": [
+      "Clears via interchange payment rails rather than online Electronic Funds Transfer (EFT) networks.",
+      "Processes via cardholder signature rather than personal identification number (PIN).",
+      "Carries higher interchange merchant fees compared to lower-cost online PIN debit transactions.",
+      "Carries potential risk of account overdraft if funds are withdrawn before the offline transaction batches post."
+    ],
+    "takeaways_fa": [
+      "به جای شبکه انتقال آنی شتاب یا EFT، از بستر تسویه کارمزدی شبکه‌های بین‌المللی پردازش می‌شود.",
+      "با امضای مشتری بر روی رسید کاغذی یا تراکنش اینترنتی تأیید می‌شود.",
+      "کارمزد تراکنش (Interchange Fee) بالاتری را نسبت به تراکنش‌های آنلاین بر فروشنده تحمیل می‌کند.",
+      "به دلیل تأخیر در ثبت، در صورت عدم مدیریت موجودی ممکن است به کسری حساب منجر شود."
+    ],
     "url": "https://www.investopedia.com/terms/o/offlinedebitcard.asp",
     "slug": "offlinedebitcard",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Offline debit offers consumer transaction convenience by piggybacking on global credit processing settlement networks.",
+    "bottom_line_fa": "کارت بدهی آفلاین پرداخت را تسهیل می‌کند اما تسویه آن با فاصله زمانی بر بستر شبکه‌های اعتباری انجام می‌پذیرد.",
+    "sections": [
+      {
+        "title_en": "Clearing Cycle and Interchange Spread",
+        "title_fa": "چرخه تسویه و اسپرد کارمزد تراکنش",
+        "paragraphs_en": [
+          "The transaction flow initiates with batch capture by merchant acquiring banks, settling at period $t + \\Delta t$ ($1 \\le \\Delta t \\le 3$ days) through interchange networks charging merchant fee $\\tau_{\\text{interchange}} \\approx 1.5\\% - 2.5\\%$."
+        ],
+        "paragraphs_fa": [
+          "تراکنش‌ها در پایان روز کاری تجمیع شده و پس از ۱ تا ۳ روز تسویه می‌گردند؛ بانک صادرکننده کارمزد مبادله بالاتری دریافت می‌کند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 4060,
     "term_en": "Offset Mortgage",
-    "term_fa": "Offset تسهیلات رهنی (Offset Mortgage)",
+    "term_fa": "وام مسکن متصل به پس‌انداز / آفست مورگیج (Offset Mortgage)",
     "letter": "O",
     "category": "املاک، مستغلات و تأمین مسکن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An offset mortgage is a hybrid residential home loan facility that links a borrower's mortgage debt directly with their personal savings and checking deposits, using the credit balance in savings to reduce the net principal balance on which daily loan interest is calculated.",
+    "definition_fa": "وام مسکن آفست یا متصل به پس‌انداز (Offset Mortgage) نوعی تسهیلات خرید مسکن است که حساب پس‌انداز یا جاری وام‌گیرنده را به پرونده وام متصل می‌کند؛ در این روش، به جای پرداخت سود به سپرده، موجودی پس‌انداز مستقیماً از اصل مانده بدهی کسر شده و سود وام تنها بر مبنای خالص بدهی محاسبه می‌گردد.",
+    "takeaways_en": [
+      "Interest is charged solely on the net debt balance: $\\text{Net Balance} = \\text{Mortgage Debt} - \\text{Savings Balance}$.",
+      "Saves significant compounding interest expenses while substantially shortening total loan amortization tenure.",
+      "Borrowers retain instantaneous liquidity access to withdraw their linked savings deposits at any time.",
+      "Provides an effective tax-free return on savings equal to the gross mortgage borrowing interest rate."
+    ],
+    "takeaways_fa": [
+      "سود ماهانه منحصراً بر روی خالص بدهی محاسبه می‌شود: خالص بدهی = اصل وام منهای مانده پس‌انداز.",
+      "صرفه‌جویی چشمگیری در هزینه‌های بهره مرکب ایجاد کرده و زمان تسویه کامل وام را چندین سال جلو می‌اندازد.",
+      "وام‌گیرنده هر زمان که نیاز داشته باشد می‌تواند به موجودی حساب پس‌انداز خود دسترسی داشته و آن را برداشت کند.",
+      "سود حاصل از آن نوعی بازدهی معاف از مالیات معادل با نرخ بهره وام مسکن ایجاد می‌نماید."
+    ],
     "url": "https://www.investopedia.com/terms/o/offset_mortgage.asp",
     "slug": "offset_mortgage",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Offset mortgages maximize debt-cost efficiency by leveraging liquid personal savings to dampen mortgage interest compounding.",
+    "bottom_line_fa": "وام آفست هوشمندانه‌ترین شیوه ترکیب پس‌انداز و تسهیلات است که بهره پرداختی به بانک را به حداقل ممکن می‌رساند.",
+    "sections": [
+      {
+        "title_en": "Daily Interest Calculation Mechanics",
+        "title_fa": "فرمول و محاسبات روزانه سود خالص در وام آفست",
+        "paragraphs_en": [
+          "Let mortgage balance be $P_t$, savings balance be $S_t$, and annual contract rate be $r$. Daily interest ($I_t$) is:",
+          "$$I_t = \\max(0, P_t - S_t) \\times \\left(\\frac{r}{365}\\right)$$",
+          "If $S_t \\ge P_t$, accrued interest drops to exactly zero, directing the entire monthly payment toward principal reduction."
+        ],
+        "paragraphs_fa": [
+          "سود روزانه وام آفست به صورت زیر فرمول‌بندی می‌شود:",
+          "$$I_t = \\max(0, P_t - S_t) \\times \\left(\\frac{r}{365}\\right)$$",
+          "اگر موجودی پس‌انداز با اصل وام برابر شود، بهره پرداختی صفر شده و کل قسط صرف تسویه اصل بدهی می‌گردد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "املاک، مستغلات و تأمین مسکن",
     "category_en": "Real Estate & Mortgage Finance"
   },
@@ -332173,180 +332881,398 @@
   {
     "id": 4062,
     "term_en": "Offshore",
-    "term_fa": "Offshore",
+    "term_fa": "فراساحلی / آفشور (Offshore)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Offshore refers to any financial entity, commercial account, corporate registration, or investment vehicle located outside of the investor's or enterprise's domestic country of origin, commonly associated with jurisdictions offering favorable taxation, strict privacy, and streamlined regulations.",
+    "definition_fa": "فراساحلی یا آفشور (Offshore) به هرگونه حساب بانکی، ساختار شرکتی، صندوق سرمایه‌گذاری یا حوزه قضایی مالی اطلاق می‌شود که خارج از مرزهای کشور محل اقامت سرمایه‌گذار مستقر است و معمولاً به دلیل معافیت‌های مالیاتی، رازداری بانکی، امنیت دارایی و تسهیل مقررات ارزی مورد استفاده قرار می‌گیرد.",
+    "takeaways_en": [
+      "Prominently utilized in international wealth preservation, global trade logistics, and cross-border M&A.",
+      "Traditional offshore financial centers (OFCs) include the Cayman Islands, Bermuda, Switzerland, and Jersey.",
+      "Heavily monitored by the OECD, FATF, and IRS under FATCA and Common Reporting Standard (CRS) transparency rules.",
+      "Distinguishes between legitimate tax planning/asset protection and illegal offshore tax evasion or money laundering."
+    ],
+    "takeaways_fa": [
+      "در مدیریت ثروت بین‌المللی، لجستیک تجارت جهانی و ادغام شرکت‌های چندملیتی کاربرد دارد.",
+      "مراکز مالی فراساحلی مشهور جهان شامل جزایر کیمن، برمودا، سوئیس، سنگاپور و لوکزامبورگ هستند.",
+      "تحت نظارت سخت‌گیرانه کارگروه اقدام مالی (FATF) و استانداردهای گزارش‌دهی مشترک مالیاتی (CRS) قرار دارد.",
+      "مرز مشخصی میان برنامه‌ریزی قانونی مالیات (Tax Avoidance) و فرار غیرقانونی مالیاتی یا پولشویی وجود دارد."
+    ],
     "url": "https://www.investopedia.com/terms/o/offshore.asp",
     "slug": "offshore",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Offshore centers provide tax neutrality and capital aggregation for multinational business operations.",
+    "bottom_line_fa": "حوزه‌های فراساحلی با ارائه بستر مالیاتی خنثی و انعطاف حقوقی، جریان نقل‌وانتقال سرمایه در تجارت بین‌الملل را تسهیل می‌کنند.",
+    "sections": [
+      {
+        "title_en": "Global Transparency and FATCA/CRS Reporting",
+        "title_fa": "شفافیت جهانی و تبادل خودکار اطلاعات بانکی",
+        "paragraphs_en": [
+          "Modern offshore entities are subject to automated cross-border information exchanges under the Common Reporting Standard (CRS):",
+          "$$\\text{Offshore Financial Institution (FFI)} \\xrightarrow{\\text{Annual Data Sync}} \\text{Domestic Tax Authorities (e.g., IRS/HMRC)}$$",
+          "dramatically reducing historical banking secrecy."
+        ],
+        "paragraphs_fa": [
+          "با اجرای قوانین فتکا و استاندارد CRS، بانک‌های فراساحلی موظف به ارسال خودکار اطلاعات حساب مودیان به ادارات مالیات کشورهای مبدا هستند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4063,
     "term_en": "Offshore Banking Unit (OBU)",
-    "term_fa": "Offshore بانکداری Unit (OBU) (Offshore Banking Unit (OBU))",
+    "term_fa": "واحد بانکداری فراساحلی (OBU - Offshore Banking Unit)",
     "letter": "O",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An Offshore Banking Unit (OBU) is a legally segregated operational department or licensed foreign branch of a commercial bank located in an international financial center that conducts financial and foreign currency transactions exclusively with non-residents.",
+    "definition_fa": "واحد بانکداری فراساحلی (OBU) شعبه یا بخش عملیاتی مجزایی از یک بانک تجاری در یک مرکز مالی بین‌المللی است که مجوز دارد منحصراً با مشتریان غیرمقیم و به ارزهای خارجی به دادوستد بپردازد و از کنترل‌های ارزی محلی، سپرده قانونی و مالیات‌های سنگین معاف است.",
+    "takeaways_en": [
+      "Prohibited from engaging in domestic retail banking or accepting domestic currency deposits.",
+      "Enjoys full exemptions from national reserve requirements, interest rate caps, and local withholding taxes.",
+      "Crucial vehicle for Eurocurrency syndications, international trade letters of credit, and multinational treasury management.",
+      "Prominent in regional banking hubs including Singapore, Bahrain, Taiwan, and Hong Kong."
+    ],
+    "takeaways_fa": [
+      "از فعالیت در بانکداری خرد داخلی و پذیرش سپرده با واحد پول ملی کشور میزبان منع شده است.",
+      "از شمول تودیع سپرده قانونی، سقف‌های دستوری نرخ بهره و مالیات‌های تکلیفی معافیت کامل دارد.",
+      "کانال اصلی مدیریت نقدینگی یورودلار، اعتبارات اسنادی بین‌المللی و وام‌های سندیکایی فرامرزی است.",
+      "در قطب‌های مالی منطقه مانند سنگاپور، بحرین، تایوان و هنگ‌کنگ نقشی محوری دارد."
+    ],
     "url": "https://www.investopedia.com/terms/o/offshore-banking-unit.asp",
     "slug": "offshore-banking-unit",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OBUs facilitate cross-border wholesale capital transfers free of domestic banking regulatory frictions.",
+    "bottom_line_fa": "واحدهای بانکداری فراساحلی مبادلات ارزی عمده‌فروشی بین‌المللی را بدون اصطکاک‌های مقررات بانکی محلی سرعت می‌بخشند.",
+    "sections": [
+      {
+        "title_en": "Operational Segregation and Tax Optimization",
+        "title_fa": "جداسازی عملیاتی و بهینه‌سازی مالیاتی",
+        "paragraphs_en": [
+          "OBUs maintain balance sheets strictly denominated in foreign currencies ($FX$), insulating domestic money supply ($M1$) from international capital volatility while providing zero-tax financing for corporate borrowers."
+        ],
+        "paragraphs_fa": [
+          "دفاتر مالی این واحدها منحصراً با ارزهای معتبر بین‌المللی بسته می‌شود تا پایه پولی داخلی کشور میزبان از نوسانات شوک‌های خارجی مصون بماند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 4064,
     "term_en": "Offshore Mutual Fund",
-    "term_fa": "Offshore Mutual صندوق (Offshore Mutual Fund)",
+    "term_fa": "صندوق سرمایه‌گذاری مشترک فراساحلی (Offshore Mutual Fund)",
     "letter": "O",
     "category": "صندوق‌ها و مدیریت سبد دارایی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An offshore mutual fund is an open-end or closed-end collective investment vehicle incorporated and legally domiciled in a low-tax or tax-neutral offshore jurisdiction outside the resident jurisdiction of its participating international investors.",
+    "definition_fa": "صندوق سرمایه‌گذاری مشترک فراساحلی (Offshore Mutual Fund) یک نهاد سرمایه‌گذاری جمعی است که در یک حوزه قضایی فراساحلی معاف از مالیات (مانند جزایر کیمن، لوکزامبورگ یا ایرلند) ثبت و تأسیس شده و سرمایه سرمایه‌گذاران بین‌المللی را بدون تحمل بار مالیاتی مضاعف در دارایی‌های جهانی سرمایه‌گذاری می‌کند.",
+    "takeaways_en": [
+      "Provides international investors with complete tax neutrality at the fund level.",
+      "Offers broader asset allocation mandates and flexible derivative leverage relative to domestic funds.",
+      "Commonly structured as SICAVs or open-ended investment companies (OEICs) under UCITS standards.",
+      "U.S. persons investing in offshore funds face punitive PFIC (Passive Foreign Investment Company) taxation rules."
+    ],
+    "takeaways_fa": [
+      "معافیت کامل از مالیات بر عایدی سرمایه و سود تقسیمی را در سطح صندوق برای خریداران بین‌المللی به همراه دارد.",
+      "امکان استفاده از استراتژی‌های اهرمی پیشرفته و سرمایه‌گذاری در بازارهای نوظهور را فراهم می‌سازد.",
+      "غالباً در قالب ساختارهای استاندارد اروپایی نظیر SICAV یا استانداردهای UCITS سازماندهی می‌شود.",
+      "برای شهروندان آمریکایی به دلیل قوانین سخت‌گیرانه PFIC دارای هزینه‌های مالیاتی سنگینی خواهد بود."
+    ],
     "url": "https://www.investopedia.com/terms/o/offshoremutualfund.asp",
     "slug": "offshoremutualfund",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Offshore mutual funds enable borderless, tax-efficient global portfolio diversification for international capital.",
+    "bottom_line_fa": "صندوق‌های مشترک فراساحلی امکان مدیریت سبد دارایی چندملیتی را بدون مالیات مضاعف برای سرمایه‌گذاران جهانی مهیا می‌سازند.",
+    "sections": [
+      {
+        "title_en": "Net Asset Value (NAV) Determination",
+        "title_fa": "فرمول و محاسبه ارزش خالص دارایی‌ها (NAV)",
+        "paragraphs_en": [
+          "Daily per-share Net Asset Value ($NAV_t$) is computed across international multi-currency holdings:",
+          "$$NAV_t = \\frac{\\sum_{i=1}^N P_{i,t} \\cdot Q_i \\cdot e_{i,t} - \\text{Accrued Fund Liabilities}}{\\text{Total Outstanding Fund Shares}}$$",
+          "where $e_{i,t}$ represents the spot foreign exchange conversion rate."
+        ],
+        "paragraphs_fa": [
+          "ارزش خالص هر واحد صندوق با تسعیر ارزش روز دارایی‌های چندارزی در نرخ ارز به دست می‌آید:",
+          "مجموع ارزش دلاری سهام منهای بدهی‌ها بر تعداد کل واحدهای در دست سرمایه‌گذاران تقسیم می‌گردد."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "صندوق‌ها و مدیریت سبد دارایی",
     "category_en": "Funds & Portfolio Management"
   },
   {
     "id": 4065,
     "term_en": "Offshore Portfolio Investment Strategy (OPIS)",
-    "term_fa": "Offshore پورتفوی / سبد سرمایه‌گذاری Investment Strategy (OPIS) (Offshore Portfolio Investment Strategy (OPIS))",
+    "term_fa": "استراتژی سرمایه‌گذاری در سبد اوراق فراساحلی (OPIS)",
     "letter": "O",
     "category": "صندوق‌ها و مدیریت سبد دارایی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An Offshore Portfolio Investment Strategy (OPIS) is a systematic cross-border asset management methodology designed to deploy capital internationally through foreign domiciles, optimizing geographic diversification, currency risk, and tax efficiency.",
+    "definition_fa": "استراتژی سرمایه‌گذاری در سبد دارایی فراساحلی (OPIS) یک رویکرد مدیریت سرمایه سازمان‌یافته است که با بهره‌گیری از هلدینگ‌های بین‌المللی، وجوه را در سبدی از سهام، اوراق قرضه جهانی و کالاها توزیع می‌کند تا تنوع جغرافیایی، هجینگ ارزی و بازده خالص پس از مالیات را به حداکثر برساند.",
+    "takeaways_en": [
+      "Hedges sovereign geopolitical systemic risks and domestic currency devaluation.",
+      "Maximizes multi-currency exposure across reserve currencies (USD, EUR, CHF, JPY).",
+      "Structures portfolio holdings through foreign trusts and international business corporations (IBCs).",
+      "Demands rigorous compliance with domestic reporting mandates to avoid tax evasion penalties."
+    ],
+    "takeaways_fa": [
+      "دارایی‌ها را در برابر ریسک‌های سیستماتیک ژئوپلیتیک و خطر سقوط ارزش پول ملی ایمن‌سازی می‌کند.",
+      "توزیع متوازن ارزی میان ارزهای معتبر جهان (دلار، یورو، فرانک سوئیس و ین) ایجاد می‌نماید.",
+      "با استفاده از صندوق‌های امانی خارجی (Trusts) امنیت حقوقی دارایی‌ها را در برابر دعاوی تقویت می‌کند.",
+      "مستلزم انطباق کامل با قوانین گزارش‌دهی سالانه مالیات بر عایدی سرمایه برون‌مرزی است."
+    ],
     "url": "https://www.investopedia.com/terms/o/opis.asp",
     "slug": "opis",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OPIS protects family office and institutional wealth by decoupling portfolio performance from single-country risk.",
+    "bottom_line_fa": "این استراتژی، بازده سبد سرمایه‌گذاری را از ریسک‌های اقتصادی تک‌کشوری تفکیک کرده و ایمنی ثروت را ارتقا می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Currency-Hedged International Return",
+        "title_fa": "بازده بین‌المللی پوشش‌داده‌شده در برابر نوسان ارز",
+        "paragraphs_en": [
+          "The domestic currency return ($R_{\\text{dom}}$) on an offshore asset with local return $R_{\\text{foreign}}$ and currency shift $\\Delta e$ is:",
+          "$$R_{\\text{dom}} = (1 + R_{\\text{foreign}})(1 + \\Delta e) - 1 \\approx R_{\\text{foreign}} + \\Delta e$$",
+          "Forward contracts are utilized in OPIS models to isolate pure alpha from FX volatility."
+        ],
+        "paragraphs_fa": [
+          "بازده نهایی سرمایه‌گذاری فراساحلی به پول داخلی از حاصل‌ضرب بازده دارایی خارجی در تغییرات نرخ برابری ارز به دست می‌آید:",
+          "$$R_{\\text{داخلی}} \\approx R_{\\text{خارجی}} + \\Delta e$$",
+          "مدیران سبد با استفاده از قراردادهای آتی ارز، نوسانات نامساعد ارزی را هج می‌نمایند."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "صندوق‌ها و مدیریت سبد دارایی",
     "category_en": "Funds & Portfolio Management"
   },
   {
     "id": 4066,
     "term_en": "Offtake Agreement",
-    "term_fa": "Offtake Agreement",
+    "term_fa": "قرارداد پیش‌خرید تضمینی محصول / آف‌تیک (Offtake Agreement)",
     "letter": "O",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An offtake agreement is a legally binding project finance contract entered into between a resource producer (such as a mining enterprise, energy project, or refinery) and a commercial buyer (the offtaker) to purchase a designated portion of future production before facility construction commences.",
+    "definition_fa": "قرارداد پیش‌خرید تضمینی محصول یا آف‌تیک (Offtake Agreement) یک قرارداد الزام‌آور حقوقی در تأمین مالی پروژه‌های کلان (نظیر پتروشیمی، پالایشگاه، معادن مس و نیروگاه‌های برق) است که طی آن خریدار متعهد می‌شود بخش معینی از محصول تولیدی آینده پروژه را پس از بهره‌برداری با قیمت و شروط مشخص پیش‌خرید کند.",
+    "takeaways_en": [
+      "Forms the indispensable financing cornerstone for non-recourse project finance syndications.",
+      "Guarantees future operational revenues, enabling banks to model debt service coverage ratios (DSCR).",
+      "Frequently structured as 'Take-or-Pay' where the buyer must pay even if they cannot take physical delivery.",
+      "Transfers price and demand risk from the equity project sponsors to established creditworthy buyers."
+    ],
+    "takeaways_fa": [
+      "سنگ بنای اصلی اخذ تسهیلات بانکی سنگین در پروژه‌های بدون حق رجوع (Non-Recourse Project Finance) است.",
+      "جریان درآمدهای صادراتی یا ریالی آینده را تضمین کرده و امکان پوشش اقساط وام بانکی (DSCR) را مهیا می‌سازد.",
+      "غالباً به صورت قراردادهای «ببر یا بپرداز» (Take-or-Pay) تنظیم می‌شود که در آن خریدار حتی در صورت عدم تحویل کالا موظف به پرداخت وجه است.",
+      "ریسک تقاضا و نوسان قیمت بازار را از دوش سازندگان به خریداران معتبر صنعتی منتقل می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/o/offtake-agreement.asp",
     "slug": "offtake-agreement",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Offtake contracts de-risk capital-intensive energy and mining projects, unlocking commercial project finance borrowing capacity.",
+    "bottom_line_fa": "قراردادهای آف‌تیک با تضمین فروش کل تولید آینده، راه را برای جذب اعتبارات بین‌المللی و احداث پروژه‌های زیربنایی هموار می‌سازند.",
+    "sections": [
+      {
+        "title_en": "Take-or-Pay Cash Flow Formulation",
+        "title_fa": "فرمول جریان نقدینگی قراردادهای ببر یا بپرداز",
+        "paragraphs_en": [
+          "Under a Take-or-Pay offtake structure with minimum contractual volume $Q_{\\text{contract}}$ and price $P_{\\text{contract}}$:",
+          "$$\\text{Revenue}_t = \\max(Q_{\\text{delivered}}, Q_{\\text{contract}}) \\times P_{\\text{contract}}$$",
+          "ensuring a fixed minimum revenue floor ($R_{\\text{min}} = Q_{\\text{contract}} \\cdot P_{\\text{contract}}$) regardless of offtaker economic distress."
+        ],
+        "paragraphs_fa": [
+          "در ساختار قراردادهای ببر یا بپرداز، درآمد حداقلی پروژه همواره تضمین است:",
+          "$$\\text{درآمد} = \\max(Q_{\\text{تحویلی}}, Q_{\\text{قرارداد}}) \\times P_{\\text{نرخ توافقی}}$$",
+          "خریدار حتی اگر نتواند کالا را تحویل بگیرد، موظف به پرداخت کامل ارزش سهمیه تعهدشده است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 4067,
     "term_en": "OHLC Chart",
-    "term_fa": "OHLC Chart",
+    "term_fa": "نمودار میله‌ای OHLC (Open-High-Low-Close Chart)",
     "letter": "O",
     "category": "تحلیل تکنیکال و پرایس اکشن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An OHLC chart is a standardized technical analysis bar chart that visually displays the Open, High, Low, and Close prices for a specific financial asset over a designated time interval (e.g., daily, hourly, or 5-minute periods).",
+    "definition_fa": "نمودار OHLC (نمودار قیمت بازگشایی-بالاترین-پایین‌ترین-پایانی) نوعی نمودار میله‌ای در تحلیل تکنیکال است که دامنه نوسان و احساسات بازار را در طول یک بازه زمانی مشخص (روزانه، ساعتی یا ۵ دقیقه‌ای) به تصویر می‌کشد؛ میله عمودی دامنه نوسان، شاخه افقی چپ قیمت باز شدن و شاخه افقی راست قیمت بسته شدن را نشان می‌دهد.",
+    "takeaways_en": [
+      "Vertical line spans the absolute trading range between the session Low and High prices.",
+      "Left horizontal tick marks the opening price ($O$), while the right horizontal tick marks the closing price ($C$).",
+      "If $C > O$, the bar indicates net buying pressure (often colored green/black); if $C < O$, net selling pressure dominates (red).",
+      "Functions as the immediate Western visual equivalent to Eastern Japanese Candlestick charts."
+    ],
+    "takeaways_fa": [
+      "خط عمودی فاصله میان کمترین قیمت (Low) و بیشترین قیمت (High) جلسه معاملاتی را نشان می‌دهد.",
+      "شاخه کوچک افقی در سمت چپ قیمت بازگشایی ($O$) و شاخه در سمت راست قیمت بسته شدن ($C$) را مشخص می‌کند.",
+      "چنانچه قیمت بسته شدن بالاتر از بازگشایی باشد ($C > O$) میله صعودی و در غیر این صورت نزولی است.",
+      "معادل کلاسیک نمودارهای شمعی ژاپنی در تحلیل تکنیکال غربی به شمار می‌رود."
+    ],
     "url": "https://www.investopedia.com/terms/o/ohlcchart.asp",
     "slug": "ohlcchart",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OHLC bar charts provide comprehensive price discovery footprints, visualizing intraday volatility and buyer-seller equilibrium.",
+    "bottom_line_fa": "نمودار OHLC با نمایش چهار قیمت کلیدی، آناتومی کامل نبرد خریداران و فروشندگان را در هر کندل ترسیم می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Volatility Metrics: True Range Calculation",
+        "title_fa": "محاسبه دامنه نوسان واقعی (True Range) در نمودار OHLC",
+        "paragraphs_en": [
+          "OHLC bars feed directly into volatility metrics including the Average True Range (ATR). The True Range ($TR_t$) is formulated as:",
+          "$$TR_t = \\max\\left( H_t - L_t, \\quad |H_t - C_{t-1}|, \\quad |L_t - C_{t-1}| \\right)$$",
+          "measuring absolute market price volatility across continuous trading sessions."
+        ],
+        "paragraphs_fa": [
+          "چهار مؤلفه OHLC مستقیماً در محاسبه دامنه نوسان واقعی (True Range) به کار می‌روند:",
+          "$$TR_t = \\max\\left( H_t - L_t, \\quad |H_t - C_{t-1}|, \\quad |L_t - C_{t-1}| \\right)$$",
+          "که مبنای اندیکاتور مشهور ATR برای تعیین حد ضرر داینامیک و سنجش تلاطم بازار است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "تحلیل تکنیکال و پرایس اکشن",
     "category_en": "Technical Analysis & Charting"
   },
   {
     "id": 4068,
     "term_en": "Oil ETF",
-    "term_fa": "Oil ETF",
+    "term_fa": "صندوق قابل معامله نفت و انرژی (Oil ETF)",
     "letter": "O",
     "category": "صندوق‌ها و مدیریت سبد دارایی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An oil ETF is an exchange-traded fund that tracks the market price performance of crude oil—either directly through derivative futures contracts (e.g., WTI or Brent futures) or indirectly by investing in a diversified basket of publicly traded oil exploration, production, and refining corporations.",
+    "definition_fa": "صندوق قابل معامله نفت (Oil ETF) یک ابزار سرمایه‌گذاری نقدشونده در بورس است که به سرمایه‌گذاران امکان می‌دهد بدون نیاز به تحویل فیزیکی بشکه‌های نفت یا افتتاح حساب‌های پیچیده مشتقه، از نوسانات قیمت نفت خام (از طریق قراردادهای آتی نفت وست تگزاس یا برنت) یا سهام شرکت‌های بزرگ نفتی بازدهی کسب کنند.",
+    "takeaways_en": [
+      "Futures-based oil ETFs (such as USO) trade front-month crude futures contracts, subject to contango roll yield decay.",
+      "Equity-based energy ETFs (such as XLE) invest in upstream, midstream, and downstream energy corporations.",
+      "Permits equity market participants to express macroeconomic and geopolitical views on global energy demand.",
+      "Leveraged and inverse oil ETFs (e.g., $2\\times$, $-2\\times$) rebalance daily, causing volatility drift over long holding periods."
+    ],
+    "takeaways_fa": [
+      "صندوق‌های مبتنی بر قراردادهای آتی (مانند USO) با چرخش ماهانه قراردادها (Roll Yield) در شرایط کانتانگو با افت بازدهی مواجه می‌شوند.",
+      "صندوق‌های مبتنی بر سهام (مانند XLE) سهام غول‌های نفتی نظیر اکسان موبیل و شورون را نگهداری می‌کنند.",
+      "ابزار بسیار مناسبی برای پوشش تورم و استفاده از رونق یا رکود ناشی از شوک‌های ژئوپلیتیک خاورمیانه است.",
+      "صندوق‌های اهرمی نفت به دلیل تعدیل روزانه برای سرمایه‌گذاری‌های کوتاه‌مدت نوسان‌گیری طراحی شده‌اند."
+    ],
     "url": "https://www.investopedia.com/terms/o/oil-etf.asp",
     "slug": "oil-etf",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Oil ETFs offer liquid, accessible exposure to crude energy markets without physical commodity delivery logistics.",
+    "bottom_line_fa": "صندوق‌های ETF نفت دروازه ورود سرمایه‌گذاران عادی به بازار جهانی طلای سیاه با همان سهولت خرید سهام عادی هستند.",
+    "sections": [
+      {
+        "title_en": "Futures Roll Yield and Contango Drag",
+        "title_fa": "فرمول بازده رول فیوچرز و هزینه کانتانگو",
+        "paragraphs_en": [
+          "For a futures-based oil ETF rolling expiring contract $F_1$ into second-month contract $F_2$, the roll yield ($R_{\\text{roll}}$) is:",
+          "$$R_{\\text{roll}} = \\frac{F_1 - F_2}{F_1}$$",
+          "When markets are in contango ($F_2 > F_1$), $R_{\\text{roll}} < 0$, inflicting persistent drag on long-term ETF asset value."
+        ],
+        "paragraphs_fa": [
+          "در صندوق‌های آتی نفت هنگام تعویض قرارداد جاری ($F_1$) با قرارداد ماه بعد ($F_2$)، بازده چرخش قرارداد به صورت زیر است:",
+          "$$R_{\\text{roll}} = \\frac{F_1 - F_2}{F_1}$$",
+          "در شرایط کانتانگو که قیمت سررسیدهای دورتر گران‌تر است، صندوق مدام دارایی ارزان‌تر را فروخته و گران‌تر می‌خرد که این امر موجب افت فرسایشی ارزش صندوق در بلندمدت می‌شود."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "صندوق‌ها و مدیریت سبد دارایی",
     "category_en": "Funds & Portfolio Management"
   },
   {
     "id": 4069,
     "term_en": "Oil Field",
-    "term_fa": "Oil Field",
+    "term_fa": "میدان نفتی / مخزن هیدروکربنی (Oil Field)",
     "letter": "O",
     "category": "کالاها، انرژی و فلزات گرانبها",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An oil field is an extensive geological subterranean geographic area containing one or multiple trapped subsurface reservoirs of commercially extractable crude petroleum and associated natural gas, developed through exploratory drilling, production wellheads, and gathering pipeline infrastructure.",
+    "definition_fa": "میدان نفتی (Oil Field) به محدوده جغرافیایی و زمین‌شناختی معینی در خشکی یا دریا اطلاق می‌شود که در لایه‌های متخلخل زیرزمینی آن، تله‌های هیدروکربنی حاوی مقادیر تجاری نفت خام و گاز طبیعی وجود دارد و با حفر چاه‌های اکتشافی، توسعه‌ای، تأسیسات جداسازی و خطوط لوله انتقال به بهره‌برداری می‌رسد.",
+    "takeaways_en": [
+      "Classified geographically as onshore (dry land) or offshore (marine continental shelf / deepwater).",
+      "Follows an operational lifecycle: exploration, developmental appraisal, peak plateau production, and natural field decline.",
+      "Primary production relies on natural reservoir pressure, secondary recovery uses waterflooding, and tertiary uses enhanced oil recovery (EOR).",
+      "Valued using discounted cash flow models based on proven ($1P$), probable ($2P$), and possible ($3P$) reserve classifications."
+    ],
+    "takeaways_fa": [
+      "از دیدگاه جغرافیایی به میادین خشکی (Onshore) و میادین فراساحلی دریایی (Offshore) تقسیم می‌شود.",
+      "چرخه عمر آن شامل مراحل اکتشاف، لرزه‌نگاری، حفر چاه‌های توسعه‌ای، دوران اوج تولید و افت طبیعی مخزن است.",
+      "استخراج در ابتدا با فشار طبیعی مخزن، سپس با تزریق آب و گاز، و در نهایت با روش‌های ازدیاد برداشت (EOR) انجام می‌گیرد.",
+      "ارزش‌گذاری مالی آن بر مبنای طبقه‌بندی ذخایر اثبات‌شده ($1P$)، احتمالی ($2P$) و ممکن ($3P$) تنزیل می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/o/oil-field.asp",
     "slug": "oil-field",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Oil fields form the core upstream capital assets of global exploration and production energy enterprises.",
+    "bottom_line_fa": "میادین نفتی اساسی‌ترین دارایی بالادستی شرکت‌های انرژی و رگ حیاتی امنیت انرژی و درآمدهای نفتی کشورها هستند.",
+    "sections": [
+      {
+        "title_en": "Arps Reservoir Production Decline Modeling",
+        "title_fa": "مدل افت تولید مخزن با معادلات آرپس",
+        "paragraphs_en": [
+          "Petroleum reservoir engineers model oil field production decline rate over time using J.J. Arps's hyperbolic decline formulation:",
+          "$$q(t) = \\frac{q_i}{(1 + b \\cdot D_i \\cdot t)^{1/b}}$$",
+          "where $q_i$ is initial flow rate, $D_i$ is initial decline factor, and $b$ is the hyperbolic reservoir drive exponent ($0 \\le b \\le 1$)."
+        ],
+        "paragraphs_fa": [
+          "افت طبیعی دبی استخراج یک میدان نفتی در طول زمان بر اساس رابطه هذلولوی آرپس محاسبه می‌شود:",
+          "$$q(t) = \\frac{q_i}{(1 + b \\cdot D_i \\cdot t)^{1/b}}$$",
+          "که در آن $q_i$ نرخ تولید اولیه، $D_i$ ضریب افت و $b$ ضریب ساختار فشار مخزن است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "کالاها، انرژی و فلزات گرانبها",
     "category_en": "Commodities, Energy & Metals"
   },
   {
     "id": 4070,
     "term_en": "Oil Initially In Place (OIIP)",
-    "term_fa": "Oil Initially In Place (OIIP)",
+    "term_fa": "حجم اولیه نفت درجای مخزن (OIIP / STOIIP)",
     "letter": "O",
     "category": "کالاها، انرژی و فلزات گرانبها",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Oil Initially In Place (OIIP)—frequently designated as Stock Tank Oil Initially In Place (STOIIP)—is the total volumetric estimation of crude oil contained within a subsurface petroleum geological reservoir prior to the commencement of any historical drilling or production activities.",
+    "definition_fa": "نفت درجای اولیه (OIIP یا STOIIP) برآورد مهندسی و حجم کل نفت خامی است که در شرایط طبیعی زمین‌شناسی پیش از آغاز هرگونه حفاری و استخراج در سنگ مخزن زیرزمینی انباشته شده است؛ رقمی که کل نفت موجود را نشان می‌دهد اما تنها درصدی از آن (ضریب بازیافت) قابل استخراج فنی و اقتصادی است.",
+    "takeaways_en": [
+      "Differs fundamentally from commercial recoverable oil reserves: $\\text{Recoverable Reserves} = \\text{OIIP} \\times \\text{Recovery Factor} (RF)$.",
+      "Calculated volumetrically using petrophysical parameters: reservoir rock area, net thickness, porosity, and water saturation.",
+      "Converted to surface standard barrels using the oil formation volume factor ($B_{oi}$).",
+      "Serves as the foundational baseline metric for oilfield developmental capital expenditure (CapEx) planning."
+    ],
+    "takeaways_fa": [
+      "تفاوت بنیادین با ذخایر قابل استحصال دارد؛ ذخایر قابل تولید برابر است با نفت درجا ضرب در ضریب بازیافت مخزن: $\\text{Reserves} = \\text{OIIP} \\times RF$.",
+      "با ارزیابی داده‌های پتروفیزیکی شامل وسعت میدان، ضخامت لایه نفتی، تخلخل سنگ مخزن و درصد اشباع آب محاسبه می‌شود.",
+      "با استفاده از ضریب حجم سازند ($B_{oi}$) از شرایط دما و فشار درون مخزن به شرایط استاندارد سطح زمین تسعیر می‌گردد.",
+      "معیار پایه در تصمیم‌گیری‌های کلان سرمایه‌گذاری برای احداث خطوط لوله و توسعه تأسیسات استخراج است."
+    ],
     "url": "https://www.investopedia.com/terms/o/oil-initially-in-place.asp",
     "slug": "oil-initially-in-place",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OIIP establishes the ultimate physical hydrocarbon volume limit within an oil reservoir, framing economic recovery potential.",
+    "bottom_line_fa": "نفت درجای اولیه سقف فیزیکی هیدروکربن موجود در مخزن را معین کرده و ظرفیت ثروت‌زایی میدان را آشکار می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Volumetric STOIIP Formulation",
+        "title_fa": "فرمول و محاسبات پتروفیزیکی نفت درجا (STOIIP)",
+        "paragraphs_en": [
+          "In petroleum reservoir engineering, standard Stock Tank Oil Initially In Place (STOIIP in stock tank barrels) is calculated via:",
+          "$$\\text{STOIIP} = \\frac{7758 \\cdot A \\cdot h \\cdot \\phi \\cdot (1 - S_w)}{B_{oi}}$$",
+          "where $7758$ is the acre-feet to barrels conversion constant, $A$ is drainage area (acres), $h$ is net pay thickness (feet), $\\phi$ is average porosity fraction, $S_w$ is initial water saturation fraction, and $B_{oi}$ is initial oil formation volume factor (RB/STB)."
+        ],
+        "paragraphs_fa": [
+          "فرمول استاندارد محاسبه نفت درجا در مهندسی مخازن به صورت زیر تعریف می‌شود:",
+          "$$\\text{STOIIP} = \\frac{7758 \\cdot A \\cdot h \\cdot \\phi \\cdot (1 - S_w)}{B_{oi}}$$",
+          "که در آن $7758$ ضریب تبدیل مساحت به بشکه، $A$ مساحت میدان، $h$ ضخامت خالص لایه هیدروکربنی، $\\phi$ تخلخل، $S_w$ اشباع آب و $B_{oi}$ ضریب انقباض نفت در سطح زمین است."
+        ]
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "کالاها، انرژی و فلزات گرانبها",
     "category_en": "Commodities, Energy & Metals"
   },
