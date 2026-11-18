@@ -125,6 +125,7 @@ def _rebuild_all_cache(current_mtime: float):
         cur = conn.cursor()
         cur.execute("PRAGMA journal_mode = WAL")
         cur.execute("PRAGMA synchronous = NORMAL")
+        cur.execute("DROP TABLE IF EXISTS terms")
         cur.execute("""
         CREATE TABLE IF NOT EXISTS terms (
             id INTEGER PRIMARY KEY,
@@ -253,11 +254,16 @@ def _rebuild_all_cache(current_mtime: float):
         if _DB_CONN:
             try: _DB_CONN.close()
             except Exception: pass
-        if os.path.exists(DB_FILE):
-            try: os.remove(DB_FILE)
+            _DB_CONN = None
+
+        import shutil
+        try:
+            shutil.copy2(temp_db, DB_FILE)
+            try: os.remove(temp_db)
             except Exception: pass
-        try: os.rename(temp_db, DB_FILE)
-        except Exception: pass
+        except Exception:
+            try: os.replace(temp_db, DB_FILE)
+            except Exception: pass
 
         sorted_cats = [
             {
@@ -308,7 +314,8 @@ def _rebuild_all_cache(current_mtime: float):
         _DETAIL_CACHE.clear()
 
     except Exception as e:
-        print(f"Error in _rebuild_all_cache: {e}")
+        import traceback
+        traceback.print_exc()
     finally:
         _IS_RELOADING = False
 
