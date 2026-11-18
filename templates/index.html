@@ -236,6 +236,45 @@
             border-color: #047857;
         }
 
+        /* Generic Box Copy Button */
+        .box-copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 0.5rem;
+            transition: all 0.15s ease;
+            cursor: pointer;
+            line-height: 1.25;
+            user-select: none;
+            background-color: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            color: #334155;
+            white-space: nowrap;
+        }
+        .box-copy-btn:hover {
+            background-color: #ffffff;
+            color: #047857;
+            border-color: #6ee7b7;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .dark .box-copy-btn {
+            background-color: rgba(30, 41, 59, 0.85);
+            border-color: rgba(71, 85, 105, 0.65);
+            color: #cbd5e1;
+        }
+        .dark .box-copy-btn:hover {
+            background-color: rgba(15, 23, 42, 0.95);
+            color: #34d399;
+            border-color: #047857;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        .box-copy-btn:active {
+            transform: scale(0.95);
+        }
+
         /* Formula Window Body */
         .formula-window-body {
             direction: ltr !important;
@@ -611,9 +650,17 @@
 
                 <!-- 1. Key Takeaways Box (نکات کلیدی) -->
                 <div id="modalTakeawaysBox" class="bg-amber-500/10 dark:bg-amber-950/40 p-5 rounded-2xl border border-amber-300/80 dark:border-amber-800/60 space-y-2.5">
-                    <div class="flex items-center gap-2 text-xs font-bold text-amber-900 dark:text-amber-300">
-                        <span class="text-base">💡</span>
-                        <span>نکات کلیدی (Key Takeaways):</span>
+                    <div class="flex items-center justify-between text-xs font-bold text-amber-900 dark:text-amber-300">
+                        <div class="flex items-center gap-2">
+                            <span class="text-base">💡</span>
+                            <span>نکات کلیدی (Key Takeaways):</span>
+                        </div>
+                        <button type="button" onclick="copyTakeaways(this, event)" class="box-copy-btn" title="کپی نکات کلیدی" aria-label="کپی نکات کلیدی">
+                            <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>کپی</span>
+                        </button>
                     </div>
                     <ul id="modalTakeawaysList" class="space-y-2 text-xs sm:text-sm text-slate-800 dark:text-slate-200">
                     </ul>
@@ -623,9 +670,17 @@
                 <div id="modalDefinitionsContainer" class="space-y-4">
                     <!-- Persian Definition Box -->
                     <div id="boxDefFa" class="bg-emerald-50/70 dark:bg-emerald-950/40 p-5 rounded-2xl border border-emerald-200 dark:border-emerald-800/50 space-y-2">
-                        <div class="flex items-center gap-1.5 text-xs font-bold text-emerald-800 dark:text-emerald-300">
-                            <span>🇮🇷</span>
-                            <span>تعریف و مفهوم به زبان فارسی:</span>
+                        <div class="flex items-center justify-between text-xs font-bold text-emerald-800 dark:text-emerald-300">
+                            <div class="flex items-center gap-1.5">
+                                <span>🇮🇷</span>
+                                <span>تعریف و مفهوم به زبان فارسی:</span>
+                            </div>
+                            <button type="button" onclick="copyDefFa(this, event)" class="box-copy-btn" title="کپی تعریف فارسی" aria-label="کپی تعریف فارسی">
+                                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                                <span>کپی</span>
+                            </button>
                         </div>
                         <div id="modalDefFa" class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-normal whitespace-pre-line text-justify">
                         </div>
@@ -633,9 +688,17 @@
 
                     <!-- English Definition Box -->
                     <div id="boxDefEn" class="bg-slate-100 dark:bg-slate-800/90 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 font-en" dir="ltr">
-                        <div class="flex items-center gap-1.5 text-xs font-bold text-slate-700 dark:text-slate-300">
-                            <span>🇬🇧</span>
-                            <span>Original Definition:</span>
+                        <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-300">
+                            <div class="flex items-center gap-1.5">
+                                <span>🇬🇧</span>
+                                <span>Original Definition:</span>
+                            </div>
+                            <button type="button" onclick="copyDefEn(this, event)" class="box-copy-btn" title="Copy Original Definition" aria-label="Copy Original Definition">
+                                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                                <span>Copy</span>
+                            </button>
                         </div>
                         <div id="modalDefEn" class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-line text-justify font-en" dir="ltr">
                         </div>
@@ -655,9 +718,17 @@
 
                 <!-- 4. The Bottom Line (جمع‌بندی نهایی) -->
                 <div id="modalBottomLineBox" class="hidden bg-slate-900 dark:bg-slate-850 p-5 rounded-2xl border border-slate-700 dark:border-slate-700/80 space-y-2 text-white">
-                    <div class="flex items-center gap-2 text-xs font-bold text-emerald-400">
-                        <span>🎯</span>
-                        <span>جمع‌بندی و نتیجه‌گیری نهایی (The Bottom Line):</span>
+                    <div class="flex items-center justify-between text-xs font-bold text-emerald-400">
+                        <div class="flex items-center gap-2">
+                            <span>🎯</span>
+                            <span>جمع‌بندی و نتیجه‌گیری نهایی (The Bottom Line):</span>
+                        </div>
+                        <button type="button" onclick="copyBottomLine(this, event)" class="box-copy-btn" title="کپی جمع‌بندی نهایی" aria-label="کپی جمع‌بندی نهایی">
+                            <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>کپی</span>
+                        </button>
                     </div>
                     <div id="modalBottomLineFa" class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
                     </div>
@@ -1172,6 +1243,11 @@
             grid.classList.remove('opacity-50', 'pointer-events-none');
 
             let terms = data.terms || [];
+            window.__renderedTerms = window.__renderedTerms || {};
+            terms.forEach(t => {
+                if (t.id) window.__renderedTerms[String(t.id)] = t;
+                if (t.slug) window.__renderedTerms[String(t.slug)] = t;
+            });
 
             if (!append) grid.innerHTML = '';
 
@@ -1281,6 +1357,12 @@
         }
 
         function createTermCard(term) {
+            if (term && term.id) {
+                window.__renderedTerms = window.__renderedTerms || {};
+                window.__renderedTerms[String(term.id)] = term;
+                if (term.slug) window.__renderedTerms[String(term.slug)] = term;
+            }
+
             const card = document.createElement('div');
             card.className = 'group bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-400 hover:shadow-xl dark:hover:shadow-emerald-950/30 transition-all duration-200 flex flex-col justify-between cursor-pointer';
             card.onclick = () => openModal(term);
@@ -1326,11 +1408,18 @@
                     <span class="text-slate-400 group-hover:text-emerald-500 font-medium transition flex items-center gap-1">
                         مشاهده توضیحات کامل ←
                     </span>
-                    <button onclick="speakDirect('${term.term_en.replace(/'/g, "\\'")}', event)" title="تلفظ انگلیسی" class="p-1 rounded-md text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
-                        </svg>
-                    </button>
+                    <div class="flex items-center gap-1">
+                        <button type="button" onclick="copyCardTerm('${term.id}', this, event)" title="کپی اصطلاح و تعریف" aria-label="کپی اصطلاح و تعریف" class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                            </svg>
+                        </button>
+                        <button type="button" onclick="speakDirect('${term.term_en.replace(/'/g, "\\'")}', event)" title="تلفظ انگلیسی" class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             `;
             return card;
@@ -1946,7 +2035,15 @@
                     secCard.innerHTML = `
                         <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-2.5">
                             ${titleDisplay}
-                            <span class="font-en text-[11px] text-slate-400 font-semibold">#${idx+1}</span>
+                            <div class="flex items-center gap-2">
+                                <button type="button" onclick="copySection(${idx}, this, event)" class="box-copy-btn" title="کپی این سرفصل" aria-label="کپی این سرفصل">
+                                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>کپی</span>
+                                </button>
+                                <span class="font-en text-[11px] text-slate-400 font-semibold">#${idx+1}</span>
+                            </div>
                         </div>
                         <div class="space-y-2">
                             ${pContent}
@@ -2077,21 +2174,75 @@
             `;
         }
 
+        function copyTextToClipboard(text, onSuccess, onFail) {
+            if (!text) return;
+            const cleanText = text.trim();
+            if (!cleanText) return;
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(cleanText).then(() => {
+                    if (onSuccess) onSuccess();
+                }).catch(() => {
+                    fallbackClipboardCopy(cleanText, onSuccess, onFail);
+                });
+            } else {
+                fallbackClipboardCopy(cleanText, onSuccess, onFail);
+            }
+        }
+
+        function fallbackClipboardCopy(text, onSuccess, onFail) {
+            try {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                ta.style.top = '-9999px';
+                ta.setAttribute('readonly', '');
+                document.body.appendChild(ta);
+                ta.focus();
+                ta.select();
+                const ok = document.execCommand('copy');
+                document.body.removeChild(ta);
+                if (ok && onSuccess) onSuccess();
+                else if (!ok && onFail) onFail();
+            } catch (err) {
+                console.error('Fallback clipboard copy failed:', err);
+                if (onFail) onFail(err);
+            }
+        }
+
+        function triggerCopyButtonState(btn, customLabel = null) {
+            if (!btn) return;
+            const isLtr = btn.closest('[dir="ltr"]') !== null || btn.getAttribute('dir') === 'ltr';
+            const successLabel = customLabel || (isLtr ? 'Copied! ✓' : 'کپی شد! ✓');
+            const origHtml = btn.innerHTML;
+            btn.innerHTML = `
+                <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-emerald-600 dark:text-emerald-400 font-bold">${successLabel}</span>
+            `;
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = origHtml;
+                btn.disabled = false;
+            }, 1800);
+        }
+
         function copyFormula(btn, event) {
             if (event) event.stopPropagation();
             const formulaText = btn.getAttribute('data-formula') || '';
             if (!formulaText) return;
 
-            navigator.clipboard.writeText(formulaText).then(() => {
+            copyTextToClipboard(formulaText, () => {
                 const origHtml = btn.innerHTML;
-                btn.innerHTML = `<svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>`;
+                btn.innerHTML = `<svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg><span class="text-emerald-600 dark:text-emerald-400 font-bold">کپی شد! ✓</span>`;
                 btn.title = 'کپی شد!';
+                showToast('فرمول محاسباتی (LaTeX) در حافظه کپی شد!');
                 setTimeout(() => {
                     btn.innerHTML = origHtml;
                     btn.title = 'کپی فرمول (LaTeX)';
                 }, 1800);
-            }).catch(err => {
-                console.error('Clipboard copy failed:', err);
             });
         }
 
@@ -2219,6 +2370,185 @@
             }
         }
 
+        function copyDefFa(btn, event) {
+            if (event) event.stopPropagation();
+            if (!activeModalTerm) return;
+            const text = activeModalTerm.definition_fa || (document.getElementById('modalDefFa') ? document.getElementById('modalDefFa').innerText : '');
+            if (!text) return;
+            copyTextToClipboard(text, () => {
+                triggerCopyButtonState(btn);
+                showToast('تعریف فارسی در حافظه کپی شد!');
+            });
+        }
+
+        function copyDefEn(btn, event) {
+            if (event) event.stopPropagation();
+            if (!activeModalTerm) return;
+            const text = activeModalTerm.definition_en || (document.getElementById('modalDefEn') ? document.getElementById('modalDefEn').innerText : '');
+            if (!text) return;
+            copyTextToClipboard(text, () => {
+                triggerCopyButtonState(btn, 'Copied! ✓');
+                showToast('Original definition copied!');
+            });
+        }
+
+        function copyTakeaways(btn, event) {
+            if (event) event.stopPropagation();
+            if (!activeModalTerm) return;
+            const enList = activeModalTerm.takeaways_en || [];
+            const faList = activeModalTerm.takeaways_fa || [];
+            const count = Math.max(enList.length, faList.length);
+
+            let lines = [];
+            for (let i = 0; i < count; i++) {
+                const fa = faList[i] || '';
+                const en = enList[i] || '';
+                if (currentViewMode === 'fa') {
+                    lines.push(`• ${fa || en}`);
+                } else if (currentViewMode === 'en') {
+                    lines.push(`• ${en || fa}`);
+                } else {
+                    if (fa && en) {
+                        lines.push(`• ${fa}\n  (${en})`);
+                    } else {
+                        lines.push(`• ${fa || en}`);
+                    }
+                }
+            }
+
+            if (lines.length === 0) {
+                const listEl = document.getElementById('modalTakeawaysList');
+                if (listEl) {
+                    const items = listEl.querySelectorAll('li');
+                    items.forEach(li => {
+                        const t = li.innerText.trim();
+                        if (t && !t.includes('در حال بارگذاری')) lines.push(`• ${t}`);
+                    });
+                }
+            }
+
+            const text = lines.join('\n');
+            if (!text) return;
+
+            copyTextToClipboard(text, () => {
+                triggerCopyButtonState(btn);
+                showToast('نکات کلیدی در حافظه کپی شد!');
+            });
+        }
+
+        function copySection(secIdx, btn, event) {
+            if (event) event.stopPropagation();
+            if (!activeModalTerm || !activeModalTerm.sections || !activeModalTerm.sections[secIdx]) return;
+            const sec = activeModalTerm.sections[secIdx];
+            const titleFa = sec.title_fa || sec.title_en || '';
+            const titleEn = sec.title_en || '';
+
+            let title = '';
+            if (currentViewMode === 'fa') {
+                title = titleFa || titleEn;
+            } else if (currentViewMode === 'en') {
+                title = titleEn || titleFa;
+            } else {
+                title = titleFa ? `${titleFa}${titleEn ? ` (${titleEn})` : ''}` : titleEn;
+            }
+
+            const pFaList = sec.paragraphs_fa || [];
+            const pEnList = sec.paragraphs_en || [];
+            const maxP = Math.max(pFaList.length, pEnList.length);
+            const paragraphs = [];
+            for (let i = 0; i < maxP; i++) {
+                const pFa = pFaList[i] || '';
+                const pEn = pEnList[i] || '';
+                if (currentViewMode === 'fa') {
+                    paragraphs.push(pFa || pEn);
+                } else if (currentViewMode === 'en') {
+                    paragraphs.push(pEn || pFa);
+                } else {
+                    if (pFa && pEn) {
+                        paragraphs.push(`${pFa}\n\n${pEn}`);
+                    } else {
+                        paragraphs.push(pFa || pEn);
+                    }
+                }
+            }
+
+            const itFa = sec.items_fa || [];
+            const itEn = sec.items_en || [];
+            const maxIt = Math.max(itFa.length, itEn.length);
+            const items = [];
+            for (let i = 0; i < maxIt; i++) {
+                const itemFa = itFa[i] || '';
+                const itemEn = itEn[i] || '';
+                if (currentViewMode === 'fa') {
+                    items.push(`• ${itemFa || itemEn}`);
+                } else if (currentViewMode === 'en') {
+                    items.push(`• ${itemEn || itemFa}`);
+                } else {
+                    if (itemFa && itemEn) {
+                        items.push(`• ${itemFa}\n  (${itemEn})`);
+                    } else {
+                        items.push(`• ${itemFa || itemEn}`);
+                    }
+                }
+            }
+
+            let out = title ? `📌 ${title}\n\n` : '';
+            if (paragraphs.length > 0) {
+                out += paragraphs.join('\n\n');
+            }
+            if (items.length > 0) {
+                out += (paragraphs.length > 0 ? '\n\n' : '') + items.join('\n');
+            }
+
+            copyTextToClipboard(out.trim(), () => {
+                triggerCopyButtonState(btn);
+                showToast(`سرفصل «${title || (secIdx+1)}» کپی شد!`);
+            });
+        }
+
+        function copyBottomLine(btn, event) {
+            if (event) event.stopPropagation();
+            if (!activeModalTerm) return;
+            const fa = activeModalTerm.bottom_line_fa || '';
+            const en = activeModalTerm.bottom_line_en || '';
+            let text = '';
+            if (currentViewMode === 'fa') {
+                text = fa || en;
+            } else if (currentViewMode === 'en') {
+                text = en || fa;
+            } else {
+                text = [fa, en].filter(Boolean).join('\n\n');
+            }
+            if (!text) return;
+            copyTextToClipboard(text, () => {
+                triggerCopyButtonState(btn);
+                showToast('جمع‌بندی نهایی در حافظه کپی شد!');
+            });
+        }
+
+        function copyCardTerm(termId, btn, event) {
+            if (event) event.stopPropagation();
+            const term = (window.__renderedTerms && window.__renderedTerms[String(termId)]) ||
+                         (activeModalTerm && (activeModalTerm.id == termId || activeModalTerm.slug == termId) ? activeModalTerm : null);
+            if (!term) return;
+
+            const titleEn = term.term_en || '';
+            const titleFa = term.term_fa || '';
+            const def = term.definition_fa || term.definition_en || '';
+            const text = `📌 ${titleEn} (${titleFa})\n\n${def}`;
+
+            copyTextToClipboard(text, () => {
+                const origHtml = btn.innerHTML;
+                btn.innerHTML = `<svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>`;
+                btn.title = 'کپی شد!';
+                showToast(`اصطلاح «${titleFa || titleEn}» کپی شد!`);
+                setTimeout(() => {
+                    btn.innerHTML = origHtml;
+                    btn.title = 'کپی اصطلاح و تعریف';
+                }, 1800);
+            });
+        }
+
         function copyModalContent() {
             if (!activeModalTerm) return;
             const content = `📌 ${activeModalTerm.term_en} (${activeModalTerm.term_fa})
@@ -2235,12 +2565,12 @@ ${(activeModalTerm.takeaways_en || []).map(t => '• ' + t).join('\n')}
 
 🔗 منبع: ${activeModalTerm.url}`;
 
-            navigator.clipboard.writeText(content).then(() => {
-                showToast('مشخصات اصطلاح در حافظه کپی شد!');
+            copyTextToClipboard(content, () => {
+                showToast('مشخصات کامل اصطلاح در حافظه کپی شد!');
                 const copyBtnText = document.getElementById('copyBtnText');
-                copyBtnText.innerText = 'کپی شد! ✓';
+                if (copyBtnText) copyBtnText.innerText = 'کپی شد! ✓';
                 setTimeout(() => {
-                    copyBtnText.innerText = 'کپی متن اصطلاح';
+                    if (copyBtnText) copyBtnText.innerText = 'کپی متن اصطلاح';
                 }, 2000);
             });
         }

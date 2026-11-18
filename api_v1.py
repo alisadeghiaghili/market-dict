@@ -15,7 +15,7 @@ from typing import List, Dict, Any, Optional
 
 from flask import Blueprint, request, jsonify, render_template_string, Response
 
-from categories_engine import TAXONOMY, TAXONOMY_BY_FA
+from categories_engine import TAXONOMY, TAXONOMY_BY_FA, CATEGORY_ALIASES, normalize_category
 from formula_registry import FORMULA_DB
 from openapi_spec import get_openapi_spec
 
@@ -32,36 +32,8 @@ _ENSURE_CACHE_FUNC = None
 _NORMALIZE_TEXT_FUNC = None
 _CLEAN_KEY_FUNC = None
 
-# Variant Categories found in dictionary dataset
-CATEGORY_VARIANTS = {
-    'اقتصاد کلان و سیاست‌های پولی': {
-        "id": "macroeconomics_alt",
-        "fa": "اقتصاد کلان و سیاست‌های پولی",
-        "en": "Macroeconomics & Monetary Policy",
-        "icon": "🏛️"
-    },
-    'قوانین و صورت‌های مالی': {
-        "id": "accounting_regulations",
-        "fa": "قوانین و صورت‌های مالی",
-        "en": "Financial Reporting & Regulations",
-        "icon": "⚖️"
-    },
-    'حسابداری و استانداردهای مالی': {
-        "id": "accounting_standards",
-        "fa": "حسابداری و استانداردهای مالی",
-        "en": "Accounting & Financial Standards",
-        "icon": "📑"
-    },
-    'بورس، سهام و بازار سرمایه': {
-        "id": "stock_capital_markets",
-        "fa": "بورس، سهام و بازار سرمایه",
-        "en": "Stock & Capital Markets",
-        "icon": "📈"
-    }
-}
-
 # Build Category Lookup Maps
-# Allows querying by slug (e.g. 'crypto'), English name, or Persian name
+# Allows querying by slug (e.g. 'crypto', 'stock_capital_markets'), English name, or Persian name
 CATEGORY_LOOKUP: Dict[str, str] = {}
 TAXONOMY_BY_ID: Dict[str, Dict[str, Any]] = {}
 
@@ -74,31 +46,17 @@ for item in TAXONOMY:
     CATEGORY_LOOKUP[cat_en] = cat_fa
     TAXONOMY_BY_ID[cat_id] = item
 
-for cat_fa, var_item in CATEGORY_VARIANTS.items():
-    cat_id = var_item["id"].lower()
-    cat_en = var_item["en"].lower()
-    CATEGORY_LOOKUP[cat_id] = cat_fa
-    CATEGORY_LOOKUP[cat_fa.lower()] = cat_fa
-    CATEGORY_LOOKUP[cat_en] = cat_fa
-    TAXONOMY_BY_ID[cat_id] = var_item
+for alias, canon_fa in CATEGORY_ALIASES.items():
+    canon = TAXONOMY_BY_FA.get(canon_fa, TAXONOMY[-1])
+    CATEGORY_LOOKUP[alias.lower()] = canon["fa"]
 
 def get_category_meta(name_fa: str) -> Dict[str, Any]:
-    if name_fa in TAXONOMY_BY_FA:
-        tax = TAXONOMY_BY_FA[name_fa]
-        return {
-            "id": tax["id"],
-            "fa": tax["fa"],
-            "en": tax["en"],
-            "icon": tax["icon"]
-        }
-    if name_fa in CATEGORY_VARIANTS:
-        return CATEGORY_VARIANTS[name_fa]
-    c_id = re.sub(r'[^a-z0-9_]', '', name_fa.lower()) or "other"
+    canon = normalize_category(name_fa)
     return {
-        "id": c_id,
-        "fa": name_fa,
-        "en": name_fa,
-        "icon": "🏷️"
+        "id": canon["id"],
+        "fa": canon["fa"],
+        "en": canon["en"],
+        "icon": canon["icon"]
     }
 
 def _clean_key_fallback(text: str) -> str:

@@ -44,35 +44,7 @@ if BASE_DIR not in sys.path:
 
 import app
 from formula_registry import FORMULA_DB
-from categories_engine import TAXONOMY, TAXONOMY_BY_FA
-
-# Category variants in the dataset
-CATEGORY_VARIANTS = [
-    {
-        "id": "macroeconomics_alt",
-        "fa": "اقتصاد کلان و سیاست‌های پولی",
-        "en": "Macroeconomics & Monetary Policy",
-        "icon": "🏛️"
-    },
-    {
-        "id": "accounting_regulations",
-        "fa": "قوانین و صورت‌های مالی",
-        "en": "Financial Reporting & Regulations",
-        "icon": "⚖️"
-    },
-    {
-        "id": "accounting_standards",
-        "fa": "حسابداری و استانداردهای مالی",
-        "en": "Accounting & Financial Standards",
-        "icon": "📑"
-    },
-    {
-        "id": "stock_capital_markets",
-        "fa": "بورس، سهام و بازار سرمایه",
-        "en": "Stock & Capital Markets",
-        "icon": "📈"
-    }
-]
+from categories_engine import TAXONOMY, TAXONOMY_BY_FA, normalize_category
 
 FORMULA_ALIASES = {
     "roe": "returnonequity",
@@ -214,16 +186,7 @@ def search_terms(
     ltr = letter.strip().upper() if letter else ""
 
     # Normalize category filter
-    cat_filter = ""
-    if category:
-        c_raw = category.strip()
-        # Check if ID in TAXONOMY
-        for t in TAXONOMY:
-            if c_raw.lower() in [t["id"].lower(), t["en"].lower()] or c_raw == t["fa"]:
-                cat_filter = t["fa"]
-                break
-        if not cat_filter:
-            cat_filter = c_raw
+    cat_filter = normalize_category(category)["fa"] if category else ""
 
     # Narrow candidate indices
     if ltr and ltr != "ALL" and ltr in by_letter:
@@ -534,10 +497,8 @@ def list_categories() -> List[Dict[str, Any]]:
     cached_cats = {c["name"]: c["count"] for c in app._CACHE.get("categories", [])}
 
     output = []
-    seen_fa = set()
     for item in TAXONOMY:
         cat_fa = item["fa"]
-        seen_fa.add(cat_fa)
         count = cached_cats.get(cat_fa, 0)
         output.append({
             "id": item["id"],
@@ -546,18 +507,6 @@ def list_categories() -> List[Dict[str, Any]]:
             "icon": item["icon"],
             "count": count
         })
-
-    for item in CATEGORY_VARIANTS:
-        cat_fa = item["fa"]
-        if cat_fa not in seen_fa and cat_fa in cached_cats:
-            seen_fa.add(cat_fa)
-            output.append({
-                "id": item["id"],
-                "name_fa": cat_fa,
-                "name_en": item["en"],
-                "icon": item["icon"],
-                "count": cached_cats.get(cat_fa, 0)
-            })
 
     output.sort(key=lambda x: -x["count"])
     return output
@@ -600,8 +549,8 @@ def get_random_term(
         candidates = [s for s in candidates if s.get("has_deep")]
 
     if category:
-        cat_norm = category.strip()
-        candidates = [s for s in candidates if s.get("category") == cat_norm or s.get("category_en") == cat_norm]
+        canon_fa = normalize_category(category)["fa"]
+        candidates = [s for s in candidates if s.get("category") == canon_fa]
 
     if not candidates:
         candidates = summaries

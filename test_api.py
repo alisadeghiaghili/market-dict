@@ -38,7 +38,7 @@ class MarketDictAPITestCase(unittest.TestCase):
         data = res.get_json()
         self.assertEqual(data["status"], "success")
         self.assertEqual(data["data"]["total_terms"], 6108)
-        self.assertEqual(data["data"]["total_categories"], 32)
+        self.assertEqual(data["data"]["total_categories"], 28)
         self.assertEqual(data["data"]["formulas_count"], 44)
 
     def test_openapi_spec(self):
@@ -198,7 +198,7 @@ class MarketDictAPITestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         data = res.get_json()
         self.assertEqual(data["status"], "success")
-        self.assertEqual(len(data["data"]), 32)
+        self.assertEqual(len(data["data"]), 28)
 
         # Test single category
         res2 = self.client.get("/api/v1/categories/crypto")

@@ -24,7 +24,7 @@ DATA_FILE = os.path.join(BASE_DIR, "bilingual_dictionary.json")
 CACHE_FILE = os.path.join(BASE_DIR, "cache_index.pkl")
 DB_FILE = os.path.join(BASE_DIR, "market_dict.db")
 
-from categories_engine import TAXONOMY, TAXONOMY_BY_FA
+from categories_engine import TAXONOMY, TAXONOMY_BY_FA, normalize_category
 CATEGORY_ICONS = {item["fa"]: item["icon"] for item in TAXONOMY}
 
 def normalize_text(text: str) -> str:
@@ -115,9 +115,11 @@ def _rebuild_all_cache(current_mtime: float):
                 item["slug"] = slug
 
             item_id = str(item.get("id", ""))
-            cat = item.get("category", "سایر")
-            cat_fa = item.get("category_fa", cat)
-            cat_en = item.get("category_en", "")
+            raw_cat = item.get("category", "")
+            canon_cat = normalize_category(raw_cat)
+            cat = canon_cat["fa"]
+            cat_fa = canon_cat["fa"]
+            cat_en = canon_cat["en"]
             ltr = (item.get("letter") or "#").strip().upper()
             has_deep = bool(item.get("sections") or item.get("deep_enriched"))
             if has_deep:
@@ -405,12 +407,14 @@ def search_terms():
     by_category = _CACHE["by_category"]
 
     # Filter candidate indices
+    resolved_cat = normalize_category(category)["fa"] if category and category != "ALL" else None
+
     if letter and letter != "ALL" and letter in by_letter:
         candidate_indices = by_letter[letter]
-        if category and category != "ALL":
-            candidate_indices = [i for i in candidate_indices if search_index[i]["category"] == category]
-    elif category and category != "ALL" and category in by_category:
-        candidate_indices = by_category[category]
+        if resolved_cat:
+            candidate_indices = [i for i in candidate_indices if search_index[i]["category"] == resolved_cat]
+    elif resolved_cat and resolved_cat in by_category:
+        candidate_indices = by_category[resolved_cat]
     else:
         candidate_indices = range(len(search_index))
 
