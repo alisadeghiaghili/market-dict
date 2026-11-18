@@ -19,6 +19,48 @@ app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.jinja_env.auto_reload = True
 
+def apply_reverse_proxy(flask_app: Flask, allowed_ips: Any = "*") -> Flask:
+    """
+    Wrap Flask WSGI app with Werkzeug ProxyFix to respect X-Forwarded-For,
+    X-Forwarded-Proto, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-Prefix
+    from trusted reverse proxy IP addresses.
+    """
+    from werkzeug.middleware.proxy_fix import ProxyFix
+
+    allowed: Optional[set] = None
+    if isinstance(allowed_ips, str):
+        if allowed_ips.strip() != "*":
+            allowed = set(ip.strip() for ip in allowed_ips.split(",") if ip.strip())
+    elif isinstance(allowed_ips, (list, set, tuple)):
+        allowed = set(allowed_ips)
+
+    base_wsgi = getattr(flask_app, "_base_wsgi_app", flask_app.wsgi_app)
+    flask_app._base_wsgi_app = base_wsgi
+
+    proxy_fix = ProxyFix(
+        base_wsgi,
+        x_for=1,
+        x_proto=1,
+        x_host=1,
+        x_port=1,
+        x_prefix=1
+    )
+
+    def reverse_proxy_wsgi(environ, start_response):
+        remote_addr = environ.get("REMOTE_ADDR", "")
+        if allowed is None or remote_addr in allowed:
+            return proxy_fix(environ, start_response)
+        return base_wsgi(environ, start_response)
+
+    flask_app.wsgi_app = reverse_proxy_wsgi
+    flask_app.config["REVERSE_PROXY_ENABLED"] = True
+    flask_app.config["FORWARDED_ALLOW_IPS"] = allowed_ips
+    return flask_app
+
+# Auto-enable reverse proxy middleware if PROXY_HEADERS environment variable is active
+if os.environ.get("PROXY_HEADERS", "").strip().lower() in ("true", "1", "yes"):
+    apply_reverse_proxy(app, allowed_ips=os.environ.get("FORWARDED_ALLOW_IPS", "*"))
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, "bilingual_dictionary.json")
 CACHE_FILE = os.path.join(BASE_DIR, "cache_index.pkl")
@@ -498,11 +540,48 @@ def get_random_term():
     return get_term_by_id(rand_slug)
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="MarketDict - Bilingual Financial Terms Web App & REST API Server"
+    )
+    parser.add_argument(
+        "--host",
+        default=os.environ.get("HOST", "0.0.0.0"),
+        help="Host IP to bind to (default: 0.0.0.0 or $HOST)"
+    )
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=int(os.environ.get("PORT", 5000)),
+        help="Port to listen on (default: 5000 or $PORT)"
+    )
+    parser.add_argument(
+        "--proxy-headers",
+        action=argparse.BooleanOptionalAction,
+        default=os.environ.get("PROXY_HEADERS", "false").strip().lower() in ("true", "1", "yes"),
+        help="Enable/disable reverse proxy headers (X-Forwarded-For, X-Forwarded-Proto, etc.)"
+    )
+    parser.add_argument(
+        "--forwarded-allow-ips",
+        default=os.environ.get("FORWARDED_ALLOW_IPS", "*"),
+        help="Comma-separated list of trusted proxy IPs or '*' for all (default: '*' or $FORWARDED_ALLOW_IPS)"
+    )
+    args = parser.parse_args()
+
+    if args.proxy_headers:
+        apply_reverse_proxy(app, allowed_ips=args.forwarded_allow_ips)
+        proxy_status = f"ENABLED (Trusted IPs: {args.forwarded_allow_ips})"
+    else:
+        proxy_status = "DISABLED"
+
     print(f"\n=======================================================")
     print(f"🚀 MarketDict Web App & API are running!")
-    print(f"👉 Web App:  http://localhost:{port}")
-    print(f"👉 REST API: http://localhost:{port}/api/v1")
-    print(f"👉 API Docs: http://localhost:{port}/docs")
+    print(f"👉 Host:          {args.host}")
+    print(f"👉 Port:          {args.port}")
+    print(f"👉 Reverse Proxy: {proxy_status}")
+    print(f"👉 Web App:       http://{args.host}:{args.port}")
+    print(f"👉 REST API:      http://{args.host}:{args.port}/api/v1")
+    print(f"👉 API Docs:      http://{args.host}:{args.port}/docs")
     print(f"=======================================================\n")
-    app.run(host="0.0.0.0", port=port, debug=False, threaded=True)
+    app.run(host=args.host, port=args.port, debug=False, threaded=True)

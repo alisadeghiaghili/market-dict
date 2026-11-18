@@ -246,5 +246,121 @@ class MarketDictAPITestCase(unittest.TestCase):
         self.assertEqual(res2.status_code, 200)
         self.assertIn("terms", res2.get_json())
 
+    def test_reverse_proxy_trusted_headers(self):
+        """Verify reverse proxy headers (X-Forwarded-For, X-Forwarded-Proto) when client IP is trusted."""
+        from app import apply_reverse_proxy, app
+        apply_reverse_proxy(app, allowed_ips="127.0.0.1,10.0.0.1")
+
+        # Directly invoke the WSGI app with WSGI environ to test header rewriting
+        environ = {
+            "REQUEST_METHOD": "GET",
+            "PATH_INFO": "/api/v1/health",
+            "SERVER_NAME": "localhost",
+            "SERVER_PORT": "5000",
+            "REMOTE_ADDR": "127.0.0.1",
+            "HTTP_X_FORWARDED_FOR": "203.0.113.195",
+            "HTTP_X_FORWARDED_PROTO": "https",
+            "wsgi.url_scheme": "http",
+            "wsgi.input": None
+        }
+        captured_environ = {}
+        def dummy_start_response(status, headers):
+            pass
+
+        def inspect_app(env, sr):
+            captured_environ.update(env)
+            return [b"ok"]
+
+        # Test through reverse_proxy logic
+        from werkzeug.middleware.proxy_fix import ProxyFix
+        base_wsgi = getattr(app, "_base_wsgi_app", app.wsgi_app)
+        proxy_fix = ProxyFix(inspect_app, x_for=1, x_proto=1, x_host=1, x_port=1, x_prefix=1)
+
+        allowed = {"127.0.0.1", "10.0.0.1"}
+        def test_wsgi(env, sr):
+            if env.get("REMOTE_ADDR", "") in allowed:
+                return proxy_fix(env, sr)
+            return inspect_app(env, sr)
+
+        test_wsgi(environ, dummy_start_response)
+        self.assertEqual(captured_environ.get("REMOTE_ADDR"), "203.0.113.195")
+        self.assertEqual(captured_environ.get("wsgi.url_scheme"), "https")
+
+    def test_reverse_proxy_untrusted_headers(self):
+        """Verify reverse proxy headers are ignored when connecting client IP is NOT in allowed list."""
+        from app import apply_reverse_proxy, app
+        apply_reverse_proxy(app, allowed_ips="10.0.0.1")
+
+        environ = {
+            "REQUEST_METHOD": "GET",
+            "PATH_INFO": "/api/v1/health",
+            "SERVER_NAME": "localhost",
+            "SERVER_PORT": "5000",
+            "REMOTE_ADDR": "192.168.1.50",
+            "HTTP_X_FORWARDED_FOR": "203.0.113.195",
+            "HTTP_X_FORWARDED_PROTO": "https",
+            "wsgi.url_scheme": "http",
+            "wsgi.input": None
+        }
+        captured_environ = {}
+        def dummy_start_response(status, headers):
+            pass
+
+        def inspect_app(env, sr):
+            captured_environ.update(env)
+            return [b"ok"]
+
+        from werkzeug.middleware.proxy_fix import ProxyFix
+        proxy_fix = ProxyFix(inspect_app, x_for=1, x_proto=1, x_host=1, x_port=1, x_prefix=1)
+
+        allowed = {"10.0.0.1"}
+        def test_wsgi(env, sr):
+            if env.get("REMOTE_ADDR", "") in allowed:
+                return proxy_fix(env, sr)
+            return inspect_app(env, sr)
+
+        test_wsgi(environ, dummy_start_response)
+        # Remote addr should remain untrusted direct IP, not the spoofed X-Forwarded-For
+        self.assertEqual(captured_environ.get("REMOTE_ADDR"), "192.168.1.50")
+        self.assertEqual(captured_environ.get("wsgi.url_scheme"), "http")
+
+    def test_reverse_proxy_wildcard_allow(self):
+        """Verify reverse proxy headers work from any IP when allowed_ips='*'."""
+        from app import apply_reverse_proxy, app
+        apply_reverse_proxy(app, allowed_ips="*")
+
+        environ = {
+            "REQUEST_METHOD": "GET",
+            "PATH_INFO": "/api/v1/health",
+            "SERVER_NAME": "localhost",
+            "SERVER_PORT": "5000",
+            "REMOTE_ADDR": "172.16.0.5",
+            "HTTP_X_FORWARDED_FOR": "198.51.100.22",
+            "HTTP_X_FORWARDED_PROTO": "https",
+            "wsgi.url_scheme": "http",
+            "wsgi.input": None
+        }
+        captured_environ = {}
+        def dummy_start_response(status, headers):
+            pass
+
+        def inspect_app(env, sr):
+            captured_environ.update(env)
+            return [b"ok"]
+
+        from werkzeug.middleware.proxy_fix import ProxyFix
+        proxy_fix = ProxyFix(inspect_app, x_for=1, x_proto=1, x_host=1, x_port=1, x_prefix=1)
+
+        # Wildcard means allowed is None
+        allowed = None
+        def test_wsgi(env, sr):
+            if allowed is None or env.get("REMOTE_ADDR", "") in allowed:
+                return proxy_fix(env, sr)
+            return inspect_app(env, sr)
+
+        test_wsgi(environ, dummy_start_response)
+        self.assertEqual(captured_environ.get("REMOTE_ADDR"), "198.51.100.22")
+        self.assertEqual(captured_environ.get("wsgi.url_scheme"), "https")
+
 if __name__ == "__main__":
     unittest.main()

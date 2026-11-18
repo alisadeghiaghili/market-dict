@@ -678,21 +678,78 @@ def main():
     parser.add_argument(
         "--transport",
         choices=["stdio", "sse", "streamable-http"],
-        default="stdio",
-        help="Transport protocol to use (default: stdio)"
+        default=None,
+        help="Transport protocol to use: 'stdio', 'sse', or 'streamable-http' (default: stdio, or sse if host/port/proxy-headers provided)"
     )
-    parser.add_argument("--host", default="127.0.0.1", help="Host for SSE / HTTP transport (default: 127.0.0.1)")
-    parser.add_argument("--port", type=int, default=8000, help="Port for SSE / HTTP transport (default: 8000)")
+    parser.add_argument(
+        "--host",
+        default=os.environ.get("HOST", "127.0.0.1"),
+        help="Host for SSE / HTTP transport (default: 127.0.0.1 or $HOST)"
+    )
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=int(os.environ.get("PORT", 8000)),
+        help="Port for SSE / HTTP transport (default: 8000 or $PORT)"
+    )
+    parser.add_argument(
+        "--proxy-headers",
+        action=argparse.BooleanOptionalAction,
+        default=os.environ.get("PROXY_HEADERS", "true").strip().lower() in ("true", "1", "yes"),
+        help="Enable/disable X-Forwarded-Proto, X-Forwarded-For to populate remote address info (default: True)"
+    )
+    parser.add_argument(
+        "--forwarded-allow-ips",
+        default=os.environ.get("FORWARDED_ALLOW_IPS", "*"),
+        help="Comma-separated list of IPs to trust with proxy headers, or '*' for all (default: '*' or $FORWARDED_ALLOW_IPS)"
+    )
     args = parser.parse_args()
 
-    logger.info("Starting MarketDict MCP server using '%s' transport...", args.transport)
+    transport = args.transport or "stdio"
 
-    if args.transport == "stdio":
+    logger.info("Starting MarketDict MCP server using '%s' transport...", transport)
+
+    if transport == "stdio":
         server.run(transport="stdio")
-    elif args.transport == "sse":
-        server.run(transport="sse", host=args.host, port=args.port)
-    elif args.transport == "streamable-http":
-        server.run(transport="streamable-http", host=args.host, port=args.port)
+    elif transport in ("sse", "streamable-http"):
+        import uvicorn
+        import anyio
+
+        # Parse forwarded_allow_ips for uvicorn
+        allow_ips: Any = args.forwarded_allow_ips
+        if isinstance(allow_ips, str) and allow_ips.strip() != "*":
+            allow_ips = [ip.strip() for ip in allow_ips.split(",") if ip.strip()]
+
+        try:
+            if transport == "sse":
+                starlette_app = server.sse_app(host=args.host)
+            else:
+                starlette_app = server.streamable_http_app(host=args.host)
+        except TypeError:
+            if transport == "sse":
+                starlette_app = server.sse_app()
+            else:
+                starlette_app = server.streamable_http_app()
+
+        logger.info(
+            "Serving %s on http://%s:%d (proxy-headers: %s, forwarded-allow-ips: %s)",
+            transport,
+            args.host,
+            args.port,
+            args.proxy_headers,
+            args.forwarded_allow_ips,
+        )
+
+        config = uvicorn.Config(
+            starlette_app,
+            host=args.host,
+            port=args.port,
+            proxy_headers=args.proxy_headers,
+            forwarded_allow_ips=allow_ips,
+            log_level="info",
+        )
+        uvicorn_server = uvicorn.Server(config)
+        anyio.run(uvicorn_server.serve)
 
 
 if __name__ == "__main__":
