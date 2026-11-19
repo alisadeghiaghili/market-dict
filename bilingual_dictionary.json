@@ -374395,20 +374395,38 @@
   {
     "id": 4899,
     "term_en": "S Corporation (S Subchapter)",
-    "term_fa": "S شرکت سهامی (S Subchapter) (S Corporation (S Subchapter))",
+    "term_fa": "شرکت ساب‌چپتر اس / شرکت با ساختار مالیاتی شفاف (S Corporation)",
     "letter": "S",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An S corporation (S Subchapter) is a specialized corporate tax classification under Subchapter S of the U.S. Internal Revenue Code that passes corporate income, losses, deductions, and tax credits directly through to shareholders for federal tax purposes, entirely avoiding double taxation on corporate earnings.",
+    "definition_fa": "شرکت ساب‌چپتر اس (S Corp)، یک ساختار حقوقی و مالیاتی ویژه در قانون مالیات‌های آمریکاست که شرکت را از پرداخت مالیات بر درآمد در سطح بنگاه معاف کرده و تمامی سودها، زیان‌ها، معافیت‌ها و اعتبارات مالیاتی را مستقیماً به اظهارنامه مالیاتی شخصی سهامداران منتقل می‌نماید (Pass-through entity)؛ این ساختار پدیده مالیات‌ستانی مضاعف (مالیات بر سود شرکت + مالیات بر سود سهام) را به طور کامل حذف می‌کند.",
+    "takeaways_en": [
+      "Avoids double taxation: corporate earnings are taxed only once at the individual shareholder level.",
+      "Restricted to domestic corporations with no more than 100 eligible shareholders (all must be individuals, qualifying trusts, or estates; no institutional investors or non-resident aliens).",
+      "Permitted to issue only a single class of common stock (though voting and non-voting distinctions are allowed).",
+      "Enables owner-employees to split compensation between W-2 salary and pass-through dividend distributions to legally minimize payroll self-employment taxes (FICA)."
+    ],
+    "takeaways_fa": [
+      "حذف مالیات مضاعف: سود حاصله تنها یک بار در سطح درآمد شخصی سهامداران مشمول مالیات می‌شود.",
+      "محدود به حداکثر ۱۰۰ سهامدار حقیقی مقیم است و حضور اشخاص حقوقی، صندوق‌های سرمایه‌گذاری یا اتباع خارجی در ترکیب سهامداری آن ممنوع است.",
+      "صرفاً مجاز به انتشار یک طبقه سهام عادی است (اگرچه تفکیک سهام دارای حق رای و بدون حق رای مجاز است).",
+      "به سهامداران فعال اجازه می‌دهد درآمد خود را بین حقوق و سود تقسیمی تفکیک کنند تا در پرداخت بیمه و مالیات تامین اجتماعی صرفه‌جویی نمایند.",
+      "در حقوق تجارت ایران، شرکت‌های تضامنی و با مسئولیت محدود تا حدودی مفاهیم مشابهی از مسئولیت و شفافیت مالیاتی را بازتاب می‌دهند."
+    ],
     "url": "https://www.investopedia.com/terms/s/subchapters.asp",
     "slug": "subchapters",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "S Corporations combine corporate limited liability protection with pass-through partnership tax efficiency for small- and mid-sized enterprises.",
+    "bottom_line_fa": "شرکت‌های ساب‌چپتر اس مزیت مسئولیت محدود شرکتی را با بهره‌وری مالیاتی شرکت‌های تضامنی ادغام کرده و از اتلاف سرمایه در مالیات‌های مضاعف جلوگیری می‌نمایند.",
+    "sections": [
+      {
+        "title_en": "Pass-Through Tax Shield Formulation",
+        "title_fa": "فرمول صرفه‌جویی مالیاتی و مقایسه با شرکت‌های متعارف (C Corp)",
+        "content_en": "For pretax profit $\\Pi$, a standard C-Corp yields net shareholder cash: $$C_{\\text{C-Corp}} = \\Pi (1 - \\tau_c)(1 - \\tau_d)$$ whereas an S-Corp yields: $$C_{\\text{S-Corp}} = \\Pi (1 - \\tau_i)$$ The tax savings spread $\\Delta T = C_{\\text{S-Corp}} - C_{\\text{C-Corp}} > 0$ whenever combined corporate-dividend tax exceeds personal marginal rate $\\tau_i$.",
+        "content_fa": "عواید سهامدار در شرکت S در مقایسه با شرکت معمولی از رابطه زیر محاسبه می‌شود:\n$$C_{\\text{S}} = \\Pi(1-\\tau_i) \\quad \\text{در برابر} \\quad C_{\\text{C}} = \\Pi(1-\\tau_c)(1-\\tau_d)$$\nحذف نرخ مالیات شرکتی ($\\tau_c$) بازده نهایی سهامداران را بین ۱۵ تا ۲۰ درصد افزایش می‌دهد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
@@ -374584,40 +374602,74 @@
   {
     "id": 4901,
     "term_en": "Safe Deposit Box",
-    "term_fa": "Safe Deposit Box",
+    "term_fa": "صندوق امانات بانکی (Safe Deposit Box)",
     "letter": "S",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A safe deposit box is an individually secured, fireproof container kept inside the fortified vault of a federally insured bank or credit union, rented by customers to safeguard high-value tangible assets, legal documents, deeds, jewelry, and irreplaceable family heirlooms.",
+    "definition_fa": "صندوق امانات بانکی، محفظه‌ای فلزی، نسوز و با امنیت بسیار بالا است که در خزانه فوق‌امنیتی بانک‌ها و موسسات اعتباری نگهداری می‌شود و مشتریان برای حفاظت از اسناد مالکیت مهم، طلا و جواهرات، مسکوکات قیمتی، ارزهای نقد و اوراق بهادار با پرداخت اجاره‌بهای سالانه آن را در اختیار می‌گیرند.",
+    "takeaways_en": [
+      "Protected via dual-key security systems requiring both the customer's unique physical key and the bank guard's master key to unlock.",
+      "Contents are not insured by standard deposit insurance (such as FDIC in the U.S. or standard central bank deposit schemes).",
+      "Bank personnel have no knowledge of box contents, ensuring strict depositor privacy unless subpoenaed by court orders.",
+      "Access is legally frozen upon the documented death of the sole renter pending official probate or tax authority inspection."
+    ],
+    "takeaways_fa": [
+      "با سیستم کلید دوگانه (یک کلید نزد مشتری و یک کلید مادر نزد متصدی خزانه بانک) باز می‌شود و هیچ کلیدی به تنهایی قادر به گشودن آن نیست.",
+      "محتویات داخل صندوق تحت پوشش بیمه سپرده‌های بانکی (مانند صندوق ضمانت سپرده‌ها) قرار ندارد و مشتری در صورت تمایل باید بیمه‌نامه اختصاصی تهیه کند.",
+      "بانک هیچ اطلاعی از محتویات درون صندوق ندارد که این امر محرمانگی کامل را برای مشتری تضمین می‌کند.",
+      "در شبکه بانکی ایران، بانک‌های بزرگ نظیر بانک ملی، صادرات و تجارت خدمات اجاره صندوق امانات را با سیستم‌های بیومتریک و رمزی ارائه می‌دهند."
+    ],
     "url": "https://www.investopedia.com/terms/s/safe-deposit-box.asp",
     "slug": "safe-deposit-box",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Safe deposit boxes provide physical security and privacy for irreplaceable tangible assets within impenetrable institutional vaults.",
+    "bottom_line_fa": "صندوق‌های امانات امن‌ترین پناهگاه فیزیکی برای حفظ اسناد تجاری و فلزات گرانبها در برابر خطرات سرقت، آتش‌سوزی و بلایای طبیعی هستند.",
+    "sections": [
+      {
+        "title_en": "Dual-Key Cryptographic Access Logic",
+        "title_fa": "منطق امنیتی دسترسی دوگانه و مسئولیت مدنی بانک",
+        "content_en": "Vault access satisfies a two-factor physical boolean verification: $$\\text{Access} = K_{\\text{customer}} \\land K_{\\text{bank master}} \\land \\mathbb{I}(\\text{Biometrics} = 1)$$ The bank serves as bailee under strict bailment law, liable solely for gross negligence in vault integrity: $$\\text{Liability} = f(\\text{Breach of Vault Duty})$$.",
+        "content_fa": "از نظر حقوقی، رابطه مشتری و بانک در قالب عقد اجاره یا امانت (ودیعه) تنظیم می‌شود: $$\\text{دسترسی} = K_{\\text{مشتری}} \\cap K_{\\text{بانک}}$$ بانک موظف به تامین بالاترین استانداردهای ایمنی فیزیکی است اما ضامن ماهیت یا نوسان ارزش محتویات امانی نیست."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 4902,
     "term_en": "Safe Harbors",
-    "term_fa": "Safe Harbors",
+    "term_fa": "حاشیه امن قانونی / پناهگاه امن در مقررات مالی (Safe Harbor)",
     "letter": "S",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A safe harbor is a statutory or regulatory provision that specifies that certain conduct will be deemed not to violate a given legal rule or standard, providing market participants and corporate fiduciaries with legal protection and compliance certainty.",
+    "definition_fa": "حاشیه امن قانونی (Safe Harbor)، بند یا قاعده‌ای در قوانین و مقررات مالیاتی، بورس و اوراق بهادار است که تصریح می‌کند در صورت رعایت دقیق شرایط و ضوابط تعیین‌شده، عمل فعال اقتصادی یا شرکت ناقض قانون تلقی نشده و از پیگرد قضایی، جریمه‌های اداری یا ابطال معامله مصون خواهد بود.",
+    "takeaways_en": [
+      "Eliminates regulatory ambiguity by providing objective, quantitative benchmarks for lawful compliance.",
+      "Prominent examples include SEC Rule 10b5-1 plans (safe harbor for insider trading pre-scheduled stock sales) and Rule 10b-18 (safe harbor for corporate share repurchases).",
+      "In tax law, Safe Harbor 401(k) plans bypass complex annual nondiscrimination testing by providing mandatory employer contributions.",
+      "Reduces litigation transaction costs and encourages proactive compliance across capital markets."
+    ],
+    "takeaways_fa": [
+      "ابهامات حقوقی را برطرف ساخته و ملاک‌های کمی و عینی مشخصی برای عدم ارتکاب تخلف پیش روی مدیران قرار می‌دهد.",
+      "نمونه‌های برجسته آن شامل دستورالعمل‌های بازخرید سهام خزانه توسط شرکت‌ها و برنامه‌های فروش زمان‌بندی‌شده سهام توسط دارندگان اطلاعات نهانی است.",
+      "در حقوق مالیات، رعایت درصدهای واریزی مشخص به بازنشستگی کارکنان، شرکت را از حسابرسی‌های سخت‌گیرانه عدم تبعیض معاف می‌کند.",
+      "در بازار سرمایه ایران، دستورالعمل‌های تفکیک معاملات بازارگردانی از دستکاری بازار مصداقی بارز از حاشیه امن مقرراتی هستند."
+    ],
     "url": "https://www.investopedia.com/terms/s/safeharbor.asp",
     "slug": "safeharbor",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Safe harbor provisions provide legal predictability, immunizing compliant market participants from regulatory enforcement actions.",
+    "bottom_line_fa": "حاشیه امن قانونی سپری شفاف برای بازیگران بازار سرمایه است تا در چارچوبی معین و بدون هراس از تفسیرهای سلیقه‌ای به فعالیت بپردازند.",
+    "sections": [
+      {
+        "title_en": "SEC Rule 10b-18 Share Repurchase Safe Harbor Conditions",
+        "title_fa": "شرایط چهارگانه حاشیه امن بازخرید سهام در بورس",
+        "content_en": "Under Rule 10b-18, a corporate buyback is shielded from market manipulation charges if four conditions hold simultaneously: $$\\text{Safe Harbor} = \\mathbb{I}(\\text{Single Broker}) \\land \\mathbb{I}(\\text{Timing: Not Open/Close}) \\land \\mathbb{I}(P_t \\le \\max(\\text{Bid}, \\text{Last Trade})) \\land \\mathbb{I}(V_t \\le 0.25 \\cdot \\text{ADTV})$$.",
+        "content_fa": "انطباق با حاشیه امن بازخرید سهام مستلزم احراز همزمان شروط تک‌کارگزاری، سقف قیمت و عدم تجاوز حجم از ۲۵٪ معاملات روزانه است: $$\\text{انطباق} = \\prod_{k=1}^4 C_k$$ این فرمول تضمین می‌کند که ورود شرکت به صف‌های خرید، اخلال در نظام قیمت‌گذاری تلقی نگردد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -374843,440 +374895,822 @@
   {
     "id": 4904,
     "term_en": "Sale",
-    "term_fa": "Sale",
+    "term_fa": "فروش / بیع در حقوق تجارت و حسابداری (Sale)",
     "letter": "S",
     "category": "بازاریابی، برندینگ و فروش",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A sale is a legally binding commercial transaction between two or more parties where the ownership, title, and risks of a good, service, real estate property, or financial asset are transferred from a seller to a buyer in exchange for a specified price or consideration (cash, credit, or barter).",
+    "definition_fa": "فروش یا عقد بیع، مبادله‌ای تجاری و قراردادی الزام‌آور میان دو یا چند طرف است که به موجب آن، مالکیت، منافع و ریسک‌های یک کالا، دارایی مالی یا خدمت از فروشنده (بایع) در قبال دریافت عوض مالی معین (ثمن به صورت نقد، نسیه یا اقساط) به خریدار (مشتری) واگذار و منتقل می‌شود.",
+    "takeaways_en": [
+      "Governed in accounting by IFRS 15 and ASC 606 under the 5-step revenue recognition framework.",
+      "Requires satisfying key elements: mutual assent, competent parties, lawful subject matter, consideration, and transfer of physical or legal control.",
+      "Revenue is recognized only when control is formally transferred to the customer, not merely upon cash receipt or contract execution.",
+      "Forms the top-line foundation of corporate financial statements: Gross Revenue / Net Sales."
+    ],
+    "takeaways_fa": [
+      "در استانداردهای بین‌المللی حسابداری (IFRS 15 و استاندارد ۳ کل ایران) بر اساس الگوی پنج‌مرحله‌ای شناسایی درآمد ثبت می‌شود.",
+      "مستلزم تحقق ارکان اساسی بیع: قصد و رضای طرفین، اهلیت، موضوع معین، ثمن معامله و انتقال کنترل و تسلیم مبیع است.",
+      "درآمد حاصل از فروش زمانی شناسایی می‌شود که کنترل و تعهدات عملکردی به خریدار منتقل شده باشد، نه لزوماً در زمان وصول وجه نقد.",
+      "سطر نخست صورت سود و زیان (Top-Line) را تحت عنوان درآمد عملیاتی یا فروش خالص تشکیل می‌دهد."
+    ],
     "url": "https://www.investopedia.com/terms/s/sale.asp",
     "slug": "sale",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A sale represents the primary economic exchange mechanism that converts enterprise inventory and productive labor into top-line revenue.",
+    "bottom_line_fa": "فروش نقطه غایی چرخه خلق ارزش در بنگاه‌های اقتصادی است که ظرفیت‌های عملیاتی را به نقدینگی و سودآوری تجاری تبدیل می‌سازد.",
+    "sections": [
+      {
+        "title_en": "IFRS 15 Five-Step Revenue Recognition Logic",
+        "title_fa": "الگوی پنج‌مرحله‌ای استاندارد حسابداری در شناسایی درآمد فروش",
+        "content_en": "Revenue $R$ from a sale is recognized upon satisfying performance obligations: $$R = \\sum_{k=1}^K T_k \\cdot \\mathbb{I}(\\text{Control Transfer}_k = 1)$$ where transaction price $T_k$ is allocated to discrete performance obligations based on stand-alone selling prices: $$T_k = P_{\\text{total}} \\times \\frac{\\text{SSP}_k}{\\sum \\text{SSP}}$$.",
+        "content_fa": "شناسایی درآمد فروش منوط به انتقال کنترل به مشتری است: $$R = \\sum T_k \\cdot \\text{انتقال کنترل}$$ در بورس تهران، فروش‌های صادراتی شرکت‌های پتروشیمی و فلزی بر مبنای تحویل روی عرشه کشتی (FOB) یا لب مرز در دفاتر ثبت و افشا می‌گردند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازاریابی، برندینگ و فروش",
     "category_en": "Marketing, Branding & Sales"
   },
   {
     "id": 4905,
     "term_en": "Sales and Purchase Agreement Explained: Definitions and Examples",
-    "term_fa": "Sales and Purchase Agreement Explained: Definitions and Examples",
+    "term_fa": "قرارداد خرید و فروش / مبایعه‌نامه تجاری (Sales and Purchase Agreement - SPA)",
     "letter": "S",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A Sales and Purchase Agreement (SPA) is a comprehensive, legally binding contract that obligates a buyer to purchase and a seller to sell a specific asset, equity stake, or real estate property, memorializing all closing conditions, representations, warranties, and purchase price adjustment covenants.",
+    "definition_fa": "قرارداد خرید و فروش یا مبایعه‌نامه رسمی (SPA)، سندی حقوقی و الزام‌آور در معاملات کلان تجاری، املاک و خرید سهام شرکت‌ها (M&A) است که تمامی شرایط قطعی معامله، نحوه پرداخت ثمن، زمان تحویل، تعهدات و تضامین فروشنده (Representations & Warranties)، و ترتیبات تعدیل قیمت سرمایه در گردش را به طور مفصل ثبت می‌نماید.",
+    "takeaways_en": [
+      "Serves as the definitive closing legal document in corporate mergers, acquisitions, and commercial real estate transactions.",
+      "Includes extensive Representations and Warranties (Rep & Warranties) outlining the operating condition and liabilities of the target entity.",
+      "Incorporates purchase price adjustment mechanisms: working capital peg adjustments, earnout provisions, and escrow holdbacks.",
+      "Defines Conditions Precedent (CPs) that must be satisfied before the transaction can formally reach legal closing."
+    ],
+    "takeaways_fa": [
+      "سند حقوقی نهایی و قطعی در واگذاری بلوک‌های مدیریتی سهام شرکت‌ها، ادغام‌ها و پروژه‌های بزرگ صنعتی و ملکی است.",
+      "شامل بیانیه‌های ضمانتی جامع (تایید عدم بدهی پنهان مالیاتی، صحت صورت‌های مالی و سلامت ماشین‌آلات) توسط فروشنده است.",
+      "سازوکارهای تعدیل قیمت بر اساس سرمایه در گردش خالص و سپرده امانی تضمین (Escrow) را در خود جای داده است.",
+      "شروط تعلیقی و مقدماتی (مانند اخذ تاییدیه از سازمان بورس یا شورای رقابت) را به عنوان پیش‌شرط قطعی شدن معامله تعریف می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/s/salesandpurchase.asp",
     "slug": "salesandpurchase",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The SPA provides the definitive legal architecture that balances transaction risks and covenants between buyers and sellers.",
+    "bottom_line_fa": "مبایعه‌نامه تجاری (SPA) سنگر حقوقی طرفین معامله است که ریسک‌های ناشی از تعهدات ناشناخته و بدهی‌های پنهان را به طور دقیق مرزبندی می‌کند.",
+    "sections": [
+      {
+        "title_en": "Working Capital Adjustment Mechanism in SPAs",
+        "title_fa": "مکانیسم تعدیل سرمایه در گردش و قیمت نهایی معامله",
+        "content_en": "The final purchase price ($P_{\\text{final}}$) paid at closing is adjusted against the target working capital benchmark ($NWC_{\\text{target}}$): $$P_{\\text{final}} = P_{\\text{headline}} + (NWC_{\\text{closing}} - NWC_{\\text{target}}) - \\text{Net Debt}$$ with an escrow buffer held back for indemnity claims: $$\\text{Cash Released} = P_{\\text{final}} - E_{\\text{escrow}}$$.",
+        "content_fa": "قیمت تسویه نهایی معامله خرید سهام با توجه به انحراف سرمایه در گردش تعدیل می‌گردد: $$P_{\\text{نهایی}} = P_{\\text{اولیه}} + (NWC_{\\text{روز}} - NWC_{\\text{مبنا}}) - \\text{بدهی خالص}$$ این فرمول مانع از تخلیه نقدینگی شرکت توسط سهامدار قبلی پیش از تحویل کلید بنگاه می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 4906,
     "term_en": "Sales Lead",
-    "term_fa": "Sales Lead",
+    "term_fa": "مشتری راغب / سرنخ فروش در بازاریابی (Sales Lead)",
     "letter": "S",
     "category": "بازاریابی، برندینگ و فروش",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A sales lead is a prospective individual or enterprise who has demonstrated preliminary interest in a company's products or services, initiating the first stage of the commercial sales funnel before undergoing qualification into a sales opportunity.",
+    "definition_fa": "سرنخ فروش یا مشتری راغب (Sales Lead)، شخص حقیقی یا حقوقی است که از طریق تکمیل فرم‌های وب‌سایت، تماس تلفنی، حضور در نمایشگاه یا بازدید از تبلیغات، تمایل و علاقه‌مندی اولیه‌ای نسبت به خدمات یا محصولات شرکت نشان داده است؛ این سرنخ نقطه آغازین قیف فروش (Sales Funnel) بوده و پیش از ورود به مذاکرات نهایی باید اعتبارسنجی کیفی (Qualify) شود.",
+    "takeaways_en": [
+      "Differentiated into Marketing Qualified Leads (MQLs) and Sales Qualified Leads (SQLs) based on purchase intent and budget authority.",
+      "Generated through inbound content marketing, paid advertising, cold outreach, and corporate referral networks.",
+      "Evaluated using scoring algorithms such as the BANT framework (Budget, Authority, Need, and Timeline).",
+      "Forms the core input for measuring Customer Acquisition Cost (CAC) and marketing conversion velocities."
+    ],
+    "takeaways_fa": [
+      "به سرنخ‌های واجد شرایط بازاریابی (MQL) و سرنخ‌های آماده معامله فروش (SQL) بر مبنای توان بودجه و فوریت خرید تفکیک می‌شود.",
+      "از طریق بازاریابی دیجیتال، شبکه‌های اجتماعی، سئو، نمایشگاه‌های تخصصی و تماس‌های بازاریابی درونگرا حاصل می‌گردد.",
+      "با مدل‌های ارزیابی مانند BANT (بودجه، اختیار تصمیم‌گیری، نیاز واقعی و زمان‌بندی پروژه) نمره‌دهی می‌شود.",
+      "معیاری بنیادین برای ارزیابی هزینه جذب سرنخ (CPL) و کارآمدی نرم‌افزارهای مدیریت ارتباط با مشتری (CRM) است."
+    ],
     "url": "https://www.investopedia.com/terms/s/sales-lead.asp",
     "slug": "sales-lead",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Sales leads represent raw commercial interest that must be systematically scored and nurtured into profitable revenue conversions.",
+    "bottom_line_fa": "سرنخ‌های فروش خون حیات‌بخش زنجیره بازاریابی بنگاه هستند که با هدایت حرفه‌ای در قیف بازاریابی، جریان نقدینگی آتی را رقم می‌زنند.",
+    "sections": [
+      {
+        "title_en": "Lead Conversion Velocity and Pipeline Value",
+        "title_fa": "سرعت تبدیل سرنخ و محاسبه ارزش جریان فروش (Pipeline Value)",
+        "content_en": "Expected pipeline revenue generated from $N$ incoming leads is modeled via stage conversion rates $c_k$: $$\\mathbb{E}[\\text{Revenue}] = \\sum_{i=1}^N \\text{Deal Size}_i \\times \\left( \\prod_{k=1}^K c_{k,i} \\right)$$ Cost per Qualified Lead satisfies: $$CPQL = \\frac{\\text{Total Marketing Spend}}{N \\times c_{\\text{MQL}}}$$.",
+        "content_fa": "ارزش مورد انتظار سرنخ‌های فروش از حاصل‌ضرب احتمال تبدیل هر مرحله در اندازه معامله به دست می‌آید: $$\\mathbb{E}[R] = \\sum \\text{ارزش معامله} \\times p_{\\text{تبدیل}}$$ پایش این شاخص به شرکت‌های دانش‌بنیان و کارگزاری‌ها امکان تخصیص بهینه بودجه تبلیغات را می‌دهد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازاریابی، برندینگ و فروش",
     "category_en": "Marketing, Branding & Sales"
   },
   {
     "id": 4907,
     "term_en": "Sales Tax",
-    "term_fa": "Sales مالیات (Sales Tax)",
+    "term_fa": "مالیات بر فروش خرده‌فروشی (Sales Tax)",
     "letter": "S",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A sales tax is a single-stage consumption tax levied by state or local governments on the retail sale of goods and specified services, collected by the merchant at the point of sale and remitted to the public taxing authority.",
+    "definition_fa": "مالیات بر فروش، نوعی مالیات بر مصرف تک‌مرحله‌ای است که توسط دولت‌های ایالتی یا محلی بر فروش نهایی کالاها و خدمات به مصرف‌کننده نهایی وضع می‌شود؛ این مبلغ در هنگام خرید و در پایانه فروش توسط فروشنده از خریدار دریافت شده و به صورت دوره‌ای به سازمان امور مالیاتی واریز می‌گردد.",
+    "takeaways_en": [
+      "Single-stage tax applied solely at the final retail transaction, contrasting with multi-stage Value-Added Tax (VAT) levied along each supply chain step.",
+      "Merchants receive sales tax exemption certificates for wholesale business-to-business inventory purchases intended for resale.",
+      "Considered economically regressive because low-income households spend a larger fraction of disposable income on taxable consumer necessities.",
+      "Jurisdictional nexus rules (e.g., U.S. South Dakota v. Wayfair) mandate online e-commerce platforms to collect sales taxes based on consumer shipping destination."
+    ],
+    "takeaways_fa": [
+      "مالیاتی تک‌مرحله‌ای است که منحصراً از خریدار نهایی اخذ می‌شود، برخلاف مالیات بر ارزش افزوده (VAT) که در هر مرحله از زنجیره تولید و توزیع ارزش افزوده مالیات کسر می‌شود.",
+      "خریدهای عمده‌فروشی مواد اولیه بین بنگاه‌ها به منظور جلوگیری از مالیات‌ستانی مضاعف از پرداخت آن معاف هستند.",
+      "از دیدگاه اقتصاد کلان ماهیتی تنازلی (Regressive) دارد، زیرا سهم بیشتری از درآمد اقشار ضعیف صرف مصرف کالاهای مشمول می‌شود.",
+      "در ایران، نظام مالیاتی از سال ۱۳۸۷ از الگوی مالیات بر فروش سنتی به نظام پیشرفته‌تر 'مالیات بر ارزش افزوده' (که در حال حاضر ۱۰٪ است) گذار کرد."
+    ],
     "url": "https://www.investopedia.com/terms/s/salestax.asp",
     "slug": "salestax",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Sales taxes provide critical local public revenue via retail transactions, impacting consumer purchasing power directly at the cash register.",
+    "bottom_line_fa": "مالیات بر فروش منبع درآمدی باثبات برای شهرداری‌ها و دولت‌های محلی است که هزینه تمام‌شده مصرف کالاها را مستقیماً تعیین می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Tax Incidence and Consumer Surplus Loss",
+        "title_fa": "بار مالیاتی (Incidence) و زیان رفاهی ناشی از مالیات بر فروش",
+        "content_en": "With supply elasticity $\\varepsilon_s$ and demand elasticity $\\varepsilon_d$, the consumer tax burden fraction $\\beta$ of sales tax $t$ is: $$\\beta = \\frac{\\varepsilon_s}{\\varepsilon_s + |\\varepsilon_d|}$$ Deadweight welfare loss ($DWL$) is quadratic in tax rate: $$DWL = \\frac{1}{2} \\frac{\\varepsilon_s |\\varepsilon_d|}{\\varepsilon_s + |\\varepsilon_d|} \\frac{P_0 Q_0}{1} t^2$$.",
+        "content_fa": "سهم مصرف‌کننده از پرداخت مالیات بر فروش به کشش‌های عرضه و تقاضا بستگی دارد: $$\\beta = \\frac{\\varepsilon_s}{\\varepsilon_s + |\\varepsilon_d|}$$ اگر تقاضای کالا بی‌کشش باشد (مانند بنزین یا دارو)، کل بار مالیاتی عملاً بر دوش خریدار نهایی منتقل خواهد شد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 4908,
     "term_en": "Salvage Value",
-    "term_fa": "Salvage ارزش (Salvage Value)",
+    "term_fa": "ارزش اسقاط / ارزش باقیمانده دارایی (Salvage Value)",
     "letter": "S",
     "category": "ارزش‌گذاری و تحلیل بنیادی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Salvage value (also referred to as residual value or scrap value) is the estimated book or market value that a tangible asset will realize upon the completion of its useful economic life, after deducting all estimated costs of disposal or dismantling.",
+    "definition_fa": "ارزش اسقاط یا ارزش باقیمانده (Salvage Value)، مبلغ تخمینی است که پیش‌بینی می‌شود یک دارایی ثابت مشهود (نظیر ماشین‌آلات، کارخانه، خودرو یا کشتی) پس از پایان عمر مفید اقتصادی و پس از کسر هزینه‌های پیاده‌سازی و فروش، در بازار به عنوان ضایعات یا تجهیزات دست‌دوم نقد گردد.",
+    "takeaways_en": [
+      "Subtracted from the asset's historical acquisition cost to determine the total depreciable base: $\\text{Depreciable Base} = \\text{Cost} - \\text{Salvage Value}$.",
+      "An asset cannot be depreciated below its salvage value under standard GAAP and IFRS accounting rules.",
+      "Critical variable in leasing contracts, determining the lessee's purchase option exercise price or balloon repayment.",
+      "Influenced by commodity scrap prices (e.g., steel scrap value for industrial ships) and technological obsolescence."
+    ],
+    "takeaways_fa": [
+      "از بهای تمام‌شده تاریخی کسر می‌شود تا مبنای استهلاک‌پذیر دارایی مشخص گردد: مأخذ استهلاک = بهای تمام‌شده - ارزش اسقاط.",
+      "طبق استانداردهای حسابداری، ارزش دفتری خالص دارایی هرگز نمی‌تواند از ارزش اسقاط برآوردشده آن کمتر مستهلک شود.",
+      "در قراردادهای اجاره به شرط تملیک (لیزینگ) نقشی اساسی در تعیین قیمت خرید نهایی یا تسویه بالونی ایفا می‌کند.",
+      "تحت تاثیر قیمت فلزات قراضه در بازار بازیافت و سرعت پیشرفت فناوری و منسوخ‌شدگی تجهیزات تغییر می‌یابد.",
+      "در جدول استهلاکات مالیاتی ایران، برای اکثر ماشین‌آلات صنعتی ارزش اسقاط به صورت پیش‌فرض صفر یا رقمی ناچیز منظور می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/s/salvagevalue.asp",
     "slug": "salvagevalue",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Salvage value defines the terminal terminal cash recovery expected from capital equipment, governing total lifetime depreciation expense.",
+    "bottom_line_fa": "ارزش اسقاط سقف استهلاک‌پذیری دارایی‌های ثابت را تعیین کرده و جریان نقد ورودی مرحله بازنشستگی تجهیزات را تخمین می‌زند.",
+    "sections": [
+      {
+        "title_en": "Depreciation Base and Terminal Value Formulation",
+        "title_fa": "فرمول مبنای استهلاک و ارزش نهایی در بودجه‌بندی سرمایه‌ای",
+        "content_en": "Under the straight-line method, periodic depreciation expense $D_t$ incorporates salvage value $S$: $$D_t = \\frac{C_0 - S}{N}$$ In Net Present Value (NPV) project budgeting, after-tax salvage recovery in year $N$ is: $$\\text{CF}_{N,\\text{salvage}} = S - \\tau(S - \\text{Book Value}_N)$$.",
+        "content_fa": "جریان نقدی حاصل از فروش اسقاط دارایی پس از تعدیل مالیاتی محاسبه می‌شود: $$\\text{CF}_{\\text{اسقاط}} = S - \\tau(S - \\text{ارزش دفتری})$$ این جریان نقدی در ارزیابی طرح‌های توسعه‌ای شرکت‌های بورسی در سال پایانی به ارزش فعلی طرح اضافه می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "ارزش‌گذاری و تحلیل بنیادی",
     "category_en": "Valuation & Fundamental Analysis"
   },
   {
     "id": 4909,
     "term_en": "Sampling",
-    "term_fa": "Sampling",
+    "term_fa": "نمونه‌گیری آماری در تحقیق و حسابرسی (Sampling)",
     "letter": "S",
     "category": "روش‌های کمی و ریاضیات مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Sampling is a statistical methodology involving the selection and examination of a representative subset (sample) of individual observations, transactions, or units from within a broader population to infer statistical characteristics and parameters about the entire group.",
+    "definition_fa": "نمونه‌گیری، فرآیندی علمی و آماری است که طی آن بخش منتخبی از مشاهدات، تراکنش‌های مالی یا اعضای یک جامعه آماری بزرگتر انتخاب و مورد آزمون قرار می‌گیرد تا بتوان ویژگی‌ها، میانگین‌ها و خطاهای کل جامعه را بدون نیاز به بررسی تک‌تک اقلام با دقت بالا برآورد نمود.",
+    "takeaways_en": [
+      "Divided into probability sampling (simple random, stratified, cluster, systematic) and non-probability sampling (convenience, judgmental, quota).",
+      "Foundational to independent financial auditing: auditors test a representative sample of invoices and journal entries to detect material misstatements.",
+      "Enables tremendous cost, labor, and time savings while delivering statistically defensible inference within quantifiable confidence margins.",
+      "Governed by sample size determination formulas balancing sampling error risk against investigative costs."
+    ],
+    "takeaways_fa": [
+      "به دو دسته اصلی نمونه‌گیری احتمالی (تصادفی ساده، طبقه‌بندی‌شده، خوشه‌ای، سیستماتیک) و غیراحتمالی (قضاوتی، دردسترس، سهمیه‌ای) تقسیم می‌شود.",
+      "ستون فقرات حسابرسی مستقل صورت‌های مالی است؛ حسابرسان با بررسی نمونه‌ای از فاکتورها، عدم انحراف بااهمیت صورت‌های مالی را تایید می‌کنند.",
+      "موجب صرفه‌جویی عظیم در زمان و هزینه‌ها شده و آزمون فرضیات را با فواصل اطمینان آماری معتبر امکان‌پذیر می‌سازد.",
+      "در موسسات حسابرسی عضو جامعه حسابداران رسمی ایران (IACPA) از نرم‌افزارهای نمونه‌گیری مبتنی بر متغیرهای پولی (MUS) استفاده می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/s/sampling.asp",
     "slug": "sampling",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Sampling unlocks robust statistical inference, allowing researchers and financial auditors to evaluate massive datasets efficiently.",
+    "bottom_line_fa": "نمونه‌گیری کارایی نظارت و پژوهش را به حداکثر رسانده و پل ارتباطی میان داده‌های محدود و تصمیم‌گیری‌های کلان اقتصادی است.",
+    "sections": [
+      {
+        "title_en": "Sample Size Determination for Finite Populations",
+        "title_fa": "فرمول کوکران در تعیین حداقل حجم نمونه آماری",
+        "content_en": "For a population of size $N$, margin of error $e$, critical value $Z_{\\alpha/2}$, and estimated proportion $p$, Cochran's sample size formula is: $$n = \\frac{\\frac{Z^2 p(1-p)}{e^2}}{1 + \\frac{Z^2 p(1-p)}{e^2 N}}$$ ensuring adequate statistical power to reject the null hypothesis.",
+        "content_fa": "حجم نمونه بهینه بر اساس فرمول کوکران تعیین می‌شود: $$n = \\frac{Z^2 p(1-p)}{e^2}$$ این فرمول تضمین می‌کند که نتایج حسابرسی یا نظرسنجی بازار با ضریب اطمینان ۹۵٪ یا ۹۹٪ قابل تعمیم به کل جامعه باشد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
     "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 4910,
     "term_en": "Sampling Distribution",
-    "term_fa": "Sampling Distribution",
+    "term_fa": "توزیع نمونه‌گیری در آمار (Sampling Distribution)",
     "letter": "S",
     "category": "روش‌های کمی و ریاضیات مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A sampling distribution is the theoretical probability distribution of a given sample statistic (such as the sample mean, variance, or proportion) computed from an infinite number of independent random samples of identical size $n$ drawn from a single population.",
+    "definition_fa": "توزیع نمونه‌گیری، توزیع احتمالاتی کلیه مقادیر ممکنی است که یک آماره نمونه‌ای (نظیر میانگین نمونه $\\bar{X}$ یا واریانس نمونه $s^2$) می‌تواند در اثر تکرار بی‌نهایت بار نمونه‌گیری تصادفی مستقل با حجم ثابت $n$ از یک جامعه آماری به خود بگیرد؛ این مفهوم اساس پیوند آمار توصیفی با استنباط آماری است.",
+    "takeaways_en": [
+      "Governed by the Central Limit Theorem (CLT): the sampling distribution of the mean approaches normality as $n \\ge 30$, regardless of the population distribution shape.",
+      "The mean of the sampling distribution of sample means equals the true population mean: $\\mathbb{E}[\\bar{X}] = \\mu$ (unbiased estimator).",
+      "The standard deviation of the sampling distribution is called the Standard Error ($SE = \\frac{\\sigma}{\\sqrt{n}}$), shrinking as sample size increases.",
+      "Underpins all hypothesis testing, p-value calculations, and confidence intervals in quantitative econometric modeling."
+    ],
+    "takeaways_fa": [
+      "پیروی از قضیه حد مرکزی (CLT): توزیع میانگین‌های نمونه با افزایش حجم نمونه ($n \\ge 30$) به سمت توزیع نرمال همگرا می‌شود، حتی اگر جامعه اولیه کاملاً نامتقارن باشد.",
+      "میانگین توزیع نمونه‌گیری برابر با میانگین واقعی جامعه است: $\\mathbb{E}[\\bar{X}] = \\mu$ (برآوردگر نااریب).",
+      "انحراف معیار این توزیع 'خطای استاندارد' نامیده می‌شود که با جذر حجم نمونه نسبت معکوس دارد: $SE = \\frac{\\sigma}{\\sqrt{n}}$.",
+      "پایه‌ای‌ترین مفهوم برای محاسبه مقادیر p-value و آزمون معناداری استراتژی‌های تحلیل کمّی سهام است."
+    ],
     "url": "https://www.investopedia.com/terms/s/sampling-distribution.asp",
     "slug": "sampling-distribution",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The sampling distribution bridges empirical sample observations with rigorous mathematical probability theory.",
+    "bottom_line_fa": "توزیع نمونه‌گیری سنگ‌بنای علم استنباط آماری است که تعمیم نتایج آزمون‌های تجربی به کل اقتصاد را توجیه ریاضی می‌بخشد.",
+    "sections": [
+      {
+        "title_en": "Central Limit Theorem Asymptotic Normality",
+        "title_fa": "قضیه حد مرکزی و میل به توزیع نرمال استاندارد",
+        "content_en": "By the Lindeberg-Lévy Central Limit Theorem, the standardized sample mean converges in distribution to standard Gaussian: $$\\sqrt{n} \\left( \\frac{\\bar{X}_n - \\mu}{\\sigma} \\right) \\xrightarrow{d} \\mathcal{N}(0, 1) \\quad \\text{as } n \\to \\infty$$ validating parametric statistical tests across skewed financial data.",
+        "content_fa": "طبق قضیه حد مرکزی، متغیر میانگین استانداردشده به توزیع نرمال میل می‌کند: $$\\frac{\\bar{X} - \\mu}{\\sigma / \\sqrt{n}} \\sim \\mathcal{N}(0,1)$$ این خاصیت به تحلیل‌گران اجازه می‌دهد حتی در داده‌های پرت‌دار مالی، از ابزارهای قدرتمند رگرسیون استفاده کنند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
     "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 4911,
     "term_en": "Sampling Errors",
-    "term_fa": "Sampling Errors",
+    "term_fa": "خطای نمونه‌گیری (Sampling Error)",
     "letter": "S",
     "category": "روش‌های کمی و ریاضیات مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Sampling error is the statistical discrepancy between the value of a sample statistic (such as the sample mean) and the true, unobserved population parameter, arising purely because a subset of the population rather than the entire census was observed.",
+    "definition_fa": "خطای نمونه‌گیری، انحراف یا تفاوت آماری میان مقدار یک آماره محاسبه‌شده از روی نمونه (مانند میانگین بازده پورتفو) و مقدار واقعی پارامتر نامعلوم کل جامعه است؛ این خطا امری طبیعی و اجتناب‌ناپذیر بوده و صرفاً ناشی از بررسی بخشی از جامعه به جای سرشماری تمام اعضا پدید می‌آید.",
+    "takeaways_en": [
+      "Contrasts with non-sampling errors (such as data collection flaws, measurement bias, non-response bias, and fraudulent reporting).",
+      "Directly controlled and reduced by expanding the sample size: sampling error decays at the rate of $\\mathcal{O}(1/\\sqrt{n})$.",
+      "Quantified in public polling and audit reports as the Margin of Error ($MoE = Z_{\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}$).",
+      "Eliminated completely only when a comprehensive census of the entire target population is conducted."
+    ],
+    "takeaways_fa": [
+      "با خطاهای غیرنمونه‌گیری (نظیر اشتباه در ورود داده‌ها، سوگیری پرسش‌نامه یا امتناع از پاسخ) تفاوت بنیادین دارد.",
+      "با افزایش حجم نمونه ($n$) می‌توان آن را به طور موثر کاهش داد، زیرا با جذر تعداد مشاهدات رابطه معکوس دارد.",
+      "در گزارش‌های تحلیلی و نظرسنجی‌ها در قالب 'حاشیه خطا' (Margin of Error) گزارش می‌شود (مثلاً با خطای $\\pm 3\\%$).",
+      "تنها راه حذف کامل و قطعی آن، اجرای سرشماری کامل ۱۰۰ درصدی از تمام اعضای جامعه است."
+    ],
     "url": "https://www.investopedia.com/terms/s/samplingerror.asp",
     "slug": "samplingerror",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Sampling error represents the inherent, quantifiable uncertainty of inferring population truths from fractional sample data.",
+    "bottom_line_fa": "خطای نمونه‌گیری بهای اجتناب‌ناپذیر تعمیم علمی داده‌ها است که با انتخاب نمونه‌های بزرگ و روش‌های احتمالی مهار می‌گردد.",
+    "sections": [
+      {
+        "title_en": "Margin of Error and Variance Decomposition",
+        "title_fa": "فرمول حاشیه خطا و تجزیه واریانس برآوردگر",
+        "content_en": "The maximum margin of error ($MoE$) at $(1-\\alpha)$ confidence interval is: $$MoE = Z_{1-\\alpha/2} \\sqrt{\\frac{s^2}{n} \\left( \\frac{N - n}{N - 1} \\right)}$$ where the bracketed term is the finite population correction factor (FPC), which approaches unity when $N \\gg n$.",
+        "content_fa": "حاشیه خطا بر اساس ضریب اطمینان و خطای معیار برآورد می‌شود: $$MoE = Z \\cdot \\frac{s}{\\sqrt{n}} \\sqrt{\\frac{N-n}{N-1}}$$ با بزرگتر شدن نمونه، فاصله اطمینان باریک‌تر شده و دقت برآورد ریسک در گزارشگری مالی به اوج می‌رسد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
     "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 4912,
     "term_en": "Samurai Bonds Explained: Definition and Benefits",
-    "term_fa": "Samurai اوراق قرضه Explained: Definition and Benefits (Samurai Bonds Explained: Definition and Benefits)",
+    "term_fa": "اوراق قرضه سامورایی / اوراق ین ژاپن ناشران خارجی (Samurai Bond)",
     "letter": "S",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A Samurai bond is a yen-denominated debt security issued in Tokyo by a foreign government, corporation, or multilateral institution, subject to Japanese securities regulations and targeted primarily at Japanese institutional and retail investors.",
+    "definition_fa": "اوراق سامورایی (Samurai Bond)، اوراق قرضه‌ای بر حسب ین ژاپن است که توسط دولت‌ها، شرکت‌ها یا نهادهای بین‌المللی خارجی در بازار سرمایه توکیو منتشر می‌شود؛ این اوراق تابع قوانین بورس ژاپن بوده و به ناشران خارجی امکان می‌دهد به استخر عظیم نقدینگی و نرخ‌های بهره پایین سرمایه‌گذاران ژاپنی دسترسی یابند.",
+    "takeaways_en": [
+      "Denominated in Japanese Yen (JPY) and governed by Japanese financial market laws under FSA oversight.",
+      "Enables non-Japanese issuers to hedge yen liabilities, diversify international funding bases, and exploit low Japanese interest rates.",
+      "Contrasts with Euroyen bonds (yen-denominated bonds issued outside Japan, typically in London).",
+      "Requires credit ratings from Japanese rating agencies (e.g., JCR or R&I) to attract conservative Japanese pension capital."
+    ],
+    "takeaways_fa": [
+      "بر حسب ین ژاپن منتشر شده و تحت نظارت آژانس خدمات مالی ژاپن (FSA) معامله می‌شود.",
+      "به ناشران بین‌المللی اجازه می‌دهد از محیط تاریخی نرخ‌های بهره نزدیک به صفر یا منفی ژاپن برای تأمین مالی ارزان بهره‌برداری کنند.",
+      "با اوراق 'یورو ین' تفاوت دارد؛ اوراق یورو ین در خارج از مرزهای قضایی ژاپن (مثلاً در بازار لندن) منتشر می‌شوند.",
+      "صندوق‌های بازنشستگی و بیمه‌های ژاپنی خریداران سنتی این اوراق هستند.",
+      "یکی از شناخته‌شده‌ترین انواع اوراق قرضه خارجی (مانند اوراق یانکی در آمریکا یا اوراق بولداگ در انگلستان) است."
+    ],
     "url": "https://www.investopedia.com/terms/s/samuraibond.asp",
     "slug": "samuraibond",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Samurai bonds provide foreign entities with access to low-cost Japanese capital while providing domestic investors with yield diversification.",
+    "bottom_line_fa": "اوراق سامورایی دروازه ورود شرکت‌های بین‌المللی به بازار پول ارزان ژاپن و پیونددهنده نقدینگی آسیایی با طرح‌های توسعه جهانی است.",
+    "sections": [
+      {
+        "title_en": "Cross-Currency Swap Financing Arbitrage",
+        "title_fa": "آربیتراژ ارزی و سواپ ارزی متقابل (Cross-Currency Swap)",
+        "content_en": "A foreign issuer issues Samurai debt at yen coupon $y_{\\text{JPY}}$ and converts proceeds to USD via a cross-currency basis swap: $$r_{\\text{synthetic USD}} = y_{\\text{JPY}} + \\text{FX Basis Swap Spread} - \\Delta_{\\text{credit}}$$ If $r_{\\text{synthetic USD}} < r_{\\text{domestic USD}}$, issuing in Tokyo generates a net funding cost discount.",
+        "content_fa": "ناشر پس از انتشار اوراق سامورایی، با یک قرارداد سواپ ارزی بازده ین را به دلار تبدیل می‌کند: $$r_{\\text{USD}} = y_{\\text{JPY}} + \\text{Basis Swap}$$ در صورت وجود مزیت نسبی، هزینه کل تأمین مالی از انتشار مستقیم اوراق دلاری ارزان‌تر تمام می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 4913,
     "term_en": "Savings Account",
-    "term_fa": "Savings حساب (Savings Account)",
+    "term_fa": "حساب پس‌انداز بانکی (Savings Account)",
     "letter": "S",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A savings account is an interest-bearing retail deposit account maintained at a commercial bank, savings association, or credit union, offering high liquidity, capital principal security backed by government deposit insurance, and modest interest returns.",
+    "definition_fa": "حساب پس‌انداز بانکی، یک حساب سپرده‌گذاری کوتاه‌مدت و با درآمد بهره است که نزد بانک‌ها یا موسسات اعتباری افتتاح می‌شود؛ این حساب نقدشوندگی بسیار بالا، حفظ اصل سرمایه با پشتوانه بیمه سپرده‌های دولتی و بازدهی دوره‌ای اندکی را برای وجوه مازاد و صندوق‌های اضطراری خانوارها فراهم می‌سازد.",
+    "takeaways_en": [
+      "Insured up to statutory caps (e.g., $250,000 per depositor per bank by the FDIC in the U.S.).",
+      "Traditionally restricted in monthly transaction withdrawals (e.g., Federal Reserve Regulation D previously capped preauthorized withdrawals at 6 per month).",
+      "High-Yield Savings Accounts (HYSA) offered by digital online banks deliver substantially higher Annual Percentage Yields (APY).",
+      "Ideal repository for emergency funds (covering 3 to 6 months of living expenses) and short-term capital goals."
+    ],
+    "takeaways_fa": [
+      "اصل و سود آن تا سقف مشخص قانونی توسط صندوق‌های ضمانت سپرده بانکی بیمه شده و ریسک نکول آن نزدیک به صفر است.",
+      "نقدشوندگی روزانه دارد و فرد می‌تواند از طریق کارت‌های بانکی، دستگاه‌های خودپرداز و درگاه‌های اینترنتی موجودی را منتقل نماید.",
+      "حساب‌های پس‌انداز با بازدهی بالا (HYSA) در نئوبانک‌ها سود بالاتری نسبت به شعب سنتی پرداخت می‌کنند.",
+      "محل ایده‌آل برای نگهداری 'صندوق اضطراری' خانوارها (هزینه‌های معیشتی ۳ تا ۶ ماه آینده).",
+      "در شبکه بانکی ایران، به صورت حساب‌های قرض‌الحسنه پس‌انداز (با جوایز قرعه‌کشی) و سپرده‌های سرمایه‌گذاری کوتاه‌مدت عادی ماهانه ارائه می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/s/savingsaccount.asp",
     "slug": "savingsaccount",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Savings accounts provide rock-solid principal preservation and liquid cash security for personal emergency reserves.",
+    "bottom_line_fa": "حساب‌های پس‌انداز سنگر بنیادین مدیریت مالی شخصی و امن‌ترین ابزار نگهداری نقدینگی در برابر بحران‌های پیش‌بینی‌ناپذیر زندگی هستند.",
+    "sections": [
+      {
+        "title_en": "Compound Interest and Annual Percentage Yield (APY)",
+        "title_fa": "فرمول سود مرکب و نرخ بازده موثر سالانه (APY)",
+        "content_en": "For nominal interest rate $r$ compounded $n$ times per year, terminal balance $A(t)$ on principal $P_0$ is: $$A(t) = P_0 \\left(1 + \\frac{r}{n}\\right)^{nt}$$ The Annual Percentage Yield ($APY$) reflects compounding frequency: $$APY = \\left(1 + \\frac{r}{n}\\right)^n - 1$$.",
+        "content_fa": "ارزش آتی سپرده پس‌انداز با احتساب دفعات پرداخت سود در سال محاسبه می‌شود: $$A = P_0 \\left(1 + \\frac{r}{n}\\right)^{nt}$$ طبق مصوبات بانک مرکزی ایران، سود سپرده‌های کوتاه‌مدت بر مبنای کمترین مانده روزانه در طول ماه محاسبه و در پایان ماه واریز می‌گردد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 4914,
     "term_en": "Savings and Loan Crisis (S&L) Crisis",
-    "term_fa": "Savings and وام Crisis (S&L) Crisis (Savings and Loan Crisis (S&L) Crisis)",
+    "term_fa": "بحران موسسات پس‌انداز و وام / بحران S&L (Savings and Loan Crisis)",
     "letter": "S",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Savings and Loan (S&L) Crisis was a catastrophic wave of financial insolvencies during the 1980s and early 1990s in the United States, where nearly one-third of the nation's 3,234 savings and loan associations failed due to high interest rate volatility, severe asset-liability duration mismatches, deregulation, and speculative commercial real estate fraud.",
+    "definition_fa": "بحران موسسات پس‌انداز و وام (بحران S&L)، موج سهمگین ورشکستگی مالی در دهه ۱۹۸۰ و اوایل دهه ۱۹۹۰ در آمریکا بود که طی آن نزدیک به یک‌سوم از کل موسسات پس‌انداز و وام مسکن ورشکسته شدند؛ علت این فاجعه ناترازی زمانی شدید میان سپرده‌های کوتاه‌مدت با بهره بالا و تسهیلات بلندمدت مسکن با نرخ ثابت، مقررات‌زدایی شتاب‌زده، فساد مالی و حباب سفته‌بازی املاک تجاری بود که به یک بسته نجات مالی ۱۶۰ میلیارد دلاری دولتی منتهی شد.",
+    "takeaways_en": [
+      "Triggered when the Federal Reserve under Paul Volcker hiked short-term rates to over 20% to fight inflation, causing S&L borrowing costs to vastly exceed fixed long-term mortgage yields.",
+      "The Depository Institutions Deregulation and Monetary Control Act (DIDMCA) and Garn-St. Germain Act expanded speculative lending powers without adequate capital safeguards.",
+      "Led to the bankruptcy of the FSLIC deposit insurance fund and the creation of the Resolution Trust Corporation (RTC) to liquidate $400+ billion in bad assets.",
+      "Directly catalyzed modern macroprudential risk management: asset-liability duration matching and strict risk-weighted capital adequacy ratios."
+    ],
+    "takeaways_fa": [
+      "با افزایش شدید نرخ بهره توسط فدرال رزرو (به رهبری پاول ولکر) تا بالای ۲۰٪ آغاز شد که هزینه جذب سپرده را به شدت بالاتر از سود وام‌های مسکن بلندمدت ۳۰ ساله گذشته قرار داد.",
+      "مقررات‌زدایی شتاب‌زده به مدیران این موسسات اجازه داد وارد پروژه‌های سفته‌بازی پرخطر ساختمانی و سرمایه‌گذاری در اوراق قرضه بنجل (Junk Bonds) شوند.",
+      "منجر به نابودی صندوق بیمه سپرده FSLIC و تاسیس شرکت دولتی RTC جهت تصفیه بیش از ۴۰۰ میلیارد دلار دارایی سمی و سوخت‌شده شد.",
+      "درس‌های این بحران مبنای مدیریت مدرن دارایی و بدهی (ALM) و کنترل شکاف دیرش (Duration Gap) در بانکداری نوین جهانی گردید.",
+      "شباهت‌های ساختاری چشمگیری با بحران موسسات مالی و اعتباری غیرمجاز در ایران در اواسط دهه ۱۳۹۰ دارد."
+    ],
     "url": "https://www.investopedia.com/terms/s/sl-crisis.asp",
     "slug": "sl-crisis",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The S&L crisis stands as an enduring regulatory lesson on the fatal perils of asset-liability duration mismatch and reckless credit deregulation.",
+    "bottom_line_fa": "بحران S&L هشداری تاریخی درباره خطرات ناترازی بهره و نقدینگی در بانک‌ها است که لزوم نظارت هوشمندانه بر موسسات سپرده‌پذیر را اثبات نمود.",
+    "sections": [
+      {
+        "title_en": "Asset-Liability Duration Gap Vulnerability",
+        "title_fa": "تحلیل شکاف دیرش دارایی‌ها و بدهی‌ها (Duration Gap)",
+        "content_en": "S&L equity sensitivity to interest rate shock $\\Delta y$ is governed by the duration gap ($DG$): $$\\Delta E = -\\left[ D_A - \\left(\\frac{L}{A}\\right) D_L \\right] A \\cdot \\frac{\\Delta y}{1 + y}$$ With long-term mortgage duration $D_A \\approx 7$ years and short-term deposit duration $D_L \\approx 0.5$ years, a 500 bps rate surge completely obliterated equity capitalization: $$\\Delta E < -E_0$$.",
+        "content_fa": "تغییرات ارزش ویژه بانک در اثر شوک نرخ بهره با شکاف دیرش رابطه مستقیم دارد:\n$$\\Delta E = -DG \\cdot A \\cdot \\Delta y$$\nاز آنجا که دارایی‌ها بلندمدت و بدهی‌ها کوتاه‌مدت بودند، جهش نرخ بهره سرمایه نظارتی این موسسات را به سرعت منفی و آنها را ورشکسته ساخت."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 4915,
     "term_en": "Say's Law of Markets",
-    "term_fa": "Say's Law of بازارها (Say's Law of Markets)",
+    "term_fa": "قانون سه در اقتصاد کلاسیک (Say's Law of Markets)",
     "letter": "S",
     "category": "اقتصاد خرد و ساختار بازار",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Say's Law of Markets is a classical economic proposition formulated by French economist Jean-Baptiste Say stating that 'supply creates its own demand,' asserting that the production of goods generates an equivalent amount of aggregate income sufficient to purchase the total output produced.",
+    "definition_fa": "قانون بازارهای سِی (Say's Law)، یکی از مشهورترین اصول مکتب اقتصاد کلاسیک است که توسط ژان باتیست سِی صورت‌بندی شد؛ این اصل بیان می‌دارد که 'عرضه، تقاضای خود را ایجاد می‌کند'؛ به این معنا که در فرآیند تولید هر کالا، معادل ارزش آن دستمزد، سود و اجاره به عوامل تولید پرداخت می‌شود که این قدرت خرید خودبه‌خود صرف خرید کل کالاها شده و در نتیجه رکود یا مازاد عمومی عرضه پایدار در اقتصاد ناممکن است.",
+    "takeaways_en": [
+      "Forms the core philosophical pillar of classical macroeconomics, rejecting the possibility of a prolonged general glut (overproduction).",
+      "Argues that money serves purely as a medium of exchange (veil of money) rather than an independent store of value hoarded indefinitely.",
+      "Fundamentally challenged during the Great Depression by John Maynard Keynes, who demonstrated that aggregate demand failures cause involuntary unemployment.",
+      "Reemerged in modern supply-side economics, emphasizing incentives for production, capital formation, deregulation, and lower marginal tax rates."
+    ],
+    "takeaways_fa": [
+      "رکن بنیادین مکتب کلاسیک که امکان وقوع بحران‌های مازاد تولید عمومی و فراگیر در بلندمدت را رد می‌کند.",
+      "پول را صرفاً به عنوان وسیله مبادله (حجاب پولی) در نظر می‌گیرد و انباشت و راکد ماندن درازمدت پول را نفی می‌نماید.",
+      "در بحران بزرگ ۱۹۲۹ توسط جان مینارد کینز به چالش کشیده شد؛ کینز اثبات کرد که نارسایی تقاضای کل می‌تواند اقتصاد را در دام بیکاری گرفتار کند.",
+      "شالوده مکتب 'اقتصاد طرف عرضه' (Supply-Side Economics) است که بر کاهش مالیات بر تولید و آزادسازی سرمایه‌گذاری برای رشد GDP تاکید دارد."
+    ],
     "url": "https://www.investopedia.com/terms/s/says-law.asp",
     "slug": "says-law",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Say's Law asserts that aggregate production drives economic wealth, establishing the theoretical bedrock of classical and supply-side economics.",
+    "bottom_line_fa": "قانون سِی تولید را سرچشمه اصلی درآمد و تقاضای جامعه می‌داند و اولویت سیاست‌گذاری اقتصادی را تقویت توان تولید ملی قرار می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Circular Flow Identity and Keynesian Critique",
+        "title_fa": "هویت جریان دایره‌وار درآمد و نقد کینزی تعادل در کم‌کاری",
+        "content_en": "Under Say's Law, aggregate production identically matches aggregate income and planned expenditure: $$Y = C(Y) + S(Y) \\equiv C(Y) + I \\implies S = I$$ Keynes demonstrated that if desired savings exceed planned investment at full employment ($S > I$), liquidity preference triggers an aggregate demand shortfall: $$\\Delta Y_{\\text{recession}} < 0$$.",
+        "content_fa": "در دیدگاه سِی پس‌انداز همواره به سرمایه‌گذاری تبدیل می‌شود: $$S = I$$ اما کینز نشان داد در صورت تمایل مردم به نگهداری نقدینگی، تقاضای کل کاهش یافته و اقتصاد در تعادل زیر اشتغال کامل متوقف می‌ماند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد خرد و ساختار بازار",
     "category_en": "Microeconomics & Market Structures"
   },
   {
     "id": 4916,
     "term_en": "Scalability",
-    "term_fa": "مقیاس پذیری (Scalability)",
+    "term_fa": "مقیاس‌پذیری در کسب‌وکار و فناوری (Scalability)",
     "letter": "S",
     "category": "مدیریت عملیات و زنجیره تأمین",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Scalability is the structural capability of a business model, software system, or production process to seamlessly accommodate substantial growth in sales volume, user traffic, or transaction output without suffering diminishing efficiency, operational breakdown, or a proportionate rise in operating costs.",
+    "definition_fa": "مقیاس‌پذیری (Scalability)، توانایی ذاتی یک مدل کسب‌وکار، سامانه نرم‌افزاری یا فرآیند تولیدی در پاسخگویی به رشد تصاعدی تقاضا، افزایش کاربران یا جهش حجم مبادلات بدون افت کیفیت و بدون نیاز به افزایش متناسب در هزینه‌های جاری است؛ کسب‌وکارهای مقیاس‌پذیر با رشد درآمد، شاهد کاهش هزینه متوسط و جهش تصاعدی در حاشیه سود عملیاتی هستند.",
+    "takeaways_en": [
+      "High scalability features low marginal costs: the cost of serving the $N+1$-th customer approaches zero (common in SaaS and digital platforms).",
+      "Drives massive operational leverage: revenues scale exponentially while fixed overhead costs expand linearly.",
+      "In technology and blockchain architecture, scalability refers to the network's throughput capacity measured in Transactions Per Second (TPS).",
+      "Prime investment filter applied by venture capital firms seeking non-linear enterprise valuation multiples."
+    ],
+    "takeaways_fa": [
+      "مشخصه اصلی آن هزینه نهایی (Marginal Cost) ناچیز است؛ هزینه ارائه خدمات به کاربر صدهزارم تقریباً نزدیک به صفر است (مانند پلتفرم‌های اینترنتی).",
+      "اهرم عملیاتی فوق‌العاده‌ای خلق می‌کند؛ در حالی که درآمدها به صورت نمایی رشد می‌کنند، هزینه‌ها رشد خطی و کند دارند.",
+      "در حوزه فناوری و بلاک‌چین، به توان پردازش تراکنش‌ها در ثانیه (TPS) بدون افزایش کارمزد شبکه اطلاق می‌شود.",
+      "مهم‌ترین معیار صندوق‌های سرمایه‌گذاری جسورانه (VC) برای سرمایه‌گذاری در استارتاپ‌های فین‌تک و فناوری‌محور."
+    ],
     "url": "https://www.investopedia.com/terms/s/scalability.asp",
     "slug": "scalability",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Scalability unlocks exponential profitability by decoupling revenue expansion from proportional operating cost growth.",
+    "bottom_line_fa": "مقیاس‌پذیری راز خلق شرکت‌های باارزش مدرن است که رشد انفجاری سودآوری را با حداقل مصرف منابع جدید ممکن می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Marginal Cost and Operational Leverage Scalability Function",
+        "title_fa": "تابع هزینه نهایی و اهرم عملیاتی در کسب‌وکارهای مقیاس‌پذیر",
+        "content_en": "A business exhibits high scalability when average total cost ($ATC$) declines monotonically as output $Q$ expands: $$\\lim_{Q \\to \\infty} ATC(Q) = \\lim_{Q \\to \\infty} \\left( \\frac{FC}{Q} + MC \\right) = MC \\approx 0$$ Operating leverage ($DOL$) magnifies operating income growth: $$DOL = \\frac{\\% \\Delta EBIT}{\\% \\Delta Q} = \\frac{Q(P - MC)}{Q(P - MC) - FC} > 1$$.",
+        "content_fa": "کسب‌وکارهای با مقیاس‌پذیری بالا با افزایش مقیاس، هزینه متوسط هر واحد را به حداقل می‌رسانند: $$ATC \\to MC \\approx 0$$ این امر در پلتفرم‌های دیجیتال حاضر در فرابورس ایران حاشیه‌های سود خالصی فراتر از ۶۰٪ ایجاد می‌نماید."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت عملیات و زنجیره تأمین",
     "category_en": "Operations & Supply Chain"
   },
   {
     "id": 4917,
     "term_en": "Scalping",
-    "term_fa": "Scalping",
+    "term_fa": "اسکالپینگ / نوسان‌گیری فوق‌کوتاه‌مدت در بازارهای مالی (Scalping)",
     "letter": "S",
     "category": "تحلیل تکنیکال و پرایس اکشن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Scalping is an active, ultra-short-term trading strategy where a trader attempts to capture small profits on minor price fluctuations across seconds or minutes, frequently executing dozens or hundreds of trades per day to exploit bid-ask spreads and temporary market microstructure imbalances.",
+    "definition_fa": "اسکالپینگ یا نوسان‌گیری ثانیه‌ای، یک استراتژی معاملاتی پرشتاب و فوق‌کوتاه‌مدت در بازارهای مالی است که معامله‌گر با باز و بسته کردن پوزیشن‌ها ظرف چند ثانیه تا چند دقیقه، به دنبال شکار سودهای کوچک اما پرشمار از نوسانات جزئی قیمت یا اسپرد مظنه‌های خرید و فروش است؛ اسکالپرها روزانه ده‌ها تا صدها معامله انجام می‌دهند.",
+    "takeaways_en": [
+      "Relies on tight risk discipline: strict, minute stop-losses to prevent a single outsized loss from erasing accumulated small gains.",
+      "Requires ultra-low commission rates, direct market access (DMA), and minimal execution latency to overcome transaction friction.",
+      "Heavily dominated in modern markets by High-Frequency Trading (HFT) firms utilizing co-located quantitative algorithms.",
+      "Focuses on Level 2 order book liquidity depth, order flow momentum, and tick charts rather than macro fundamental trends."
+    ],
+    "takeaways_fa": [
+      "متکی بر انضباط آهنین در مدیریت ریسک و حد ضررهای بسیار فشرده است تا یک اشتباه کوچک، دستاورد ده‌ها معامله موفق را نسوزاند.",
+      "نیازمند کارمزدهای بسیار پایین، نرم‌افزارهای معاملات مستقیم (DMA) و سرعت اینترنت فوق‌سریع برای کاهش لغزش قیمت است.",
+      "امروزه بخش عمده آن توسط الگوریتم‌های معاملات با بسامد بالا (HFT) در سرورهای هم‌جوار هسته معاملات انجام می‌پذیرد.",
+      "بر داده‌های عمق بازار (تابلوخوانی)، جریان سفارشات و نمودارهای تیک‌چارت تمرکز دارد و توجهی به تحلیل بنیادی نمی‌کند.",
+      "در بازار بورس و مشتقات ایران، اسکالپینگ روی نمادهای پرنقدشونده و قراردادهای آتی طلا استراتژی محبوبی میان نوسان‌گیران حرفه‌ای است."
+    ],
     "url": "https://www.investopedia.com/terms/s/scalping.asp",
     "slug": "scalping",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Scalping captures micro-inefficiencies in market depth through rapid-fire trading, demanding extreme latency discipline and tight risk control.",
+    "bottom_line_fa": "اسکالپینگ نبردی تمام‌عیار در کسری از ثانیه‌هاست که سودآوری در آن نیازمند کنترل آهن‌ربایی احساسات و مهار اصطکاک کارمزدهاست.",
+    "sections": [
+      {
+        "title_en": "Net Expected Return under Transaction Cost Friction",
+        "title_fa": "امید ریاضی بازدهی اسکالپینگ با احتساب کارمزد و اسلیپیج",
+        "content_en": "Net profit per scalping trade ($\\mathbb{E}[\\pi]$) incorporating round-trip commission $c$, bid-ask spread $S$, and slippage $\\delta$ is: $$\\mathbb{E}[\\pi] = w \\cdot \\Delta P_{\\text{win}} - (1 - w) \\cdot \\Delta P_{\\text{loss}} - 2c - S - 2\\delta$$ Profitable scalping mandates an ultra-high win rate ($w > 65-70\\%$) to overcome persistent frictional friction.",
+        "content_fa": "سود خالص اسکالپینگ باید هزینه‌های دوطرفه کارمزد و لغزش قیمت را پوشش دهد: $$\\mathbb{E}[\\pi] = w \\Delta P_{\\text{win}} - (1-w) \\Delta P_{\\text{loss}} - \\text{کارمزد}$$ بالا بودن کارمزد معاملات در بورس مانعی جدی برای اسکالپرهای سنتی است و آنها را به سمت صندوق‌های کم‌کارمزد سوق می‌دهد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "تحلیل تکنیکال و پرایس اکشن",
     "category_en": "Technical Analysis & Charting"
   },
   {
     "id": 4918,
     "term_en": "Scarcity",
-    "term_fa": "Scarcity",
+    "term_fa": "کمیابی در اقتصاد / اصل کمیابی منابع (Scarcity)",
     "letter": "S",
     "category": "اقتصاد خرد و ساختار بازار",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Scarcity is the fundamental economic problem that arises because human wants and desires for goods and services are virtually limitless, while the productive resources (land, labor, capital, and entrepreneurship) available to satisfy those desires are strictly finite.",
+    "definition_fa": "کمیابی (Scarcity)، مسئله بنیادین علم اقتصاد است که از تضاد میان نیازها و خواسته‌های نامحدود بشری با منابع تولیدی محدود و متناهی جهان (شامل زمین، نیروی کار، سرمایه و کارآفرینی) سرچشمه می‌گیرد؛ وجود کمیابی بشر را ناگزیر به انتخاب، اولویت‌بندی، پذیرش هزینه فرصت و تخصیص بهینه منابع می‌سازد.",
+    "takeaways_en": [
+      "The foundational catalyst of all economics: without scarcity, goods would be free and economic decision-making obsolete.",
+      "Forces economic systems to solve three core questions: What to produce? How to produce it? For whom to produce?",
+      "Prices serve as rationing mechanisms in market economies, clearing markets and allocating scarce inputs to their highest-value uses.",
+      "Creates opportunity cost: choosing to allocate scarce resources to option A permanently foregoes the benefits of option B."
+    ],
+    "takeaways_fa": [
+      "انگیزه پیدایش علم اقتصاد: اگر منابع نامحدود بودند، تمام کالاها رایگان می‌شدند و نیازی به بهینه‌سازی و قیمت‌گذاری وجود نداشت.",
+      "جوامع بشری را ناچار به پاسخ‌گویی به سه پرسش اساسی می‌کند: چه چیزی تولید شود؟ چگونه تولید شود؟ و برای چه کسی توزیع گردد؟",
+      "سیستم قیمت‌ها در بازار آزاد نقش سازوکار جیره‌بندی و هدایت منابع کمیاب به کارآمدترین صنایع را ایفا می‌کند.",
+      "مفهوم بنیادین 'هزینه فرصت' (Opportunity Cost) را پدید می‌آورد؛ یعنی فدا کردن بهترین گزینه جایگزین برای دستیابی به انتخاب فعلی."
+    ],
     "url": "https://www.investopedia.com/terms/s/scarcity.asp",
     "slug": "scarcity",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Scarcity dictates the necessity of economic choice, transforming finite productive resources into priced market goods.",
+    "bottom_line_fa": "کمیابی حقیقت گریزناپذیر جهان مادی است که ضرورت برنامه‌ریزی عقلانی و مدیریت هوشمندانه ثروت را در جوامع رقم می‌زند.",
+    "sections": [
+      {
+        "title_en": "Production Possibility Frontier (PPF) and Opportunity Cost",
+        "title_fa": "منحنی مرز امکانات تولید (PPF) و کمیابی منابع",
+        "content_en": "The Production Possibility Frontier illustrates scarcity by graphing maximum obtainable outputs $(X, Y)$ from fixed resources $K, L$: $$F(X, Y; K, L) = 0$$ The Marginal Rate of Transformation ($MRT$) captures increasing opportunity cost: $$MRT = -\\frac{dY}{dX} = \\frac{MC_X}{MC_Y}$$.",
+        "content_fa": "مرز امکانات تولید نشان می‌دهد که به دلیل کمیابی منابع، تولید بیشتر کالای X مستلزم صرف‌نظر از کالای Y است: $$MRT = -\\frac{dY}{dX}$$ هر نقطه‌ای خارج از منحنی PPF در شرایط فعلی غیرقابل دسترسی بوده و نیازمند رشد فناوری است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد خرد و ساختار بازار",
     "category_en": "Microeconomics & Market Structures"
   },
   {
     "id": 4919,
     "term_en": "Scenario Analysis",
-    "term_fa": "Scenario تحلیل (Scenario Analysis)",
+    "term_fa": "تحلیل سناریو / ارزیابی سناریوهای مالی (Scenario Analysis)",
     "letter": "S",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Scenario analysis is a risk management and financial modeling technique that evaluates the potential future value of an investment portfolio, corporate project, or strategic decision under various discrete, coherent alternative future states of the world (typically base-case, bull-case, and bear-case scenarios).",
+    "definition_fa": "تحلیل سناریو، یک تکنیک پیشرفته در مدل‌سازی مالی و مدیریت ریسک است که عملکرد و ارزش آتی یک سرمایه‌گذاری، سبد سهام یا طرح توسعه صنعتی را تحت سناریوهای مختلف و محتمل آینده (معمولاً سناریوی پایه یا محتمل، سناریوی خوش‌بینانه و سناریوی بدبینانه) ارزیابی و برآورد می‌کند.",
+    "takeaways_en": [
+      "Examines simultaneous changes in multiple correlated variables (e.g., interest rates, GDP growth, and commodity prices), unlike single-variable sensitivity analysis.",
+      "Standardizes discrete scenarios: Base Case (expected outcome), Bull Case (optimistic upside), and Bear Case (severe downside stress).",
+      "Vital component of banking regulatory stress testing (e.g., Dodd-Frank CCAR tests by the Federal Reserve).",
+      "Calculates probability-weighted expected returns and downside value-at-risk for capital allocation decisions."
+    ],
+    "takeaways_fa": [
+      "برخلاف تحلیل حساسیت که تغییر تک‌تک متغیرها را به صورت منفرد بررسی می‌کند، در تحلیل سناریو چندین متغیر همبسته (نظیر نرخ ارز، تورم و قیمت‌های جهانی) به طور همزمان تغییر داده می‌شوند.",
+      "سناریوهای استاندارد شامل: سناریوی پایه (محتمل‌ترین مسیر)، سناریوی صعودی/خوش‌بینانه و سناریوی رکودی/نزولی است.",
+      "بخش محوری در آزمون‌های استرس نظام بانکی و تعیین کفایت سرمایه در برابر شوک‌های کلان اقتصادی.",
+      "در گزارش‌های ارزش‌گذاری شرکت‌های مشاور سرمایه‌گذاری در بورس تهران، برآورد ارزش ذاتی سهم با وزن‌دهی به سناریوهای مختلف نرخ دلار و قیمت‌های کامودیتی ارائه می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/s/scenario_analysis.asp",
     "slug": "scenario_analysis",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Scenario analysis stress-tests strategic assumptions across multifaceted future regimes, mapping the probability distribution of portfolio outcomes.",
+    "bottom_line_fa": "تحلیل سناریو ابزار مصون‌سازی تصمیمات راهبردی در برابر عدم قطعیت است که بازه نوسانات سودآوری را پیش روی مدیران روشن می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Probability-Weighted Scenario Valuation Formula",
+        "title_fa": "فرمول ارزش‌گذاری بر مبنای وزن‌دهی احتمالی به سناریوها",
+        "content_en": "For $M$ mutually exclusive scenarios with occurrence probabilities $p_k$ (such that $\\sum p_k = 1$), the expected valuation $\\mathbb{E}[V]$ and variance $\\sigma_V^2$ are: $$\\mathbb{E}[V] = \\sum_{k=1}^M p_k \\cdot V_k, \\quad \\sigma_V^2 = \\sum_{k=1}^M p_k \\left( V_k - \\mathbb{E}[V] \\right)^2$$ Downside tail risk is quantified via scenario conditional shortfall.",
+        "content_fa": "ارزش مورد انتظار دارایی از مجموع وزنی ارزش در هر سناریو به دست می‌آید: $$\\mathbb{E}[V] = \\sum p_k \\cdot V_k$$ این مدل به مدیران صندوق‌ها اجازه می‌دهد تصمیماتی اتخاذ کنند که حتی در سناریوی بدبینانه نیز بقای شرکت تضمین شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4920,
     "term_en": "Understanding Schedule 13D: Filing Process & Key Requirements",
-    "term_fa": "Understanding Schedule 13D: Filing Process & Key Requirements",
+    "term_fa": "فرم جدول ۱۳-دی / افشای تملک عمده سهامداری کنترلی (Schedule 13D)",
     "letter": "S",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Schedule 13D is a mandatory beneficial ownership disclosure filing required by the U.S. Securities and Exchange Commission (SEC) when an individual or entity acquires more than 5% of any class of a publicly traded company's voting equity securities, often signaling an active shareholder campaign or takeover intent.",
+    "definition_fa": "جدول ۱۳-دی (Schedule 13D) که در وال‌استریت به 'گزارش سرمایه‌گذار فعال' شهرت دارد، فرم الزامی افشای اطلاعات نزد کمیسیون بورس و اوراق بهادار آمریکاست که هرگاه شخص، صندوق یا کنسرسیومی مالکیت بیش از ۵ درصد از سهام دارای حق رای یک شرکت بورسی را به دست آورد، موظف است ظرف مهلت قانونی آن را ثبت کرده و اهداف خود را از خرید سهام به طور شفاف اعلام کند.",
+    "takeaways_en": [
+      "Triggered when beneficial ownership crosses the 5% threshold; must be filed within statutory deadlines (shortened to 5 business days under modernized SEC rules).",
+      "Mandates detailed disclosure: source of funds, purpose of the transaction (e.g., seeking board seats, proposing M&A, demanding restructuring), and voting agreements.",
+      "Heavily scrutinized by Wall Street traders as a leading catalyst for activist hedge fund campaigns and takeover bids.",
+      "Must be promptly amended (via Schedule 13D/A) whenever ownership changes by 1% or more or when strategic intentions materially shift."
+    ],
+    "takeaways_fa": [
+      "با عبور مالکیت از مرز ۵٪ سهام شرکت فعال می‌شود و باید ظرف چند روز کاری در سامانه ادگار (EDGAR) منتشر شود.",
+      "افشای منبع تامین مالی و هدف از معامله را الزامی می‌سازد؛ خریدار باید تصریح کند آیا قصد مداخله در مدیریت، کسب صندلی هیئت‌مدیره یا فروش دارایی‌ها را دارد یا خیر.",
+      "سیگنالی قوی برای سایر معامله‌گران بورس است که نشان می‌دهد یک سرمایه‌گذار کنشگر (Activist Investor) وارد شرکت شده و سهم معمولاً با جهش قیمت مواجه می‌شود.",
+      "هرگونه تغییر بیش از ۱ درصد در میزان سهامداری مستلزم ارسال فوری اصلاحیه است.",
+      "در بازار سرمایه ایران، طبق مقررات افشای سازمان بورس، عبور سهامدار از مرز ۵ درصد و ۱ درصد تغییرات بعدی باید فوراً در سامانه کُدال و تابلوی TSETMC افشا شود."
+    ],
     "url": "https://www.investopedia.com/terms/s/schedule13d.asp",
     "slug": "schedule13d",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Schedule 13D alerts the public market to major activist equity accumulations, enforcing corporate governance transparency.",
+    "bottom_line_fa": "فرم ۱۳-دی شفافیت تملک‌های مدیریتی را تضمین کرده و با آشکار ساختن نیات سرمایه‌گذاران بزرگ، زمینه بازی منصفانه را در بازار سهام فراهم می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Beneficial Ownership Calculation and Filing Trigger",
+        "title_fa": "محاسبه درصد مالکیت ذینفع و آستانه قانونی ۵ درصدی",
+        "content_en": "Beneficial ownership percentage $\\theta$ across voting share count $S$ is computed as: $$\\theta = \\frac{S_{\\text{owned}} + S_{\\text{options/warrants within 60 days}}}{S_{\\text{total outstanding}}} > 0.05$$ Crossing $\\theta > 5\\%$ triggers mandatory disclosure under Section 13(d) of the Securities Exchange Act of 1934.",
+        "content_fa": "فرمول محاسبه درصد مالکیت ذینفع شامل سهام نقدی و اختیارات خرید قابل اعمال ظرف ۶۰ روز است: $$\\theta = \\frac{S_{\\text{مالکیت}}}{\\text{کل سهام}} > 5\\%$$ این افشاگری مانع از تصاحب مخفیانه و غافلگیرانه شرکت‌ها توسط خریداران خصمانه می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 4921,
     "term_en": "Schedule 13G",
-    "term_fa": "Schedule 13G",
+    "term_fa": "فرم جدول ۱۳-جی / افشای سهامداری عمده غیرفعال (Schedule 13G)",
     "letter": "S",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Schedule 13G is a shorter, alternative beneficial ownership disclosure filing with the SEC for passive institutional or retail investors who acquire more than 5% of a public company's shares, certifying that the securities were acquired in the ordinary course of business without any intent to influence or change corporate control.",
+    "definition_fa": "جدول ۱۳-جی (Schedule 13G)، فرم افشای سهامداری عمده ویژه سرمایه‌گذاران منفعل (Passive Investors) است که توسط کمیسیون بورس آمریکا دریافت می‌شود؛ اشخاص یا صندوق‌های نهادی (نظیر بلک‌راک و ونگارد) که بیش از ۵ درصد سهام شرکتی را می‌خرند اما هیچ قصدی برای مداخله در مدیریت، تغییر هیئت‌مدیره یا تغییر استراتژی شرکت ندارند، از این فرم ساده‌تر با الزامات افشای کمتر استفاده می‌کنند.",
+    "takeaways_en": [
+      "A streamlined alternative to Schedule 13D available exclusively to purely passive investors holding no activist agenda.",
+      "Requires less extensive disclosure and features more lenient filing deadlines compared to activist 13D filings.",
+      "Commonly filed by massive index fund managers, mutual funds, banks, and pension asset managers.",
+      "If a 13G filer subsequently develops an intent to influence control, they must immediately lose eligibility and re-file under Schedule 13D within 10 days."
+    ],
+    "takeaways_fa": [
+      "نسخه ساده‌تر فرم ۱۳-دی است که اختصاصاً به سهامداران با رویکرد صرفاً سرمایه‌گذاری مالی (نه مدیریتی) تعلق دارد.",
+      "الزامات افشای بسیار سبک‌تری دارد و نیازی به تشریح برنامه‌های مداخله‌جویانه در هیئت‌مدیره ندارد.",
+      "توسط غول‌های مدیریت دارایی مانند صندوق‌های شاخصی و بازنشستگی پر می‌شود که صرفاً به دنبال سود سهام و بازده پورتفو هستند.",
+      "چنانچه سهامدار منفعل بعدها تصمیم به دخالت در اداره شرکت بگیرد، فرم ۱۳-جی باطل شده و مکلف به ارسال فرم ۱۳-دی خواهد بود."
+    ],
     "url": "https://www.investopedia.com/terms/s/schedule13g.asp",
     "slug": "schedule13g",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Schedule 13G reduces compliance burdens for passive institutional asset managers holding significant minority equity stakes.",
+    "bottom_line_fa": "فرم ۱۳-جی بار نظارتی را برای سرمایه‌گذاران نهادی با مقاصد صرفاً مالی سبک ساخته و مرز میان سرمایه‌گذاری منفعل و فعال را مشخص می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Passive Certification and Reclassification Rule",
+        "title_fa": "گواهی رویکرد منفعل و شرط تغییر وضعیت به سرمایه‌گذار فعال",
+        "content_en": "To maintain 13G status, the investor must certify: $$\\text{Control Intent} = 0 \\quad \\implies \\quad \\mathbb{P}(\\text{Proxy Fight} \\cup \\text{Board Seat Demand}) = 0$$ If intention shifts to $\\text{Control Intent} = 1$, the investor is subject to a 'cooling-off' freeze prohibiting share voting or purchases for 10 days.",
+        "content_fa": "شرط استفاده از فرم ۱۳-جی نفی صریح هرگونه قصد کنترلی است: $$\\text{مداخله} = 0$$ در صورت تغییر رویکرد، سهامدار مشمول دوره انجماد معاملاتی ۱۰ روزه تا زمان افشای کامل در فرم ۱۳-دی می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4922,
     "term_en": "All About Schedule A (Form 1040 or 1040-SR): Itemized Deductions",
-    "term_fa": "All About Schedule A (Form 1040 or 1040-SR): Itemized Deductions",
+    "term_fa": "جدول الف اظهارنامه مالیاتی / جدول کسورات تفکیکی (Schedule A - Form 1040)",
     "letter": "S",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Schedule A is an optional tax form attached to U.S. individual income tax return Form 1040, used by taxpayers to itemize qualifying deductible personal expenses—such as medical expenses, state and local taxes (SALT), mortgage interest, and charitable donations—to reduce taxable gross income when itemized deductions exceed the statutory standard deduction.",
+    "definition_fa": "جدول الف (Schedule A فرم ۱۰۴۰)، فرمی ضمیمه در اظهارنامه مالیات بر درآمد اشخاص است که مودیان برای ثبت و کسر هزینه‌های شخصی واجد شرایط از درآمد مشمول مالیات خود از آن استفاده می‌کنند؛ این هزینه‌ها شامل هزینه‌های درمانی سنگین، مالیات‌های محلی و ایالتی (SALT)، بهره وام مسکن و کمک‌های خیریه است؛ مودیان زمانی از این فرم استفاده می‌کنند که مجموع این هزینه‌ها بیشتر از 'کسورات استاندارد' قانونی دولت باشد.",
+    "takeaways_en": [
+      "Taxpayers choose each year between claiming the flat standard deduction or itemizing via Schedule A to maximize tax savings.",
+      "Subject to statutory deduction caps, notably the $10,000 ceiling on State and Local Tax (SALT) deductions established under the TCJA.",
+      "Medical expenses are deductible only to the extent they exceed 7.5% of the taxpayer's Adjusted Gross Income (AGI).",
+      "Incentivizes homeownership (mortgage interest deduction) and philanthropic donations to qualified charitable organizations."
+    ],
+    "takeaways_fa": [
+      "مودی سالانه بین کسورات استاندارد مقطوع یا ارائه سیاهه هزینه‌ها از طریق جدول الف، گزینه‌ای را انتخاب می‌کند که مالیات کمتری به دنبال داشته باشد.",
+      "مشمول سقف‌های قانونی است؛ نظیر سقف ۱۰,۰۰۰ دلاری کسر مالیات‌های ایالتی و محلی (SALT).",
+      "هزینه‌های پزشکی صرفاً در صورتی که بیش از ۷.۵ درصد کل درآمد ناخالص تعدیل‌شده (AGI) باشند، قابل کسر خواهند بود.",
+      "مشوق خرید مسکن (از طریق کسر سود وام مسکن) و حمایت از موسسات خیریه و نیکوکاری در نظام مالیاتی است.",
+      "در ایران، ماده ۱۳۷ قانون مالیات‌های مستقیم احکامی کاملاً مشابه برای کسر هزینه‌های درمانی بیمار و خانواده از درآمد مشمول مالیات وضع نموده است."
+    ],
     "url": "https://www.investopedia.com/terms/s/schedulea.asp",
     "slug": "schedulea",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Schedule A empowers individual taxpayers to lower their tax liability by itemizing extraordinary medical, mortgage, and charitable outlays.",
+    "bottom_line_fa": "جدول الف ابزاری برای عدالت مالیاتی است که با پذیرش هزینه‌های ضروری زندگی و انفاق خیریه، فشار مالیاتی خانوارها را کاهش می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Itemized vs. Standard Deduction Decision Rule",
+        "title_fa": "قاعده تصمیم‌گیری میان کسورات تفکیکی و کسورات استاندارد",
+        "content_en": "A taxpayer files Schedule A if total allowable itemized deductions exceed the statutory standard deduction ($D_{\\text{std}}$): $$\\sum_{k} \\text{Itemized Deductions}_k = \\max(0, \\text{Medical} - 0.075 \\cdot \\text{AGI}) + \\min(10000, \\text{SALT}) + I_{\\text{mortgage}} + \\text{Charity} > D_{\\text{std}}$$.",
+        "content_fa": "شرط ارائه جدول الف بیشتر بودن مجموع هزینه‌های قابل قبول از کسورات استاندارد است: $$\\sum \\text{هزینه‌ها} > D_{\\text{استاندارد}}$$ این مدل ریاضی در نرم‌افزارهای ثبت اظهارنامه مالیاتی به طور خودکار بهینه‌ترین گزینه را برای مودی برمی‌گزیند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 4923,
     "term_en": "Schedule K-1 Federal Tax Form: What Is It and Who Is It for?",
-    "term_fa": "جدول K-1 فرم مالیات فدرال (Schedule K-1 Federal Tax Form)",
+    "term_fa": "فرم جدول کا-۱ / گواهی سهم درآمد شرکا در شرکت‌های شفاف (Schedule K-1)",
     "letter": "S",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Schedule K-1 is an official U.S. federal tax document issued annually by pass-through business entities (partnerships, S corporations, limited liability companies, and trusts) to report each partner's, member's, or shareholder's individual share of the entity's taxable income, losses, dividends, and capital gains.",
+    "definition_fa": "جدول کا-۱ (Schedule K-1)، سند و اظهارنامه رسمی مالیاتی است که سالانه توسط نهادهای تجاری با ساختار مالیاتی شفاف (مانند شرکت‌های تضامنی، شرکت‌های با مسئولیت محدود LLC، شرکت‌های S Corp و صندوق‌های امانی) صادر می‌شود؛ این فرم سهم دقیق هر شریک یا سرمایه‌گذار را از سود خالص، زیان، سود تقسیمی، بهره و عایدی سرمایه شرکت برای درج در اظهارنامه مالیاتی شخصی وی مشخص می‌سازد.",
+    "takeaways_en": [
+      "Essential for reporting pass-through income: the entity itself does not pay federal income tax, shifting the tax duty to K-1 recipients.",
+      "Issued via Form 1065 (for partnerships/LLCs), Form 1120-S (for S-Corps), and Form 1041 (for estates and trusts).",
+      "Separates ordinary business income from passive rental income, portfolio interest, qualified dividends, and capital gains for distinct tax treatments.",
+      "Frequently required for investors in private equity funds, hedge funds, real estate syndicates, and master limited partnerships (MLPs)."
+    ],
+    "takeaways_fa": [
+      "ابزار اصلی گزارشگری شرکت‌های شفاف مالیاتی است؛ زیرا شرکت مالیات نمی‌پردازد و سود به تناسب به دارندگان فرم K-1 منتقل می‌شود.",
+      "توسط شرکت‌های تضامنی (فرم ۱۰۶۵) و شرکت‌های ساب‌چپتر اس (فرم ۱۱۲۰-اس) برای شرکا صادر می‌گردد.",
+      "درآمد عملیاتی عادی را از درآمدهای اجاره، سود سهام پورتفو و سود سرمایه‌ای تفکیک می‌کند تا هر یک با نرخ مالیاتی مربوطه محاسبه شوند.",
+      "سرمایه‌گذاران در صندوق‌های سرمایه‌گذاری خصوصی (PE)، صندوق‌های املاک و صندوق‌های پروژه ملزم به دریافت و افشای آن در اظهارنامه‌های خود هستند."
+    ],
     "url": "https://www.investopedia.com/terms/s/schedule-k-1.asp",
     "slug": "schedule-k-1",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Schedule K-1 accurately maps and allocates pass-through partnership income and losses directly to individual investor tax returns.",
+    "bottom_line_fa": "جدول K-1 شریان انتقال شفاف نتایج مالی شرکت‌ها به حساب سهامداران است که مالیات‌ستانی عادلانه بر مبنای درآمد واقعی شرکا را ممکن می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Pro-Rata Income Allocation and Tax Basis Tracking",
+        "title_fa": "فرمول تسهیم سود بر مبنای درصد شراکت و ردیابی بهای تمام‌شده سهم (Basis)",
+        "content_en": "For a partner with ownership share $\\omega_i$, taxable income pass-through is: $$K_{1,i} = \\omega_i \\times \\text{Net Operating Earnings} + \\Delta \\text{Separately Stated Items}_i$$ The partner's capital tax basis evolves dynamically: $$\\text{Basis}_{t} = \\text{Basis}_{t-1} + K_{1,i} + \\text{Capital Contributed} - \\text{Distributions}$$.",
+        "content_fa": "سود تخصیص‌یافته به شریک بر مبنای سهم‌الشرکه ($\\\\omega_i$) محاسبه و مبنای بهای تمام‌شده سهم او را تعدیل می‌کند: $$\\text{مبنای جدید} = \\text{مبنای قبل} + \\text{سود K-1} - \\text{وجوه برداشتی}$$ این فرآیند از اخذ مالیات مضاعف در زمان خروج شریک جلوگیری می‌نماید."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 4924,
     "term_en": "Scope",
-    "term_fa": "Scope",
+    "term_fa": "محدوده در مدیریت پروژه / اقتصاد ناشی از دامنه (Scope)",
     "letter": "S",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "In management and economics, scope refers to either project scope—the defined boundaries, deliverables, and specific objectives of a project—or economies of scope, where the unit cost of producing multiple related products simultaneously is lower than producing them in isolation.",
+    "definition_fa": "محدوده یا دامنه (Scope)، در مدیریت پروژه به محدوده کار، اهداف معین، تحویل‌دادنی‌ها و مرزهای وظایف تعریف‌شده برای تکمیل موفق پروژه اطلاق می‌شود؛ در علم اقتصاد خرد و استراتژی نیز در قالب 'صرفه‌های ناشی از دامنه' (Economies of Scope) بیانگر حالتی است که تولید همزمان چند محصول مرتبط در یک بنگاه، به دلیل استفاده مشترک از زیرساخت‌ها، ارزان‌تر از تولید جداگانه آنها در شرکت‌های مستقل تمام می‌شود.",
+    "takeaways_en": [
+      "Project scope is constrained by the Project Management Triangle (Triple Constraint: Scope, Time, and Cost).",
+      "Scope creep represents the uncontrolled, unplanned expansion of project goals without corresponding budget or timeline additions.",
+      "Economies of scope arise from shared operational inputs, cross-selling customer relationships, unified distribution networks, and consolidated R&D.",
+      "Shapes corporate diversification strategies and multi-product horizontal expansion decisions."
+    ],
+    "takeaways_fa": [
+      "در مدیریت پروژه مقید به مثلث طلایی پروژه است (محدوده، زمان و هزینه)؛ تغییر در هر یک از این اضلاع، دو ضلع دیگر را دگرگون می‌سازد.",
+      "پدیده 'خزش محدوده' (Scope Creep) ناشی از اضافه شدن بدون برنامه وظایف جدید است که عامل اصلی تاخیر و شکست پروژه‌ها محسوب می‌شود.",
+      "صرفه‌های ناشی از دامنه از اشتراک کانال‌های توزیع، فناوری مشترک و بازاریابی هم‌افزا میان محصولات مختلف پدید می‌آید.",
+      "استراتژی تنوع‌بخشی هلدینگ‌ها و پتروپالایشگاه‌ها در بورس تهران بر پایه بهره‌گیری حداکثری از صرفه‌های دامنه استوار است."
+    ],
     "url": "https://www.investopedia.com/terms/s/scope.asp",
     "slug": "scope",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Scope defines the operational boundaries of project execution and the multi-product cost efficiencies of corporate scale.",
+    "bottom_line_fa": "محدوده ضامن شفافیت مرزهای عملکردی پروژه‌ها و کلید هم‌افزایی هزینه در شرکت‌های چندرشته‌ای صنعتی است.",
+    "sections": [
+      {
+        "title_en": "Economies of Scope Mathematical Degree",
+        "title_fa": "فرمول درجه صرفه‌های ناشی از دامنه در اقتصاد خرد",
+        "content_en": "The degree of economies of scope ($SC$) across products $Q_1$ and $Q_2$ is: $$SC = \\frac{C(Q_1, 0) + C(0, Q_2) - C(Q_1, Q_2)}{C(Q_1, Q_2)}$$ If $SC > 0$, multi-product joint production generates operational cost synergies: $$C(Q_1, Q_2) < C(Q_1) + C(Q_2)$$.",
+        "content_fa": "صرفه اقتصادی دامنه زمانی محقق می‌شود که هزینه تولید مشترک کمتر از مجموع تولید منفرد باشد: $$SC > 0$$ این معادله توجیه‌کننده اقتصادی راه‌اندازی سوپرمارکت‌های مالی و هلدینگ‌های چندرشته‌ای است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4925,
     "term_en": "Scrips",
-    "term_fa": "Scrips",
+    "term_fa": "اسکریپ / گواهی جایگزین پول یا سهم جایزه نقدی (Scrip)",
     "letter": "S",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Scrip is an emergency or provisional financial document that acknowledges a debt or obligation, issued as a temporary currency substitute, or an equity scrip certificate allowing shareholders to receive additional fractional shares of stock in lieu of a cash dividend payment.",
+    "definition_fa": "اسکریپ (Scrip)، سندی بهادار و جایگزین موقت پول نقد است که ناشر بدهی یا تعهدی را با آن تصدیق می‌کند؛ در بازار سرمایه، به 'سود سهمی اسکریپ' (Scrip Dividend) اطلاق می‌شود که به سهامداران اجازه می‌دهد به جای دریافت سود نقدی (DPS)، سهام جدید شرکت را با تخفیف یا بدون کارمزد دریافت کنند؛ در تاریخ پول نیز به اسکناس‌های موقت اضطراری در شرایط بحران نقدینگی گفته می‌شود.",
+    "takeaways_en": [
+      "In equity markets, scrip dividends allow companies to conserve liquid cash while rewarding investors with newly minted equity shares.",
+      "Eliminates transaction trading costs and stamp duties for shareholders who wish to systematically reinvest dividends.",
+      "Historically issued by mining companies (company scrip) or distressed municipalities during banking panics and wars when fiat currency dried up.",
+      "Dilutes future earnings per share (EPS) while bolstering the company's retained capital reserves."
+    ],
+    "takeaways_fa": [
+      "در بازار سهام، شرکت‌ها با ارائه سود اسکریپ نقدینگی خود را برای پروژه‌های توسعه‌ای حفظ کرده و به جای پول، به سهامداران سهم جدید می‌دهند.",
+      "کارمزد معاملات و مالیات خرید سهام مجدد را برای سرمایه‌گذارانی که خواهان سرمایه‌گذاری مجدد سود هستند، به صفر می‌رساند.",
+      "در تاریخ اقتصاد در دوران بحران‌های بانکی به عنوان پول اضطراری محلی توسط شهرداری‌ها یا کارخانه‌ها منتشر می‌شد.",
+      "موجب افزایش تعداد کل سهام و رقیق‌سازی ملایم سود هر سهم (EPS) در دوره‌های آتی می‌شود.",
+      "در بورس اوراق بهادار تهران، فرآیند افزایش سرمایه از محل مطالبات و آورده نقدی یا سود انباشته نقشی بسیار شبیه به اسکریپ سهامی ایفا می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/s/scrip.asp",
     "slug": "scrip",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Scrip provides a cash-preserving distribution mechanism, converting dividend obligations into equity reinvestment capital.",
+    "bottom_line_fa": "اسکریپ ابزاری هوشمندانه برای حفظ منابع نقدی بنگاه است که بدهی سود تقسیمی را به سرمایه ماندگار در شرکت تبدیل می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Scrip Share Conversion Ratio Formulation",
+        "title_fa": "فرمول نسبت تبدیل سود نقدی به سهام اسکریپ",
+        "content_en": "The number of scrip shares allocated to an investor holding $N$ shares at cash dividend $D$ per share and reference scrip price $P_{\\text{scrip}}$ is: $$S_{\\text{scrip}} = \\frac{N \\cdot D}{P_{\\text{scrip}}}$$ Cash conserved by the corporate treasury equals: $$\\Delta \\text{Cash Conserved} = \\sum_{i} S_{\\text{scrip}, i} \\cdot P_{\\text{scrip}}$$.",
+        "content_fa": "تعداد سهام اسکریپ اعطایی از تقسیم کل سود نقدی متعلقه بر قیمت مرجع اسکریپ به دست می‌آید: $$S = \\frac{N \\cdot D}{P}$$ این سازوکار نقدینگی لازم را برای اتمام طرح‌های نیمه‌تمام صنعتی در شرکت حفظ می‌نماید."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -385647,60 +386081,109 @@
   {
     "id": 5173,
     "term_en": "T+1 (T+2,T+3)",
-    "term_fa": "T+1 (T+2,T+3)",
+    "term_fa": "چرخه تسویه معاملاتی تی بعلاوه یک (T+1 Settlement)",
     "letter": "T",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "T+1 (Trade Date Plus One Business Day) is a securities settlement cycle where the exchange of cash and transfer of securities ownership must occur exactly one business day after a trade is executed, significantly mitigating counterparty credit risk and liquidity exposure.",
+    "definition_fa": "چرخه تسویه تی بعلاوه یک (T+1)، چارچوب زمانی استاندارد تسویه در بازارهای مالی است که در آن، انتقال مالکیت اوراق بهادار به خریدار و واریز وجوه نقدی به حساب فروشنده، دقیقاً یک روز کاری پس از تاریخ انجام معامله محقق می‌شود؛ این فرآیند جایگزین چرخه‌های سنتی T+2 و T+3 شده و ریسک اعتباری طرفین معامله و الزامات وثیقه‌گذاری اتاق پایاپای را به شدت کاهش می‌دهد.",
+    "takeaways_en": [
+      "Adopted by U.S., Canadian, and Mexican markets in May 2024, shortening the post-trade clearing window from T+2.",
+      "Compresses broker margin requirements and clearinghouse collateral demands (such as DTCC/NSCC margin deposits).",
+      "Forces foreign institutional investors to synchronize foreign exchange (FX) currency conversions within tighter timeframes.",
+      "Paves the path towards eventual real-time atomic gross settlement ($T+0$) using distributed ledgers."
+    ],
+    "takeaways_fa": [
+      "کاهش پنجره زمانی تسویه از T+2 به T+1 موجب کاهش وثایق مورد نیاز کارگزاران نزد اتاق پایاپای می‌شود.",
+      "ریسک نکول و ریسک طرف معامله (Counterparty Risk) را در دوره بین اجرای معامله و انتقال مالکیت به نصف تقلیل می‌دهد.",
+      "در بازار سرمایه ایران، تسویه معاملات سهام معمولاً در چرخه T+2 انجام می‌شود؛ در حالی که صندوق‌های با درآمد ثابت و اسناد خزانه (اخزا) در چرخه سریع‌تر T+1 توسط شرکت سپرده‌گذاری مرکزی (سمات) تسویه می‌گردند."
+    ],
     "url": "https://www.investopedia.com/terms/t/tplus1.asp",
     "slug": "tplus1",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "T+1 settlement accelerates post-trade velocity, drastically reducing systemic credit and counterparty risks across modern capital markets.",
+    "bottom_line_fa": "چرخه تسویه T+1 گامی اساسی در مدرن‌سازی زیرساخت‌های پایاپای است که نقدشوندگی بازار را تسریع و ریسک سیستماتیک عدم تسویه را مهار می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Clearinghouse Margin and Counterparty Risk Reduction",
+        "title_fa": "کاهش ریسک طرف معامله و تقاضای مارجین اتاق پایاپای",
+        "content_en": "The value-at-risk clearinghouse margin requirement scales with settlement horizon $\\tau$: $$\\text{Margin} = \\alpha \\cdot \\sigma \\cdot \\sqrt{\\tau} \\cdot \\text{Portfolio Value}$$ Transitioning from $\\tau = 2$ to $\\tau = 1$ reduces clearinghouse volatility exposure by a factor of $\\sqrt{1/2} \\approx 29.3\\%$.",
+        "content_fa": "مارجین و وثایق لازم نزد اتاق پایاپای با جذر زمان تسویه ($\\sqrt{\\tau}$) رابطه مستقیم دارد:\n$$\\text{Margin} \\propto \\sigma \\sqrt{\\tau}$$\nکاهش زمان از دو روز به یک روز، ریسک نوسان پورتفو را حدود ۲۹.۳٪ کاهش داده و ظرفیت اعتباری کارگزاران را آزاد می‌نماید."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 5174,
     "term_en": "T Distribution",
-    "term_fa": "T Distribution",
+    "term_fa": "توزیع تی استیودنت در آمار (Student's t-Distribution)",
     "letter": "T",
     "category": "صندوق‌ها و مدیریت سبد دارایی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Student's t-distribution is a symmetric, bell-shaped continuous probability distribution used in statistical estimation and hypothesis testing when the sample size is small ($n < 30$) and the true population standard deviation is unknown, featuring heavier tails than the standard normal distribution.",
+    "definition_fa": "توزیع تی استیودنت، یک توزیع احتمال پیوسته متقارن و زنگوله‌ای‌شکل است که برای برآورد پارامترهای جامعه و آزمون فرضیه‌ها در شرایطی که حجم نمونه کوچک بوده و انحراف معیار واقعی جامعه نامعلوم است به کار می‌رود؛ این توزیع دارای دم‌های پهن‌تری نسبت به توزیع نرمال استاندارد است و با افزایش درجات آزادی به توزیع نرمال همگرا می‌شود.",
+    "takeaways_en": [
+      "Indexed by its degrees of freedom ($\\nu = n - 1$), controlling tail thickness and kurtosis.",
+      "Widely utilized in constructing confidence intervals for asset returns and running two-sample t-tests.",
+      "As degrees of freedom approach infinity ($\\nu \\to \\infty$), the t-distribution converges asymptotically to the standard Gaussian distribution $\\mathcal{N}(0,1)$.",
+      "Far superior to the normal distribution for modeling extreme financial tail risks (fat tails)."
+    ],
+    "takeaways_fa": [
+      "با پارامتر درجات آزادی ($\\nu = n - 1$) تعریف می‌شود که میزان کشیدگی و پهنای دم‌های توزیع را تنظیم می‌کند.",
+      "پایه‌ای‌ترین ابزار آزمون معناداری ضرایب در رگرسیون‌های مالی و تخمین فواصل اطمینان بازده سرمایه‌گذاری است.",
+      "در مدلسازی بازدهی دارایی‌های مالی نظیر سهام و ارز، به دلیل رخداد وقایع نادر بحرانی (Fat Tails)، بسیار دقیق‌تر و واقع‌بینانه‌تر از توزیع نرمال عمل می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/t/tdistribution.asp",
     "slug": "tdistribution",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The t-distribution provides robust, fat-tailed statistical inference for financial metrics with limited sample observations.",
+    "bottom_line_fa": "توزیع تی استیودنت زیربنای استنباط آماری دقیق در بازارهای مالی است که ریسک رویدادهای پرت و نامتعارف را به درستی وزن‌دهی می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Probability Density Function and Degrees of Freedom",
+        "title_fa": "تابع چگالی احتمال و همگرایی به توزیع نرمال",
+        "content_en": "The probability density function for degrees of freedom $\\nu$ is: $$f(t) = \\frac{\\Gamma\\left(\\frac{\\nu+1}{2}\\right)}{\\sqrt{\\pi \\nu}\\,\\Gamma\\left(\\frac{\\nu}{2}\\right)} \\left(1 + \\frac{t^2}{\\nu}\\right)^{-\\frac{\\nu+1}{2}}$$ The test statistic for sample mean $\\bar{X}$ against population null $\\mu_0$ is: $$t = \\frac{\\bar{X} - \\mu_0}{s / \\sqrt{n}}$$.",
+        "content_fa": "آماره آزمون تی از رابطه انحراف میانگین نمونه نسبت به خطای استاندارد محاسبه می‌شود: $$t = \\frac{\\bar{X} - \\mu_0}{s / \\sqrt{n}}$$ این فرمول مبنای آزمون فرض سودآور بودن استراتژی‌های معاملاتی در تحلیل‌های آماری بورس است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "صندوق‌ها و مدیریت سبد دارایی",
     "category_en": "Funds & Portfolio Management"
   },
   {
     "id": 5175,
     "term_en": "T-Account",
-    "term_fa": "T-حساب (T-Account)",
+    "term_fa": "حساب تی در حسابداری دوبل (T-Account)",
     "letter": "T",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A T-account is an informal visual representation used in double-entry bookkeeping to track debits and credits for an individual general ledger account, named for its T-shaped graphical layout where debits are entered on the left and credits on the right.",
+    "definition_fa": "حساب تی (T-Account)، نمودار و ساختاری بصری شبیه به حرف T در حسابداری دوطرفه است که برای ثبت و تفکیک گردش مبالغ بدهکار و بستانکار یک سرفصل معین در دفتر کل به کار می‌رود؛ در این ساختار، رویدادهای بدهکار در سمت چپ و رویدادهای بستانکار در سمت راست درج شده و مانده‌گیری نهایی انجام می‌گیرد.",
+    "takeaways_en": [
+      "Left side represents debits ($DR$), right side represents credits ($CR$).",
+      "Asset and expense accounts increase on the debit (left) side; liability, equity, and revenue accounts increase on the credit (right) side.",
+      "Enforces the fundamental balance sheet equation: $\\text{Assets} = \\text{Liabilities} + \\text{Equity}$.",
+      "Serves as an essential instructional and troubleshooting framework for balancing complex journal entries."
+    ],
+    "takeaways_fa": [
+      "سمت راست (در سیستم‌های فارسی) یا سمت چپ (در سیستم‌های انگلیسی) بر اساس ماهیت بدهکار یا بستانکار تراز می‌شود.",
+      "حساب‌های دارایی و هزینه دارای ماهیت بدهکار بوده و افزایش آنها در سمت بدهکار ثبت می‌شود؛ در حالی که بدهی‌ها، سرمایه و درآمدها دارای ماهیت بستانکار هستند.",
+      "تضمین‌کننده اصل اساسی ترازنامه است: دارایی‌ها = بدهی‌ها + حقوق صاحبان سهام.",
+      "ابزار اصلی دانشجویان و حسابرسان مالی برای ردیابی ثبت‌های اصلاحی و مانده‌گیری آزمایشی پیش از تهیه ترازنامه."
+    ],
     "url": "https://www.investopedia.com/terms/t/t-account.asp",
     "slug": "t-account",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "T-accounts provide a clear visual mechanism for enforcing the algebraic equilibrium of double-entry financial accounting.",
+    "bottom_line_fa": "حساب تی چارچوب بنیادین تفکر حسابداری دوطرفه است که نظم و تقارن ریاضی مبادلات مالی را تضمین می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Ledger Balance Determination Formula",
+        "title_fa": "فرمول مانده‌گیری نهایی حساب و تراز آزمایشی",
+        "content_en": "The ending ledger balance ($B_{\\text{ending}}$) for an asset account with beginning balance $B_0$ is: $$B_{\\text{ending}} = B_0 + \\sum \\text{Debits} - \\sum \\text{Credits}$$ For liability and equity accounts, the relationship inverts: $$B_{\\text{ending}} = B_0 + \\sum \\text{Credits} - \\sum \\text{Debits}$$.",
+        "content_fa": "مانده پایانی یک سرفصل دارایی از مجموع مبالغ بدهکار منهای بستانکار به دست می‌آید: $$B = B_0 + \\sum \\text{بدهکار} - \\sum \\text{بستانکار}$$ این مانده‌ها مستقیماً وارد تراز آزمایشی و صورت‌های مالی اساسی می‌شوند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
@@ -385832,140 +386315,258 @@
   {
     "id": 5177,
     "term_en": "Taft-Hartley Act",
-    "term_fa": "Taft-Hartley Act",
+    "term_fa": "قانون تفت-هارتلی / قانون روابط کارگری و مدیریت (Taft-Hartley Act)",
     "letter": "T",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Taft-Hartley Act (Labor Management Relations Act of 1947) is a landmark U.S. federal statute that amended the Wagner Act, imposing significant restrictions on labor union activities, prohibiting unfair union labor practices, outlawing closed shops, and empowering the U.S. President to intervene in strikes threatening national security.",
+    "definition_fa": "قانون تفت-هارتلی (قانون روابط کار و کارفرما مصوب ۱۹۴۷ آمریکا)، قانونی تاریخی است که با تعدیل قانون واگنر، محدودیت‌های جدی بر اختیارات اتحادیه‌های کارگری وضع نمود؛ از جمله ممنوعیت اعتصابات همبستگی، غیرقانونی کردن کارگاه‌های بسته (Closed Shops - الزام کارگران به عضویت در اتحادیه قبل از استخدام)، و اعطای اختیار به رئیس‌جمهور برای اعلام دوره تنفس ۸۰ روزه جهت توقف اعتصابات آسیب‌زننده به امنیت ملی.",
+    "takeaways_en": [
+      "Permitted individual states to enact 'right-to-work' laws prohibiting mandatory union fee payments as an employment condition.",
+      "Outlawed jurisdictional strikes, wildcat strikes, and secondary boycotts against third-party vendors.",
+      "Gave the executive branch authority to impose an 80-day 'cooling-off' injunction on strikes imperiling national economic safety.",
+      "Shifted the legal pendulum between collective bargaining rights and corporate operational flexibility."
+    ],
+    "takeaways_fa": [
+      "به ایالت‌ها اجازه داد قوانین 'حق اشتغال' (Right-to-Work) تصویب کنند تا هیچ کارگری مجبور به پرداخت حق عضویت اتحادیه به عنوان پیش‌شرط کار نباشد.",
+      "اعتصابات ثانویه (بایکوت زنجیره‌ای تامین‌کنندگان) و اعتصابات خودسرانه بدون هماهنگی را ممنوع کرد.",
+      "اختیار صدور دستور تعلیق ۸۰ روزه اعتصابات سراسری (نظیر بنادر یا راه‌آهن) را به رئیس‌جمهور اعطا نمود تا زنجیره تامین دچار فروپاشی نشود."
+    ],
     "url": "https://www.investopedia.com/terms/t/tafthartleyact.asp",
     "slug": "tafthartleyact",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Taft-Hartley Act rebalanced industrial labor relations, curbing excessive union leverage to safeguard macroeconomic continuity.",
+    "bottom_line_fa": "قانون تفت-هارتلی توازن قدرت میان کارفرمایان و تشکل‌های کارگری را بازتعریف نمود و مانع از فلج شدن اقتصاد ملی در اثر اعتصابات حاد شد.",
+    "sections": [
+      {
+        "title_en": "Economic Impact on Union Density and Wage Premia",
+        "title_fa": "تاثیرات اقتصادی بر چانه‌زنی دستمزد و صرف عضویت در اتحادیه",
+        "content_en": "The Taft-Hartley framework suppressed union wage markups: $$W_{\\text{union}} = W_{\\text{non-union}} (1 + \\mu)$$ where wage premium $\\mu$ compressed over successive decades as union density declined from 35% in 1954 to under 10% in the modern era.",
+        "content_fa": "تصویب این قانون از طریق کاهش تمرکز اتحادیه‌ها، انعطاف‌پذیری دستمزدها را در بازار کار افزایش داد و هزینه‌های عملیاتی صنایع تولیدی را تعدیل کرد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 5178,
     "term_en": "Tag-Along Rights",
-    "term_fa": "Tag-Along Rights",
+    "term_fa": "حقوق همراهی در فروش سهام / حق هم‌فروشی (Tag-Along Rights)",
     "letter": "T",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Tag-along rights (also known as co-sale rights) are contractual shareholder provisions that protect minority shareholders by entitling them to join a transaction and sell their shares on identical terms and pricing if a majority shareholder sells their stake to an outside acquirer.",
+    "definition_fa": "حقوق همراهی یا حق هم‌فروشی (Tag-Along Rights)، بندی حمایتی در توافق‌نامه سهامداران (SHA) است که از سهامداران اقلیت محافظت می‌کند؛ به موجب این حق، چنانچه سهامدار اکثریت یا بنیان‌گذار تصمیم به فروش بلوک سهام خود به خریدار جدید بگیرد، سهامدار اقلیت حق دارد سهم خود را با همان قیمت و تحت همان شرایط به خریدار بفروشد.",
+    "takeaways_en": [
+      "Protects minority investors from being trapped under new, unfavorable majority owners without liquidity.",
+      "Guarantees that minority shareholders participate pro-rata in any control premium negotiated by majority owners.",
+      "Standard covenant in venture capital (VC) and private equity (PE) term sheets.",
+      "Contrasts with 'drag-along rights', which force minority owners to sell when a majority sale is approved."
+    ],
+    "takeaways_fa": [
+      "مانع از گرفتار شدن سهامداران خرد در شرکتی می‌شود که کنترل آن به دست مالکان ناشناخته یا نامطلوب جدید افتاده است.",
+      "تضمین می‌کند که صرف کنترلی (Control Premium) حاصل از فروش بلوکی، به طور عادلانه و متناسب به سهامدار خرد نیز پرداخت گردد.",
+      "بند استاندارد قراردادهای سرمایه‌گذاری جسورانه (VC) در استارتاپ‌ها برای حمایت از فرشتگان کسب‌وکار و سرمایه‌گذاران مراحل اولیه.",
+      "در نقطه مقابل 'حق الزام به همراهی' (Drag-Along) قرار دارد که اقلیت را مجبور به فروش سهام می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/t/tagalongrights.asp",
     "slug": "tagalongrights",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Tag-along rights guarantee liquidity parity and control premium sharing for minority investors during corporate exits.",
+    "bottom_line_fa": "حق هم‌فروشی ابزاری حیاتی در حکمرانی شرکتی است که از تضییع حقوق سرمایه‌گذاران خرد در زمان خروج سهامداران عمده پیشگیری می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Pro-Rata Co-Sale Allocation Formula",
+        "title_fa": "فرمول تسهیم تناسبی فروش سهام در حق هم‌فروشی",
+        "content_en": "If a buyer seeks to purchase $Q_{\\text{sale}}$ shares from majority holder $M$, minority investor $i$ has the right to sell $q_i$ shares: $$q_i = Q_{\\text{sale}} \\times \\left( \\frac{S_i}{S_M + \\sum_{k} S_k} \\right)$$ at identical price per share $P^*$, ensuring perfect economic parity.",
+        "content_fa": "تعداد سهامی که سرمایه‌گذار خرد می‌تواند همراه با سهامدار عمده بفروشد بر مبنای نسبت سهامداری محاسبه می‌شود: $$q_i = Q \\times \\frac{S_i}{\\sum S}$$ این مکانیسم مانع از خروج انحصاری بنیان‌گذاران بدون در نظر گرفتن سرمایه‌گذاران اولیه می‌گردد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 5179,
     "term_en": "Taguchi Method of Quality Control",
-    "term_fa": "Taguchi Method of Quality Control",
+    "term_fa": "روش تاگوچی در کنترل کیفیت و مهندسی ارزش (Taguchi Method)",
     "letter": "T",
     "category": "مدیریت عملیات و زنجیره تأمین",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Taguchi method of quality control is a statistical engineering approach developed by Genichi Taguchi that emphasizes robust parameter design, offline quality control, and the minimization of societal loss caused by product variability from target specifications.",
+    "definition_fa": "روش تاگوچی در کنترل کیفیت، یک رویکرد مهندسی و آماری پیشرفته است که توسط گنیچی تاگوچی پایه‌گذاری شد؛ این روش تاکید دارد که کیفیت باید پیش از خط تولید و در مرحله طراحی محصول (طراحی استوار) تعبیه شود و هرگونه انحراف از مشخصات هدف، حتی اگر در بازه تلورانس مجاز باشد، زیانی اقتصادی به جامعه و مصرف‌کننده تحمیل می‌کند.",
+    "takeaways_en": [
+      "Introduced the Taguchi Loss Function, rejecting traditional pass/fail goalpost quality definitions.",
+      "Utilizes orthogonal arrays to efficiently conduct fractional factorial experiments, dramatically reducing testing iterations and costs.",
+      "Focuses on optimizing the Signal-to-Noise ($S/N$) ratio to make products insensitive to uncontrollable environmental noise factors.",
+      "Crucial across automotive manufacturing, semiconductor fabrication, and aerospace quality assurance."
+    ],
+    "takeaways_fa": [
+      "تابع زیان تاگوچی را مطرح ساخت که دیدگاه سنتی 'قبول یا رد در محدوده تلورانس' را رد کرده و هرگونه انحراف از نقطه بهینه را عامل ایجاد هزینه می‌داند.",
+      "از آرایه‌های متعامد (Orthogonal Arrays) برای طراحی آزمایش‌های کم‌هزینه و کاهش چشمگیر آزمایش‌های آزمایشگاهی استفاده می‌کند.",
+      "تمرکز بر بیشینه‌سازی نسبت سیگنال به نویز ($S/N$) به منظور مقاوم‌سازی محصول در برابر عوامل محیطی غیرقابل کنترل.",
+      "در صنایع خودروسازی و پتروشیمی برای کاهش ضایعات تولید و بهینه‌سازی فرمولاسیون محصولات کاربرد بنیادین دارد."
+    ],
     "url": "https://www.investopedia.com/terms/t/taguchi-method-of-quality-control.asp",
     "slug": "taguchi-method-of-quality-control",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Taguchi method shifts quality management from inspection policing to robust offline engineering design and loss minimization.",
+    "bottom_line_fa": "روش تاگوچی کیفیت را از یک آزمون پس از تولید، به یک راهبرد طراحی مهندسی با هدف به حداقل رساندن کل زیان اقتصادی تبدیل می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Taguchi Quadratic Quality Loss Function",
+        "title_fa": "تابع زیان درجه دوم تاگوچی و فرمول ریاضی",
+        "content_en": "Taguchi models societal loss $L(y)$ as a quadratic function of deviation of quality characteristic $y$ from target specification $m$: $$L(y) = k (y - m)^2$$ where cost constant $k = \\frac{A_0}{\\Delta^2}$, proving that quality losses compound non-linearly even inside acceptable engineering tolerance boundaries.",
+        "content_fa": "زیان تاگوچی با مربع انحراف از مقدار هدف ($m$) رابطه دارد: $$L(y) = k(y - m)^2$$ این معادله اثبات می‌کند که کیفیت صرفاً یک مرز تلورانس نیست، بلکه هرچه محصول به مشخصه ایده‌آل نزدیک‌تر باشد، هزینه‌های گارانتی و اتلاف انرژی کمتر خواهد بود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت عملیات و زنجیره تأمین",
     "category_en": "Operations & Supply Chain"
   },
   {
     "id": 5180,
     "term_en": "Tail Risk and Portfolio Protection: A Comprehensive Guide",
-    "term_fa": "Tail ریسک and پورتفوی / سبد سرمایه‌گذاری Protection: A Comprehensive Guide (Tail Risk and Portfolio Protection: A Comprehensive Guide)",
+    "term_fa": "ریسک دم / ریسک رویدادهای نادر بحرانی (Tail Risk)",
     "letter": "T",
     "category": "مدیریت ریسک، بیمه و اکچوئری",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Tail risk is the probability of an investment experiencing catastrophic, outsized losses resulting from a rare event that lies more than three standard deviations from the mean of a probability distribution, representing the extreme fat tails of financial market return distributions.",
+    "definition_fa": "ریسک دم (Tail Risk)، احتمال وقوع زیان‌های سنگین، کم‌تکرار و فاجعه‌بار ناشی از رویدادهایی است که بیش از ۳ انحراف معیار با میانگین توزیع فاصله دارند؛ در تحلیل‌های مالی، دم‌های توزیع بازدهی بسیار پهن‌تر از توزیع نرمال هستند (Fat Tails) و نادیده گرفتن آنها می‌تواند منجر به ورشکستگی صندوق‌ها در بحران‌ها شود.",
+    "takeaways_en": [
+      "Technically defined as movements beyond 3 standard deviations ($3\\sigma$), which in a normal distribution have a probability of less than 0.3%.",
+      "Popularized by Nassim Nicholas Taleb under the 'Black Swan' concept of unpredictable high-impact outlier events.",
+      "Traditional Value at Risk (VaR) models frequently underestimate tail risk, necessitating Conditional VaR (Expected Shortfall).",
+      "Hedged via tail-risk hedging strategies, such as buying out-of-the-money put options or volatility variance swaps."
+    ],
+    "takeaways_fa": [
+      "حرکات قیمتی فراتر از ۳ انحراف معیار را شامل می‌شود که طبق توزیع نرمال باید تقریباً هر چند صد سال یکبار رخ دهند اما در بازارهای مالی مکرراً رخ می‌دهند.",
+      "توسط نسیم طالب در قالب نظریه 'قوی سیاه' (Black Swan) پیرامون حوادث به ظاهر ناممکن با پیامدهای مخرب تبیین شد.",
+      "مدل‌های سنتی ارزش در معرض ریسک (VaR) در برآورد آن ناتوانند؛ لذا استفاده از ارزش در معرض ریسک شرطی (CVaR / Expected Shortfall) ضروری است.",
+      "با استراتژی‌های خرید اختیار فروش دور از سود (Deep OTM Puts) یا صندوق‌های پوشش ریسک قوی سیاه بیمه می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/t/tailrisk.asp",
     "slug": "tailrisk",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Tail risk captures the severe financial fragility hidden behind the complacency of bell-curve normality assumptions.",
+    "bottom_line_fa": "ریسک دم به سرمایه‌گذاران هشدار می‌دهد که بقای مالی بلندمدت وابسته به توانایی ایستادگی در برابر امواج شوک‌های نادر و مخرب است.",
+    "sections": [
+      {
+        "title_en": "Expected Shortfall and Tail Expectation Formula",
+        "title_fa": "ریزش مورد انتظار (CVaR) و مدلسازی دم توزیع",
+        "content_en": "Conditional Value at Risk / Expected Shortfall ($ES_\\alpha$) measures average loss conditional on exceeding the $\\alpha$-VaR threshold: $$ES_\\alpha(X) = -\\frac{1}{1-\\alpha} \\int_0^{1-\\alpha} \\text{VaR}_u(X) du = \\mathbb{E}[-X \\mid X \\le -\\text{VaR}_\\alpha]$$ providing a subadditive, coherent risk measure.",
+        "content_fa": "ریزش مورد انتظار میانگین زیان‌های فراتر از آستانه VaR را اندازه می‌گیرد: $$ES_\\alpha = \\mathbb{E}[L \\mid L > \\text{VaR}_\\alpha]$$ این شاخص در کمیته‌های ریسک بانک‌ها و صندوق‌های اهرمی بورس تهران جهت تعیین ذخیره مقابله با بحران‌های نقدینگی الزامی است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
     "category_en": "Risk Management & Insurance"
   },
   {
     "id": 5181,
     "term_en": "Takaful",
-    "term_fa": "Takaful",
+    "term_fa": "تکافل / بیمه اسلامی مبتنی بر تعاون و مشارکت در ریسک (Takaful)",
     "letter": "T",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Takaful is a Sharia-compliant Islamic alternative to conventional insurance based on the principles of mutual cooperation (ta'awun), shared responsibility, and risk-pooling, where participants contribute funds into a common pool to guarantee each other against loss or damage without interest (riba), excessive uncertainty (gharar), or gambling (maysir).",
+    "definition_fa": "تکافل (از ریشه عربی کَفَلَ به معنی ضمانت و همبستگی متقابل)، سازوکار بیمه اسلامی منطبق با شریعت است که بر پایه‌های تعاون، مسئولیت مشترک و تقسیم ریسک استوار است؛ در این ساختار، بیمه‌گذاران مبالغی را به عنوان تبرع (هدیه) به یک صندوق مشترک واریز می‌کنند تا در صورت بروز خسارت برای هر یک از اعضا، غرامت وی از محل صندوق جبران شود، بدون آنکه شبهه ربا، غرر (ابهام فاحش) یا قمار وجود داشته باشد.",
+    "takeaways_en": [
+      "Prohibits three core conventional insurance elements: Riba (usury/interest), Gharar (excessive ambiguity), and Maysir (gambling/speculation).",
+      "Structured under operational Islamic financial models: Mudaraba (profit-sharing), Wakala (agency fee), or hybrid Wakala-Waqf structures.",
+      "Surplus underwriting reserves belong to participants, not the operating company, and are refunded after deducting claims and expenses.",
+      "All investment reserves must be placed exclusively in Sharia-compliant assets, sukuk, and halal equity funds."
+    ],
+    "takeaways_fa": [
+      "عاری از سه عنصر ممنوع در فقه اسلامی است: ربا (بهره)، غرر (ابهام و فریب) و میسر (قمار و سفته‌بازی نامشروع).",
+      "در قالب عقود اسلامی مضاربه (تسهیم سود سرمایه‌گذاری)، وکالت (دریافت کارمزد مدیریت توسط اپراتور) یا وقف اداره می‌شود.",
+      "مازاد منابع صندوق (سود عملیاتی بیمه‌گری) متعلق به خود اعضاست و پس از کسر خسارات، به صورت تخفیف یا پاداش به آنها بازمی‌گردد.",
+      "در صنعت بیمه ایران، بیمه مرکزی اخیراً مجوز راه‌اندازی شرکت‌ها و پنجره‌های تکافل را برای توسعه ابزارهای مالی اسلامی صادر کرده است."
+    ],
     "url": "https://www.investopedia.com/terms/t/takaful.asp",
     "slug": "takaful",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Takaful replaces commercial risk-transfer with ethical mutual assistance and transparent cooperative risk-sharing under Islamic law.",
+    "bottom_line_fa": "تکافل مدلی اخلاقی و مشارکتی از خدمات بیمه‌ای است که انتقال ریسک را با همیاری اجتماعی و عدالت مالی جایگزین می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Wakala Operating Model and Surplus Distribution",
+        "title_fa": "مدل عملیاتی وکالت و نحوه توزیع مازاد بیمه‌گری",
+        "content_en": "Under the Wakala model, the operator charges an upfront agency fee $\\alpha$: $$\\text{Pool Inflows} = \\sum (1 - \\alpha) \\cdot \\text{Contribution}_i$$ Underwriting surplus ($S$) distributed back to participants is: $$S = \\text{Pool Inflows} + \\text{Halal Investment Returns} - \\text{Claims} - \\text{Reserves}$$.",
+        "content_fa": "شرکت تکافل به عنوان وکیل کارمزد مشخصی ($\\\\alpha$) دریافت می‌کند و مازاد خالص صندوق به اعضا بازگردانده می‌شود: $$S = \\text{حق‌بیمه‌ها} + \\text{سود سرمایه‌گذاری} - \\text{خسارات} - \\text{ذخایر}$$ این ساختار شفاف مانع از تضاد منافع میان بیمه‌گر و بیمه‌گذار می‌گردد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 5182,
     "term_en": "Take-Home Pay",
-    "term_fa": "Take-Home Pay",
+    "term_fa": "دریافتی خالص / حقوق دریافتی پس از کسورات (Take-Home Pay)",
     "letter": "T",
     "category": "املاک، مستغلات و تأمین مسکن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Take-home pay, or net pay, is the actual net amount of income an employee receives in their paycheck after all mandatory federal, state, and local taxes, social security contributions, healthcare premiums, and voluntary retirement deductions are subtracted from gross earnings.",
+    "definition_fa": "دریافتی خالص یا حقوق خالص دریافتی (Take-Home Pay)، مبلغ نقدی واقعی است که پس از کسر تمامی مالیات‌های قانونی (مالیات بر درآمد حقوق)، حق بیمه تامین اجتماعی سهم کارمند، هزینه‌های بیمه درمانی تکمیلی و کسورات اختیاری (نظیر پس‌انداز بازنشستگی و اقساط وام پرسنلی) از حقوق ناخالص، به حساب بانکی کارمند واریز می‌شود.",
+    "takeaways_en": [
+      "Calculated as: $\\text{Take-Home Pay} = \\text{Gross Pay} - \\text{Statutory Taxes} - \\text{Benefit Deductions}$.",
+      "Serves as the empirical foundation for personal budgeting, household debt-to-income (DTI) underwriting, and disposable income analysis.",
+      "Pre-tax deductions (such as health insurance and 401(k) contributions) reduce taxable gross income, lowering overall tax liabilities.",
+      "Fluctuates alongside changes in tax brackets, overtime hours, bonus withholding rates, and benefit elections."
+    ],
+    "takeaways_fa": [
+      "فرمول کلی آن: حقوق خالص = حقوق ناخالص - مالیات حقوق - بیمه سهم کارمند - سایر کسورات.",
+      "مبنای واقعی برنامه‌ریزی مالی خانوار، ارزیابی توان بازپرداخت وام‌های مسکن و محاسبه درآمد در دسترس (Disposable Income) است.",
+      "کسورات پیش از مالیات (نظیر سهم بیمه درمان پایه) با کاهش درآمد مشمول مالیات، بار مالیاتی حقوق‌بگیر را کاهش می‌دهند.",
+      "در فیش حقوقی کارکنان در ایران، تفکیک دقیق بین حقوق پایه، مزایا و رفاهیات با دریافتی خالص پرداختی انجام می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/t/take-home-pay.asp",
     "slug": "take-home-pay",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Take-home pay represents the true liquidity available to individuals for immediate household consumption, debt service, and discretionary savings.",
+    "bottom_line_fa": "حقوق دریافتی خالص قدرت خرید واقعی و جریان نقد در دسترس خانوار برای تامین معیشت و پس‌انداز ماهانه را تبیین می‌کند.",
+    "sections": [
+      {
+        "title_en": "Net Pay Mathematical Formulation",
+        "title_fa": "فرمول کسورات حقوق و محاسبه دستمزد خالص",
+        "content_en": "Net take-home pay ($W_{\\text{net}}$) is derived from gross compensation ($W_{\\text{gross}}$) via: $$W_{\\text{net}} = W_{\\text{gross}} - \\sum_{k} T_k(W_{\\text{gross}} - D_{\\text{pre-tax}}) - D_{\\text{pre-tax}} - D_{\\text{post-tax}}$$ where $T_k$ are progressive tax functions and $D$ represents payroll benefit deductions.",
+        "content_fa": "محاسبه دریافتی خالص از رابطه زیر پیروی می‌کند: $$W_{\\text{خالص}} = W_{\\text{ناخالص}} - \\text{مالیات پله‌ای} - \\text{بیمه ۷٪} - \\text{سایر کسورات}$$ آگاهی از این فرمول برای برنامه‌ریزی بهینه پس‌انداز حقوق‌بگیران حیاتی است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "املاک، مستغلات و تأمین مسکن",
     "category_en": "Real Estate & Mortgage Finance"
   },
   {
     "id": 5183,
     "term_en": "Take or Pay",
-    "term_fa": "Take or Pay",
+    "term_fa": "قرارداد بخر یا تاوان بده / شرط بخر یا بپرداز (Take or Pay)",
     "letter": "T",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A take-or-pay contract is a long-term commercial supply agreement—common in the energy, natural gas, and industrial pipeline sectors—where the buyer agrees to either take delivery of a specified minimum volume of goods or pay a predetermined penalty price to the seller regardless of whether physical delivery is accepted.",
+    "definition_fa": "قرارداد بخر یا بپرداز (Take or Pay)، یک توافق‌نامه تجاری بلندمدت و الزام‌آور در صنایع نفت، گاز، پتروشیمی و زیرساخت‌های خطوط لوله است که به موجب آن خریدار متعهد می‌شود یا حجم مشخصی از محصول را در طول دوره تحویل بگیرد، یا در صورت عدم تحویل‌گیری، کل بهای قرارداد (یا جریمه توافق‌شده) را به فروشنده پرداخت نماید.",
+    "takeaways_en": [
+      "Protects capital-intensive energy producers by guaranteeing debt service cash flows for expensive infrastructure (e.g., LNG liquefaction terminals).",
+      "Shifts volumetric off-take risk from the seller to the buyer, while leaving commodity price risk subject to contractual formulas.",
+      "Often includes 'make-up rights' allowing the buyer to claim pre-paid, uncollected volumes in subsequent contract years.",
+      "Essential financing mechanism enabling non-recourse project finance loans in global energy infrastructure."
+    ],
+    "takeaways_fa": [
+      "ریسک حجم فروش را از دوش تولیدکننده برداشته و درآمد پایداری را برای بازپرداخت تسهیلات ساخت پالایشگاه‌ها یا خطوط انتقال تضمین می‌کند.",
+      "خریدار در صورت افت تقاضا در بازار خود، همچنان مکلف به پرداخت صورت‌حساب حداقل متعهدشده است.",
+      "معمولاً دارای شرط 'حق جبران' (Make-Up Rights) است تا خریدار بتواند محصول پرداخت‌شده را در سال‌های بعد تحویل بگیرد.",
+      "در قراردادهای صادرات گاز طبیعی ایران به ترکیه و عراق و قراردادهای تامین خوراک مجتمع‌های پتروشیمی از این شرط حقوقی استفاده می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/t/takeorpay.asp",
     "slug": "takeorpay",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Take-or-pay clauses de-risk multi-billion-dollar infrastructure investments by contractually securing minimum revenue streams.",
+    "bottom_line_fa": "شرط بخر یا بپرداز ستون فقرات تامین مالی پروژه‌های عظیم انرژی است که تضمین‌کننده بازگشت سرمایه‌گذاری‌های سنگین ثابت است.",
+    "sections": [
+      {
+        "title_en": "Take-or-Pay Cash Settlement Equation",
+        "title_fa": "فرمول تسویه ریالی و ارزی در عدم تحویل‌گیری محصول",
+        "content_en": "If actual volume taken $Q_{\\text{actual}}$ falls below minimum contract commitment $Q_{\\text{min}}$, the buyer's liability is: $$\\text{Payment} = P \\cdot Q_{\\text{actual}} + P_{\\text{penalty}} \\cdot \\max(0, Q_{\\text{min}} - Q_{\\text{actual}})$$ where make-up credit $C_t = P_{\\text{penalty}} \\cdot (Q_{\\text{min}} - Q_{\\text{actual}})$ is banked for future withdrawal.",
+        "content_fa": "مبلغ پرداختی خریدار در صورت تحویل کمتر از سقف تعهد ($Q_{\\min}$) از رابطه زیر تعیین می‌شود: $$\\text{مبلغ} = P \\cdot Q + P_{\\text{جریمه}} \\cdot (Q_{\\min} - Q)$$ این الزام قانونی ریسک توقف عملیات را به حداقل می‌رساند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -386119,160 +386720,296 @@
   {
     "id": 5185,
     "term_en": "Take-Profit Order (T/P)",
-    "term_fa": "Take-سود Order (T/P) (Take-Profit Order (T/P))",
+    "term_fa": "سفارش حد سود / دستور کسب سود (Take-Profit Order - TP)",
     "letter": "T",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A take-profit order (T/P) is a conditional limit order placed by a trader specifying the exact price level at which to close an open profitable position, automatically locking in accrued capital gains without requiring constant market monitoring.",
+    "definition_fa": "سفارش حد سود (Take-Profit Order یا TP)، یک سفارش شرطی و از پیش تعیین‌شده در سامانه‌های معاملاتی است که به معامله‌گر اجازه می‌دهد نقطه خروج ایده‌آل خود را برای شناسایی سود مشخص کند؛ با رسیدن قیمت بازار به این سطح، موقعیت معاملاتی به طور خودکار بسته شده و سود محقق می‌گردد.",
+    "takeaways_en": [
+      "Operates as an automated exit strategy that removes emotional greed and prevents unrealized gains from eroding.",
+      "Paired systematically with a Stop-Loss (S/L) order to establish a disciplined, predefined Risk-to-Reward ratio (e.g., 1:2 or 1:3).",
+      "Executes as a limit order, guaranteeing execution at the specified target price or better (subject to liquidity gaps).",
+      "Foundational tool across algorithmic trading, forex markets, cryptocurrency trading, and swing stock investing."
+    ],
+    "takeaways_fa": [
+      "سازوکاری خودکار است که هیجانات روانی طمع را مهار کرده و از بازگشت قیمت و از بین رفتن سودهای تحقق‌نیافته جلوگیری می‌کند.",
+      "همواره در کنار سفارش حد ضرر (Stop-Loss) برای تثبیت نسبت ریسک به ریوارد (مانند ۱ به ۲ یا ۱ به ۳) در مدیریت سرمایه تنظیم می‌شود.",
+      "در صورت رسیدن قیمت به سطح هدف به عنوان سفارش محدود (Limit Order) عمل کرده و معامله را تسویه می‌کند.",
+      "در نرم‌افزارهای معاملات برخط کارگزاری‌های ایران و پلتفرم‌های ترید، معامله‌گران از هشدارهای قیمتی و سفارش‌های شرطی برای تعیین TP استفاده می‌نمایند."
+    ],
     "url": "https://www.investopedia.com/terms/t/take-profitorder.asp",
     "slug": "take-profitorder",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Take-profit orders enforce trading discipline, systematically locking in gains at calculated target price horizons.",
+    "bottom_line_fa": "سفارش حد سود ستون انضباط معاملاتی است که استراتژی معاملاتی را از دام تصمیم‌گیری‌های شتاب‌زده احساسی رها می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Risk-to-Reward Ratio and Expected Trade Value",
+        "title_fa": "نسبت ریسک به ریوارد (R/R) و امید ریاضی معامله",
+        "content_en": "A trade with entry $P_0$, take-profit $P_{\\text{TP}}$, and stop-loss $P_{\\text{SL}}$ has Risk-to-Reward ratio: $$RRR = \\frac{|P_{\\text{TP}} - P_0|}{|P_0 - P_{\\text{SL}}|}$$ Expected monetary value ($EV$) is positive if win rate $w$ satisfies: $$EV = w \\cdot \\Delta P_{\\text{gain}} - (1-w) \\cdot \\Delta P_{\\text{loss}} > 0 \\implies w > \\frac{1}{1 + RRR}$$.",
+        "content_fa": "نسبت ریوارد به ریسک و حداقل نرخ برد ($w$) لازم برای سودآوری بلندمدت به صورت زیر محاسبه می‌شود:\n$$RRR = \\frac{\\text{سود هدف}}{\\text{ضرر احتمالی}}, \\quad w > \\frac{1}{1 + RRR}$$\nاگر نسبت R/R برابر با ۲ باشد، حتی با نرخ موفقیت ۳۵ درصدی نیز پرتفوی معاملاتی سودآور خواهد بود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 5186,
     "term_en": "Takeover",
-    "term_fa": "تصاحب (Takeover)",
+    "term_fa": "تملک شرکتی / تصاحب شرکت (Takeover)",
     "letter": "T",
     "category": "مالی شرکتی، ادغام و تملک (M&A)",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A takeover is the acquisition of a controlling equity stake in a target company by an acquiring firm or corporate raider, executed either through mutual board negotiation (friendly takeover) or directly via shareholder tender offers and proxy battles against board resistance (hostile takeover).",
+    "definition_fa": "تصاحب یا تملک شرکت (Takeover)، فرآیندی در ادغام و تملک (M&A) است که طی آن یک شرکت خریدار با خرید اکثریت سهام دارای حق رای شرکت هدف، کنترل مدیریت و اداره آن را به دست می‌گیرد؛ تصاحب می‌تواند دوستانه (با توافق هیئت‌مدیره) یا خصمانه (از طریق پیشنهاد مستقیم به سهامداران و جنگ وکالت‌نامه‌ها) باشد.",
+    "takeaways_en": [
+      "Friendly takeovers involve confidential negotiations, due diligence, and mutual merger agreement execution approved by both boards.",
+      "Hostile takeovers bypass resistant management via public tender offers or shareholder proxy battles to replace directors.",
+      "Target boards deploy anti-takeover defenses: poison pills (shareholder rights plans), golden parachutes, staggered boards, and white knights.",
+      "Can be financed via cash, stock-for-stock swaps, or debt-heavy leveraged buyouts (LBOs)."
+    ],
+    "takeaways_fa": [
+      "تصاحب دوستانه با مذاکره و تایید هیئت‌مدیره هر دو شرکت و اخذ مجوزهای سازمان بورس و رقابت انجام می‌شود.",
+      "تصاحب خصمانه با دور زدن مدیران فعلی و ارائه پیشنهاد عمومی خرید سهام (Tender Offer) به سهامداران خرد کلید می‌خورد.",
+      "شرکت‌های در معرض تهدید از سازوکارهای دفاعی نظیر قرص سمی (Poison Pill)، چتر نجات طلایی و شوالیه سفید برای دفع تصاحب استفاده می‌کنند.",
+      "در بورس تهران، رقابت‌های نفس‌گیر برای خرید بلوک‌های مدیریتی سهام دولتی و هلدینگ‌ها نمونه‌های بارز تملک شرکتی هستند."
+    ],
     "url": "https://www.investopedia.com/terms/t/takeover.asp",
     "slug": "takeover",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Takeovers drive corporate restructuring and capital reallocation, disciplining inefficient management through market competition.",
+    "bottom_line_fa": "تملک شرکتی ابزار کارایی بازار سرمایه است که دارایی‌ها را از دست مدیران ناکارآمد خارج کرده و هم‌افزایی ارزش ایجاد می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Control Premium and Synergy Valuation",
+        "title_fa": "صرف کنترل و ارزش‌گذاری هم‌افزایی در تصاحب شرکتی",
+        "content_en": "The maximum purchase price ($P_{\\max}$) justifiable by the acquirer incorporates standalone value and discounted net synergies: $$P_{\\max} = V_{\\text{standalone}} + \\text{PV}(\\text{Cost Synergies}) + \\text{PV}(\\text{Revenue Synergies}) - \\text{Integration Costs}$$ The control premium percentage offered over pre-bid market price $P_0$ is: $$\\text{Premium} = \\frac{P_{\\text{offer}} - P_0}{P_0} \\times 100\\%$$.",
+        "content_fa": "سقف قیمت پیشنهادی خریدار برابر با ارزش فعلی شرکت به اضافه ارزش روز هم‌افزایی‌های عملیاتی منهای هزینه‌های ادغام است: $$P_{\\max} = V_0 + \\Delta V_{\\text{هم‌افزایی}} - C_{\\text{ادغام}}$$ پرداخت مازاد بر این سقف موجب تخریب ارزش برای سهامداران شرکت خریدار خواهد شد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالی شرکتی، ادغام و تملک (M&A)",
     "category_en": "Corporate Finance & M&A"
   },
   {
     "id": 5187,
     "term_en": "Tangible Assets: Definition, Examples, and Differences from Intangibles",
-    "term_fa": "Tangible دارایی‌ها Definition, Examples, and Differences from Intangibles (Tangible Assets: Definition, Examples, and Differences from Intangibles)",
+    "term_fa": "دارایی‌های مشهود / دارایی‌های عینی (Tangible Assets)",
     "letter": "T",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Tangible assets are physical, measurable economic resources owned by an individual or corporation that possess finite physical existence, such as real estate, manufacturing plants, machinery, inventory, vehicles, cash, and precious metals.",
+    "definition_fa": "دارایی‌های مشهود یا عینی، منابع اقتصادی و دارایی‌هایی هستند که وجود فیزیکی و ملموس دارند و ارزش آنها را می‌توان به طور عینی اندازه‌گیری کرد؛ نظیر زمین، ساختمان، ماشین‌آلات تولیدی، موجودی کالا و مواد اولیه، وسایل نقلیه و مسکوکات طلا؛ این دارایی‌ها در ترازنامه به عنوان دارایی جاری یا غیرجاری ثبت می‌شوند.",
+    "takeaways_en": [
+      "Contrasts with intangible assets (such as trademarks, patents, software code, and brand goodwill) which lack physical substance.",
+      "Tangible fixed assets (PP&E) are subject to systematic depreciation over time, with the exception of land which has an indefinite lifespan.",
+      "Serve as prime collateral for securing bank loans, mortgage indentures, and asset-backed debt issuance.",
+      "Key input for calculating asset-based valuation metrics: Tangible Book Value ($TBV$) and liquidation value."
+    ],
+    "takeaways_fa": [
+      "در برابر دارایی‌های نامشهود (مانند برند تجاری، حق اختراع، سرقفلی و نرم‌افزار) قرار دارند که فاقد ماهیت فیزیکی هستند.",
+      "به جز زمین، سایر دارایی‌های مشهود ثابت مشمول استهلاک دوره‌ای در طول عمر مفید اقتصادی خود می‌شوند.",
+      "به عنوان وثایق اصلی و معتبر برای دریافت تسهیلات بانکی و انتشار اوراق صکوک اجاره در بازار سرمایه به کار می‌روند.",
+      "مبنای محاسبه ارزش دفتری ملموس و ارزش انحلال دارایی‌ها در زمان تصفیه شرکت هستند."
+    ],
     "url": "https://www.investopedia.com/terms/t/tangibleasset.asp",
     "slug": "tangibleasset",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Tangible assets form the physical operational backbone of companies, anchoring collateral value and asset-based financing.",
+    "bottom_line_fa": "دارایی‌های مشهود ظرفیت فیزیکی تولید ثروت را شکل داده و ضامن بازیافت سرمایه طلبکاران در شرایط بحرانی محسوب می‌شوند.",
+    "sections": [
+      {
+        "title_en": "Depreciation Mechanics and Net Carrying Amount",
+        "title_fa": "مکانیسم‌های استهلاک دارایی مشهود و بهای دفتری خالص",
+        "content_en": "Under straight-line depreciation, annual depreciation expense $D$ for a tangible asset with initial cost $C$, salvage value $S$, and useful life $N$ is: $$D = \\frac{C - S}{N}$$ Carrying value at year $t$ equals: $$\\text{Book Value}_t = C - t \\times D$$.",
+        "content_fa": "استهلاک خط مستقیم دارایی‌های مشهود از فرمول زیر محاسبه می‌شود: $$D = \\frac{C - S}{N}$$ طبق جدول استهلاکات قانون مالیات‌های مستقیم ایران، نرخ و روش استهلاک هر دسته از دارایی‌های مشهود به صورت دقیق مشخص شده است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 5188,
     "term_en": "Tangible Book Value Per Share (TBVPS) Explained: Definition & Formula",
-    "term_fa": "Tangible Book ارزش Per سهم (TBVPS) Explained: Definition & Formula (Tangible Book Value Per Share (TBVPS) Explained: Definition & Formula)",
+    "term_fa": "ارزش دفتری ملموس هر سهم (TBVPS)",
     "letter": "T",
     "category": "روش‌های کمی و ریاضیات مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Tangible Book Value Per Share (TBVPS) is a conservative valuation metric that measures a company's net tangible assets—total equity minus intangible assets and goodwill—divided by the total number of common shares outstanding, representing the theoretical liquidation cash value attributable to each share.",
+    "definition_fa": "ارزش دفتری ملموس هر سهم (TBVPS)، یک شاخص محافظه‌کارانه در تحلیل بنیادی است که حقوق صاحبان سهام شرکت را پس از کسر تمامی دارایی‌های نامشهود، حق امتیازها و سرقفلی، بر تعداد کل سهام عادی منتشرشده تقسیم می‌کند؛ این شاخص نشان‌دهنده ارزش نقدشوندگی فیزیکی و واقعی هر سهم در صورت انحلال فوری شرکت است.",
+    "takeaways_en": [
+      "Formula: $\\text{TBVPS} = \\frac{\\text{Total Stockholders' Equity} - \\text{Preferred Equity} - \\text{Intangible Assets} - \\text{Goodwill}}{\\text{Common Shares Outstanding}}$.",
+      "Vital metric for analyzing financial institutions and banks, filtering out inflated goodwill generated from historical acquisitions.",
+      "Stocks trading at a Price-to-TBVPS ratio ($P/\\text{TBVPS} < 1$) often attract deep-value and distressed-debt investors.",
+      "Provides a hard floor for share price valuation during severe equity market downturns."
+    ],
+    "takeaways_fa": [
+      "فرمول: $\\text{TBVPS} = \\frac{\\text{حقوق صاحبان سهام} - \\text{دارایی‌های نامشهود} - \\text{سرقفلی}}{\\text{تعداد سهام}}$؛ که اثر دارایی‌های کاغذی و غیرنقدشونده را حذف می‌کند.",
+      "ابزار اصلی تحلیل بنیادی سهام بانک‌ها و بیمه‌ها، زیرا سرقفلی حاصل از ادغام‌های گذشته را حذف و دارایی واقعی را ملاک قرار می‌دهد.",
+      "معامله شدن سهم در قیمت‌های زیر این شاخص ($P/\\text{TBVPS} < 1$) به عنوان سیگنال ارزندگی بالا یا حباب منفی تعبیر می‌شود.",
+      "کف حمایتی مستحکمی برای ارزش‌گذاری سهم در ریزش‌های شدید بازار بورس فراهم می‌سازد."
+    ],
     "url": "https://www.investopedia.com/terms/t/tbvps.asp",
     "slug": "tbvps",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "TBVPS strips out intangible accounting value, providing value investors with a rigorous, asset-backed liquidation floor.",
+    "bottom_line_fa": "ارزش دفتری ملموس هر سهم ناب‌ترین معیار سنجش دارایی‌های سخت شرکت است که حاشیه امنیت فوق‌العاده‌ای در ارزش‌گذاری بنیادی ایجاد می‌کند.",
+    "sections": [
+      {
+        "title_en": "Price-to-TBVPS Multiple and Margin of Safety",
+        "title_fa": "نسبت قیمت به ارزش دفتری ملموس و حاشیه امنیت گراهام",
+        "content_en": "Value investors establish a margin of safety when market price $P$ trades below tangible equity value: $$\\text{Margin of Safety} = 1 - \\frac{P}{\\text{TBVPS}} > 0 \\iff P < \\text{TBVPS}$$ Bank stress tests evaluate regulatory solvency via tangible common equity ratios.",
+        "content_fa": "هرگاه قیمت تابلوی سهم ($P$) از TBVPS کمتر شود، حاشیه امنیت مثبتی پدید می‌آید: $$\\text{Margin of Safety} = 1 - \\frac{P}{\\text{TBVPS}}$$ این وضعیت در بورس اوراق بهادار تهران در دوره‌های رکود برای شرکت‌های دارایی‌محور فرصت‌های کم‌ریسک خلق می‌نماید."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "روش‌های کمی و ریاضیات مالی",
     "category_en": "Quantitative Methods & Financial Math"
   },
   {
     "id": 5189,
     "term_en": "Tangible Common Equity (TCE)",
-    "term_fa": "Tangible Common حقوق صاحبان سهام (TCE) (Tangible Common Equity (TCE))",
+    "term_fa": "حقوق صاحبان سهام عادی ملموس (TCE)",
     "letter": "T",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Tangible Common Equity (TCE) is a core measure of a financial institution's capital strength, calculating the firm's common equity after subtracting preferred stock, intangible assets, and goodwill, reflecting the pure loss-absorbing capital available to protect depositors and senior creditors.",
+    "definition_fa": "حقوق صاحبان سهام عادی ملموس (TCE)، سخت‌گیرانه‌ترین معیار سنجش کفایت سرمایه و توان جذب زیان در بانک‌ها و موسسات اعتباری است؛ این شاخص با کسر سهام ممتاز، سرقفلی و دارایی‌های نامشهود از حقوق صاحبان سهام به دست می‌آید و سرمایه خالصی را نشان می‌دهد که می‌تواند زیان‌های ناشی از سوخت تسهیلات را بدون تهدید حقوق سپرده‌گذاران جذب نماید.",
+    "takeaways_en": [
+      "Formula: $\\text{TCE} = \\text{Total Common Equity} - \\text{Goodwill} - \\text{Other Intangibles}$.",
+      "The Tangible Common Equity Ratio ($\\text{TCE Ratio} = \\frac{\\text{TCE}}{\\text{Tangible Assets}}$) is heavily scrutinized by bank regulators and credit rating agencies.",
+      "Played a pivotal analytical role during the 2008 Global Financial Crisis stress tests (SCAP).",
+      "Represents high-quality Tier 1 Common Equity capital under Basel III regulatory banking standards."
+    ],
+    "takeaways_fa": [
+      "فرمول: $\\text{TCE} = \\text{حقوق سهام عادی} - \\text{سرقفلی} - \\text{سایر دارایی‌های نامشهود}$.",
+      "نسبت TCE به کل دارایی‌های ملموس، شاخص اصلی ناظران بانکی برای ارزیابی تاب‌آوری بانک در شرایط بحران شدید اعتباری است.",
+      "در بحران مالی جهانی ۲۰۰۸ و آزمون‌های استرس فدرال رزرو، مهم‌ترین ملاک تفکیک بانک‌های سالم از بانک‌های ورشکسته بود.",
+      "معادل سخت‌گیرانه‌تر سرمایه لایه ۱ (Tier 1) در الزامات بال ۳ برای بانکداری جهانی و بانک‌های فعال در شبکه شتاب ایران."
+    ],
     "url": "https://www.investopedia.com/terms/t/tangible-common-equity.asp",
     "slug": "tangible-common-equity",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Tangible Common Equity is the definitive regulatory benchmark for true, unencumbered bank capital loss absorption.",
+    "bottom_line_fa": "حقوق سهام عادی ملموس سنگر نهایی استحکام مالی بانک‌ها در برابر طوفان‌های اعتباری و نکول زنجیره‌ای تسهیلات است.",
+    "sections": [
+      {
+        "title_en": "Tangible Common Equity Ratio Formulation",
+        "title_fa": "فرمول نسبت TCE و ارزیابی آزمون استرس بانکی",
+        "content_en": "The TCE ratio scales tangible equity against tangible banking assets ($TA$): $$\\text{TCE Ratio} = \\frac{\\text{Common Equity} - \\text{Goodwill} - \\text{Intangibles}}{\\text{Total Assets} - \\text{Goodwill} - \\text{Intangibles}} \\times 100\\%$$ Regulators typically mandate a minimum TCE threshold of 6% to 8% to prevent systemic distress.",
+        "content_fa": "نسبت TCE از رابطه زیر محاسبه می‌شود: $$\\text{TCE Ratio} = \\frac{\\text{سرمایه ملموس}}{\\text{دارایی‌های ملموس}}$$ پایین بودن این نسبت به زیر ۶٪ زنگ خطری جدی برای لزوم افزایش سرمایه فوری یا مداخله بانک مرکزی جهت جلوگیری از ورشکستگی است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 5190,
     "term_en": "Tangible Net Worth",
-    "term_fa": "Tangible Net Worth",
+    "term_fa": "خالص ارزش دارایی‌های ملموس / ارزش ویژه ملموس (Tangible Net Worth)",
     "letter": "T",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Tangible net worth is a calculation of the net physical worth of an individual or corporate entity, determined by taking total assets and subtracting total liabilities as well as all intangible assets such as patents, copyrights, trademarks, and goodwill.",
+    "definition_fa": "ارزش ویژه ملموس یا خالص دارایی‌های ملموس (Tangible Net Worth)، شاخصی مالی است که ارزش خالص فیزیکی و واقعی یک شخص یا شرکت را محاسبه می‌کند؛ این متغیر از طریق کسر تمامی بدهی‌های جاری و بلندمدت و همچنین حذف تمامی دارایی‌های نامشهود (مانند سرقفلی، علائم تجاری و حق اختراع) از کل دارایی‌ها استخراج می‌گردد.",
+    "takeaways_en": [
+      "Formula: $\\text{Tangible Net Worth} = \\text{Total Assets} - \\text{Total Liabilities} - \\text{Intangible Assets}$.",
+      "Commonly incorporated into commercial bank lending covenants, requiring borrowers to maintain a minimum tangible net worth.",
+      "Serves as the primary benchmark for underwriting small business loans and surety bond guarantees.",
+      "Provides an uninflated figure for corporate valuation during liquidation or bankruptcy reorganization."
+    ],
+    "takeaways_fa": [
+      "فرمول: ارزش ویژه ملموس = کل دارایی‌ها - کل بدهی‌ها - دارایی‌های نامشهود.",
+      "یکی از شروط اصلی قراردادهای اعطای تسهیلات کلان بانکی (Debt Covenants) است که بدهکار را ملزم به حفظ حداقلی از این ارزش می‌کند.",
+      "مبنای اصلی شرکت‌های بیمه و ضمانت برای صدور ضمانت‌نامه‌های حسن انجام تعهدات در مناقصات بزرگ ملی.",
+      "واقع‌بینانه‌ترین تصویر را از ثروت تصفیه‌پذیر شرکت به دور از ارزش‌گذاری‌های ذهنی دارایی‌های معنوی ارائه می‌دهد."
+    ],
     "url": "https://www.investopedia.com/terms/t/tangiblenetworth.asp",
     "slug": "tangiblenetworth",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Tangible net worth measures real solvency, stripping out speculative intangible valuations to gauge true economic net equity.",
+    "bottom_line_fa": "خالص ارزش دارایی‌های ملموس ملاک واقعی اعتبارسنجی است که پشتوانه عینی تعهدات مالی شرکت‌ها را راستی‌آزمایی می‌کند.",
+    "sections": [
+      {
+        "title_en": "Commercial Loan Covenant Compliance",
+        "title_fa": "انطباق با شروط تعهدنامه‌های بانکی و کفایت وثایق",
+        "content_en": "Bank credit agreements mandate: $$\\text{TNW}_t = \\text{Book Equity}_t - \\text{Intangibles}_t \\ge \\text{TNW}_{\\min}$$ Breaching this contractual covenant triggers a technical loan default: $$\\mathbb{I}(\\text{TNW}_t < \\text{TNW}_{\\min}) \\implies \\text{Accelerate Debt Repayment}$$.",
+        "content_fa": "در صورتی که ارزش ویژه ملموس شرکت از سقف توافق‌شده در قرارداد وام کمتر شود، بانک حق دارد تسهیلات را حال نموده و وثایق را به اجرا بگذارد: $$\\text{TNW} \\ge \\text{حداقل مجاز}$$ این الزام مدیران را وادار به حفظ ساختار مالی منضبط می‌سازد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 5191,
     "term_en": "Tangible Personal Property: Definition & Taxation Explained",
-    "term_fa": "Tangible Personal Property: Definition & Taxation Explained",
+    "term_fa": "اموال منقول ملموس (Tangible Personal Property - TPP)",
     "letter": "T",
     "category": "املاک، مستغلات و تأمین مسکن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Tangible personal property (TPP) refers to personal property that can be physically seen, weighed, measured, felt, or touched, and is movable—such as machinery, office furniture, tools, heavy equipment, computers, and vehicles—distinguishing it from real property (real estate) and intangible property.",
+    "definition_fa": "اموال منقول ملموس (TPP)، به کلیه اموال و دارایی‌های فیزیکی، عینی و قابل لمسی گفته می‌شود که قابلیت جابه‌جایی و انتقال از مکانی به مکان دیگر را بدون آسیب به خود یا محل استقرار دارند؛ نظیر اثاثیه اداری، رایانه‌ها، تجهیزات و ماشین‌آلات کارگاهی، ادوات کشاورزی و وسایل نقلیه؛ این اموال از اموال غیرمنقول (املاک و اراضی) و اموال نامشهود تفکیک می‌شوند.",
+    "takeaways_en": [
+      "Movable physical property, distinguishing it from real estate (land and permanent buildings affixed to the earth).",
+      "Subject to local personal property taxation in many jurisdictions, requiring annual ad valorem tax return filings.",
+      "Depreciated under accelerated tax schedules (such as MACRS in the U.S.) for corporate income tax reduction.",
+      "Essential category for property casualty insurance appraisals and commercial asset-based lending security."
+    ],
+    "takeaways_fa": [
+      "اموال فیزیکی با قابلیت نقل و انتقال هستند که در نقطه مقابل اموال غیرمنقول (زمین و ابنیه متصل به زمین) قرار دارند.",
+      "در بسیاری از سیستم‌های مالیاتی جهان مشمول عوارض سالانه اموال منقول تجاری و بازرسی‌های دوره‌ای شهرداری‌ها هستند.",
+      "طبق قوانین مالیاتی مشمول روش‌های استهلاک شتابان شده که موجب کاهش مالیات بر درآمد عملکرد سال‌های ابتدایی بهره‌برداری می‌شود.",
+      "در قانون مدنی ایران، ماده ۱۹ و ۲۰ به طور جامع به تعریف و احکام اموال منقول اختصاص یافته است."
+    ],
     "url": "https://www.investopedia.com/terms/t/tangible-personal-property.asp",
     "slug": "tangible-personal-property",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Tangible personal property comprises movable operational physical assets critical for daily enterprise production and tax depreciation.",
+    "bottom_line_fa": "اموال منقول ملموس ابزارهای فیزیکی کارآفرینی هستند که چرخه عملیات روزمره شرکت را به گردش درآورده و از مزایای استهلاک مالیاتی بهره‌مند می‌شوند.",
+    "sections": [
+      {
+        "title_en": "Tax Depreciation via Accelerated Cost Recovery (MACRS)",
+        "title_fa": "استهلاک مالیاتی به روش بازیابی شتابان هزینه (MACRS)",
+        "content_en": "Tangible personal property is depreciated for tax purposes using statutory percentage rates $d_t$: $$\\text{Depreciation Deduction}_t = \\text{Basis} \\times d_t$$ yielding tax shield savings: $$\\text{Tax Shield}_t = \\tau \\cdot \\text{Basis} \\cdot d_t$$.",
+        "content_fa": "سپر مالیاتی استهلاک اموال منقول از حاصل‌ضرب نرخ مالیات در هزینه استهلاک به دست می‌آید: $$\\text{Tax Shield} = \\tau \\cdot D_t$$ این صرفه‌جویی مالیاتی جریان وجوه نقد آزاد شرکت را تقویت می‌نماید."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "املاک، مستغلات و تأمین مسکن",
     "category_en": "Real Estate & Mortgage Finance"
   },
   {
     "id": 5192,
     "term_en": "Tape Reading",
-    "term_fa": "Tape Reading",
+    "term_fa": "خواندن نوار معاملات / بررسی جریان سفارشات و دفتر مظنه‌ها (Tape Reading)",
     "letter": "T",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Tape reading is a traditional trading technique—originally executed by analyzing physical ticker tape and now conducted via digital Level 2 market data order books—that focuses on analyzing real-time transaction prices, order sizes, and bid-ask queue velocity to predict short-term price momentum.",
+    "definition_fa": "خواندن نوار معاملات (Tape Reading)، روشی کلاسیک و حرفه‌ای در معامله‌گری است که در گذشته با بررسی نوار کاغذی تلگرافی قیمت‌ها و امروزه با تحلیل داده‌های عمق بازار (Level 2)، جریان حجم معاملات لحظه‌ای و صف‌های خرید و فروش در تابلوی بورس انجام می‌شود تا شتاب حرکت کوتاه‌مدت قیمت و تمایلات بازیگران بزرگ کشف گردد.",
+    "takeaways_en": [
+      "Analyzes order flow dynamics: trade execution speed, bid-ask spreads, and transaction size distributions (Time & Sales).",
+      "Helps day traders detect institutional accumulation, absorption of sell orders, and aggressive iceberg orders.",
+      "Modern tape reading relies on digital depth-of-market (DOM) software, heatmaps, and footprint volume profiles.",
+      "Focuses purely on real-time microstructure order flow rather than chart candlestick patterns or macro fundamentals."
+    ],
+    "takeaways_fa": [
+      "سرعت ورود سفارش‌ها، اندازه معاملات در سرخط و نحوه پاسخ بازار به سفارش‌های سنگین (Time & Sales) را کالبدشکافی می‌کند.",
+      "به معامله‌گران روزانه (Day Traders) کمک می‌کند خریدهای پنهان بازیگران عمده (کدهای درشت) و سفارش‌های مخفی (Iceberg) را رصد نمایند.",
+      "امروزه با ابزارهای نوین نظیر دفترچه سفارشات عمق بازار (DOM)، نقشه‌های حرارتی (Heatmaps) و فوت‌پرینت انجام می‌پذیرد.",
+      "در بورس اوراق بهادار تهران، این مهارت تحت عنوان 'تابلوخوانی' (بررسی سرخطی‌ها، قدرت خریدار به فروشنده و جریان نقدینگی) شناخته می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/t/tape-reading.asp",
     "slug": "tape-reading",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Tape reading decodes raw order flow and market microstructure, revealing underlying institutional supply and demand in real time.",
+    "bottom_line_fa": "خواندن نوار معاملات یا تابلوخوانی، نگاه موشکافانه به نبض جریان سفارش‌ها است که دست پنهان خریداران و فروشندگان حقوقی را برملا می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Order Flow Imbalance and Microstructure Alpha",
+        "title_fa": "عدم تعادل جریان سفارشات و فرمول قدرت نسبی خریدار",
+        "content_en": "Order Flow Imbalance ($OFI_t$) across top order book levels is computed as: $$OFI_t = \\Delta Q_{\\text{bid}} \\cdot \\mathbb{I}(\\Delta P_{\\text{bid}} \\ge 0) - \\Delta Q_{\\text{ask}} \\cdot \\mathbb{I}(\\Delta P_{\\text{ask}} \\le 0)$$ Positive $OFI$ predicts immediate price appreciation: $$\\mathbb{E}[\\Delta P_{t+1}] = \\beta \\cdot OFI_t$$.",
+        "content_fa": "شاخص عدم تعادل جریان سفارش‌ها از رابطه تغییرات حجم مظنه‌های خرید و فروش به دست می‌آید: $$OFI = \\Delta Q_{\\text{bid}} - \\Delta Q_{\\text{ask}}$$ در تابلوخوانی بورس ایران، نسبت قدرت خریدار حقیقی به فروشنده حقیقی با این منطق تحلیل می‌گردد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -386503,100 +387240,185 @@
   {
     "id": 5195,
     "term_en": "Target-Date Funds Explained: Risk Management and Real-Life Examples",
-    "term_fa": "Target-Date صندوق‌ها Explained: ریسک Management and Real-Life Examples (Target-Date Funds Explained: Risk Management and Real-Life Examples)",
+    "term_fa": "صندوق سرمایه‌گذاری تاریخ هدف / صندوق چرخه زندگی (Target-Date Fund - TDF)",
     "letter": "T",
     "category": "مدیریت ریسک، بیمه و اکچوئری",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A target-date fund (TDF), or lifecycle fund, is an all-in-one mutual fund or collective trust designed to grow assets over a specified time horizon toward a target retirement year, automatically shifting its asset allocation from aggressive equities to conservative fixed income along a predetermined 'glide path.'",
+    "definition_fa": "صندوق تاریخ هدف (Target-Date Fund) یا صندوق چرخه زندگی، نوعی صندوق سرمایه‌گذاری مشترک است که سبد دارایی خود را متناسب با یک سال هدف معین (مانند سال بازنشستگی ۲۰۵۰) مدیریت می‌کند؛ این صندوق در سال‌های اولیه بازنشستگی دارایی‌های ریسکی‌تر مانند سهام را در اولویت قرار می‌دهد و با نزدیک شدن به سال هدف، به طور خودکار طبق یک 'مسیر پرواز' (Glide Path) دارایی‌ها را به سمت اوراق بدهی کم‌ریسک سوق می‌دهد.",
+    "takeaways_en": [
+      "Follows a predefined 'glide path' that systematically reduces equity exposure and increases bond/cash allocations as the target year nears.",
+      "Serves as the dominant Qualified Default Investment Alternative (QDIA) in U.S. employer-sponsored 401(k) retirement plans.",
+      "Differentiated between 'to' funds (glide path reaches final conservative landing at target date) and 'through' funds (glide path continues de-risking past target date).",
+      "Eliminates the need for individual investors to manually rebalance and manage portfolio risk over their working careers."
+    ],
+    "takeaways_fa": [
+      "از یک 'مسیر پرواز' (Glide Path) تدوین‌شده پیروی می‌کند که به طور هوشمندانه نسبت سهام را کاهش و سهم اوراق با درآمد ثابت را با افزایش سن بالا می‌برد.",
+      "گزینه پیش‌فرض اصلی در طرح‌های بازنشستگی شرکتی برای سرمایه‌گذارانی است که تخصص یا فرصت بازتنظیم مداوم پورتفو را ندارند.",
+      "به دو نوع 'تا تاریخ هدف' (توقف تغییرات در سال بازنشستگی) و 'در طول تاریخ هدف' (ادامه کاهش ریسک در دوران بازنشستگی) تقسیم می‌شود.",
+      "در بازار سرمایه ایران، صندوق‌های بازنشستگی تکمیلی و صندوق‌های مبتنی بر چرخه عمر اخیراً توسط سازمان بورس با رویکرد مشابه طراحی شده‌اند."
+    ],
     "url": "https://www.investopedia.com/terms/t/target-date_fund.asp",
     "slug": "target-date_fund",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Target-date funds provide automated, lifelong asset allocation and systematic de-risking tailored to an investor's retirement horizon.",
+    "bottom_line_fa": "صندوق‌های تاریخ هدف مدیریت سبد دارایی را در طول عمر شغلی افراد خودکار ساخته و با مهار ریسک‌ها، آرامش دوران بازنشستگی را تضمین می‌نمایند.",
+    "sections": [
+      {
+        "title_en": "Glide Path Asset Allocation Mechanics",
+        "title_fa": "معادله تخصیص دارایی در مسیر پرواز صندوق بازنشستگی",
+        "content_en": "The equity weight $w_{\\text{equity}}(t)$ as a function of years to retirement $\\tau = T_{\\text{target}} - t$ is parameterized via a logistic or linear decay glide path: $$w_{\\text{equity}}(\\tau) = w_{\\min} + \\frac{w_{\\max} - w_{\\min}}{1 + e^{-k (\\tau - \\tau_0)}}$$ transitioning from $w_{\\max} \\approx 90\\%$ in youth to $w_{\\min} \\approx 30\\%$ at retirement.",
+        "content_fa": "وزن سهام در سبد صندوق با نزدیک شدن به افق زمانی بازنشستگی طبق فرمول زیر کاهش می‌یابد: $$w_{\\text{equity}} = f(\\tau)$$ این استراتژی ریسک سقوط ناگهانی ارزش پورتفو در آستانه بازنشستگی (Sequence of Returns Risk) را خنثی می‌سازد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت ریسک، بیمه و اکچوئری",
     "category_en": "Risk Management & Insurance"
   },
   {
     "id": 5196,
     "term_en": "Target Markets",
-    "term_fa": "Target بازارها (Target Markets)",
+    "term_fa": "بازار هدف در بازاریابی راهبردی (Target Market)",
     "letter": "T",
     "category": "بازاریابی، برندینگ و فروش",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A target market is a specific, well-defined group of potential consumers or businesses toward which a company directs its marketing efforts, product development, distribution channels, and pricing strategies, identified through systematic market segmentation.",
+    "definition_fa": "بازار هدف، بخش مشخص، معین و تفکیک‌شده‌ای از کل جامعه مصرف‌کنندگان یا بنگاه‌هاست که یک شرکت با بررسی نیازها و ویژگی‌های مشترک آنها، برنامه‌های بازاریابی، طراحی محصول، استراتژی قیمت‌گذاری و کانال‌های توزیع خود را برای جلب رضایت و پاسخ‌گویی به تقاضای آنان متمرکز می‌سازد.",
+    "takeaways_en": [
+      "Identified using the STP marketing framework: Segmentation, Targeting, and Positioning.",
+      "Segmented by geographic, demographic (age, income), psychographic (lifestyle, values), and behavioral variables.",
+      "Prevents wasteful mass-marketing expenditures, maximizing Return on Marketing Investment (ROMI).",
+      "Shapes product feature roadmaps, brand voice, and customer acquisition cost (CAC) economics."
+    ],
+    "takeaways_fa": [
+      "با استفاده از چارچوب سه‌گانه بازاریابی راهبردی STP (بخش‌بندی، هدف‌گیری و جایگاه‌یابی) شناسایی و تثبیت می‌شود.",
+      "بر مبنای معیارهای جغرافیایی، جمعیت‌شناختی (سن، درآمد، جنسیت)، روان‌شناختی (سبک زندگی و ارزش‌ها) و رفتاری تفکیک می‌گردد.",
+      "از اتلاف بودجه در تبلیغات عمومی بی‌هدف جلوگیری کرده و بازده سرمایه‌گذاری بازاریابی (ROMI) را به حداکثر می‌رساند.",
+      "هزینه جذب مشتری (CAC) و ارزش دوره عمر مشتری (LTV) را در استارتاپ‌ها و شرکت‌های تجاری بهینه می‌سازد."
+    ],
     "url": "https://www.investopedia.com/terms/t/target-market.asp",
     "slug": "target-market",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Target marketing focuses enterprise capital and messaging on the customer cohorts offering the highest long-term profitability.",
+    "bottom_line_fa": "شناسایی بازار هدف کانون تمرکز استراتژی تجاری است که منابع محدود بنگاه را به سودآورترین فرصت‌های بازار هدایت می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Customer Lifetime Value to CAC Optimization",
+        "title_fa": "بهینه‌سازی نسبت ارزش دوره عمر به هزینه جذب مشتری",
+        "content_en": "Targeting segment $k$ is economically viable if the Customer Lifetime Value ($LTV$) to Acquisition Cost ($CAC$) ratio satisfies: $$\\frac{LTV_k}{CAC_k} = \\frac{\\sum_{t=0}^\\infty \\frac{m_k \\cdot r_k^t}{(1+d)^t}}{CAC_k} \\ge 3.0$$ where $m$ is annual margin contribution and $r$ is retention rate.",
+        "content_fa": "سرمایه‌گذاری در یک بازار هدف در صورتی توجیه‌پذیر است که نسبت ارزش دوره عمر به هزینه جذب حداقل ۳ به ۱ باشد: $$\\frac{LTV}{CAC} \\ge 3.0$$ این معیار در تحلیل بنیادی شرکت‌های خدمات مالی و نرم‌افزاری بسیار حیاتی است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازاریابی، برندینگ و فروش",
     "category_en": "Marketing, Branding & Sales"
   },
   {
     "id": 5197,
     "term_en": "Targeted Accrual Redemption Note (TARN)",
-    "term_fa": "Targeted Accrual Redemption اسناد خزانه / سفته (TARN) (Targeted Accrual Redemption Note (TARN))",
+    "term_fa": "یادداشت بازخرید تعهدی هدفمند / اوراق تارن (TARN)",
     "letter": "T",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A Targeted Accrual Redemption Note (TARN) is a structured derivative-linked financial note that pays high, above-market variable or inverse floating coupons until the cumulative coupon payments reach a predetermined cap (the 'target'), at which point the note automatically terminates and repays principal immediately.",
+    "definition_fa": "یادداشت بازخرید تعهدی هدفمند (TARN)، یک ورقه بدهی ساختاریافته مشتقه است که سودهای دوره‌ای متغیر یا معکوسِ جذابی بالاتر از نرخ‌های معمول بازار پرداخت می‌کند؛ با این شرط که به محض رسیدن مجموع سودهای تجمیعی پرداختی به یک سقف معین (هدف یا Target)، اوراق به طور خودکار متوقف (Knock-out) شده و اصل سرمایه بی‌درنگ تسویه و بازپرداخت می‌گردد.",
+    "takeaways_en": [
+      "Features an automatic early termination (knock-out) mechanism once cumulative coupons hit the cap $\\sum C_t \\ge C^*$.",
+      "Typically linked to benchmark indices such as SOFR, Euribor, or foreign exchange rate currency pairs (FX TARN).",
+      "Exposes investors to significant duration uncertainty and negative convexity: notes terminate early in favorable regimes and extend during unfavorable ones.",
+      "Widely utilized by corporate treasuries and institutional hedge funds seeking enhanced yield in range-bound markets."
+    ],
+    "takeaways_fa": [
+      "دارای مکانیسم ابطال زودهنگام خودکار به محض رسیدن مجموع سودهای دریافتی به سقف هدف ($\\sum C_t \\ge C^*$) است.",
+      "غالباً به نرخ‌های بهره بین‌بانکی یا جفت‌ارزهای پرنوسان (FX TARN) پیوند خورده است.",
+      "سرمایه‌گذار را در معرض ریسک پیش‌بینی‌ناپذیری دیرش و تحدب منفی قرار می‌دهد؛ زیرا در سناریوهای مساعد زودهنگام بسته می‌شود و در شرایط نامساعد طولانی می‌گردد.",
+      "توسط صندوق‌های پوشش ریسک برای کسب بازدهی‌های چشمگیر در بازارهای راکد و کم‌نوسان خریداری می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/t/tarn.asp",
     "slug": "tarn",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "TARN structured notes offer elevated initial cash yields in exchange for reinvestment risk and path-dependent maturity uncertainty.",
+    "bottom_line_fa": "اوراق ساختاریافته تارن با وعده سودهای جذاب اولیه منتشر می‌شوند، اما سررسید آنها وابسته به مسیر تصادفی متغیرهای مالی بنیادین است.",
+    "sections": [
+      {
+        "title_en": "Cumulative Coupon Cap and Path-Dependent Payoff",
+        "title_fa": "سقف کوپن تجمیعی و مدل قیمت‌گذاری وابسته به مسیر",
+        "content_en": "The stopping time $\\tau^*$ of a TARN with target cap $C^*$ is defined as: $$\\tau^* = \\min \\left\\{ t \\in \\{1, \\dots, T\\} \\,\\middle|\\, \\sum_{k=1}^t C_k \\ge C^* \\right\\}$$ Coupon at period $t \\le \\tau^*$ is capped: $$C_t = \\min\\left(C_{\\text{formula}}(t), C^* - \\sum_{k=1}^{t-1} C_k\\right)$$ Priced via Monte Carlo path simulation.",
+        "content_fa": "زمان سررسید این اوراق یک متغیر تصادفی وابسته به تاریخچه کوپن‌هاست: $$\\tau^* = \\min \\left\\{ t \\mid \\sum C_k \\ge C^* \\right\\}$$ این مشتقات با شبیه‌سازی مونت‌کارلو قیمت‌گذاری شده و در مهندسی مالی کاربرد پیشرفته دارند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 5198,
     "term_en": "Tax Accounting",
-    "term_fa": "مالیات حسابداری (Tax Accounting)",
+    "term_fa": "حسابداری مالیاتی / اصول حسابداری مالیات (Tax Accounting)",
     "letter": "T",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Tax accounting is a specialized subdiscipline of accounting governed by internal revenue and taxation codes that focuses exclusively on the preparation, analysis, and presentation of tax returns and tax payments, contrasting with standard financial reporting accounting (GAAP/IFRS).",
+    "definition_fa": "حسابداری مالیاتی، شاخه‌ای تخصصی از علم حسابداری است که به جای تمرکز بر استانداردهای گزارشگری مالی عمومی (نظیر GAAP یا IFRS)، بر اساس قوانین و بخشنامه‌های سازمان امور مالیاتی اداره می‌شود؛ رسالت اصلی آن تنظیم دقیق اظهارنامه‌های مالیاتی، محاسبه بدهی مالیاتی قانونی، بهره‌گیری از معافیت‌ها و برنامه‌ریزی مالیاتی منصفانه برای بنگاه‌ها است.",
+    "takeaways_en": [
+      "Governed by state tax statutes rather than financial reporting accounting standards, generating permanent and temporary book-tax differences.",
+      "Temporary differences give rise to Deferred Tax Assets (DTA) and Deferred Tax Liabilities (DTL) on corporate balance sheets.",
+      "Encompasses corporate income tax, value-added tax (VAT), payroll withholding taxes, and transfer pricing compliance.",
+      "Aims to legally minimize taxable income via deductions, tax credits, and accelerated depreciation allowances."
+    ],
+    "takeaways_fa": [
+      "پیروی از قانون مالیات‌های مستقیم به جای استانداردهای مالی محض، که موجب پیدایش تفاوت‌های دائمی و موقت میان سود حسابداری و سود مشمول مالیات می‌شود.",
+      "تفاوت‌های موقت به ثبت دارایی مالیات انتقالی (DTA) یا بدهی مالیات معوق (DTL) در ترازنامه می‌انجامند.",
+      "حوزه‌های مالیات بر عملکرد، مالیات بر ارزش افزوده (VAT)، مالیات حقوق پرسنل و صورت معاملات فصلی را پوشش می‌دهد.",
+      "در ایران، انطباق با قوانین سامانه مودیان و پایانه‌های فروشگاهی و ماده ۹۷ قانون مالیات‌ها مهم‌ترین رسالت حسابداران مالیاتی است."
+    ],
     "url": "https://www.investopedia.com/terms/t/tax-accounting.asp",
     "slug": "tax-accounting",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Tax accounting ensures statutory tax compliance while strategically optimizing corporate cash flows through legal tax mitigation.",
+    "bottom_line_fa": "حسابداری مالیاتی مدیریت ریسک‌های قانونی بنگاه را تضمین کرده و با بهینه‌سازی بار مالیاتی، منابع نقدینگی شرکت را حفظ می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Book-Tax Differences and Deferred Tax Mechanics",
+        "title_fa": "تفاوت سود دفتری و مالیاتی و ایجاد مالیات انتقالی",
+        "content_en": "Taxable income ($TI$) is reconciled from financial accounting income ($EBIT$) via: $$TI = \\text{Book Net Income} + \\text{Permanent Differences} + \\text{Temporary Differences}$$ The change in Deferred Tax Liabilities satisfies: $$\\Delta DTL = \\tau \\times (\\text{Book Depreciation} - \\text{Tax Depreciation})$$.",
+        "content_fa": "سود مشمول مالیات از تعدیل سود دفتری حاصل می‌شود: $$TI = \\text{سود حسابداری} + \\text{هزینه‌های غیرقابل قبول} - \\text{معافیت‌ها}$$ شناخت این تفاوت‌ها در تهیه اظهارنامه مالیاتی عملکرد و جلوگیری از جرایم مالیاتی نقشی حیاتی دارد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 5199,
     "term_en": "Tax-Advantaged",
-    "term_fa": "مالیات-Advantaged (Tax-Advantaged)",
+    "term_fa": "سرمایه‌گذاری یا حساب دارای مزیت مالیاتی (Tax-Advantaged)",
     "letter": "T",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Tax-advantaged refers to any financial account, investment vehicle, or retirement plan that confers favorable legal tax treatment—such as tax-exempt status, tax-deferred growth, or upfront tax deductions—designed by governments to incentivize long-term personal savings, education, and healthcare funding.",
+    "definition_fa": "دارای مزیت مالیاتی (Tax-Advantaged)، اصطلاحی برای انواع حساب‌های پس‌انداز، صندوق‌ها و ابزارهای سرمایه‌گذاری است که طبق قوانین دولتی از معافیت‌ها یا تخفیف‌های ویژه مالیاتی برخوردارند؛ نظیر رشد معاف از مالیات سود مرکب، تعویق پرداخت مالیات به زمان بازنشستگی یا کسر واریزی‌ها از درآمد مشمول مالیات، که با هدف تشویق پس‌انداز بلندمدت خانوارها طراحی شده‌اند.",
+    "takeaways_en": [
+      "Three main categories: Tax-Exempt (e.g., Roth IRA, municipal bonds), Tax-Deferred (e.g., Traditional 401(k), traditional IRA), and Tax-Deductible (e.g., HSA contributions).",
+      "Allows investment earnings, dividends, and capital gains to compound over decades without annual tax drag friction.",
+      "Subject to statutory annual contribution limits, qualified distribution requirements, and early withdrawal penalty taxes.",
+      "Substantially increases terminal wealth accumulation compared to standard taxable brokerage accounts."
+    ],
+    "takeaways_fa": [
+      "به سه دسته اصلی تقسیم می‌شود: معاف از مالیات (سود هرگز مشمول مالیات نمی‌شود)، مالیات معوق (مالیات در زمان برداشت در کهنسالی پرداخت می‌شود) و کسر از درآمد مشمول مالیات.",
+      "به سودهای تقسیمی و رشد قیمت سهام اجازه می‌دهد در طول دهه‌ها بدون کسر مالیات سالانه، به صورت مرکب رشد نمایند.",
+      "دارای سقف‌های قانونی واریز سالانه و جریمه برای برداشت زودهنگام پیش از موعد مقرر است.",
+      "در بازار سرمایه ایران، سود سپرده‌های بانکی، سود اوراق صکوک و اخزا و سود حاصل از معاملات سهام در بورس طبق ماده ۱۴۳ و ۱۴۵ قانون مالیات‌ها کاملاً معاف از مالیات هستند."
+    ],
     "url": "https://www.investopedia.com/terms/t/tax-advantaged.asp",
     "slug": "tax-advantaged",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Tax-advantaged vehicles eliminate or defer tax liabilities, drastically accelerating the compounding velocity of wealth accumulation.",
+    "bottom_line_fa": "ابزارهای دارای مزیت مالیاتی اصطکاک مالیاتی را به حداقل رسانده و قدرت تکاثری سود مرکب را در خدمت ثروت‌سازی بلندمدت قرار می‌دهند.",
+    "sections": [
+      {
+        "title_en": "Compounding Wealth Differential: Taxable vs. Tax-Deferred",
+        "title_fa": "فرمول مقایسه ثروت نهایی در حساب‌های عادی و دارای مزیت مالیاتی",
+        "content_en": "Terminal wealth in a tax-deferred account compounding at return $r$ with tax $\\tau$ upon withdrawal is: $$W_{\\text{deferred}} = P_0 (1 + r)^n (1 - \\tau)$$ In a taxable account with annual tax drag: $$W_{\\text{taxable}} = P_0 \\left(1 + r(1 - \\tau)\\right)^n$$ For multi-decade horizons ($n \\ge 20$), $W_{\\text{deferred}} \\gg W_{\\text{taxable}}$ due to non-linear compounding gains.",
+        "content_fa": "رشد سرمایه در حساب‌های دارای مزیت مالیاتی بسیار فراتر از حساب‌های عادی مشمول مالیات است:\n$$W_{\\text{معوق}} = P_0 (1+r)^n (1-\\tau) > P_0 [1+r(1-\\tau)]^n$$\nعدم پرداخت مالیات سالانه بر سود، بازدهی مرکب را در بلندمدت چندین برابر می‌سازد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
@@ -386836,40 +387658,74 @@
   {
     "id": 5201,
     "term_en": "Tax Base",
-    "term_fa": "مالیات Base (Tax Base)",
+    "term_fa": "پایه مالیاتی (Tax Base)",
     "letter": "T",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A tax base is the total collective assessed monetary value of assets, income, sales, consumption, or property within a jurisdiction that is legally subject to taxation by a government authority.",
+    "definition_fa": "پایه مالیاتی (Tax Base)، مجموع کل ارزش پولی دارایی‌ها، درآمدهای اشخاص و شرکت‌ها، مبادلات تجاری، مصرف کالاها یا املاکی در سطح یک کشور یا منطقه است که طبق قانون، مشمول وضع و اخذ مالیات توسط دولت قرار می‌گیرد؛ درآمد کل مالیاتی دولت از حاصل‌ضرب نرخ مالیات در اندازه این پایه به دست می‌آید.",
+    "takeaways_en": [
+      "Primary categories include income tax base (wages and profits), consumption tax base (retail sales and VAT), and property/wealth tax base.",
+      "A broader tax base allows governments to generate substantial revenue with lower marginal tax rates, minimizing economic deadweight distortions.",
+      "Tax base erosion occurs through excessive tax expenditures, offshore avoidance, deductions, and informal shadow economies.",
+      "Central focus of international tax reform (e.g., OECD Base Erosion and Profit Shifting - BEPS)."
+    ],
+    "takeaways_fa": [
+      "شامل پایه‌های اصلی: مالیات بر درآمد (حقوق و سود شرکت‌ها)، مالیات بر مصرف (مالیات بر ارزش افزوده) و مالیات بر ثروت و دارایی‌ها (خودرو و مسکن لوکس).",
+      "گسترش پایه‌های مالیاتی به دولت اجازه می‌دهد با پایین نگه داشتن نرخ‌های مالیاتی، درآمد پایدار کسب کرده و از فرار مالیاتی بکاهد.",
+      "فرسایش پایه مالیاتی در اثر معافیت‌های بی‌ضابطه، اقتصاد زیرزمینی و قاچاق کالا پدید می‌آید.",
+      "در ایران، تعریف پایه‌های جدید مالیاتی نظیر مالیات بر عایدی سرمایه (CGT) و مالیات بر خانه‌های خالی با هدف تنوع‌بخشی به پایه‌های مالیاتی پیگیری می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/t/taxbase.asp",
     "slug": "taxbase",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The tax base defines the total economic perimeter from which sovereign governments extract fiscal revenues to fund public goods.",
+    "bottom_line_fa": "پایه مالیاتی وسعت ظرفیت مالیات‌ستانی یک کشور را تعیین می‌کند و ستون اصلی پایداری بودجه عمومی و کاهش وابستگی به درآمدهای نفتی است.",
+    "sections": [
+      {
+        "title_en": "Total Tax Revenue and Elasticity of the Tax Base",
+        "title_fa": "فرمول درآمد مالیاتی کل و کشش پایه مالیاتی نسبت به نرخ مالیات",
+        "content_en": "Total fiscal tax revenue $R$ is the integral product of tax rate $\\tau$ and the endogenous tax base $B(\\tau)$: $$R(\\tau) = \\tau \\cdot B(\\tau)$$ Maximizing tax revenue yields the optimal revenue-maximizing rate (Laffer peak): $$\\frac{dR}{d\\tau} = B(\\tau) \\left(1 - \\varepsilon_{B,\\tau}\\right) = 0 \\implies \\tau^* = \\frac{1}{\\varepsilon_{B,\\tau}}$$ where $\\varepsilon$ is tax base elasticity.",
+        "content_fa": "درآمد مالیاتی تابع نرخ و پایه مالیاتی است: $$R = \\tau \\cdot B(\\tau)$$ بر اساس منحنی لافر، افزایش بیش از حد نرخ مالیات با فراری دادن فعالان اقتصادی موجب کوچک شدن پایه ($B$) و در نتیجه کاهش کل درآمدهای دولت می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 5202,
     "term_en": "Tax Benefit",
-    "term_fa": "مالیات Benefit (Tax Benefit)",
+    "term_fa": "مزیت مالیاتی / صرفه‌جویی مالیاتی (Tax Benefit / Tax Shield)",
     "letter": "T",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A tax benefit is any allowable deduction, credit, exclusion, exemption, or preferential rate authorized by tax legislation that reduces the overall tax liability of an individual or corporate taxpayer, effectively increasing net after-tax cash flows.",
+    "definition_fa": "مزیت یا صرفه مالیاتی (Tax Benefit)، هرگونه تخفیف قانونی، اعتبار مالیاتی، هزینه قابل قبول، معافیت یا نرخ ترجیحی است که طبق قوانین مالیاتی اعمال شده و منجر به کاهش بدهی مالیاتی پرداختی شخص حقیقی یا حقوقی می‌شود؛ این صرفه‌جویی جریان وجوه نقد خالص پس از مالیات را افزایش می‌دهد.",
+    "takeaways_en": [
+      "Encompasses tax deductions (lowering taxable income) and tax credits (dollar-for-dollar direct reductions of tax owed).",
+      "The corporate interest tax shield allows businesses to deduct interest expenses on debt, lowering the effective Weighted Average Cost of Capital (WACC).",
+      "Includes research and development (R&D) tax credits, green energy investment credits, and accelerated depreciation allowances.",
+      "Crucial input in capital budgeting, project finance Net Present Value (NPV) modeling, and corporate valuation."
+    ],
+    "takeaways_fa": [
+      "شامل اعتبارات مالیاتی (کاهش مستقیم و ریال به ریال بدهی مالیاتی) و هزینه‌های قابل قبول مالیاتی (کاهش درآمد مشمول مالیات) است.",
+      "سپر مالیاتی هزینه بهره وام‌ها (Interest Tax Shield) هزینه واقعی تامین مالی از محل بدهی را کاهش داده و میانگین موزون هزینه سرمایه (WACC) را بهینه‌سازی می‌کند.",
+      "شامل معافیت‌های شرکت‌های دانش‌بنیان، اعتبارات مالیاتی سرمایه‌گذاری در مناطق کمترتوسعه‌یافته و صنایع سبز.",
+      "در بودجه‌بندی سرمایه‌ای و ارزش‌گذاری سهام در بورس تهران، ارزش فعلی صرفه‌های مالیاتی نقشی محوری در ارزندگی طرح‌ها دارد."
+    ],
     "url": "https://www.investopedia.com/terms/t/tax-benefit.asp",
     "slug": "tax-benefit",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Tax benefits optimize capital efficiency by converting statutory tax incentives into preserved cash liquidity.",
+    "bottom_line_fa": "مزایای مالیاتی با کاهش هزینه‌های قانونی مالیات، توان تامین مالی مجدد و ارزش ذاتی بنگاه‌های اقتصادی را تقویت می‌نمایند.",
+    "sections": [
+      {
+        "title_en": "Modigliani-Miller Value of the Interest Tax Shield",
+        "title_fa": "نظریه مودیلیانی-میلر و ارزش فعلی سپر مالیاتی بدهی",
+        "content_en": "Under Modigliani-Miller theorem with corporate taxes, the value of a levered firm ($V_L$) equals unlevered value ($V_U$) plus the present value of the perpetual interest tax shield: $$V_L = V_U + \\text{PV}(\\text{Tax Shield}) = V_U + \\tau_c \\cdot D$$ where $\\tau_c$ is corporate tax rate and $D$ is permanent debt principal.",
+        "content_fa": "ارزش شرکت دارای بدهی برابر با ارزش شرکت بدون بدهی به علاوه ارزش فعلی صرفه مالیاتی بهره است:\n$$V_L = V_U + \\tau_c \\cdot D$$\nاین رابطه ریاضی توجیه‌کننده استفاده بهینه از اهرم مالی و انتشار صکوک در بازار سرمایه است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
