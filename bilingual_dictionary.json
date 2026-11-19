@@ -311149,280 +311149,492 @@
   {
     "id": 3582,
     "term_en": "Martial Law",
-    "term_fa": "Martial Law",
+    "term_fa": "حکومت نظامی (Martial Law)",
     "letter": "M",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Martial law is the temporary substitution of military authority for civilian rule and governance, usually declared during extreme national emergencies, civil unrest, war, or catastrophic disasters, suspending normal constitutional liberties and civil legal processes.",
+    "definition_fa": "حکومت نظامی (Martial Law) تعلیق موقت حاکمیت قوانین مدنی و تفویض اختیارات اجرایی، قضایی و انتظامی به نیروهای نظامی در مواقع بحران‌های شدید ملی، شورش‌های گسترده، جنگ یا بلایای طبیعی است که موجب توقف برخی آزادی‌های مدنی و دادرسی‌های عادی می‌شود.",
+    "takeaways_en": [
+      "Grants armed forces authority to enforce curfews, detain suspects, requisition property, and ration supplies.",
+      "Typically triggers instantaneous capital flight, currency deprecation, and stock exchange trading halts.",
+      "Regulated under sovereign constitutions with distinct thresholds for judicial review and legislative oversight."
+    ],
+    "takeaways_fa": [
+      "به ارتش اختیارات برقراری منع آمد و شد، بازداشت، توقیف اموال و جیره‌بندی مایحتاج را اعطا می‌کند.",
+      "معمولاً موجب فرار سرمایه‌ها، سقوط ارزش پول ملی و توقف معاملات بورس‌ها می‌شود.",
+      "در قوانین اساسی کشورها دارای معیارهای مشخصی برای لغو و بازگشت به حکومت قانون است."
+    ],
     "url": "https://www.investopedia.com/terms/m/martial-law.asp",
     "slug": "martial-law",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Martial law replaces civilian legal frameworks with military rule during severe crises, carrying profound economic and market ramifications.",
+    "bottom_line_fa": "حکومت نظامی حاکمیت مدنی را به طور موقت با اقتدار نظامی جایگزین کرده و شوک‌های سنگینی به بازار سرمایه و اقتصاد وارد می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Sovereign Risk Premium and Capital Flight Dynamics",
+        "title_fa": "صرف ریسک حاکمیتی و فرار سرمایه در شرایط حکومت نظامی",
+        "content_en": "Declaration of martial law spikes sovereign credit spreads ($S$) on national debt bonds ($Y_{sov}$) over benchmark risk-free Treasuries ($Y_{rf}$):\n$$S = Y_{sov} - Y_{rf} = \\frac{\\lambda \\times LGD}{1 - \\lambda \\times LGD}$$\nwhere $\\lambda$ is the hazard rate of government default and $LGD$ is the Loss Given Default.",
+        "content_fa": "برقراری وضعیت حکومت نظامی صرف ریسک اوراق قرضه دولتی را به دلیل جهش احتمال ورشکستگی ($\\lambda$) و زیان در صورت نکول ($LGD$) به شدت افزایش می‌دهد:\n$$S = Y_{sov} - Y_{rf} = \\frac{\\lambda \\times LGD}{1 - \\lambda \\times LGD}$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 3583,
     "term_en": "Marxian Economics",
-    "term_fa": "Marxian Economics",
+    "term_fa": "اقتصاد مارکسی (Marxian Economics)",
     "letter": "M",
     "category": "اقتصاد کلان و سیاست پولی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Marxian economics is a heterodox school of economic thought rooted in the works of Karl Marx, critiquing capitalist market structures through concepts such as the labor theory of value, surplus value, class struggle, and inherent crises of capital accumulation.",
+    "definition_fa": "اقتصاد مارکسی (Marxian Economics) مکتبی ناهم‌کیش در اندیشه اقتصادی بر پایه آثار کارل مارکس است که با تکیه بر نظریه ارزش کار، تصاحب ارزش اضافی، تضاد طبقاتی و انباشت سرمایه، ماهیت استثماری و بحران‌های ساختاری نظام سرمایه‌داری را تبیین می‌نماید.",
+    "takeaways_en": [
+      "Premised on the Labor Theory of Value: the economic worth of commodities is determined by socially necessary labor time.",
+      "Defines profit as unpaid 'surplus value' extracted by capital owners (bourgeoisie) from workers (proletariat).",
+      "Posits the 'tendency of the rate of profit to fall' due to rising organic composition of capital."
+    ],
+    "takeaways_fa": [
+      "مبتنی بر نظریه ارزش کار است؛ ارزش کالاها با زمان کار لازم اجتماعی برای تولید آنها تعیین می‌شود.",
+      "سود سرمایه‌دار را ناشی از تصاحب «ارزش اضافی» پرداخت‌نشده به نیروی کار می‌داند.",
+      "معتقد به «گرایش نزولی نرخ سود» به دلیل افزایش مکانیزاسیون و ترکیب ارگانیک سرمایه است."
+    ],
     "url": "https://www.investopedia.com/terms/m/marxian-economics.asp",
     "slug": "marxian-economics",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Marxian economics critiques capitalism through labor exploitation and capital accumulation dynamics, arguing that systemic contradictions lead to recurrent crises.",
+    "bottom_line_fa": "اقتصاد مارکسی با نقد مناسبات تولید سرمایه‌داری بر پایه ارزش کار، گرایش ذاتی اقتصاد بازار به بحران‌های ادواری را تبیین می‌کند.",
+    "sections": [
+      {
+        "title_en": "Surplus Value and the Rate of Profit Formulation",
+        "title_fa": "فرمول ارزش اضافی، ترکیب ارگانیک و نرخ سود مارکسی",
+        "content_en": "In Marxian value theory, total commodity value ($W$) consists of constant capital ($c$, machinery/materials), variable capital ($v$, wages), and surplus value ($s$, profit):\n$$W = c + v + s$$\nThe Rate of Surplus Value (exploitation rate, $e$) and the Organic Composition of Capital ($OCC, \\gamma$) are:\n$$e = \\frac{s}{v}, \\quad \\gamma = \\frac{c}{v}$$\nThe general Rate of Profit ($r$) is mathematically formulated as:\n$$r = \\frac{s}{c + v} = \\frac{e}{\\gamma + 1}$$\nAs automation increases $\\gamma$ faster than exploitation $e$ can rise, the rate of profit $r$ exhibits a structural downward tendency.",
+        "content_fa": "ارزش کل کالا ($W$) از سرمایه ثابت ($c$)، سرمایه متغیر یا دستمزد ($v$) و ارزش اضافی ($s$) تشکیل می‌شود:\n$$W = c + v + s$$\nنرخ ارزش اضافی ($e = s/v$) و ترکیب ارگانیک سرمایه ($\\gamma = c/v$) است. نرخ سود برابر است با:\n$$r = \\frac{s}{c + v} = \\frac{e}{\\gamma + 1}$$\nبا رشد ماشین‌آلات و افزایش $\\gamma$، نرخ سود با گرایش نزولی ساختاری روبرو می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
     "id": 3584,
     "term_en": "Marxism",
-    "term_fa": "Marxism",
+    "term_fa": "مارکسیسم (Marxism)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Marxism is a comprehensive socioeconomic and political philosophy developed by Karl Marx and Friedrich Engels, analyzing societal development through historical materialism and advocating for the revolutionary overthrow of capitalism to establish a classless, communist society.",
+    "definition_fa": "مارکسیسم (Marxism) یک جهان‌بینی فلسفی، سیاسی و اجتماعی-اقتصادی است که توسط کارل مارکس و فریدریش انگلس تدوین شد و بر پایه ماتریالیسم تاریخی استدلال می‌کند که تحولات تاریخی ناشی از کشمکش طبقاتی بر سر کنترل ابزار تولید است و خواهان جایگزینی سرمایه‌داری با سوسیالیسم و کمونیسم است.",
+    "takeaways_en": [
+      "Historical Materialism asserts economic infrastructure (base) fundamentally determines politics, law, and ideology (superstructure).",
+      "Identifies class struggle between wage-laborers and owners of capital as the primary engine of historical transition.",
+      "Advocates the abolition of private property in the means of production in favor of collective social ownership."
+    ],
+    "takeaways_fa": [
+      "ماتریالیسم تاریخی بیان می‌کند زیربنای اقتصادی، روبنای حقوقی، سیاسی و ایدئولوژیک جامعه را تعیین می‌نماید.",
+      "کشمکش طبقاتی میان پرولتاریا و بورژوازی را محرک اصلی تحولات تاریخ برمی‌شمارد.",
+      "خواهان لغو مالکیت خصوصی بر ابزار تولید و جایگزینی آن با مالکیت اشتراکی است."
+    ],
     "url": "https://www.investopedia.com/terms/m/marxism.asp",
     "slug": "marxism",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Marxism is a revolutionary philosophical system viewing history through class struggle and economic relations, seeking the public ownership of production.",
+    "bottom_line_fa": "مارکسیسم با تبیین تاریخ بر پایه روابط تولیدی و مبارزه طبقاتی، در پی بازسازی بنیادین ساختارهای اقتصادی و توزیع عادلانه ثروت است.",
+    "sections": [
+      {
+        "title_en": "Base and Superstructure Dialectic",
+        "title_fa": "دیالکتیک زیربنا و روبنا در ماتریالیسم تاریخی",
+        "content_en": "The Marxist societal model partitions society into Economic Base ($B$) and Ideological Superstructure ($S$):\n$$S = f(B), \\quad \\text{where } B = \\text{Forces of Production} \\times \\text{Relations of Production}$$\nSocial revolutions occur when advancing productive forces come into irreconcilable conflict with existing property relations:\n$$\\text{Revolutionary Crisis} \\iff \\text{Forces of Production} > \\text{Existing Legal Property Framework}$$",
+        "content_fa": "در ماتریالیسم تاریخی، روبنای جامعه تابعی از زیربنای روابط اقتصادی تولید است:\n$$S = f(B)$$\nانقلاب‌های اجتماعی هنگامی رخ می‌دهند که رشد نیروهای مولده با ساختار حقوقی کهنه مالکیت در تضاد آشتی‌ناپذیر قرار گیرد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3585,
     "term_en": "Mass Customization",
-    "term_fa": "Mass Customization",
+    "term_fa": "سفارشی‌سازی انبوه (Mass Customization)",
     "letter": "M",
     "category": "مدیریت عملیات و زنجیره تأمین",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Mass customization is a business and advanced manufacturing strategy that combines the low unit production costs and operational efficiencies of mass production with the flexibility and personalization of bespoke custom-made goods.",
+    "definition_fa": "سفارشی‌سازی انبوه (Mass Customization) استراتژی نوین تولید و عملیات است که با بهره‌گیری از فناوری‌های ماژولار، چاپ سه‌بعدی و نرم‌افزارهای خودکار، صرفه‌های ناشی از مقیاس و بهای تمام‌شده پایین تولید انبوه را با قابلیت انعطاف‌پذیری و شخصی‌سازی محصولات متناسب با سلیقه مشتری تلفیق می‌نماید.",
+    "takeaways_en": [
+      "Enabled by modular product architecture, flexible manufacturing systems (FMS), and digital configurators.",
+      "Enhances customer satisfaction and willingness to pay premium prices while maintaining near-zero finished goods inventory.",
+      "Employs 'postponement' strategies, delaying product differentiation until actual customer orders are received."
+    ],
+    "takeaways_fa": [
+      "با معماری ماژولار محصول، سیستم‌های تولید منعطف و پیکربندی‌های دیجیتال پیاده‌سازی می‌شود.",
+      "تمایل مشتری به پرداخت مبالغ بالاتر را برمی‌انگیزد و موجودی انبار کالای ساخته‌شده را به صفر نزدیک می‌کند.",
+      "از استراتژی «تأخیراندازی» (Postponement) استفاده می‌کند؛ یعنی شخصی‌سازی نهایی را تا دریافت سفارش مشتری به تعویق می‌اندازد."
+    ],
     "url": "https://www.investopedia.com/terms/m/masscustomization.asp",
     "slug": "masscustomization",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Mass customization bridges custom craftsmanship and assembly-line efficiency, delivering tailored products at mass-market price points.",
+    "bottom_line_fa": "سفارشی‌سازی انبوه پلی میان قیمت ارزان تولید انبوه و ارضای سلایق شخصی مشتریان با تکیه بر زنجیره تأمین چابک است.",
+    "sections": [
+      {
+        "title_en": "Modular Combinatorial Product Variety Formula",
+        "title_fa": "تنوع ترکیبی ماژولار در سفارشی‌سازی انبوه",
+        "content_en": "For a modular product comprising $K$ distinct component modules where module $k$ has $n_k$ interchangeable variants, the total customized variety ($V$) produced without retooling is:\n$$V = \\prod_{k=1}^K n_k$$\nThe economic optimum minimizes total cost ($TC$) comprising customization setup cost ($S$) and inventory holding savings ($\\Delta H$):\n$$\\min TC = S(V) - \\Delta H(V)$$",
+        "content_fa": "برای محصولی با $K$ ماژول مجزا که هر ماژول دارای $n_k$ گزینه است، کل تنوع قابل تولید برابر است با:\n$$V = \\prod_{k=1}^K n_k$$\nاین ساختار تنوع بی‌شمار محصول را بدون افزایش سرسام‌آور هزینه‌های انبارداری ممکن می‌سازد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت عملیات و زنجیره تأمین",
     "category_en": "Operations & Supply Chain"
   },
   {
     "id": 3586,
     "term_en": "Mass Production",
-    "term_fa": "Mass Production",
+    "term_fa": "تولید انبوه (Mass Production / Flow Production)",
     "letter": "M",
     "category": "مدیریت عملیات و زنجیره تأمین",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Mass production, also known as flow production or serial production, is the continuous manufacturing of large quantities of standardized goods using assembly lines, specialized machinery, division of labor, and interchangeable parts.",
+    "definition_fa": "تولید انبوه (Mass Production) روش تولید صنعتی برای ساخت مداوم مقادیر بسیار زیاد کالاهای استاندارد با استفاده از خطوط مونتاژ پیوسته، ابزارآلات تخصصی، تقسیم کار فوردیسم و قطعات تعویض‌پذیر است که بهای تمام‌شده واحد کالا را به حداقل می‌رساند.",
+    "takeaways_en": [
+      "Pioneered by Henry Ford in 1913 with the moving automobile assembly line.",
+      "Achieves dramatic economies of scale by spreading high fixed capital expenditures over vast production volumes.",
+      "Suffers from operational inflexibility and high vulnerability to demand downturns or retooling costs."
+    ],
+    "takeaways_fa": [
+      "توسط هنری فورد در سال ۱۹۱۳ با راه‌اندازی خط مونتاژ متحرک خودرو ترویج یافت.",
+      "با سرشکن کردن هزینه‌های ثابت سنگین بر تیراژ عظیم تولید، صرفه‌های مقیاس چشمگیری خلق می‌کند.",
+      "به شدت انعطاف‌ناپذیر بوده و در صورت تغییر ناگهانی سلیقه بازار، هزینه خطوط بازسازی آن بسیار سنگین است."
+    ],
     "url": "https://www.investopedia.com/terms/m/mass-production.asp",
     "slug": "mass-production",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Mass production drives down unit costs through standardization and moving assembly lines, laying the foundation for modern consumer economies.",
+    "bottom_line_fa": "تولید انبوه با استانداردسازی فرآیندها و خطوط مونتاژ پیوسته، مبنای وفور کالا و کاهش قیمت تمام‌شده در اقتصاد مدرن شد.",
+    "sections": [
+      {
+        "title_en": "Average Total Cost and Economies of Scale Curve",
+        "title_fa": "منحنی هزینه کل میانگین و صرفه ناشی از مقیاس در تولید انبوه",
+        "content_en": "In mass production, total cost ($TC$) partitions into large fixed capital costs ($FC$) and low constant marginal variable costs ($c$):\n$$TC(Q) = FC + c \\times Q$$\nThe Average Total Cost ($ATC$) asymptotically approaches marginal cost as volume $Q$ scales toward infinity:\n$$ATC(Q) = \\frac{FC}{Q} + c \\implies \\lim_{Q \\to \\infty} ATC(Q) = c$$\nThis hyper-efficient cost decline creates formidable barriers to entry against smaller craft competitors.",
+        "content_fa": "در تولید انبوه، هزینه میانگین کل ($ATC$) با افزایش تیراژ تولید ($Q$) به سمت هزینه نهایی ($c$) میل می‌کند:\n$$ATC(Q) = \\frac{FC}{Q} + c \\implies \\lim_{Q \\to \\infty} ATC(Q) = c$$\nاین کاهش چشمگیر هزینه سرانه، موانع ورود سهمگینی در برابر رقبای کوچک ایجاد می‌کند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت عملیات و زنجیره تأمین",
     "category_en": "Operations & Supply Chain"
   },
   {
     "id": 3587,
     "term_en": "Master-Feeder Structure",
-    "term_fa": "Master-Feeder Structure",
+    "term_fa": "ساختار فیدر و مادر در صندوق‌ها (Master-Feeder Structure)",
     "letter": "M",
     "category": "صندوق‌ها و مدیریت سبد دارایی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A master-feeder structure is a two-tiered investment fund architecture commonly utilized by hedge funds and private equity firms, where individual 'feeder funds' aggregate capital from different investor classes (e.g., US taxable vs offshore/tax-exempt) and pool it into a single centralized 'master fund' that executes all trading operations.",
+    "definition_fa": "ساختار مادر و تغذیه‌کننده (Master-Feeder Structure) یک معماری دولایه در صندوق‌های پوشش ریسک (Hedge Funds) است که در آن صندوق‌های تغذیه‌کننده مجزا، سرمایه سرمایه‌گذاران مختلف (مانند سرمایه‌گذاران مشمول مالیات آمریکا و سرمایه‌گذاران خارجی معاف از مالیات) را جمع‌آوری کرده و در یک «صندوق مادر» متمرکز تجمیع می‌کنند تا تمامی معاملات و مدیریت سبد در صندوق مادر اجرا شود.",
+    "takeaways_en": [
+      "Maximizes operational efficiency and portfolio diversification by pooling assets into a single multi-billion trading vehicle.",
+      "Preserves customized tax benefits for both onshore US investors (via partnership pass-through) and foreign/tax-exempt investors (via offshore corporate feeders).",
+      "Significantly reduces brokerage execution commissions, custody charges, and administrative overhead.",
+      "Subject to complex tax compliance rules under US FATCA and PFIC regulations."
+    ],
+    "takeaways_fa": [
+      "با تجمیع سرمایه‌ها در یک صندوق معاملاتی واحد، صرفه‌های عملیاتی و قدرت چانه‌زنی در کارمزدها را به حداکثر می‌رساند.",
+      "مزایای مالیاتی اختصاصی را همزمان برای سرمایه‌گذاران داخلی آمریکا و سرمایه‌گذاران خارجی آف‌شور حفظ می‌کند.",
+      "هزینه‌های اجرای معاملات، حسابرسی و نگهداری را به طور چشمگیری کاهش می‌دهد.",
+      "مشمول مقررات مالیاتی پیچیده بین‌المللی نظیر FATCA و ضوابط PFIC است."
+    ],
     "url": "https://www.investopedia.com/terms/m/master-feeder-fund.asp",
     "slug": "master-feeder-fund",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The master-feeder structure allows hedge funds to consolidate trading scale into one master entity while catering to distinct tax jurisdictions via feeder funds.",
+    "bottom_line_fa": "ساختار فیدر-مستر امکان مدیریت متمرکز و یکپارچه معاملات را با رعایت بهینه قوانین مالیاتی سرمایه‌گذاران داخلی و بین‌المللی فراهم می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Pro-Rata Net Asset Value and Incentive Fee Allocation",
+        "title_fa": "فرمول تسهیم ارزش خالص دارایی‌ها و کارمزد عملکرد در ساختار Master-Feeder",
+        "content_en": "Feeder funds $i = 1, \\dots, M$ participate in the Master Fund's total gross trading profit ($\\Pi_{master}$) proportionally to their opening capital share ($w_i$):\n$$w_i = \\frac{NAV_{\\text{feeder}, i}}{\\sum_{j=1}^M NAV_{\\text{feeder}, j}}$$\n$$\\text{Allocated Gross Return}_i = w_i \\times \\Pi_{master}$$\nManagement fee ($f_{mgmt}$) and high-water mark incentive fee ($f_{perf}$) are calculated independently at the feeder tier:\n$$NAV_{\\text{feeder}, i}^{net} = NAV_{\\text{feeder}, i} + \\text{Allocated Return}_i - \\text{Fees}_i$$",
+        "content_fa": "هر صندوق تغذیه‌کننده به نسبت سهم سرمایه‌اش ($w_i$) در سود و زیان صندوق مادر سهیم است:\n$$w_i = \\frac{NAV_{\\text{feeder}, i}}{\\sum NAV_{\\text{feeder}, j}}$$\nسپس کارمزد مدیریت و کارمزد حسن عملکرد در سطح هر فیدر متناسب با شرایط مالیاتی اعضا اعمال می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "صندوق‌ها و مدیریت سبد دارایی",
     "category_en": "Funds & Portfolio Management"
   },
   {
     "id": 3588,
     "term_en": "Master of Business Administration (MBA)",
-    "term_fa": "Master of Business Administration (MBA)",
+    "term_fa": "کارشناسی ارشد مدیریت کسب‌وکار (MBA)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A Master of Business Administration (MBA) is an internationally recognized postgraduate graduate degree designed to develop comprehensive management, financial analysis, leadership, strategic, and entrepreneurial skills required for leadership in modern corporate enterprise.",
+    "definition_fa": "کارشناسی ارشد مدیریت کسب‌وکار (MBA) یکی از معتبرترین مدارک دانشگاهی پسادانشگاهی در جهان است که به پرورش مهارت‌های کاربردی در حوزه‌های مدیریت استراتژیک، امور مالی، حسابداری، بازاریابی، مدیریت زنجیره تأمین و رهبری سازمانی اختصاص دارد.",
+    "takeaways_en": [
+      "Originated at Harvard Business School in 1908 to train professional corporate managers.",
+      "Features core foundational curricula in corporate finance, microeconomics, quantitative analysis, and organizational behavior.",
+      "Serves as a pivotal gateway to executive careers in investment banking, management consulting, and private equity."
+    ],
+    "takeaways_fa": [
+      "در سال ۱۹۰۸ در دانشگاه هاروارد برای پرورش مدیران حرفه‌ای ابداع شد.",
+      "دربرگیرنده دروس هسته‌ای مالی شرکتی، اقتصاد خرد، تحلیل کمّی و رفتار سازمانی است.",
+      "سکوی پرتاب سنتی به مشاغل رده‌بالا در بانکداری سرمایه‌گذاری، مشاور مدیریت استراتژیک و صندوق‌های سرمایه‌گذاری خصوصی است."
+    ],
     "url": "https://www.investopedia.com/terms/m/mba.asp",
     "slug": "mba",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The MBA provides rigorous multi-disciplinary business education, equipping future executives with strategic, operational, and financial tools.",
+    "bottom_line_fa": "دوره MBA آموزش‌های تخصصی رهبری کسب‌وکار و مالی را برای هدایت بنگاه‌های بزرگ اقتصادی فراهم می‌آورد.",
+    "sections": [
+      {
+        "title_en": "MBA Investment Return on Investment (ROI) Formula",
+        "title_fa": "فرمول محاسبه بازگشت سرمایه (ROI) و ارزش فعلی خالص مدرک MBA",
+        "content_en": "Prospective candidates calculate the Net Present Value ($NPV_{MBA}$) of the degree by comparing post-MBA incremental salary ($\\Delta W_t$) to direct tuition costs ($Tuition$) and opportunity cost of forgone salary ($W_{foregone}$):\n$$NPV_{MBA} = \\sum_{t=1}^T \\frac{\\Delta W_t}{(1 + r)^t} - \\left( Tuition + W_{foregone} + \\text{Living Expenses} \\right)$$\nA positive $NPV > 0$ confirms an economically rational career investment.",
+        "content_fa": "داوطلبان بازدهی اقتصادی مدرک MBA را با فرمول ارزش فعلی خالص بررسی می‌کنند:\n$$NPV_{MBA} = \\sum_{t=1}^T \\frac{\\Delta W_t}{(1 + r)^t} - (\\text{شهریه} + \\text{دستمزد از دست‌رفته})$$\nمثبت بودن NPV نشان‌دهنده توجیه‌پذیری سرمایه‌گذاری بر روی این دوره آموزشی است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3589,
     "term_en": "Master of Public Administration (MPA)",
-    "term_fa": "Master of Public Administration (MPA)",
+    "term_fa": "کارشناسی ارشد مدیریت دولتی (MPA)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A Master of Public Administration (MPA) is a professional graduate degree program designed to prepare individuals for executive management, public policy leadership, and administrative roles across municipal, national, international, and non-profit public sector organizations.",
+    "definition_fa": "کارشناسی ارشد مدیریت دولتی (MPA) دوره‌ای تخصصی و دانشگاهی است که مدیران و کارشناسان ارشد را برای برنامه‌ریزی، هدایت سیاست‌های عمومی، مدیریت بودجه دولتی و نظارت بر سازمان‌های بخش عمومی، دولتی و غیرانتفاعی آماده می‌سازد.",
+    "takeaways_en": [
+      "Focuses on public finance, ethical public administration, administrative law, and econometric program evaluation.",
+      "Combines public policy design with organizational leadership skills tailored to public stewardship rather than private profit.",
+      "Graduates frequently serve as city managers, cabinet agency directors, budget directors, and NGO leaders."
+    ],
+    "takeaways_fa": [
+      "بر مالیه عمومی، اخلاق حرفه‌ای دولتی، حقوق اداری و ارزیابی کمّی برنامه‌های عمومی متمرکز است.",
+      "طراحی سیاست‌های کلان را با هدف ارتقای رفاه عمومی به جای سودآوری تجاری ترکیب می‌کند.",
+      "فارغ‌التحصیلان آن عهده‌دار سمت‌های مدیریت شهری، سازمان‌های برنامه‌ریزی و نهادهای بین‌المللی می‌شوند."
+    ],
     "url": "https://www.investopedia.com/terms/m/master-of-public-administration.asp",
     "slug": "master-of-public-administration",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The MPA prepares leaders for effective, ethical public sector stewardship and quantitative public policy evaluation.",
+    "bottom_line_fa": "دوره MPA متخصصان را برای هدایت بهینه نهادهای حاکمیتی و ارزیابی اقتصادی سیاست‌های رفاهی تربیت می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Public Policy Cost-Benefit Analysis (CBA)",
+        "title_fa": "تحلیل هزینه-فایده اجتماعی (CBA) در مدیریت دولتی",
+        "content_en": "MPA program managers evaluate public welfare interventions using Social Net Present Value ($SNPV$):\n$$SNPV = \\sum_{t=0}^T \\frac{B_t - C_t}{(1 + s)^t}$$\nwhere $B_t$ is total monetized social benefits (including positive externalities), $C_t$ is total direct and social costs, and $s$ is the Social Discount Rate.",
+        "content_fa": "در ارزیابی پروژه‌های بخش عمومی از تحلیل ارزش فعلی خالص اجتماعی استفاده می‌شود:\n$$SNPV = \\sum_{t=0}^T \\frac{B_t - C_t}{(1 + s)^t}$$\nکه در آن $B_t$ منافع اجتماعی، $C_t$ هزینه‌ها و $s$ نرخ تنزیل اجتماعی است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3590,
     "term_en": "MasterCard",
-    "term_fa": "MasterCard",
+    "term_fa": "مسترکارت (Mastercard Incorporated)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Mastercard is a multinational financial services corporation headquartered in New York that operates the world's second-largest payment-processing electronic network, facilitating credit, debit, and prepaid payment transactions between consumer cardholders, merchants, and issuing banks globally.",
+    "definition_fa": "مسترکارت (Mastercard) دومین شرکت بزرگ شبکه پرداخت‌های الکترونیک در جهان است که بستر پردازش سریع، امن و بین‌المللی تراکنش‌های کارت‌های اعتباری، نقدی و پیش‌پرداخت را میان پذیرندگان، بانک‌های صادرکننده کارت و خریداران فراهم می‌سازد.",
+    "takeaways_en": [
+      "Does not issue cards or set interest rates directly; operates the underlying payment rails (Mastercard Network).",
+      "Generates revenue primarily from transaction processing fees, cross-border assessment fees, and value-added data analytics.",
+      "Pioneered EMV chip standards and tokenized mobile payment integrations alongside Visa."
+    ],
+    "takeaways_fa": [
+      "خود مستقیماً کارت صادر نکرده و وام نمی‌دهد، بلکه زیرساخت تسویه تراکنش‌ها را اداره می‌کند.",
+      "درآمد خود را از کارمزد پردازش تراکنش‌ها، خدمات تسویه ارزی و تحلیل داده‌ها به دست می‌آورد.",
+      "از پیشگامان استانداردهای امنیتی تراشه EMV و توکن‌سازی پرداخت‌ها در جهان است."
+    ],
     "url": "https://www.investopedia.com/terms/m/mastercard-card.asp",
     "slug": "mastercard-card",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Mastercard provides the global digital rails facilitating trillions in electronic payment transactions between consumers and merchants.",
+    "bottom_line_fa": "مسترکارت با ارائه زیرساخت‌های شبکه‌ای پرداخت جهانی، تسویه امن میلیاردها تراکنش مالی را در ثانیه مدیریت می‌کند.",
+    "sections": [
+      {
+        "title_en": "Payment Processing Interchange Economics",
+        "title_fa": "اقتصاد کارمزد تبادل (Interchange Fee) در شبکه مسترکارت",
+        "content_en": "When a customer charges transaction amount $P$, the merchant receives the net proceeds after Merchant Discount Rate ($MDR$):\n$$\\text{Net Merchant Payout} = P \\times (1 - MDR)$$\nThe $MDR$ is distributed among ecosystem participants:\n$$MDR = \\text{Interchange Fee (to Issuer)} + \\text{Network Assessment Fee (to Mastercard)} + \\text{Acquiring Markup}$$",
+        "content_fa": "با هر خرید مشتری، پذیرنده وجه را با کسر کارمزد پذیرندگی ($MDR$) دریافت می‌کند:\n$$\\text{Net Merchant Payout} = P \\times (1 - MDR)$$\nاین کارمزد بین بانک صادرکننده کارت، شبکه مسترکارت و شرکت پرداخت (Acquirer) تسهیم می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3591,
     "term_en": "Matching Orders",
-    "term_fa": "Matching Orders",
+    "term_fa": "تطبیق سفارش‌ها در هسته معاملات (Matching Orders)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Matching orders is the primary automated electronic process executed by an exchange's central matching engine that pairs compatible buy orders (bids) and sell orders (asks) based on predetermined allocation algorithms, such as Price-Time Priority (FIFO) or Pro-Rata.",
+    "definition_fa": "تطبیق سفارش‌ها (Matching Orders) فرآیند خودکار و بلادرنگ در موتور و هسته معاملات بورس است که سفارش‌های خرید و فروش همخوان را بر اساس الگوریتم‌های استاندارد (مانند اولویت قیمت-زمان FIFO یا تسهیم به نسبت) منطبق کرده و معامله را نهایی می‌کند.",
+    "takeaways_en": [
+      "Core operational function of electronic trading platforms and designated contract markets.",
+      "Price-Time Priority (FIFO) allocates executions to the best price first, and then to the earliest timestamp order at that price.",
+      "Pro-Rata matching models allocate fills in proportion to order size, common in short-term interest rate futures markets."
+    ],
+    "takeaways_fa": [
+      "وظیفه بنیادین موتورهای پردازش معاملات در تمامی بورس‌های الکترونیک است.",
+      "در الگوریتم اولویت قیمت-زمان (FIFO)، بهترین قیمت و سپس سریع‌ترین سفارش ثبت‌شده در صف اولویت دارند.",
+      "در الگوریتم تسهیم به نسبت (Pro-Rata)، حجم سفارش مبنای تخصیص قرار می‌گیرد که در بازارهای آتی نرخ بهره رایج است."
+    ],
     "url": "https://www.investopedia.com/terms/m/matchingorders.asp",
     "slug": "matchingorders",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Order matching algorithms pair compatible bids and asks systematically, establishing execution prices and market fairness.",
+    "bottom_line_fa": "الگوریتم‌های تطبیق سفارش‌ها با تعیین دقیق نوبت سفارشات خرید و فروش، شفافیت و عدالت در کشف قیمت بازار را تضمین می‌کنند.",
+    "sections": [
+      {
+        "title_en": "Price-Time Priority (FIFO) vs Pro-Rata Matching Rules",
+        "title_fa": "مقایسه الگوریتم اولویت قیمت-زمان (FIFO) و مدل تسهیم به نسبت",
+        "content_en": "Under Price-Time Priority, for order size $Q_{incoming}$ arriving at best ask $P^*$:\n$$\\text{Fill}_i = \\min\\left( Q_{remaining}, \\; Q_{bid, i} \\right) \\quad \\text{ordered by timestamp } t_1 < t_2 < \\dots$$\nUnder Pro-Rata matching across $N$ resting orders at the same price tier:\n$$\\text{Fill}_i = Q_{incoming} \\times \\left( \\frac{Q_{resting, i}}{\\sum_{j=1}^N Q_{resting, j}} \\right)$$",
+        "content_fa": "در مدل FIFO سفارشات ابتدا بر اساس بهترین قیمت و سپس تقدم زمانی معامله می‌شوند. در مدل تسهیم به نسبت، تخصیص متناسب با سهم حجم سفارش است:\n$$\\text{Fill}_i = Q_{incoming} \\times \\left( \\frac{Q_{resting, i}}{\\sum Q_{resting, j}} \\right)$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3592,
     "term_en": "Material Participation Tests",
-    "term_fa": "Material Participation Tests",
+    "term_fa": "آزمون‌های مشارکت فعال و اساسی در مالیات (Material Participation Tests)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Material participation tests are a set of seven distinct statutory IRS criteria under US Internal Revenue Code Section 469 used to determine whether a taxpayer participates in a business or rental activity on a regular, continuous, and substantial basis to avoid passive activity loss limitations.",
+    "definition_fa": "آزمون‌های مشارکت فعال (Material Participation Tests) هفت معیار قانونی مشخص در ماده ۴۶۹ قانون مالیات‌های آمریکاست که تعیین می‌کند آیا مودی مالیاتی در فعالیت یک کسب‌وکار به صورت منظم، مداوم و اساسی مشارکت داشته است تا زیان‌های آن فعالیت به عنوان «زیان غیرفعال» مسدود نشده و بتواند از درآمد عادی کسر گردد.",
+    "takeaways_en": [
+      "Satisfying any one of the seven tests reclassifies passive business losses as fully deductible active losses.",
+      "The most common criteria is the 500-Hour Rule: participating more than 500 hours during the taxable year.",
+      "Prevents tax shelter abuse where passive investors use artificial business losses to shelter non-passive wage income."
+    ],
+    "takeaways_fa": [
+      "احراز حتی یکی از آزمون‌های هفت‌گانه، زیان فعالیت را از حالت غیرفعال به زیان فعال با قابلیت کسر از مالیات تبدیل می‌کند.",
+      "رایج‌ترین آزمون، قاعده ۵۰۰ ساعت است؛ یعنی حضور بیش از ۵۰۰ ساعت در سال در فعالیت‌های آن بنگاه.",
+      "مانع از سوءاستفاده‌های مالیاتی می‌شود که در آن افراد زیان‌های سرمایه‌گذاری را از حقوق عادی خود کسر می‌کردند."
+    ],
     "url": "https://www.investopedia.com/terms/m/material-participation-test.asp",
     "slug": "material-participation-test",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Material participation tests classify business activity as active rather than passive, allowing taxpayers to offset ordinary income with business losses.",
+    "bottom_line_fa": "آزمون‌های مشارکت اساسی تفاوت میان سرمایه‌گذار غیرفعال و مدیر فعال را تعیین کرده و نحوه اعمال کسورات مالیاتی را مشخص می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Key IRS Material Participation Quantitative Thresholds",
+        "title_fa": "آستانه‌های کمّی اصلی آزمون‌های ماده ۴۶۹ سازمان مالیاتی",
+        "content_en": "A taxpayer qualifies as materially participating if any of the following key criteria are met:\n1. $Hours_{activity} > 500 \\text{ hours/year}$\n2. Taxpayer provides substantially all participation in the activity:\n$$Hours_{taxpayer} \\approx \\sum Hours_{all\\ participants}$$\n3. Significant Participation Activity ($SPA$) rule: Taxpayer spends $> 100$ hours in activity, and aggregate hours across all SPAs exceed 500 hours:\n$$\\sum_{k \\in SPA} Hours_k > 500 \\quad (\\text{where } Hours_k > 100)$$",
+        "content_fa": "مؤدی در صورت برآورده کردن هر یک از شرایط زیر فعال شناخته می‌شود:\n۱. کارکرد بیش از ۵۰۰ ساعت در سال.\n۲. اختصاص بیش از ۱۰۰ ساعت به فعالیت به شرطی که مجموع ساعات در کلیه فعالیت‌های مشابه بیش از ۵۰۰ ساعت شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3593,
     "term_en": "Material Requirements Planning (MRP)",
-    "term_fa": "Material Requirements Planning (MRP)",
+    "term_fa": "برنامه‌ریزی احتیاجات مواد (MRP)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Material Requirements Planning (MRP) is a computerized inventory management and production planning methodology used by manufacturers to calculate the precise quantities and timing of raw materials, subassemblies, and components required to fulfill production master schedules.",
+    "definition_fa": "برنامه‌ریزی احتیاجات مواد (MRP) سامانه‌ای نرم‌افزاری و روشی نظام‌مند در مدیریت زنجیره تأمین و تولید است که بر اساس برنامه کلان تولید (MPS)، فهرست مواد (BOM) و موجودی انبار، مقادیر دقیق و زمان‌بندی سفارش مواد اولیه و قطعات لازم را محاسبه می‌کند.",
+    "takeaways_en": [
+      "Integrates three core inputs: Master Production Schedule (MPS), Bill of Materials (BOM), and Inventory Status Records.",
+      "Minimizes inventory holding costs while eliminating production stoppages caused by stockouts.",
+      "Evolved into modern Enterprise Resource Planning (ERP) and Manufacturing Resource Planning (MRP II) suites."
+    ],
+    "takeaways_fa": [
+      "بر سه ورودی کلیدی استوار است: برنامه اصلی تولید (MPS)، درخت محصول یا فهرست مواد (BOM) و فایل وضعیت موجودی.",
+      "هزینه‌های خواب سرمایه در انبار را کاهش داده و مانع از توقف خطوط تولید به دلیل کسری قطعات می‌شود.",
+      "پیش‌زمینه توسعه سامانه‌های پیشرفته برنامه‌ریزی منابع سازمانی (ERP) امروزی است."
+    ],
     "url": "https://www.investopedia.com/terms/m/mrp.asp",
     "slug": "mrp",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MRP synchronizes manufacturing schedules with raw material orders, preventing inventory stockouts while minimizing holding costs.",
+    "bottom_line_fa": "سامانه MRP با برنامه‌ریزی سفارش قطعات بر مبنای جدول زمان‌بندی تولید، هم‌راستایی کامل زنجیره تأمین را تضمین می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Net Requirements and Time-Phased Order Formula",
+        "title_fa": "فرمول محاسبه نیازهای خالص و زمان‌بندی سفارش مواد (MRP)",
+        "content_en": "For inventory item $i$ in planning period $t$ with lead time $L$:\n$$\\text{Net Requirements}_t = \\max\\left( 0, \\; \\text{Gross Requirements}_t - (\\text{Projected On Hand}_{t-1} + \\text{Scheduled Receipts}_t) + \\text{Safety Stock} \\right)$$\nThe planned order release is back-calculated by offsetting lead time:\n$$\\text{Planned Order Release}_{t-L} = \\text{Net Requirements}_t$$",
+        "content_fa": "نیاز خالص مواد اولیه با کسر موجودی آماده و محموله‌های در راه از کل نیازها محاسبه می‌شود:\n$$\\text{نیاز خالص}_t = \\text{نیاز ناخالص}_t - (\\text{موجودی قبلی} + \\text{دریافتی مقرر}) + \\text{ذخیره اطمینان}$$\nزمان ارسال سفارش نیز با کسر زمان انتظار تحویل ($L$) مشخص می‌گردد: $t-L$."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3594,
     "term_en": "Mature Industry",
-    "term_fa": "Mature Industry",
+    "term_fa": "صنعت بالغ (Mature Industry)",
     "letter": "M",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A mature industry is an industry sector that has passed the emerging and rapid-growth stages of its development cycle, characterized by stable consumer demand, entrenched competition, low revenue growth mirroring GDP, and high dividend payouts.",
+    "definition_fa": "صنعت بالغ (Mature Industry) بخشی از اقتصاد است که دوران ظهور و رشد شتابان اولیه خود را سپری کرده و وارد مرحله تثبیت شده است؛ ویژگی‌های آن تقاضای پایدار، سهم بازار مشخص بازیگران، رشد درآمدی متناسب با رشد کل اقتصاد (GDP) و سود نقدی تقسیمی بالا است.",
+    "takeaways_en": [
+      "Exhibits low Price-to-Earnings (P/E) multiples and elevated dividend yields.",
+      "Corporate strategies shift from aggressive market expansion to cost optimization, operational efficiency, and share buybacks.",
+      "Examples include utilities, commercial banking, automotive manufacturing, and consumer staples."
+    ],
+    "takeaways_fa": [
+      "دارای نسبت‌های قیمت به درآمد (P/E) پایین و بازده نقدی سود سهام (Dividend Yield) بالاست.",
+      "استراتژی شرکت‌ها از توسعه پرهزینه به سمت کاهش بهای تمام‌شده و بازخرید سهام تغییر می‌یابد.",
+      "نمونه‌های برجسته آن شامل صنایع برق و گاز، بانکداری سنتی، فولاد و مواد غذایی پایه‌ای هستند."
+    ],
     "url": "https://www.investopedia.com/terms/m/matureindustry.asp",
     "slug": "matureindustry",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A mature industry generates predictable cash flows and high dividend yields, characterized by stable demand and consolidated competition.",
+    "bottom_line_fa": "صنعت بالغ با درآمدهای پیش‌بینی‌پذیر و حاشیه‌های سود تثبیت‌شده، جریان‌های نقد پایدار و سود نقدی برای سهامداران فراهم می‌آورد.",
+    "sections": [
+      {
+        "title_en": "Gordon Growth Valuation in Mature Firms",
+        "title_fa": "ارزش‌گذاری سهام شرکت‌های بالغ با مدل رشد گوردون",
+        "content_en": "Because mature industries exhibit steady long-term dividend growth equal to macroeconomic nominal growth ($g \\approx g_{GDP}$), equity valuation follows the Gordon Growth Model:\n$$P_0 = \\frac{D_1}{r - g} = \\frac{D_0 (1 + g)}{r - g}$$\nwhere $D_1$ is next year's dividend, $r$ is the cost of equity, and dividend payout ratio ($DPR$) typically satisfies $DPR > 50\\% - 70\\%$.",
+        "content_fa": "در صنایع بالغ به دلیل رشد سودآوری همگام با اقتصاد، ارزش‌گذاری بر اساس مدل رشد سود تقسیمی گوردون انجام می‌شود:\n$$P_0 = \\frac{D_1}{r - g}$$\nکه در آن نرخ سود تقسیمی معمولاً بیش از ۵۰ تا ۷۰ درصد سود خالص شرکت است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3595,
     "term_en": "Maturity",
-    "term_fa": "Maturity",
+    "term_fa": "سررسید (Maturity)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Maturity is the finite lifespan or remaining duration of a financial contract—such as a bond, loan, promissory note, or derivative—at the conclusion of which the principal amount must be paid back in full and contractual obligations terminate.",
+    "definition_fa": "سررسید (Maturity) به بازه زمانی یا طول عمر باقیمانده تا پایان اعتبار یک ابزار مالی (نظیر اوراق قرضه، وام بانکی، قرارداد آتی یا سفته) اطلاق می‌شود که در آن تاریخ، پرداخت اصل بدهی به سرمایه‌گذار اجباری شده و حقوق قراردادی پایان می‌پذیرد.",
+    "takeaways_en": [
+      "Bonds are categorized into short-term (<1-3 years), intermediate-term (3-10 years), and long-term (10-30+ years).",
+      "Longer maturities typically demand a term liquidity premium due to greater exposure to inflation and interest rate risk.",
+      "Crucial variable in yield curve modeling and asset-liability duration matching."
+    ],
+    "takeaways_fa": [
+      "اوراق بهادار به کوتاه‌مدت (کمتر از ۳ سال)، میان‌مدت (۳ تا ۱۰ سال) و بلندمدت (بیش از ۱۰ سال) تقسیم می‌شوند.",
+      "سررسیدهای طولانی‌تر معمولاً صرف نقدشوندگی و بازده بالاتری را به دلیل ریسک نوسان نرخ بهره مطالبه می‌کنند.",
+      "مؤلفه اصلی در ترسیم منحنی بازدهی و تطبیق ساختار دارایی‌ها و بدهی‌ها در بانک‌هاست."
+    ],
     "url": "https://www.investopedia.com/terms/m/maturity.asp",
     "slug": "maturity",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Maturity defines the contractual termination point of a financial security, requiring full principal repayment and settling all obligations.",
+    "bottom_line_fa": "سررسید نقطه انقضای حقوقی اوراق مالی است که در آن اصل سرمایه تسویه شده و پرونده تعهد بسته می‌شود.",
+    "sections": [
+      {
+        "title_en": "Macaulay Duration and Maturity Relationship",
+        "title_fa": "رابطه سررسید با دیرش مکالی در اوراق قرضه",
+        "content_en": "For a coupon bond paying annual coupon $C$ over maturity $T$ at yield $y$, Macaulay Duration ($D_{mac}$) is strictly less than maturity ($D_{mac} < T$):\n$$D_{mac} = \\frac{\\sum_{t=1}^T \\frac{t \\times C}{(1 + y)^t} + \\frac{T \\times F}{(1 + y)^T}}{P}$$\nFor a zero-coupon bond, Macaulay duration equals maturity exactly: $D_{mac} = T$.",
+        "content_fa": "برای اوراق کوپن‌دار دیرش مکالی همواره کمتر از سررسید است ($D_{mac} < T$):\n$$D_{mac} = \\frac{\\sum_{t=1}^T \\frac{t \\cdot C}{(1+y)^t} + \\frac{T \\cdot F}{(1+y)^T}}{P}$$\nاما در اوراق با کوپن صفر، دیرش مکالی دقیقاً مساوی سررسید اوراق است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -311432,117 +311644,209 @@
     "term_fa": "تاریخ سررسید (Maturity Date)",
     "letter": "M",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The maturity date is the specific calendar date on which the principal balance of a fixed-income instrument, note, certificate of deposit, or loan becomes due and payable to the investor, and on which derivative contracts cease trading.",
+    "definition_fa": "تاریخ سررسید (Maturity Date) تاریخ معین در تقویم است که در آن روز، اصل سرمایه و آخرین سود دوره اوراق قرضه، گواهی سپرده یا تسهیلات بانکی باید به سرمایه‌گذار مسترد گردد و در قراردادهای مشتقه، روز انقضا و تسویه نهایی معامله محسوب می‌شود.",
+    "takeaways_en": [
+      "Dictates the exact repayment schedule for debt issuers.",
+      "For options, it represents the final moment the option can be exercised before expiring worthless.",
+      "Can be accelerated under debt covenants in the event of debtor default or covenant breaches."
+    ],
+    "takeaways_fa": [
+      "برنامه زمان‌بندی دقیق بازپرداخت دیون را برای ناشران اوراق تعیین می‌کند.",
+      "در قراردادهای اختیار معامله، آخرین مهلت دارنده برای اعمال اختیار پیش از ابطال است.",
+      "در صورت نقض شروط قرارداد وام، بانک می‌تواند سررسید بدهی را تسریع و حال نماید."
+    ],
     "url": "https://www.investopedia.com/terms/m/maturitydate.asp",
     "slug": "maturitydate",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The maturity date is the precise deadline when principal must be returned to investors and contracts conclude.",
+    "bottom_line_fa": "تاریخ سررسید موعد نهایی بازپرداخت اصل بدهی به طلبکاران و روز تسویه کامل قراردادهای مالی است.",
+    "sections": [
+      {
+        "title_en": "Present Value Discounting to Maturity Date",
+        "title_fa": "فرمول تنزیل تا موعد سررسید در مبادلات پول",
+        "content_en": "The exact day-count fraction between settlement date $d_0$ and maturity date $d_{mat}$ under Actual/360 or Actual/365 convention is:\n$$\\tau = \\frac{d_{mat} - d_0}{\\text{Day Count Basis}}$$\nThe present value of a zero-coupon commercial paper maturing on that date is:\n$$PV = \\frac{F}{1 + y \\times \\tau}$$",
+        "content_fa": "کسر روزهای واقعی میان روز تسویه و تاریخ سررسید مبنای ارزش فعلی اسناد تجاری است:\n$$\\tau = \\frac{d_{mat} - d_0}{360}$$\n$$PV = \\frac{F}{1 + y \\times \\tau}$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 3597,
     "term_en": "Max Pain",
-    "term_fa": "Max Pain",
+    "term_fa": "نقطه حداکثر درد در بازار آپشن (Max Pain / Pain Price)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Max pain, or the pain price, is an options market theory postulating that the market price of an underlying stock will tend to gravitate toward the strike price where the greatest aggregate dollar value of call and put options will expire completely worthless.",
+    "definition_fa": "نقطه حداکثر درد (Max Pain) نظریه‌ای در بازار مشتقه است که بیان می‌کند قیمت سهم پایه در تاریخ سررسید به سمتی همگرا می‌شود که در آن قیمت، بیشترین حجم ممکن از قراردادهای اختیار خرید (Call) و اختیار فروش (Put) بی‌ارزش (Out-of-the-Money) شده و بیشترین زیان متوجه خریداران آپشن و بیشترین سود متوجه فروشندگان (نهادها و بازارگردان‌ها) گردد.",
+    "takeaways_en": [
+      "Driven by option writers (market makers) hedging dynamic deltas, which creates counterbalancing pin risk near max pain strikes.",
+      "Calculated by summing the total intrinsic dollar value across all open strikes and finding the minimum payout point.",
+      "Frequently observed during monthly options expiration Fridays (OpEx)."
+    ],
+    "takeaways_fa": [
+      "ناشی از فعالیت بازارگردان‌ها برای پوشش دلتای پویای موقعیت‌های خود است که قیمت را به سمت این نقطه سنجاق می‌کند.",
+      "از طریق محاسبه ارزش ذاتی کل قراردادهای باز در تمام قیمت‌های اعمال و یافتن کمترین مبلغ پرداختی محاسبه می‌شود.",
+      "بیش از همه در روزهای جمعه پایان دوره انقضای قراردادهای اختیار (OpEx) مشاهده می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/m/maxpain.asp",
     "slug": "maxpain",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Max pain predicts stock price pinning at options expiration where option sellers profit most and buyers lose most.",
+    "bottom_line_fa": "نقطه مکس پین قیمتی را پیش‌بینی می‌کند که در آن حداکثر قراردادهای آپشن سوخت شده و معامله‌گران نهادی بیشترین سود را می‌برند.",
+    "sections": [
+      {
+        "title_en": "Mathematical Formulation of the Pain Function",
+        "title_fa": "فرمول کمّی محاسبه نقطه حداکثر درد در زنجیره آپشن",
+        "content_en": "For a test expiration price $S_k$, total buyer cash payout across all call and put strikes $K_i$ with open interest $OI$ is:\n$$\\text{Total Payout}(S_k) = \\sum_{i} OI_{call, i} \\times \\max(S_k - K_i, 0) + \\sum_{j} OI_{put, j} \\times \\max(K_j - S_k, 0)$$\nThe Max Pain strike ($S^*$) is the exact price that minimizes total payouts to option holders:\n$$S^* = \\arg\\min_{S_k} \\text{Total Payout}(S_k)$$",
+        "content_fa": "برای قیمت‌های مختلف سهم ($S_k$)، مجموع ارزش پرداختی به دارندگان آپشن برابر است با:\n$$\\text{Total Payout}(S_k) = \\sum OI_{call, i} \\max(S_k - K_i, 0) + \\sum OI_{put, j} \\max(K_j - S_k, 0)$$\nنقطه مکس پین قیمتی است که این پرداخت نقدی را به حداقل می‌رساند: $\\arg\\min \\text{Total Payout}$."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3598,
     "term_en": "Maximum Drawdown (MDD)",
-    "term_fa": "Maximum Drawdown (MDD)",
+    "term_fa": "حداکثر افت سرمایه (Maximum Drawdown - MDD)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Maximum drawdown (MDD) is a foundational portfolio risk metric measuring the largest observed peak-to-trough percentage decline in the cumulative value of an investment portfolio before a new subsequent peak is attained.",
+    "definition_fa": "حداکثر افت سرمایه (Maximum Drawdown / MDD) شاخصی بنیادین در مدیریت ریسک پرتفوی و ارزیابی صندوق‌هاست که بزرگترین درصد ریزش ارزش سبد دارایی از بالاترین نقطه اوج (قله) تا عمیق‌ترین نقطه افت (دره) را قبل از ثبت قله جدید اندازه‌گیری می‌نماید.",
+    "takeaways_en": [
+      "Evaluates downside tail risk and capital preservation independent of return frequency.",
+      "Key denominator input for risk-adjusted performance ratios including the Calmar Ratio and Sterling Ratio.",
+      "Reflects the psychological pain threshold and capital vulnerability an investor would have endured historically."
+    ],
+    "takeaways_fa": [
+      "ریسک دم نزولی و میزان محافظت از سرمایه را بدون وابستگی به فرض توزیع نرمال ارزیابی می‌کند.",
+      "مخرج اصلی در محاسبه نسبت‌های عملکردی کالمار (Calmar) و استرلینگ است.",
+      "شدیدترین آزمون روانی و استرس مالی را که سرمایه‌گذار در گذشته تجربه کرده است منعکس می‌سازد."
+    ],
     "url": "https://www.investopedia.com/terms/m/maximum-drawdown-mdd.asp",
     "slug": "maximum-drawdown-mdd",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Maximum drawdown captures the worst-case historical peak-to-trough drop in portfolio value, measuring downside vulnerability.",
+    "bottom_line_fa": "حداکثر افت سرمایه شدیدترین زیان ثبت‌شده یک سبد دارایی از قله تا کف را نشان داده و معیار کلیدی سنجش ریسک سقوط است.",
+    "sections": [
+      {
+        "title_en": "Mathematical Formulation and Calmar Ratio",
+        "title_fa": "فرمول ریاضی MDD و نسبت بازده به حداکثر افت (Calmar Ratio)",
+        "content_en": "For portfolio cumulative asset trajectory $V(t)$ over time window $[0, T]$:\n$$MDD(T) = \\max_{\\tau \\in [0, T]} \\left( \\frac{\\max_{t \\in [0, \\tau]} V(t) - V(\\tau)}{\\max_{t \\in [0, \\tau]} V(t)} \\right) \\times 100\\%$$\nThe Calmar Ratio measures annualized compounded return ($CAGR$) relative to maximum drawdown:\n$$\\text{Calmar Ratio} = \\frac{CAGR}{MDD}$$",
+        "content_fa": "برای ارزش پرتفوی $V(t)$ در طول زمان، حداکثر افت سرمایه عبارت است از:\n$$MDD = \\max \\left( \\frac{\\text{Peak} - \\text{Trough}}{\\text{Peak}} \\right) \\times 100\\%$$\nنسبت کالمار نیز نسبت بازده سالانه مرکب به این حداکثر افت را می‌سنجد: $\\text{Calmar} = \\frac{CAGR}{MDD}$."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3599,
     "term_en": "Maximum Foreseeable Loss (MFL)",
-    "term_fa": "Maximum Foreseeable زیان (MFL) (Maximum Foreseeable Loss (MFL))",
+    "term_fa": "حداکثر زیان قابل پیش‌بینی (Maximum Foreseeable Loss - MFL)",
     "letter": "M",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Maximum Foreseeable Loss (MFL) is an insurance underwriting and commercial property risk assessment metric representing the worst-case estimated monetary property damage that could occur assuming that all active fire protection systems (sprinklers, water supplies) completely fail.",
+    "definition_fa": "حداکثر زیان قابل پیش‌بینی (Maximum Foreseeable Loss - MFL) یک معیار سخت‌گیرانه در بیمه اموال تجاری و مدیریت ریسک فاجعه‌بار است که برآورد می‌کند در صورت وقوع حادثه (مانند آتش‌سوزی مهیب) و از کار افتادن همزمان کلیه سیستم‌های اطفای حریق خودکار و تأخیر آتش‌نشانی، چه میزان خسارت مالی حداکثری به بار خواهد آمد.",
+    "takeaways_en": [
+      "Assumes the total failure of municipal emergency services and automated fire suppression systems.",
+      "Higher than Probable Maximum Loss (PML), which assumes mitigation safeguards function partially.",
+      "Used to dictate catastrophic property insurance policy capacity limits and reinsurance retention layers."
+    ],
+    "takeaways_fa": [
+      "فرض را بر از کار افتادگی کامل تمامی سیستم‌های ایمنی و عدم حضور به موقع نیروهای امدادی می‌گذارد.",
+      "بسیار محافظه‌کارانه‌تر از حداکثر زیان محتمل (PML) است که عملکرد نسبی تجهیزات ایمنی را مفروض می‌داند.",
+      "برای تعیین سقف پذیرش ریسک در بیمه‌نامه‌های بزرگ صنعتی و لایه‌های بیمه اتکایی کاربرد دارد."
+    ],
     "url": "https://www.investopedia.com/terms/m/maximum-foreseeable-loss.asp",
     "slug": "maximum-foreseeable-loss",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "MFL estimates the catastrophic worst-case destruction of an insured property assuming all fire safeguards fail entirely.",
+    "bottom_line_fa": "معیار MFL شدیدترین رقم خسارت قابل تصور به یک واحد صنعتی را بدون در نظر گرفتن سیستم‌های ایمنی برآورد می‌کند.",
+    "sections": [
+      {
+        "title_en": "Underwriting Risk Layers and Retention Formula",
+        "title_fa": "لایه‌های مدیریت ریسک و بیمه اتکایی بر مبنای MFL",
+        "content_en": "Primary commercial property insurers partition underwriting risk into Retained Exposure ($R$) and Excess of Loss Reinsurance ($XOL$):\n$$\\text{Policy Limit} = MFL = R + \\sum_{k=1}^m XOL_k$$\nPremium pricing incorporates the tail probability distribution of total destruction: $\\int_{PML}^{MFL} x \\cdot f(x) dx$.",
+        "content_fa": "بیمه‌گر اولیه ریسک را بر اساس MFL بین نگهداری داخلی ($R$) و بیمه اتکایی مازاد خسارت تقسیم می‌کند:\n$$\\text{Policy Limit} = MFL = R + \\sum XOL_k$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3600,
     "term_en": "Maximum Loan Amount",
-    "term_fa": "Maximum وام Amount (Maximum Loan Amount)",
+    "term_fa": "سقف مجاز تسهیلات (Maximum Loan Amount)",
     "letter": "M",
     "category": "بانکداری، وام و اعتبارات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The maximum loan amount is the upper monetary limit a financial lender will disburse to a borrower, determined through rigorous credit underwriting evaluating the borrower's debt-to-income ratio (DTI), loan-to-value ratio (LTV), credit score, and collateral appraisal.",
+    "definition_fa": "سقف مجاز تسهیلات (Maximum Loan Amount) بالاترین مبلغی از وام است که یک مؤسسه اعتباری بر اساس بررسی‌های اعتبار‌سنجی، شامل نسبت بدهی به درآمد (DTI)، نسبت تسهیلات به ارزش وثیقه (LTV)، رتبه اعتباری و ارزیابی کارشناسی ملک به متقاضی اعطا می‌نماید.",
+    "takeaways_en": [
+      "Constrained by both property collateral value and borrower cash flow servicing capacity.",
+      "Commercial real estate limits are anchored to the Debt Service Coverage Ratio (DSCR $\\ge 1.25x$).",
+      "Residential mortgages in the US are benchmarked against Conforming Loan Limits established by the FHFA."
+    ],
+    "takeaways_fa": [
+      "همزمان با دو سقف محدود می‌شود: ارزش کارشناسی وثیقه و توان درآمدی وام‌گیرنده برای بازپرداخت.",
+      "در املاک تجاری بر اساس نسبت پوشش خدمات بدهی (DSCR حداقل ۱٫۲۵ برابر) محاسبه می‌شود.",
+      "در وام‌های مسکن خرد، سقف‌های ملی اعلامی FHFA حداکثر میزان وام را تعیین می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/m/maximum_loan_amount.asp",
     "slug": "maximum_loan_amount",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The maximum loan amount defines the lending cap established by underwriting debt service capacity and collateral value constraints.",
+    "bottom_line_fa": "سقف تسهیلات بالاترین مرز وام‌دهی بانک است که از تلاقی ظرفیت درآمدی مشتری و ارزش دارایی تضمینی حاصل می‌شود.",
+    "sections": [
+      {
+        "title_en": "Underwriting Constrained Optimization Formula",
+        "title_fa": "فرمول بهینه‌سازی تعیین سقف تسهیلات بر مبنای LTV و DSCR",
+        "content_en": "In commercial real estate underwriting, the maximum loan amount ($L_{max}$) is the minimum of collateral value constraints and cash flow capacity constraints:\n$$L_{max} = \\min\\left( LTV_{max} \\times V_{appraised}, \\; \\frac{NOI}{DSCR_{min} \\times \\text{Mortgage Constant}} \\right)$$\nwhere Mortgage Constant is the annual debt service per dollar of loan.",
+        "content_fa": "در اعتبارسنجی املاک تجاری، سقف مجاز وام برابر با حداقل دو معیار ارزش وثیقه و جریان نقدی است:\n$$L_{max} = \\min\\left( LTV_{max} \\times V_{appraised}, \\; \\frac{NOI}{DSCR_{min} \\times \\text{Mortgage Constant}} \\right)$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بانکداری، وام و اعتبارات",
     "category_en": "Banking, Lending & Credit"
   },
   {
     "id": 3601,
     "term_en": "McClellan Oscillator",
-    "term_fa": "McClellan Oscillator",
+    "term_fa": "اسیلاتور مک‌کللن (McClellan Oscillator)",
     "letter": "M",
     "category": "تحلیل تکنیکال و پرایس اکشن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The McClellan Oscillator is a widely tracked market breadth technical analysis indicator that measures the acceleration or deceleration of market net advances (advancing stocks minus declining stocks) using the difference between two exponential moving averages.",
+    "definition_fa": "اسیلاتور مک‌کللن (McClellan Oscillator) یک اندیکاتور پیشرفته وسعت بازار در تحلیل تکنیکال است که با محاسبه تفاوت میان دو میانگین متحرک نمایی (۱۹ روزه و ۳۹ روزه) از تفاضل تعداد نمادهای مثبت و منفی، شتاب ورود یا خروج نقدینگی در کل بازار را ارزیابی می‌کند.",
+    "takeaways_en": [
+      "Developed by Sherman and Marian McClellan in 1969.",
+      "Oscillates around a zero centerline: positive values confirm broad market health, negative readings signal market weakness.",
+      "Extreme readings (e.g., above +100 or below -100) identify overbought or oversold breadth conditions.",
+      "Forms the mathematical basis for the McClellan Summation Index."
+    ],
+    "takeaways_fa": [
+      "در سال ۱۹۶۹ توسط شرمن و ماریان مک‌کللن ابداع شد.",
+      "حول خط صفر نوسان می‌کند؛ مقادیر مثبت نشانه تسلط نمادهای صعودی و مقادیر منفی نشانه ضعف عمومی بازار است.",
+      "اعداد بالاتر از ۱۰۰+ یا پایین‌تر از ۱۰۰- نشان‌دهنده شرایط اشباع خرید یا اشباع فروش فراگیر در بورس است.",
+      "مبنای محاسبه شاخص تجمیعی مک‌کللن (Summation Index) به شمار می‌رود."
+    ],
     "url": "https://www.investopedia.com/terms/m/mcclellanoscillator.asp",
     "slug": "mcclellanoscillator",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The McClellan Oscillator measures the momentum of advancing versus declining stocks to assess market breadth and strength.",
+    "bottom_line_fa": "اسیلاتور مک‌کللن با بررسی تغییرات شتاب نمادهای مثبت و منفی، سلامت و استحکام درونی روند کل بازار را آشکار می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Mathematical Formulation of the McClellan Oscillator",
+        "title_fa": "فرمول محاسباتی اسیلاتور مک‌کللن و شاخص تجمیعی",
+        "content_en": "Let Net Advances ($NA_t$) be the daily advancing issues ($Adv$) minus declining issues ($Decl$):\n$$NA_t = Adv_t - Decl_t$$\nThe McClellan Oscillator ($MO_t$) is the difference between the 19-day EMA (10% smoothing) and 39-day EMA (5% smoothing):\n$$MO_t = EMA_{19}(NA_t) - EMA_{39}(NA_t)$$\nThe cumulative McClellan Summation Index ($MSI$) integrates the oscillator over time:\n$$MSI_t = MSI_{t-1} + MO_t$$",
+        "content_fa": "تفاضل نمادهای مثبت و منفی برابر است با: $NA_t = Adv_t - Decl_t$.\nاسیلاتور مک‌کللن از تفاضل میانگین متحرک نمایی ۱۹ روزه و ۳۹ روزه به دست می‌آید:\n$$MO_t = EMA_{19}(NA_t) - EMA_{39}(NA_t)$$\nشاخص تجمیعی مک‌کللن ($MSI$) نیز از جمع تجمعی مقادیر روزانه اسیلاتور حاصل می‌شود:\n$$MSI_t = MSI_{t-1} + MO_t$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "تحلیل تکنیکال و پرایس اکشن",
     "category_en": "Technical Analysis & Charting"
   },
@@ -323340,400 +323644,703 @@
   {
     "id": 3827,
     "term_en": "Negative Interest Rate",
-    "term_fa": "Negative بهره نرخ (Negative Interest Rate)",
+    "term_fa": "نرخ بهره منفی (Negative Interest Rate)",
     "letter": "N",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A negative interest rate is an unconventional macroeconomic and monetary condition where borrowers are credited interest and commercial depositors are charged a fee to store excess reserves with financial institutions or the central bank, flipping traditional debt mechanics.",
+    "definition_fa": "نرخ بهره منفی (Negative Interest Rate) شرایطی نامتعارف در اقتصاد کلان است که در آن نرخ بهره اسمی کمتر از صفر تعیین می‌شود؛ یعنی وام‌گیرندگان به جای پرداخت بهره پاداش می‌گیرند و سپرده‌گذاران به جای دریافت سود باید کارمزدی برای نگهداری پول خود نزد بانک بپردازند.",
+    "takeaways_en": [
+      "Introduced by central banks (ECB, BOJ, Swiss National Bank) to stimulate economic activity and penalize commercial bank reserve hoarding.",
+      "Designed to encourage commercial banks to lend capital aggressively rather than park cash at the central bank.",
+      "Tends to weaken the domestic currency exchange rate by encouraging capital outflows.",
+      "Subject to the physical zero lower bound (ZLB), where depositors might hoard physical cash."
+    ],
+    "takeaways_fa": [
+      "توسط بانک‌های مرکزی (نظیر ژاپن و اروپا) برای تحریک تقاضا و جریمه انباشت پول در بانک‌ها اعمال شد.",
+      "بانک‌های تجاری را تشویق می‌کند تا به جای پارک پول در بانک مرکزی، تسهیلات ارزان به بخش خصوصی بدهند.",
+      "با ترغیب خروج سرمایه، موجب تضعیف ارزش پول ملی در برابر ارزهای خارجی می‌شود.",
+      "با محدودیت کف صفر اسمی (ZLB) مواجه است زیرا ممکن است مردم اسکناس فیزیکی را در خانه نگه دارند."
+    ],
     "url": "https://www.investopedia.com/terms/n/negative-interest-rate.asp",
     "slug": "negative-interest-rate",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Negative interest rates reverse traditional banking by charging depositors to hold cash, aiming to stimulate economic lending and combat deflation.",
+    "bottom_line_fa": "نرخ بهره منفی با جریمه کردن انباشت پول نقد، سیستم بانکی را به سمت تزریق نقدینگی و خروج از تله رکود سوق می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Real Interest Rate and Fisher Equation",
+        "title_fa": "نرخ بهره حقیقی و معادله فیشر در نرخ‌های منفی",
+        "content_en": "Under the Fisher Equation, the real interest rate ($r$) is the nominal rate ($i$) minus expected inflation ($\\pi^e$):\n$$r = i - \\pi^e$$\nWhen the nominal policy rate is negative ($i < 0$), even moderate inflation rates produce deeply negative real interest rates, creating severe penalties for holding cash balances.",
+        "content_fa": "طبق معادله فیشر، با منفی شدن نرخ اسمی ($i < 0$)، نرخ بهره حقیقی به شدت منفی شده و انگیزه خرج کردن پول به شدت افزایش می‌یابد:\n$$r = i - \\pi^e$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 3828,
     "term_en": "Negative Interest Rate Environment",
-    "term_fa": "Negative بهره نرخ Environment (Negative Interest Rate Environment)",
+    "term_fa": "محیط نرخ بهره منفی (Negative Interest Rate Environment)",
     "letter": "N",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A negative interest rate environment is a macroeconomic climate characterized by sovereign bond yields trading below zero across multiple yield curve maturities, compressed commercial bank net interest margins, and depressed discount rates across financial markets.",
+    "definition_fa": "محیط نرخ بهره منفی (Negative Interest Rate Environment) وضعیتی در فضای اقتصاد کلان است که در آن بازده اوراق قرضه دولتی در بخش عمده‌ای از منحنی بازدهی زیر صفر معامله می‌شود، حاشیه سود بانک‌های تجاری فشرده شده و نرخ‌های تنزیل ارزش‌گذاری دارایی‌ها به حداقل می‌رسد.",
+    "takeaways_en": [
+      "Prevailing in the Eurozone and Japan throughout the 2010s to combat systemic disinflation and demographic aging.",
+      "Compresses commercial bank net interest margins (NIM), straining banking sector equity valuations.",
+      "Forces institutional pension funds and insurers to chase yield in high-risk equities, real estate, and private credit."
+    ],
+    "takeaways_fa": [
+      "در دهه ۲۰۱۰ در حوزه یورو و ژاپن برای مقابله با رکود مزمن و پیری جمعیت حاکم بود.",
+      "حاشیه سود خالص بهره‌ای (NIM) بانک‌ها را به شدت فشرده و سودآوری صنعت بانکداری را کاهش می‌دهد.",
+      "صندوق‌های بازنشستگی را ناچار می‌کند برای پوشش تعهدات خود به سمت دارایی‌های پرریسک‌تر حرکت کنند."
+    ],
     "url": "https://www.investopedia.com/terms/n/negative-interest-rate-environment.asp",
     "slug": "negative-interest-rate-environment",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A negative interest rate environment distorts asset pricing and pressures banking margins while forcing investors into riskier assets.",
+    "bottom_line_fa": "محیط نرخ منفی با برهم زدن فرضیات سنتی بازدهی، سرمایه‌گذاران را به پذیرش ریسک‌های بالاتر وادار می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Bank Net Interest Margin Compression Formula",
+        "title_fa": "فرمول فشردگی حاشیه سود خالص بهره‌ای بانک‌ها در محیط منفی",
+        "content_en": "A commercial bank's Net Interest Margin ($NIM$) is defined as:\n$$NIM = \\frac{\\text{Interest Income} - \\text{Interest Expense}}{\\text{Average Earning Assets}}$$\nIn negative environments, lending yields fall toward zero while retail deposit rates cannot easily breach zero ($i_{deposit} \\approx 0$), causing $NIM \\to 0$.",
+        "content_fa": "در محیط منفی، نرخ تسهیلات به صفر نزدیک می‌شود اما بانک‌ها نمی‌توانند نرخ سپرده‌های خرد را به زیر صفر برسانند؛ در نتیجه حاشیه سود بانک به شدت افت می‌کند:\n$$NIM = \\frac{\\text{درآمد بهره} - \\text{هزینه بهره}}{\\text{کل دارایی‌های بازده‌زا}}$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 3829,
     "term_en": "Negative Interest Rate Policy (NIRP)",
-    "term_fa": "Negative بهره نرخ سیاست / بیمه‌نامه (NIRP) (Negative Interest Rate Policy (NIRP))",
+    "term_fa": "سیاست نرخ بهره منفی بانک‌های مرکزی (NIRP)",
     "letter": "N",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Negative Interest Rate Policy (NIRP) is an extraordinary, non-standard monetary policy tool deployed by central banks where the official deposit rate applied to commercial banks' excess reserves is set below zero percent to force credit creation.",
+    "definition_fa": "سیاست نرخ بهره منفی (NIRP) یک ابزار نامتعارف سیاست پولی بانک‌های مرکزی است که در آن نرخ بهره نگهداری ذخایر مازاد بانک‌های تجاری زیر صفر تعیین می‌شود تا بانک‌ها مجبور شوند به جای انباشت ذخایر، آن را به شکل تسهیلات وارد چرخه واقعی اقتصاد نمایند.",
+    "takeaways_en": [
+      "Adopted by the European Central Bank (2014-2022), Bank of Japan (2016-2024), Swiss National Bank, and Sveriges Riksbank.",
+      "Employs tiered reserve systems to exempt a baseline portion of bank reserves from negative rates, shielding bank profitability.",
+      "Phased out globally as central banks hiked rates to tackle post-pandemic global inflation surges."
+    ],
+    "takeaways_fa": [
+      "توسط بانک مرکزی اروپا (۲۰۱۴ تا ۲۰۲۲) و بانک مرکزی ژاپن (۲۰۱۶ تا ۲۰۲۴) به اجرا درآمد.",
+      "از سیستم طبقه‌بندی ذخایر (Tiering) استفاده می‌کرد تا بخشی از ذخایر پایه بانک‌ها از جریمه منفی معاف شوند.",
+      "با آغاز موج تورمی پس از همه‌گیری کرونا در سراسر جهان به کار خود پایان داد."
+    ],
     "url": "https://www.investopedia.com/terms/n/negative-interest-rate-policy-nirp.asp",
     "slug": "negative-interest-rate-policy-nirp",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NIRP penalizes excess bank reserves to stimulate lending, representing the frontier of aggressive unconventional monetary easing.",
+    "bottom_line_fa": "سیاست NIRP تهاجمی‌ترین ابزار پولی برای شکستن بن‌بست رکودی و به گردش انداختن نقدینگی راکد در نظام بانکی بود.",
+    "sections": [
+      {
+        "title_en": "Tiered Deposit Rate Structure in NIRP",
+        "title_fa": "ساختار لایه‌بندی نرخ‌های بهره منفی در بانک مرکزی",
+        "content_en": "Under a two-tier reserve system, total commercial bank reserves ($R$) at the central bank are partitioned:\n$$\\text{Total Interest Paid} = \\begin{cases} R \\times 0.0\\%, & \\text{if } R \\le \\kappa \\times \\text{Required Reserves} \\\\ (\\kappa \\cdot RR \\times 0.0\\%) + (R - \\kappa \\cdot RR) \\times r_{neg}, & \\text{if } R > \\kappa \\times RR \\end{cases}$$\nwhere $r_{neg} < 0$ is the penal NIRP rate (e.g., $-0.50\\%$) and $\\kappa$ is the multiplier threshold.",
+        "content_fa": "در سیستم دولایه، ذخایر بانک‌ها تا سقفی معین معاف از جریمه بوده و مازاد بر آن مشمول نرخ منفی جریمه‌ای $r_{neg} < 0$ می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 3830,
     "term_en": "Negative Pledge Clause",
-    "term_fa": "Negative رهن دارایی Clause (Negative Pledge Clause)",
+    "term_fa": "شرط منع ایجاد تعهد و رهن ثانویه (Negative Pledge Clause)",
     "letter": "N",
     "category": "مالیات، حقوق مالی و مقررات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A negative pledge clause is a standard protective covenant included in corporate bonds, syndicated loans, and credit agreements that prohibits the borrower from pledging, encumbering, or mortgaging its assets to secure other lenders without granting equal security to existing creditors.",
+    "definition_fa": "شرط منع رهن ثانویه (Negative Pledge Clause) شرطی حفاظتی در قراردادهای تسهیلات بانکی و اوراق قرضه شرکتی است که وام‌گیرنده را متعهد می‌سازد هیچ‌یک از دارایی‌های خود را به عنوان وثیقه در رهن بستانکاران دیگر قرار ندهد، مگر اینکه وثیقه‌ای هم‌تراز و با همان اولویت به طلبکاران فعلی اعطا نماید.",
+    "takeaways_en": [
+      "Protects unsecured bondholders against 'structural subordination' from future secured borrowing.",
+      "Maintains the borrower's unencumbered asset base for pari passu recovery in insolvency scenarios.",
+      "Breaching the clause constitutes an immediate event of default, triggering debt acceleration."
+    ],
+    "takeaways_fa": [
+      "از طلبکاران فاقد وثیقه در برابر تضعیف رتبه مطالباتشان در اثر استقراض‌های باوثیقه بعدی محافظت می‌کند.",
+      "دارایی‌های آزاد شرکت را برای تقسیم متساوی و عادلانه (Pari Passu) در زمان ورشکستگی حفظ می‌نماید.",
+      "نقض این شرط به معنای قصور قراردادی بوده و طلبکاران می‌توانند فوراً کل وام را حال نمایند."
+    ],
     "url": "https://www.investopedia.com/terms/n/negativepledgeclause.asp",
     "slug": "negativepledgeclause",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A negative pledge clause prevents borrowers from encumbering assets to third parties, preserving equal creditor priority.",
+    "bottom_line_fa": "شرط منع رهن ثانویه مانع از ترهین دارایی‌های شرکت برای وام‌های جدید شده و حقوق بستانکاران قبلی را محفوظ نگه می‌دارد.",
+    "sections": [
+      {
+        "title_en": "Creditor Recovery Rate and Subordination Modeling",
+        "title_fa": "مدل‌سازی نرخ بازیافت مطالبات در حضور شرط منفی رهن",
+        "content_en": "In corporate liquidation with asset value $A$, unsecured creditor recovery ($R_{unsec}$) without a negative pledge drops severely if senior secured debt ($D_{sec}$) is layered ahead:\n$$R_{unsec} = \\frac{\\max(0, A - D_{sec})}{D_{unsec}}$$\nWith an enforced negative pledge clause ($D_{sec} = 0$), all debt recovers pari passu:\n$$R_{pari\\ passu} = \\min\\left( 1.0, \\; \\frac{A}{D_{total}} \\right) \\gg R_{unsec}$$",
+        "content_fa": "با وجود شرط منع رهن، بدهی ممتاز جدیدی جلوتر از طلبکاران قرار نمی‌گیرد و بازیافت مطالبات در انحلال به صورت متساوی (Pari Passu) تسهیم می‌گردد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مالیات، حقوق مالی و مقررات",
     "category_en": "Taxation, Financial Law & Regulation"
   },
   {
     "id": 3831,
     "term_en": "Negative Return",
-    "term_fa": "Negative بازده (Negative Return)",
+    "term_fa": "بازده منفی در سرمایه‌گذاری (Negative Return)",
     "letter": "N",
     "category": "ارزش‌گذاری و تحلیل بنیادی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A negative return is an investment outcome where an asset, security, or portfolio experiences a net financial loss over a given holding period, occurring when capital depreciation and transaction costs exceed all cash income, dividends, or interest received.",
+    "definition_fa": "بازده منفی (Negative Return) وضعیتی در سرمایه‌گذاری است که در آن مجموع ارزش نهایی دارایی به علاوه سودهای تقسیمی دریافتی، از ارزش اولیه سرمایه‌گذاری کمتر بوده و سرمایه‌گذار در دوره نگهداری دچار زیان خالص مالی می‌گردد.",
+    "takeaways_en": [
+      "Expressed as a negative percentage: $\\text{Return} < 0\\%$.",
+      "Can occur nominally (losing dollar value) or in real purchasing-power terms (nominal return below inflation).",
+      "Requires higher subsequent percentage gains to fully break even (e.g., a -50% loss requires a +100% gain to recover)."
+    ],
+    "takeaways_fa": [
+      "به صورت درصد منفی بیان می‌شود: $\\text{Return} < 0\\%$.",
+      "می‌تواند اسمی (کاهش ارزش ریالی) یا حقیقی (کاهش قدرت خرید در اثر تورم) باشد.",
+      "جبران آن نیازمند درصد سودهای بسیار بزرگتری در آینده است (مثلاً جبران افت ۵۰ درصدی نیازمند سود ۱۰۰ درصدی است)."
+    ],
     "url": "https://www.investopedia.com/terms/n/negative-return.asp",
     "slug": "negative-return",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A negative return represents net capital loss, demanding disproportionately higher future returns to recover invested principal.",
+    "bottom_line_fa": "بازده منفی نماد زیان خالص سرمایه‌گذاری است که جبران آن به بازده‌های صعودی به مراتب بزرگتری نیاز دارد.",
+    "sections": [
+      {
+        "title_en": "The Asymmetry of Loss and Recovery Formula",
+        "title_fa": "فرمول عدم تقارن زیان و بازده لازم برای بازگشت به نقطه سر‌به‌سر",
+        "content_en": "If an investment suffers a percentage loss of $L \\in (0, 1)$, the necessary subsequent recovery gain ($G$) required to break even is:\n$$G = \\frac{L}{1 - L}$$\nFor instance:\n- $L = 20\\% \\implies G = \\frac{0.20}{0.80} = 25.0\\%$\n- $L = 50\\% \\implies G = \\frac{0.50}{0.50} = 100.0\\%$\n- $L = 80\\% \\implies G = \\frac{0.80}{0.20} = 400.0\\%$",
+        "content_fa": "در صورتی که سرمایه‌گذاری دچار افت $L$ شود، درصد سود لازم برای بازگشت به سرمایه اولیه برابر است با:\n$$G = \\frac{L}{1 - L}$$\nاین عدم تقارن ریاضی ضرورت اساسی مدیریت ریسک و حفظ سرمایه را نشان می‌دهد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "ارزش‌گذاری و تحلیل بنیادی",
     "category_en": "Valuation & Fundamental Analysis"
   },
   {
     "id": 3832,
     "term_en": "Negative Volume Index (NVI)",
-    "term_fa": "Negative Volume شاخص (NVI) (Negative Volume Index (NVI))",
+    "term_fa": "شاخص حجم منفی (Negative Volume Index - NVI)",
     "letter": "N",
     "category": "تحلیل تکنیکال و پرایس اکشن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Negative Volume Index (NVI) is a cumulative technical analysis indicator that tracks price movements on days when trading volume decreases from the previous period, premised on the theory that 'smart money' institutional investors take positions on low-volume trading days.",
+    "definition_fa": "شاخص حجم منفی (NVI) یک اندیکاتور انباشته در تحلیل تکنیکال است که تغییرات قیمت را صرفاً در روزهایی که حجم معاملات نسبت به روز قبل کاهش یافته است محاسبه و ثبت می‌کند؛ بر پایه این نظریه که نهنگ‌ها و سرمایه‌گذاران نهادی باهوش در روزهای کم‌حجم و بی‌سر‌و‌صدا اقدام به انباشت سهم می‌کنند.",
+    "takeaways_en": [
+      "Developed by Paul Dysart in the 1930s and refined by Norman Fosback.",
+      "NVI only changes value when today's volume is strictly less than yesterday's volume ($V_t < V_{t-1}$).",
+      "According to Fosback's research, when NVI is above its 255-day moving average, a bull market exists with 95% historical probability."
+    ],
+    "takeaways_fa": [
+      "توسط پل دیسارت در دهه ۱۹۳۰ ابداع و توسط نورمن فوسبک ارتقا یافت.",
+      "مقدار آن صرفاً در روزهایی تغییر می‌کند که حجم معاملات از روز قبل کمتر باشد ($V_t < V_{t-1}$).",
+      "طبق مطالعات فوسبک، هرگاه NVI بالاتر از میانگین متحرک ۲۵۵ روزه خود قرار داشته باشد، با احتمال ۹۵٪ بازار صعودی است."
+    ],
     "url": "https://www.investopedia.com/terms/n/nvi.asp",
     "slug": "nvi",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NVI tracks price changes on low-volume days to identify where informed institutional 'smart money' is accumulating.",
+    "bottom_line_fa": "شاخص NVI با رصد تغییرات قیمت در روزهای آرام و کم‌حجم، رفتار ورود پول هوشمند نهادی را شناسایی می‌کند.",
+    "sections": [
+      {
+        "title_en": "Mathematical Formula of Negative Volume Index",
+        "title_fa": "فرمول محاسباتی شاخص حجم منفی (NVI)",
+        "content_en": "The current Negative Volume Index ($NVI_t$) is updated conditionally:\n$$NVI_t = \\begin{cases} NVI_{t-1} + \\left( \\frac{P_t - P_{t-1}}{P_{t-1}} \\right) \\times NVI_{t-1}, & \\text{if } V_t < V_{t-1} \\\\ NVI_{t-1}, & \\text{if } V_t \\ge V_{t-1} \\end{cases}$$\nA bull market signal is confirmed when $NVI_t > SMA_{255}(NVI_t)$.",
+        "content_fa": "مقدار NVI در صورتی به‌روزرسانی می‌شود که حجم معاملات روز جاری کمتر از دیروز باشد:\n$$NVI_t = NVI_{t-1} + \\left( \\frac{P_t - P_{t-1}}{P_{t-1}} \\right) \\times NVI_{t-1} \\quad (\\text{اگر } V_t < V_{t-1})$$\nعبور NVI از میانگین متحرک ۲۵۵ روزه سیگنال صعودی معتبر تلقی می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "تحلیل تکنیکال و پرایس اکشن",
     "category_en": "Technical Analysis & Charting"
   },
   {
     "id": 3833,
     "term_en": "Negotiable",
-    "term_fa": "Negotiable",
+    "term_fa": "قابل معامله و انتقال در اسناد تجاری (Negotiable)",
     "letter": "N",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "In legal and commercial finance, 'negotiable' describes a financial instrument, contract, or document of title whose legal ownership and entitlement to receive unconditional payment can be freely transferred from one party to another by delivery or endorsement.",
+    "definition_fa": "قابل معامله و انتقال (Negotiable) در حقوق بازرگانی و مالی، ویژگی سندی تجاری، تعهدنامه یا ابزار مالی است که مالکیت قانونی و حق مطالبه بلاشرط وجه آن می‌تواند به راحتی و با تحویل فیزیکی یا ظهرنویسی (امضا) از فردی به فرد دیگر بدون نیاز به رضایت صادرکننده اولیه منتقل شود.",
+    "takeaways_en": [
+      "Applies to checks, drafts, promissory notes, certificates of deposit, and bills of lading.",
+      "Governed in the US under Article 3 of the Uniform Commercial Code (UCC).",
+      "Grants a bona fide 'Holder in Due Course' (HIDC) superior legal rights free from personal contract defenses."
+    ],
+    "takeaways_fa": [
+      "بر اسنادی چون چک، سفته، برات، بارنامه و گواهی سپرده حاکم است.",
+      "در قوانین تجاری بین‌المللی و ماده ۳ قانون یکپارچه تجارت اداره می‌شود.",
+      "به دارنده با حسن نیت (HIDC) حق مطالبه تام و مستقل از اختلافات معاملاتی صادرکننده اولیه را اعطا می‌نماید."
+    ],
     "url": "https://www.investopedia.com/terms/n/negotiable.asp",
     "slug": "negotiable",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A negotiable instrument can be freely transferred by endorsement or delivery, guaranteeing unconditional payment rights.",
+    "bottom_line_fa": "قابلیت انتقال اسناد تجاری اساس گردش سریع اعتبارات و مبادلات بازرگانی بدون اصطکاک حقوقی است.",
+    "sections": [
+      {
+        "title_en": "Statutory Requirements for Negotiability (UCC § 3-104)",
+        "title_fa": "شرایط قانونی احراز قابلیت معامله سند تجاری",
+        "content_en": "To be legally negotiable, an instrument must fulfill four mandatory criteria:\n1. Be in writing and signed by maker or drawer.\n2. Contain an unconditional promise or order to pay a fixed amount of money:\n$$\\text{Payment} = M \\quad (\\text{without collateral conditions})$$\n3. Be payable on demand or at a definite time ($t_{due}$).\n4. Be payable to bearer or to order.",
+        "content_fa": "برای احراز قابلیت انتقال، سند باید کتبی و امضاشده باشد، حاوی تعهد پرداخت بلاشرط مبلغ معین باشد، دارای سررسید معین باشد و در وجه حامل یا به حواله‌کرد صادر شده باشد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3834,
     "term_en": "Negotiable Bill of Lading",
-    "term_fa": "Negotiable Bill of Lading",
+    "term_fa": "بارنامه قابل معامله و ظهرنویسی (Negotiable Bill of Lading)",
     "letter": "N",
     "category": "مدیریت عملیات و زنجیره تأمین",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A negotiable bill of lading is a legally binding transportation document of title issued by a freight carrier that conveys ownership of cargo, allowing the goods to be bought, sold, or pledged as financing collateral while in transit through simple endorsement.",
+    "definition_fa": "بارنامه قابل معامله (Negotiable Bill of Lading) یک سند معتبر بازرگانی و سند مالکیت کالا در حقوق دریایی و ترابری بین‌المللی است که توسط شرکت حمل‌ونقل صادر می‌شود و به صاحب کالا اجازه می‌دهد مالکیت محموله در حال حمل را صرفاً با ظهرنویسی و واگذاری سند به خریدار دیگر واگذار کند یا از آن به عنوان وثیقه تسهیلات اعتبارات اسنادی استفاده نماید.",
+    "takeaways_en": [
+      "Conveys ownership rights, meaning delivery of the physical goods is made only to the holder of the original endorsed bill.",
+      "Essential in documentary trade credit under Letters of Credit (L/C) subject to ICC UCP 600 rules.",
+      "Distinct from a non-negotiable 'Straight' bill of lading consigned to a specific named consignee."
+    ],
+    "takeaways_fa": [
+      "سند رسمی مالکیت کالاست؛ یعنی تحویل فیزیکی محموله در مقصد منحصراً با ارائه اصل بارنامه ظهرنویسی‌شده انجام می‌شود.",
+      "ابزار اصلی تسویه مالی در اعتبارات اسنادی (LC) تحت ضوابط اتاق بازرگانی بین‌المللی (UCP 600) است.",
+      "در نقطه مقابل بارنامه غیرقابل معامله (Straight B/L) قرار دارد که کالا را مستقیماً به نام خریدار قید می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/n/negotiable-bill-of-lading.asp",
     "slug": "negotiable-bill-of-lading",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A negotiable bill of lading serves as a title document, allowing maritime cargo to be sold in transit through endorsement.",
+    "bottom_line_fa": "بارنامه قابل انتقال سندی تجاری است که اجازه می‌دهد محمولات روی آب قبل از رسیدن به بندر مقصد خرید و فروش شوند.",
+    "sections": [
+      {
+        "title_en": "Trade Finance Letter of Credit Settlement",
+        "title_fa": "سازوکار تسویه اعتبارات اسنادی با بارنامه قابل معامله",
+        "content_en": "Under UCP 600, payment from the issuing bank ($B_{issuing}$) to negotiating bank ($B_{neg}$) is released upon presentation of complying documents ($D$):\n$$\\text{Release Condition}: D \\equiv \\{ \\text{Negotiable B/L (Full Set)}, \\; \\text{Commercial Invoice}, \\; \\text{Insurance Certificate} \\}$$\nThe buyer uses the endorsed bill to take possession of cargo at destination port.",
+        "content_fa": "بانک گشایش‌کننده با دریافت اسناد کامل شامل بارنامه قابل معامله، فاکتور تجاری و بیمه‌نامه، وجه را به ذینفع پرداخت کرده و بارنامه را برای ترخیص کالا به خریدار واگذار می‌کند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت عملیات و زنجیره تأمین",
     "category_en": "Operations & Supply Chain"
   },
   {
     "id": 3835,
     "term_en": "Negotiable Certificate Of Deposit (NCD)",
-    "term_fa": "Negotiable Certificate Of Deposit (NCD)",
+    "term_fa": "گواهی سپرده قابل معامله در بازار پول (Negotiable CD)",
     "letter": "N",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A Negotiable Certificate of Deposit (NCD), or jumbo CD, is an interest-bearing certificate of deposit issued by a commercial bank with a minimum denomination of $100,000 (usually $1 million+) that can be sold by the depositor in secondary wholesale money markets prior to maturity.",
+    "definition_fa": "گواهی سپرده قابل معامله (Negotiable CD / NCD) سند بدهی بانکی با ارزش اسمی کلان (معمولاً ۱ میلیون دلار به بالا) است که توسط بانک‌های تجاری صادر می‌شود و دارندگان آن می‌توانند در صورت نیاز به نقدینگی، پیش از فرارسیدن موعد سررسید، آن را در بازار ثانویه عمده‌فروشی پول به سایر سرمایه‌گذاران بفروشند.",
+    "takeaways_en": [
+      "Pioneered by Citibank in 1961 to attract corporate treasury funds into the banking system.",
+      "Short-term maturity ranging from a few weeks to one year, carrying fixed or floating coupon rates.",
+      "Highly liquid money market instrument held by institutional money market mutual funds."
+    ],
+    "takeaways_fa": [
+      "در سال ۱۹۶۱ توسط سیتی‌بانک برای جذب منابع نقدینگی مازاد خزانه‌داری شرکت‌ها ابداع شد.",
+      "دارای سررسیدهای کوتاه‌مدت (از چند هفته تا یک سال) با نرخ سود ثابت یا شناور است.",
+      "ابزار بسیار پرطرفدار در صندوق‌های سرمایه‌گذاری بازار پول برای کسب بازدهی مطمئن کوتاه‌مدت است."
+    ],
     "url": "https://www.investopedia.com/terms/n/ncd.asp",
     "slug": "ncd",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NCDs are large-denomination bank CDs that trade in secondary money markets, offering institutions yield with liquidity.",
+    "bottom_line_fa": "گواهی‌های سپرده قابل معامله ابزار کلان بازار پول هستند که ترکیب مطلوبی از سود بانکی و نقدشوندگی ثانویه را ارائه می‌دهند.",
+    "sections": [
+      {
+        "title_en": "Money Market Yield and Secondary Price Formula",
+        "title_fa": "فرمول محاسبه بازده و قیمت ثانویه گواهی سپرده NCD",
+        "content_en": "An NCD issued at par $F$ with coupon rate $c$ and original tenor $D_0$ days matures with total payout:\n$$M = F \\times \\left( 1 + c \\times \\frac{D_0}{360} \\right)$$\nThe secondary market price ($P$) quoted at discount yield $y$ with $D$ remaining days to maturity is:\n$$P = \\frac{M}{1 + y \\times \\frac{D}{360}}$$",
+        "content_fa": "مبلغ نهایی بازپرداخت سررسید با احتساب سود کوپن عبارت است از:\n$$M = F \\times (1 + c \\times \\frac{D_0}{360})$$\nقیمت معامله در بازار ثانویه با نرخ بازده جاری $y$ بر اساس روزهای باقیمانده تا سررسید تنزیل می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
   {
     "id": 3836,
     "term_en": "Negotiable Instrument",
-    "term_fa": "Negotiable Instrument",
+    "term_fa": "سند تجاری قابل انتقال قانونی (Negotiable Instrument)",
     "letter": "N",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A negotiable instrument is a signed, transferable legal document that guarantees the payment of a specific amount of money, either on demand or at a specified future date, to the designated payee or bearer, enforceable under commercial law.",
+    "definition_fa": "سند تجاری قابل انتقال (Negotiable Instrument) نوشته یا سندی قانونی و امضاشده است که متضمن تعهد یا دستور پرداخت بلاشرط مبلغ معینی پول در سررسید معین یا به محض مطالبه در وجه شخصی مشخص یا در وجه حامل است، نظیر چک، برات و سفته.",
+    "takeaways_en": [
+      "Primary categories include Promissory Notes, Bills of Exchange (Drafts), Certificates of Deposit, and Checks.",
+      "Governed by UCC Article 3 in the US and the Bills of Exchange Act in common law nations.",
+      "Affords statutory protections to Holders in Due Course, shielding them from personal underlying transaction defenses."
+    ],
+    "takeaways_fa": [
+      "دسته‌های اصلی آن شامل سفته، برات، چک و گواهی سپرده است.",
+      "در حقوق تجارت از اصول بنیادین نظیر استقلال تعهدات براتی و اصل عدم استناد به ایرادات پیروی می‌کند.",
+      "از دارنده با حسن نیت محافظت کرده و مانع از ابطال سند به دلیل اختلافات معامله پایه می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/n/negotiable-instrument.asp",
     "slug": "negotiable-instrument",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A negotiable instrument serves as a legally enforceable substitute for money, transferring unconditional payment obligations.",
+    "bottom_line_fa": "اسناد تجاری قابل انتقال ابزارهای حقوقی جایگزین پول نقد هستند که انتقال امن تعهدات مالی را در تجارت تضمین می‌کنند.",
+    "sections": [
+      {
+        "title_en": "Holder in Due Course (HIDC) Legal Protection Model",
+        "title_fa": "مدل حقوقی حمایت از دارنده با حسن نیت در اسناد تجاری",
+        "content_en": "A transferee achieves Holder in Due Course ($HIDC$) status if they take the instrument:\n1. For value ($V > 0$)\n2. In good faith\n3. Without notice of dishonor or defense.\nAn $HIDC$ is legally immune to personal defenses (fraud in the inducement, breach of contract):\n$$\\text{Liability Enforceability} = 1.0 \\quad (\\text{subject only to real defenses like forgery})$$",
+        "content_fa": "دارنده سند در صورت پرداخت بهای معامله، داشتن حسن نیت و بی‌اطلاعی از ایرادات سند، دارنده قانونی با حسن نیت شناخته شده و صادرکننده نمی‌تواند با طرح ایرادات قرارداد پایه از پرداخت وجه استنکاف ورزد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3837,
     "term_en": "Negotiable Order of Withdrawal (NOW)",
-    "term_fa": "Negotiable Order of Withdrawal (NOW)",
+    "term_fa": "حساب برداشت دیداری سودده بانکی (NOW Account)",
     "letter": "N",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A Negotiable Order of Withdrawal (NOW) account is an interest-bearing depository account offered by commercial banks and savings institutions that permits depositors to write drafts (checks) against stored funds, historically bridging savings and checking accounts.",
+    "definition_fa": "حساب برداشت دیداری سودده (NOW Account) نوعی حساب بانکی در آمریکاست که به دارنده حساب اجازه می‌دهد همزمان با دریافت سود سپرده، اقدام به صدور چک و برداشت آنی وجه نماید؛ حسابی که پلی میان حساب پس‌انداز و حساب جاری سنتی محسوب می‌شود.",
+    "takeaways_en": [
+      "Created in Massachusetts in 1972 to bypass federal Regulation Q interest rate caps on checking accounts.",
+      "Bank retains the statutory legal right to require 7 days advance written notice before withdrawal, though rarely exercised.",
+      "Available to individuals, non-profits, and government entities, but legally restricted for for-profit corporations."
+    ],
+    "takeaways_fa": [
+      "در سال ۱۹۷۲ برای دور زدن محدودیت‌های قانون نظارتی Q در پرداخت سود به حساب‌های جاری شکل گرفت.",
+      "بانک این حق قانونی را دارد که مهلت ۷ روزه اعلام قبلی پیش از برداشت را الزامی کند، هرچند در عمل اجرا نمی‌شود.",
+      "برای اشخاص حقیقی، خیریه‌ها و نهادهای دولتی مجاز است اما شرکت‌های تجاری انتفاعی مجاز به افتتاح آن نبودند."
+    ],
     "url": "https://www.investopedia.com/terms/n/nowaccount.asp",
     "slug": "nowaccount",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A NOW account combines checking account liquidity with interest earnings, bridging savings and transaction accounts.",
+    "bottom_line_fa": "حساب NOW با تلفیق امکان صدور چک و دریافت سود سپرده، نقدشوندگی حساب جاری را با سود پس‌انداز همراه می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Opportunity Cost and Interest Compounding Formulation",
+        "title_fa": "فرمول بهره مرکب و مقایسه هزینه فرصت حساب NOW",
+        "content_en": "The ending balance in a NOW account compounding daily at nominal rate $r_{now}$ with average balance $\\bar{B}$ over $T$ years:\n$$A_T = \\bar{B} \\times \\left( 1 + \\frac{r_{now}}{365} \\right)^{365 T}$$\nWhile offering liquidity, if $r_{now} < \\pi$ (inflation rate), real purchasing power experiences gradual erosion: $r_{real} = r_{now} - \\pi < 0$.",
+        "content_fa": "مانده حساب با احتساب سود مرکب روزانه محاسبه می‌شود:\n$$A_T = \\bar{B} \\times (1 + \\frac{r_{now}}{365})^{365 T}$$\nبا این حال در شرایطی که نرخ سود کمتر از تورم باشد، قدرت خرید حقیقی این حساب‌ها در بلندمدت کاهش می‌یابد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 3838,
     "term_en": "Negotiated Dealing System (NDS)",
-    "term_fa": "Negotiated Dealing System (NDS)",
+    "term_fa": "سامانه معاملات توافقی اوراق قرضه هند (NDS / NDS-OM)",
     "letter": "N",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Negotiated Dealing System (NDS), upgraded as NDS-OM (Order Matching), is an electronic trading platform operated by the Reserve Bank of India (RBI) facilitating primary issuance and secondary market trading in government securities and money market instruments.",
+    "definition_fa": "سامانه معاملات توافقی (NDS / NDS-OM) سامانه رسمی معاملات الکترونیکی بانک مرکزی هندوستان (RBI) است که بستر عرضه اولیه و معاملات بازار ثانویه اوراق بهادار دولتی، اسناد خزانه و ابزارهای بازار پول هند را فراهم می‌سازد.",
+    "takeaways_en": [
+      "Launched in 2002 to modernize the Indian government debt sovereign market.",
+      "Features anonymous order matching (NDS-OM), transforming market transparency from opaque telephone OTC trading to electronic execution.",
+      "Integrates directly with the Clearing Corporation of India Limited (CCIL) for guaranteed trade settlement."
+    ],
+    "takeaways_fa": [
+      "در سال ۲۰۰۲ برای مدرن‌سازی بازار اوراق قرضه دولتی هندوستان راه‌اندازی شد.",
+      "با سامانه تطبیق ناشناس سفارشات (NDS-OM)، شفافیت بازار را جایگزین معاملات غیرشفاف تلفنی کرد.",
+      "برای تضمین تسویه پایاپای معاملات، به طور مستقیم به شرکت پایاپای هند (CCIL) متصل است."
+    ],
     "url": "https://www.investopedia.com/terms/n/negotiated_dealing_system.asp",
     "slug": "negotiated_dealing_system",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The NDS platform modernizes India's government bond market, ensuring transparent electronic order matching and central clearing.",
+    "bottom_line_fa": "سامانه NDS زیرساخت مرکزی بازار اوراق بدهی هند است که کشف قیمت الکترونیک و تسویه تضمین‌شده را محقق کرده است.",
+    "sections": [
+      {
+        "title_en": "Government Securities Yield and Settlement Mechanics",
+        "title_fa": "سازوکار قیمت‌گذاری و تسویه اوراق دولتی در سامانه NDS",
+        "content_en": "In NDS-OM, government bond yield ($YTM$) is calculated on a semi-annual bond basis for clean price $P_{clean}$ and accrued interest $AI$:\n$$P_{dirty} = P_{clean} + AI = \\sum_{t=1}^{2n} \\frac{C/2}{(1 + YTM/2)^t} + \\frac{F}{(1 + YTM/2)^{2n}}$$\nSettlement proceeds via Delivery-versus-Payment (DvP-III) on a T+1 settlement cycle.",
+        "content_fa": "در سامانه NDS-OM، قیمت ناخالص اوراق دولتی با احتساب سود روزشمار ($AI$) تسویه می‌شود و تسویه به صورت همزمان تحویل در برابر پرداخت (DvP) انجام می‌پذیرد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3839,
     "term_en": "Negotiation",
-    "term_fa": "Negotiation",
+    "term_fa": "مذاکره تجاری و مالی (Negotiation)",
     "letter": "N",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Negotiation is a strategic, communicative dialogue and interactive bargaining process between two or more parties seeking to resolve conflicts, allocate resources, or reach a mutually advantageous agreement on transaction terms.",
+    "definition_fa": "مذاکره (Negotiation) فرآیندی استراتژیک از گفت‌وگو و چانه‌زنی متقابل میان دو یا چند طرف است که با هدف حل اختلافات، تخصیص منابع کمیاب یا دستیابی به توافقی مرضی‌الطرفین پیرامون شروط مالی، حقوقی و تجاری یک قرارداد صورت می‌گیرد.",
+    "takeaways_en": [
+      "Analyzed via Game Theory, Nash Bargaining Solutions, and the BATNA framework (Best Alternative to a Negotiated Agreement).",
+      "Categorized into Distributive (zero-sum, fixed pie) and Integrative (win-win, value-creating) negotiation approaches.",
+      "Crucial across mergers and acquisitions (M&A), venture capital term sheets, debt restructuring, and commercial contracts."
+    ],
+    "takeaways_fa": [
+      "بر مبنای نظریه بازی‌ها، نقطه تعادل نش و چارچوب بتنا (بهترین گزینه جایگزین توافق) تحلیل می‌شود.",
+      "به دو رویکرد توزیعی (برد-باخت با منافع ثابت) و تلفیقی (برد-برد با خلق ارزش مشترک) تفکیک می‌گردد.",
+      "در معاملات ادغام و تملک (M&A)، قراردادهای سرمایه‌گذاری جسورانه و بازسازی دیون نقشی حیاتی دارد."
+    ],
     "url": "https://www.investopedia.com/terms/n/negotiation.asp",
     "slug": "negotiation",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Negotiation is the strategic process of reaching mutually acceptable contract terms, governed by BATNA and bargaining power.",
+    "bottom_line_fa": "مذاکره مهارت چانه‌زنی و توافق بر سر منافع است که موفقیت در آن به قدرت چانه‌زنی و گزینه‌های جایگزین بستگی دارد.",
+    "sections": [
+      {
+        "title_en": "Zone of Possible Agreement (ZOPA) and Nash Bargaining",
+        "title_fa": "ناحیه توافق احتمالی (ZOPA) و فرمول چانه‌زنی نش",
+        "content_en": "A viable deal exists only within the Zone of Possible Agreement ($ZOPA$):\n$$ZOPA = [RP_{buyer}, \\; RP_{seller}] \\iff RP_{buyer} \\ge RP_{seller}$$\nwhere $RP$ is the Reservation Price (determined by BATNA). Under the symmetric Nash Bargaining Solution, the surplus is partitioned to maximize joint utility gains:\n$$\\max_{x} \\left( u_{buyer}(x) - d_{buyer} \\right) \\times \\left( u_{seller}(x) - d_{seller} \\right)$$",
+        "content_fa": "توافق صرفاً در محدوده ZOPA امکان‌پذیر است؛ جایی که حداکثر قیمت خریدار از حداقل قیمت فروشنده بیشتر باشد. راه‌حل چانه‌زنی نش حاشیه سود مشترک را بهینه‌سازی می‌کند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3840,
     "term_en": "Nelson Peltz",
-    "term_fa": "Nelson Peltz",
+    "term_fa": "نلسون پلتز (Nelson Peltz - Trian Partners)",
     "letter": "N",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Nelson Peltz is a prominent American billionaire activist investor and founding partner of Trian Fund Management, renowned for orchestrating aggressive proxy fights and operational overhauls at blue-chip consumer conglomerates.",
+    "definition_fa": "نلسون پلتز (Nelson Peltz) سرمایه‌گذار میلیاردر و کنشگر برجسته آمریکایی و بنیان‌گذار شرکت مدیریت صندوق تریان (Trian Partners) است که به واسطه راه‌اندازی نبردهای وکالتی بزرگ و تحمیل اصلاحات مدیریتی و کاهش هزینه‌ها در شرکت‌های غول‌پیکر بورسی شهرت دارد.",
+    "takeaways_en": [
+      "Founded Trian Fund Management in 2005 alongside Peter May and Ed Garden.",
+      "Famous for high-profile activist campaigns at Procter & Gamble, Heinz, Wendy's, DuPont, and The Walt Disney Company.",
+      "Advocates operational discipline, corporate restructuring, margin enhancement, and returning cash to shareholders."
+    ],
+    "takeaways_fa": [
+      "صندوق ترایان را در سال ۲۰۰۵ برای سرمایه‌گذاری فعالانه در شرکت‌های کم‌بازده تأسیس کرد.",
+      "به خاطر راه‌اندازی بزرگترین نبرد وکالتی تاریخ در شرکت پروکتر اند گمبل (P&G) و چالش با والت دیزنی مشهور است.",
+      "بر انضباط عملیاتی، تفکیک دارایی‌ها، افزایش حاشیه سود و توزیع سود نقدی میان سهامداران پافشاری می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/n/nelson-peltz.asp",
     "slug": "nelson-peltz",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Nelson Peltz is a leading activist hedge fund manager who leverages board representation to drive operational corporate turnarounds.",
+    "bottom_line_fa": "نلسون پلتز نماد سرمایه‌گذاری کنشگرایانه است که با ورود به هیئت مدیره، تحول ساختاری و سودآوری شرکت‌ها را هدایت می‌کند.",
+    "sections": [
+      {
+        "title_en": "Activist Intervention and Multiple Expansion Mechanics",
+        "title_fa": "مکانیسم خلق ارزش کنشگرایانه و انبساط مضارب مالی",
+        "content_en": "Activist investors target undervalued corporations where Enterprise Value is depressed ($EV_{current} \\ll EV_{potential}$):\n$$EV_{unlocked} = (EBITDA_{prior} + \\Delta OPEX_{savings}) \\times (Multiple + \\Delta Multiple) - Net Debt$$\nPeltz targets overhead reduction ($\\Delta OPEX$) to prompt institutional re-rating and multiple expansion.",
+        "content_fa": "سرمایه‌گذاران کنشگر با کاهش هزینه‌های بالاسری و تحول در هیئت مدیره، باعث رشد سود و افزایش مضرب ارزش‌گذاری شرکت می‌شوند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3841,
     "term_en": "Neoclassical Economics",
-    "term_fa": "Neoclassical Economics",
+    "term_fa": "مکتب اقتصاد نئوکلاسیک (Neoclassical Economics)",
     "letter": "N",
     "category": "اقتصاد کلان و سیاست پولی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Neoclassical economics is a mainstream economic approach that relates supply and demand to an individual's rationality and ability to maximize utility or profit, utilizing mathematical marginalism to model market equilibriums.",
+    "definition_fa": "اقتصاد نئوکلاسیک (Neoclassical Economics) پارادایم مسلط در علم اقتصاد مدرن است که عرضه و تقاضا را بر پایه رفتار عقلایی انسان‌ها، بیشینه‌سازی مطلوبیت مصرف‌کننده و حداکثرسازی سود بنگاه‌ها تبیین کرده و از ابزارهای پیشرفته ریاضیات نهایی (مارجینالیسم) برای استخراج تعادل بازار بهره می‌برد.",
+    "takeaways_en": [
+      "Formulated during the Marginal Revolution of the late 19th century by Jevons, Menger, and Walras.",
+      "Premised on rational choice theory, perfect information, utility-maximizing consumers, and profit-maximizing firms.",
+      "Underpins modern microeconomic welfare analysis, general equilibrium theory, and the neoclassical synthesis."
+    ],
+    "takeaways_fa": [
+      "در جریان انقلاب نهایی‌گرایی اواخر قرن ۱۹ توسط جونز، منگر و والراس بنیان نهاده شد.",
+      "مبتنی بر عقلانیت کامل، اطلاعات شفاف، بیشینه‌سازی مطلوبیت و حداکثرسازی سود بنگاه‌هاست.",
+      "پایه‌گذار اقتصاد خرد مدرن، نظریه تعادل عمومی و سنتز نئوکلاسیک در اقتصاد کلان است."
+    ],
     "url": "https://www.investopedia.com/terms/n/neoclassical.asp",
     "slug": "neoclassical",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Neoclassical economics models competitive markets through mathematical optimization, marginal analysis, and rational self-interest.",
+    "bottom_line_fa": "اقتصاد نئوکلاسیک با به‌کارگیری ریاضیات بهینه‌سازی و تحلیل نهایی، تعادل بازارها و رفتار انسان اقتصادی را فرمول‌بندی می‌کند.",
+    "sections": [
+      {
+        "title_en": "Constrained Optimization and Lagrangian Multiplier",
+        "title_fa": "بهینه‌سازی مقید مصرف‌کننده با ضریب لاگرانژ",
+        "content_en": "A neoclassical consumer maximizes utility $U(x_1, x_2)$ subject to income budget $p_1 x_1 + p_2 x_2 = I$:\n$$\\mathcal{L} = U(x_1, x_2) - \\lambda (p_1 x_1 + p_2 x_2 - I)$$\nFirst-order optimality equates the Marginal Rate of Substitution ($MRS$) to the relative price ratio:\n$$MRS_{1,2} = \\frac{MU_1}{MU_2} = \\frac{p_1}{p_2}$$",
+        "content_fa": "مصرف‌کننده نئوکلاسیک مطلوبیت خود را با تابع لاگرانژ بیشینه می‌سازد که حاصل آن برابری نرخ نهایی جانشینی با نسبت قیمت‌هاست:\n$$MRS_{1,2} = \\frac{MU_1}{MU_2} = \\frac{p_1}{p_2}$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
     "id": 3842,
     "term_en": "Neoclassical Growth Theory",
-    "term_fa": "Neoclassical رشد Theory (Neoclassical Growth Theory)",
+    "term_fa": "نظریه رشد نئوکلاسیک (مدل رشد سولو-سوان)",
     "letter": "N",
     "category": "اقتصاد کلان و سیاست پولی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Neoclassical growth theory, formalized in the Solow-Swan model, is an economic model that outlines how capital accumulation, labor force growth, and exogenous technological progress interact to drive long-term macroeconomic economic growth.",
+    "definition_fa": "نظریه رشد نئوکلاسیک (مدل سولو-سوان) مدلی بنیادین در اقتصاد کلان است که نشان می‌دهد چگونه انباشت سرمایه فیزیکی، رشد نیروی کار و پیشرفت برون‌زای فناوری با یکدیگر تعامل کرده و سطح تولید ناخالص داخلی و رشد بلندمدت اقتصادی را در وضعیت باثبات رقم می‌زنند.",
+    "takeaways_en": [
+      "Developed by Robert Solow and Trevor Swan in 1956, earning Solow the 1987 Nobel Memorial Prize in Economics.",
+      "Demonstrates that capital accumulation alone cannot sustain perpetual growth due to diminishing marginal returns.",
+      "Identifies technological progress (the Solow Residual or Total Factor Productivity) as the sole engine of long-run per capita output growth."
+    ],
+    "takeaways_fa": [
+      "در سال ۱۹۵۶ توسط رابرت سولو و ترور سوان تدوین شد و جایزه نوبل اقتصاد را برای سولو به همراه داشت.",
+      "اثبات می‌کند انباشت سرمایه به دلیل بازدهی نزولی سرمایه، به تنهایی قادر به تضمین رشد پایدار بلندمدت نیست.",
+      "پیشرفت فناوری (بهره‌وری کل عوامل یا باقیمانده سولو) را تنها عامل محرک رشد پایدار سرانه تولید معرفی می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/n/neoclassical-growth-theory.asp",
     "slug": "neoclassical-growth-theory",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Solow growth model proves that technological progress, not mere capital deepening, is the true engine of sustained long-term economic growth.",
+    "bottom_line_fa": "مدل رشد سولو اثبات می‌کند نوآوری و پیشرفت بهره‌وری فناوری، پیشران اصلی افزایش ثروت و استاندارد زندگی در بلندمدت است.",
+    "sections": [
+      {
+        "title_en": "Solow-Swan Steady-State Capital Accumulation Equation",
+        "title_fa": "معادله انباشت سرمایه و وضعیت باثبات در مدل سولو",
+        "content_en": "Using a Cobb-Douglas production function in per capita intensive terms ($y = k^\\alpha$):\n$$\\dot{k} = s \\times f(k) - (n + g + \\delta) \\times k$$\nIn the long-run Steady State ($\\dot{k} = 0$), steady-state capital per effective worker ($k^*$) satisfies:\n$$s \\times (k^*)^\\alpha = (n + g + \\delta) \\times k^* \\implies k^* = \\left( \\frac{s}{n + g + \\delta} \\right)^{\\frac{1}{1 - \\alpha}}$$\nwhere $s$ is savings rate, $n$ is population growth, $g$ is technological growth, and $\\delta$ is depreciation.",
+        "content_fa": "در معادله اساسی سولو با تابع کاب-داگلاس، تغییرات سرانه سرمایه برابر است با:\n$$\\dot{k} = s \\cdot f(k) - (n + g + \\delta) k$$\nدر وضعیت باثبات ($\\dot{k}=0$)، سرمایه سرانه ثابت شده و تنها رشد فناوری عامل رشد درآمد سرانه خواهد بود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اقتصاد کلان و سیاست پولی",
     "category_en": "Macroeconomics & Monetary Policy"
   },
   {
     "id": 3843,
     "term_en": "Nepalese Rupee (NPR)",
-    "term_fa": "Nepalese Rupee (NPR)",
+    "term_fa": "روپیه نپال (Nepalese Rupee - NPR)",
     "letter": "N",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Nepalese Rupee (NPR) is the official fiat currency of the Federal Democratic Republic of Nepal, issued by the Nepal Rastra Bank, divided into 100 paisa, and pegged at a fixed exchange rate to the Indian Rupee.",
+    "definition_fa": "روپیه نپال (NPR) یکای پول رسمی جمهوری فدرال دموکراتیک نپال است که توسط بانک مرکزی نپال (Nepal Rastra Bank) منتشر می‌شود، به ۱۰۰ پیسه تقسیم می‌گردد و از سال ۱۹۹۳ دارای پیوند ارزی ثابت با روپیه هندوستان است.",
+    "takeaways_en": [
+      "Fixed peg to the Indian Rupee at a rate of 1.60 NPR = 1.00 INR.",
+      "Monetary policy closely mirrors the Reserve Bank of India to maintain the currency board-style peg.",
+      "Economy heavily relies on remittance inflows, hydropower export revenues, and tourism.",
+      "Symbolized by ₨ or रू."
+    ],
+    "takeaways_fa": [
+      "دارای نرخ برابری ثابت با روپیه هند است (هر ۱ روپیه هند معادل ۱٫۶۰ روپیه نپال).",
+      "سیاست پولی نپال برای حفظ پیوند ارزی ثابت، همگام با بانک مرکزی هندوستان تنظیم می‌شود.",
+      "اقتصاد کشور به شدت به وجوه ارسالی کارگران نپالی خارج از کشور (حوالجات ارزی)، صادرات برق‌آبی و گردشگری وابسته است."
+    ],
     "url": "https://www.investopedia.com/terms/n/npr.asp",
     "slug": "npr",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Nepalese Rupee is Nepal's official currency, stabilized by a long-standing fixed currency peg to the Indian rupee.",
+    "bottom_line_fa": "روپیه نپال با پیوند ارزی ثابت به روپیه هند تثبیت شده و تجارت میان دو کشور همسایه را تسهیل می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Fixed Peg Dynamics and Remittance Dependency",
+        "title_fa": "پویایی پیوند ارزی و وابستگی درآمدی به حوالجات خارجی در نپال",
+        "content_en": "The fixed exchange rate peg to the Indian Rupee ($E_{NPR/INR}$) is:\n$$E_{NPR/INR} = 1.60 \\iff E_{INR/NPR} = 0.625$$\nForeign exchange reserve cover ($R_{FX}$) is heavily supported by workers' personal remittances ($Rem$):\n$$R_{FX}(t) = R_{FX}(0) + \\int_0^t (Rem(\\tau) + Exports(\\tau) - Imports(\\tau)) d\\tau$$",
+        "content_fa": "نرخ پیوند ثابت با هند برابری ۱٫۶۰ را حفظ می‌کند:\n$$E_{NPR/INR} = 1.60$$\nپشتوانه ذخایر خارجی این پیوند ارزی، وابسته به ورود جریان مداوم حوالجات درآمدی کارگران مقیم خارج است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 3844,
     "term_en": "Nest Egg",
-    "term_fa": "Nest Egg",
+    "term_fa": "پس‌انداز و اندوخته دوران بازنشستگی (Nest Egg)",
     "letter": "N",
     "category": "بازنشستگی و مزایای رفاهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "A nest egg is a substantial sum of money, liquid savings, and diversified investments accumulated by an individual or household over their working career to finance retirement, purchase a home, or protect against catastrophic emergencies.",
+    "definition_fa": "اندوخته بازنشستگی (Nest Egg) به مجموع پس‌اندازهای نقدی و سبد سرمایه‌گذاری متنوعی گفته می‌شود که فرد در طول سال‌های اشتغال و فعالیت حرفه‌ای خود با انضباط مالی ذخیره می‌کند تا در دوران بازنشستگی منبع درآمد پایدار او باشد یا در مواقع اضطراری از آن استفاده کند.",
+    "takeaways_en": [
+      "Accumulated through compound interest, tax-advantaged accounts (401k, IRA), and disciplined dollar-cost averaging.",
+      "Governed in retirement by withdrawal frameworks like the Bengen 4% Rule to ensure capital longevity.",
+      "Asset allocation gradually transitions from growth equities to capital-preserving fixed income as retirement approaches."
+    ],
+    "takeaways_fa": [
+      "با بهره‌گیری از سود مرکب، حساب‌های پس‌انداز بازنشستگی معاف از مالیات و سرمایه‌گذاری منظم انباشته می‌شود.",
+      "در دوران بازنشستگی بر اساس قواعدی نظیر «قاعده ۴ درصد بنجن» برداشت می‌شود تا سرمایه تمام نشود.",
+      "با نزدیک شدن به سن بازنشستگی، ترکیب دارایی‌ها از سهام پرریسک به سمت اوراق با درآمد ثابت تغییر می‌یابد."
+    ],
     "url": "https://www.investopedia.com/terms/n/nestegg.asp",
     "slug": "nestegg",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "A nest egg represents accumulated retirement wealth built through lifetime savings and long-term compound growth.",
+    "bottom_line_fa": "اندوخته بازنشستگی حاصل انضباط مالی یک عمر و رشد سود مرکب است که امنیت مالی دوران سالمندی را تأمین می‌کند.",
+    "sections": [
+      {
+        "title_en": "Compound Accumulation and the 4% Safe Withdrawal Rule",
+        "title_fa": "انباشت مرکب و قاعده برداشت ایمن ۴ درصد برای اندوخته بازنشستگی",
+        "content_en": "Future retirement nest egg ($W_T$) for annual contribution $PMT$ over $T$ years at compound rate $r$:\n$$W_T = PMT \\times \\left[ \\frac{(1 + r)^T - 1}{r} \\right]$$\nUnder William Bengen's 4% Safe Withdrawal Rule, initial year annual retirement spending ($S_1$) is:\n$$S_1 = 0.04 \\times W_T$$\nsubsequently indexed annually to CPI inflation ($S_t = S_{t-1} \\times (1 + \\pi_t)$).",
+        "content_fa": "ارزش کل اندوخته از فرمول ارزش آتی اقساط پس‌انداز به دست می‌آید:\n$$W_T = PMT \\times \\left[ \\frac{(1 + r)^T - 1}{r} \\right]$$\nطبق قاعده ۴ درصد، در سال اول بازنشستگی ۴ درصد از کل اندوخته برداشت شده و سال‌های بعد با تورم تعدیل می‌گردد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازنشستگی و مزایای رفاهی",
     "category_en": "Retirement, Pensions & Benefits"
   },
   {
     "id": 3845,
     "term_en": "Net Asset Value Per Share (NAVPS)",
-    "term_fa": "Net دارایی ارزش Per سهم (NAVPS) (Net Asset Value Per Share (NAVPS))",
+    "term_fa": "ارزش خالص دارایی‌ها به ازای هر سهم (NAVPS)",
     "letter": "N",
     "category": "صندوق‌ها و مدیریت سبد دارایی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Net Asset Value Per Share (NAVPS) is a per-unit valuation metric representing the book or market equity worth of a single share of an investment company, mutual fund, or exchange-traded fund, calculated by dividing total net fund assets by total outstanding shares.",
+    "definition_fa": "ارزش خالص دارایی‌ها به ازای هر سهم (NAVPS) شاخصی بنیادی برای ارزیابی صندوق‌های سرمایه‌گذاری مشترک، ETFها و شرکت‌های سرمایه‌گذاری است که ارزش تئوریک هر سهم یا واحد صندوق را از تقسیم مازاد دارایی‌ها بر بدهی‌ها، بر تعداد کل سهام منتشره محاسبه می‌کند.",
+    "takeaways_en": [
+      "Evaluated at the end of each trading day for open-end mutual funds at 4:00 PM EST.",
+      "Serves as the transaction price for purchasing and redeeming open-end mutual fund units.",
+      "Closed-end funds and REITs frequently trade on secondary exchanges at a premium or discount to their NAVPS."
+    ],
+    "takeaways_fa": [
+      "برای صندوق‌های باز در پایان هر روز معاملاتی بر اساس قیمت پایانی کلیه دارایی‌های سبد محاسبه می‌شود.",
+      "مبنای صدور و ابطال واحدهای صندوق‌های سرمایه‌گذاری مشترک است.",
+      "واحدهای صندوق‌های بسته و REITها معمولاً با درصد معینی تخفیف یا حباب نسبت به NAVPS در بورس معامله می‌شوند."
+    ],
     "url": "https://www.investopedia.com/terms/n/navpershare.asp",
     "slug": "navpershare",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "NAVPS measures the per-share asset value of an investment fund, dictating creation and redemption pricing.",
+    "bottom_line_fa": "شاخص NAVPS ارزش ذاتی هر واحد صندوق را محاسبه کرده و مبنای شفافیت مالی در صنعت مدیریت دارایی است.",
+    "sections": [
+      {
+        "title_en": "Mathematical Formula and Premium/Discount Metric",
+        "title_fa": "فرمول NAVPS و سنجش حباب یا تخفیف قیمتی در بازار",
+        "content_en": "The Net Asset Value Per Share ($NAVPS$) is computed as:\n$$NAVPS = \\frac{\\sum_{i=1}^n (P_i \\times Q_i) + \\text{Cash} - \\text{Liabilities}}{\\text{Total Shares Outstanding}}$$\nThe market premium or discount percentage ($PD$) on a secondary exchange trading at price $P_{market}$ is:\n$$PD = \\left( \\frac{P_{market} - NAVPS}{NAVPS} \\right) \\times 100\\%$$",
+        "content_fa": "ارزش خالص دارایی هر واحد برابر است با:\n$$NAVPS = \\frac{\\text{کل دارایی‌ها} - \\text{کل بدهی‌ها}}{\\text{تعداد واحدهای منتشرشده}}$$\nدرصد حباب یا تخفیف قیمتی نیز از مقایسه قیمت تابلوی بورس با NAVPS به دست می‌آید:\n$$PD = \\left( \\frac{P_{market} - NAVPS}{NAVPS} \\right) \\times 100\\%$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "صندوق‌ها و مدیریت سبد دارایی",
     "category_en": "Funds & Portfolio Management"
   },
   {
     "id": 3846,
     "term_en": "Net Cash",
-    "term_fa": "Net وجه نقد (Net Cash)",
+    "term_fa": "وجه نقد خالص (Net Cash)",
     "letter": "N",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Net cash is a corporate balance sheet metric calculated by subtracting a company's total outstanding debt obligations (short-term and long-term) from its aggregate cash and cash equivalents, indicating whether a firm holds more liquid capital than liabilities.",
+    "definition_fa": "وجه نقد خالص (Net Cash) یک معیار سلامت ترازنامه است که از کسر کلیه بدهی‌های وام و تسهیلات (کوتاه‌مدت و بلندمدت) از کل موجودی نقد و معادل‌های نقدی شرکت به دست می‌آید؛ مثبت بودن این رقم نشان می‌دهد شرکت دارای مازاد نقدینگی است و در وضعیت «نقدینگی خالص» قرار دارد.",
+    "takeaways_en": [
+      "A positive net cash position ('net cash positive') signifies a fortress balance sheet with zero default risk.",
+      "A negative figure indicates 'net debt', meaning the company relies on borrowed capital to support operations.",
+      "Reduces corporate Enterprise Value (EV = Market Cap - Net Cash), making the firm an attractive takeover target."
+    ],
+    "takeaways_fa": [
+      "مثبت بودن این رقم نشان‌دهنده ترازنامه مستحکم بدون ریسک ورشکستگی مالی است.",
+      "منفی بودن این رقم به معنای «بدهی خالص» است و نشان می‌دهد شرکت از اهرم استقراض برای فعالیت‌هایش استفاده می‌کند.",
+      "ارزش کل شرکت (EV) را کاهش می‌دهد و شرکت را به هدفی جذاب برای تملک در بازار سرمایه تبدیل می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/n/net-cash.asp",
     "slug": "net-cash",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Net cash reflects surplus liquidity after extinguishing all debt, demonstrating strong balance sheet solvency.",
+    "bottom_line_fa": "وجه نقد خالص میزان نقدینگی مازاد پس از تسویه فرضی تمامی بدهی‌های بانکی است که ضامن استقلال مالی بنگاه است.",
+    "sections": [
+      {
+        "title_en": "Net Cash and Enterprise Value Formula",
+        "title_fa": "فرمول محاسبه نقدینگی خالص و ارتباط با ارزش کل شرکت (EV)",
+        "content_en": "Net Cash ($NC$) is calculated as:\n$$NC = (\\text{Cash \\& Cash Equivalents} + \\text{Marketable Securities}) - (\\text{Short-Term Debt} + \\text{Long-Term Debt})$$\nWhen $NC > 0$, Enterprise Value ($EV$) subtracts the net cash cushion:\n$$EV = \\text{Market Capitalization} - NC$$\nNet cash per share ($NCPS$) gives the immediate liquid floor backing each equity share: $NCPS = \\frac{NC}{\\text{Shares}}$.",
+        "content_fa": "وجه نقد خالص برابر است با مجموع وجه نقد و اوراق کوتاه‌مدت منهای کل دیون بانکی:\n$$NC = (\\text{Cash} + \\text{Marketable Securities}) - \\text{Total Debt}$$\nدر صورت مثبت بودن، از ارزش بازار سهم کسر می‌شود تا ارزش عملیاتی شرکت به دست آید:\n$$EV = \\text{Market Cap} - NC$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
@@ -337134,100 +337741,175 @@
   {
     "id": 4120,
     "term_en": "Open House",
-    "term_fa": "Open House",
+    "term_fa": "بازدید عمومی از ملک (Open House)",
     "letter": "O",
     "category": "املاک، مستغلات و تأمین مسکن",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An open house is a designated real estate marketing event during which a residential home listed for sale is unlocked and opened to prospective buyers, neighbors, and the general public without requiring an advance private appointment with a broker.",
+    "definition_fa": "بازدید عمومی از ملک (Open House) یک رویداد بازاریابی در معاملات املاک است که در آن ملک مسکونی عرضه‌شده برای فروش در ساعاتی معین بدون نیاز به هماهنگی قبلی یا تعیین وقت اختصاصی، به روی عموم خریداران بالقوه، همسایگان و مشاوران املاک گشوده می‌شود.",
+    "takeaways_en": [
+      "Generates concentrated buyer foot traffic, sparking competitive urgency and multiple bid scenarios.",
+      "Enables seller agents to collect qualified buyer leads and gauge real-time market pricing feedback.",
+      "Complemented by digital 3D virtual open house walkthroughs."
+    ],
+    "takeaways_fa": [
+      "باعث تجمیع همزمان خریداران شده و حس رقابت و انگیزه ارائه پیشنهادهای قیمتی بالاتر را برمی‌انگیزد.",
+      "به کارگزار فروش اجازه می‌دهد سرنخ‌های متقاضیان را جمع‌آوری کرده و واکنش بازار به قیمت را بسنجد.",
+      "امروزه با تورهای مجازی سه‌بعدی و نمایش‌های زنده برخط ادغام شده است."
+    ],
     "url": "https://www.investopedia.com/terms/o/open-house.asp",
     "slug": "open-house",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "An open house showcases real estate properties directly to the public, stimulating competitive buyer bidding and market feedback.",
+    "bottom_line_fa": "بازدید عمومی ابزاری اثربخش برای نمایش مستقیم ملک به خریداران و تسریع فرآیند فروش از طریق ایجاد رقابت است.",
+    "sections": [
+      {
+        "title_en": "Lead Generation Conversion Rate in Real Estate",
+        "title_fa": "نرخ تبدیل بازدید به پیشنهاد خرید در املاک",
+        "content_en": "Real estate brokers evaluate open house marketing return by calculating the Lead-to-Offer Conversion Rate ($CR$):\n$$CR = \\left( \\frac{\\text{Number of Formal Written Offers Received}}{\\text{Total Registered Attendees}} \\right) \\times 100\\%$$\nProperties priced accurately close to market value experience shorter Days on Market ($DOM$) after initial open house showings.",
+        "content_fa": "کارگزاران اثربخشی بازدید عمومی را با نرخ تبدیل بازدیدکننده به پیشنهاد مکتوب خرید ($CR$) می‌سنجند:\n$$CR = \\left( \\frac{\\text{تعداد پیشنهادهای رسمی خرید}}{\\text{تعداد بازدیدکنندگان ثبت‌نام‌شده}} \\right) \\times 100\\%$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "املاک، مستغلات و تأمین مسکن",
     "category_en": "Real Estate & Mortgage Finance"
   },
   {
     "id": 4121,
     "term_en": "Open Listing",
-    "term_fa": "Open Listing",
+    "term_fa": "قرارداد باز بازاریابی ملک (Open Listing)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An open listing is a non-exclusive real estate agreement between a property seller and multiple real estate brokers, stipulating that the seller pays a commission solely to the broker who successfully delivers an accepted buyer, while retaining the right to sell the property independently without owing any commission.",
+    "definition_fa": "قرارداد باز بازاریابی ملک (Open Listing) نوعی قرارداد غیرانحصاری در املاک است که مالک می‌تواند همزمان ملک خود را به کارگزاران متعددی بسپارد؛ در این حالت کارمزد معامله تنها به کارگزاری پرداخت می‌شود که خریدار نهایی را جذب کرده باشد و مالک حق دارد بدون پرداخت هیچ کارمزدی شخصاً اقدام به فروش ملک نماید.",
+    "takeaways_en": [
+      "Contrasts with Exclusive Right to Sell agreements where a single agent is guaranteed a commission regardless of who finds the buyer.",
+      "Often results in diminished marketing effort from agents due to the high risk of procuring zero commission.",
+      "Commonly used by commercial landlords and motivated property sellers in liquid markets."
+    ],
+    "takeaways_fa": [
+      "در برابر قرارداد انحصاری فروش قرار دارد که در آن کارگزار مشخص در هر صورت مستحق دریافت کارمزد است.",
+      "ممکن است به دلیل عدم تضمین دریافت حق‌العمل، تمایل کارگزاران برای سرمایه‌گذاری سنگین در تبلیغات را کاهش دهد.",
+      "توسط مالکان املاک تجاری و فروشندگان باانگیزه در بازارهای پررونق مورد استفاده قرار می‌گیرد."
+    ],
     "url": "https://www.investopedia.com/terms/o/openlisting.asp",
     "slug": "openlisting",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "An open listing allows multiple brokers to market a property non-exclusively, paying commission only to the agent who closes the deal.",
+    "bottom_line_fa": "قرارداد باز به چندین بنگاه اجازه بازاریابی همزمان می‌دهد و حق‌العمل را منحصراً به آورنده خریدار نهایی تخصیص می‌دهد.",
+    "sections": [
+      {
+        "title_en": "Expected Commission Payoff for Open vs Exclusive Listings",
+        "title_fa": "عایدی انتظاری کارگزار در قرارداد باز در مقایسه با انحصاری",
+        "content_en": "For broker $i$ competing against $N-1$ rival brokers in an open listing, the expected commission revenue ($E[R_{open}]$) is discounted by win probability ($p_i$):\n$$E[R_{open}] = p_i \\times (P_{sale} \\times c) - \\text{Marketing Cost}_i, \\quad \\text{where } p_i \\approx \\frac{1}{N}$$\nBecause $p_i \\ll 1$, brokers allocate fewer marketing resources relative to exclusive listings where $p_{exclusive} \\approx 1.0$.",
+        "content_fa": "برای کارگزاری که در رقابت با $N-1$ رقیب در قرارداد باز فعالیت می‌کند، درآمد انتظاری با احتمال برنده شدن ($p_i$) تعدیل می‌شود:\n$$E[R_{open}] = p_i \\times (P_{sale} \\times c) - \\text{هزینه تبلیغات}$$\nبه دلیل احتمال پایین موفقیت، کارگزاران بودجه تبلیغاتی کمتری را به این نوع قراردادها تخصیص می‌دهند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4122,
     "term_en": "Open Loop Card",
-    "term_fa": "Open Loop Card",
+    "term_fa": "کارت شبکه پرداخت باز (Open-Loop Card)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An open-loop card is a general-purpose electronic payment card—such as a Visa, Mastercard, or American Express credit, debit, or prepaid card—that operates across global payment networks and can be accepted universally by any merchant connected to that network.",
+    "definition_fa": "کارت شبکه پرداخت باز (Open-Loop Card) کارت پرداخت الکترونیکی عمومی (نظیر ویزا، مسترکارت یا امریکن اکسپرس) است که به یک شبکه بانکی بین‌المللی متصل بوده و در تمامی فروشگاه‌ها، پایانه‌های پرداخت و درگاه‌های اینترنتی عضو آن شبکه در سراسر جهان پذیرفته می‌شود.",
+    "takeaways_en": [
+      "Contrasts with closed-loop cards (store gift cards) that can only be redeemed at a single specific retailer.",
+      "Operates via standardized four-party payment networks (Cardholder, Issuer, Merchant, Acquirer).",
+      "Subject to network interchange fees, card brand rules, and anti-money laundering (AML) reload regulations."
+    ],
+    "takeaways_fa": [
+      "در نقطه مقابل کارت‌های مدار بسته (مانند بن‌کارت‌ها یا کارت‌های هدیه تک‌فروشگاهی) قرار دارد.",
+      "در قالب مدل چهارطرفه پردازش پرداخت (دارنده کارت، بانک صادرکننده، پذیرنده و شرکت خدمات پرداخت) عمل می‌کند.",
+      "مشمول کارمزدهای تبادل بین‌بانکی و مقررات ضدپولشویی در کارت‌های پیش‌پرداخت با قابلیت شارژ مجدد است."
+    ],
     "url": "https://www.investopedia.com/terms/o/open-loop-card.asp",
     "slug": "open-loop-card",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Open-loop cards provide universal payment acceptance across global card networks, distinct from single-merchant closed-loop cards.",
+    "bottom_line_fa": "کارت‌های پرداخت باز پذیرش فراگیر در کلیه پایانه‌های فروشگاهی متصل به شبکه بانکی را برای دارنده کارت تضمین می‌کنند.",
+    "sections": [
+      {
+        "title_en": "Network Interchange Economics in Open-Loop Systems",
+        "title_fa": "اقتصاد کارمزد تبادل در سامانه‌های پرداخت باز",
+        "content_en": "For an open-loop transaction of face value $V$, the merchant receives net settlement after deducting the Merchant Discount Rate ($MDR$):\n$$\\text{Settlement} = V - (\\text{Interchange} + \\text{Network Fee} + \\text{Acquiring Fee})$$\nBecause open-loop cards carry high universal utility ($U_{open} \\gg U_{closed}$), consumer adoption and velocity of circulation are significantly higher.",
+        "content_fa": "در تراکنش کارت پرداخت باز، پذیرنده مبلغ را پس از کسر کارمزد خدمات ($MDR$) دریافت می‌کند:\n$$\\text{Settlement} = V - (\\text{Interchange} + \\text{Network Fee} + \\text{Acquiring Fee})$$\nمطلوبیت و پذیرش عمومی این کارت‌ها سرعت گردش نقدینگی را در مقایسه با بن‌کارت‌های بسته به شدت ارتقا می‌دهد."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4123,
     "term_en": "Open Market",
-    "term_fa": "Open بازار (Open Market)",
+    "term_fa": "بازار باز (Open Market)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An open market is an economic marketplace characterized by minimal governmental regulatory restrictions, absence of trade barriers, price discovery determined freely by supply and demand, and unrestricted entry and exit for buyers and sellers.",
+    "definition_fa": "بازار باز (Open Market) بازاری رقابتی و آزاد است که در آن موانع تجاری، تعرفه‌های گمرکی تبعیض‌آمیز و مقررات دست‌وپاگیر دولتی وجود نداشته و ورود و خروج خریداران و فروشندگان آزاد است و قیمت‌ها صرفاً بر مبنای تقابل واقعی عرضه و تقاضا تعیین می‌شوند.",
+    "takeaways_en": [
+      "Fosters allocative efficiency, price transparency, and technological innovation through unhindered competition.",
+      "Used by central banks in Open Market Operations (OMOs) to buy and sell government debt securities to steer interest rates.",
+      "Exemplified by public equities exchanges, foreign exchange currency markets, and commodity auction floors."
+    ],
+    "takeaways_fa": [
+      "کارایی تخصیصی، شفافیت قیمت‌ها و نوآوری را با ایجاد رقابت آزادانه تسهیل می‌نماید.",
+      "بستر اصلی عملیات بازار باز (OMO) توسط بانک‌های مرکزی برای خرید و فروش اوراق قرضه و هدایت نرخ بهره است.",
+      "بورس‌های سهام، بازارهای جهانی ارز و بورس‌های کالا نمونه‌های عینی آن هستند."
+    ],
     "url": "https://www.investopedia.com/terms/o/open-market.asp",
     "slug": "open-market",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "An open market permits unrestricted trading and transparent price discovery driven entirely by supply and demand.",
+    "bottom_line_fa": "بازار باز بستری بدون محدودیت انحصاری برای مبادله داوطلبانه است که قیمت‌های تعادلی را شفاف می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Open Market Clearing Equilibrium",
+        "title_fa": "تعادل عرضه و تقاضا و رفاه اقتصادی در بازار باز",
+        "content_en": "In a frictionless open market, social welfare ($W$) is maximized at equilibrium clearing price $P^*$:\n$$W = \\int_0^{Q^*} [P_d(q) - P_s(q)] dq$$\nAny government tariff or quota creates deadweight loss ($DWL$):\n$$DWL = \\frac{1}{2} \\times \\Delta P \\times \\Delta Q$$",
+        "content_fa": "در بازار باز بدون اصطکاک، رفاه کل اجتماعی در نقطه تعادل عرضه و تقاضا به حداکثر می‌رسد:\n$$W = \\int_0^{Q^*} [P_d(q) - P_s(q)] dq$$\nاعمال سهمیه‌بندی یا تعرفه موجب اتلاف رفاه اجتماعی ($DWL$) می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4124,
     "term_en": "Open-Market Rate",
-    "term_fa": "Open-بازار نرخ (Open-Market Rate)",
+    "term_fa": "نرخ بازار باز (Open-Market Rate / Interbank Rate)",
     "letter": "O",
     "category": "اوراق درآمد ثابت و بدهی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The open-market rate is the prevailing interest rate established in competitive, wholesale financial markets for short-term debt instruments, interbank loans, commercial paper, and repurchase agreements, fluctuating freely according to liquidity supply and demand.",
+    "definition_fa": "نرخ بازار باز (Open-Market Rate) نرخ بهره‌ای است که در بازارهای عمده‌فروشی پول و اعتبارات بین‌بانکی، اسناد تجاری و قراردادهای ریپو بر اساس عرضه و تقاضای نقدینگی شکل می‌گیرد و تحت تأثیر مستقیم عملیات بازار باز بانک مرکزی است.",
+    "takeaways_en": [
+      "Directly influenced by central bank monetary policy target rates (such as the Federal Funds target rate).",
+      "Serves as the benchmark floating baseline for pricing corporate credit facilities and consumer loans (e.g., SOFR).",
+      "Reflects real-time commercial banking reserve liquidity pressures and macroeconomic credit risk."
+    ],
+    "takeaways_fa": [
+      "مستقیماً از نرخ هدف سیاست پولی بانک مرکزی (نظیر نرخ بهره سیاستی فدرال رزرو) متأثر می‌شود.",
+      "مبنای تعیین نرخ شناور برای وام‌های شرکتی، خطوط اعتباری و تسهیلات تجاری (مانند نرخ SOFR) است.",
+      "وضعیت لحظه‌ای مازاد یا کسری ذخایر پولی سیستم بانکی و ریسک اعتباری را بازتاب می‌دهد."
+    ],
     "url": "https://www.investopedia.com/terms/o/open-market-rate.asp",
     "slug": "open-market-rate",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The open-market rate reflects market-clearing interest rates across wholesale money markets, translating monetary policy into borrowing costs.",
+    "bottom_line_fa": "نرخ بازار باز شاخص واقعی قیمت پول در بازار بین‌بانکی است که سیاست‌های بانک مرکزی را به هزینه‌های وام‌گیری تبدیل می‌کند.",
+    "sections": [
+      {
+        "title_en": "Taylor Rule and Open-Market Target Rate Setting",
+        "title_fa": "تنظیم نرخ بازار باز بر مبنای قاعده تیلور",
+        "content_en": "The central bank steers the open-market rate ($i_t$) via liquidity injections/absorptions according to the Taylor Rule:\n$$i_t = r^* + \\pi_t + 0.5(\\pi_t - \\pi^*) + 0.5(y_t - y^*)$$\nwhere $r^*$ is the neutral real rate, $\\pi^*$ is target inflation, and $(y_t - y^*)$ is the real output gap.",
+        "content_fa": "بانک مرکزی با تزریق یا جذب نقدینگی، نرخ بازار باز ($i_t$) را هم‌راستا با قاعده تیلور هدایت می‌کند:\n$$i_t = r^* + \\pi_t + 0.5(\\pi_t - \\pi^*) + 0.5(y_t - y^*)$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "اوراق درآمد ثابت و بدهی",
     "category_en": "Fixed Income & Bond Markets"
   },
@@ -337351,80 +338033,140 @@
   {
     "id": 4126,
     "term_en": "Open Offer",
-    "term_fa": "Open Offer",
+    "term_fa": "پذیره‌نویسی عمومی با حق تقدم (Open Offer)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An open offer is a corporate capital-raising mechanism where a publicly traded company offers existing shareholders the opportunity to purchase newly issued shares at a discounted subscription price in proportion to their existing holdings, but without the rights being tradeable or transferable on an exchange.",
+    "definition_fa": "پذیره‌نویسی عمومی با حق تقدم (Open Offer) روشی برای افزایش سرمایه در شرکت‌های سهامی عام است که طی آن به سهامداران فعلی این فرصت داده می‌شود تا سهام جدید را با تخفیف نسبت به قیمت بازار خریداری نمایند؛ با این تفاوت که برعکس حق تقدم عادی (Rights Issue)، این حق تقدم در بورس قابل معامله یا فروش به دیگران نیست.",
+    "takeaways_en": [
+      "Distinct from a traditional rights issue: entitlement cannot be traded on secondary markets; shareholders must either take up the offer or let it lapse.",
+      "Minimizes equity dilution for participating shareholders while raising equity capital for corporate expansion.",
+      "Typically priced at a 10%-20% discount to prevailing market price to ensure robust subscription uptake."
+    ],
+    "takeaways_fa": [
+      "با عرضه حق تقدم معمولی تفاوت دارد؛ حق تقدم در بازار ثانویه قابل فروش نیست و سهامدار یا باید آن را بخرد یا منقضی شود.",
+      "مانع از رقیق شدن سهم مالکیت سهامداران وفادار در فرآیند تأمین مالی پروژه‌های جدید می‌شود.",
+      "معمولاً با تخفیف ۱۰ تا ۲۰ درصدی نسبت به قیمت بازار سهم عرضه می‌شود تا جذابیت مشارکت تضمین گردد."
+    ],
     "url": "https://www.investopedia.com/terms/o/openoffer.asp",
     "slug": "openoffer",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "An open offer allows existing shareholders to buy discounted new shares to support corporate fundraising without tradeable rights.",
+    "bottom_line_fa": "پذیره‌نویسی عمومی با حق تقدم به سهامداران اجازه می‌دهد سهم جدید را ارزان‌تر بخرند اما حق واگذاری این امتیاز را به اشخاص ثالث ندارند.",
+    "sections": [
+      {
+        "title_en": "Theoretical Ex-Rights Price (TERP) Formula",
+        "title_fa": "محاسبه قیمت تئوریک پس از افزایش سرمایه (TERP)",
+        "content_en": "For an open offer offering $N$ new shares at subscription price $S$ for every $M$ existing shares held at market price $P_{cum}$:\n$$TERP = \\frac{(M \\times P_{cum}) + (N \\times S)}{M + N}$$\nThe theoretical value of the non-tradeable discount per existing share is: $V = P_{cum} - TERP$.",
+        "content_fa": "قیمت تئوریک سهم پس از مجمع افزایش سرمایه از فرمول میانگین موزون ارزش سهام قدیم و جدید حاصل می‌شود:\n$$TERP = \\frac{(M \\times P_{cum}) + (N \\times S)}{M + N}$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4127,
     "term_en": "Open Order",
-    "term_fa": "Open Order",
+    "term_fa": "سفارش باز یا معلق (Open Order / Good-Til-Cancelled)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An open order is an active order submitted to a brokerage or trading exchange that remains pending in the order book, waiting to execute when market conditions meet specified parameters (such as a limit price) until it is either fulfilled or explicitly cancelled by the trader.",
+    "definition_fa": "سفارش باز یا معلق (Open Order) دستوری معاملاتی است که به سامانه کارگزاری یا هسته معاملات ارسال شده و تا زمانی که شرایط بازار (نظیر قیمت هدف) محقق شود در صف دفترچه سفارشات معتبر باقی می‌ماند تا معامله انجام شود یا توسط معامله‌گر لغو گردد (مانند سفارش‌های معتبر تا لغو یا GTC).",
+    "takeaways_en": [
+      "Encompasses Limit Orders, Stop-Loss Orders, and Good-'Til-Cancelled (GTC) directives.",
+      "Can remain open across multiple trading sessions depending on order time-in-force instructions.",
+      "Ties up capital or margin until executed, cancelled, or expired at the broker's default threshold."
+    ],
+    "takeaways_fa": [
+      "شامل سفارش‌های شرطی، حد ضرر و سفارش‌های معتبر تا لغو (GTC) می‌شود.",
+      "بر اساس دستور زمان اعتبار می‌تواند در طول چندین جلسه معاملاتی باز بماند.",
+      "تا زمان اجرا یا لغو، بخشی از قدرت خرید یا مارجین حساب معامله‌گر را مسدود نگه می‌دارد."
+    ],
     "url": "https://www.investopedia.com/terms/o/openorder.asp",
     "slug": "openorder",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "An open order sits active on the order book until filled or cancelled, executing automatically when price conditions are reached.",
+    "bottom_line_fa": "سفارش باز در انتظار تحقق شروط قیمتی فعال باقی می‌ماند و به محض رسیدن قیمت به سطح معین به طور خودکار اجرا می‌شود.",
+    "sections": [
+      {
+        "title_en": "Time-in-Force Restrictions and Execution Probability",
+        "title_fa": "قیود زمانی اعتبار و احتمال اجرای سفارش‌های معلق",
+        "content_en": "The execution probability of a resting limit open order at limit price $K$ below spot price $S_0$ under Geometric Brownian Motion with drift $\\mu$ and volatility $\\sigma$ is:\n$$P(\\tau_K \\le T) = \\Phi\\left( \\frac{-\\ln(S_0/K) + (\\mu - 0.5\\sigma^2)T}{\\sigma\\sqrt{T}} \\right) + \\left(\\frac{K}{S_0}\\right)^{\\frac{2\\mu}{\\sigma^2}-1} \\Phi\\left( \\frac{-\\ln(S_0/K) - (\\mu - 0.5\\sigma^2)T}{\\sigma\\sqrt{T}} \\right)$$",
+        "content_fa": "احتمال برخورد قیمت بازار به سفارش معلق تا سررسید زمانی $T$ با معادلات اولین زمان عبور (First Hitting Time) در فرآیندهای تصادفی محاسبه می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4128,
     "term_en": "Open Outcry",
-    "term_fa": "Open Outcry",
+    "term_fa": "حراج حضوری با فریاد و علائم دست در تالار (Open Outcry)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Open outcry was the traditional physical method of conducting futures and securities trading on exchange trading floors, where pit traders shouted bid and ask prices and used hand signals to communicate buy and sell intentions before the advent of electronic matching systems.",
+    "definition_fa": "حراج حضوری و شفاهی (Open Outcry) شیوه سنتی معامله در تالارهای بورس کالا و سهام (مانند بورس کالای شیکاگو CBOT یا بورس نیویورک) بود که در آن معامله‌گران در حلقه‌های معاملاتی (Pits) با فریاد زدن قیمت‌ها و استفاده از علائم دست سفارش‌های خرید و فروش را منعقد می‌کردند.",
+    "takeaways_en": [
+      "Relied on specialized finger and palm positioning (palm facing trader = buy; palm facing outward = sell).",
+      "Fostered visceral, physical price discovery, transparency, and personal accountability among pit locals.",
+      "Almost entirely superseded by electronic algorithmic matching engines operating with microsecond latency."
+    ],
+    "takeaways_fa": [
+      "متکی بر علائم دست تخصصی بود (کف دست رو به خود نشانه خرید و کف دست رو به بیرون نشانه فروش).",
+      "کشف قیمتی بسیار پرهیجان و شفاف را با تعامل رودرروی کارگزاران رقم می‌زد.",
+      "با ظهور سامانه‌های معاملات الکترونیکی و الگوریتم‌های پربسامد تقریباً در تمامی بورس‌های جهان منسوخ شد."
+    ],
     "url": "https://www.investopedia.com/terms/o/openoutcry.asp",
     "slug": "openoutcry",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Open outcry was the historic pit-trading method of verbal and gestural shouting, now largely replaced by electronic algorithms.",
+    "bottom_line_fa": "حراج حضوری نماد نوستالژیک تالارهای سنتی بورس بود که امروزه جای خود را به هسته‌های الکترونیک با سرعت میکروثانیه‌ای داده است.",
+    "sections": [
+      {
+        "title_en": "Transition Economics: Floor vs Electronic Latency",
+        "title_fa": "اقتصاد گذار از معاملات حضوری به سامانه‌های الکترونیک",
+        "content_en": "The transition from open outcry pit trading to electronic order books reduced bid-ask spreads ($Spread$) and execution latency ($\\Delta t$):\n$$\\Delta t_{floor} \\approx 10 - 60 \\text{ seconds} \\implies \\Delta t_{electronic} < 500 \\text{ microseconds}$$\nNarrowed spreads significantly lowered total transaction costs for institutional and retail investors globally.",
+        "content_fa": "گذار از حراج تالاری به هسته الکترونیکی، زمان اجرای سفارش را از چندین ده ثانیه به کمتر از چند صد میکروثانیه کاهش داد و اسپرد قیمت‌ها را به حداقل رساند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4129,
     "term_en": "Open Position",
-    "term_fa": "Open Position",
+    "term_fa": "موقعیت معاملاتی باز (Open Position)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An open position is any active, unliquidated commitment or trade in a financial market—either long (purchased) or short (borrowed and sold)—that has not yet been closed out through an offsetting transaction or physical contract delivery, exposing the investor to market price fluctuations.",
+    "definition_fa": "موقعیت معاملاتی باز (Open Position) هرگونه معامله فعال و تسویه‌نشده در بازارهای مالی اعم از سهام، فارکس، کالا یا مشتقه است (خرید باز یا فروش استقراضی باز) که هنوز با معامله معکوس بسته نشده و سرمایه‌گذار را در معرض سود یا زیان ناشی از نوسانات قیمت قرار می‌دهد.",
+    "takeaways_en": [
+      "A long position benefits from price appreciation; a short position benefits from price declines.",
+      "Generates unrealized (paper) profit or loss (P&L) that fluctuates continuously with real-time market quotes.",
+      "Requires active capital allocation and maintenance margin to satisfy broker solvency standards."
+    ],
+    "takeaways_fa": [
+      "موقعیت خرید (Long) از رشد قیمت و موقعیت فروش (Short) از افت قیمت سود می‌برد.",
+      "موجب شکل‌گیری سود یا زیان تحقق‌نیافته (دفتری) می‌شود که با هر تغییر قیمت در تابلوی بورس نوسان می‌کند.",
+      "نیازمند مسدودسازی وجه تضمین و رعایت نسبت‌های مارجین نزد کارگزاری است."
+    ],
     "url": "https://www.investopedia.com/terms/o/open-position.asp",
     "slug": "open-position",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "An open position represents active market exposure that generates fluctuating unrealized gains or losses until formally closed.",
+    "bottom_line_fa": "موقعیت باز وضعیت فعال سرمایه‌گذار در بازار است که تا زمان بستن معامله، در معرض ریسک و بازده لحظه‌ای قرار دارد.",
+    "sections": [
+      {
+        "title_en": "Unrealized P&L and Margin Utilization Formula",
+        "title_fa": "فرمول سود و زیان تحقق‌نیافته و مصرف مارجین در موقعیت باز",
+        "content_en": "For quantity $Q$ entered at price $P_{entry}$, the unrealized profit or loss ($UPnL$) at current price $P_t$ is:\n$$UPnL_{long} = Q \\times (P_t - P_{entry})$$\n$$UPnL_{short} = Q \\times (P_{entry} - P_t)$$\nMargin utilization ($MU$) measures collateral strain relative to total account equity ($E$):\n$$MU = \\left( \\frac{\\text{Maintenance Margin Required}}{E} \\right) \\times 100\\%$$",
+        "content_fa": "سود یا زیان تحقق‌نیافته موقعیت باز از مقایسه قیمت جاری با قیمت ورود محاسبه می‌شود:\n$$UPnL_{long} = Q \\times (P_t - P_{entry})$$\n$$UPnL_{short} = Q \\times (P_{entry} - P_t)$$\nدرجه مصرف وجه تضمین نیز ضریب امنیت حساب در برابر اخطار مارجین را مشخص می‌کند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
@@ -337608,220 +338350,387 @@
   {
     "id": 4131,
     "term_en": "Open Trade Equity (OTE)",
-    "term_fa": "Open تجارت / معامله حقوق صاحبان سهام (OTE) (Open Trade Equity (OTE))",
+    "term_fa": "ارزش ویژه سود و زیان موقعیت‌های باز (Open Trade Equity - OTE)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Open Trade Equity (OTE) is the net total dollar amount of unrealized profit or loss accumulated across all active, open derivative or commodity trading positions held in an investor's account, evaluated at current settlement prices.",
+    "definition_fa": "ارزش ویژه سود و زیان معاملات باز (Open Trade Equity - OTE) مجموع خالص ریالی سودها و زیان‌های تحقق‌نیافته و دفتری در کلیه موقعیت‌های معاملاتی باز (نظیر آتی و فارکس) در یک حساب کارگزاری است که بر مبنای آخرین قیمت تسویه بازار تجدید ارزیابی شده است.",
+    "takeaways_en": [
+      "Added to cash balance to determine total account Net Liquidating Value (NLV).",
+      "Updated in real-time as market prices oscillate throughout the trading session.",
+      "Governs whether a trader has excess margin available to enter new positions or faces an imminent margin call."
+    ],
+    "takeaways_fa": [
+      "با مانده نقدی حساب جمع می‌شود تا ارزش کل تصفیه حساب (NLV) به دست آید.",
+      "با هر تغییر قیمت به صورت بلادرنگ در طول ساعات بازار به‌روزرسانی می‌شود.",
+      "تعیین‌کننده وجود مارجین آزاد برای گشایش معاملات جدید یا صدور اخطاریه کسری وجه تضمین است."
+    ],
     "url": "https://www.investopedia.com/terms/o/open-trade-equity-ote.asp",
     "slug": "open-trade-equity-ote",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OTE measures total floating unrealized profits or losses across all open positions, establishing real-time account equity.",
+    "bottom_line_fa": "معیار OTE ارزش جاری سود و زیان شناور در معاملات باز را محاسبه کرده و مانده زنده حساب معاملاتی را مشخص می‌سازد.",
+    "sections": [
+      {
+        "title_en": "Account Net Liquidating Value (NLV) Formula",
+        "title_fa": "فرمول محاسبه ارزش نقدشوندگی خالص حساب با احتساب OTE",
+        "content_en": "In a derivatives account with cash balance $B_{cash}$ and $K$ open contract positions:\n$$OTE = \\sum_{k=1}^K N_k \\times M_k \\times (P_{market, k} - P_{entry, k})$$\n$$\\text{Net Liquidating Value (NLV)} = B_{cash} + OTE$$\n$$\\text{Free Usable Margin} = NLV - \\sum_{k=1}^K \\text{Initial Margin}_k$$",
+        "content_fa": "ارزش خالص نقدشوندگی حساب ($NLV$) از جمع مانده نقدی با ارزش OTE موقعیت‌های باز حاصل می‌شود:\n$$NLV = B_{cash} + OTE$$\nمارجین آزاد برای انجام معاملات جدید نیز از کسر وجه تضمین اولیه مورد نیاز موقعیت‌ها به دست می‌آید."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4132,
     "term_en": "Opening Bell",
-    "term_fa": "Opening Bell",
+    "term_fa": "زنگ آغاز معاملات بورس (Opening Bell)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The opening bell is the traditional physical or electronic bell rung at major financial exchanges—most iconically the New York Stock Exchange (NYSE) at 9:30 AM EST—to mark the official commencement of the regular trading session.",
+    "definition_fa": "زنگ بازگشایی یا آغاز معاملات (Opening Bell) زنگ نمادین فیزیکی یا الکترونیکی است که در بورس‌های بزرگ جهان (به‌ویژه بورس نیویورک در ساعت ۹:۳۰ صبح) به صدا درمی‌آید تا آغاز رسمی جلسه معاملات روزانه را اعلام کند.",
+    "takeaways_en": [
+      "Often rung by prominent corporate CEOs, dignitaries, and celebrities to celebrate initial public offerings (IPOs) or company milestones.",
+      "Signals the transition from pre-market crossing auctions to continuous order book execution.",
+      "Accompanied by a surge in trading volatility and institutional order execution volume.",
+      "Counterbalanced by the Closing Bell at 4:00 PM EST."
+    ],
+    "takeaways_fa": [
+      "معمولاً توسط مدیران ارشد شرکت‌های بورسی در روز عرضه اولیه یا مناسبت‌های خاص نواخته می‌شود.",
+      "نقطه آغاز انتقال از حراج گشایش به معاملات پیوسته تابلوی بورس است.",
+      "با جهش ناگهانی حجم معاملات و نوسانات اولیه بازار همراه است.",
+      "در پایان روز با زنگ اختتام معاملات (Closing Bell) در ساعت ۴ بعدازظهر موازنه می‌گردد."
+    ],
     "url": "https://www.investopedia.com/terms/o/openingbell.asp",
     "slug": "openingbell",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The opening bell marks the formal start of exchange trading, signaling the onset of peak liquidity and market price discovery.",
+    "bottom_line_fa": "زنگ آغاز معاملات اعلام رسمی شروع دادوستدهاست که حجم سنگین معاملات و کشف قیمت‌های روزانه را کلید می‌زند.",
+    "sections": [
+      {
+        "title_en": "Intraday Volume U-Shape (The Smile Curve)",
+        "title_fa": "منحنی U-شکل حجم معاملات درون‌روزی با نواخته شدن زنگ گشایش",
+        "content_en": "Equity trading volume ($V_t$) typically follows a bimodal U-shape (volume smile) peaking immediately following the Opening Bell ($t=0$) and prior to the Closing Bell ($t=T$):\n$$V_t = \\alpha_0 + \\alpha_1 (t - t_{mid})^2 + \\varepsilon_t$$\nInstitutional algorithms utilize VWAP and TWAP schedules to systematically participate in heavy opening bell liquidity.",
+        "content_fa": "حجم معاملات درون‌روزی از یک الگوی U-شکل تبعیت می‌کند که در دقایق آغازین پس از به صدا درآمدن زنگ گشایش به اوج می‌رسد:\n$$V_t = \\alpha_0 + \\alpha_1 (t - t_{mid})^2 + \\varepsilon_t$$\nالگوریتم‌های معاملاتی از این نقدشوندگی فشرده آغازین برای اجرای سفارش‌های بزرگ بهره می‌برند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4133,
     "term_en": "Opening Cross",
-    "term_fa": "Opening Cross",
+    "term_fa": "حراج گشایش الکترونیکی نزدک (Opening Cross)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The Nasdaq Opening Cross is an automated, single-price auction mechanism executed at precisely 9:30 AM EST to match pre-market buy and sell orders, consolidating overnight interest and establishing the official opening price for all Nasdaq-listed securities.",
+    "definition_fa": "حراج گشایش الکترونیکی نزدک (Opening Cross) فرآیند حراج متمرکز و تک‌نرخی است که رأس ساعت ۹:۳۰ صبح در بورس نزدک اجرا می‌شود تا سفارش‌های انباشته پیش از بازار را تجمیع نموده و قیمت رسمی گشایش را با حداکثر تطبیق سفارشات کشف نماید.",
+    "takeaways_en": [
+      "Eliminates erratic price spikes at the open by matching buy and sell orders at a single clearing price.",
+      "Disseminates the Net Order Imbalance Indicator (NOII) every second starting at 9:28 AM EST to guide market participants.",
+      "Executes Market-On-Open (MOO), Limit-On-Open (LOO), and Opening Imbalance Only (OIO) orders."
+    ],
+    "takeaways_fa": [
+      "با تطبیق کلیه سفارشات در یک قیمت واحد و تعادلی، مانع از جهش‌های غیرمنطقی قیمت در آغاز بازار می‌شود.",
+      "از ساعت ۹:۲۸ اطلاعات عدم تعادل سفارش‌ها (NOII) را هر ثانیه منتشر می‌کند تا شفافیت را افزایش دهد.",
+      "سفارش‌های ویژه گشایش شامل MOO، LOO و OIO را به انجام می‌رساند."
+    ],
     "url": "https://www.investopedia.com/terms/o/opening-cross.asp",
     "slug": "opening-cross",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The Opening Cross aggregates pre-market orders into a single fair clearing price, setting the official market open for Nasdaq securities.",
+    "bottom_line_fa": "حراج گشایش نزدک سفارشات صبحگاهی را در یک قیمت تسویه تعادلی منطبق کرده و آغاز باثباتی را برای بازار سهام رقم می‌زند.",
+    "sections": [
+      {
+        "title_en": "Single Clearing Price Optimization Algorithm",
+        "title_fa": "الگوریتم تعیین قیمت تسویه در حراج گشایش نزدک",
+        "content_en": "The clearing price ($P^*$) is selected to satisfy the following prioritized algorithmic hierarchy:\n1. **Maximize Matched Shares**: $\\max_{P} \\min\\left( \\sum Q_{bid}(P), \\sum Q_{ask}(P) \\right)$\n2. **Minimize Imbalance**: $\\min_{P} |\\sum Q_{bid}(P) - \\sum Q_{ask}(P)|$\n3. **Minimize Distance from Benchmark**: $\\min_{P} |P - P_{benchmark}|$",
+        "content_fa": "قیمت تسویه ($P^*$) به ترتیب بر اساس بیشینه‌سازی حجم سهام قابل انطباق، حداقل‌سازی عدم تعادل سفارشات و نزدیک‌ترین قیمت به نرخ پایه کشف می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4134,
     "term_en": "Opening Imbalance Only Order (OIO)",
-    "term_fa": "Opening Imbalance Only Order (OIO)",
+    "term_fa": "سفارش ویژه عدم تعادل گشایش (OIO Order)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "An Opening Imbalance Only (OIO) order is a specialized limit order submitted to participate exclusively in the Nasdaq Opening Cross, designed to provide contra-side liquidity and offset order imbalances without driving price movements.",
+    "definition_fa": "سفارش ویژه عدم تعادل گشایش (OIO Order) دستوری مشروط در بورس نزدک است که منحصراً در حراج گشایش مشارکت کرده و هدف آن تأمین نقدشوندگی در طرف مقابل عدم تعادل بازار و کسب سود از تسویه شکاف سفارش‌های صبحگاهی بدون جابجایی قیمت است.",
+    "takeaways_en": [
+      "Executed only if there is an existing net order imbalance on the contra side of the book.",
+      "Priced dynamically: buy OIO orders peg to the bid, sell OIO orders peg to the ask.",
+      "Provides vital liquidity stabilization during market opening auctions."
+    ],
+    "takeaways_fa": [
+      "صرفاً در صورتی اجرا می‌شود که در سمت مقابل دفترچه سفارشات عدم تعادل حجمی وجود داشته باشد.",
+      "به صورت پویا قیمت‌گذاری می‌شود؛ سفارش خرید OIO به بهترین مظنه خرید و سفارش فروش به بهترین مظنه فروش متصل می‌گردد.",
+      "نقش حیاتی در تثبیت نقدشوندگی و کاهش نوسان قیمت در حراج گشایش ایفا می‌کند."
+    ],
     "url": "https://www.investopedia.com/terms/o/opening-imbalance-only-order-oio.asp",
     "slug": "opening-imbalance-only-order-oio",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OIO orders provide stabilizing contra liquidity during the opening auction, executing exclusively against opening order imbalances.",
+    "bottom_line_fa": "سفارشات OIO برای جذب مازاد عرضه یا تقاضا در حراج گشایش طراحی شده و نقدشوندگی را تضمین می‌کنند.",
+    "sections": [
+      {
+        "title_en": "Imbalance Absorption Allocation Mechanics",
+        "title_fa": "سازوکار جذب عدم تعادل با سفارش‌های OIO",
+        "content_en": "If net order imbalance at 9:30 AM is positive (Excess Demand: $Imb = \\sum Q_{buy} - \\sum Q_{sell} > 0$), qualifying sell OIO orders ($Q_{OIO, sell}$) are triggered:\n$$\\text{Executed Fill} = \\min\\left( Imb, \\; \\sum Q_{OIO, sell}(P^*) \\right)$$\nUnmatched OIO shares are automatically cancelled immediately following the conclusion of the cross.",
+        "content_fa": "در صورت وجود مازاد تقاضا در گشایش، سفارش‌های فروش OIO فعال می‌شوند تا عدم تعادل را جذب کنند:\n$$\\text{Executed Fill} = \\min\\left( Imb, \\; \\sum Q_{OIO, sell}(P^*) \\right)$$\nواحدهای معامله‌نشده بلافاصله پس از اتمام حراج ابطال می‌شوند."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4135,
     "term_en": "Opening Price",
-    "term_fa": "Opening قیمت (Opening Price)",
+    "term_fa": "قیمت گشایش بازار (Opening Price)",
     "letter": "O",
     "category": "بازار سهام و معاملات",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The opening price is the initial transaction price recorded when a security or commodity begins trading during an exchange's official operating hours, set through pre-market clearing auctions.",
+    "definition_fa": "قیمت گشایش (Opening Price) نرخی است که در نخستین معامله رسمی روز برای یک سهم یا کالا پس از شروع کار بازار به ثبت می‌رسد و حاصل حراج اولیه و برآیند تقاضای انباشته شبانه است.",
+    "takeaways_en": [
+      "Acts as the benchmark baseline against which intraday gains and losses are evaluated.",
+      "Can gap significantly above or below the previous session's closing price.",
+      "The first component of the open-high-low-close (OHLC) daily bar chart."
+    ],
+    "takeaways_fa": [
+      "معیار پایه ارزیابی بازدهی روزانه و نوسانات درون‌روزی به حساب می‌آید.",
+      "می‌تواند با قیمت پایانی دیروز شکاف مثبت یا منفی معناداری داشته باشد.",
+      "نخستین مؤلفه از نمودارهای شمعی و میله‌ای روزانه (OHLC) است."
+    ],
     "url": "https://www.investopedia.com/terms/o/openingprice.asp",
     "slug": "openingprice",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The opening price establishes the first traded transaction of the session, setting the benchmark for daily performance.",
+    "bottom_line_fa": "قیمت گشایش نقطه آغاز دادوستدهای روزانه است که مسیر نوسانات قیمت در طول جلسه معاملاتی را ریل‌گذاری می‌کند.",
+    "sections": [
+      {
+        "title_en": "Gap Return and Daily Return Decomposition",
+        "title_fa": "تفکیک بازده شکاف گشایش از بازده روزانه",
+        "content_en": "Total daily return ($R_{daily}$) decomposes into overnight gap return ($R_{gap}$) and intraday session return ($R_{session}$):\n$$1 + R_{daily} = \\left( \\frac{P_{open, t}}{P_{close, t-1}} \\right) \\times \\left( \\frac{P_{close, t}}{P_{open, t}} \\right) = (1 + R_{gap}) \\times (1 + R_{session})$$",
+        "content_fa": "بازده کل روزانه سهم از حاصلضرب بازده شکاف شبانه در بازده درون‌جلسه‌ای به دست می‌آید:\n$$1 + R_{daily} = (1 + R_{gap}) \\times (1 + R_{session})$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "بازار سهام و معاملات",
     "category_en": "Stock Market & Equities Trading"
   },
   {
     "id": 4136,
     "term_en": "Opening Range",
-    "term_fa": "Opening Range",
+    "term_fa": "دامنه نوسان آغازین معاملات (Opening Range)",
     "letter": "O",
     "category": "مدیریت کسب‌وکار و استراتژی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The opening range is a technical trading concept representing the price span between the highest and lowest prices reached by a security during a defined initial timeframe of the trading day (commonly the first 15, 30, or 60 minutes).",
+    "definition_fa": "دامنه نوسان آغازین (Opening Range) بازه قیمتی میان بالاترین سقف و عمیق‌ترین کف قیمتی ثبت‌شده در دقایق آغازین معاملات روز (معمولاً ۱۵، ۳۰ یا ۶۰ دقیقه اول) است که مبنای استراتژی‌های معاملاتی شکست دامنه (ORB) قرار می‌گیرد.",
+    "takeaways_en": [
+      "Forms the operational basis for Opening Range Breakout (ORB) momentum trading strategies.",
+      "A breakout above the opening range high signals bullish continuation; a break below signals bearish selling.",
+      "Reflects the immediate market resolution of overnight macro news and institutional order flow."
+    ],
+    "takeaways_fa": [
+      "اساس استراتژی‌های پرطرفدار معاملاتی شکست دامنه آغازین (ORB) را تشکیل می‌دهد.",
+      "شکست رو به بالای این دامنه سیگنال صعودی پرقدرت و شکست کف آن علامت ریزش قیمت است.",
+      "هضم اولیه اخبار شبانه و ورود نقدینگی صندوق‌های بزرگ را منعکس می‌سازد."
+    ],
     "url": "https://www.investopedia.com/terms/o/opening-range.asp",
     "slug": "opening-range",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The opening range establishes early intraday support and resistance boundaries, providing high-probability breakout trade triggers.",
+    "bottom_line_fa": "دامنه نوسان دقایق نخستین، سطوح مقاومت و حمایت آغازین را مشخص کرده و جهت روند روزانه را ریل‌گذاری می‌کند.",
+    "sections": [
+      {
+        "title_en": "Opening Range Breakout (ORB) Trading Criteria",
+        "title_fa": "معیارهای معاملاتی استراتژی شکست دامنه آغازین (ORB)",
+        "content_en": "For an opening interval $\\Delta t = [0, 30 \\text{ min}]$ with high $H_{OR}$ and low $L_{OR}$:\n$$\\text{Opening Range Span} = H_{OR} - L_{OR}$$\nA long entry trigger occurs when current price breaks above the range high with volume expansion ($V_t > 1.5 \\times \\bar{V}$):\n$$\\text{Long Trigger}: P_t > H_{OR} + \\delta$$\n$$\\text{Target Price} = H_{OR} + (H_{OR} - L_{OR})$$",
+        "content_fa": "در استراتژی ORB، ورود به موقعیت خرید با شکست سقف دامنه اولیه همراه با حجم بالا کلید می‌خورد:\n$$\\text{Long Trigger}: P_t > H_{OR} + \\delta$$\nهدف قیمتی معمولاً معادل ارتفاع دامنه اولیه بالاتر از سقف الگو تعیین می‌شود."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت کسب‌وکار و استراتژی",
     "category_en": "Business Strategy & Management"
   },
   {
     "id": 4137,
     "term_en": "Operating Activities",
-    "term_fa": "Operating Activities",
+    "term_fa": "فعالیت‌های عملیاتی در صورت جریان وجوه نقد (Operating Activities)",
     "letter": "O",
     "category": "مدیریت عملیات و زنجیره تأمین",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Operating activities represent the primary revenue-generating activities of an enterprise and other activities that are not investing or financing activities, reported in the first section of the cash flow statement under GAAP and IFRS.",
+    "definition_fa": "فعالیت‌های عملیاتی (Operating Activities) به فعالیت‌های اصلی و مستمر درآمدزای یک شرکت و کلیه عملیاتی که ماهیت سرمایه‌گذاری یا تأمین مالی ندارند اطلاق می‌شود و نخستین و مهم‌ترین بخش صورت جریان وجوه نقد را تشکیل می‌دهد.",
+    "takeaways_en": [
+      "Encompasses cash receipts from selling goods/services and cash payments to suppliers and employees.",
+      "Presented using either the Direct Method (gross cash flows) or Indirect Method (reconciling net income).",
+      "Consistently positive operating cash flow is the ultimate litmus test of economic viability."
+    ],
+    "takeaways_fa": [
+      "دربرگیرنده دریافت‌های نقدی حاصل از فروش و پرداخت‌ها به تأمین‌کنندگان کالا و کارکنان است.",
+      "به دو روش مستقیم (ناخالص جریان‌های ورودی و خروجی) یا غیرمستقیم (تعدیل سود خالص) گزارش می‌شود.",
+      "مثبت بودن مستمر جریان نقد عملیاتی مطمئن‌ترین نشانه سلامت مالی و سودآوری واقعی شرکت است."
+    ],
     "url": "https://www.investopedia.com/terms/o/operating-activities.asp",
     "slug": "operating-activities",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Operating activities reflect the cash generated from day-to-day core business operations, establishing financial self-sustainability.",
+    "bottom_line_fa": "فعالیت‌های عملیاتی عایدی نقدی حاصل از عملیات محوری شرکت را نشان می‌دهد و توان خودکفایی مالی آن را اثبات می‌کند.",
+    "sections": [
+      {
+        "title_en": "Indirect Method Cash Flow from Operations Formula",
+        "title_fa": "فرمول محاسبه جریان وجوه نقد عملیاتی به روش غیرمستقیم",
+        "content_en": "Under the indirect method, Cash Flow from Operations ($CFO$) reconciles GAAP Net Income:\n$$CFO = \\text{Net Income} + \\text{Non-Cash Items} - \\Delta \\text{Working Capital}$$\n$$CFO = \\text{Net Income} + \\text{Depreciation} - \\Delta \\text{Accounts Receivable} - \\Delta \\text{Inventory} + \\Delta \\text{Accounts Payable}$$",
+        "content_fa": "در روش غیرمستقیم، جریان نقد عملیاتی با افزودن استهلاک غیرنقدی و کسر تغییرات سرمایه در گردش به دست می‌آید:\n$$CFO = \\text{Net Income} + \\text{Depreciation} - \\Delta AR - \\Delta Inv + \\Delta AP$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "مدیریت عملیات و زنجیره تأمین",
     "category_en": "Operations & Supply Chain"
   },
   {
     "id": 4138,
     "term_en": "Operating Cash Flow (OCF)",
-    "term_fa": "Operating وجه نقد جریان (OCF) (Operating Cash Flow (OCF))",
+    "term_fa": "جریان نقد عملیاتی (Operating Cash Flow - OCF)",
     "letter": "O",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Operating Cash Flow (OCF), also termed Cash Flow from Operating Activities (CFO), is the total amount of cash a business generates from its ongoing core operational business activities over a specific accounting period.",
+    "definition_fa": "جریان نقد عملیاتی (Operating Cash Flow / OCF) مجموع خالص وجه نقد تولیدشده توسط فعالیت‌های عملیاتی اصلی یک شرکت در طول دوره مالی است که کیفیت واقعی سودآوری را به دور از ترفندهای تعهدی حسابداری نشان می‌دهد.",
+    "takeaways_en": [
+      "Evaluates whether a company can generate enough cash to maintain and grow operations without external financing.",
+      "Superior to net income for credit risk analysis because it strips out non-cash accrual distortions.",
+      "Forms the starting foundation for Free Cash Flow to the Firm (FCFF = OCF - CapEx)."
+    ],
+    "takeaways_fa": [
+      "توانایی شرکت در تأمین نیازهای سرمایه‌گذاری بدون نیاز به استقراض یا افزایش سرمایه را می‌سنجد.",
+      "در تحلیل‌های اعتباری بر سود خالص ترجیح دارد زیرا اثر تحریف‌های حسابداری تعهدی را حذف می‌کند.",
+      "نقطه آغاز محاسبه جریان نقدی آزاد بنگاه است (FCFF = OCF - CapEx)."
+    ],
     "url": "https://www.investopedia.com/terms/o/operatingcashflow.asp",
     "slug": "operatingcashflow",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "OCF measures genuine operational cash generation, serving as the essential bedrock for valuation and solvency models.",
+    "bottom_line_fa": "جریان نقد عملیاتی سنجه نهایی زایش پول نقد در بنگاه است و اساس مدل‌های ارزش‌گذاری جریان نقدی آزاد به شمار می‌رود.",
+    "sections": [
+      {
+        "title_en": "Mathematical Derivation from EBITDA",
+        "title_fa": "مشتق ریاضی جریان نقد عملیاتی از معیار EBITDA",
+        "content_en": "Operating Cash Flow can be derived directly from EBITDA net of taxes and working capital movements:\n$$OCF = EBITDA - \\text{Cash Taxes Paid} - \\Delta NWC$$\nwhere $\\Delta NWC$ is the net change in operating Non-Cash Working Capital:\n$$\\Delta NWC = \\Delta \\text{Current Operating Assets} - \\Delta \\text{Current Operating Liabilities}$$",
+        "content_fa": "جریان نقد عملیاتی از کسر مالیات‌های نقدی و تغییرات سرمایه در گردش غیرنقدی از EBITDA حاصل می‌شود:\n$$OCF = EBITDA - \\text{مالیات پرداختی} - \\Delta NWC$$"
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 4139,
     "term_en": "Operating Cash Flow Margin",
-    "term_fa": "Operating وجه نقد جریان حاشیه سود / مارجین (Operating Cash Flow Margin)",
+    "term_fa": "حاشیه جریان نقد عملیاتی (Operating Cash Flow Margin)",
     "letter": "O",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The operating cash flow margin is a financial efficiency and cash-conversion ratio that measures the percentage of operating cash flow generated per dollar of revenue, revealing a company's ability to turn top-line sales into actual cash.",
+    "definition_fa": "حاشیه جریان نقد عملیاتی (Operating Cash Flow Margin) یک نسبت کارایی مالی است که درصد جریان نقد عملیاتی حاصل‌شده به ازای هر ریال از درآمد فروش را اندازه‌گیری می‌کند و توانایی بنگاه در تبدیل درآمد اسمی به وجه نقد واقعی را می‌سنجد.",
+    "takeaways_en": [
+      "Calculated by dividing Operating Cash Flow by Net Sales Revenue.",
+      "More reliable indicator of profitability quality than operating margin, as cash is harder to manipulate than accounting accruals.",
+      "A widening gap between operating margin and cash flow margin alerts to deteriorating revenue quality or aggressive recognition."
+    ],
+    "takeaways_fa": [
+      "از تقسیم جریان نقد عملیاتی بر کل درآمد فروش شرکت به دست می‌آید.",
+      "معیاری بسیار قابل‌اعتمادتر از حاشیه سود عملیاتی است، زیرا دستکاری وجه نقد دشوارتر از سود تعهدی است.",
+      "فاصله گرفتن حاشیه سود حسابداری از حاشیه جریان نقد هشداری جدی بر افت کیفیت درآمدهاست."
+    ],
     "url": "https://www.investopedia.com/terms/o/operating-cash-flow-margin.asp",
     "slug": "operating-cash-flow-margin",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Operating cash flow margin gauges cash conversion efficiency, proving how effectively sales translate into liquid operating funds.",
+    "bottom_line_fa": "حاشیه جریان نقد عملیاتی کارایی تبدیل فروش به وجه نقد را ارزیابی کرده و کیفیت سودآوری شرکت را اثبات می‌کند.",
+    "sections": [
+      {
+        "title_en": "Mathematical Formula of OCF Margin",
+        "title_fa": "فرمول محاسبه نسبت حاشیه جریان نقد عملیاتی",
+        "content_en": "The Operating Cash Flow Margin ($OCFM$) is expressed as:\n$$OCFM = \\left( \\frac{\\text{Operating Cash Flow}}{\\text{Net Revenue}} \\right) \\times 100\\%$$\nAn $OCFM > 15\\% - 20\\%$ indicates exceptional cash-conversion power and robust working capital management.",
+        "content_fa": "نسبت حاشیه جریان نقد عملیاتی برابر است با:\n$$OCFM = \\left( \\frac{\\text{جریان نقد عملیاتی}}{\\text{کل درآمد فروش}} \\right) \\times 100\\%$$\nحاشیه بالاتر از ۱۵ تا ۲۰ درصد نشانه قدرت نقدینگی فوق‌العاده و مدیریت کارآمد سرمایه در گردش است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
   {
     "id": 4140,
     "term_en": "Operating Cash Flow Ratio",
-    "term_fa": "Operating وجه نقد جریان نسبت (Operating Cash Flow Ratio)",
+    "term_fa": "نسبت جریان نقد عملیاتی به بدهی جاری (OCF Ratio)",
     "letter": "O",
     "category": "ارزش‌گذاری و تحلیل بنیادی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "The operating cash flow ratio is a stringent liquidity metric that evaluates a company's short-term solvency by calculating the number of times operating cash flow covers short-term current liabilities.",
+    "definition_fa": "نسبت جریان نقد عملیاتی به بدهی جاری (Operating Cash Flow Ratio) یک نسبت نقدینگی دقیق است که توانایی شرکت در بازپرداخت بدهی‌های کوتاه‌مدت را صرفاً از محل وجه نقد حاصل از عملیات عادی (بدون نیاز به فروش دارایی یا استقراض جدید) می‌سنجد.",
+    "takeaways_en": [
+      "Calculated by dividing annual Operating Cash Flow by average Current Liabilities.",
+      "Superior to the Current Ratio and Quick Ratio because it compares a flow of actual cash to stock of obligations.",
+      "A ratio greater than 1.0 indicates the firm can completely settle all short-term debts from current-year operating cash flows."
+    ],
+    "takeaways_fa": [
+      "از تقسیم جریان نقد عملیاتی سالانه بر بدهی‌های جاری شرکت محاسبه می‌شود.",
+      "به مراتب قوی‌تر از نسبت جاری و نسبت آنی است زیرا جریان نقد واقعی را با دیون مقایسه می‌کند.",
+      "نسبت بزرگتر از ۱٫۰ نشان می‌دهد شرکت توان بازپرداخت تمامی دیون کوتاه‌مدت خود را منحصراً از جریان نقد عملیاتی دارد."
+    ],
     "url": "https://www.investopedia.com/terms/o/ocfratio.asp",
     "slug": "ocfratio",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "The OCF ratio assesses short-term liquidity by measuring how many times operational cash flow covers current liabilities.",
+    "bottom_line_fa": "نسبت OCF ایمن‌ترین شاخص نقدینگی است که پوشش بدهی‌های جاری توسط جریان نقد عملیاتی را تضمین می‌نماید.",
+    "sections": [
+      {
+        "title_en": "Formula and Liquidity Benchmark",
+        "title_fa": "فرمول و سطوح استاندارد نسبت جریان نقد عملیاتی",
+        "content_en": "The Operating Cash Flow Ratio ($OCFR$) is formulated as:\n$$OCFR = \\frac{\\text{Operating Cash Flow}}{\\text{Current Liabilities}}$$\nThresholds:\n- **$OCFR > 1.0$**: Pristine liquidity; operating cash fully covers all immediate debt obligations.\n- **$0.5 \\le OCFR \\le 1.0$**: Adequate liquidity for mature stable cash-flow generators.\n- **$OCFR < 0.5$**: Elevated liquidity stress and refinancing dependency.",
+        "content_fa": "نسبت پوشش بدهی جاری با جریان نقد عملیاتی عبارت است از:\n$$OCFR = \\frac{\\text{جریان نقد عملیاتی}}{\\text{بدهی‌های جاری}}$$\nارقام بالاتر از ۱٫۰ نشان‌دهنده امنیت کامل مالی در برابر سررسید بدهی‌های کوتاه‌مدت است."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "ارزش‌گذاری و تحلیل بنیادی",
     "category_en": "Valuation & Fundamental Analysis"
   },
   {
     "id": 4141,
     "term_en": "Operating Cost",
-    "term_fa": "Operating هزینه (Operating Cost)",
+    "term_fa": "هزینه عملیاتی (Operating Cost / OPEX)",
     "letter": "O",
     "category": "حسابداری و صورت‌های مالی",
-    "definition_en": "",
-    "definition_fa": "",
-    "takeaways_en": [],
-    "takeaways_fa": [],
+    "definition_en": "Operating costs, commonly termed OPEX, are the ongoing expenditures and expenses incurred in the normal daily execution of core business operations, encompassing the cost of goods sold (COGS) and selling, general, and administrative (SG&A) expenses.",
+    "definition_fa": "هزینه‌های عملیاتی (Operating Cost / OPEX) کلیه مخارج مستمر و ضروری برای اداره روزمره فعالیت‌های اصلی شرکت هستند که شامل بهای تمام‌شده کالای فروش‌رفته (COGS)، هزینه‌های توزیع و فروش، حقوق و دستمزد اداری و اجاره بها می‌باشند.",
+    "takeaways_en": [
+      "Deducted directly from revenues on the income statement to determine Operating Income (EBIT).",
+      "Contrast with Capital Expenditures (CAPEX), which are long-term investments capitalized on the balance sheet and depreciated.",
+      "Evaluated using the Operating Expense Ratio (OER = Operating Costs / Revenue)."
+    ],
+    "takeaways_fa": [
+      "در صورت سود و زیان مستقیماً از درآمدها کسر شده و سود عملیاتی (EBIT) را پدید می‌آورد.",
+      "در برابر مخارج سرمایه‌ای (CAPEX) قرار دارد که در ترازنامه به عنوان دارایی ثبت شده و مستهلک می‌شوند.",
+      "با نسبت هزینه عملیاتی (OER) برای ارزیابی بهره‌وری شرکت سنجیده می‌شود."
+    ],
     "url": "https://www.investopedia.com/terms/o/operating-cost.asp",
     "slug": "operating-cost",
     "featured": false,
-    "bottom_line_en": "",
-    "bottom_line_fa": "",
-    "sections": [],
-    "deep_enriched": false,
+    "bottom_line_en": "Operating costs reflect recurring daily business expenses, serving as the critical lever for operating margin expansion.",
+    "bottom_line_fa": "هزینه‌های عملیاتی مخارج روزمره اداره بنگاه هستند که کنترل بهینه آنها عامل اصلی رشد حاشیه سود عملیاتی است.",
+    "sections": [
+      {
+        "title_en": "Operating Income and Operating Expense Ratio Formula",
+        "title_fa": "فرمول سود عملیاتی و نسبت هزینه عملیاتی (OER)",
+        "content_en": "Operating Costs ($OPEX$) combine production and operating overheads:\n$$\\text{Total Operating Costs} = \\text{COGS} + \\text{SG\\&A} + \\text{R\\&D} + \\text{Depreciation}$$\n$$\\text{Operating Income (EBIT)} = \\text{Revenue} - \\text{Total Operating Costs}$$\n$$\\text{Operating Expense Ratio (OER)} = \\left( \\frac{\\text{Operating Costs}}{\\text{Revenue}} \\right) \\times 100\\%$$",
+        "content_fa": "مجموع هزینه‌های عملیاتی از جمع بهای تمام‌شده و هزینه‌های اداری، عمومی و فروش حاصل می‌شود:\n$$\\text{EBIT} = \\text{درآمد فروش} - \\text{مجموع هزینه‌های عملیاتی}$$\nنسبت هزینه عملیاتی (OER) سهم این مخارج از درآمدهای شرکت را تعیین می‌نماید."
+      }
+    ],
+    "deep_enriched": true,
     "category_fa": "حسابداری و صورت‌های مالی",
     "category_en": "Financial Accounting & Reporting"
   },
