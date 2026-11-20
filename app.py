@@ -115,11 +115,8 @@ def _rebuild_all_cache(current_mtime: float):
         with open(DATA_FILE, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
 
-        # Temporary sqlite file to prevent locking conflict
-        temp_db = DB_FILE + ".tmp"
-        if os.path.exists(temp_db):
-            try: os.remove(temp_db)
-            except Exception: pass
+        # Temporary sqlite file with unique name to prevent locking conflict
+        temp_db = os.path.join(BASE_DIR, f"market_dict_tmp_{int(time.time()*1000)}.db")
 
         conn = sqlite3.connect(temp_db)
         cur = conn.cursor()
