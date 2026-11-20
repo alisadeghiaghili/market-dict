@@ -50,7 +50,7 @@
 | **سرور محلی توسعه** | `http://localhost:5000/api/v1` | سرویس زنده Flask + دیتابیس SQLite WAL |
 | **مستندات تعاملی Swagger** | `http://localhost:5000/docs` یا `/api/v1/docs` | رابط گرافیکی تست زنده متدها |
 | **مشخصات ماشین‌خوان OpenAPI** | `http://localhost:5000/api/v1/openapi.json` | سند رسمی OpenAPI 3.0.3 |
-| **نسخه ایستا (GitHub Pages)** | `https://alisadeghiaghili.github.io/market-dict/api/v1/` | اسنپ‌شات‌های JSON بدون سرور |
+| **نسخه ایستا** | `dist/api/v1/` (خروجی `python build_static.py`) | اسنپ‌شات‌های JSON فقط برای میزبانی داخلی؛ [DATA_NOTICE.md](DATA_NOTICE.md) را ببینید |
 
 ---
 

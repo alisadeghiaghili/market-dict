@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """
 Static Site Builder for MarketDict
-Generates a 100% static, serverless build for GitHub Pages in `dist/`.
+Generates a 100% static, serverless build in `dist/`.
+
+The build embeds the dictionary data, which is not licensed for public
+redistribution (see DATA_NOTICE.md). Host the output on internal
+infrastructure only.
 """
 
 import os
