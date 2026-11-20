@@ -23,18 +23,21 @@ def get_openapi_spec(server_url: str = "") -> dict:
                 "providing instant fuzzy search, 6,108 financial terms across 28 domains, "
                 "mathematical LaTeX formulas, deep definitions, and autocomplete suggestions.\n\n"
                 "### Features:\n"
-                "- **Zero-Authentication / Open Access**: Ready to use in any application.\n"
+                "- **Zero-Authentication**: No API key needed; deploy on an internal network only.\n"
                 "- **Full CORS Support**: Compatible with Web, Electron, Mobile, and Server environments.\n"
                 "- **Bilingual Fuzzy Search**: Intelligent scoring and Persian text normalization (`ی/ي`, `ک/ك`, ZWNJ).\n"
                 "- **Fast Autocomplete**: <5ms prefix search for interactive UI inputs.\n"
-                "- **Financial Formulas**: Pre-rendered LaTeX equations for quant & finance calculations."
+                "- **Financial Formulas**: Pre-rendered LaTeX equations for quant & finance calculations.\n\n"
+                "**Data notice:** the Apache 2.0 licence covers the API code only. Dictionary content is "
+                "derived from third-party copyrighted material, is for internal reference only, and must not "
+                "be redistributed. See DATA_NOTICE.md in the repository."
             ),
             "contact": {
                 "name": "MarketDict Team",
                 "url": "https://github.com/alisadeghiaghili/market-dict"
             },
             "license": {
-                "name": "Apache 2.0",
+                "name": "Apache 2.0 (code only; dictionary content not licensed)",
                 "url": "https://opensource.org/licenses/Apache-2.0"
             }
         },

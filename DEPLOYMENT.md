@@ -2,6 +2,8 @@
 
 This document outlines standard production deployment strategies for **MarketDict**, including Docker containerization, Systemd service setup, and Nginx reverse proxy configuration.
 
+> **Internal deployments only.** The dictionary data contains third-party copyrighted content that is not licensed for redistribution. Deploy behind authentication on an internal network, never on a public website. See [DATA_NOTICE.md](DATA_NOTICE.md).
+
 ---
 
 ## Architecture Overview

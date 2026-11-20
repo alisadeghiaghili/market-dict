@@ -52,7 +52,7 @@ All text search operations feature **intelligent text normalization** for Persia
 | **Local Development** | `http://localhost:5000/api/v1` | Live Flask server backed by SQLite (WAL mode) and in-memory indexes |
 | **Interactive Swagger UI** | `http://localhost:5000/docs` (or `/api/v1/docs`) | Interactive browser-based API explorer with "Try it out" buttons |
 | **OpenAPI 3.0.3 Spec** | `http://localhost:5000/api/v1/openapi.json` | Formal machine-readable OpenAPI specification |
-| **Serverless Static Build** | `https://alisadeghiaghili.github.io/market-dict/api/v1/` | GitHub Pages pre-rendered static snapshots |
+| **Serverless Static Build** | `dist/api/v1/` (output of `python build_static.py`) | Pre-rendered static snapshots for internal hosting only; see [DATA_NOTICE.md](DATA_NOTICE.md) |
 
 ---
 
