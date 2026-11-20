@@ -13,7 +13,7 @@ import time
 import html
 import urllib.parse
 from bs4 import BeautifulSoup
-from curl_cffi import requests as cffi_requests
+from polite_fetcher import AccessDeniedError, PoliteFetcher
 import requests as std_requests
 
 CACHE_FILE = "translation_cache.json"
@@ -266,18 +266,32 @@ def parse_investopedia_page(html_content: str) -> dict:
         "bottom_line_en": bottom_line_en.strip()
     }
 
-def enrich_term_object(term: dict, session: cffi_requests.Session) -> dict:
+def enrich_term_object(term: dict, fetcher: PoliteFetcher) -> dict:
+    """Re-fetch one term page and refresh its definition, takeaways and sections.
+
+    Args:
+        term: Dictionary entry with a ``url`` field. Updated in place.
+        fetcher: Shared polite fetcher.
+
+    Returns:
+        The same ``term`` object, updated when the page could be fetched.
+
+    Raises:
+        AccessDeniedError: If the host refuses automated access; callers must stop.
+    """
     url = term.get("url")
     if not url:
         return term
 
     print(f"\n[+] Processing: {term.get('term_en')}", flush=True)
     try:
-        resp = session.get(url, timeout=15)
-        if resp.status_code != 200:
-            print(f"  [-] Failed to fetch {url} (status {resp.status_code})", flush=True)
+        html = fetcher.get(url)
+        if html is None:
+            print(f"  [-] Failed to fetch {url}", flush=True)
             return term
-        parsed = parse_investopedia_page(resp.text)
+        parsed = parse_investopedia_page(html)
+    except AccessDeniedError:
+        raise
     except Exception as e:
         print(f"  [-] Fetch error: {e}", flush=True)
         return term
