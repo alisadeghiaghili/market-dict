@@ -11,8 +11,10 @@ financial terms across the entire dictionary, capturing complete definitions,
 key takeaways, and full Table of Contents sections.
 
 Features:
-- Stealth & Headless: Uses curl_cffi with Chrome 124 TLS fingerprinting
-  to navigate Cloudflare WAF silently and headless.
+- Transparent fetching: all requests go through polite_fetcher.PoliteFetcher,
+  which identifies the tool honestly, honours robots.txt and Crawl-delay,
+  rate-limits per host, and stops when the site refuses automated access.
+  Use of fetched content is governed by the source site's terms (DATA_NOTICE.md).
 - Full Alphabet Coverage: Crawls all 27 alphabetical subpages (#, A-Z) to
   collect all terms, not just top-level highlights.
 - In-Depth Content Extraction:
@@ -22,8 +24,9 @@ Features:
   * Table of Contents Sections (Headings, Paragraphs, Lists, FAQs)
   * The Bottom Line summary
 - Concurrent & Resilient:
-  * Multi-threaded fetching with thread-local sessions.
-  * Automatic retry with exponential backoff & polite jitter.
+  * Worker threads share one per-host rate limiter, so concurrency never
+    raises the request rate above the configured delay.
+  * Automatic retry with exponential backoff for transient errors.
   * Incremental checkpointing to save progress and resume interrupted runs.
 - Multi-format Export: JSON and CSV with UTF-8 encoding.
 =============================================================================
@@ -35,7 +38,6 @@ import re
 import time
 import json
 import csv
-import random
 import signal
 import logging
 import argparse
@@ -49,13 +51,7 @@ except ImportError:
     print("[ERROR] 'beautifulsoup4' is required. Run: pip install beautifulsoup4", file=sys.stderr)
     sys.exit(1)
 
-try:
-    from curl_cffi import requests as cffi_requests
-    HAS_CURL_CFFI = True
-except ImportError:
-    HAS_CURL_CFFI = False
-    import urllib.request
-    import urllib.error
+from polite_fetcher import AccessDeniedError, FetcherConfig, PoliteFetcher
 
 
 # Canonical mapping of all 27 letter subpages on Investopedia
@@ -99,12 +95,11 @@ class ScraperConfig:
     export_json: bool = True
     export_csv: bool = True
     fetch_details: bool = True  # Extract complete definitions, takeaways, and sections
-    workers: int = 10
-    delay_min: float = 0.2
-    delay_max: float = 0.6
+    workers: int = 2
+    min_delay: float = 3.0  # seconds between requests to the host; robots.txt Crawl-delay wins if larger
     timeout: int = 25
-    max_retries: int = 4
-    backoff_factor: float = 1.5
+    max_retries: int = 2
+    backoff_factor: float = 2.0
     max_terms: Optional[int] = None
     checkpoint_interval: int = 25
     quiet: bool = False
@@ -118,6 +113,12 @@ class InvestopediaScraper:
         self.seen_urls: Set[str] = set()
         self.interrupted: bool = False
         self.checkpoint_file = f"{self.config.output_prefix}_checkpoint.json"
+        self.fetcher = PoliteFetcher(FetcherConfig(
+            min_delay_seconds=self.config.min_delay,
+            timeout_seconds=self.config.timeout,
+            max_retries=self.config.max_retries,
+            backoff_factor=self.config.backoff_factor,
+        ))
 
         self._setup_logging()
         self._setup_signals()
@@ -140,62 +141,25 @@ class InvestopediaScraper:
         if hasattr(signal, "SIGTERM"):
             signal.signal(signal.SIGTERM, handle_signal)
 
-    def _create_session(self):
-        if HAS_CURL_CFFI:
-            return cffi_requests.Session(impersonate="chrome124")
-        return None
+    def fetch_page(self, url: str) -> Optional[str]:
+        """Fetch a page through the shared polite fetcher.
 
-    def fetch_page(self, url: str, session=None) -> Optional[str]:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-            "Accept-Language": "en-US,en;q=0.9",
-            "Referer": "https://www.google.com/",
-            "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124"',
-            "Sec-Ch-Ua-Mobile": "?0",
-            "Sec-Ch-Ua-Platform": '"Windows"',
-            "Sec-Fetch-Dest": "document",
-            "Sec-Fetch-Mode": "navigate",
-            "Sec-Fetch-Site": "cross-site",
-            "Sec-Fetch-User": "?1",
-        }
+        Args:
+            url: Absolute page URL.
 
-        retries = 0
-        backoff = 1.5
-
-        if session is None and HAS_CURL_CFFI:
-            session = self._create_session()
-
-        while retries <= self.config.max_retries and not self.interrupted:
-            try:
-                if HAS_CURL_CFFI and session:
-                    response = session.get(url, headers=headers, timeout=self.config.timeout)
-                    status_code = response.status_code
-                    text = response.text
-                else:
-                    req = urllib.request.Request(url, headers=headers)
-                    with urllib.request.urlopen(req, timeout=self.config.timeout) as resp:
-                        status_code = resp.status
-                        text = resp.read().decode("utf-8", errors="ignore")
-
-                if status_code == 200:
-                    return text
-                elif status_code in (429, 500, 502, 503, 504):
-                    self.logger.warning(f"HTTP {status_code} on {url}. Backoff {backoff:.1f}s...")
-                    time.sleep(backoff)
-                    backoff *= self.config.backoff_factor
-                    retries += 1
-                else:
-                    self.logger.error(f"HTTP {status_code} for {url}. Skipping.")
-                    return None
-
-            except Exception as e:
-                self.logger.warning(f"Network error on {url}: {e}. Retrying in {backoff:.1f}s...")
-                time.sleep(backoff)
-                backoff *= self.config.backoff_factor
-                retries += 1
-
-        return None
+        Returns:
+            The page HTML, or ``None`` if it could not be fetched. When the site
+            refuses automated access the run is stopped gracefully (progress is
+            checkpointed) instead of retrying with a disguised client.
+        """
+        if self.interrupted:
+            return None
+        try:
+            return self.fetcher.get(url)
+        except AccessDeniedError as exc:
+            self.logger.error(f"Access refused, stopping run: {exc}")
+            self.interrupted = True
+            return None
 
     def parse_letter_page(self, html: str, letter: str) -> List[Dict]:
         """
@@ -322,7 +286,6 @@ class InvestopediaScraper:
         self.logger.info(f"Targeting {len(target_letters)} letter categories: {target_letters}")
 
         master_terms = []
-        session = self._create_session()
 
         for idx, letter_key in enumerate(target_letters, 1):
             if self.interrupted:
@@ -334,7 +297,7 @@ class InvestopediaScraper:
                 continue
 
             self.logger.info(f"[{idx}/{len(target_letters)}] Crawling letter '{letter_key}' subpage: {url}")
-            html = self.fetch_page(url, session=session)
+            html = self.fetch_page(url)
             if not html:
                 self.logger.error(f"Failed to fetch letter '{letter_key}' page.")
                 continue
@@ -343,17 +306,12 @@ class InvestopediaScraper:
             self.logger.info(f" -> Found {len(letter_terms)} terms under letter '{letter_key}'.")
             master_terms.extend(letter_terms)
 
-            # Polite delay between letters
-            time.sleep(random.uniform(0.3, 0.7))
-
         self.logger.info(f"Catalog collection complete. Total unique terms found across letters: {len(master_terms)}")
         return master_terms
 
     def fetch_term_detail_worker(self, term_dict: Dict) -> Dict:
         """Worker function for concurrent term scraping."""
-        session = self._create_session()
-        time.sleep(random.uniform(self.config.delay_min, self.config.delay_max))
-        html = self.fetch_page(term_dict["url"], session=session)
+        html = self.fetch_page(term_dict["url"])
         if not html:
             term_dict["definition"] = ""
             term_dict["key_takeaways"] = []
@@ -466,7 +424,7 @@ class InvestopediaScraper:
 
 def parse_arguments() -> ScraperConfig:
     parser = argparse.ArgumentParser(
-        description="Full alphabet, graceful & stealth scraper for Investopedia Financial Terms Dictionary."
+        description="Rate-limited, robots.txt-compliant scraper for the Investopedia Financial Terms Dictionary."
     )
     parser.add_argument("--mode", choices=["all", "hub"], default="all",
                         help="Extraction mode: 'all' crawls every letter page (#, A-Z); 'hub' extracts curated landing terms.")
@@ -477,8 +435,10 @@ def parse_arguments() -> ScraperConfig:
     parser.add_argument("--format", choices=["json", "csv", "both"], default="both")
     parser.add_argument("--no-details", action="store_true",
                         help="Quick catalog mode: only extract term titles, URLs, and letters without fetching in-depth article bodies.")
-    parser.add_argument("--workers", type=int, default=10,
-                        help="Number of concurrent workers for detail scraping (default: 10).")
+    parser.add_argument("--workers", type=int, default=2,
+                        help="Number of worker threads for detail scraping (default: 2). Workers share one per-host rate limit.")
+    parser.add_argument("--min-delay", type=float, default=3.0,
+                        help="Minimum seconds between requests to the host (default: 3.0). A larger robots.txt Crawl-delay wins.")
     parser.add_argument("--max-terms", type=int, default=None,
                         help="Optional limit on total terms to scrape.")
     parser.add_argument("-q", "--quiet", action="store_true",
@@ -498,6 +458,7 @@ def parse_arguments() -> ScraperConfig:
         export_csv=args.format in ("csv", "both"),
         fetch_details=not args.no_details,
         workers=args.workers,
+        min_delay=args.min_delay,
         max_terms=args.max_terms,
         quiet=args.quiet
     )

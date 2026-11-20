@@ -25,7 +25,6 @@ import time
 import json
 import random
 import logging
-import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Dict, List, Optional, Set
 
@@ -40,11 +39,7 @@ except ImportError:
     print("[ERROR] beautifulsoup4 is required.", file=sys.stderr)
     sys.exit(1)
 
-try:
-    from curl_cffi import requests as cffi_requests
-    HAS_CURL_CFFI = True
-except ImportError:
-    HAS_CURL_CFFI = False
+from polite_fetcher import AccessDeniedError, PoliteFetcher
 
 try:
     import translators as ts
@@ -213,43 +208,25 @@ def classify_category(title: str, text: str):
     res = classify_term({"term_en": title, "definition_en": text})
     return {"fa": res["fa"], "en": res["en"]}
 
+_FETCHER = PoliteFetcher()
+
+
 def fetch_page_with_retry(url: str, session=None, max_retries=2) -> Optional[str]:
-    """Dual-layer ultra-fast fetcher using system curl.exe with curl_cffi fallback."""
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Referer": "https://www.google.com/",
-    }
+    """Fetch ``url`` through the shared :class:`polite_fetcher.PoliteFetcher`.
 
-    # 1. Primary: System curl.exe with HTTP/2 and Brotli/Gzip decompression
-    for attempt in range(max_retries):
-        try:
-            cmd = [
-                "curl.exe", "--compressed", "-s", "--max-time", "15",
-                "-H", f"User-Agent: {headers['User-Agent']}",
-                "-H", f"Accept: {headers['Accept']}",
-                "-H", f"Accept-Language: {headers['Accept-Language']}",
-                "-H", f"Referer: {headers['Referer']}",
-                url
-            ]
-            res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8", errors="replace", timeout=18)
-            if res.returncode == 0 and len(res.stdout) > 5000:
-                return res.stdout
-        except Exception:
-            pass
-        time.sleep(0.5)
+    Args:
+        url: Absolute page URL.
+        session: Ignored; kept for backward compatibility with older callers.
+        max_retries: Ignored; retries are configured on the shared fetcher.
 
-    # 2. Secondary fallback: curl_cffi with edge101 impersonation
-    if HAS_CURL_CFFI:
-        try:
-            resp = cffi_requests.get(url, impersonate="edge101", headers=headers, timeout=12)
-            if resp.status_code == 200 and len(resp.text) > 5000:
-                return resp.text
-        except Exception:
-            pass
+    Returns:
+        The page HTML, or ``None`` if it could not be fetched.
 
-    return None
+    Raises:
+        AccessDeniedError: If robots.txt disallows the URL or the host refused
+            automated access. Callers must stop instead of retrying.
+    """
+    return _FETCHER.get(url)
 
 def parse_and_enrich_term(item: Dict, session=None) -> Optional[Dict]:
     url = item["url"]
@@ -427,25 +404,13 @@ def run_pipeline(batch_limit=None, letters_filter=None):
                 rate = enriched_count / max(elapsed, 0.1)
                 logger.info(f"--- Checkpoint saved: {enriched_count} terms enriched ({rate:.2f} terms/sec) ---")
 
-            # Milestone: Every 100 enriched terms, trigger automatic GitHub Pages deployment
-            if enriched_count > 0 and (enriched_count % 100 == 0 or idx == total_to_process):
-                logger.info(f"🚀 Milestone reached: {enriched_count} terms enriched! Triggering GitHub Pages deployment...")
-                try:
-                    subprocess.run([sys.executable, "build_static.py"], check=False)
-                    subprocess.run(["git", "add", DICT_FILE], check=False)
-                    msg = f"Auto-enrichment milestone: +{enriched_count} terms enriched (Deployed to GitHub Pages)"
-                    commit_res = subprocess.run(["git", "commit", "-m", msg], capture_output=True, text=True)
-                    if commit_res.returncode == 0:
-                        push_res = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True, timeout=45)
-                        if push_res.returncode == 0:
-                            logger.info(f"✅ Milestone +{enriched_count} successfully pushed to GitHub! GitHub Pages deploying.")
-                        else:
-                            logger.warning(f"Git push warning: {push_res.stderr}")
-                    else:
-                        logger.info("Git commit: Working tree clean or nothing to commit.")
-                except Exception as ex:
-                    logger.error(f"Error during milestone deployment: {ex}")
-
+        except AccessDeniedError as e:
+            logger.error(f"Access refused, stopping pipeline: {e}")
+            with open(DICT_FILE, "w", encoding="utf-8") as f:
+                json.dump(dict_data, f, ensure_ascii=False, indent=2)
+            with open(CACHE_FILE, "w", encoding="utf-8") as f:
+                json.dump(cache, f, ensure_ascii=False, indent=2)
+            return True
         except Exception as e:
             logger.error(f"Error processing {item.get('term_en', item.get('term'))}: {e}")
 

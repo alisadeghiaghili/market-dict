@@ -8,9 +8,7 @@ Enriches dictionary items with:
 """
 
 import json
-import time
-import random
-from curl_cffi import requests
+from polite_fetcher import AccessDeniedError, PoliteFetcher
 from bs4 import BeautifulSoup
 import re
 
@@ -114,12 +112,7 @@ def enrich_database(limit=30):
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    session = requests.Session(impersonate="chrome124")
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Referer": "https://www.google.com/"
-    }
+    fetcher = PoliteFetcher()
 
     count = 0
     # Prioritize items with urls
@@ -129,9 +122,9 @@ def enrich_database(limit=30):
         if url and "sections" not in item:
             print(f"[{count+1}/{limit}] Fetching deep content: {item['term_en']} ({url})")
             try:
-                resp = session.get(url, headers=headers, timeout=20)
-                if resp.status_code == 200:
-                    parsed = parse_full_page(resp.text)
+                html = fetcher.get(url)
+                if html is not None:
+                    parsed = parse_full_page(html)
                     if parsed["takeaways_en"]:
                         item["takeaways_en"] = parsed["takeaways_en"]
                     if parsed["definition_en"]:
@@ -152,11 +145,12 @@ def enrich_database(limit=30):
                     item["deep_enriched"] = True
                     count += 1
                 else:
-                    print(f"Status {resp.status_code} on {url}")
+                    print(f"Could not fetch {url}")
+            except AccessDeniedError as e:
+                print(f"Access refused, stopping: {e}")
+                break
             except Exception as e:
                 print(f"Error on {url}: {e}")
-
-            time.sleep(random.uniform(0.6, 1.2))
 
             if count >= limit:
                 break
