@@ -25,6 +25,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Run Polite Fetcher Test Suite
+        run: |
+          python test_polite_fetcher.py
+
       - name: Run MCP Server Test Suite
         run: |
           python test_mcp_server.py
