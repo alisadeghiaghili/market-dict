@@ -537,6 +537,13 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
                 </button>
+
+                <!-- GitHub Repository Link -->
+                <a href="https://github.com/alisadeghiaghili/market-dict" target="_blank" rel="noopener noreferrer" title="سورس پروژه در گیت‌هاب (GitHub)" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </header>
@@ -750,6 +757,20 @@
         </div>
 
     </main>
+
+    <!-- Application Footer with GitHub Link -->
+    <footer class="mt-8 mb-4 py-6 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500 dark:text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+                <span class="font-en font-bold text-slate-800 dark:text-slate-200">Market<span class="text-emerald-500">Dict</span></span>
+                <span>— دانشنامه تخصصی ۶,۱۰۸ اصطلاح مالی و سرمایه‌گذاری</span>
+            </div>
+            <a href="https://github.com/alisadeghiaghili/market-dict" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition shadow-sm font-medium">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <span>مشاهده سورس پروژه در GitHub</span>
+            </a>
+        </div>
+    </footer>
 
     <!-- Comprehensive In-Depth Detail Modal -->
     <div id="detailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-2 sm:p-4 bg-slate-950/75 backdrop-blur-md transition-opacity duration-200" onclick="closeModalOnBackdrop(event)">
@@ -3825,21 +3846,81 @@
             if (activeModalTerm) toggleFavorite(activeModalTerm.id || activeModalTerm.slug);
         }
 
+        let currentTtsAudio = null;
+
         function speakTerm() {
             if (activeModalTerm) speakDirect(activeModalTerm.term_en);
         }
 
-        function speakDirect(text, event) {
+        async function speakDirect(text, event) {
             if (event) event.stopPropagation();
-            if ('speechSynthesis' in window) {
-                window.speechSynthesis.cancel();
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'en-US';
-                utterance.rate = 0.9;
-                window.speechSynthesis.speak(utterance);
-            } else {
-                showToast('تلفظ صوتی پشتیبانی نمی‌شود.');
+            if (!text) return;
+            const cleanText = text.trim();
+            if (!cleanText) return;
+
+            // Audio Stream Fallback using Google Translate TTS
+            function playAudioStream(phrase) {
+                try {
+                    if (currentTtsAudio) {
+                        currentTtsAudio.pause();
+                        currentTtsAudio.currentTime = 0;
+                    }
+                    const encoded = encodeURIComponent(phrase);
+                    const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=en&client=tw-ob&q=${encoded}`;
+                    currentTtsAudio = new Audio(url);
+                    currentTtsAudio.play().catch(e => {
+                        console.warn('Audio TTS stream error:', e);
+                        showToast('پخش تلفظ صوتی با خطا مواجه شد');
+                    });
+                } catch (e) {
+                    console.error('Audio TTS error:', e);
+                }
             }
+
+            // 1. Try Capacitor Native TextToSpeech plugin (works offline on Android natively)
+            if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.TextToSpeech) {
+                try {
+                    await window.Capacitor.Plugins.TextToSpeech.speak({
+                        text: cleanText,
+                        lang: 'en-US',
+                        rate: 0.9,
+                        pitch: 1.0,
+                        volume: 1.0,
+                        category: 'ambient',
+                    });
+                    return;
+                } catch (err) {
+                    console.warn('Capacitor TextToSpeech error, trying fallbacks:', err);
+                }
+            }
+
+            // 2. Try Web Speech API (with timeout guard for Android WebView)
+            if ('speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined') {
+                try {
+                    window.speechSynthesis.cancel();
+                    const utterance = new SpeechSynthesisUtterance(cleanText);
+                    utterance.lang = 'en-US';
+                    utterance.rate = 0.9;
+                    let spoken = false;
+                    utterance.onstart = () => { spoken = true; };
+                    utterance.onerror = (e) => {
+                        console.warn('SpeechSynthesis error:', e);
+                        playAudioStream(cleanText);
+                    };
+                    setTimeout(() => {
+                        if (!spoken && (!window.speechSynthesis.speaking && !window.speechSynthesis.pending)) {
+                            playAudioStream(cleanText);
+                        }
+                    }, 400);
+                    window.speechSynthesis.speak(utterance);
+                    return;
+                } catch (err) {
+                    console.warn('SpeechSynthesis exception:', err);
+                }
+            }
+
+            // 3. Direct Audio Stream fallback
+            playAudioStream(cleanText);
         }
 
         function copyDefFa(btn, event) {
