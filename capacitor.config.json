@@ -1,0 +1,8 @@
+{
+  "appId": "com.marketdict.app",
+  "appName": "MarketDict",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
