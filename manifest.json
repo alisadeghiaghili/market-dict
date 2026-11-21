@@ -1,0 +1,22 @@
+{
+  "name": "MarketDict - دانشنامه اصطلاحات مالی",
+  "short_name": "MarketDict",
+  "description": "دانشنامه و واژه‌نامه تخصصی دو زبانه ۶,۱۰۸ اصطلاح بازارهای مالی، سرمایه‌گذاری، بورس و اقتصاد",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#059669",
+  "orientation": "any",
+  "dir": "rtl",
+  "lang": "fa",
+  "icons": [
+    {
+      "src": "static/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "education", "books"]
+}

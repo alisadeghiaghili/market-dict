@@ -208,6 +208,17 @@ def build():
     with open(dist_404, "w", encoding="utf-8") as f:
         f.write(html_content)
 
+    # 6.1 Copy PWA Manifest and Service Worker
+    manifest_src = os.path.join(base_dir, "manifest.json")
+    if os.path.exists(manifest_src):
+        shutil.copy2(manifest_src, os.path.join(dist_dir, "manifest.json"))
+        print(f"✅ Copied PWA manifest -> {os.path.join(dist_dir, 'manifest.json')}")
+
+    sw_src = os.path.join(base_dir, "sw.js")
+    if os.path.exists(sw_src):
+        shutil.copy2(sw_src, os.path.join(dist_dir, "sw.js"))
+        print(f"✅ Copied PWA Service Worker -> {os.path.join(dist_dir, 'sw.js')}")
+
     # 7. Generate static API v1 endpoints for serverless environments (GitHub Pages)
     dist_api_v1 = os.path.join(dist_dir, "api", "v1")
     os.makedirs(dist_api_v1, exist_ok=True)

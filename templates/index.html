@@ -9,6 +9,15 @@
     <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
     <link rel="alternate icon" href="static/favicon.svg">
     
+    <!-- PWA Web App Manifest & Mobile App Configuration -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#059669">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MarketDict">
+    <link rel="apple-touch-icon" href="static/favicon.svg">
+    
     <!-- Google Fonts: Vazirmatn (FA) & Inter (EN) with Non-Blocking Asynchronous Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -536,6 +545,14 @@
                     <svg id="themeIconDark" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
+                </button>
+
+                <!-- PWA Install Button -->
+                <button id="pwaInstallBtn" onclick="installPwa()" title="نصب اپلیکیشن روی گوشی (PWA)" class="hidden p-2 sm:px-3 sm:py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs shadow-md shadow-emerald-500/20 hover:scale-105 active:scale-95 flex items-center gap-1.5 shrink-0 transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    <span class="hidden md:inline">نصب برنامه</span>
                 </button>
 
                 <!-- GitHub Repository Link -->
@@ -1147,6 +1164,51 @@
 
         let categoriesCollapsed = false;
         let alphabetCollapsed = false;
+
+        // Register PWA Service Worker for Offline Caching
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('MarketDict PWA ServiceWorker active:', reg.scope))
+                    .catch(err => console.warn('PWA SW registration failed:', err));
+            });
+        }
+
+        let deferredPwaPrompt = null;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPwaPrompt = e;
+            const btn = document.getElementById('pwaInstallBtn');
+            if (btn) btn.classList.remove('hidden');
+        });
+
+        window.addEventListener('appinstalled', () => {
+            deferredPwaPrompt = null;
+            const btn = document.getElementById('pwaInstallBtn');
+            if (btn) btn.classList.add('hidden');
+            showToast('برنامه با موفقیت به عنوان اپلیکیشن نصب شد!');
+        });
+
+        function installPwa() {
+            if (deferredPwaPrompt) {
+                deferredPwaPrompt.prompt();
+                deferredPwaPrompt.userChoice.then((choice) => {
+                    if (choice.outcome === 'accepted') {
+                        showToast('در حال نصب برنامه...');
+                    }
+                    deferredPwaPrompt = null;
+                    const btn = document.getElementById('pwaInstallBtn');
+                    if (btn) btn.classList.add('hidden');
+                });
+            } else {
+                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+                if (isIOS) {
+                    showToast('در آیفون: دکمه Share (اشتراک‌گذاری در پایین Safari) را بزنید و سپس گزینه "Add to Home Screen" را انتخاب کنید.', 7000);
+                } else {
+                    showToast('برای نصب، از منوی مرورگر خود گزینه "Install app" یا "Add to Home screen" را انتخاب کنید.', 5000);
+                }
+            }
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
