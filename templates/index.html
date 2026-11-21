@@ -60,6 +60,10 @@
     </script>
     
     <style>
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
         body {
             font-family: 'Vazirmatn', sans-serif;
         }
@@ -207,6 +211,7 @@
             box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.06);
             overflow: hidden;
             width: 100%;
+            max-width: 100%;
             transition: all 0.2s ease;
         }
         .dark .formula-window {
@@ -227,10 +232,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.65rem 1rem;
+            padding: 0.5rem 0.75rem;
             background: #f1f5f9;
             border-bottom: 1px solid #cbd5e1;
             user-select: none;
+            gap: 0.5rem;
+        }
+        @media (min-width: 640px) {
+            .formula-window-header {
+                padding: 0.65rem 1rem;
+            }
         }
         .dark .formula-window-header {
             background: #1e293b;
@@ -345,8 +356,8 @@
         /* Formula Window Body */
         .formula-window-body {
             direction: ltr !important;
-            padding: 1.5rem 1.75rem;
-            min-height: 5rem;
+            padding: 1rem 0.75rem;
+            min-height: 4.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -355,6 +366,13 @@
             overflow-y: hidden;
             scrollbar-width: thin;
             background: #ffffff;
+            max-width: 100%;
+        }
+        @media (min-width: 640px) {
+            .formula-window-body {
+                padding: 1.5rem 1.75rem;
+                min-height: 5rem;
+            }
         }
         .dark .formula-window-body {
             background: #0f172a;
@@ -404,11 +422,11 @@
 
     <!-- Top Navigation Header -->
     <header class="sticky top-0 z-40 backdrop-blur-md bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 transition-colors">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between gap-4">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
             
             <!-- Logo & Brand with Financial Icon -->
-            <div class="flex items-center gap-3 cursor-pointer" onclick="resetFilters()">
-                <div class="w-10 h-10 rounded-xl overflow-hidden shadow-md shadow-emerald-500/20 flex-shrink-0">
+            <div class="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0" onclick="resetFilters()">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl overflow-hidden shadow-md shadow-emerald-500/20 flex-shrink-0">
                     <!-- Meaningful SVG Logo: Candlesticks + Dictionary Book -->
                     <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
                         <defs>
@@ -435,17 +453,17 @@
                     </svg>
                 </div>
                 <div>
-                    <div class="flex items-center gap-2">
-                        <span class="font-en font-bold text-xl tracking-tight text-slate-900 dark:text-white">Market<span class="text-emerald-500">Dict</span></span>
+                    <div class="flex items-center gap-1.5 sm:gap-2">
+                        <span class="font-en font-bold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white">Market<span class="text-emerald-500">Dict</span></span>
                     </div>
                     <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">واژه‌نامه و دانشنامه جامع اصطلاحات مالی</p>
                 </div>
             </div>
 
             <!-- Header Quick Actions -->
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1 sm:gap-2 shrink-0">
                 <!-- Random Term Button -->
-                <button onclick="fetchRandomTerm()" title="اصطلاح تصادفی برای یادگیری" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 border border-emerald-200 dark:border-emerald-800 transition">
+                <button onclick="fetchRandomTerm()" title="اصطلاح تصادفی برای یادگیری" class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 border border-emerald-200 dark:border-emerald-800 transition">
                     <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                     </svg>
@@ -453,34 +471,34 @@
                 </button>
 
                 <!-- Bookmarks Filter Toggle -->
-                <button id="favoritesBtn" onclick="toggleFavoritesFilter()" title="اصطلاحات نشان‌شده" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
+                <button id="favoritesBtn" onclick="toggleFavoritesFilter()" title="اصطلاحات نشان‌شده" class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
                     <svg id="favIcon" class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                     </svg>
                     <span class="hidden md:inline">نشان‌شده‌ها</span>
-                    <span id="favoritesCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
+                    <span id="favoritesCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
                 </button>
 
                 <!-- Recently Viewed Terms Button -->
-                <button id="recentsBtn" onclick="openRecentsModal()" title="تاریخچه آخرین کلمات مشاهده‌شده" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
+                <button id="recentsBtn" onclick="openRecentsModal()" title="تاریخچه آخرین کلمات مشاهده‌شده" class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
                     <svg id="recentIcon" class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <span class="hidden md:inline">آخرین بازدیدها</span>
-                    <span id="recentsCountBadge" class="bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
+                    <span id="recentsCountBadge" class="bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
                 </button>
 
                 <!-- Highlights Filter Toggle -->
-                <button id="highlightsBtn" onclick="toggleHighlightsFilter()" title="اصطلاحات دارای متن هایلایت‌شده" class="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
+                <button id="highlightsBtn" onclick="toggleHighlightsFilter()" title="اصطلاحات دارای متن هایلایت‌شده" class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
                     <svg id="hlNavIcon" class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                     </svg>
                     <span class="hidden md:inline">هایلایت‌ها</span>
-                    <span id="highlightsCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
+                    <span id="highlightsCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
                 </button>
 
                 <!-- Theme Cycle Button (System Default -> Light -> Dark) -->
-                <button id="themeCycleBtn" onclick="cycleTheme()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95" title="تغییر حالت نمایش (سیستم / روشن / تاریک)">
+                <button id="themeCycleBtn" onclick="cycleTheme()" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95" title="تغییر حالت نمایش (سیستم / روشن / تاریک)">
                     <!-- System Icon (Monitor) -->
                     <svg id="themeIconSystem" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -510,10 +528,10 @@
             </p>
 
             <!-- Search Bar Component -->
-            <div class="relative max-w-2xl mx-auto mt-6">
+            <div class="relative max-w-2xl mx-auto mt-4 sm:mt-6">
                 <div class="relative flex items-center shadow-lg rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition focus-within:ring-2 focus-within:ring-emerald-500 focus-within:border-emerald-500">
-                    <div class="pr-4 pl-2 text-slate-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="pr-3 sm:pr-4 pl-2 text-slate-400">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </div>
@@ -521,11 +539,11 @@
                         type="text" 
                         id="searchInput" 
                         oninput="handleSearchInput()" 
-                        placeholder="جستجو کنید... (مثال: EBITDA، ترازنامه، اوراق قرضه، CAPM، تورم، 10-K)" 
-                        class="w-full py-4 pr-2 pl-12 text-sm sm:text-base bg-transparent text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none"
+                        placeholder="جستجو کنید... (مثال: EBITDA، ترازنامه، CAPM، تورم)" 
+                        class="w-full py-3 sm:py-4 pr-1 sm:pr-2 pl-10 sm:pl-12 text-xs sm:text-base bg-transparent text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none"
                     />
-                    <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute left-4 p-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute left-3 sm:left-4 p-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
@@ -548,7 +566,7 @@
             </div>
 
             <!-- Stats Bar -->
-            <div class="flex items-center justify-center gap-6 pt-2 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-6 pt-2 text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">
                 <div>📚 <span id="statTotalTerms" class="font-bold text-slate-700 dark:text-slate-300">۶۳۳</span> اصطلاح مالی</div>
                 <div>🏷️ <span id="statTotalCats" class="font-bold text-slate-700 dark:text-slate-300">۱۴</span> دسته تخصصی بازار سرمایه</div>
                 <div>📑 <span id="statDeepCount" class="font-bold text-emerald-600 dark:text-emerald-400">۶۳۳</span> مقاله تحلیلی جامع</div>
@@ -557,10 +575,10 @@
     </section>
 
     <!-- Main Content & Filters Area -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-6">
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pb-16 space-y-4 sm:space-y-6 w-full max-w-full">
 
         <!-- Alphabet Bar (A-Z) Filter -->
-        <div id="alphabetCard" class="bg-white dark:bg-slate-900 rounded-2xl p-3 border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200">
+        <div id="alphabetCard" class="bg-white dark:bg-slate-900 rounded-2xl p-2.5 sm:p-3 border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200 w-full max-w-full overflow-hidden">
             <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-100 dark:border-slate-800 px-1">
                 <div class="flex items-center gap-2">
                     <span class="text-sm">🔤</span>
@@ -574,30 +592,30 @@
                     </svg>
                 </button>
             </div>
-            <div id="alphabetContent" class="overflow-x-auto scrollbar-none transition-all duration-200">
-                <div class="flex items-center gap-1.5 min-w-max justify-center font-en text-sm font-semibold" id="alphabetContainer">
-                    <button onclick="setLetterFilter('ALL')" id="letter-ALL" class="letter-btn active px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-fa text-xs transition">همه حروف</button>
+            <div id="alphabetContent" class="w-full max-w-full overflow-x-auto scrollbar-none transition-all duration-200 py-1" dir="ltr">
+                <div class="flex items-center gap-1 sm:gap-1.5 min-w-max justify-start md:justify-center font-en text-xs sm:text-sm font-semibold px-1" id="alphabetContainer">
+                    <button onclick="setLetterFilter('ALL')" id="letter-ALL" class="letter-btn active px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-emerald-600 text-white font-fa text-xs transition shrink-0">همه حروف</button>
                 </div>
             </div>
         </div>
 
         <!-- Structured Responsive Categories Panel -->
-        <div id="categoriesCard" class="bg-white dark:bg-slate-900 rounded-3xl p-4 sm:p-5 border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200 space-y-3.5">
-            <div class="flex items-center justify-between gap-3 flex-wrap">
+        <div id="categoriesCard" class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200 space-y-3 sm:space-y-3.5 w-full max-w-full">
+            <div class="flex items-center justify-between gap-2.5 sm:gap-3 flex-wrap">
                 <!-- Title & Active Category Indicator -->
-                <div class="flex items-center gap-2 flex-wrap min-w-0">
+                <div class="flex items-center justify-between sm:justify-start w-full sm:w-auto gap-2 flex-wrap min-w-0">
                     <div class="flex items-center gap-2">
-                        <span class="text-lg">🗂️</span>
-                        <h3 class="text-sm font-bold text-slate-800 dark:text-slate-200">دسته‌بندی‌های تخصصی بازار سرمایه:</h3>
-                        <span id="catCountPill" class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">۲۸ دسته</span>
+                        <span class="text-base sm:text-lg">🗂️</span>
+                        <h3 class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">دسته‌بندی‌های تخصصی بازار سرمایه:</h3>
+                        <span id="catCountPill" class="text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">۲۸ دسته</span>
                     </div>
-                    <span id="activeCategoryBadge" class="hidden text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center gap-1"></span>
+                    <span id="activeCategoryBadge" class="hidden text-[10px] sm:text-[11px] font-bold px-2 sm:px-2.5 py-0.5 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center gap-1"></span>
                 </div>
 
                 <!-- Controls: Category Search + Expand/Collapse -->
-                <div class="flex items-center gap-2 mr-auto sm:mr-0">
+                <div class="flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto justify-between sm:justify-end">
                     <!-- Quick category search input -->
-                    <div class="relative w-36 sm:w-48">
+                    <div class="relative flex-1 min-w-[120px] sm:w-48 sm:flex-initial">
                         <div class="absolute inset-y-0 right-0 flex items-center pr-2.5 pointer-events-none text-slate-400">
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -613,7 +631,7 @@
                     </div>
 
                     <!-- Show More/Less Toggle -->
-                    <button onclick="toggleCategoriesExpansion()" id="catExpandBtn" class="text-xs text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="نمایش همه یا فشرده‌سازی دسته‌ها">
+                    <button onclick="toggleCategoriesExpansion()" id="catExpandBtn" class="shrink-0 text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold flex items-center gap-1 px-2 sm:px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="نمایش همه یا فشرده‌سازی دسته‌ها">
                         <span id="catExpandLabel">نمایش همه (۲۸)</span>
                         <svg id="catExpandChevron" class="w-3.5 h-3.5 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -621,7 +639,7 @@
                     </button>
 
                     <!-- Collapse Entire Panel Button -->
-                    <button onclick="toggleCategoriesCollapse()" id="catCollapseBtn" class="p-1.5 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="کوچک‌نمایی یا بستن کامل پنل دسته‌ها">
+                    <button onclick="toggleCategoriesCollapse()" id="catCollapseBtn" class="shrink-0 p-1.5 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="کوچک‌نمایی یا بستن کامل پنل دسته‌ها">
                         <svg id="catChevron" class="w-4 h-4 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
                         </svg>
@@ -630,15 +648,15 @@
             </div>
 
             <!-- Responsive Uniform Grid Layout for Category Cards (Full Names, Zero Truncation) -->
-            <div id="categoriesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-3.5 transition-all duration-200">
-                <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active p-3 sm:p-3.5 rounded-2xl text-xs font-semibold bg-emerald-600 text-white shadow-md transition-all flex flex-col justify-between border border-emerald-600 text-right h-full cursor-pointer min-h-[96px] sm:min-h-[102px]">
-                    <div class="flex items-center justify-between w-full mb-1.5">
+            <div id="categoriesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-3.5 transition-all duration-200">
+                <button onclick="setCategoryFilter('ALL')" id="cat-ALL" class="cat-pill active p-2.5 sm:p-3.5 rounded-2xl text-xs font-semibold bg-emerald-600 text-white shadow-md transition-all flex flex-col justify-between border border-emerald-600 text-right h-full cursor-pointer min-h-[82px] sm:min-h-[102px]">
+                    <div class="flex items-center justify-between w-full mb-1 sm:mb-1.5">
                         <span class="text-xl sm:text-2xl shrink-0 leading-none">🏛️</span>
-                        <span id="catTotalAllCount" class="cat-count-badge bg-emerald-700/80 text-white border border-emerald-500/40 text-[10px] sm:text-[11px] px-2.5 py-0.5 rounded-full font-bold shrink-0"></span>
+                        <span id="catTotalAllCount" class="cat-count-badge bg-emerald-700/80 text-white border border-emerald-500/40 text-[10px] sm:text-[11px] px-2 sm:px-2.5 py-0.5 rounded-full font-bold shrink-0"></span>
                     </div>
                     <div class="flex flex-col text-right w-full min-w-0">
                         <span class="cat-title-fa font-bold text-xs sm:text-sm text-white leading-snug break-words">همه دسته‌ها</span>
-                        <span class="cat-en-sub font-en text-[10px] sm:text-[11px] text-emerald-100/90 font-medium tracking-tight mt-1 leading-normal break-words">All Categories</span>
+                        <span class="cat-en-sub font-en text-[10px] sm:text-[11px] text-emerald-100/90 font-medium tracking-tight mt-0.5 sm:mt-1 leading-normal break-words">All Categories</span>
                     </div>
                 </button>
                 <!-- Dynamic Category Pills inserted here -->
@@ -646,15 +664,15 @@
         </div>
 
         <!-- Active Filter Indicator & Count -->
-        <div class="flex items-center justify-between text-xs sm:text-sm text-slate-600 dark:text-slate-400 px-1 py-1">
-            <div class="flex items-center gap-2 sm:gap-3 flex-wrap">
-                <div id="resultsCount" class="font-bold text-slate-800 dark:text-slate-200">در حال بارگذاری اصطلاحات...</div>
+        <div class="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400 px-1 py-1">
+            <div class="flex items-center gap-1.5 sm:gap-3 flex-wrap">
+                <div id="resultsCount" class="font-bold text-slate-800 dark:text-slate-200 text-xs sm:text-sm">در حال بارگذاری اصطلاحات...</div>
                 <div id="activeFiltersContainer" class="flex items-center gap-1.5 flex-wrap"></div>
-                <button onclick="toggleAllFilters()" id="toggleAllFiltersBtn" class="text-xs text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 font-medium flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="بستن یا باز کردن یکپارچه همه فیلترها">
+                <button onclick="toggleAllFilters()" id="toggleAllFiltersBtn" class="text-[11px] sm:text-xs text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 font-medium flex items-center gap-1 px-2 sm:px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="بستن یا باز کردن یکپارچه همه فیلترها">
                     <span id="toggleAllFiltersLabel">🎛️ بستن همه فیلترها</span>
                 </button>
             </div>
-            <button id="resetFiltersBtn" onclick="resetFilters()" class="hidden text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 font-semibold text-xs sm:text-sm bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-emerald-800 transition">
+            <button id="resetFiltersBtn" onclick="resetFilters()" class="hidden text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 font-semibold text-[11px] sm:text-sm bg-emerald-50 dark:bg-emerald-950/60 px-2 sm:px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-emerald-800 transition">
                 پاک کردن همه فیلترها ✕
             </button>
         </div>
@@ -709,52 +727,52 @@
     </main>
 
     <!-- Comprehensive In-Depth Detail Modal -->
-    <div id="detailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-md transition-opacity duration-200" onclick="closeModalOnBackdrop(event)">
-        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="modalCard">
+    <div id="detailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-2 sm:p-4 bg-slate-950/75 backdrop-blur-md transition-opacity duration-200" onclick="closeModalOnBackdrop(event)">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl max-w-3xl w-full max-h-[94vh] sm:max-h-[92vh] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="modalCard">
             
             <!-- Modal Header -->
-            <div class="p-5 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex items-start justify-between gap-4 bg-slate-50/70 dark:bg-slate-850/80">
-                <div class="space-y-1.5">
-                    <div class="flex items-center gap-2 flex-wrap">
-                        <span id="modalLetterBadge" class="w-7 h-7 rounded-lg bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 font-en font-bold text-xs flex items-center justify-center shrink-0 border border-emerald-200 dark:border-emerald-800/40">#</span>
-                        <span id="modalCategoryBadge" class="h-7 inline-flex items-center gap-1.5 px-3 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">دسته‌بندی</span>
-                        <span id="modalDeepBadge" class="hidden h-7 inline-flex items-center gap-1.5 px-2.5 rounded-lg text-xs font-bold bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/50">
+            <div class="p-3.5 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex items-start justify-between gap-2 sm:gap-4 bg-slate-50/70 dark:bg-slate-850/80">
+                <div class="space-y-1 min-w-0 flex-1">
+                    <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                        <span id="modalLetterBadge" class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 font-en font-bold text-xs flex items-center justify-center shrink-0 border border-emerald-200 dark:border-emerald-800/40">#</span>
+                        <span id="modalCategoryBadge" class="h-6 sm:h-7 inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 rounded-lg text-[11px] sm:text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 max-w-[180px] sm:max-w-none truncate">دسته‌بندی</span>
+                        <span id="modalDeepBadge" class="hidden h-6 sm:h-7 inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 rounded-lg text-[10px] sm:text-xs font-bold bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/50 shrink-0">
                             📑 تحلیل تخصصی چندبخشی
                         </span>
                     </div>
-                    <div class="flex items-center gap-2 pt-1">
-                        <h2 id="modalTermEn" class="font-en text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Term EN</h2>
-                        <button id="modalAudioBtn" onclick="speakTerm()" title="تلفظ صوتی انگلیسی" class="p-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/80 hover:bg-emerald-100 dark:hover:bg-emerald-900 text-emerald-600 dark:text-emerald-400 transition">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-center gap-1.5 sm:gap-2 pt-1 min-w-0">
+                        <h2 id="modalTermEn" class="font-en text-lg sm:text-2xl font-extrabold text-slate-900 dark:text-white break-words leading-tight">Term EN</h2>
+                        <button id="modalAudioBtn" onclick="speakTerm()" title="تلفظ صوتی انگلیسی" class="p-1 sm:p-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/80 hover:bg-emerald-100 dark:hover:bg-emerald-900 text-emerald-600 dark:text-emerald-400 transition shrink-0">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
                             </svg>
                         </button>
                     </div>
-                    <h3 id="modalTermFa" class="text-base sm:text-lg font-bold text-emerald-600 dark:text-emerald-400">معادل فارسی</h3>
+                    <h3 id="modalTermFa" class="text-sm sm:text-lg font-bold text-emerald-600 dark:text-emerald-400 break-words leading-snug">معادل فارسی</h3>
                 </div>
 
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1 sm:gap-2 shrink-0">
                     <!-- History Back Button -->
-                    <button id="modalBackBtn" onclick="goBackModalHistory()" class="hidden px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition text-xs font-semibold flex items-center gap-1 border border-slate-200 dark:border-slate-700" title="بازگشت به اصطلاح قبلی">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button id="modalBackBtn" onclick="goBackModalHistory()" class="hidden px-2 sm:px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition text-[11px] sm:text-xs font-semibold flex items-center gap-1 border border-slate-200 dark:border-slate-700" title="بازگشت به اصطلاح قبلی">
+                        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
-                        <span>بازگشت</span>
+                        <span class="hidden sm:inline">بازگشت</span>
                     </button>
-                    <button id="modalStarBtn" onclick="toggleCurrentModalFavorite()" class="p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 transition border border-slate-200 dark:border-slate-700">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button id="modalStarBtn" onclick="toggleCurrentModalFavorite()" class="p-1.5 sm:p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 transition border border-slate-200 dark:border-slate-700" title="نشان کردن اصطلاح">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                         </svg>
                     </button>
                     <!-- Modal Highlight Notes Button -->
-                    <button id="modalHighlightBtn" onclick="toggleModalHighlightsDrawer()" class="p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 transition border border-slate-200 dark:border-slate-700 relative flex items-center justify-center" title="مدیریت هایلایت‌های این اصطلاح">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button id="modalHighlightBtn" onclick="toggleModalHighlightsDrawer()" class="p-1.5 sm:p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 transition border border-slate-200 dark:border-slate-700 relative flex items-center justify-center" title="مدیریت هایلایت‌های این اصطلاح">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                         </svg>
                         <span id="modalHighlightCountBadge" class="hidden absolute -top-1 -right-1 text-[9px] font-bold px-1.5 py-0.2 rounded-full bg-amber-500 text-white min-w-[16px] text-center">0</span>
                     </button>
-                    <button onclick="closeModal()" class="p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-300 transition border border-slate-200 dark:border-slate-700">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button onclick="closeModal()" class="p-1.5 sm:p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-300 transition border border-slate-200 dark:border-slate-700" title="بستن (Esc)">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
@@ -762,34 +780,34 @@
             </div>
 
             <!-- Language View Mode Selector inside Modal -->
-            <div class="px-5 sm:px-6 pt-3 pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 text-xs bg-white dark:bg-slate-900">
+            <div class="px-3.5 sm:px-6 pt-2.5 pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 text-xs bg-white dark:bg-slate-900">
                 <span class="text-slate-500 dark:text-slate-400 font-medium hidden sm:inline">نحوه نمایش محتوا:</span>
-                <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl">
-                    <button id="viewModeFa" onclick="setViewMode('fa')" class="px-3 py-1 rounded-lg font-semibold text-xs transition bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-sm">
+                <div class="grid grid-cols-3 gap-1 w-full sm:w-auto sm:flex sm:items-center sm:gap-1.5 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl">
+                    <button id="viewModeFa" onclick="setViewMode('fa')" class="px-1.5 sm:px-3 py-1 rounded-lg font-semibold text-[11px] sm:text-xs transition bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-sm text-center justify-center flex items-center">
                         🇮🇷 متن فارسی
                     </button>
-                    <button id="viewModeEn" onclick="setViewMode('en')" class="px-3 py-1 rounded-lg font-semibold text-xs transition text-slate-600 dark:text-slate-300 hover:text-emerald-500">
+                    <button id="viewModeEn" onclick="setViewMode('en')" class="px-1.5 sm:px-3 py-1 rounded-lg font-semibold text-[11px] sm:text-xs transition text-slate-600 dark:text-slate-300 hover:text-emerald-500 text-center justify-center flex items-center">
                         🇬🇧 English
                     </button>
-                    <button id="viewModeBoth" onclick="setViewMode('both')" class="px-3 py-1 rounded-lg font-semibold text-xs transition text-slate-600 dark:text-slate-300 hover:text-emerald-500">
+                    <button id="viewModeBoth" onclick="setViewMode('both')" class="px-1.5 sm:px-3 py-1 rounded-lg font-semibold text-[11px] sm:text-xs transition text-slate-600 dark:text-slate-300 hover:text-emerald-500 text-center justify-center flex items-center">
                         🌐 نمای مقایسه‌ای
                     </button>
                 </div>
             </div>
 
             <!-- Highlights Drawer inside Modal -->
-            <div id="modalHighlightsDrawer" class="hidden border-b border-slate-200 dark:border-slate-800 bg-amber-50/70 dark:bg-amber-950/20 p-4 transition-all">
+            <div id="modalHighlightsDrawer" class="hidden border-b border-slate-200 dark:border-slate-800 bg-amber-50/70 dark:bg-amber-950/20 p-3 sm:p-4 transition-all">
                 <div class="flex items-center justify-between pb-2 mb-2 border-b border-amber-200/60 dark:border-amber-900/40">
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-1.5 sm:gap-2">
                         <span class="text-sm">🖍️</span>
-                        <span class="text-xs font-bold text-amber-900 dark:text-amber-300">بخش‌های هایلایت‌شده در این اصطلاح:</span>
+                        <span class="text-xs font-bold text-amber-900 dark:text-amber-300">بخش‌های هایلایت‌شده:</span>
                         <span id="modalHighlightsDrawerCount" class="text-[11px] font-bold px-2 py-0.5 rounded-md bg-amber-200 dark:bg-amber-900/60 text-amber-900 dark:text-amber-300">۰</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <button type="button" onclick="clearAllTermHighlights()" class="text-[11px] font-medium text-rose-600 dark:text-rose-400 hover:underline">
-                            پاک کردن همه هایلایت‌ها
+                            پاک کردن همه
                         </button>
-                        <button type="button" onclick="toggleModalHighlightsDrawer(false)" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 font-bold">
+                        <button type="button" onclick="toggleModalHighlightsDrawer(false)" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 font-bold text-xs">
                             ✕
                         </button>
                     </div>
@@ -799,16 +817,16 @@
             </div>
 
             <!-- Modal Content (Scrollable) -->
-            <div id="modalContentArea" class="p-5 sm:p-6 overflow-y-auto space-y-6 flex-1 bg-white dark:bg-slate-900 relative">
+            <div id="modalContentArea" class="p-3.5 sm:p-6 overflow-y-auto space-y-4 sm:space-y-6 flex-1 bg-white dark:bg-slate-900 relative pb-20 sm:pb-6">
 
                 <!-- 1. Key Takeaways Box (نکات کلیدی) -->
-                <div id="modalTakeawaysBox" class="bg-amber-500/10 dark:bg-amber-950/40 p-5 rounded-2xl border border-amber-300/80 dark:border-amber-800/60 space-y-2.5">
-                    <div class="flex items-center justify-between text-xs font-bold text-amber-900 dark:text-amber-300">
-                        <div class="flex items-center gap-2">
-                            <span class="text-base">💡</span>
-                            <span>نکات کلیدی (Key Takeaways):</span>
+                <div id="modalTakeawaysBox" class="bg-amber-500/10 dark:bg-amber-950/40 p-3.5 sm:p-5 rounded-2xl border border-amber-300/80 dark:border-amber-800/60 space-y-2 sm:space-y-2.5">
+                    <div class="flex items-center justify-between text-xs font-bold text-amber-900 dark:text-amber-300 gap-2">
+                        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                            <span class="text-sm sm:text-base shrink-0">💡</span>
+                            <span class="truncate">نکات کلیدی (Key Takeaways):</span>
                         </div>
-                        <button type="button" onclick="copyTakeaways(this, event)" class="box-copy-btn" title="کپی نکات کلیدی" aria-label="کپی نکات کلیدی">
+                        <button type="button" onclick="copyTakeaways(this, event)" class="box-copy-btn shrink-0" title="کپی نکات کلیدی" aria-label="کپی نکات کلیدی">
                             <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                             </svg>
@@ -820,15 +838,15 @@
                 </div>
 
                 <!-- 2. Core Lead Definitions Container -->
-                <div id="modalDefinitionsContainer" class="space-y-4">
+                <div id="modalDefinitionsContainer" class="space-y-3 sm:space-y-4">
                     <!-- Persian Definition Box -->
-                    <div id="boxDefFa" class="bg-emerald-50/70 dark:bg-emerald-950/40 p-5 rounded-2xl border border-emerald-200 dark:border-emerald-800/50 space-y-2">
-                        <div class="flex items-center justify-between text-xs font-bold text-emerald-800 dark:text-emerald-300">
-                            <div class="flex items-center gap-1.5">
-                                <span>🇮🇷</span>
-                                <span>تعریف و مفهوم به زبان فارسی:</span>
+                    <div id="boxDefFa" class="bg-emerald-50/70 dark:bg-emerald-950/40 p-3.5 sm:p-5 rounded-2xl border border-emerald-200 dark:border-emerald-800/50 space-y-2">
+                        <div class="flex items-center justify-between text-xs font-bold text-emerald-800 dark:text-emerald-300 gap-2">
+                            <div class="flex items-center gap-1.5 min-w-0">
+                                <span class="shrink-0">🇮🇷</span>
+                                <span class="truncate">تعریف و مفهوم به زبان فارسی:</span>
                             </div>
-                            <button type="button" onclick="copyDefFa(this, event)" class="box-copy-btn" title="کپی تعریف فارسی" aria-label="کپی تعریف فارسی">
+                            <button type="button" onclick="copyDefFa(this, event)" class="box-copy-btn shrink-0" title="کپی تعریف فارسی" aria-label="کپی تعریف فارسی">
                                 <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                                 </svg>
@@ -840,13 +858,13 @@
                     </div>
 
                     <!-- English Definition Box -->
-                    <div id="boxDefEn" class="bg-slate-100 dark:bg-slate-800/90 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 font-en" dir="ltr">
-                        <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-300">
-                            <div class="flex items-center gap-1.5">
-                                <span>🇬🇧</span>
-                                <span>Original Definition:</span>
+                    <div id="boxDefEn" class="bg-slate-100 dark:bg-slate-800/90 p-3.5 sm:p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 font-en" dir="ltr">
+                        <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-300 gap-2">
+                            <div class="flex items-center gap-1.5 min-w-0">
+                                <span class="shrink-0">🇬🇧</span>
+                                <span class="truncate">Original Definition:</span>
                             </div>
-                            <button type="button" onclick="copyDefEn(this, event)" class="box-copy-btn" title="Copy Original Definition" aria-label="Copy Original Definition">
+                            <button type="button" onclick="copyDefEn(this, event)" class="box-copy-btn shrink-0" title="Copy Original Definition" aria-label="Copy Original Definition">
                                 <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                                 </svg>
@@ -859,24 +877,24 @@
                 </div>
 
                 <!-- 3. In-Depth Sections Container -->
-                <div id="modalSectionsContainer" class="space-y-4">
+                <div id="modalSectionsContainer" class="space-y-3 sm:space-y-4">
                     <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
                         <span class="text-base">📑</span>
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white">سرفصل‌ها و توضیحات تکمیلی:</h4>
+                        <h4 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">سرفصل‌ها و توضیحات تکمیلی:</h4>
                     </div>
 
-                    <div id="modalSectionsList" class="space-y-4">
+                    <div id="modalSectionsList" class="space-y-3 sm:space-y-4">
                     </div>
                 </div>
 
                 <!-- 4. The Bottom Line (جمع‌بندی نهایی) -->
-                <div id="modalBottomLineBox" class="hidden bg-slate-900 dark:bg-slate-850 p-5 rounded-2xl border border-slate-700 dark:border-slate-700/80 space-y-2 text-white">
-                    <div class="flex items-center justify-between text-xs font-bold text-emerald-400">
-                        <div class="flex items-center gap-2">
-                            <span>🎯</span>
-                            <span>جمع‌بندی و نتیجه‌گیری نهایی (The Bottom Line):</span>
+                <div id="modalBottomLineBox" class="hidden bg-slate-900 dark:bg-slate-850 p-3.5 sm:p-5 rounded-2xl border border-slate-700 dark:border-slate-700/80 space-y-2 text-white">
+                    <div class="flex items-center justify-between text-xs font-bold text-emerald-400 gap-2">
+                        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                            <span class="shrink-0">🎯</span>
+                            <span class="truncate">جمع‌بندی و نتیجه‌گیری نهایی (The Bottom Line):</span>
                         </div>
-                        <button type="button" onclick="copyBottomLine(this, event)" class="box-copy-btn" title="کپی جمع‌بندی نهایی" aria-label="کپی جمع‌بندی نهایی">
+                        <button type="button" onclick="copyBottomLine(this, event)" class="box-copy-btn shrink-0" title="کپی جمع‌بندی نهایی" aria-label="کپی جمع‌بندی نهایی">
                             <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                             </svg>
@@ -892,16 +910,16 @@
             </div>
 
             <!-- Modal Footer -->
-            <div class="p-4 sm:p-5 bg-slate-50 dark:bg-slate-850 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
-                <a id="modalSourceLink" href="#" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5 font-medium">
+            <div class="p-3 sm:p-5 bg-slate-50 dark:bg-slate-850 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 sm:gap-3 text-xs">
+                <a id="modalSourceLink" href="#" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center justify-center sm:justify-start gap-1.5 font-medium py-1">
                     <span>مشاهده مقاله اصلی در وب‌سایت مرجع</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                     </svg>
                 </a>
 
-                <button onclick="copyModalContent()" class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-semibold flex items-center gap-1.5 transition">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button onclick="copyModalContent()" class="w-full sm:w-auto justify-center px-4 py-2 sm:py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-semibold flex items-center gap-1.5 transition">
+                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                     </svg>
                     <span id="copyBtnText">کپی متن اصطلاح</span>
@@ -912,10 +930,10 @@
     </div>
 
     <!-- Recently Viewed Terms Modal -->
-    <div id="recentsModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-md transition-opacity duration-200" onclick="closeRecentsModalOnBackdrop(event)">
-        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="recentsModalCard">
+    <div id="recentsModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-2 sm:p-4 bg-slate-950/75 backdrop-blur-md transition-opacity duration-200" onclick="closeRecentsModalOnBackdrop(event)">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl max-w-2xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col transition-all transform scale-95 opacity-0 duration-200" id="recentsModalCard">
             <!-- Modal Header -->
-            <div class="p-4 sm:p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div class="p-3.5 sm:p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
                 <div class="flex items-center gap-2.5">
                     <div class="p-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -927,7 +945,7 @@
                             <span>آخرین کلمات مشاهده‌شده</span>
                             <span id="recentsModalCountBadge" class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold">۰ واژه</span>
                         </h3>
-                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">فهرست اصطلاحاتی که اخیراً در دانشنامه مشاهده کرده‌اید</p>
+                        <p class="hidden sm:block text-xs text-slate-500 dark:text-slate-400 mt-0.5">فهرست اصطلاحاتی که اخیراً در دانشنامه مشاهده کرده‌اید</p>
                     </div>
                 </div>
 
@@ -1944,7 +1962,10 @@
             const toolbar = document.getElementById('highlightFloatingToolbar');
             if (!toolbar) return;
 
-            toolbar.style.left = `${rect.left + rect.width / 2}px`;
+            const halfWidth = 140; // approx toolbar half-width
+            const rawCenter = rect.left + rect.width / 2;
+            const clampedCenter = Math.max(halfWidth + 8, Math.min(window.innerWidth - halfWidth - 8, rawCenter));
+            toolbar.style.left = `${clampedCenter}px`;
             const topPos = rect.top - 52;
             if (topPos < 10) {
                 toolbar.style.top = `${rect.bottom + 8}px`;
@@ -2344,7 +2365,7 @@
                     if (document.getElementById(`letter-${item.letter}`)) return;
                     const btn = document.createElement('button');
                     btn.id = `letter-${item.letter}`;
-                    btn.className = 'letter-btn px-2.5 py-1 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-1';
+                    btn.className = 'letter-btn px-2 sm:px-2.5 py-1 min-w-[28px] sm:min-w-[32px] justify-center rounded-xl text-xs sm:text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-1';
                     btn.innerHTML = `<span>${item.letter}</span>`;
                     btn.onclick = () => setLetterFilter(item.letter);
                     container.appendChild(btn);
@@ -2396,7 +2417,7 @@
                     btn.dataset.index = index;
 
                     const isHiddenInCompact = !categoriesExpanded && index >= 11 && currentCategory !== item.name;
-                    btn.className = `cat-pill cat-overflow-item ${isHiddenInCompact ? 'hidden' : ''} p-3 sm:p-3.5 rounded-2xl text-xs font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-md transition-all flex flex-col justify-between text-right h-full cursor-pointer min-h-[96px] sm:min-h-[102px]`;
+                    btn.className = `cat-pill cat-overflow-item ${isHiddenInCompact ? 'hidden' : ''} p-2.5 sm:p-3.5 rounded-2xl text-xs font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-md transition-all flex flex-col justify-between text-right h-full cursor-pointer min-h-[82px] sm:min-h-[102px]`;
                     btn.innerHTML = `
                         <div class="flex items-center justify-between w-full mb-1.5">
                             <span class="text-xl sm:text-2xl shrink-0 leading-none">${item.icon || '🏷️'}</span>
@@ -2655,7 +2676,7 @@
             }
 
             const card = document.createElement('div');
-            card.className = 'group bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-400 hover:shadow-xl dark:hover:shadow-emerald-950/30 transition-all duration-200 flex flex-col justify-between cursor-pointer';
+            card.className = 'group bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-400 hover:shadow-xl dark:hover:shadow-emerald-950/30 transition-all duration-200 flex flex-col justify-between cursor-pointer';
             card.onclick = () => openModal(term);
 
             const favActive = isFavorite(term.id);
@@ -2691,10 +2712,10 @@
                     </div>
 
                     <div>
-                        <h3 class="font-en text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">
+                        <h3 class="font-en text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition break-words">
                             ${term.term_en}
                         </h3>
-                        <h4 class="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5">
+                        <h4 class="text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5 break-words">
                             ${term.term_fa}
                         </h4>
                     </div>
@@ -2704,7 +2725,7 @@
                     </p>
                 </div>
 
-                <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+                <div class="pt-3 sm:pt-4 mt-2.5 sm:mt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
                     <span class="text-slate-400 group-hover:text-emerald-500 font-medium transition flex items-center gap-1">
                         مشاهده توضیحات کامل ←
                     </span>
@@ -3253,8 +3274,8 @@
             const modalCatBadge = document.getElementById('modalCategoryBadge');
             if (modalCatBadge) {
                 modalCatBadge.innerHTML = `
-                    <span>${term.category_fa || term.category}</span>
-                    ${term.category_en ? `<span class="font-en text-[11px] text-slate-400 dark:text-slate-500 font-normal mr-1.5 pr-1.5 border-r border-slate-300 dark:border-slate-600 leading-none">${term.category_en}</span>` : ''}
+                    <span class="truncate max-w-[140px] sm:max-w-none">${term.category_fa || term.category}</span>
+                    ${term.category_en ? `<span class="hidden sm:inline font-en text-[11px] text-slate-400 dark:text-slate-500 font-normal mr-1.5 pr-1.5 border-r border-slate-300 dark:border-slate-600 leading-none">${term.category_en}</span>` : ''}
                 `;
             }
 
@@ -3574,7 +3595,8 @@
                                 <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                                 </svg>
-                                <span>فرمول محاسباتی / Mathematical Formula</span>
+                                <span class="hidden sm:inline">فرمول محاسباتی / Mathematical Formula</span>
+                                <span class="sm:hidden text-[10px]">فرمول محاسباتی</span>
                             </div>
                         </div>
                         <button onclick="copyFormula(this, event)" data-formula="${escapedRaw}" class="formula-copy-btn" title="کپی فرمول (LaTeX)" aria-label="Copy Formula">
@@ -3585,7 +3607,7 @@
                         </button>
                     </div>
                     <div class="formula-window-body">
-                        <div class="katex-math w-full" data-raw="${escapedRaw}">$$${latex}$$</div>
+                        <div class="katex-math w-full overflow-x-auto max-w-full" data-raw="${escapedRaw}">$$${latex}$$</div>
                     </div>
                 </div>
             `;
