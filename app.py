@@ -12,7 +12,7 @@ import re
 import sqlite3
 import threading
 import time
-from typing import Any
+from typing import Any, Dict
 
 from flask import Flask, jsonify, render_template, request, Response
 

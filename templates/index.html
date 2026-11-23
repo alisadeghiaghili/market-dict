@@ -4355,6 +4355,10 @@
                 // 1. Primary: Server-side Neural TTS Stream (/api/tts)
                 const playViaServerStream = () => {
                     return new Promise((resolve, reject) => {
+                        if (window.HAS_BACKEND_API === false) {
+                            reject(new Error('Static environment: no backend API'));
+                            return;
+                        }
                         const url = `/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`;
                         const audio = new Audio(url);
                         audio.playbackRate = this.rate;
@@ -4456,6 +4460,32 @@
                     } catch (synthErr) {
                         console.warn('SpeechSynthesis exception:', synthErr);
                     }
+                }
+
+                // 4. English Google Translate Stream Fallback (for static environments like GitHub Pages)
+                if (lang === 'en') {
+                    try {
+                        await new Promise((resolve, reject) => {
+                            const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=en&client=tw-ob&q=${encodeURIComponent(item.text)}`;
+                            const audio = new Audio(url);
+                            audio.playbackRate = this.rate;
+                            this._currentAudio = audio;
+                            audio.onended = () => {
+                                if (this._currentAudio === audio) this._currentAudio = null;
+                                resolve(true);
+                            };
+                            audio.onerror = (err) => {
+                                if (this._currentAudio === audio) this._currentAudio = null;
+                                reject(err);
+                            };
+                            audio.play().catch(reject);
+                        });
+                        if (token === this._playToken && this.isPlaying && !this.isPaused) {
+                            this.currentIndex++;
+                            this._playCurrentChunk(token);
+                        }
+                        return;
+                    } catch(e) {}
                 }
 
                 showToast('خطا در پخش صوتی. لطفاً اتصال اینترنت یا سرور را بررسی نمایید.');
