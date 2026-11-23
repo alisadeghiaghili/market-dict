@@ -4423,6 +4423,24 @@
 
                 // 3. Web Speech API Fallback
                 if (this.synth && typeof SpeechSynthesisUtterance !== 'undefined') {
+                    // Refresh voice lookup if voice wasn't found during initial load
+                    if (lang === 'fa' && !this.persianVoice) {
+                        const availableVoices = this.synth.getVoices() || [];
+                        this.persianVoice = availableVoices.find(v => {
+                            const l = (v.lang || '').toLowerCase();
+                            const n = (v.name || '').toLowerCase();
+                            return l === 'fa-ir' || l === 'fa' || l.startsWith('fa-') ||
+                                   n.includes('persian') || n.includes('farsi') ||
+                                   n.includes('dilara') || n.includes('farid');
+                        }) || null;
+                    }
+
+                    if (lang === 'fa' && !this.persianVoice) {
+                        showToast('مرورگر شما فاقد بسته صوتی فارسی است. لطفاً صفحه را در Microsoft Edge باز کنید یا برنامه را به صورت لوکال با دستور python app.py اجرا نمایید.', 6000);
+                        this.stop(true);
+                        return;
+                    }
+
                     try {
                         this.synth.cancel();
                         const utterance = new SpeechSynthesisUtterance(item.text);
@@ -4445,6 +4463,11 @@
                         utterance.onerror = (e) => {
                             if (e.error === 'interrupted' || e.error === 'canceled') return;
                             console.warn('SpeechSynthesis error:', e);
+                            if (e.error === 'language-unavailable' || e.error === 'voice-unavailable') {
+                                showToast('مرورگر شما فاقد صدای فارسی است. لطفاً از Microsoft Edge یا اجرای لوکال استفاده فرمایید.');
+                                this.stop(true);
+                                return;
+                            }
                             if (token === this._playToken && this.isPlaying && !this.isPaused) {
                                 this.currentIndex++;
                                 this._playCurrentChunk(token);
