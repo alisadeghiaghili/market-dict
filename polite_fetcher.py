@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Transparent, rate-limited HTTP fetcher for the enrichment pipeline.
 
@@ -23,12 +22,12 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import urllib.robotparser
+from collections.abc import Callable
 from dataclasses import dataclass, field
-from typing import Callable, Dict, Optional
 
 __all__ = [
-    "AccessDeniedError",
     "DEFAULT_USER_AGENT",
+    "AccessDeniedError",
     "FetcherConfig",
     "PoliteFetcher",
 ]
@@ -79,7 +78,7 @@ class FetcherConfig:
     max_retries: int = 2
     backoff_factor: float = 2.0
     respect_robots_txt: bool = True
-    extra_headers: Dict[str, str] = field(default_factory=dict)
+    extra_headers: dict[str, str] = field(default_factory=dict)
 
 
 class PoliteFetcher:
@@ -102,10 +101,10 @@ class PoliteFetcher:
 
     def __init__(
         self,
-        config: Optional[FetcherConfig] = None,
+        config: FetcherConfig | None = None,
         *,
         opener: Callable[..., object] = urllib.request.urlopen,
-        robots_loader: Optional[Callable[[str], Optional[urllib.robotparser.RobotFileParser]]] = None,
+        robots_loader: Callable[[str], urllib.robotparser.RobotFileParser | None] | None = None,
         clock: Callable[[], float] = time.monotonic,
         sleep: Callable[[float], None] = time.sleep,
     ) -> None:
@@ -115,8 +114,8 @@ class PoliteFetcher:
         self._clock = clock
         self._sleep = sleep
         self._lock = threading.Lock()
-        self._robots: Dict[str, Optional[urllib.robotparser.RobotFileParser]] = {}
-        self._next_allowed_at: Dict[str, float] = {}
+        self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
+        self._next_allowed_at: dict[str, float] = {}
         self._denied_hosts: set = set()
 
     @property
@@ -124,7 +123,7 @@ class PoliteFetcher:
         """Return the active configuration."""
         return self._config
 
-    def get(self, url: str) -> Optional[str]:
+    def get(self, url: str) -> str | None:
         """Fetch ``url`` and return the decoded body, or ``None`` on failure.
 
         Args:
@@ -184,7 +183,7 @@ class PoliteFetcher:
             raise ValueError(f"Only absolute http(s) URLs are supported: {url!r}")
         return f"{parts.scheme}://{parts.netloc.lower()}"
 
-    def _check_robots(self, origin: str, url: str) -> Optional[float]:
+    def _check_robots(self, origin: str, url: str) -> float | None:
         if not self._config.respect_robots_txt:
             return None
         with self._lock:
@@ -198,7 +197,7 @@ class PoliteFetcher:
         delay = parser.crawl_delay(self._config.user_agent)
         return float(delay) if delay is not None else None
 
-    def _load_robots(self, origin: str) -> Optional[urllib.robotparser.RobotFileParser]:
+    def _load_robots(self, origin: str) -> urllib.robotparser.RobotFileParser | None:
         parser = urllib.robotparser.RobotFileParser(f"{origin}/robots.txt")
         request = urllib.request.Request(
             f"{origin}/robots.txt", headers={"User-Agent": self._config.user_agent}

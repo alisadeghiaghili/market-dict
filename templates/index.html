@@ -387,6 +387,40 @@
             transform: scale(0.95);
         }
 
+        /* Persian TTS Audio Styles */
+        .box-copy-btn.audio-playing {
+            background-color: #ecfdf5 !important;
+            border-color: #10b981 !important;
+            color: #047857 !important;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25) !important;
+        }
+        .dark .box-copy-btn.audio-playing {
+            background-color: rgba(6, 78, 59, 0.5) !important;
+            border-color: #059669 !important;
+            color: #6ee7b7 !important;
+            box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.3) !important;
+        }
+        @keyframes soundwave {
+            0%, 100% { height: 4px; }
+            50% { height: 16px; }
+        }
+        .tts-wave-bar {
+            width: 3px;
+            background-color: #059669;
+            border-radius: 9999px;
+            animation: soundwave 0.8s ease-in-out infinite;
+        }
+        .dark .tts-wave-bar {
+            background-color: #34d399;
+        }
+        .tts-wave-bar:nth-child(1) { animation-delay: 0.0s; }
+        .tts-wave-bar:nth-child(2) { animation-delay: 0.2s; }
+        .tts-wave-bar:nth-child(3) { animation-delay: 0.4s; }
+        .tts-wave-paused .tts-wave-bar {
+            animation-play-state: paused;
+            opacity: 0.5;
+        }
+
         /* Formula Window Body */
         .formula-window-body {
             direction: ltr !important;
@@ -812,7 +846,14 @@
                             </svg>
                         </button>
                     </div>
-                    <h3 id="modalTermFa" class="text-xs sm:text-lg font-bold text-emerald-600 dark:text-emerald-400 break-words leading-snug">معادل فارسی</h3>
+                    <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                        <h3 id="modalTermFa" class="text-xs sm:text-lg font-bold text-emerald-600 dark:text-emerald-400 break-words leading-snug">معادل فارسی</h3>
+                        <button id="modalAudioBtnFa" data-tts-section="title" onclick="playPersianSection('title')" title="شنیدن تلفظ فارسی اصطلاح" class="p-1 sm:p-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/80 hover:bg-emerald-100 dark:hover:bg-emerald-900 text-emerald-600 dark:text-emerald-400 transition shrink-0">
+                            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="flex items-center gap-1 sm:gap-2 shrink-0">
@@ -843,18 +884,65 @@
                 </div>
             </div>
 
-            <!-- Language View Mode Selector inside Modal -->
-            <div class="px-2.5 sm:px-6 py-1.5 sm:pt-2.5 sm:pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 text-xs bg-white dark:bg-slate-900">
-                <span class="text-slate-500 dark:text-slate-400 font-medium hidden sm:inline">نحوه نمایش محتوا:</span>
-                <div class="grid grid-cols-3 gap-1 w-full sm:w-auto sm:flex sm:items-center sm:gap-1.5 bg-slate-100 dark:bg-slate-800 p-0.5 sm:p-1 rounded-xl">
-                    <button id="viewModeFa" onclick="setViewMode('fa')" class="px-1.5 sm:px-3 py-1 rounded-lg font-semibold text-[10px] sm:text-xs transition bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-sm text-center justify-center flex items-center">
-                        🇮🇷 فارسی
+            <!-- Language View Mode Selector & Full Audio Reader inside Modal -->
+            <div class="px-2.5 sm:px-6 py-1.5 sm:pt-2 sm:pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2 text-xs bg-white dark:bg-slate-900 flex-wrap">
+                <div class="flex items-center gap-2">
+                    <span class="text-slate-500 dark:text-slate-400 font-medium hidden sm:inline">نحوه نمایش محتوا:</span>
+                    <div class="grid grid-cols-3 gap-1 w-full sm:w-auto sm:flex sm:items-center sm:gap-1.5 bg-slate-100 dark:bg-slate-800 p-0.5 sm:p-1 rounded-xl">
+                        <button id="viewModeFa" onclick="setViewMode('fa')" class="px-1.5 sm:px-3 py-1 rounded-lg font-semibold text-[10px] sm:text-xs transition bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-sm text-center justify-center flex items-center">
+                            🇮🇷 فارسی
+                        </button>
+                        <button id="viewModeEn" onclick="setViewMode('en')" class="px-1.5 sm:px-3 py-1 rounded-lg font-semibold text-[10px] sm:text-xs transition text-slate-600 dark:text-slate-300 hover:text-emerald-500 text-center justify-center flex items-center">
+                            🇬🇧 English
+                        </button>
+                        <button id="viewModeBoth" onclick="setViewMode('both')" class="px-1.5 sm:px-3 py-1 rounded-lg font-semibold text-[10px] sm:text-xs transition text-slate-600 dark:text-slate-300 hover:text-emerald-500 text-center justify-center flex items-center">
+                            🌐 مقایسه‌ای
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Full Persian Audio Reader Button -->
+                <button type="button" id="btnPlayFullAudio" onclick="togglePlayFullTermAudio()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] sm:text-xs transition shadow-sm cursor-pointer shrink-0" title="خوانش صوتی کامل اصطلاح به زبان فارسی">
+                    <svg id="btnPlayFullAudioIcon" class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span id="btnPlayFullAudioText">خوانش صوتی کل متن</span>
+                </button>
+            </div>
+
+            <!-- Persistent Audio Player Bar inside Modal (shown when audio is playing or paused) -->
+            <div id="persianTtsPlayerBar" class="hidden border-b border-emerald-200 dark:border-emerald-800/80 bg-emerald-50/90 dark:bg-slate-850 px-3 sm:px-6 py-2 flex items-center justify-between gap-2.5 text-xs transition-all shadow-inner">
+                <div class="flex items-center gap-2 min-w-0">
+                    <div id="ttsEqualizerWave" class="flex items-end gap-0.5 h-4 w-4 shrink-0">
+                        <span class="tts-wave-bar"></span>
+                        <span class="tts-wave-bar"></span>
+                        <span class="tts-wave-bar"></span>
+                    </div>
+                    <div class="min-w-0">
+                        <div class="flex items-center gap-1.5 truncate">
+                            <span class="font-bold text-emerald-900 dark:text-emerald-300 text-[11px] sm:text-xs truncate" id="ttsPlayerTitle">در حال خوانش اصطلاح...</span>
+                            <span id="ttsPlayerProgressBadge" class="hidden sm:inline text-[10px] px-1.5 py-0.2 rounded-md bg-emerald-200 dark:bg-emerald-900/80 text-emerald-800 dark:text-emerald-300 font-mono font-bold">بخش ۱ از ۳</span>
+                        </div>
+                        <p class="text-[10px] text-slate-500 dark:text-slate-400 truncate max-w-xs sm:max-w-md hidden sm:block" id="ttsPlayerSnippet"></p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1.5 shrink-0">
+                    <button type="button" onclick="cyclePersianTtsSpeed()" id="ttsSpeedBtn" class="px-2 py-1 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 text-[10px] font-bold font-mono transition hover:bg-slate-50 dark:hover:bg-slate-600" title="تغییر سرعت خوانش">
+                        1.0x
                     </button>
-                    <button id="viewModeEn" onclick="setViewMode('en')" class="px-1.5 sm:px-3 py-1 rounded-lg font-semibold text-[10px] sm:text-xs transition text-slate-600 dark:text-slate-300 hover:text-emerald-500 text-center justify-center flex items-center">
-                        🇬🇧 English
+                    <button type="button" onclick="togglePersianTtsPause()" id="ttsPauseResumeBtn" class="px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-[11px] transition flex items-center gap-1" title="مکث یا ادامه">
+                        <svg id="ttsPauseResumeIcon" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span id="ttsPauseResumeText">مکث</span>
                     </button>
-                    <button id="viewModeBoth" onclick="setViewMode('both')" class="px-1.5 sm:px-3 py-1 rounded-lg font-semibold text-[10px] sm:text-xs transition text-slate-600 dark:text-slate-300 hover:text-emerald-500 text-center justify-center flex items-center">
-                        🌐 مقایسه‌ای
+                    <button type="button" onclick="stopPersianTts()" class="p-1 sm:px-2 sm:py-1 rounded-lg bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-600 dark:text-rose-300 border border-rose-200 dark:border-rose-900/60 text-[11px] font-semibold transition flex items-center gap-1" title="توقف خوانش">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"></path>
+                        </svg>
+                        <span class="hidden sm:inline">توقف</span>
                     </button>
                 </div>
             </div>
@@ -890,12 +978,20 @@
                             <span class="text-sm sm:text-base shrink-0">💡</span>
                             <span class="truncate">نکات کلیدی (Key Takeaways):</span>
                         </div>
-                        <button type="button" onclick="copyTakeaways(this, event)" class="box-copy-btn shrink-0" title="کپی نکات کلیدی" aria-label="کپی نکات کلیدی">
-                            <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                            </svg>
-                            <span>کپی</span>
-                        </button>
+                        <div class="flex items-center gap-1.5 shrink-0">
+                            <button type="button" id="btnAudioTakeaways" data-tts-section="takeaways" onclick="toggleSectionAudio('takeaways', this, event)" class="box-copy-btn shrink-0" title="پخش صوتی نکات کلیدی" aria-label="پخش صوتی نکات کلیدی">
+                                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                                </svg>
+                                <span class="audio-btn-label">شنیدن</span>
+                            </button>
+                            <button type="button" onclick="copyTakeaways(this, event)" class="box-copy-btn shrink-0" title="کپی نکات کلیدی" aria-label="کپی نکات کلیدی">
+                                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                                <span>کپی</span>
+                            </button>
+                        </div>
                     </div>
                     <ul id="modalTakeawaysList" class="space-y-2 text-xs sm:text-sm text-slate-800 dark:text-slate-200">
                     </ul>
@@ -910,12 +1006,20 @@
                                 <span class="shrink-0">🇮🇷</span>
                                 <span class="truncate">تعریف و مفهوم به زبان فارسی:</span>
                             </div>
-                            <button type="button" onclick="copyDefFa(this, event)" class="box-copy-btn shrink-0" title="کپی تعریف فارسی" aria-label="کپی تعریف فارسی">
-                                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                                </svg>
-                                <span>کپی</span>
-                            </button>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <button type="button" id="btnAudioDefFa" data-tts-section="definition" onclick="toggleSectionAudio('definition', this, event)" class="box-copy-btn shrink-0" title="پخش صوتی تعریف فارسی" aria-label="پخش صوتی تعریف فارسی">
+                                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                                    </svg>
+                                    <span class="audio-btn-label">شنیدن</span>
+                                </button>
+                                <button type="button" onclick="copyDefFa(this, event)" class="box-copy-btn shrink-0" title="کپی تعریف فارسی" aria-label="کپی تعریف فارسی">
+                                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>کپی</span>
+                                </button>
+                            </div>
                         </div>
                         <div id="modalDefFa" class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-normal whitespace-pre-line text-justify">
                         </div>
@@ -958,12 +1062,20 @@
                             <span class="shrink-0">🎯</span>
                             <span class="truncate">جمع‌بندی و نتیجه‌گیری نهایی (The Bottom Line):</span>
                         </div>
-                        <button type="button" onclick="copyBottomLine(this, event)" class="box-copy-btn shrink-0" title="کپی جمع‌بندی نهایی" aria-label="کپی جمع‌بندی نهایی">
-                            <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                            </svg>
-                            <span>کپی</span>
-                        </button>
+                        <div class="flex items-center gap-1.5 shrink-0">
+                            <button type="button" id="btnAudioBottomLine" data-tts-section="bottom_line" onclick="toggleSectionAudio('bottom_line', this, event)" class="box-copy-btn shrink-0" title="پخش صوتی جمع‌بندی نهایی" aria-label="پخش صوتی جمع‌بندی نهایی">
+                                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                                </svg>
+                                <span class="audio-btn-label">شنیدن</span>
+                            </button>
+                            <button type="button" onclick="copyBottomLine(this, event)" class="box-copy-btn shrink-0" title="کپی جمع‌بندی نهایی" aria-label="کپی جمع‌بندی نهایی">
+                                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                                <span>کپی</span>
+                            </button>
+                        </div>
                     </div>
                     <div id="modalBottomLineFa" class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
                     </div>
@@ -2845,8 +2957,15 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                             </svg>
                         </button>
-                        <button type="button" onclick="speakDirect('${term.term_en.replace(/'/g, "\\'")}', event)" title="تلفظ انگلیسی" class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button type="button" onclick="playCardPersianSpeech('${term.id}', event)" title="شنیدن صوتی تعریف فارسی" aria-label="شنیدن صوتی تعریف فارسی" class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-0.5">
+                            <span class="text-[10px] font-bold">FA</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                            </svg>
+                        </button>
+                        <button type="button" onclick="speakDirect('${term.term_en.replace(/'/g, "\\'")}', event)" title="تلفظ انگلیسی" class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-0.5">
+                            <span class="text-[10px] font-bold font-en">EN</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
                             </svg>
                         </button>
@@ -3371,6 +3490,7 @@
         }
 
         async function openModal(term, clearHistory = true) {
+            if (window.persianTTS) window.persianTTS.stop();
             activeModalTerm = term;
             if (clearHistory) {
                 modalHistory = [];
@@ -3580,7 +3700,13 @@
                     secCard.innerHTML = `
                         <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-2.5">
                             ${titleDisplay}
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1.5 sm:gap-2">
+                                <button type="button" id="btnAudioSection_${idx}" data-tts-section="section-${idx}" onclick="toggleSectionAudio('section', this, event, ${idx})" class="box-copy-btn" title="پخش صوتی این سرفصل" aria-label="پخش صوتی این سرفصل">
+                                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                                    </svg>
+                                    <span class="audio-btn-label">شنیدن</span>
+                                </button>
                                 <button type="button" onclick="copySection(${idx}, this, event)" class="box-copy-btn" title="کپی این سرفصل" aria-label="کپی این سرفصل">
                                     <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
@@ -3638,6 +3764,11 @@
 
             // Apply persistent highlights for this term
             applyHighlightsForActiveTerm();
+
+            // Refresh Persian TTS buttons UI state if playing
+            if (window.persianTTS && window.persianTTS.isPlaying) {
+                window.persianTTS._updateButtonsUI();
+            }
 
             // Trigger KaTeX math rendering across the modal card
             setTimeout(() => {
@@ -3861,6 +3992,14 @@
         }
 
         function closeModal() {
+            if (window.persianTTS) window.persianTTS.stop();
+            if (currentTtsAudio) {
+                currentTtsAudio.pause();
+                currentTtsAudio.currentTime = 0;
+            }
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
             hideSelectionToolbar();
             const popover = document.getElementById('highlightActionPopover');
             if (popover) popover.classList.add('hidden');
@@ -3908,6 +4047,603 @@
             if (activeModalTerm) toggleFavorite(activeModalTerm.id || activeModalTerm.slug);
         }
 
+        // ==========================================
+        // Persian Text-to-Speech (TTS) Intelligent Engine
+        // ==========================================
+        class PersianTtsEngine {
+            constructor() {
+                this.synth = ('speechSynthesis' in window) ? window.speechSynthesis : null;
+                this.persianVoice = null;
+                this.isPlaying = false;
+                this.isPaused = false;
+                this.queue = [];
+                this.currentIndex = 0;
+                this.currentSource = null;
+                this.currentActiveBtn = null;
+                this.totalSections = 1;
+                this.rate = parseFloat(localStorage.getItem('marketdict_tts_rate') || '1.0') || 1.0;
+                this._currentUtterance = null;
+                this._keepAliveInterval = null;
+
+                this.initVoices();
+            }
+
+            initVoices() {
+                if (!this.synth) return;
+                const updateVoice = () => {
+                    const voices = this.synth.getVoices() || [];
+                    this.persianVoice = voices.find(v => {
+                        const lang = (v.lang || '').toLowerCase();
+                        const name = (v.name || '').toLowerCase();
+                        return lang === 'fa-ir' || lang === 'fa' || lang.startsWith('fa-') ||
+                               name.includes('persian') || name.includes('farsi') ||
+                               name.includes('dilara') || name.includes('farid');
+                    }) || null;
+                };
+
+                updateVoice();
+                if (typeof this.synth.onvoiceschanged !== 'undefined') {
+                    this.synth.onvoiceschanged = updateVoice;
+                }
+            }
+
+            cleanTextForSpeech(rawText) {
+                if (!rawText) return '';
+                let text = String(rawText);
+
+                // 1. Remove KaTeX/LaTeX block & inline formulas
+                text = text.replace(/\$\$[\s\S]*?\$\$/g, ' فرمول ریاضی ');
+                text = text.replace(/\$[^\$]+\$/g, ' فرمول ');
+                text = text.replace(/\\\[[\s\S]*?\\\]/g, ' فرمول ');
+                text = text.replace(/\\\([\s\S]*?\\\)/g, ' فرمول ');
+
+                // 2. Remove HTML tags but keep anchor text
+                text = text.replace(/<a[^>]*>(.*?)<\/a>/gi, '$1');
+                text = text.replace(/<[^>]+>/g, ' ');
+
+                // 3. Remove Markdown markers & URLs
+                text = text.replace(/https?:\/\/[^\s]+/g, '');
+                text = text.replace(/[*_#`~>|]/g, '');
+
+                // 4. Normalize Arabic to Persian glyphs
+                text = text.replace(/ي/g, 'ی').replace(/ك/g, 'ک').replace(/ۀ/g, 'ه');
+                text = text.replace(/\u200c/g, ' ');
+
+                // 5. Replace bullet points & punctuation clean up
+                text = text.replace(/•/g, ' ').replace(/^[ \t]*[-*+][ \t]+/gm, ' ');
+                text = text.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+
+                // 6. Clean whitespace
+                text = text.replace(/[ \t]+/g, ' ').replace(/\n\s*\n/g, '\n').trim();
+                return text;
+            }
+
+            splitIntoSpeechChunks(text, maxLen = 140) {
+                if (!text) return [];
+                const sentenceDelim = /([.!؟?\n؛]+)/;
+                const rawParts = text.split(sentenceDelim);
+                const sentences = [];
+
+                for (let i = 0; i < rawParts.length; i += 2) {
+                    const sentence = (rawParts[i] || '').trim();
+                    const punct = (rawParts[i + 1] || '').trim();
+                    const full = (sentence + (punct ? ' ' + punct : '')).trim();
+                    if (full) {
+                        sentences.push(full);
+                    }
+                }
+
+                const chunks = [];
+                for (const s of sentences) {
+                    if (s.length <= maxLen) {
+                        chunks.push(s);
+                    } else {
+                        const clauseDelim = /([،,:]+)/;
+                        const clauseParts = s.split(clauseDelim);
+                        let cur = '';
+                        for (let j = 0; j < clauseParts.length; j++) {
+                            const p = clauseParts[j];
+                            if ((cur + p).length <= maxLen) {
+                                cur += p;
+                            } else {
+                                if (cur.trim()) chunks.push(cur.trim());
+                                if (p.length > maxLen) {
+                                    const words = p.split(/\s+/);
+                                    let sub = '';
+                                    for (const w of words) {
+                                        if ((sub + ' ' + w).length <= maxLen) {
+                                            sub = (sub + ' ' + w).trim();
+                                        } else {
+                                            if (sub.trim()) chunks.push(sub.trim());
+                                            sub = w;
+                                        }
+                                    }
+                                    cur = sub.trim();
+                                } else {
+                                    cur = p;
+                                }
+                            }
+                        }
+                        if (cur.trim()) chunks.push(cur.trim());
+                    }
+                }
+                return chunks.filter(c => c && c.trim().length > 0);
+            }
+
+            _startKeepAlive() {
+                this._stopKeepAlive();
+                this._keepAliveInterval = setInterval(() => {
+                    if (this.isPlaying && !this.isPaused && this.synth && this.synth.speaking) {
+                        this.synth.pause();
+                        this.synth.resume();
+                    }
+                }, 10000);
+            }
+
+            _stopKeepAlive() {
+                if (this._keepAliveInterval) {
+                    clearInterval(this._keepAliveInterval);
+                    this._keepAliveInterval = null;
+                }
+            }
+
+            _updateButtonsUI(activeSectionKey = null) {
+                const fullBtn = document.getElementById('btnPlayFullAudio');
+                const fullBtnText = document.getElementById('btnPlayFullAudioText');
+                const fullBtnIcon = document.getElementById('btnPlayFullAudioIcon');
+                if (fullBtn) {
+                    if (this.isPlaying && this.currentSource === 'full') {
+                        fullBtn.classList.add('bg-rose-600', 'hover:bg-rose-700');
+                        fullBtn.classList.remove('bg-emerald-600', 'hover:bg-emerald-700');
+                        if (fullBtnText) fullBtnText.innerText = 'توقف خوانش کل متن';
+                        if (fullBtnIcon) {
+                            fullBtnIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"></path>`;
+                        }
+                    } else {
+                        fullBtn.classList.remove('bg-rose-600', 'hover:bg-rose-700');
+                        fullBtn.classList.add('bg-emerald-600', 'hover:bg-emerald-700');
+                        if (fullBtnText) fullBtnText.innerText = 'خوانش صوتی کل متن';
+                        if (fullBtnIcon) {
+                            fullBtnIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>`;
+                        }
+                    }
+                }
+
+                const allSecBtns = document.querySelectorAll('[data-tts-section]');
+                allSecBtns.forEach(btn => {
+                    const secKey = btn.getAttribute('data-tts-section');
+                    const labelSpan = btn.querySelector('.audio-btn-label');
+                    if (this.isPlaying && secKey === activeSectionKey) {
+                        btn.classList.add('audio-playing');
+                        if (labelSpan) labelSpan.innerText = 'توقف';
+                    } else {
+                        btn.classList.remove('audio-playing');
+                        if (labelSpan) labelSpan.innerText = 'شنیدن';
+                    }
+                });
+            }
+
+            playSections(sections, sourceId, triggerBtn = null) {
+                this.stop(false);
+
+                if (window.currentTtsAudio) {
+                    window.currentTtsAudio.pause();
+                    window.currentTtsAudio.currentTime = 0;
+                }
+
+                this.currentSource = sourceId;
+                this.currentActiveBtn = triggerBtn;
+                this.totalSections = sections.length;
+                this.queue = [];
+
+                sections.forEach(sec => {
+                    const cleaned = this.cleanTextForSpeech(sec.rawText);
+                    if (cleaned) {
+                        const chunks = this.splitIntoSpeechChunks(cleaned);
+                        chunks.forEach((chunkText, cIdx) => {
+                            this.queue.push({
+                                text: chunkText,
+                                sectionKey: sec.sectionKey,
+                                sectionTitle: sec.sectionTitle,
+                                sectionNumber: sec.sectionNumber,
+                                chunkIndex: cIdx,
+                                totalChunks: chunks.length
+                            });
+                        });
+                    }
+                });
+
+                if (this.queue.length === 0) {
+                    showToast('متنی برای خوانش صوتی یافت نشد.');
+                    return;
+                }
+
+                this.isPlaying = true;
+                this.isPaused = false;
+                this.currentIndex = 0;
+
+                const bar = document.getElementById('persianTtsPlayerBar');
+                if (bar) bar.classList.remove('hidden');
+
+                const speedBtn = document.getElementById('ttsSpeedBtn');
+                if (speedBtn) speedBtn.innerText = `${this.rate.toFixed(1).replace('.0', '')}x`;
+
+                const pauseResumeText = document.getElementById('ttsPauseResumeText');
+                if (pauseResumeText) pauseResumeText.innerText = 'مکث';
+
+                const pauseResumeIcon = document.getElementById('ttsPauseResumeIcon');
+                if (pauseResumeIcon) {
+                    pauseResumeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>`;
+                }
+
+                this._playCurrentChunk();
+            }
+
+            async _playCurrentChunk() {
+                if (!this.isPlaying || this.isPaused) return;
+
+                if (this.currentIndex >= this.queue.length) {
+                    this.stop(true);
+                    showToast('خوانش صوتی اصطلاح به پایان رسید.');
+                    return;
+                }
+
+                const item = this.queue[this.currentIndex];
+
+                this._updateButtonsUI(item.sectionKey);
+
+                const titleEl = document.getElementById('ttsPlayerTitle');
+                if (titleEl) titleEl.innerText = item.sectionTitle || 'در حال خوانش اصطلاح...';
+
+                const badgeEl = document.getElementById('ttsPlayerProgressBadge');
+                if (badgeEl) {
+                    if (this.totalSections > 1) {
+                        badgeEl.innerText = `بخش ${item.sectionNumber} از ${this.totalSections}`;
+                        badgeEl.classList.remove('hidden');
+                    } else {
+                        badgeEl.classList.add('hidden');
+                    }
+                }
+
+                const snippetEl = document.getElementById('ttsPlayerSnippet');
+                if (snippetEl) snippetEl.innerText = item.text;
+
+                const wave = document.getElementById('ttsEqualizerWave');
+                if (wave) wave.classList.remove('tts-wave-paused');
+
+                // 1. Capacitor Native TTS on Android
+                if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.TextToSpeech) {
+                    try {
+                        await window.Capacitor.Plugins.TextToSpeech.speak({
+                            text: item.text,
+                            lang: 'fa-IR',
+                            rate: this.rate,
+                            pitch: 1.0,
+                            volume: 1.0,
+                            category: 'ambient',
+                        });
+                        if (this.isPlaying && !this.isPaused) {
+                            this.currentIndex++;
+                            this._playCurrentChunk();
+                        }
+                        return;
+                    } catch (capErr) {
+                        console.warn('Capacitor TTS error, falling back to Web Speech:', capErr);
+                    }
+                }
+
+                // 2. Web Speech API
+                if (this.synth && typeof SpeechSynthesisUtterance !== 'undefined') {
+                    try {
+                        this.synth.cancel();
+                        const utterance = new SpeechSynthesisUtterance(item.text);
+                        utterance.lang = 'fa-IR';
+                        if (this.persianVoice) utterance.voice = this.persianVoice;
+                        utterance.rate = this.rate;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => {
+                            if (this.isPlaying && !this.isPaused) {
+                                this.currentIndex++;
+                                this._playCurrentChunk();
+                            }
+                        };
+
+                        utterance.onerror = (e) => {
+                            if (e.error === 'interrupted' || e.error === 'canceled') return;
+                            console.warn('SpeechSynthesis error:', e);
+                            if (this.isPlaying && !this.isPaused) {
+                                this.currentIndex++;
+                                this._playCurrentChunk();
+                            }
+                        };
+
+                        this._currentUtterance = utterance;
+                        this._startKeepAlive();
+                        this.synth.speak(utterance);
+                        return;
+                    } catch (synthErr) {
+                        console.warn('SpeechSynthesis exception:', synthErr);
+                    }
+                }
+
+                showToast('مرورگر شما از سیستم تبدیل متن به گفتار صوتی پشتیبانی نمی‌کند.');
+                this.stop(true);
+            }
+
+            pause() {
+                if (!this.isPlaying || this.isPaused) return;
+                this.isPaused = true;
+                if (this.synth) this.synth.pause();
+
+                const pauseResumeText = document.getElementById('ttsPauseResumeText');
+                if (pauseResumeText) pauseResumeText.innerText = 'ادامه';
+
+                const pauseResumeIcon = document.getElementById('ttsPauseResumeIcon');
+                if (pauseResumeIcon) {
+                    pauseResumeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>`;
+                }
+
+                const wave = document.getElementById('ttsEqualizerWave');
+                if (wave) wave.classList.add('tts-wave-paused');
+            }
+
+            resume() {
+                if (!this.isPlaying || !this.isPaused) return;
+                this.isPaused = false;
+
+                const pauseResumeText = document.getElementById('ttsPauseResumeText');
+                if (pauseResumeText) pauseResumeText.innerText = 'مکث';
+
+                const pauseResumeIcon = document.getElementById('ttsPauseResumeIcon');
+                if (pauseResumeIcon) {
+                    pauseResumeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>`;
+                }
+
+                const wave = document.getElementById('ttsEqualizerWave');
+                if (wave) wave.classList.remove('tts-wave-paused');
+
+                if (this.synth) {
+                    this.synth.resume();
+                } else {
+                    this._playCurrentChunk();
+                }
+            }
+
+            stop(resetUI = true) {
+                this.isPlaying = false;
+                this.isPaused = false;
+                this.queue = [];
+                this.currentIndex = 0;
+                this.currentSource = null;
+                this.currentActiveBtn = null;
+                this._stopKeepAlive();
+
+                if (this.synth) {
+                    this.synth.cancel();
+                }
+
+                if (resetUI) {
+                    const bar = document.getElementById('persianTtsPlayerBar');
+                    if (bar) bar.classList.add('hidden');
+
+                    const wave = document.getElementById('ttsEqualizerWave');
+                    if (wave) wave.classList.remove('tts-wave-paused');
+
+                    this._updateButtonsUI(null);
+                }
+            }
+
+            cycleSpeed() {
+                const speeds = [1.0, 1.25, 1.5, 0.85];
+                const currentIdx = speeds.indexOf(this.rate);
+                const nextIdx = (currentIdx + 1) % speeds.length;
+                this.rate = speeds[nextIdx];
+                localStorage.setItem('marketdict_tts_rate', String(this.rate));
+
+                const speedBtn = document.getElementById('ttsSpeedBtn');
+                if (speedBtn) speedBtn.innerText = `${this.rate.toFixed(1).replace('.0', '')}x`;
+                showToast(`سرعت خوانش صوتی: ${this.rate}x`);
+
+                if (this.isPlaying && !this.isPaused) {
+                    this._playCurrentChunk();
+                }
+            }
+
+            playFullTerm(term) {
+                if (!term) return;
+                const sections = [];
+                let secNum = 1;
+
+                if (term.term_fa) {
+                    sections.push({
+                        sectionKey: 'title',
+                        sectionTitle: 'عنوان: ' + term.term_fa,
+                        sectionNumber: secNum++,
+                        rawText: `اصطلاح: ${term.term_fa}. معادل انگلیسی: ${term.term_en || ''}`
+                    });
+                }
+
+                const takeaways = term.takeaways_fa || [];
+                if (takeaways.length > 0) {
+                    sections.push({
+                        sectionKey: 'takeaways',
+                        sectionTitle: 'نکات کلیدی',
+                        sectionNumber: secNum++,
+                        rawText: 'نکات کلیدی. ' + takeaways.join('. ')
+                    });
+                }
+
+                const defFa = term.definition_fa || '';
+                if (defFa) {
+                    sections.push({
+                        sectionKey: 'definition',
+                        sectionTitle: 'تعریف و مفهوم',
+                        sectionNumber: secNum++,
+                        rawText: 'تعریف و مفهوم اصطلاح. ' + defFa
+                    });
+                }
+
+                const secList = term.sections || [];
+                secList.forEach((sec, idx) => {
+                    const title = sec.title_fa || sec.title_en || `سرفصل ${idx + 1}`;
+                    const paras = (sec.paragraphs_fa || []).join(' ');
+                    const items = (sec.items_fa || []).join('. ');
+                    const fullSecText = (paras + ' ' + items).trim();
+                    if (fullSecText) {
+                        sections.push({
+                            sectionKey: `section-${idx}`,
+                            sectionTitle: title,
+                            sectionNumber: secNum++,
+                            rawText: `سرفصل: ${title}. ${fullSecText}`
+                        });
+                    }
+                });
+
+                const blFa = term.bottom_line_fa || '';
+                if (blFa) {
+                    sections.push({
+                        sectionKey: 'bottom_line',
+                        sectionTitle: 'جمع‌بندی نهایی',
+                        sectionNumber: secNum++,
+                        rawText: 'جمع‌بندی و نتیجه‌گیری نهایی. ' + blFa
+                    });
+                }
+
+                this.playSections(sections, 'full');
+            }
+
+            playSection(term, sectionType, sectionIdx = null, btn = null) {
+                if (!term) return;
+                const sections = [];
+                if (sectionType === 'title') {
+                    sections.push({
+                        sectionKey: 'title',
+                        sectionTitle: 'عنوان اصطلاح',
+                        sectionNumber: 1,
+                        rawText: term.term_fa
+                    });
+                } else if (sectionType === 'takeaways') {
+                    const takeaways = term.takeaways_fa || [];
+                    if (takeaways.length > 0) {
+                        sections.push({
+                            sectionKey: 'takeaways',
+                            sectionTitle: 'نکات کلیدی',
+                            sectionNumber: 1,
+                            rawText: 'نکات کلیدی: ' + takeaways.join('. ')
+                        });
+                    }
+                } else if (sectionType === 'definition') {
+                    const defFa = term.definition_fa || '';
+                    if (defFa) {
+                        sections.push({
+                            sectionKey: 'definition',
+                            sectionTitle: 'تعریف و مفهوم فارسی',
+                            sectionNumber: 1,
+                            rawText: defFa
+                        });
+                    }
+                } else if (sectionType === 'section' && sectionIdx !== null) {
+                    const sec = (term.sections || [])[sectionIdx];
+                    if (sec) {
+                        const title = sec.title_fa || sec.title_en || `سرفصل ${sectionIdx + 1}`;
+                        const paras = (sec.paragraphs_fa || []).join(' ');
+                        const items = (sec.items_fa || []).join('. ');
+                        sections.push({
+                            sectionKey: `section-${sectionIdx}`,
+                            sectionTitle: title,
+                            sectionNumber: 1,
+                            rawText: (title ? title + '. ' : '') + paras + ' ' + items
+                        });
+                    }
+                } else if (sectionType === 'bottom_line') {
+                    const blFa = term.bottom_line_fa || '';
+                    if (blFa) {
+                        sections.push({
+                            sectionKey: 'bottom_line',
+                            sectionTitle: 'جمع‌بندی نهایی',
+                            sectionNumber: 1,
+                            rawText: 'جمع‌بندی نهایی: ' + blFa
+                        });
+                    }
+                }
+
+                if (sections.length > 0) {
+                    const sourceKey = sectionIdx !== null ? `section-${sectionIdx}` : sectionType;
+                    this.playSections(sections, sourceKey, btn);
+                } else {
+                    showToast('متن صوتی برای این بخش در دسترس نیست.');
+                }
+            }
+        }
+
+        // Initialize Global Persian TTS Engine
+        const persianTTS = new PersianTtsEngine();
+        window.persianTTS = persianTTS;
+
+        function togglePlayFullTermAudio() {
+            if (!activeModalTerm) return;
+            if (persianTTS.isPlaying && persianTTS.currentSource === 'full') {
+                persianTTS.stop();
+            } else {
+                persianTTS.playFullTerm(activeModalTerm);
+            }
+        }
+
+        function toggleSectionAudio(type, btn, event, sectionIdx = null) {
+            if (event) event.stopPropagation();
+            if (!activeModalTerm) return;
+            const sourceKey = sectionIdx !== null ? `section-${sectionIdx}` : type;
+            if (persianTTS.isPlaying && persianTTS.currentSource === sourceKey) {
+                persianTTS.stop();
+            } else {
+                persianTTS.playSection(activeModalTerm, type, sectionIdx, btn);
+            }
+        }
+
+        function playPersianSection(type, sectionIdx = null) {
+            toggleSectionAudio(type, null, null, sectionIdx);
+        }
+
+        function togglePersianTtsPause() {
+            if (!persianTTS) return;
+            if (persianTTS.isPaused) {
+                persianTTS.resume();
+            } else {
+                persianTTS.pause();
+            }
+        }
+
+        function stopPersianTts() {
+            if (persianTTS) {
+                persianTTS.stop();
+            }
+        }
+
+        function cyclePersianTtsSpeed() {
+            if (persianTTS) {
+                persianTTS.cycleSpeed();
+            }
+        }
+
+        function playCardPersianSpeech(termId, event) {
+            if (event) event.stopPropagation();
+            const term = (window.__renderedTerms && window.__renderedTerms[String(termId)]) ||
+                         (activeModalTerm && (activeModalTerm.id == termId || activeModalTerm.slug == termId) ? activeModalTerm : null);
+            if (!term) return;
+            if (persianTTS.isPlaying && persianTTS.currentSource === `card-${termId}`) {
+                persianTTS.stop();
+                return;
+            }
+            const text = `${term.term_fa}؛ ${term.definition_fa || ''}`;
+            persianTTS.playSections([{
+                sectionKey: `card-${termId}`,
+                sectionTitle: term.term_fa,
+                sectionNumber: 1,
+                rawText: text
+            }], `card-${termId}`);
+        }
+
         let currentTtsAudio = null;
 
         function speakTerm() {
@@ -3916,6 +4652,9 @@
 
         async function speakDirect(text, event) {
             if (event) event.stopPropagation();
+            if (window.persianTTS && window.persianTTS.isPlaying) {
+                window.persianTTS.stop();
+            }
             if (!text) return;
             const cleanText = text.trim();
             if (!cleanText) return;

@@ -17,5 +17,7 @@ market_dict.db*
 node_modules/
 android/
 *.apk
+.coverage
+coverage.xml
 
 
