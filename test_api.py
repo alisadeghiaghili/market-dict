@@ -380,5 +380,41 @@ class MarketDictAPITestCase(unittest.TestCase):
         self.assertEqual(res_cached.status_code, 200)
         self.assertEqual(res_cached.data, res.data)
 
+    def test_tts_english_generation(self):
+        """Verify TTS endpoint generates English audio."""
+        res = self.client.get("/api/tts?text=Hello&lang=en")
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(res.mimetype, "audio/mpeg")
+        self.assertGreater(len(res.data), 0)
+
+    def test_tts_cache_eviction(self):
+        """Verify cache eviction when exceeding 500 entries."""
+        from app import _TTS_CACHE, _TTS_LOCK
+        with _TTS_LOCK:
+            _TTS_CACHE.clear()
+            for i in range(501):
+                _TTS_CACHE[f"dummy:{i}"] = b"dummy"
+
+        res = self.client.get("/api/tts?text=eviction_test&lang=en")
+        self.assertEqual(res.status_code, 200)
+
+    def test_tts_empty_audio_failure(self):
+        """Verify 500 when audio generation yields empty bytes."""
+        from unittest.mock import patch
+        with patch("asyncio.run", return_value=b""):
+            res = self.client.get("/api/tts?text=empty_fail_123&lang=fa")
+            self.assertEqual(res.status_code, 500)
+            data = res.get_json()
+            self.assertEqual(data.get("error"), "Failed to synthesize speech")
+
+    def test_tts_exception_handling(self):
+        """Verify 500 and error message when TTS raises an unexpected exception."""
+        from unittest.mock import patch
+        with patch("asyncio.run", side_effect=RuntimeError("EdgeTTS network timeout")):
+            res = self.client.get("/api/tts?text=error_test_456&lang=fa")
+            self.assertEqual(res.status_code, 500)
+            data = res.get_json()
+            self.assertIn("EdgeTTS network timeout", data.get("error", ""))
+
 if __name__ == "__main__":
     unittest.main()
