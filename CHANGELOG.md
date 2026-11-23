@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.1.1] - 2026-11-23
+
+### Added
+- **Comprehensive Multilingual Setup & Deployment Documentation**:
+  - Authored detailed Persian deployment and setup guide ([`SETUP_FA.md`](SETUP_FA.md)) covering local dev, Docker containerization, production Systemd + Gunicorn + Nginx with Let's Encrypt SSL, MCP setup, offline PWA builds, Capacitor Android APK compilation, environment variables, and troubleshooting.
+  - Authored comprehensive English technical setup guide ([`SETUP_EN.md`](SETUP_EN.md)).
+  - Added unified multilingual setup hub and quickstart cheatsheet ([`SETUP.md`](SETUP.md)).
+  - Updated [`README.md`](README.md) and [`DEPLOYMENT.md`](DEPLOYMENT.md) with setup guide badges, quickstart navigation, and verified live health metrics (6,108 terms across 28 active taxonomy categories).
+- **Neural Text-to-Speech (TTS) Streaming Service**:
+  - Implemented high-quality neural voice streaming endpoint `/api/tts` in `app.py` supporting Persian (`fa-IR-DilaraNeural`) and English (`en-US-AriaNeural`).
+  - Added thread-safe in-memory LRU audio caching with automatic eviction.
+  - Added `edge-tts>=7.0.0` dependency to `requirements.txt`.
+  - Added automated test cases for neural TTS audio generation and cache retention in `test_api.py`.
+
+### Improved
+- **SonarQube Quality Gate & Compliance**:
+  - Expanded offline test suites to 72 automated test cases across 7 test suites (`test_api.py`, `test_categories_engine.py`, `test_enrich_sharpe.py`, `test_linker.py`, `test_mcp_server.py`, `test_polite_fetcher.py`, `test_tr_link.py`).
+  - Refined type annotations and eliminated SonarQube code smells across core backend modules.
+
+---
+
 ## [1.1.0] - 2026-11-23
 
 ### Added
@@ -76,6 +97,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+[1.1.1]: https://github.com/alisadeghiaghili/market-dict/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/alisadeghiaghili/market-dict/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/alisadeghiaghili/market-dict/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/alisadeghiaghili/market-dict/releases/tag/v1.0.0

@@ -213,7 +213,7 @@ curl -s http://localhost:5000/api/v1/health
 ```json
 {
   "status": "healthy",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "uptime_seconds": 12.4,
   "total_terms": 6108,
   "database": "connected"

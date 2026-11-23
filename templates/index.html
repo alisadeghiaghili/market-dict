@@ -1032,12 +1032,20 @@
                                 <span class="shrink-0">🇬🇧</span>
                                 <span class="truncate">Original Definition:</span>
                             </div>
-                            <button type="button" onclick="copyDefEn(this, event)" class="box-copy-btn shrink-0" title="Copy Original Definition" aria-label="Copy Original Definition">
-                                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                                </svg>
-                                <span>Copy</span>
-                            </button>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <button type="button" id="btnAudioDefEn" data-tts-section="definition_en" onclick="toggleSectionAudio('definition_en', this, event)" class="box-copy-btn shrink-0" title="Listen to English definition" aria-label="Listen to English definition">
+                                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                                    </svg>
+                                    <span class="audio-btn-label">Listen</span>
+                                </button>
+                                <button type="button" onclick="copyDefEn(this, event)" class="box-copy-btn shrink-0" title="Copy Original Definition" aria-label="Copy Original Definition">
+                                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
                         </div>
                         <div id="modalDefEn" class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-line text-justify font-en" dir="ltr">
                         </div>
@@ -3430,6 +3438,11 @@
                 btnBoth.classList.add('bg-white', 'dark:bg-slate-700', 'text-emerald-600', 'dark:text-emerald-400', 'shadow-sm');
             }
 
+            if (window.persianTTS && window.persianTTS.isPlaying) {
+                window.persianTTS.stop();
+            }
+            updateTtsModeUI();
+
             if (activeModalTerm) {
                 renderModalBody(activeModalTerm);
             }
@@ -3496,6 +3509,7 @@
                 modalHistory = [];
             }
             updateModalBackBtn();
+            updateTtsModeUI();
             addToRecentTerms(term);
 
             document.getElementById('modalTermEn').innerText = term.term_en;
@@ -4048,12 +4062,14 @@
         }
 
         // ==========================================
-        // Persian Text-to-Speech (TTS) Intelligent Engine
+        // Bilingual Neural Text-to-Speech (TTS) Intelligent Engine
+        // Powered by /api/tts (Neural edge-tts) with Web Speech & Capacitor Fallbacks
         // ==========================================
         class PersianTtsEngine {
             constructor() {
                 this.synth = ('speechSynthesis' in window) ? window.speechSynthesis : null;
                 this.persianVoice = null;
+                this.englishVoice = null;
                 this.isPlaying = false;
                 this.isPaused = false;
                 this.queue = [];
@@ -4063,7 +4079,9 @@
                 this.totalSections = 1;
                 this.rate = parseFloat(localStorage.getItem('marketdict_tts_rate') || '1.0') || 1.0;
                 this._currentUtterance = null;
+                this._currentAudio = null;
                 this._keepAliveInterval = null;
+                this._playToken = 0;
 
                 this.initVoices();
             }
@@ -4079,6 +4097,12 @@
                                name.includes('persian') || name.includes('farsi') ||
                                name.includes('dilara') || name.includes('farid');
                     }) || null;
+
+                    this.englishVoice = voices.find(v => {
+                        const lang = (v.lang || '').toLowerCase();
+                        const name = (v.name || '').toLowerCase();
+                        return lang.startsWith('en') && (name.includes('aria') || name.includes('natural') || name.includes('google') || name.includes('zira') || name.includes('samantha'));
+                    }) || voices.find(v => (v.lang || '').toLowerCase().startsWith('en')) || null;
                 };
 
                 updateVoice();
@@ -4087,15 +4111,15 @@
                 }
             }
 
-            cleanTextForSpeech(rawText) {
+            cleanTextForSpeech(rawText, lang = 'fa') {
                 if (!rawText) return '';
                 let text = String(rawText);
 
                 // 1. Remove KaTeX/LaTeX block & inline formulas
-                text = text.replace(/\$\$[\s\S]*?\$\$/g, ' فرمول ریاضی ');
-                text = text.replace(/\$[^\$]+\$/g, ' فرمول ');
-                text = text.replace(/\\\[[\s\S]*?\\\]/g, ' فرمول ');
-                text = text.replace(/\\\([\s\S]*?\\\)/g, ' فرمول ');
+                text = text.replace(/\$\$[\s\S]*?\$\$/g, lang === 'en' ? ' mathematical formula ' : ' فرمول ریاضی ');
+                text = text.replace(/\$[^\$]+\$/g, lang === 'en' ? ' formula ' : ' فرمول ');
+                text = text.replace(/\\\[[\s\S]*?\\\]/g, lang === 'en' ? ' formula ' : ' فرمول ');
+                text = text.replace(/\\\([\s\S]*?\\\)/g, lang === 'en' ? ' formula ' : ' فرمول ');
 
                 // 2. Remove HTML tags but keep anchor text
                 text = text.replace(/<a[^>]*>(.*?)<\/a>/gi, '$1');
@@ -4105,9 +4129,11 @@
                 text = text.replace(/https?:\/\/[^\s]+/g, '');
                 text = text.replace(/[*_#`~>|]/g, '');
 
-                // 4. Normalize Arabic to Persian glyphs
-                text = text.replace(/ي/g, 'ی').replace(/ك/g, 'ک').replace(/ۀ/g, 'ه');
-                text = text.replace(/\u200c/g, ' ');
+                if (lang === 'fa') {
+                    // 4. Normalize Arabic to Persian glyphs
+                    text = text.replace(/ي/g, 'ی').replace(/ك/g, 'ک').replace(/ۀ/g, 'ه');
+                    text = text.replace(/\u200c/g, ' ');
+                }
 
                 // 5. Replace bullet points & punctuation clean up
                 text = text.replace(/•/g, ' ').replace(/^[ \t]*[-*+][ \t]+/gm, ' ');
@@ -4202,10 +4228,10 @@
                     } else {
                         fullBtn.classList.remove('bg-rose-600', 'hover:bg-rose-700');
                         fullBtn.classList.add('bg-emerald-600', 'hover:bg-emerald-700');
-                        if (fullBtnText) fullBtnText.innerText = 'خوانش صوتی کل متن';
                         if (fullBtnIcon) {
                             fullBtnIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>`;
                         }
+                        updateTtsModeUI();
                     }
                 }
 
@@ -4213,12 +4239,14 @@
                 allSecBtns.forEach(btn => {
                     const secKey = btn.getAttribute('data-tts-section');
                     const labelSpan = btn.querySelector('.audio-btn-label');
-                    if (this.isPlaying && secKey === activeSectionKey) {
+                    if (this.isPlaying && (secKey === activeSectionKey || (activeSectionKey && activeSectionKey.startsWith(secKey)))) {
                         btn.classList.add('audio-playing');
                         if (labelSpan) labelSpan.innerText = 'توقف';
                     } else {
                         btn.classList.remove('audio-playing');
-                        if (labelSpan) labelSpan.innerText = 'شنیدن';
+                        if (labelSpan) {
+                            labelSpan.innerText = (secKey === 'definition_en' || (currentViewMode === 'en' && !secKey.includes('fa'))) ? 'Listen' : 'شنیدن';
+                        }
                     }
                 });
             }
@@ -4226,10 +4254,8 @@
             playSections(sections, sourceId, triggerBtn = null) {
                 this.stop(false);
 
-                if (window.currentTtsAudio) {
-                    window.currentTtsAudio.pause();
-                    window.currentTtsAudio.currentTime = 0;
-                }
+                this._playToken++;
+                const currentToken = this._playToken;
 
                 this.currentSource = sourceId;
                 this.currentActiveBtn = triggerBtn;
@@ -4237,12 +4263,14 @@
                 this.queue = [];
 
                 sections.forEach(sec => {
-                    const cleaned = this.cleanTextForSpeech(sec.rawText);
+                    const lang = sec.lang || 'fa';
+                    const cleaned = this.cleanTextForSpeech(sec.rawText, lang);
                     if (cleaned) {
                         const chunks = this.splitIntoSpeechChunks(cleaned);
                         chunks.forEach((chunkText, cIdx) => {
                             this.queue.push({
                                 text: chunkText,
+                                lang: lang,
                                 sectionKey: sec.sectionKey,
                                 sectionTitle: sec.sectionTitle,
                                 sectionNumber: sec.sectionNumber,
@@ -4276,11 +4304,11 @@
                     pauseResumeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>`;
                 }
 
-                this._playCurrentChunk();
+                this._playCurrentChunk(currentToken);
             }
 
-            async _playCurrentChunk() {
-                if (!this.isPlaying || this.isPaused) return;
+            async _playCurrentChunk(token = this._playToken) {
+                if (token !== this._playToken || !this.isPlaying || this.isPaused) return;
 
                 if (this.currentIndex >= this.queue.length) {
                     this.stop(true);
@@ -4289,11 +4317,15 @@
                 }
 
                 const item = this.queue[this.currentIndex];
+                const lang = item.lang || 'fa';
 
                 this._updateButtonsUI(item.sectionKey);
 
                 const titleEl = document.getElementById('ttsPlayerTitle');
-                if (titleEl) titleEl.innerText = item.sectionTitle || 'در حال خوانش اصطلاح...';
+                if (titleEl) {
+                    const langBadge = lang === 'en' ? '🇬🇧 English' : '🇮🇷 فارسی';
+                    titleEl.innerText = `${item.sectionTitle || 'در حال خوانش اصطلاح...'} (${langBadge})`;
+                }
 
                 const badgeEl = document.getElementById('ttsPlayerProgressBadge');
                 if (badgeEl) {
@@ -4311,20 +4343,64 @@
                 const wave = document.getElementById('ttsEqualizerWave');
                 if (wave) wave.classList.remove('tts-wave-paused');
 
-                // 1. Capacitor Native TTS on Android
+                // 1. Primary: Server-side Neural TTS Stream (/api/tts)
+                const playViaServerStream = () => {
+                    return new Promise((resolve, reject) => {
+                        const url = `/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`;
+                        const audio = new Audio(url);
+                        audio.playbackRate = this.rate;
+                        this._currentAudio = audio;
+
+                        // Preload next chunk audio if available
+                        if (this.currentIndex + 1 < this.queue.length) {
+                            const nextItem = this.queue[this.currentIndex + 1];
+                            const nextUrl = `/api/tts?text=${encodeURIComponent(nextItem.text)}&lang=${nextItem.lang || 'fa'}`;
+                            const preloadImg = new Audio();
+                            preloadImg.preload = 'auto';
+                            preloadImg.src = nextUrl;
+                        }
+
+                        audio.onended = () => {
+                            if (this._currentAudio === audio) this._currentAudio = null;
+                            resolve(true);
+                        };
+
+                        audio.onerror = (err) => {
+                            if (this._currentAudio === audio) this._currentAudio = null;
+                            reject(err);
+                        };
+
+                        audio.play().catch(reject);
+                    });
+                };
+
+                try {
+                    await playViaServerStream();
+                    if (token === this._playToken && this.isPlaying && !this.isPaused) {
+                        this.currentIndex++;
+                        this._playCurrentChunk(token);
+                    }
+                    return;
+                } catch (netErr) {
+                    console.warn('Neural /api/tts streaming failed or offline, falling back to local TTS engine:', netErr);
+                }
+
+                if (token !== this._playToken || !this.isPlaying || this.isPaused) return;
+
+                // 2. Capacitor Native TTS on Android / Mobile
                 if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.TextToSpeech) {
                     try {
                         await window.Capacitor.Plugins.TextToSpeech.speak({
                             text: item.text,
-                            lang: 'fa-IR',
+                            lang: lang === 'en' ? 'en-US' : 'fa-IR',
                             rate: this.rate,
                             pitch: 1.0,
                             volume: 1.0,
                             category: 'ambient',
                         });
-                        if (this.isPlaying && !this.isPaused) {
+                        if (token === this._playToken && this.isPlaying && !this.isPaused) {
                             this.currentIndex++;
-                            this._playCurrentChunk();
+                            this._playCurrentChunk(token);
                         }
                         return;
                     } catch (capErr) {
@@ -4332,29 +4408,35 @@
                     }
                 }
 
-                // 2. Web Speech API
+                if (token !== this._playToken || !this.isPlaying || this.isPaused) return;
+
+                // 3. Web Speech API Fallback
                 if (this.synth && typeof SpeechSynthesisUtterance !== 'undefined') {
                     try {
                         this.synth.cancel();
                         const utterance = new SpeechSynthesisUtterance(item.text);
-                        utterance.lang = 'fa-IR';
-                        if (this.persianVoice) utterance.voice = this.persianVoice;
+                        utterance.lang = lang === 'en' ? 'en-US' : 'fa-IR';
+                        if (lang === 'en' && this.englishVoice) {
+                            utterance.voice = this.englishVoice;
+                        } else if (lang === 'fa' && this.persianVoice) {
+                            utterance.voice = this.persianVoice;
+                        }
                         utterance.rate = this.rate;
                         utterance.pitch = 1.0;
 
                         utterance.onend = () => {
-                            if (this.isPlaying && !this.isPaused) {
+                            if (token === this._playToken && this.isPlaying && !this.isPaused) {
                                 this.currentIndex++;
-                                this._playCurrentChunk();
+                                this._playCurrentChunk(token);
                             }
                         };
 
                         utterance.onerror = (e) => {
                             if (e.error === 'interrupted' || e.error === 'canceled') return;
                             console.warn('SpeechSynthesis error:', e);
-                            if (this.isPlaying && !this.isPaused) {
+                            if (token === this._playToken && this.isPlaying && !this.isPaused) {
                                 this.currentIndex++;
-                                this._playCurrentChunk();
+                                this._playCurrentChunk(token);
                             }
                         };
 
@@ -4367,14 +4449,20 @@
                     }
                 }
 
-                showToast('مرورگر شما از سیستم تبدیل متن به گفتار صوتی پشتیبانی نمی‌کند.');
+                showToast('خطا در پخش صوتی. لطفاً اتصال اینترنت یا سرور را بررسی نمایید.');
                 this.stop(true);
             }
 
             pause() {
                 if (!this.isPlaying || this.isPaused) return;
                 this.isPaused = true;
-                if (this.synth) this.synth.pause();
+
+                if (this._currentAudio) {
+                    try { this._currentAudio.pause(); } catch(e) {}
+                }
+                if (this.synth) {
+                    try { this.synth.pause(); } catch(e) {}
+                }
 
                 const pauseResumeText = document.getElementById('ttsPauseResumeText');
                 if (pauseResumeText) pauseResumeText.innerText = 'ادامه';
@@ -4403,7 +4491,12 @@
                 const wave = document.getElementById('ttsEqualizerWave');
                 if (wave) wave.classList.remove('tts-wave-paused');
 
-                if (this.synth) {
+                if (this._currentAudio && this._currentAudio.paused) {
+                    this._currentAudio.playbackRate = this.rate;
+                    this._currentAudio.play().catch(() => {
+                        this._playCurrentChunk();
+                    });
+                } else if (this.synth) {
                     this.synth.resume();
                 } else {
                     this._playCurrentChunk();
@@ -4417,10 +4510,19 @@
                 this.currentIndex = 0;
                 this.currentSource = null;
                 this.currentActiveBtn = null;
+                this._playToken++;
                 this._stopKeepAlive();
 
+                if (this._currentAudio) {
+                    try {
+                        this._currentAudio.pause();
+                        this._currentAudio.currentTime = 0;
+                    } catch(e) {}
+                    this._currentAudio = null;
+                }
+
                 if (this.synth) {
-                    this.synth.cancel();
+                    try { this.synth.cancel(); } catch(e) {}
                 }
 
                 if (resetUI) {
@@ -4441,130 +4543,374 @@
                 this.rate = speeds[nextIdx];
                 localStorage.setItem('marketdict_tts_rate', String(this.rate));
 
+                if (this._currentAudio) {
+                    this._currentAudio.playbackRate = this.rate;
+                }
+
                 const speedBtn = document.getElementById('ttsSpeedBtn');
                 if (speedBtn) speedBtn.innerText = `${this.rate.toFixed(1).replace('.0', '')}x`;
                 showToast(`سرعت خوانش صوتی: ${this.rate}x`);
 
-                if (this.isPlaying && !this.isPaused) {
+                if (this.isPlaying && !this.isPaused && !this._currentAudio) {
                     this._playCurrentChunk();
                 }
             }
 
-            playFullTerm(term) {
+            playDirect(text, lang = 'fa', sourceKey = 'direct', title = 'تلفظ') {
+                if (!text) return;
+                this.playSections([{
+                    sectionKey: sourceKey,
+                    sectionTitle: title,
+                    sectionNumber: 1,
+                    rawText: text,
+                    lang: lang
+                }], sourceKey);
+            }
+
+            playFullTerm(term, mode = currentViewMode) {
                 if (!term) return;
                 const sections = [];
                 let secNum = 1;
 
-                if (term.term_fa) {
-                    sections.push({
-                        sectionKey: 'title',
-                        sectionTitle: 'عنوان: ' + term.term_fa,
-                        sectionNumber: secNum++,
-                        rawText: `اصطلاح: ${term.term_fa}. معادل انگلیسی: ${term.term_en || ''}`
-                    });
-                }
-
-                const takeaways = term.takeaways_fa || [];
-                if (takeaways.length > 0) {
-                    sections.push({
-                        sectionKey: 'takeaways',
-                        sectionTitle: 'نکات کلیدی',
-                        sectionNumber: secNum++,
-                        rawText: 'نکات کلیدی. ' + takeaways.join('. ')
-                    });
-                }
-
-                const defFa = term.definition_fa || '';
-                if (defFa) {
-                    sections.push({
-                        sectionKey: 'definition',
-                        sectionTitle: 'تعریف و مفهوم',
-                        sectionNumber: secNum++,
-                        rawText: 'تعریف و مفهوم اصطلاح. ' + defFa
-                    });
-                }
-
-                const secList = term.sections || [];
-                secList.forEach((sec, idx) => {
-                    const title = sec.title_fa || sec.title_en || `سرفصل ${idx + 1}`;
-                    const paras = (sec.paragraphs_fa || []).join(' ');
-                    const items = (sec.items_fa || []).join('. ');
-                    const fullSecText = (paras + ' ' + items).trim();
-                    if (fullSecText) {
+                if (mode === 'fa') {
+                    // Persian Only
+                    if (term.term_fa) {
                         sections.push({
-                            sectionKey: `section-${idx}`,
-                            sectionTitle: title,
+                            sectionKey: 'title',
+                            sectionTitle: 'عنوان: ' + term.term_fa,
                             sectionNumber: secNum++,
-                            rawText: `سرفصل: ${title}. ${fullSecText}`
+                            rawText: `اصطلاح: ${term.term_fa}.`,
+                            lang: 'fa'
                         });
                     }
-                });
 
-                const blFa = term.bottom_line_fa || '';
-                if (blFa) {
-                    sections.push({
-                        sectionKey: 'bottom_line',
-                        sectionTitle: 'جمع‌بندی نهایی',
-                        sectionNumber: secNum++,
-                        rawText: 'جمع‌بندی و نتیجه‌گیری نهایی. ' + blFa
-                    });
-                }
-
-                this.playSections(sections, 'full');
-            }
-
-            playSection(term, sectionType, sectionIdx = null, btn = null) {
-                if (!term) return;
-                const sections = [];
-                if (sectionType === 'title') {
-                    sections.push({
-                        sectionKey: 'title',
-                        sectionTitle: 'عنوان اصطلاح',
-                        sectionNumber: 1,
-                        rawText: term.term_fa
-                    });
-                } else if (sectionType === 'takeaways') {
                     const takeaways = term.takeaways_fa || [];
                     if (takeaways.length > 0) {
                         sections.push({
                             sectionKey: 'takeaways',
                             sectionTitle: 'نکات کلیدی',
-                            sectionNumber: 1,
-                            rawText: 'نکات کلیدی: ' + takeaways.join('. ')
+                            sectionNumber: secNum++,
+                            rawText: 'نکات کلیدی. ' + takeaways.join('. '),
+                            lang: 'fa'
                         });
                     }
-                } else if (sectionType === 'definition') {
+
                     const defFa = term.definition_fa || '';
                     if (defFa) {
                         sections.push({
                             sectionKey: 'definition',
-                            sectionTitle: 'تعریف و مفهوم فارسی',
-                            sectionNumber: 1,
-                            rawText: defFa
+                            sectionTitle: 'تعریف و مفهوم',
+                            sectionNumber: secNum++,
+                            rawText: 'تعریف و مفهوم اصطلاح. ' + defFa,
+                            lang: 'fa'
                         });
                     }
-                } else if (sectionType === 'section' && sectionIdx !== null) {
-                    const sec = (term.sections || [])[sectionIdx];
-                    if (sec) {
-                        const title = sec.title_fa || sec.title_en || `سرفصل ${sectionIdx + 1}`;
+
+                    const secList = term.sections || [];
+                    secList.forEach((sec, idx) => {
+                        const title = sec.title_fa || sec.title_en || `سرفصل ${idx + 1}`;
                         const paras = (sec.paragraphs_fa || []).join(' ');
                         const items = (sec.items_fa || []).join('. ');
-                        sections.push({
-                            sectionKey: `section-${sectionIdx}`,
-                            sectionTitle: title,
-                            sectionNumber: 1,
-                            rawText: (title ? title + '. ' : '') + paras + ' ' + items
-                        });
-                    }
-                } else if (sectionType === 'bottom_line') {
+                        const fullSecText = (paras + ' ' + items).trim();
+                        if (fullSecText) {
+                            sections.push({
+                                sectionKey: `section-${idx}`,
+                                sectionTitle: title,
+                                sectionNumber: secNum++,
+                                rawText: `سرفصل: ${title}. ${fullSecText}`,
+                                lang: 'fa'
+                            });
+                        }
+                    });
+
                     const blFa = term.bottom_line_fa || '';
                     if (blFa) {
                         sections.push({
                             sectionKey: 'bottom_line',
                             sectionTitle: 'جمع‌بندی نهایی',
-                            sectionNumber: 1,
-                            rawText: 'جمع‌بندی نهایی: ' + blFa
+                            sectionNumber: secNum++,
+                            rawText: 'جمع‌بندی و نتیجه‌گیری نهایی. ' + blFa,
+                            lang: 'fa'
                         });
+                    }
+                } else if (mode === 'en') {
+                    // English Only
+                    if (term.term_en) {
+                        sections.push({
+                            sectionKey: 'title',
+                            sectionTitle: 'Title: ' + term.term_en,
+                            sectionNumber: secNum++,
+                            rawText: `Term: ${term.term_en}.`,
+                            lang: 'en'
+                        });
+                    }
+
+                    const takeaways = term.takeaways_en || [];
+                    if (takeaways.length > 0) {
+                        sections.push({
+                            sectionKey: 'takeaways',
+                            sectionTitle: 'Key Takeaways',
+                            sectionNumber: secNum++,
+                            rawText: 'Key Takeaways. ' + takeaways.join('. '),
+                            lang: 'en'
+                        });
+                    }
+
+                    const defEn = term.definition_en || '';
+                    if (defEn) {
+                        sections.push({
+                            sectionKey: 'definition_en',
+                            sectionTitle: 'Original Definition',
+                            sectionNumber: secNum++,
+                            rawText: 'Original Definition. ' + defEn,
+                            lang: 'en'
+                        });
+                    }
+
+                    const secList = term.sections || [];
+                    secList.forEach((sec, idx) => {
+                        const title = sec.title_en || sec.title_fa || `Section ${idx + 1}`;
+                        const paras = (sec.paragraphs_en || []).join(' ');
+                        const items = (sec.items_en || []).join('. ');
+                        const fullSecText = (paras + ' ' + items).trim();
+                        if (fullSecText) {
+                            sections.push({
+                                sectionKey: `section-${idx}`,
+                                sectionTitle: title,
+                                sectionNumber: secNum++,
+                                rawText: `Section: ${title}. ${fullSecText}`,
+                                lang: 'en'
+                            });
+                        }
+                    });
+
+                    const blEn = term.bottom_line_en || '';
+                    if (blEn) {
+                        sections.push({
+                            sectionKey: 'bottom_line',
+                            sectionTitle: 'The Bottom Line',
+                            sectionNumber: secNum++,
+                            rawText: 'The Bottom Line. ' + blEn,
+                            lang: 'en'
+                        });
+                    }
+                } else {
+                    // Both (Comparative Bilingual Reading)
+                    if (term.term_en || term.term_fa) {
+                        if (term.term_en) {
+                            sections.push({
+                                sectionKey: 'title',
+                                sectionTitle: 'Title: ' + term.term_en,
+                                sectionNumber: secNum,
+                                rawText: `Term: ${term.term_en}.`,
+                                lang: 'en'
+                            });
+                        }
+                        if (term.term_fa) {
+                            sections.push({
+                                sectionKey: 'title',
+                                sectionTitle: 'عنوان: ' + term.term_fa,
+                                sectionNumber: secNum,
+                                rawText: `اصطلاح: ${term.term_fa}.`,
+                                lang: 'fa'
+                            });
+                        }
+                        secNum++;
+                    }
+
+                    // Takeaways (Bilingual)
+                    const enTakeaways = term.takeaways_en || [];
+                    const faTakeaways = term.takeaways_fa || [];
+                    const countTakeaways = Math.max(enTakeaways.length, faTakeaways.length);
+                    if (countTakeaways > 0) {
+                        for (let i = 0; i < countTakeaways; i++) {
+                            if (enTakeaways[i]) {
+                                sections.push({
+                                    sectionKey: 'takeaways',
+                                    sectionTitle: `Key Takeaways (#${i+1})`,
+                                    sectionNumber: secNum,
+                                    rawText: `Key takeaway: ${enTakeaways[i]}`,
+                                    lang: 'en'
+                                });
+                            }
+                            if (faTakeaways[i]) {
+                                sections.push({
+                                    sectionKey: 'takeaways',
+                                    sectionTitle: `نکات کلیدی (شماره ${i+1})`,
+                                    sectionNumber: secNum,
+                                    rawText: `نکته کلیدی: ${faTakeaways[i]}`,
+                                    lang: 'fa'
+                                });
+                            }
+                        }
+                        secNum++;
+                    }
+
+                    // Definition (Bilingual)
+                    if (term.definition_en) {
+                        sections.push({
+                            sectionKey: 'definition',
+                            sectionTitle: 'Original Definition',
+                            sectionNumber: secNum,
+                            rawText: 'Original Definition. ' + term.definition_en,
+                            lang: 'en'
+                        });
+                    }
+                    if (term.definition_fa) {
+                        sections.push({
+                            sectionKey: 'definition',
+                            sectionTitle: 'تعریف و مفهوم فارسی',
+                            sectionNumber: secNum,
+                            rawText: 'تعریف و مفهوم فارسی. ' + term.definition_fa,
+                            lang: 'fa'
+                        });
+                    }
+                    if (term.definition_en || term.definition_fa) secNum++;
+
+                    // Sections (Bilingual)
+                    const secList = term.sections || [];
+                    secList.forEach((sec, idx) => {
+                        const titleEn = sec.title_en || '';
+                        const parasEn = (sec.paragraphs_en || []).join(' ');
+                        const itemsEn = (sec.items_en || []).join('. ');
+                        const fullSecEn = (parasEn + ' ' + itemsEn).trim();
+
+                        const titleFa = sec.title_fa || titleEn || `سرفصل ${idx + 1}`;
+                        const parasFa = (sec.paragraphs_fa || []).join(' ');
+                        const itemsFa = (sec.items_fa || []).join('. ');
+                        const fullSecFa = (parasFa + ' ' + itemsFa).trim();
+
+                        if (fullSecEn) {
+                            sections.push({
+                                sectionKey: `section-${idx}`,
+                                sectionTitle: titleEn || `Section ${idx + 1}`,
+                                sectionNumber: secNum,
+                                rawText: `Section: ${titleEn}. ${fullSecEn}`,
+                                lang: 'en'
+                            });
+                        }
+                        if (fullSecFa) {
+                            sections.push({
+                                sectionKey: `section-${idx}`,
+                                sectionTitle: titleFa,
+                                sectionNumber: secNum,
+                                rawText: `سرفصل: ${titleFa}. ${fullSecFa}`,
+                                lang: 'fa'
+                            });
+                        }
+                        if (fullSecEn || fullSecFa) secNum++;
+                    });
+
+                    // Bottom Line (Bilingual)
+                    if (term.bottom_line_en) {
+                        sections.push({
+                            sectionKey: 'bottom_line',
+                            sectionTitle: 'The Bottom Line',
+                            sectionNumber: secNum,
+                            rawText: 'The Bottom Line. ' + term.bottom_line_en,
+                            lang: 'en'
+                        });
+                    }
+                    if (term.bottom_line_fa) {
+                        sections.push({
+                            sectionKey: 'bottom_line',
+                            sectionTitle: 'جمع‌بندی نهایی',
+                            sectionNumber: secNum,
+                            rawText: 'جمع‌بندی و نتیجه‌گیری نهایی. ' + term.bottom_line_fa,
+                            lang: 'fa'
+                        });
+                    }
+                }
+
+                this.playSections(sections, 'full');
+            }
+
+            playSection(term, sectionType, sectionIdx = null, btn = null, mode = currentViewMode) {
+                if (!term) return;
+                const sections = [];
+
+                if (sectionType === 'title') {
+                    if (mode === 'fa') {
+                        if (term.term_fa) sections.push({ sectionKey: 'title', sectionTitle: 'عنوان اصطلاح', sectionNumber: 1, rawText: term.term_fa, lang: 'fa' });
+                    } else if (mode === 'en') {
+                        if (term.term_en) sections.push({ sectionKey: 'title', sectionTitle: 'Term Title', sectionNumber: 1, rawText: term.term_en, lang: 'en' });
+                    } else {
+                        if (term.term_en) sections.push({ sectionKey: 'title', sectionTitle: 'Term Title', sectionNumber: 1, rawText: term.term_en, lang: 'en' });
+                        if (term.term_fa) sections.push({ sectionKey: 'title', sectionTitle: 'عنوان فارسی', sectionNumber: 1, rawText: term.term_fa, lang: 'fa' });
+                    }
+                } else if (sectionType === 'takeaways') {
+                    const takeawaysFa = term.takeaways_fa || [];
+                    const takeawaysEn = term.takeaways_en || [];
+
+                    if (mode === 'fa') {
+                        if (takeawaysFa.length > 0) {
+                            sections.push({ sectionKey: 'takeaways', sectionTitle: 'نکات کلیدی', sectionNumber: 1, rawText: 'نکات کلیدی: ' + takeawaysFa.join('. '), lang: 'fa' });
+                        }
+                    } else if (mode === 'en') {
+                        if (takeawaysEn.length > 0) {
+                            sections.push({ sectionKey: 'takeaways', sectionTitle: 'Key Takeaways', sectionNumber: 1, rawText: 'Key Takeaways: ' + takeawaysEn.join('. '), lang: 'en' });
+                        }
+                    } else {
+                        const maxT = Math.max(takeawaysEn.length, takeawaysFa.length);
+                        for (let i = 0; i < maxT; i++) {
+                            if (takeawaysEn[i]) sections.push({ sectionKey: 'takeaways', sectionTitle: `Key Takeaway #${i+1}`, sectionNumber: 1, rawText: takeawaysEn[i], lang: 'en' });
+                            if (takeawaysFa[i]) sections.push({ sectionKey: 'takeaways', sectionTitle: `نکته کلیدی شماره ${i+1}`, sectionNumber: 1, rawText: takeawaysFa[i], lang: 'fa' });
+                        }
+                    }
+                } else if (sectionType === 'definition' || sectionType === 'definition_fa') {
+                    if (sectionType === 'definition_fa' || mode === 'fa') {
+                        const defFa = term.definition_fa || '';
+                        if (defFa) sections.push({ sectionKey: 'definition', sectionTitle: 'تعریف و مفهوم فارسی', sectionNumber: 1, rawText: defFa, lang: 'fa' });
+                    } else if (mode === 'en') {
+                        const defEn = term.definition_en || '';
+                        if (defEn) sections.push({ sectionKey: 'definition', sectionTitle: 'Original Definition', sectionNumber: 1, rawText: defEn, lang: 'en' });
+                    } else {
+                        if (term.definition_en) sections.push({ sectionKey: 'definition', sectionTitle: 'Original Definition', sectionNumber: 1, rawText: term.definition_en, lang: 'en' });
+                        if (term.definition_fa) sections.push({ sectionKey: 'definition', sectionTitle: 'تعریف و مفهوم فارسی', sectionNumber: 1, rawText: term.definition_fa, lang: 'fa' });
+                    }
+                } else if (sectionType === 'definition_en') {
+                    const defEn = term.definition_en || '';
+                    if (defEn) sections.push({ sectionKey: 'definition_en', sectionTitle: 'Original Definition', sectionNumber: 1, rawText: defEn, lang: 'en' });
+                } else if (sectionType === 'section' && sectionIdx !== null) {
+                    const sec = (term.sections || [])[sectionIdx];
+                    if (sec) {
+                        const titleFa = sec.title_fa || sec.title_en || `سرفصل ${sectionIdx + 1}`;
+                        const parasFa = (sec.paragraphs_fa || []).join(' ');
+                        const itemsFa = (sec.items_fa || []).join('. ');
+                        const fullSecFa = (parasFa + ' ' + itemsFa).trim();
+
+                        const titleEn = sec.title_en || `Section ${sectionIdx + 1}`;
+                        const parasEn = (sec.paragraphs_en || []).join(' ');
+                        const itemsEn = (sec.items_en || []).join('. ');
+                        const fullSecEn = (parasEn + ' ' + itemsEn).trim();
+
+                        if (mode === 'fa') {
+                            if (fullSecFa) {
+                                sections.push({ sectionKey: `section-${sectionIdx}`, sectionTitle: titleFa, sectionNumber: 1, rawText: (titleFa ? titleFa + '. ' : '') + fullSecFa, lang: 'fa' });
+                            }
+                        } else if (mode === 'en') {
+                            if (fullSecEn) {
+                                sections.push({ sectionKey: `section-${sectionIdx}`, sectionTitle: titleEn, sectionNumber: 1, rawText: (titleEn ? titleEn + '. ' : '') + fullSecEn, lang: 'en' });
+                            }
+                        } else {
+                            if (fullSecEn) {
+                                sections.push({ sectionKey: `section-${sectionIdx}`, sectionTitle: titleEn, sectionNumber: 1, rawText: (titleEn ? titleEn + '. ' : '') + fullSecEn, lang: 'en' });
+                            }
+                            if (fullSecFa) {
+                                sections.push({ sectionKey: `section-${sectionIdx}`, sectionTitle: titleFa, sectionNumber: 1, rawText: (titleFa ? titleFa + '. ' : '') + fullSecFa, lang: 'fa' });
+                            }
+                        }
+                    }
+                } else if (sectionType === 'bottom_line') {
+                    const blFa = term.bottom_line_fa || '';
+                    const blEn = term.bottom_line_en || '';
+                    if (mode === 'fa') {
+                        if (blFa) sections.push({ sectionKey: 'bottom_line', sectionTitle: 'جمع‌بندی نهایی', sectionNumber: 1, rawText: 'جمع‌بندی نهایی: ' + blFa, lang: 'fa' });
+                    } else if (mode === 'en') {
+                        if (blEn) sections.push({ sectionKey: 'bottom_line', sectionTitle: 'The Bottom Line', sectionNumber: 1, rawText: 'The Bottom Line: ' + blEn, lang: 'en' });
+                    } else {
+                        if (blEn) sections.push({ sectionKey: 'bottom_line', sectionTitle: 'The Bottom Line', sectionNumber: 1, rawText: 'The Bottom Line: ' + blEn, lang: 'en' });
+                        if (blFa) sections.push({ sectionKey: 'bottom_line', sectionTitle: 'جمع‌بندی نهایی', sectionNumber: 1, rawText: 'جمع‌بندی نهایی: ' + blFa, lang: 'fa' });
                     }
                 }
 
@@ -4577,16 +4923,39 @@
             }
         }
 
-        // Initialize Global Persian TTS Engine
+        // Initialize Global Persian & Bilingual TTS Engine
         const persianTTS = new PersianTtsEngine();
         window.persianTTS = persianTTS;
+        window.audioTTS = persianTTS;
+
+        function updateTtsModeUI() {
+            const btnText = document.getElementById('btnPlayFullAudioText');
+            const btn = document.getElementById('btnPlayFullAudio');
+            if (!btnText) return;
+
+            if (persianTTS && persianTTS.isPlaying && persianTTS.currentSource === 'full') {
+                btnText.innerText = 'توقف خوانش کل متن';
+                return;
+            }
+
+            if (currentViewMode === 'fa') {
+                btnText.innerText = 'خوانش صوتی کل متن (فارسی)';
+                if (btn) btn.title = 'خوانش صوتی کامل اصطلاح به زبان فارسی';
+            } else if (currentViewMode === 'en') {
+                btnText.innerText = 'Read Full Text (English)';
+                if (btn) btn.title = 'Read full term in English';
+            } else {
+                btnText.innerText = 'خوانش صوتی دوزبانه (فارسی و انگلیسی)';
+                if (btn) btn.title = 'خوانش کامل صوتی به هر دو زبان فارسی و انگلیسی';
+            }
+        }
 
         function togglePlayFullTermAudio() {
             if (!activeModalTerm) return;
             if (persianTTS.isPlaying && persianTTS.currentSource === 'full') {
                 persianTTS.stop();
             } else {
-                persianTTS.playFullTerm(activeModalTerm);
+                persianTTS.playFullTerm(activeModalTerm, currentViewMode);
             }
         }
 
@@ -4597,7 +4966,7 @@
             if (persianTTS.isPlaying && persianTTS.currentSource === sourceKey) {
                 persianTTS.stop();
             } else {
-                persianTTS.playSection(activeModalTerm, type, sectionIdx, btn);
+                persianTTS.playSection(activeModalTerm, type, sectionIdx, btn, currentViewMode);
             }
         }
 
@@ -4635,93 +5004,49 @@
                 persianTTS.stop();
                 return;
             }
-            const text = `${term.term_fa}؛ ${term.definition_fa || ''}`;
-            persianTTS.playSections([{
-                sectionKey: `card-${termId}`,
-                sectionTitle: term.term_fa,
-                sectionNumber: 1,
-                rawText: text
-            }], `card-${termId}`);
+            const sections = [];
+            if (currentViewMode === 'en') {
+                const text = `${term.term_en}; ${term.definition_en || ''}`;
+                sections.push({
+                    sectionKey: `card-${termId}`,
+                    sectionTitle: term.term_en,
+                    sectionNumber: 1,
+                    rawText: text,
+                    lang: 'en'
+                });
+            } else if (currentViewMode === 'both') {
+                if (term.term_en) {
+                    sections.push({ sectionKey: `card-${termId}`, sectionTitle: term.term_en, sectionNumber: 1, rawText: term.term_en, lang: 'en' });
+                }
+                const text = `${term.term_fa}؛ ${term.definition_fa || ''}`;
+                sections.push({ sectionKey: `card-${termId}`, sectionTitle: term.term_fa, sectionNumber: 1, rawText: text, lang: 'fa' });
+            } else {
+                const text = `${term.term_fa}؛ ${term.definition_fa || ''}`;
+                sections.push({ sectionKey: `card-${termId}`, sectionTitle: term.term_fa, sectionNumber: 1, rawText: text, lang: 'fa' });
+            }
+            persianTTS.playSections(sections, `card-${termId}`);
         }
 
         let currentTtsAudio = null;
 
         function speakTerm() {
-            if (activeModalTerm) speakDirect(activeModalTerm.term_en);
+            if (activeModalTerm) {
+                if (persianTTS.isPlaying && persianTTS.currentSource === 'title_en') {
+                    persianTTS.stop();
+                } else {
+                    persianTTS.playDirect(activeModalTerm.term_en, 'en', 'title_en', activeModalTerm.term_en);
+                }
+            }
         }
 
-        async function speakDirect(text, event) {
+        function speakDirect(text, event) {
             if (event) event.stopPropagation();
-            if (window.persianTTS && window.persianTTS.isPlaying) {
-                window.persianTTS.stop();
-            }
             if (!text) return;
-            const cleanText = text.trim();
-            if (!cleanText) return;
-
-            // Audio Stream Fallback using Google Translate TTS
-            function playAudioStream(phrase) {
-                try {
-                    if (currentTtsAudio) {
-                        currentTtsAudio.pause();
-                        currentTtsAudio.currentTime = 0;
-                    }
-                    const encoded = encodeURIComponent(phrase);
-                    const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=en&client=tw-ob&q=${encoded}`;
-                    currentTtsAudio = new Audio(url);
-                    currentTtsAudio.play().catch(e => {
-                        console.warn('Audio TTS stream error:', e);
-                        showToast('پخش تلفظ صوتی با خطا مواجه شد');
-                    });
-                } catch (e) {
-                    console.error('Audio TTS error:', e);
-                }
+            if (persianTTS.isPlaying && persianTTS.currentSource === 'speak_direct') {
+                persianTTS.stop();
+            } else {
+                persianTTS.playDirect(text, 'en', 'speak_direct', text);
             }
-
-            // 1. Try Capacitor Native TextToSpeech plugin (works offline on Android natively)
-            if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.TextToSpeech) {
-                try {
-                    await window.Capacitor.Plugins.TextToSpeech.speak({
-                        text: cleanText,
-                        lang: 'en-US',
-                        rate: 0.9,
-                        pitch: 1.0,
-                        volume: 1.0,
-                        category: 'ambient',
-                    });
-                    return;
-                } catch (err) {
-                    console.warn('Capacitor TextToSpeech error, trying fallbacks:', err);
-                }
-            }
-
-            // 2. Try Web Speech API (with timeout guard for Android WebView)
-            if ('speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined') {
-                try {
-                    window.speechSynthesis.cancel();
-                    const utterance = new SpeechSynthesisUtterance(cleanText);
-                    utterance.lang = 'en-US';
-                    utterance.rate = 0.9;
-                    let spoken = false;
-                    utterance.onstart = () => { spoken = true; };
-                    utterance.onerror = (e) => {
-                        console.warn('SpeechSynthesis error:', e);
-                        playAudioStream(cleanText);
-                    };
-                    setTimeout(() => {
-                        if (!spoken && (!window.speechSynthesis.speaking && !window.speechSynthesis.pending)) {
-                            playAudioStream(cleanText);
-                        }
-                    }, 400);
-                    window.speechSynthesis.speak(utterance);
-                    return;
-                } catch (err) {
-                    console.warn('SpeechSynthesis exception:', err);
-                }
-            }
-
-            // 3. Direct Audio Stream fallback
-            playAudioStream(cleanText);
         }
 
         function copyDefFa(btn, event) {
