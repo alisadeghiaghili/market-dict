@@ -490,10 +490,10 @@
 
     <!-- Top Navigation Header -->
     <header class="sticky top-0 z-40 backdrop-blur-md bg-white/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 transition-colors">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-3 flex flex-wrap sm:flex-nowrap items-center justify-between gap-y-2 gap-x-2 sm:gap-4">
             
-            <!-- Logo & Brand with Financial Icon -->
-            <div class="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0" onclick="resetFilters()">
+            <!-- Logo & Brand with Financial Icon (Order 1 on all screens) -->
+            <div class="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0 order-1" onclick="resetFilters()">
                 <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl overflow-hidden shadow-md shadow-emerald-500/20 flex-shrink-0">
                     <!-- Meaningful SVG Logo: Candlesticks + Dictionary Book -->
                     <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
@@ -528,45 +528,10 @@
                 </div>
             </div>
 
-            <!-- Header Quick Actions -->
-            <div class="flex items-center gap-1 sm:gap-2 shrink-0">
-                <!-- Random Term Button -->
-                <button onclick="fetchRandomTerm()" title="اصطلاح تصادفی برای یادگیری" class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 border border-emerald-200 dark:border-emerald-800 transition">
-                    <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-                    </svg>
-                    <span class="hidden md:inline">اصطلاح تصادفی</span>
-                </button>
-
-                <!-- Bookmarks Filter Toggle -->
-                <button id="favoritesBtn" onclick="toggleFavoritesFilter()" title="اصطلاحات نشان‌شده" class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
-                    <svg id="favIcon" class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
-                    </svg>
-                    <span class="hidden md:inline">نشان‌شده‌ها</span>
-                    <span id="favoritesCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
-                </button>
-
-                <!-- Recently Viewed Terms Button -->
-                <button id="recentsBtn" onclick="openRecentsModal()" title="تاریخچه آخرین کلمات مشاهده‌شده" class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
-                    <svg id="recentIcon" class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <span class="hidden md:inline">آخرین بازدیدها</span>
-                    <span id="recentsCountBadge" class="bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
-                </button>
-
-                <!-- Highlights Filter Toggle -->
-                <button id="highlightsBtn" onclick="toggleHighlightsFilter()" title="اصطلاحات دارای متن هایلایت‌شده" class="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
-                    <svg id="hlNavIcon" class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                    </svg>
-                    <span class="hidden md:inline">هایلایت‌ها</span>
-                    <span id="highlightsCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
-                </button>
-
+            <!-- App & System Controls: Theme, Install, GitHub (Row 1 left on mobile; far-left on desktop) -->
+            <div class="flex items-center gap-1 sm:gap-2 shrink-0 order-2 sm:order-3">
                 <!-- Theme Cycle Button (System Default -> Light -> Dark) -->
-                <button id="themeCycleBtn" onclick="cycleTheme()" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95" title="تغییر حالت نمایش (سیستم / روشن / تاریک)">
+                <button id="themeCycleBtn" onclick="cycleTheme()" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95 flex items-center justify-center shrink-0" title="تغییر حالت نمایش (سیستم / روشن / تاریک)" aria-label="تنظیمات تم">
                     <!-- System Icon (Monitor) -->
                     <svg id="themeIconSystem" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -581,21 +546,60 @@
                     </svg>
                 </button>
 
-                <!-- PWA Install Button -->
-                <button id="pwaInstallBtn" onclick="installPwa()" title="نصب اپلیکیشن روی گوشی (PWA)" class="hidden p-2 sm:px-3 sm:py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs shadow-md shadow-emerald-500/20 hover:scale-105 active:scale-95 flex items-center gap-1.5 shrink-0 transition">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- PWA Install Button (Styled identical to theme & github buttons) -->
+                <button id="pwaInstallBtn" onclick="installPwa()" title="نصب و راه‌اندازی اپلیکیشن (PWA)" aria-label="نصب برنامه" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                     </svg>
-                    <span class="hidden md:inline">نصب برنامه</span>
                 </button>
 
                 <!-- GitHub Repository Link -->
-                <a href="https://github.com/alisadeghiaghili/market-dict" target="_blank" rel="noopener noreferrer" title="سورس پروژه در گیت‌هاب (GitHub)" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95 flex items-center justify-center shrink-0">
+                <a href="https://github.com/alisadeghiaghili/market-dict" target="_blank" rel="noopener noreferrer" title="سورس پروژه در گیت‌هاب (GitHub)" aria-label="سورس گیت‌هاب" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95 flex items-center justify-center shrink-0">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                     </svg>
                 </a>
             </div>
+
+            <!-- Learning & Filter Tools (Row 2 on mobile: spans 100% full width; Middle on desktop) -->
+            <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start gap-1 sm:gap-2 pt-1.5 sm:pt-0 border-t border-slate-100 dark:border-slate-800/80 sm:border-0 order-3 sm:order-2 overflow-x-auto scrollbar-none">
+                <!-- Random Term Button -->
+                <button onclick="fetchRandomTerm()" title="اصطلاح تصادفی برای یادگیری" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 border border-emerald-200 dark:border-emerald-800 transition shrink-0">
+                    <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                    <span class="text-[11px] sm:hidden md:inline">تصادفی</span>
+                </button>
+
+                <!-- Bookmarks Filter Toggle -->
+                <button id="favoritesBtn" onclick="toggleFavoritesFilter()" title="اصطلاحات نشان‌شده" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shrink-0">
+                    <svg id="favIcon" class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                    </svg>
+                    <span class="text-[11px] sm:hidden md:inline">نشان‌شده</span>
+                    <span id="favoritesCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
+                </button>
+
+                <!-- Recently Viewed Terms Button -->
+                <button id="recentsBtn" onclick="openRecentsModal()" title="تاریخچه آخرین کلمات مشاهده‌شده" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shrink-0">
+                    <svg id="recentIcon" class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-[11px] sm:hidden md:inline">بازدیدها</span>
+                    <span id="recentsCountBadge" class="bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
+                </button>
+
+                <!-- Highlights Filter Toggle -->
+                <button id="highlightsBtn" onclick="toggleHighlightsFilter()" title="اصطلاحات دارای متن هایلایت‌شده" class="flex-1 sm:flex-initial flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shrink-0">
+                    <svg id="hlNavIcon" class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                    <span class="text-[11px] sm:hidden md:inline">هایلایت‌ها</span>
+                    <span id="highlightsCountBadge" class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full font-bold">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
         </div>
     </header>
 
@@ -1331,6 +1335,11 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+            if (isStandalone) {
+                const pwaBtn = document.getElementById('pwaInstallBtn');
+                if (pwaBtn) pwaBtn.classList.add('hidden');
+            }
             initTheme();
             initFiltersCollapse();
             updateFavoritesCount();

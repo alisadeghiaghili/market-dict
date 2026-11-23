@@ -180,6 +180,7 @@ Once started, navigate to:
 | **OpenAPI Spec** | `http://localhost:5000/api/v1/openapi.json` | Machine-readable OpenAPI 3.0.3 specification |
 | **Health Check** | `http://localhost:5000/api/v1/health` | System status, uptime, term count, database state |
 | **Statistics** | `http://localhost:5000/api/stats` | Aggregated term, letter, formula, and category counts |
+| **Neural TTS** | `http://localhost:5000/api/tts?text=Hello&lang=en` | High-fidelity neural audio streaming (Persian & English) |
 
 Quick verification with cURL:
 ```bash

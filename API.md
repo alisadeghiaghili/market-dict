@@ -330,6 +330,26 @@ Each item includes both **English & Persian LaTeX equations** and variable expla
 
 ---
 
+### 7. Neural Text-to-Speech (TTS) Audio Streaming
+
+#### `GET /api/tts`
+Streams high-fidelity neural audio (MP3) for Persian or English text.
+
+| Parameter | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `text` | string | **Required** | The text to synthesize |
+| `lang` | string | `fa` | Language code: `fa` (Persian) or `en` (English) |
+| `voice` | string | Auto | Specific neural voice name (defaults to `fa-IR-DilaraNeural` for `fa`, `en-US-AriaNeural` for `en`) |
+
+**Response:** `audio/mpeg` binary stream (with in-memory thread-safe LRU caching).
+
+**Example Request:**
+```bash
+curl -s "http://localhost:5000/api/tts?text=%D8%B3%D9%84%D8%A7%D9%85&lang=fa" -o greeting.mp3
+```
+
+---
+
 ## 💻 Integration Examples
 
 ### 1. Telegram / Discord Bot Integration (Python)

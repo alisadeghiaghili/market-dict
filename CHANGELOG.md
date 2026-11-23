@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.2.0] - 2026-11-23
+
+### Added
+- **Bilingual Neural Text-to-Speech (TTS) Voice Engine**:
+  - Implemented studio-quality neural voice speech synthesis powered by `edge-tts` (`fa-IR-DilaraNeural` for Persian and `en-US-AriaNeural` for English).
+  - Integrated 3-mode context-aware narration matching the active View Mode:
+    - **Persian View Mode (`fa`)**: Reads all term details (Title, Key Takeaways, Definition, In-Depth Subsections, and The Bottom Line) in natural Persian.
+    - **English View Mode (`en`)**: Reads all sections in native English. Added dedicated `Listen` audio button to the Original Definition box (`#btnAudioDefEn`).
+    - **Both / Comparative View Mode (`both`)**: Seamless bilingual reading alternating sequentially between English and Persian for every title, key takeaway item, definition, and in-depth section.
+  - Added background preloading of subsequent audio chunks (`new Audio().preload = 'auto'`) for zero-latency, gapless transitions between sentences.
+  - Interactive player controls: Live animated equalizer wave, dynamic active section and progress badge (`بخش ۱ از ۳۲`), Pause/Resume toggle, Speed cycling (`0.85x`, `1.0x`, `1.25x`, `1.5x`), and Stop buttons.
+  - Dynamic button labeling based on active language view mode (`خوانش صوتی کل متن (فارسی)`, `Read Full Text (English)`, `خوانش صوتی دوزبانه (فارسی و انگلیسی)`).
+  - Multi-tier playback resilience: Server-side Neural TTS -> Capacitor Native Android TTS -> Web Speech API (`SpeechSynthesis`) -> graceful user toast notification.
+- **Neural TTS Streaming API (`/api/tts`)**:
+  - Added high-performance streaming endpoint `/api/tts` in `app.py` returning `audio/mpeg` streams.
+  - Thread-safe in-memory LRU cache with automatic eviction (up to 500 cached audio responses).
+  - Added full test coverage in `test_api.py` covering Persian & English synthesis, caching & eviction, and error recovery branches (100% TTS coverage, 33/33 tests passing).
+
+### Improved
+- **Documentation & Technical Guides**:
+  - Updated `README.md` with Neural Voice Engine details and `/api/tts` endpoint.
+  - Updated `API.md` with complete Neural TTS parameter reference and example responses.
+  - Updated `SETUP_FA.md` and `SETUP_EN.md` with `/api/tts` endpoint explorer links.
+
+---
+
 ## [1.1.1] - 2026-11-23
 
 ### Added

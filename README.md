@@ -18,7 +18,7 @@ A modern bilingual (English & Persian) financial dictionary — **6,108 market &
 
 - **Bilingual Instant Search**: Real-time fuzzy search in both Persian and English with automatic Persian text normalization (`ی/ي`, `ک/ك`, zero-width non-joiners).
 - **Side-by-Side Dual Language Display**: Full English definitions, Persian professional translations, and key takeaways for each term.
-- **Audio Pronunciation**: Built-in voice pronunciation for English terms via the Web Speech API.
+- **Bilingual Neural Voice Engine (TTS)**: High-fidelity studio-quality neural speech synthesis for Persian (`fa-IR-DilaraNeural`) and English (`en-US-AriaNeural`) with gapless audio preloading, speed controls (0.85x–1.5x), persistent audio player bar, and intelligent mode-aware narration (Persian-only, English-only, or sequential bilingual reading).
 - **Interactive Alphabet & Category Filters**: Quickly explore terms by initial letter (`#`, `A-Z`) or financial domain (Corporate Finance, Accounting, Macroeconomics, Derivatives, etc.).
 - **Local Favorites**: Bookmark terms for study sessions, persisted directly in local browser storage.
 - **Dark / Light Mode**: Tailored user interface with responsive layout and glassmorphism styling.
@@ -45,6 +45,7 @@ MarketDict provides a full-featured REST API with CORS enabled so third-party ap
 - `GET /api/v1/formulas` — 44 quantitative finance formulas with LaTeX equations
 - `POST /api/v1/terms/batch` — Batch retrieval of multiple terms in one request
 - `GET /api/v1/health` — System status, uptime, and database metrics
+- `GET /api/tts?text=...&lang=fa|en` — Real-time neural audio streaming (MP3) with in-memory LRU caching
 
 ### Python Client SDK:
 ```python
