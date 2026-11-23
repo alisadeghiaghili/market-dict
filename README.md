@@ -4,6 +4,8 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![CI Verification](https://github.com/alisadeghiaghili/market-dict/actions/workflows/ci.yml/badge.svg)](https://github.com/alisadeghiaghili/market-dict/actions/workflows/ci.yml)
 [![MCP](https://img.shields.io/badge/MCP-Enabled-purple)](MCP_DOCUMENTATION.md)
+[![Latest Release](https://img.shields.io/github/v/release/alisadeghiaghili/market-dict?color=emerald)](https://github.com/alisadeghiaghili/market-dict/releases)
+[![Changelog](https://img.shields.io/badge/Changelog-Keep%20a%20Changelog-orange.svg)](CHANGELOG.md)
 
 A modern bilingual (English & Persian) financial dictionary — **6,108 market & investing terms** across 14 domains with real-time fuzzy search, KaTeX mathematical formulas, and internal term cross-linking — available as a web app, a static build, a REST API and an MCP server for internal use.
 

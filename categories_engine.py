@@ -1,11 +1,10 @@
-# -*- coding: utf-8 -*-
 """
 Categories Engine for Market-Dict
 Comprehensive 28-category bilingual taxonomy with compiled regex patterns.
 """
 
 import re
-from typing import Dict, List, Any
+from typing import Any
 
 TAXONOMY = [
     # 1. Crypto & Blockchain
@@ -234,11 +233,11 @@ TAXONOMY = [
     }
 ]
 
-TAXONOMY_BY_ID: Dict[str, Dict[str, Any]] = {c["id"]: c for c in TAXONOMY}
-TAXONOMY_BY_FA: Dict[str, Dict[str, Any]] = {c["fa"]: c for c in TAXONOMY}
+TAXONOMY_BY_ID: dict[str, dict[str, Any]] = {c["id"]: c for c in TAXONOMY}
+TAXONOMY_BY_FA: dict[str, dict[str, Any]] = {c["fa"]: c for c in TAXONOMY}
 
 # Comprehensive mapping of legacy or variant category names to canonical Persian names
-CATEGORY_ALIASES: Dict[str, str] = {
+CATEGORY_ALIASES: dict[str, str] = {
     # Stock market variants
     "بورس، سهام و بازار سرمایه": "بازار سهام و معاملات",
     "stock_capital_markets": "بازار سهام و معاملات",
@@ -270,7 +269,7 @@ CATEGORY_ALIASES: Dict[str, str] = {
     "بلاکچین، ارز دیجیتال و رمزدارایی‌ها": "ارزهای دیجیتال و بلاک‌چین",
 }
 
-def normalize_category(cat_name: Any) -> Dict[str, Any]:
+def normalize_category(cat_name: Any) -> dict[str, Any]:
     """
     Given any category identifier, Persian name, English name, or legacy variant,
     returns the canonical category dictionary from TAXONOMY (with id, fa, en, icon).
@@ -310,7 +309,7 @@ def normalize_category(cat_name: Any) -> Dict[str, Any]:
 
 COMPILED_RULES = [(cat, re.compile(cat["regex"], re.IGNORECASE)) for cat in TAXONOMY]
 
-def classify_term(term: Dict[str, Any]) -> Dict[str, Any]:
+def classify_term(term: dict[str, Any]) -> dict[str, Any]:
     """Classify a term into its primary financial category."""
     title = (term.get("term_en") or "").lower()
     slug = (term.get("slug") or "").replace("-", " ").lower()

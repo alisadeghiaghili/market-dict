@@ -4,16 +4,17 @@ MarketDict - Financial Terms Dictionary
 Backend Server using Flask with Ultra-Fast Binary Cache & SQLite Hybrid Indexing.
 """
 
-import os
-import re
 import json
-import random
+import os
 import pickle
+import random
+import re
 import sqlite3
 import threading
 import time
-from typing import List, Dict, Any, Optional
-from flask import Flask, render_template, request, jsonify
+from typing import Any
+
+from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -27,10 +28,10 @@ def apply_reverse_proxy(flask_app: Flask, allowed_ips: Any = "*") -> Flask:
     """
     from werkzeug.middleware.proxy_fix import ProxyFix
 
-    allowed: Optional[set] = None
+    allowed: set | None = None
     if isinstance(allowed_ips, str):
         if allowed_ips.strip() != "*":
-            allowed = set(ip.strip() for ip in allowed_ips.split(",") if ip.strip())
+            allowed = {ip.strip() for ip in allowed_ips.split(",") if ip.strip()}
     elif isinstance(allowed_ips, (list, set, tuple)):
         allowed = set(allowed_ips)
 
@@ -67,6 +68,7 @@ CACHE_FILE = os.path.join(BASE_DIR, "cache_index.pkl")
 DB_FILE = os.path.join(BASE_DIR, "market_dict.db")
 
 from categories_engine import TAXONOMY, TAXONOMY_BY_FA, normalize_category
+
 CATEGORY_ICONS = {item["fa"]: item["icon"] for item in TAXONOMY}
 
 def normalize_text(text: str) -> str:
@@ -85,7 +87,7 @@ def clean_key(text: str) -> str:
     return re.sub(r"[^a-z0-9]", "", str(text).lower().replace(".asp", ""))
 
 _LOCK = threading.Lock()
-_CACHE: Dict[str, Any] = {
+_CACHE: dict[str, Any] = {
     "mtime": 0,
     "summaries": [],
     "search_index": [],
@@ -98,8 +100,8 @@ _CACHE: Dict[str, Any] = {
     "deep_pool_slugs": []
 }
 
-_DETAIL_CACHE: Dict[str, Any] = {}
-_DB_CONN: Optional[sqlite3.Connection] = None
+_DETAIL_CACHE: dict[str, Any] = {}
+_DB_CONN: sqlite3.Connection | None = None
 _IS_RELOADING = False
 _LAST_CHECK_TIME = 0.0
 
@@ -139,10 +141,10 @@ def _rebuild_all_cache(current_mtime: float):
         summaries = []
         search_index = []
         lookup_keys = {}
-        letter_counts: Dict[str, int] = {}
-        category_counts: Dict[str, int] = {}
-        by_letter: Dict[str, List[int]] = {}
-        by_category: Dict[str, List[int]] = {}
+        letter_counts: dict[str, int] = {}
+        category_counts: dict[str, int] = {}
+        by_letter: dict[str, list[int]] = {}
+        by_category: dict[str, list[int]] = {}
         deep_pool_slugs = []
         deep_count = 0
 
@@ -249,18 +251,24 @@ def _rebuild_all_cache(current_mtime: float):
 
         # Safely replace DB_FILE
         if _DB_CONN:
-            try: _DB_CONN.close()
-            except Exception: pass
+            try:
+                _DB_CONN.close()
+            except sqlite3.Error:
+                pass
             _DB_CONN = None
 
         import shutil
         try:
             shutil.copy2(temp_db, DB_FILE)
-            try: os.remove(temp_db)
-            except Exception: pass
-        except Exception:
-            try: os.replace(temp_db, DB_FILE)
-            except Exception: pass
+            try:
+                os.remove(temp_db)
+            except OSError:
+                pass
+        except OSError:
+            try:
+                os.replace(temp_db, DB_FILE)
+            except OSError:
+                pass
 
         sorted_cats = [
             {
@@ -300,17 +308,19 @@ def _rebuild_all_cache(current_mtime: float):
             with open(temp_cache, "wb") as f:
                 pickle.dump(cache_data, f, protocol=pickle.HIGHEST_PROTOCOL)
             if os.path.exists(CACHE_FILE):
-                try: os.remove(CACHE_FILE)
-                except Exception: pass
+                try:
+                    os.remove(CACHE_FILE)
+                except OSError:
+                    pass
             os.rename(temp_cache, CACHE_FILE)
-        except Exception:
+        except OSError:
             pass
 
         _CACHE.update(cache_data)
         _DB_CONN = get_db_connection()
         _DETAIL_CACHE.clear()
 
-    except Exception as e:
+    except (json.JSONDecodeError, OSError, sqlite3.Error, pickle.PickleError):
         import traceback
         traceback.print_exc()
     finally:
@@ -368,14 +378,14 @@ def ensure_cache():
                     if cached.get("mtime") != current_mtime:
                         threading.Thread(target=_async_reload, args=(current_mtime,), daemon=True).start()
                     return
-            except Exception:
+            except (pickle.PickleError, EOFError, OSError):
                 pass
 
         # If cache file missing, rebuild synchronously once
         _rebuild_all_cache(current_mtime)
         _LAST_CHECK_TIME = now
 
-def get_dictionary() -> List[Dict[str, Any]]:
+def get_dictionary() -> list[dict[str, Any]]:
     ensure_cache()
     if _DB_CONN:
         cur = _DB_CONN.cursor()
@@ -387,6 +397,7 @@ def get_dictionary() -> List[Dict[str, Any]]:
 ensure_cache()
 
 from api_v1 import init_api_v1
+
 init_api_v1(
     app=app,
     cache_dict=_CACHE,
@@ -557,7 +568,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--port",
         type=int,
-        default=int(os.environ.get("PORT", 5000)),
+        default=int(os.environ.get("PORT", "5000")),
         help="Port to listen on (default: 5000 or $PORT)"
     )
     parser.add_argument(
@@ -579,13 +590,13 @@ if __name__ == "__main__":
     else:
         proxy_status = "DISABLED"
 
-    print(f"\n=======================================================")
-    print(f"🚀 MarketDict Web App & API are running!")
+    print("\n=======================================================")
+    print("🚀 MarketDict Web App & API are running!")
     print(f"👉 Host:          {args.host}")
     print(f"👉 Port:          {args.port}")
     print(f"👉 Reverse Proxy: {proxy_status}")
     print(f"👉 Web App:       http://{args.host}:{args.port}")
     print(f"👉 REST API:      http://{args.host}:{args.port}/api/v1")
     print(f"👉 API Docs:      http://{args.host}:{args.port}/docs")
-    print(f"=======================================================\n")
+    print("=======================================================\n")
     app.run(host=args.host, port=args.port, debug=False, threaded=True)

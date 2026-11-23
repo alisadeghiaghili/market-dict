@@ -1,11 +1,11 @@
-# -*- coding: utf-8 -*-
 """
 Automated Test Suite for MarketDict REST API v1
 """
 
 import unittest
-import json
+
 from app import app
+
 
 class MarketDictAPITestCase(unittest.TestCase):
     @classmethod
@@ -248,7 +248,7 @@ class MarketDictAPITestCase(unittest.TestCase):
 
     def test_reverse_proxy_trusted_headers(self):
         """Verify reverse proxy headers (X-Forwarded-For, X-Forwarded-Proto) when client IP is trusted."""
-        from app import apply_reverse_proxy, app
+        from app import app, apply_reverse_proxy
         apply_reverse_proxy(app, allowed_ips="127.0.0.1,10.0.0.1")
 
         # Directly invoke the WSGI app with WSGI environ to test header rewriting
@@ -273,7 +273,6 @@ class MarketDictAPITestCase(unittest.TestCase):
 
         # Test through reverse_proxy logic
         from werkzeug.middleware.proxy_fix import ProxyFix
-        base_wsgi = getattr(app, "_base_wsgi_app", app.wsgi_app)
         proxy_fix = ProxyFix(inspect_app, x_for=1, x_proto=1, x_host=1, x_port=1, x_prefix=1)
 
         allowed = {"127.0.0.1", "10.0.0.1"}
@@ -288,7 +287,7 @@ class MarketDictAPITestCase(unittest.TestCase):
 
     def test_reverse_proxy_untrusted_headers(self):
         """Verify reverse proxy headers are ignored when connecting client IP is NOT in allowed list."""
-        from app import apply_reverse_proxy, app
+        from app import app, apply_reverse_proxy
         apply_reverse_proxy(app, allowed_ips="10.0.0.1")
 
         environ = {
@@ -326,7 +325,7 @@ class MarketDictAPITestCase(unittest.TestCase):
 
     def test_reverse_proxy_wildcard_allow(self):
         """Verify reverse proxy headers work from any IP when allowed_ips='*'."""
-        from app import apply_reverse_proxy, app
+        from app import app, apply_reverse_proxy
         apply_reverse_proxy(app, allowed_ips="*")
 
         environ = {

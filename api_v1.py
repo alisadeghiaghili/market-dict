@@ -1,21 +1,25 @@
-# -*- coding: utf-8 -*-
 """
 MarketDict API v1 Blueprint
 High-performance RESTful API for external applications and integrations.
 """
 
-import os
-import re
 import json
 import math
-import time
+import os
 import random
+import re
 import sqlite3
-from typing import List, Dict, Any, Optional
+import time
+from typing import Any
 
-from flask import Blueprint, request, jsonify, render_template_string, Response
+from flask import Blueprint, Response, jsonify, render_template_string, request
 
-from categories_engine import TAXONOMY, TAXONOMY_BY_FA, CATEGORY_ALIASES, normalize_category
+from categories_engine import (
+    CATEGORY_ALIASES,
+    TAXONOMY,
+    TAXONOMY_BY_FA,
+    normalize_category,
+)
 from formula_registry import FORMULA_DB
 from openapi_spec import get_openapi_spec
 
@@ -25,8 +29,8 @@ api_v1 = Blueprint("api_v1", __name__, url_prefix="/api/v1")
 _SERVICE_START_TIME = time.time()
 
 # Internal References (injected via init_api_v1 or imported from app)
-_CACHE_REF: Optional[Dict[str, Any]] = None
-_DETAIL_CACHE_REF: Optional[Dict[str, Any]] = None
+_CACHE_REF: dict[str, Any] | None = None
+_DETAIL_CACHE_REF: dict[str, Any] | None = None
 _GET_DB_CONN_FUNC = None
 _ENSURE_CACHE_FUNC = None
 _NORMALIZE_TEXT_FUNC = None
@@ -34,8 +38,8 @@ _CLEAN_KEY_FUNC = None
 
 # Build Category Lookup Maps
 # Allows querying by slug (e.g. 'crypto', 'stock_capital_markets'), English name, or Persian name
-CATEGORY_LOOKUP: Dict[str, str] = {}
-TAXONOMY_BY_ID: Dict[str, Dict[str, Any]] = {}
+CATEGORY_LOOKUP: dict[str, str] = {}
+TAXONOMY_BY_ID: dict[str, dict[str, Any]] = {}
 
 for item in TAXONOMY:
     cat_id = item["id"].lower()
@@ -50,7 +54,7 @@ for alias, canon_fa in CATEGORY_ALIASES.items():
     canon = TAXONOMY_BY_FA.get(canon_fa, TAXONOMY[-1])
     CATEGORY_LOOKUP[alias.lower()] = canon["fa"]
 
-def get_category_meta(name_fa: str) -> Dict[str, Any]:
+def get_category_meta(name_fa: str) -> dict[str, Any]:
     canon = normalize_category(name_fa)
     return {
         "id": canon["id"],
@@ -74,7 +78,7 @@ def _normalize_text_fallback(text: str) -> str:
     text = re.sub(r"[\u064B-\u065F\u0670]", "", text)
     return text.strip()
 
-def get_cache() -> Dict[str, Any]:
+def get_cache() -> dict[str, Any]:
     if _ENSURE_CACHE_FUNC:
         _ENSURE_CACHE_FUNC()
     elif _CACHE_REF is None:
@@ -82,17 +86,17 @@ def get_cache() -> Dict[str, Any]:
             import app as main_app
             main_app.ensure_cache()
             return main_app._CACHE
-        except Exception:
+        except (ImportError, AttributeError):
             pass
     return _CACHE_REF or {}
 
-def get_detail_cache() -> Dict[str, Any]:
+def get_detail_cache() -> dict[str, Any]:
     global _DETAIL_CACHE_REF
     if _DETAIL_CACHE_REF is None:
         try:
             import app as main_app
             _DETAIL_CACHE_REF = main_app._DETAIL_CACHE
-        except Exception:
+        except (ImportError, AttributeError):
             _DETAIL_CACHE_REF = {}
     return _DETAIL_CACHE_REF
 
@@ -102,7 +106,7 @@ def get_db():
     try:
         import app as main_app
         return main_app.get_db_connection()
-    except Exception:
+    except (ImportError, AttributeError):
         db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "market_dict.db")
         return sqlite3.connect(db_path, check_same_thread=False)
 
@@ -148,7 +152,7 @@ def handle_options(dummy):
     """Handle CORS preflight requests cleanly."""
     return "", 204
 
-def success_response(data: Any, pagination: Optional[Dict[str, Any]] = None, meta: Optional[Dict[str, Any]] = None, code: int = 200):
+def success_response(data: Any, pagination: dict[str, Any] | None = None, meta: dict[str, Any] | None = None, code: int = 200):
     payload = {"status": "success", "data": data}
     if pagination is not None:
         payload["pagination"] = pagination
@@ -156,7 +160,7 @@ def success_response(data: Any, pagination: Optional[Dict[str, Any]] = None, met
         payload["meta"] = meta
     return jsonify(payload), code
 
-def error_response(message: str, code: int = 400, details: Optional[str] = None):
+def error_response(message: str, code: int = 400, details: str | None = None):
     payload = {
         "status": "error",
         "error": {
@@ -167,12 +171,12 @@ def error_response(message: str, code: int = 400, details: Optional[str] = None)
     }
     return jsonify(payload), code
 
-def filter_fields(item: Dict[str, Any], fields_set: Optional[set]) -> Dict[str, Any]:
+def filter_fields(item: dict[str, Any], fields_set: set | None) -> dict[str, Any]:
     if not fields_set:
         return item
     return {k: v for k, v in item.items() if k in fields_set}
 
-def enrich_term_summary(term: Dict[str, Any]) -> Dict[str, Any]:
+def enrich_term_summary(term: dict[str, Any]) -> dict[str, Any]:
     """Attach category_id and has_formula flag to a term summary."""
     res = dict(term)
     cat_fa = res.get("category", "")
@@ -188,7 +192,7 @@ def enrich_term_summary(term: Dict[str, Any]) -> Dict[str, Any]:
     res["has_formula"] = c_key in FORMULA_DB
     return res
 
-def fetch_term_detail(target_slug_or_id: str) -> Optional[Dict[str, Any]]:
+def fetch_term_detail(target_slug_or_id: str) -> dict[str, Any] | None:
     """Retrieve full term details from memory cache or SQLite database."""
     cache = get_cache()
     lookup_keys = cache.get("lookup_keys", {})
@@ -204,13 +208,16 @@ def fetch_term_detail(target_slug_or_id: str) -> Optional[Dict[str, Any]]:
         data = dict(detail_cache[target_slug])
     else:
         conn = get_db()
-        cur = conn.cursor()
-        # Search by slug or numeric ID
-        if ident.isdigit():
-            cur.execute("SELECT full_json FROM terms WHERE id = ? OR slug = ? LIMIT 1", (int(ident), target_slug))
-        else:
-            cur.execute("SELECT full_json FROM terms WHERE slug = ? LIMIT 1", (target_slug,))
-        row = cur.fetchone()
+        try:
+            cur = conn.cursor()
+            # Search by slug or numeric ID
+            if ident.isdigit():
+                cur.execute("SELECT full_json FROM terms WHERE id = ? OR slug = ? LIMIT 1", (int(ident), target_slug))
+            else:
+                cur.execute("SELECT full_json FROM terms WHERE slug = ? LIMIT 1", (target_slug,))
+            row = cur.fetchone()
+        finally:
+            conn.close()
         if not row:
             return None
         data = json.loads(row[0])
@@ -434,7 +441,7 @@ def get_terms():
         limit = 20
 
     fields_arg = request.args.get("fields", "").strip()
-    fields_set = set(f.strip() for f in fields_arg.split(",")) if fields_arg else None
+    fields_set = {f.strip() for f in fields_arg.split(",")} if fields_arg else None
 
     # Resolve category param (supports 'crypto', 'ارزهای دیجیتال و بلاک‌چین', etc.)
     target_category_fa = None
@@ -551,7 +558,7 @@ def get_term(identifier: str):
 
     fields_arg = request.args.get("fields", "").strip()
     if fields_arg:
-        fields_set = set(f.strip() for f in fields_arg.split(","))
+        fields_set = {f.strip() for f in fields_arg.split(",")}
         term_data = filter_fields(term_data, fields_set)
 
     raw = request.args.get("raw", "").lower() in ("true", "1", "yes")
@@ -692,7 +699,7 @@ def autocomplete():
 
     # 2. Substring matches if prefix matches didn't fill limit
     if len(suggestions) < limit:
-        seen_ids = set(s["id"] for s in suggestions)
+        seen_ids = {s["id"] for s in suggestions}
         for entry in search_index:
             if entry["id_str"] in seen_ids:
                 continue

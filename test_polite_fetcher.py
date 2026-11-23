@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Offline tests for :mod:`polite_fetcher`."""
 
 import io
