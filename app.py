@@ -14,7 +14,7 @@ import threading
 import time
 from typing import Any
 
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, Response
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -553,6 +553,61 @@ def get_random_term():
         return jsonify({"error": "No terms available"}), 404
     rand_slug = random.choice(pool)
     return get_term_by_id(rand_slug)
+
+# In-memory LRU cache for generated neural TTS audio chunks
+_TTS_CACHE: Dict[str, bytes] = {}
+_TTS_LOCK = threading.Lock()
+
+@app.route("/api/tts")
+def handle_tts():
+    """
+    Stream high-quality neural TTS audio for Persian and English.
+    Query parameters:
+      - text: string to speak (required)
+      - lang: 'fa' or 'en' (default: 'fa')
+      - voice: optional explicit voice name
+    """
+    text = (request.args.get("text") or "").strip()
+    if not text:
+        return jsonify({"error": "Missing 'text' parameter"}), 400
+
+    lang = (request.args.get("lang") or "fa").strip().lower()
+    voice = (request.args.get("voice") or "").strip()
+    if not voice:
+        voice = "fa-IR-DilaraNeural" if lang == "fa" else "en-US-AriaNeural"
+
+    cache_key = f"{voice}:{text}"
+    with _TTS_LOCK:
+        if cache_key in _TTS_CACHE:
+            return Response(_TTS_CACHE[cache_key], mimetype="audio/mpeg")
+
+    try:
+        import asyncio
+        import edge_tts
+
+        async def _generate_audio():
+            comm = edge_tts.Communicate(text, voice)
+            buf = bytearray()
+            async for chunk in comm.stream():
+                if chunk["type"] == "audio":
+                    buf.extend(chunk["data"])
+            return bytes(buf)
+
+        audio_bytes = asyncio.run(_generate_audio())
+
+        if not audio_bytes:
+            return jsonify({"error": "Failed to synthesize speech"}), 500
+
+        with _TTS_LOCK:
+            if len(_TTS_CACHE) > 500:
+                oldest_key = next(iter(_TTS_CACHE))
+                _TTS_CACHE.pop(oldest_key, None)
+            _TTS_CACHE[cache_key] = audio_bytes
+
+        return Response(audio_bytes, mimetype="audio/mpeg")
+    except Exception as exc:
+        app.logger.warning(f"TTS synthesis error: {exc}")
+        return jsonify({"error": str(exc)}), 500
 
 if __name__ == "__main__":
     import argparse

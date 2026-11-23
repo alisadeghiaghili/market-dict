@@ -5,6 +5,7 @@
 [![CI Verification](https://github.com/alisadeghiaghili/market-dict/actions/workflows/ci.yml/badge.svg)](https://github.com/alisadeghiaghili/market-dict/actions/workflows/ci.yml)
 [![MCP](https://img.shields.io/badge/MCP-Enabled-purple)](MCP_DOCUMENTATION.md)
 [![Latest Release](https://img.shields.io/github/v/release/alisadeghiaghili/market-dict?color=emerald)](https://github.com/alisadeghiaghili/market-dict/releases)
+[![Setup Guide](https://img.shields.io/badge/Setup_Guide-Persian_%26_English-success)](SETUP.md)
 [![Changelog](https://img.shields.io/badge/Changelog-Keep%20a%20Changelog-orange.svg)](CHANGELOG.md)
 
 A modern bilingual (English & Persian) financial dictionary — **6,108 market & investing terms** across 14 domains with real-time fuzzy search, KaTeX mathematical formulas, and internal term cross-linking — available as a web app, a static build, a REST API and an MCP server for internal use.
@@ -121,6 +122,11 @@ python test_mcp_server.py
 
 ## Quick Start
 
+> 📚 **Detailed Setup Documentation**:
+> - 🇮🇷 **[راهنمای بسیار دقیق و جامع راه‌اندازی (فارسی) — SETUP_FA.md](SETUP_FA.md)**
+> - 🇬🇧 **[Complete Technical Setup & Installation Guide — SETUP_EN.md](SETUP_EN.md)**
+> - 🚀 **[Setup Guide Landing Page — SETUP.md](SETUP.md)**
+
 ### 1. Run Locally
 
 ```bash
@@ -188,7 +194,10 @@ python investopedia_scraper.py -q
 
 ## Production Deployment
 
-For detailed production setup instructions using Docker or Gunicorn with Nginx and Systemd, refer to [DEPLOYMENT.md](DEPLOYMENT.md).
+For detailed production setup instructions using Docker or Gunicorn with Nginx and Systemd, refer to:
+- 🚢 **[DEPLOYMENT.md](DEPLOYMENT.md)** — Production Architecture & Reverse Proxy Guide
+- 🇮🇷 **[SETUP_FA.md](SETUP_FA.md)** — Persian Detailed Setup & Deployment Guide
+- 🇬🇧 **[SETUP_EN.md](SETUP_EN.md)** — English Detailed Setup & Deployment Guide
 
 ---
 

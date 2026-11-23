@@ -2,6 +2,11 @@
 
 This document outlines standard production deployment strategies for **MarketDict**, including Docker containerization, Systemd service setup, and Nginx reverse proxy configuration.
 
+> **Looking for the complete setup guide?**
+> - 🇮🇷 **[راهنمای جامع راه‌اندازی و نصب به زبان فارسی (SETUP_FA.md)](SETUP_FA.md)**
+> - 🇬🇧 **[Comprehensive Setup & Installation Guide in English (SETUP_EN.md)](SETUP_EN.md)**
+> - 🚀 **[Quickstart Hub (SETUP.md)](SETUP.md)**
+
 > **Internal deployments only.** The dictionary data contains third-party copyrighted content that is not licensed for redistribution. Deploy behind authentication on an internal network, never on a public website. See [DATA_NOTICE.md](DATA_NOTICE.md).
 
 ---
@@ -186,9 +191,31 @@ curl http://localhost:5000/api/stats
 Expected response:
 ```json
 {
-  "total_terms": 631,
-  "total_categories": 14,
+  "deep_enriched_count": 6108,
+  "total_categories": 28,
   "total_letters": 27,
-  "deep_enriched_count": 57
+  "total_terms": 6108
+}
+```
+
+Or query the REST API v1 health endpoint:
+```bash
+curl http://localhost:5000/api/v1/health
+```
+Expected response:
+```json
+{
+  "status": "success",
+  "data": {
+    "status": "healthy",
+    "service": "MarketDict API",
+    "database": "sqlite_wal_active",
+    "cache_status": "hot",
+    "total_terms": 6108,
+    "total_categories": 28,
+    "total_letters": 27,
+    "uptime_seconds": 12.4,
+    "version": "1.0.0"
+  }
 }
 ```

@@ -361,5 +361,24 @@ class MarketDictAPITestCase(unittest.TestCase):
         self.assertEqual(captured_environ.get("REMOTE_ADDR"), "198.51.100.22")
         self.assertEqual(captured_environ.get("wsgi.url_scheme"), "https")
 
+    def test_tts_missing_text(self):
+        """Verify TTS endpoint returns 400 when text parameter is omitted."""
+        res = self.client.get("/api/tts")
+        self.assertEqual(res.status_code, 400)
+        data = res.get_json()
+        self.assertIn("error", data)
+
+    def test_tts_generate_audio_and_cache(self):
+        """Verify TTS endpoint generates and caches audio/mpeg stream."""
+        res = self.client.get("/api/tts?text=تست&lang=fa")
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(res.mimetype, "audio/mpeg")
+        self.assertGreater(len(res.data), 0)
+
+        # Test caching
+        res_cached = self.client.get("/api/tts?text=تست&lang=fa")
+        self.assertEqual(res_cached.status_code, 200)
+        self.assertEqual(res_cached.data, res.data)
+
 if __name__ == "__main__":
     unittest.main()
