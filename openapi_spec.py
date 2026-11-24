@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 OpenAPI 3.0.3 Specification for MarketDict REST API
 """

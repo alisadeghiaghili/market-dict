@@ -1240,10 +1240,10 @@
 
     <script>
         window.HAS_BACKEND_API = true;
-        window.APP_ROOT = (function() {
-            var r = "{{ request.script_root }}";
-            return (r.indexOf("{{") === 0) ? "" : r;
-        })();
+        window.APP_ROOT = "{{ request.script_root }}";
+        if (window.APP_ROOT.startsWith("{")) {
+            window.APP_ROOT = "";
+        }
         function getApiUrl(path) {
             var root = window.APP_ROOT || "";
             if (!path.startsWith("/")) path = "/" + path;

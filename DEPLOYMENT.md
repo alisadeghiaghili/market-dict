@@ -147,6 +147,7 @@ Both servers accept standard reverse proxy flags:
 | :--- | :--- | :--- | :--- |
 | `--host` | `TEXT` | `0.0.0.0` (app) / `127.0.0.1` (mcp) | Host IP address to bind to (also via `$HOST`) |
 | `--port` | `INTEGER` | `5000` (app) / `8000` (mcp) | Port number to bind to (also via `$PORT`) |
+| `--application-root` / `--app-root` | `TEXT` | `""` (root `/`) | Root URL path prefix (e.g. `/myapp`, `/dict`) (also via `$APPLICATION_ROOT` or `$APP_ROOT`) |
 | `--proxy-headers` / `--no-proxy-headers` | `BOOLEAN` | `False` (app) / `True` (mcp) | Enable processing of `X-Forwarded-*` headers |
 | `--forwarded-allow-ips` | `TEXT` | `*` | Comma-separated list of trusted proxy IPs or `*` (also via `$FORWARDED_ALLOW_IPS`) |
 
@@ -156,6 +157,9 @@ Both servers accept standard reverse proxy flags:
 ```bash
 # Run behind Nginx listening on port 5000, trusting localhost
 python app.py --host 0.0.0.0 --port 5000 --proxy-headers --forwarded-allow-ips "127.0.0.1,10.0.0.1"
+
+# Run under a custom application root (e.g. /myapp or /dict)
+python app.py --host 0.0.0.0 --port 5000 --application-root /myapp
 
 # Or trust all upstream reverse proxies (Docker / Kubernetes / Cloudflare)
 python app.py --host 0.0.0.0 --port 5000 --proxy-headers --forwarded-allow-ips "*"
@@ -171,13 +175,30 @@ python mcp_server.py --transport streamable-http --host 0.0.0.0 --port 8000 --pr
 ```
 
 #### 3. Via Environment Variables
-You can also enable reverse proxy behavior globally without CLI flags:
+You can also enable reverse proxy behavior and application root globally without CLI flags:
 ```bash
+export APPLICATION_ROOT=/myapp
 export PROXY_HEADERS=true
 export FORWARDED_ALLOW_IPS="*"
 python app.py
 # or
 gunicorn --bind 0.0.0.0:5000 --forwarded-allow-ips "*" app:app
+```
+
+### Subpath Reverse Proxy Configuration (Nginx Subpath / Subfolder)
+
+When serving MarketDict under a custom subpath such as `/myapp/` via Nginx:
+
+```nginx
+location /myapp/ {
+    proxy_pass http://127.0.0.1:5000/myapp/;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Prefix /myapp;
+    proxy_read_timeout 120s;
+}
 ```
 
 ---

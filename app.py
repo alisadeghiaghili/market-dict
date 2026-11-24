@@ -20,46 +20,7 @@ app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.jinja_env.auto_reload = True
 
-def apply_reverse_proxy(flask_app: Flask, allowed_ips: Any = "*") -> Flask:
-    """
-    Wrap Flask WSGI app with Werkzeug ProxyFix to respect X-Forwarded-For,
-    X-Forwarded-Proto, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-Prefix
-    from trusted reverse proxy IP addresses.
-    """
-    from werkzeug.middleware.proxy_fix import ProxyFix
-
-    allowed: set | None = None
-    if isinstance(allowed_ips, str):
-        if allowed_ips.strip() != "*":
-            allowed = {ip.strip() for ip in allowed_ips.split(",") if ip.strip()}
-    elif isinstance(allowed_ips, (list, set, tuple)):
-        allowed = set(allowed_ips)
-
-    base_wsgi = getattr(flask_app, "_base_wsgi_app", flask_app.wsgi_app)
-    flask_app._base_wsgi_app = base_wsgi
-
-    proxy_fix = ProxyFix(
-        base_wsgi,
-        x_for=1,
-        x_proto=1,
-        x_host=1,
-        x_port=1,
-        x_prefix=1
-    )
-
-    def reverse_proxy_wsgi(environ, start_response):
-        remote_addr = environ.get("REMOTE_ADDR", "")
-        if allowed is None or remote_addr in allowed:
-            return proxy_fix(environ, start_response)
-        return base_wsgi(environ, start_response)
-
-    flask_app.wsgi_app = reverse_proxy_wsgi
-    flask_app.config["REVERSE_PROXY_ENABLED"] = True
-    flask_app.config["FORWARDED_ALLOW_IPS"] = allowed_ips
-    if hasattr(flask_app, "_unprefixed_wsgi_app"):
-        flask_app._unprefixed_wsgi_app = reverse_proxy_wsgi
-    return flask_app
-
+app._original_wsgi_app = app.wsgi_app
 
 def normalize_application_root(root: str | None) -> str:
     """
@@ -76,18 +37,100 @@ def normalize_application_root(root: str | None) -> str:
     return cleaned
 
 
-def _root_fallback(environ: dict[str, Any], start_response: Any, root: str) -> Any:
-    """Fallback handler for requests outside the mounted application root."""
+def _rebuild_wsgi_pipeline(flask_app: Flask) -> None:
+    """
+    Rebuild the WSGI pipeline based on current configuration:
+    Base Flask App -> [ApplicationRootMiddleware] -> [ReverseProxyMiddleware (ProxyFix)]
+    """
+    from werkzeug.middleware.proxy_fix import ProxyFix
     from werkzeug.wrappers import Response
 
-    path = environ.get("PATH_INFO", "")
-    if path in ("", "/"):
-        query = environ.get("QUERY_STRING", "")
-        location = f"{root}/" + (f"?{query}" if query else "")
-        res = Response(status=302, headers=[("Location", location)])
-        return res(environ, start_response)
-    res = Response("Not Found", status=404)
-    return res(environ, start_response)
+    if not hasattr(flask_app, "_original_wsgi_app"):
+        flask_app._original_wsgi_app = flask_app.wsgi_app
+
+    current = flask_app._original_wsgi_app
+    root = flask_app.config.get("APPLICATION_ROOT_PREFIX", "")
+
+    # 1. Application Root layer (if configured)
+    if root:
+        base_app = current
+
+        def application_root_wsgi(environ: dict[str, Any], start_response: Any) -> Any:
+            path = environ.get("PATH_INFO", "")
+            script_name = environ.get("SCRIPT_NAME", "")
+
+            # Exact match without trailing slash: e.g. /myapp -> 308 redirect to /myapp/
+            if path == root:
+                query = environ.get("QUERY_STRING", "")
+                loc = f"{root}/" + (f"?{query}" if query else "")
+                res = Response(status=308, headers=[("Location", loc)])
+                return res(environ, start_response)
+
+            # Subpath match: e.g. /myapp/... -> strip prefix, set SCRIPT_NAME
+            if path.startswith(root + "/"):
+                environ["SCRIPT_NAME"] = script_name + root
+                environ["PATH_INFO"] = path[len(root):]
+                return base_app(environ, start_response)
+
+            # Domain root: / -> 302 redirect to /myapp/
+            if path in ("", "/"):
+                query = environ.get("QUERY_STRING", "")
+                loc = f"{root}/" + (f"?{query}" if query else "")
+                res = Response(status=302, headers=[("Location", loc)])
+                return res(environ, start_response)
+
+            # Outside application root
+            res = Response("Not Found", status=404)
+            return res(environ, start_response)
+
+        current = application_root_wsgi
+
+    # 2. Reverse Proxy layer (if configured)
+    if flask_app.config.get("REVERSE_PROXY_ENABLED"):
+        allowed_ips = flask_app.config.get("FORWARDED_ALLOW_IPS", "*")
+        allowed: set | None = None
+        if isinstance(allowed_ips, str):
+            if allowed_ips.strip() != "*":
+                allowed = {ip.strip() for ip in allowed_ips.split(",") if ip.strip()}
+        elif isinstance(allowed_ips, (list, set, tuple)):
+            allowed = set(allowed_ips)
+
+        inner_app = current
+        proxy_fix = ProxyFix(
+            inner_app,
+            x_for=1,
+            x_proto=1,
+            x_host=1,
+            x_port=1,
+            x_prefix=1
+        )
+
+        def reverse_proxy_wsgi(environ: dict[str, Any], start_response: Any) -> Any:
+            remote_addr = environ.get("REMOTE_ADDR", "")
+            if allowed is None or remote_addr in allowed:
+                return proxy_fix(environ, start_response)
+            return inner_app(environ, start_response)
+
+        current = reverse_proxy_wsgi
+
+    flask_app.wsgi_app = current
+
+
+def apply_reverse_proxy(flask_app: Flask, allowed_ips: Any = "*") -> Flask:
+    """
+    Wrap Flask WSGI app with Werkzeug ProxyFix to respect X-Forwarded-For,
+    X-Forwarded-Proto, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-Prefix
+    from trusted reverse proxy IP addresses.
+    """
+    if allowed_ips is None or allowed_ips is False:
+        flask_app.config["REVERSE_PROXY_ENABLED"] = False
+        flask_app.config.pop("FORWARDED_ALLOW_IPS", None)
+    else:
+        flask_app.config["REVERSE_PROXY_ENABLED"] = True
+        flask_app.config["FORWARDED_ALLOW_IPS"] = allowed_ips
+
+    _rebuild_wsgi_pipeline(flask_app)
+    return flask_app
 
 
 def apply_application_root(flask_app: Flask, application_root: str | None = None) -> Flask:
@@ -97,38 +140,9 @@ def apply_application_root(flask_app: Flask, application_root: str | None = None
     requests to '<application_root>' (without trailing slash) redirect to '<application_root>/',
     and requests to '/' automatically redirect to '<application_root>/'.
     """
-    from werkzeug.middleware.dispatcher import DispatcherMiddleware
-    from werkzeug.wrappers import Response
-
     root = normalize_application_root(application_root)
-    flask_app.config["APPLICATION_ROOT"] = root or "/"
     flask_app.config["APPLICATION_ROOT_PREFIX"] = root
-
-    if not hasattr(flask_app, "_unprefixed_wsgi_app"):
-        flask_app._unprefixed_wsgi_app = flask_app.wsgi_app
-
-    base_app = flask_app._unprefixed_wsgi_app
-
-    if not root:
-        flask_app.wsgi_app = base_app
-        return flask_app
-
-    mounts = {root: base_app}
-    dispatcher = DispatcherMiddleware(
-        lambda env, sr: _root_fallback(env, sr, root),
-        mounts
-    )
-
-    def application_root_wsgi(environ: dict[str, Any], start_response: Any) -> Any:
-        path = environ.get("PATH_INFO", "")
-        if path in mounts:
-            query = environ.get("QUERY_STRING", "")
-            location = f"{path}/" + (f"?{query}" if query else "")
-            res = Response(status=308, headers=[("Location", location)])
-            return res(environ, start_response)
-        return dispatcher(environ, start_response)
-
-    flask_app.wsgi_app = application_root_wsgi
+    _rebuild_wsgi_pipeline(flask_app)
     return flask_app
 
 

@@ -454,5 +454,157 @@ class MarketDictAPITestCase(unittest.TestCase):
             data = res.get_json()
             self.assertIn("EdgeTTS network timeout", data.get("error", ""))
 
+    def test_normalize_application_root(self):
+        """Verify normalization of various root path string formats."""
+        from app import normalize_application_root
+
+        self.assertEqual(normalize_application_root(""), "")
+        self.assertEqual(normalize_application_root(None), "")
+        self.assertEqual(normalize_application_root("/"), "")
+        self.assertEqual(normalize_application_root("   /   "), "")
+        self.assertEqual(normalize_application_root("myapp"), "/myapp")
+        self.assertEqual(normalize_application_root("/myapp"), "/myapp")
+        self.assertEqual(normalize_application_root("/myapp/"), "/myapp")
+        self.assertEqual(normalize_application_root("  /dict/v1/  "), "/dict/v1")
+        self.assertEqual(normalize_application_root("dict/v1"), "/dict/v1")
+
+    def test_apply_application_root_subpath_routing(self):
+        """Verify mounting application under a custom subpath (e.g. /myapp)."""
+        from app import apply_application_root
+
+        try:
+            apply_application_root(app, "/myapp")
+            self.assertEqual(app.config["APPLICATION_ROOT_PREFIX"], "/myapp")
+
+            # 1. Index page under subpath
+            res = self.client.get("/myapp/")
+            self.assertEqual(res.status_code, 200)
+
+            # 2. REST API v1 health under subpath
+            res_health = self.client.get("/myapp/api/v1/health")
+            self.assertEqual(res_health.status_code, 200)
+            self.assertEqual(res_health.get_json()["status"], "success")
+
+            # 3. Web frontend stats API under subpath
+            res_stats = self.client.get("/myapp/api/stats")
+            self.assertEqual(res_stats.status_code, 200)
+            self.assertEqual(res_stats.get_json()["total_terms"], 6108)
+
+            # 4. OpenAPI JSON specification under subpath
+            res_spec = self.client.get("/myapp/api/v1/openapi.json")
+            self.assertEqual(res_spec.status_code, 200)
+            spec_data = res_spec.get_json()
+            server_urls = [s["url"] for s in spec_data.get("servers", [])]
+            self.assertTrue(any("/myapp/api/v1" in u for u in server_urls))
+
+            # 5. Swagger UI docs under subpath
+            res_swagger = self.client.get("/myapp/api/v1/docs")
+            self.assertEqual(res_swagger.status_code, 200)
+            self.assertIn(b"/myapp/api/v1/openapi.json", res_swagger.data)
+
+            # 6. /docs redirect under subpath
+            res_docs = self.client.get("/myapp/docs")
+            self.assertEqual(res_docs.status_code, 302)
+            self.assertIn("/myapp/api/v1/docs", res_docs.headers.get("Location", ""))
+
+            # 7. Categories terms_url contains subpath
+            res_cats = self.client.get("/myapp/api/v1/categories")
+            self.assertEqual(res_cats.status_code, 200)
+            cat_list = res_cats.get_json()["data"]
+            self.assertTrue(cat_list[0]["terms_url"].startswith("/myapp/api/v1/categories/"))
+
+            # 8. Letters terms_url contains subpath
+            res_ltrs = self.client.get("/myapp/api/v1/letters")
+            self.assertEqual(res_ltrs.status_code, 200)
+            ltr_list = res_ltrs.get_json()["data"]
+            self.assertTrue(ltr_list[0]["terms_url"].startswith("/myapp/api/v1/letters/"))
+
+        finally:
+            # Reset application root back to default
+            apply_application_root(app, "")
+
+    def test_application_root_redirects_and_fallbacks(self):
+        """Verify redirect from /myapp -> /myapp/, / -> /myapp/, and 404 for unmapped paths."""
+        from app import apply_application_root
+
+        try:
+            apply_application_root(app, "myapp")
+
+            # 1. Exact mount point without trailing slash -> 308 redirect to /myapp/
+            res_prefix = self.client.get("/myapp")
+            self.assertEqual(res_prefix.status_code, 308)
+            self.assertTrue(res_prefix.headers.get("Location", "").endswith("/myapp/"))
+
+            # 2. Exact mount point with query string -> 308 redirect preserving query
+            res_prefix_query = self.client.get("/myapp?q=inflation")
+            self.assertEqual(res_prefix_query.status_code, 308)
+            self.assertTrue(res_prefix_query.headers.get("Location", "").endswith("/myapp/?q=inflation"))
+
+            # 3. Domain root / -> 302 redirect to /myapp/
+            res_root = self.client.get("/")
+            self.assertEqual(res_root.status_code, 302)
+            self.assertEqual(res_root.headers.get("Location"), "/myapp/")
+
+            # 4. Domain root with query -> 302 redirect preserving query
+            res_root_query = self.client.get("/?ref=portal")
+            self.assertEqual(res_root_query.status_code, 302)
+            self.assertEqual(res_root_query.headers.get("Location"), "/myapp/?ref=portal")
+
+            # 5. Unmapped path -> 404
+            res_unmapped = self.client.get("/unmapped_page")
+            self.assertEqual(res_unmapped.status_code, 404)
+
+        finally:
+            apply_application_root(app, "")
+
+    def test_application_root_with_reverse_proxy(self):
+        """Verify combined usage of application root and reverse proxy header handling."""
+        from app import apply_application_root, apply_reverse_proxy
+
+        try:
+            apply_application_root(app, "/myapp")
+            apply_reverse_proxy(app, allowed_ips="*")
+
+            res = self.client.get(
+                "/myapp/api/v1/health",
+                headers={
+                    "X-Forwarded-For": "198.51.100.77",
+                    "X-Forwarded-Proto": "https"
+                }
+            )
+            self.assertEqual(res.status_code, 200)
+            self.assertEqual(res.get_json()["status"], "success")
+
+            # Test passing IP list and untrusted client fallback
+            apply_reverse_proxy(app, allowed_ips=["10.0.0.1"])
+            res_untrusted = self.client.get(
+                "/myapp/api/v1/health",
+                headers={"X-Forwarded-For": "203.0.113.1"}
+            )
+            self.assertEqual(res_untrusted.status_code, 200)
+
+            # Test disabling reverse proxy
+            apply_reverse_proxy(app, False)
+            self.assertFalse(app.config.get("REVERSE_PROXY_ENABLED"))
+
+        finally:
+            apply_application_root(app, "")
+            apply_reverse_proxy(app, "*")
+
+    def test_rebuild_pipeline_fresh_app_and_openapi_server_url(self):
+        """Verify pipeline rebuild on fresh Flask instance and OpenAPI server_url branch."""
+        from flask import Flask
+
+        from app import apply_application_root
+        from openapi_spec import get_openapi_spec
+
+        fresh_app = Flask("fresh_test_app")
+        apply_application_root(fresh_app, "/test_fresh")
+        self.assertTrue(hasattr(fresh_app, "_original_wsgi_app"))
+
+        spec = get_openapi_spec(server_url="https://api.test.com/api/v1")
+        server_urls = [s["url"] for s in spec["servers"]]
+        self.assertIn("https://api.test.com/api/v1", server_urls)
+
 if __name__ == "__main__":
     unittest.main()
