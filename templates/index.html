@@ -4227,95 +4227,6 @@
                 }
             }
 
-            persianToPhoneticLatin(text) {
-                if (!text) return '';
-                // Common Persian financial and dictionary vocabulary mappings
-                const dictionary = {
-                    'اصطلاح': 'Estelaah',
-                    'تعریف': 'Ta\'reef',
-                    'مفهوم': 'Mafhoom',
-                    'نکات': 'Nokaat',
-                    'کلیدی': 'Kelidi',
-                    'سرفصل': 'Sarfasl',
-                    'بخش': 'Bakhsh',
-                    'جمع‌بندی': 'Jam\'bandi',
-                    'نهایی': 'Nahaayee',
-                    'نتیجه‌گیری': 'Natijeh-giri',
-                    'بازار': 'Bazaar',
-                    'سرمایه': 'Sarmayeh',
-                    'بورس': 'Boors',
-                    'سهام': 'Sahaam',
-                    'اوراق': 'Owraagh',
-                    'بهادار': 'Bahaadaar',
-                    'نرخ': 'Nerkh',
-                    'بهره': 'Bahreh',
-                    'تورم': 'Tavarrom',
-                    'سود': 'Sood',
-                    'زیان': 'Ziyaan',
-                    'ریسک': 'Risk',
-                    'دارایی': 'Daaraayee',
-                    'بدهی': 'Bedehi',
-                    'حقوق': 'Hoghoogh',
-                    'صاحبان': 'Saahebaane',
-                    'صندوق': 'Sandoogh',
-                    'سرمایه‌گذاری': 'Sarmayeh-gozaari',
-                    'ارزش': 'Arzesh',
-                    'فعلی': 'Fe\'li',
-                    'آتی': 'Aati',
-                    'خالص': 'Khaales',
-                    'شاخص': 'Shaakhes',
-                    'کل': 'Kol',
-                    'معاملات': 'Mo\'aamelaat',
-                    'حجم': 'Hajm',
-                    'قیمت': 'Gheymat',
-                    'پایانی': 'Paayaani',
-                    'عرضه': 'Arzeh',
-                    'تقاضا': 'Taghaazaa',
-                    'تحلیل': 'Tahlil',
-                    'بنیادی': 'Bonyaadi',
-                    'تکنیکال': 'Technical',
-                    'بانک': 'Bank',
-                    'مرکزی': 'Markazi',
-                    'پول': 'Pool',
-                    'نقدینگی': 'Naghdeinegi',
-                    'اهرم': 'Ahrom',
-                    'مالی': 'Maali',
-                    'سودآوری': 'Sood-aavari',
-                    'بازده': 'Baazdeh',
-                    'سالیانه': 'Saaliyaaneh',
-                    'سود تقسیمی': 'Soode taghsimi',
-                    'افزایش سرمایه': 'Afzaayeshe sarmayeh',
-                    'ترازنامه': 'Taraaznaameh',
-                    'صورت سود و زیان': 'Soorate sood va ziyaan',
-                    'جریان وجوه نقد': 'Jariyaane vojoohe naghd'
-                };
-
-                let processed = text;
-                for (const [fa, lat] of Object.entries(dictionary)) {
-                    processed = processed.split(fa).join(lat);
-                }
-
-                // Phonetic letter conversion
-                const charMap = {
-                    'آ': 'aa', 'ا': 'a', 'ب': 'b', 'پ': 'p', 'ت': 't', 'ث': 's',
-                    'ج': 'j', 'چ': 'ch', 'ح': 'h', 'خ': 'kh', 'د': 'd', 'ذ': 'z',
-                    'ر': 'r', 'ز': 'z', 'ژ': 'zh', 'س': 's', 'ش': 'sh', 'ص': 's',
-                    'ض': 'z', 'ط': 't', 'ظ': 'z', 'ع': '\'', 'غ': 'gh', 'ف': 'f',
-                    'ق': 'gh', 'ک': 'k', 'گ': 'g', 'ل': 'l', 'م': 'm', 'ن': 'n',
-                    'و': 'o', 'ه': 'h', 'ی': 'i', 'ئ': 'y', 'ة': 'e', 'ي': 'i',
-                    'ك': 'k', '۰': '0', '۱': '1', '۲': '2', '۳': '3', '۴': '4',
-                    '۵': '5', '۶': '6', '۷': '7', '۸': '8', '۹': '9', '،': ',',
-                    '؛': ';', '؟': '?', '«': '"', '»': '"', '\u200c': ' '
-                };
-
-                let out = '';
-                for (let i = 0; i < processed.length; i++) {
-                    const ch = processed[i];
-                    out += charMap[ch] !== undefined ? charMap[ch] : ch;
-                }
-                return out.replace(/\s+/g, ' ').trim();
-            }
-
             cleanTextForSpeech(rawText, lang = 'fa') {
                 if (!rawText) return '';
                 let text = String(rawText);
@@ -4560,9 +4471,9 @@
                             rate: Math.min(2.0, Math.max(0.6, this.rate))
                         });
 
-                        if (result && result.error === 'PERSIAN_VOICE_NOT_INSTALLED') {
+                        if (result && (result.error === 'PERSIAN_NOT_SUPPORTED' || result.error === 'PERSIAN_VOICE_NOT_INSTALLED')) {
                             this.stop(true);
-                            showPersianVoiceInstallDialog();
+                            showToast('موتور صوتی گوشی از زبان فارسی پشتیبانی نمی‌کند.');
                             return;
                         }
 
@@ -4582,14 +4493,9 @@
                 const playViaServerStream = () => {
                     return new Promise((resolve, reject) => {
                         const candidateUrls = [];
-                        // 1. Same-origin backend API (if server is running)
+                        // Same-origin backend API (when running Flask web app)
                         if (window.HAS_BACKEND_API !== false) {
                             candidateUrls.push(getApiUrl(`/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`));
-                        }
-                        // 2. Local MarketDict server (probe if user has python app.py running locally, works from GitHub Pages as well)
-                        if (!isNative && window.HAS_BACKEND_API === false) {
-                            candidateUrls.push(`http://127.0.0.1:5000/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`);
-                            candidateUrls.push(`http://localhost:5000/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`);
                         }
 
                         let triedIdx = 0;
@@ -4688,9 +4594,9 @@
                                 // NEVER read Persian with English voice!
                                 this.stop(true);
                                 if (isNative) {
-                                    showPersianVoiceInstallDialog();
+                                    showToast('موتور صوتی گوشی از زبان فارسی پشتیبانی نمی‌کند.');
                                 } else {
-                                    showToast('موتور صوتی سیستم/مرورگر فاقد صدای فارسی است. برای گوینده طبیعی فارسی (Dilara)، سرور را با python app.py اجرا نمایید.', 6500);
+                                    showToast('💡 موتور صوتی این مرورگر فاقد گوینده فارسی است. برای شنیدن تلفظ طبیعی و باکیفیت فارسی (گوینده هوش مصنوعی Dilara)، این صفحه را در مرورگر Microsoft Edge یا در آیفون/مک (Safari) باز نمایید.', 6500);
                                 }
                                 return;
                             }
@@ -5343,48 +5249,6 @@
                 persianTTS.stop();
             } else {
                 persianTTS.playDirect(text, 'en', 'speak_direct', text);
-            }
-        }
-
-        function showPersianVoiceInstallDialog() {
-            const existing = document.getElementById('persianVoiceInstallModal');
-            if (existing) existing.remove();
-
-            const modalHtml = `
-            <div id="persianVoiceInstallModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in" dir="rtl">
-                <div class="bg-white dark:bg-slate-900 border border-emerald-500/30 rounded-2xl p-5 max-w-sm w-full shadow-2xl text-center space-y-4">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl">
-                        🗣️
-                    </div>
-                    <div>
-                        <h3 class="text-base font-bold text-slate-900 dark:text-white">بسته صوتی زبان فارسی</h3>
-                        <p class="text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-                            موتور صوتی سیستم گوشی شما فاقد بسته صدای فارسی (Google TTS) است. برای خوانش با صدای طبیعی فارسی، دکمه زیر را لمس کرده و بسته زبان فارسی را دانلود نمایید.
-                        </p>
-                    </div>
-                    <div class="flex flex-col gap-2 pt-1">
-                        <button type="button" onclick="openNativeTtsSettings()" class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition shadow-md flex items-center justify-center gap-1.5">
-                            ⚙️ دانلود / فعال‌سازی صدای فارسی در تنظیمات
-                        </button>
-                        <button type="button" onclick="document.getElementById('persianVoiceInstallModal').remove()" class="w-full py-2 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium text-xs transition">
-                            بستن
-                        </button>
-                    </div>
-                </div>
-            </div>`;
-            document.body.insertAdjacentHTML('beforeend', modalHtml);
-        }
-
-        function openNativeTtsSettings() {
-            const modal = document.getElementById('persianVoiceInstallModal');
-            if (modal) modal.remove();
-            const nativeTTS = getNativeTTS();
-            if (nativeTTS && typeof nativeTTS.openTtsSettings === 'function') {
-                nativeTTS.openTtsSettings().catch(() => {
-                    showToast('تنظیمات گوشی باز نشد. لطفاً در تنظیمات اندروید به بخش Text-to-speech مراجعه نمایید.');
-                });
-            } else {
-                showToast('لطفاً در تنظیمات گوشی به بخش Text-to-speech مراجعه نمایید.');
             }
         }
 

@@ -1,6 +1,5 @@
 package com.marketdict.app;
 
-import android.content.Intent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.speech.tts.Voice;
@@ -142,9 +141,13 @@ public class NativeTTSPlugin extends Plugin {
                 tts.setLanguage(Locale.US);
             } else {
                 // Persian language requested
-                boolean faFound = false;
+                Locale faLocale = new Locale("fa", "IR");
+                int res = tts.setLanguage(faLocale);
+                if (res == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    res = tts.setLanguage(new Locale("fa"));
+                }
 
-                // 1. First, search directly in available voices for Persian
+                // Check voices list for any exact Persian voice matching (e.g. fa, fas, fa-ir)
                 try {
                     Set<Voice> voices = tts.getVoices();
                     if (voices != null) {
@@ -155,7 +158,7 @@ public class NativeTTSPlugin extends Plugin {
                                 if ("fa".equalsIgnoreCase(code) || "fas".equalsIgnoreCase(code) || "per".equalsIgnoreCase(code)) {
                                     tts.setVoice(v);
                                     tts.setLanguage(loc);
-                                    faFound = true;
+                                    res = TextToSpeech.LANG_AVAILABLE;
                                     break;
                                 }
                             }
@@ -163,25 +166,11 @@ public class NativeTTSPlugin extends Plugin {
                     }
                 } catch (Exception ignored) {}
 
-                // 2. If not found via voices, test Locale("fa", "IR") and Locale("fa")
-                if (!faFound) {
-                    Locale faIr = new Locale("fa", "IR");
-                    int res = tts.setLanguage(faIr);
-                    if (res >= TextToSpeech.LANG_AVAILABLE) {
-                        faFound = true;
-                    } else {
-                        res = tts.setLanguage(new Locale("fa"));
-                        if (res >= TextToSpeech.LANG_AVAILABLE) {
-                            faFound = true;
-                        }
-                    }
-                }
-
-                // CRITICAL: NEVER speak Persian with an English voice!
-                if (!faFound) {
+                // If completely unsupported by the engine, notify JS cleanly
+                if (res == TextToSpeech.LANG_NOT_SUPPORTED) {
                     JSObject ret = new JSObject();
                     ret.put("completed", false);
-                    ret.put("error", "PERSIAN_VOICE_NOT_INSTALLED");
+                    ret.put("error", "PERSIAN_NOT_SUPPORTED");
                     call.resolve(ret);
                     return;
                 }
@@ -194,27 +183,6 @@ public class NativeTTSPlugin extends Plugin {
         } catch (Exception e) {
             resolveActiveCall(false);
             call.reject("Native TTS error: " + e.getMessage());
-        }
-    }
-
-    @PluginMethod
-    public void openTtsSettings(PluginCall call) {
-        try {
-            Intent intent = new Intent();
-            intent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
-            intent.setPackage("com.google.android.tts");
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            getContext().startActivity(intent);
-            call.resolve();
-        } catch (Exception e) {
-            try {
-                Intent intent = new Intent("com.android.settings.TTS_SETTINGS");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                getContext().startActivity(intent);
-                call.resolve();
-            } catch (Exception ex) {
-                call.reject("Cannot open TTS settings: " + ex.getMessage());
-            }
         }
     }
 
