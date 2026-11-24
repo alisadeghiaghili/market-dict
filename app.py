@@ -526,6 +526,28 @@ def index():
 def favicon():
     return app.send_static_file("favicon.svg")
 
+
+@app.route("/manifest.json")
+def manifest():
+    from flask import send_from_directory
+    manifest_path = os.path.join(BASE_DIR, "manifest.json")
+    if os.path.exists(manifest_path):
+        return send_from_directory(BASE_DIR, "manifest.json", mimetype="application/manifest+json")
+    return app.send_static_file("manifest.json")
+
+
+@app.route("/sw.js")
+def service_worker():
+    from flask import send_from_directory
+    sw_path = os.path.join(BASE_DIR, "sw.js")
+    if os.path.exists(sw_path):
+        response = send_from_directory(BASE_DIR, "sw.js", mimetype="application/javascript")
+    else:
+        response = app.send_static_file("sw.js")
+    response.headers["Service-Worker-Allowed"] = "/"
+    response.headers["Cache-Control"] = "no-cache"
+    return response
+
 @app.route("/api/stats")
 def get_stats():
     ensure_cache()
