@@ -1196,7 +1196,7 @@
     </div>
 
     <!-- Floating Highlighter Selection Toolbar -->
-    <div id="highlightFloatingToolbar" class="fixed z-[70] hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-2xl px-3 py-2 flex items-center gap-2 transform -translate-x-1/2 transition-opacity duration-150 backdrop-blur-md">
+    <div id="highlightFloatingToolbar" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" class="fixed z-[70] hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-2xl px-3 py-2 flex items-center gap-2 transform -translate-x-1/2 transition-opacity duration-150 backdrop-blur-md">
         <div class="flex items-center gap-1.5 pl-2 border-l border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300">
             <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -1204,25 +1204,25 @@
             <span class="hidden sm:inline">هایلایت:</span>
         </div>
         <div class="flex items-center gap-1.5">
-            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('yellow')" title="هایلایت زرد" class="w-6 h-6 rounded-full bg-yellow-300 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
-            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('emerald')" title="هایلایت سبز" class="w-6 h-6 rounded-full bg-emerald-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
-            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('blue')" title="هایلایت آبی" class="w-6 h-6 rounded-full bg-sky-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
-            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('purple')" title="هایلایت بنفش" class="w-6 h-6 rounded-full bg-purple-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
-            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('amber')" title="هایلایت نارنجی" class="w-6 h-6 rounded-full bg-amber-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="createHighlightFromSelection('yellow')" title="هایلایت زرد" class="w-6 h-6 rounded-full bg-yellow-300 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="createHighlightFromSelection('emerald')" title="هایلایت سبز" class="w-6 h-6 rounded-full bg-emerald-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="createHighlightFromSelection('blue')" title="هایلایت آبی" class="w-6 h-6 rounded-full bg-sky-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="createHighlightFromSelection('purple')" title="هایلایت بنفش" class="w-6 h-6 rounded-full bg-purple-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="createHighlightFromSelection('amber')" title="هایلایت نارنجی" class="w-6 h-6 rounded-full bg-amber-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
         </div>
     </div>
 
     <!-- Existing Highlight Action Popover -->
-    <div id="highlightActionPopover" class="fixed z-[70] hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-2xl p-2 flex items-center gap-2 transform -translate-x-1/2 transition-all duration-150">
+    <div id="highlightActionPopover" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" class="fixed z-[70] hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-2xl p-2 flex items-center gap-2 transform -translate-x-1/2 transition-all duration-150">
         <div class="flex items-center gap-1">
-            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('yellow')" title="تغییر به زرد" class="w-5 h-5 rounded-full bg-yellow-300 hover:scale-110 transition border border-white dark:border-slate-800"></button>
-            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('emerald')" title="تغییر به سبز" class="w-5 h-5 rounded-full bg-emerald-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
-            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('blue')" title="تغییر به آبی" class="w-5 h-5 rounded-full bg-sky-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
-            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('purple')" title="تغییر به بنفش" class="w-5 h-5 rounded-full bg-purple-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
-            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('amber')" title="تغییر به نارنجی" class="w-5 h-5 rounded-full bg-amber-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="changeCurrentHighlightColor('yellow')" title="تغییر به زرد" class="w-5 h-5 rounded-full bg-yellow-300 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="changeCurrentHighlightColor('emerald')" title="تغییر به سبز" class="w-5 h-5 rounded-full bg-emerald-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="changeCurrentHighlightColor('blue')" title="تغییر به آبی" class="w-5 h-5 rounded-full bg-sky-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="changeCurrentHighlightColor('purple')" title="تغییر به بنفش" class="w-5 h-5 rounded-full bg-purple-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="changeCurrentHighlightColor('amber')" title="تغییر به نارنجی" class="w-5 h-5 rounded-full bg-amber-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
         </div>
         <div class="h-4 w-px bg-slate-200 dark:bg-slate-700"></div>
-        <button type="button" onmousedown="event.preventDefault()" onclick="deleteCurrentHighlight()" class="px-2 py-1 rounded-lg bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-600 dark:text-rose-400 text-xs font-semibold flex items-center gap-1 transition" title="حذف این هایلایت">
+        <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="deleteCurrentHighlight()" class="px-2 py-1 rounded-lg bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-600 dark:text-rose-400 text-xs font-semibold flex items-center gap-1 transition" title="حذف این هایلایت">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
             </svg>
@@ -1357,6 +1357,9 @@
             document.addEventListener('selectionchange', () => {
                 const sel = window.getSelection();
                 if (!sel || sel.isCollapsed || !sel.toString().trim()) {
+                    if (lastActiveSelection && (Date.now() - (lastActiveSelection.time || 0) < 400)) {
+                        return;
+                    }
                     hideSelectionToolbar();
                 }
             });
@@ -1884,6 +1887,7 @@
         // Persistent Text Highlighting & Annotations
         // ==========================================
         let currentActiveHighlightId = null;
+        let lastActiveSelection = null;
 
         function getTermKey(term) {
             if (!term) return '';
@@ -1893,12 +1897,13 @@
         function getHighlightsForTerm(term) {
             if (!term) return [];
             const key = getTermKey(term);
-            const strId = String(term.id || '');
-            const strSlug = String(term.slug || '').toLowerCase();
+            const strId = String(term.id || '').trim();
+            const strSlug = String(term.slug || '').toLowerCase().trim();
+            const strEn = String(term.term_en || '').toLowerCase().trim();
             return highlights.filter(h => {
                 if (!h || !h.termKey) return false;
-                const hKey = String(h.termKey).toLowerCase();
-                return hKey === key || (strSlug && hKey === strSlug) || (strId && hKey === strId);
+                const hKey = String(h.termKey).toLowerCase().trim();
+                return hKey === key || (strSlug && hKey === strSlug) || (strId && hKey === strId) || (strEn && hKey === strEn);
             });
         }
 
@@ -2044,6 +2049,135 @@
             });
         }
 
+        function applySingleHighlight(rootContainer, hl) {
+            const walker = document.createTreeWalker(
+                rootContainer,
+                NodeFilter.SHOW_TEXT,
+                {
+                    acceptNode: function(node) {
+                        if (!node.nodeValue) return NodeFilter.FILTER_SKIP;
+                        const p = node.parentElement;
+                        if (!p || ['SCRIPT', 'STYLE', 'BUTTON'].includes(p.tagName)) return NodeFilter.FILTER_REJECT;
+                        if (p.closest('.katex') || p.closest('.katex-display')) return NodeFilter.FILTER_REJECT;
+                        if (p.closest('.md-highlight')) return NodeFilter.FILTER_REJECT;
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                }
+            );
+
+            const textNodes = [];
+            let n;
+            while ((n = walker.nextNode())) {
+                textNodes.push(n);
+            }
+            if (textNodes.length === 0) return;
+
+            // Build char mapping & normalized string
+            const chars = []; // { node, offset, char }
+            textNodes.forEach(node => {
+                const val = node.nodeValue;
+                for (let i = 0; i < val.length; i++) {
+                    chars.push({ node, offset: i, char: val[i] });
+                }
+            });
+
+            if (chars.length === 0) return;
+
+            let normStr = '';
+            const normToCharIdx = [];
+            let lastWasSpace = true; // collapse and trim leading space
+
+            for (let i = 0; i < chars.length; i++) {
+                const c = chars[i].char;
+                const isSpace = /\s/.test(c) || c === '\u00a0';
+                if (isSpace) {
+                    if (!lastWasSpace) {
+                        normToCharIdx.push(i);
+                        normStr += ' ';
+                        lastWasSpace = true;
+                    }
+                } else {
+                    normToCharIdx.push(i);
+                    normStr += c;
+                    lastWasSpace = false;
+                }
+            }
+
+            const cleanExact = hl.exact.replace(/[\s\u00a0]+/g, ' ').trim();
+            if (!cleanExact) return;
+
+            // Find all matches in normalized string
+            const matches = [];
+            let searchPos = 0;
+            while (true) {
+                const found = normStr.indexOf(cleanExact, searchPos);
+                if (found === -1) break;
+                matches.push(found);
+                searchPos = found + 1;
+            }
+
+            if (matches.length === 0) {
+                // Secondary fallback: case-insensitive match
+                const lowerNorm = normStr.toLowerCase();
+                const lowerExact = cleanExact.toLowerCase();
+                searchPos = 0;
+                while (true) {
+                    const found = lowerNorm.indexOf(lowerExact, searchPos);
+                    if (found === -1) break;
+                    matches.push(found);
+                    searchPos = found + 1;
+                }
+            }
+
+            if (matches.length === 0) return;
+
+            let bestMatch = matches[0];
+            if (matches.length > 1 && (hl.prefix || hl.suffix)) {
+                let bestScore = -1;
+                const cleanPrefix = (hl.prefix || '').replace(/[\s\u00a0]+/g, ' ').trim();
+                const cleanSuffix = (hl.suffix || '').replace(/[\s\u00a0]+/g, ' ').trim();
+
+                matches.forEach(idx => {
+                    let score = 0;
+                    if (cleanPrefix) {
+                        const preSnippet = normStr.slice(Math.max(0, idx - cleanPrefix.length), idx).trim();
+                        if (preSnippet === cleanPrefix) score += 6;
+                        else if (cleanPrefix.endsWith(preSnippet.slice(-10))) score += 3;
+                    }
+                    if (cleanSuffix) {
+                        const sufSnippet = normStr.slice(idx + cleanExact.length, idx + cleanExact.length + cleanSuffix.length).trim();
+                        if (sufSnippet === cleanSuffix) score += 6;
+                        else if (cleanSuffix.startsWith(sufSnippet.slice(0, 10))) score += 3;
+                    }
+                    if (score > bestScore) {
+                        bestScore = score;
+                        bestMatch = idx;
+                    }
+                });
+            }
+
+            const startNormIdx = bestMatch;
+            const endNormIdx = bestMatch + cleanExact.length - 1;
+
+            if (startNormIdx >= normToCharIdx.length || endNormIdx >= normToCharIdx.length) return;
+
+            const rawStart = normToCharIdx[startNormIdx];
+            const rawEnd = normToCharIdx[endNormIdx] + 1; // inclusive -> exclusive
+
+            const startObj = chars[rawStart];
+            const endObj = chars[rawEnd - 1];
+            if (!startObj || !endObj) return;
+
+            try {
+                const range = document.createRange();
+                range.setStart(startObj.node, startObj.offset);
+                range.setEnd(endObj.node, endObj.offset + 1);
+                wrapRangeWithMark(range, hl.id, hl.color || 'yellow');
+            } catch (err) {
+                console.warn('Error applying single highlight:', err);
+            }
+        }
+
         function applyHighlightsForActiveTerm() {
             if (!activeModalTerm) return;
             const termHighlights = getHighlightsForTerm(activeModalTerm);
@@ -2055,111 +2189,9 @@
             unwrapExistingHighlights(rootContainer);
             if (termHighlights.length === 0) return;
 
-            const textNodes = [];
-            const walker = document.createTreeWalker(
-                rootContainer,
-                NodeFilter.SHOW_TEXT,
-                {
-                    acceptNode: function(node) {
-                        if (!node.nodeValue) return NodeFilter.FILTER_SKIP;
-                        const p = node.parentElement;
-                        if (!p || ['SCRIPT', 'STYLE', 'BUTTON'].includes(p.tagName)) return NodeFilter.FILTER_REJECT;
-                        if (p.closest('.katex') || p.closest('.katex-display')) return NodeFilter.FILTER_REJECT;
-                        return NodeFilter.FILTER_ACCEPT;
-                    }
-                }
-            );
-
-            let n;
-            while ((n = walker.nextNode())) {
-                textNodes.push(n);
-            }
-            if (textNodes.length === 0) return;
-
-            let fullText = '';
-            const nodeMaps = [];
-            textNodes.forEach(node => {
-                const start = fullText.length;
-                const val = node.nodeValue;
-                fullText += val;
-                const end = fullText.length;
-                nodeMaps.push({ node, start, end });
-            });
-
-            const resolvedHighlights = [];
             termHighlights.forEach(hl => {
-                if (!hl.exact) return;
-                const exact = hl.exact.trim();
-                if (!exact) return;
-
-                const matches = [];
-                let pos = 0;
-                while (true) {
-                    const found = fullText.indexOf(exact, pos);
-                    if (found === -1) break;
-                    matches.push(found);
-                    pos = found + 1;
-                }
-                if (matches.length === 0) return;
-
-                let bestMatch = matches[0];
-                let bestScore = -1;
-                matches.forEach(idx => {
-                    let score = 0;
-                    if (hl.prefix) {
-                        const preSnippet = fullText.slice(Math.max(0, idx - hl.prefix.length), idx);
-                        if (preSnippet === hl.prefix) score += 4;
-                        else if (hl.prefix.endsWith(preSnippet.slice(-10))) score += 2;
-                    }
-                    if (hl.suffix) {
-                        const sufSnippet = fullText.slice(idx + exact.length, idx + exact.length + hl.suffix.length);
-                        if (sufSnippet === hl.suffix) score += 4;
-                        else if (hl.suffix.startsWith(sufSnippet.slice(0, 10))) score += 2;
-                    }
-                    if (score > bestScore) {
-                        bestScore = score;
-                        bestMatch = idx;
-                    }
-                });
-
-                resolvedHighlights.push({
-                    hl: hl,
-                    matchStart: bestMatch,
-                    matchEnd: bestMatch + exact.length
-                });
-            });
-
-            // Descending order of matchStart to avoid offset issues
-            resolvedHighlights.sort((a, b) => b.matchStart - a.matchStart);
-
-            resolvedHighlights.forEach(item => {
-                const { hl, matchStart, matchEnd } = item;
-                let startNode = null, startOffset = 0;
-                let endNode = null, endOffset = 0;
-
-                for (let i = 0; i < nodeMaps.length; i++) {
-                    const m = nodeMaps[i];
-                    if (!startNode && matchStart >= m.start && matchStart < m.end) {
-                        startNode = m.node;
-                        startOffset = matchStart - m.start;
-                    }
-                    if (!endNode && matchEnd > m.start && matchEnd <= m.end) {
-                        endNode = m.node;
-                        endOffset = matchEnd - m.start;
-                    }
-                    if (startNode && endNode) break;
-                }
-
-                if (startNode && endNode) {
-                    try {
-                        const range = document.createRange();
-                        range.setStart(startNode, startOffset);
-                        range.setEnd(endNode, endOffset);
-                        wrapRangeWithMark(range, hl.id, hl.color || 'yellow');
-                    } catch (err) {
-                        console.warn('Error applying highlight:', err);
-                    }
-                }
+                if (!hl || !hl.exact) return;
+                applySingleHighlight(rootContainer, hl);
             });
         }
 
@@ -2186,7 +2218,7 @@
             }
 
             const contentArea = document.getElementById('modalContentArea');
-            if (!contentArea || !contentArea.contains(selection.anchorNode)) {
+            if (!contentArea || (!contentArea.contains(selection.anchorNode) && !contentArea.contains(selection.focusNode))) {
                 hideSelectionToolbar();
                 return;
             }
@@ -2198,6 +2230,12 @@
                 hideSelectionToolbar();
                 return;
             }
+
+            lastActiveSelection = {
+                range: range.cloneRange(),
+                text: text,
+                time: Date.now()
+            };
 
             const toolbar = document.getElementById('highlightFloatingToolbar');
             if (!toolbar) return;
@@ -2221,22 +2259,32 @@
         }
 
         function createHighlightFromSelection(color = 'yellow') {
-            const selection = window.getSelection();
-            if (!selection || selection.isCollapsed) return;
-            const exact = selection.toString().trim();
-            if (!exact || !activeModalTerm) return;
+            let exact = '';
+            let range = null;
 
-            const range = selection.getRangeAt(0);
+            const selection = window.getSelection();
+            if (selection && !selection.isCollapsed && selection.toString().trim()) {
+                exact = selection.toString().trim();
+                range = selection.getRangeAt(0);
+            } else if (lastActiveSelection && lastActiveSelection.text) {
+                exact = lastActiveSelection.text;
+                range = lastActiveSelection.range;
+            }
+
+            if (!exact || !range || !activeModalTerm) return;
+
             const contentArea = document.getElementById('modalContentArea');
             if (!contentArea || !contentArea.contains(range.commonAncestorContainer)) return;
 
-            const fullText = contentArea.textContent || '';
-            const idx = fullText.indexOf(exact);
+            const fullText = (contentArea.innerText || contentArea.textContent || '');
+            const cleanFull = fullText.replace(/[\s\u00a0]+/g, ' ');
+            const cleanExact = exact.replace(/[\s\u00a0]+/g, ' ');
+            const idx = cleanFull.indexOf(cleanExact);
             let prefix = '';
             let suffix = '';
             if (idx !== -1) {
-                prefix = fullText.slice(Math.max(0, idx - 25), idx);
-                suffix = fullText.slice(idx + exact.length, idx + exact.length + 25);
+                prefix = cleanFull.slice(Math.max(0, idx - 30), idx).trim();
+                suffix = cleanFull.slice(idx + cleanExact.length, idx + cleanExact.length + 30).trim();
             }
 
             const hlId = 'hl_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
@@ -2255,7 +2303,10 @@
             highlights.push(newHl);
             saveHighlights();
 
-            selection.removeAllRanges();
+            if (selection) {
+                try { selection.removeAllRanges(); } catch (e) {}
+            }
+            lastActiveSelection = null;
             hideSelectionToolbar();
 
             applyHighlightsForActiveTerm();
@@ -2324,13 +2375,14 @@
         function clearAllTermHighlights() {
             if (!activeModalTerm) return;
             const key = getTermKey(activeModalTerm);
-            const strId = String(activeModalTerm.id || '');
-            const strSlug = String(activeModalTerm.slug || '').toLowerCase();
+            const strId = String(activeModalTerm.id || '').trim();
+            const strSlug = String(activeModalTerm.slug || '').toLowerCase().trim();
+            const strEn = String(activeModalTerm.term_en || '').toLowerCase().trim();
 
             highlights = highlights.filter(h => {
                 if (!h || !h.termKey) return true;
-                const hKey = String(h.termKey).toLowerCase();
-                return hKey !== key && (!strSlug || hKey !== strSlug) && (!strId || hKey !== strId);
+                const hKey = String(h.termKey).toLowerCase().trim();
+                return hKey !== key && (!strSlug || hKey !== strSlug) && (!strId || hKey !== strId) && (!strEn || hKey !== strEn);
             });
             saveHighlights();
             applyHighlightsForActiveTerm();
@@ -3794,10 +3846,11 @@
                 window.persianTTS._updateButtonsUI();
             }
 
-            // Trigger KaTeX math rendering across the modal card
+            // Trigger KaTeX math rendering across the modal card & sync highlights
             setTimeout(() => {
                 renderAllFormulas();
-            }, 30);
+                applyHighlightsForActiveTerm();
+            }, 35);
         }
 
         function renderAllFormulas(container = null) {
