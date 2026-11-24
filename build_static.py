@@ -8,12 +8,13 @@ redistribution (see DATA_NOTICE.md). Host the output on internal
 infrastructure only.
 """
 
+import json
 import os
 import re
-import json
 import shutil
 import sys
 import time
+
 
 def clean_key(text):
     if not text:
@@ -35,7 +36,7 @@ def build():
     dist_terms_dir = os.path.join(dist_data_dir, "terms")
     dist_static_dir = os.path.join(dist_dir, "static")
 
-    print(f"🚀 Starting MarketDict static site build...")
+    print("🚀 Starting MarketDict static site build...")
     print(f"📁 Source dictionary: {data_file}")
     print(f"📁 Output directory:  {dist_dir}")
 
@@ -228,8 +229,8 @@ def build():
     dist_api_v1 = os.path.join(dist_dir, "api", "v1")
     os.makedirs(dist_api_v1, exist_ok=True)
     try:
-        from openapi_spec import get_openapi_spec
         from formula_registry import FORMULA_DB
+        from openapi_spec import get_openapi_spec
 
         with open(os.path.join(dist_api_v1, "openapi.json"), "w", encoding="utf-8") as f:
             json.dump(get_openapi_spec(), f, ensure_ascii=False, indent=2)
@@ -284,7 +285,7 @@ def build():
             shutil.copy2(guide_src, os.path.join(dist_api_v1, "guide.html"))
 
         print(f"✅ Generated static API v1 files -> {dist_api_v1}")
-    except Exception as e:
+    except (ImportError, OSError, json.JSONDecodeError, KeyError, TypeError) as e:
         print(f"⚠️ Warning: could not generate all static API files: {e}")
 
     elapsed = time.time() - start_time

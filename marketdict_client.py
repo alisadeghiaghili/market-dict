@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 MarketDict Python SDK Client
 Lightweight, zero-dependency client library for MarketDict REST API.
@@ -8,11 +7,12 @@ Works with Python standard library (urllib.request) or requests.
 import json
 import urllib.parse
 import urllib.request
-from typing import List, Dict, Any, Optional, Union
+from typing import Any
+
 
 class MarketDictError(Exception):
     """Exception raised when MarketDict API returns an error."""
-    def __init__(self, message: str, code: int = 400, details: Optional[str] = None):
+    def __init__(self, message: str, code: int = 400, details: str | None = None):
         super().__init__(message)
         self.code = code
         self.details = details or message
@@ -34,12 +34,11 @@ class MarketDict:
     def __init__(self, base_url: str = "http://localhost:5000/api/v1", timeout: float = 10.0):
         # Normalize base URL (strip trailing slash)
         self.base_url = base_url.rstrip("/")
-        if not self.base_url.endswith("/api/v1"):
-            if "/api/" not in self.base_url:
-                self.base_url += "/api/v1"
+        if not self.base_url.endswith("/api/v1") and "/api/" not in self.base_url:
+            self.base_url += "/api/v1"
         self.timeout = timeout
 
-    def _request(self, endpoint: str, method: str = "GET", params: Optional[Dict[str, Any]] = None, data: Optional[Dict[str, Any]] = None) -> Any:
+    def _request(self, endpoint: str, method: str = "GET", params: dict[str, Any] | None = None, data: dict[str, Any] | None = None) -> Any:
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         if params:
             filtered_params = {k: v for k, v in params.items() if v is not None}
@@ -78,11 +77,11 @@ class MarketDict:
     # System Methods
     # ------------------------------------------------------------------
 
-    def health(self) -> Dict[str, Any]:
+    def health(self) -> dict[str, Any]:
         """Check API service health and database status."""
         return self._request("health")["data"]
 
-    def stats(self) -> Dict[str, Any]:
+    def stats(self) -> dict[str, Any]:
         """Get dictionary statistics (total terms, categories, letters, formulas)."""
         return self._request("stats")["data"]
 
@@ -93,16 +92,16 @@ class MarketDict:
     def search(
         self,
         query: str = "",
-        letter: Optional[str] = None,
-        category: Optional[str] = None,
-        has_deep: Optional[bool] = None,
-        has_formula: Optional[bool] = None,
+        letter: str | None = None,
+        category: str | None = None,
+        has_deep: bool | None = None,
+        has_formula: bool | None = None,
         sort: str = "relevance",
         order: str = "asc",
         page: int = 1,
         limit: int = 20,
-        fields: Optional[Union[str, List[str]]] = None
-    ) -> Dict[str, Any]:
+        fields: str | list[str] | None = None
+    ) -> dict[str, Any]:
         """
         Search and filter financial terms.
 
@@ -121,7 +120,7 @@ class MarketDict:
         Returns:
             Dictionary with 'status', 'data' (list of terms), and 'pagination'.
         """
-        params: Dict[str, Any] = {
+        params: dict[str, Any] = {
             "page": page,
             "limit": limit,
             "sort": sort,
@@ -142,7 +141,7 @@ class MarketDict:
 
         return self._request("terms", params=params)
 
-    def get_term(self, identifier: Union[str, int], fields: Optional[Union[str, List[str]]] = None) -> Dict[str, Any]:
+    def get_term(self, identifier: str | int, fields: str | list[str] | None = None) -> dict[str, Any]:
         """
         Retrieve full term details by numeric ID (e.g. 461) or slug (e.g. 'sharperatio').
 
@@ -155,11 +154,11 @@ class MarketDict:
         res = self._request(f"terms/{identifier}", params=params)
         return res["data"]
 
-    def get_random(self, category: Optional[str] = None, has_deep: Optional[bool] = None, count: int = 1) -> Union[Dict[str, Any], List[Dict[str, Any]]]:
+    def get_random(self, category: str | None = None, has_deep: bool | None = None, count: int = 1) -> dict[str, Any] | list[dict[str, Any]]:
         """
         Get random term(s). Great for 'Term of the Day' widgets or study cards.
         """
-        params: Dict[str, Any] = {"count": count}
+        params: dict[str, Any] = {"count": count}
         if category:
             params["category"] = category
         if has_deep is not None:
@@ -167,13 +166,13 @@ class MarketDict:
         res = self._request("terms/random", params=params)
         return res["data"]
 
-    def get_batch(self, identifiers: List[Union[str, int]]) -> Dict[str, Any]:
+    def get_batch(self, identifiers: list[str | int]) -> dict[str, Any]:
         """
         Retrieve multiple terms in a single HTTP request.
         """
         return self._request("terms/batch", method="POST", data={"identifiers": [str(i) for i in identifiers]})
 
-    def suggest(self, query: str, limit: int = 10) -> List[Dict[str, Any]]:
+    def suggest(self, query: str, limit: int = 10) -> list[dict[str, Any]]:
         """
         Fast autocomplete suggestions for UI search inputs.
         """
@@ -184,17 +183,17 @@ class MarketDict:
     # Categories Methods
     # ------------------------------------------------------------------
 
-    def get_categories(self) -> List[Dict[str, Any]]:
+    def get_categories(self) -> list[dict[str, Any]]:
         """List all financial categories with names, icons, and term counts."""
         res = self._request("categories")
         return res.get("data", [])
 
-    def get_category(self, category_id: str) -> Dict[str, Any]:
+    def get_category(self, category_id: str) -> dict[str, Any]:
         """Get metadata for a single category."""
         res = self._request(f"categories/{category_id}")
         return res.get("data", {})
 
-    def get_category_terms(self, category_id: str, page: int = 1, limit: int = 20) -> Dict[str, Any]:
+    def get_category_terms(self, category_id: str, page: int = 1, limit: int = 20) -> dict[str, Any]:
         """Get paginated terms belonging to a category."""
         return self._request(f"categories/{category_id}/terms", params={"page": page, "limit": limit})
 
@@ -202,12 +201,12 @@ class MarketDict:
     # Letters Methods
     # ------------------------------------------------------------------
 
-    def get_letters(self) -> List[Dict[str, Any]]:
+    def get_letters(self) -> list[dict[str, Any]]:
         """List all alphabetical letters with term counts."""
         res = self._request("letters")
         return res.get("data", [])
 
-    def get_letter_terms(self, letter: str, page: int = 1, limit: int = 20) -> Dict[str, Any]:
+    def get_letter_terms(self, letter: str, page: int = 1, limit: int = 20) -> dict[str, Any]:
         """Get paginated terms starting with a letter."""
         return self._request(f"letters/{letter}/terms", params={"page": page, "limit": limit})
 
@@ -215,7 +214,7 @@ class MarketDict:
     # Formulas Methods
     # ------------------------------------------------------------------
 
-    def get_formulas(self) -> List[Dict[str, Any]]:
+    def get_formulas(self) -> list[dict[str, Any]]:
         """
         Get all quantitative financial formulas with LaTeX math equations and Persian definitions.
         """

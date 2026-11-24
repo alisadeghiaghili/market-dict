@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 MarketDict MCP Server
 Model Context Protocol (MCP) server for MarketDict - Bilingual Financial Terms Dictionary & Knowledge Base.
@@ -11,13 +10,13 @@ Provides AI assistants (Claude, Cursor, Antigravity, etc.) with real-time access
 - Deep comprehensive multi-section financial articles and key takeaways
 """
 
-import os
-import sys
-import json
-import random
-import logging
 import argparse
-from typing import List, Dict, Any, Optional
+import json
+import logging
+import os
+import random
+import sys
+from typing import Any
 
 # Configure stderr-only logging so stdout remains pure JSON-RPC for stdio transport
 logging.basicConfig(
@@ -43,8 +42,8 @@ if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
 import app
+from categories_engine import TAXONOMY, normalize_category
 from formula_registry import FORMULA_DB
-from categories_engine import TAXONOMY, TAXONOMY_BY_FA, normalize_category
 
 FORMULA_ALIASES = {
     "roe": "returnonequity",
@@ -86,7 +85,7 @@ def _clean_key(text: str) -> str:
     return app.clean_key(text)
 
 
-def _resolve_term_slug(identifier: str) -> Optional[str]:
+def _resolve_term_slug(identifier: str) -> str | None:
     """Resolve an identifier (slug, title, ID, or clean key) to a canon slug."""
     app.ensure_cache()
     if not identifier:
@@ -120,7 +119,7 @@ def _resolve_term_slug(identifier: str) -> Optional[str]:
     return None
 
 
-def _fetch_term_data(slug: str) -> Optional[Dict[str, Any]]:
+def _fetch_term_data(slug: str) -> dict[str, Any] | None:
     """Retrieve full term JSON object from SQLite database."""
     app.ensure_cache()
     if not app._DB_CONN:
@@ -134,7 +133,7 @@ def _fetch_term_data(slug: str) -> Optional[Dict[str, Any]]:
 
     try:
         data = json.loads(row[0])
-    except Exception as e:
+    except (json.JSONDecodeError, TypeError) as e:
         logger.warning(f"Error parsing JSON for term {slug}: {e}")
         return None
 
@@ -155,11 +154,11 @@ def _fetch_term_data(slug: str) -> Optional[Dict[str, Any]]:
 @server.tool()
 def search_terms(
     query: str,
-    category: Optional[str] = None,
-    letter: Optional[str] = None,
+    category: str | None = None,
+    letter: str | None = None,
     limit: int = 10,
     page: int = 1
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Search 6,108 bilingual (English & Persian) financial terms with fuzzy matching and Persian text normalization.
 
@@ -265,7 +264,7 @@ def search_terms(
 
 
 @server.tool()
-def suggest_terms(prefix: str, limit: int = 8) -> List[Dict[str, Any]]:
+def suggest_terms(prefix: str, limit: int = 8) -> list[dict[str, Any]]:
     """
     Ultra-fast autocomplete prefix search for financial terms (<5ms).
 
@@ -319,7 +318,7 @@ def suggest_terms(prefix: str, limit: int = 8) -> List[Dict[str, Any]]:
 
 
 @server.tool()
-def get_term_details(term_identifier: str) -> Dict[str, Any]:
+def get_term_details(term_identifier: str) -> dict[str, Any]:
     """
     Retrieve comprehensive bilingual details for a specific financial term.
     Includes English/Persian definitions, key takeaways, bottom line, deep article sections,
@@ -380,7 +379,7 @@ def get_term_details(term_identifier: str) -> Dict[str, Any]:
 
 
 @server.tool()
-def get_financial_formula(term: str) -> Dict[str, Any]:
+def get_financial_formula(term: str) -> dict[str, Any]:
     """
     Retrieve the standardized LaTeX mathematical formula and variable definitions for financial concepts
     (e.g. Sharpe Ratio, Sortino, CAPM, ROE, ROA, DuPont Analysis, Debt-to-Equity, EBIT, Free Cash Flow, etc.).
@@ -416,7 +415,7 @@ def get_financial_formula(term: str) -> Dict[str, Any]:
 
     # 4. Substring fallback among keys
     if not matched_key:
-        for k in FORMULA_DB.keys():
+        for k in FORMULA_DB:
             if clean_t and (clean_t in k or k in clean_t):
                 matched_key = k
                 break
@@ -453,7 +452,7 @@ def get_financial_formula(term: str) -> Dict[str, Any]:
 
 
 @server.tool()
-def list_all_formulas(query: Optional[str] = None) -> List[Dict[str, Any]]:
+def list_all_formulas(query: str | None = None) -> list[dict[str, Any]]:
     """
     List all registered financial mathematical formulas in MarketDict.
 
@@ -486,7 +485,7 @@ def list_all_formulas(query: Optional[str] = None) -> List[Dict[str, Any]]:
 
 
 @server.tool()
-def list_categories() -> List[Dict[str, Any]]:
+def list_categories() -> list[dict[str, Any]]:
     """
     List all financial domains and categories in the MarketDict taxonomy (including primary and variant categories).
 
@@ -513,7 +512,7 @@ def list_categories() -> List[Dict[str, Any]]:
 
 
 @server.tool()
-def list_letters() -> List[Dict[str, Any]]:
+def list_letters() -> list[dict[str, Any]]:
     """
     List all alphabetical sections ('#' and 'A' to 'Z') with their term count.
 
@@ -526,9 +525,9 @@ def list_letters() -> List[Dict[str, Any]]:
 
 @server.tool()
 def get_random_term(
-    category: Optional[str] = None,
+    category: str | None = None,
     only_deep_enriched: bool = True
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Get a random financial term for educational purposes, daily learning, or quizzes.
 
@@ -560,7 +559,7 @@ def get_random_term(
 
 
 @server.tool()
-def get_dictionary_stats() -> Dict[str, Any]:
+def get_dictionary_stats() -> dict[str, Any]:
     """
     Get high-level summary statistics of the MarketDict database.
 
@@ -689,7 +688,7 @@ def main():
     parser.add_argument(
         "--port",
         type=int,
-        default=int(os.environ.get("PORT", 8000)),
+        default=int(os.environ.get("PORT", "8000")),
         help="Port for SSE / HTTP transport (default: 8000 or $PORT)"
     )
     parser.add_argument(
@@ -712,8 +711,8 @@ def main():
     if transport == "stdio":
         server.run(transport="stdio")
     elif transport in ("sse", "streamable-http"):
-        import uvicorn
         import anyio
+        import uvicorn
 
         # Parse forwarded_allow_ips for uvicorn
         allow_ips: Any = args.forwarded_allow_ips

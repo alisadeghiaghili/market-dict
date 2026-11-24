@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 MarketDict Master Financial Formula Registry
 Standardized LaTeX math representations and Persian definitions for key financial formulas.
