@@ -4183,7 +4183,6 @@
             constructor() {
                 this.synth = ('speechSynthesis' in window) ? window.speechSynthesis : null;
                 this.persianVoice = null;
-                this.arabicVoice = null;
                 this.englishVoice = null;
                 this.isPlaying = false;
                 this.isPaused = false;
@@ -4211,15 +4210,8 @@
                         const name = (v.name || '').toLowerCase();
                         return lang === 'fa-ir' || lang === 'fa' || lang.startsWith('fa-') ||
                                name.includes('persian') || name.includes('farsi') ||
-                               name.includes('dilara') || name.includes('farid');
-                    }) || null;
-
-                    this.arabicVoice = voices.find(v => {
-                        const lang = (v.lang || '').toLowerCase();
-                        const name = (v.name || '').toLowerCase();
-                        return lang.startsWith('ar') || name.includes('arabic') ||
-                               name.includes('maged') || name.includes('hoda') ||
-                               name.includes('laila') || name.includes('naayf');
+                               name.includes('dilara') || name.includes('farid') ||
+                               name.includes('iran');
                     }) || null;
 
                     this.englishVoice = voices.find(v => {
@@ -4582,13 +4574,15 @@
                 const playViaServerStream = () => {
                     return new Promise((resolve, reject) => {
                         const candidateUrls = [];
+                        // 1. Same-origin backend API (if server is running)
                         if (window.HAS_BACKEND_API !== false) {
                             candidateUrls.push(getApiUrl(`/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`));
-                        } else if (!isNative && window.location.hostname === 'localhost') {
-                            candidateUrls.push(`${window.location.origin}${window.APP_ROOT || ''}/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`);
                         }
-                        // Cloud audio fallback (Google TTS)
-                        candidateUrls.push(`https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${lang === 'en' ? 'en' : 'fa'}&q=${encodeURIComponent(item.text)}`);
+                        // 2. Local MarketDict server (probe if user has python app.py running locally, works from GitHub Pages as well)
+                        if (!isNative && window.HAS_BACKEND_API === false) {
+                            candidateUrls.push(`http://127.0.0.1:5000/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`);
+                            candidateUrls.push(`http://localhost:5000/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`);
+                        }
 
                         let triedIdx = 0;
                         const tryNextUrl = () => {
@@ -4602,30 +4596,38 @@
                             audio.playbackRate = this.rate;
                             this._currentAudio = audio;
 
+                            // 12-second generous timeout for edge-tts neural voice synthesis
                             let timeoutTimer = setTimeout(() => {
                                 try { audio.pause(); } catch(e) {}
                                 tryNextUrl();
-                            }, 2500);
+                            }, 12000);
 
-                            audio.onplaying = () => {
-                                clearTimeout(timeoutTimer);
+                            const clearTimer = () => {
+                                if (timeoutTimer) {
+                                    clearTimeout(timeoutTimer);
+                                    timeoutTimer = null;
+                                }
                             };
 
+                            audio.onplaying = clearTimer;
+                            audio.oncanplay = clearTimer;
+                            audio.onloadeddata = clearTimer;
+
                             audio.onended = () => {
-                                clearTimeout(timeoutTimer);
+                                clearTimer();
                                 if (this._currentAudio === audio) this._currentAudio = null;
                                 resolve(true);
                             };
 
                             audio.onerror = () => {
-                                clearTimeout(timeoutTimer);
+                                clearTimer();
                                 if (this._currentAudio === audio) this._currentAudio = null;
                                 tryNextUrl();
                             };
 
                             audio.src = url;
                             audio.play().catch(() => {
-                                clearTimeout(timeoutTimer);
+                                clearTimer();
                                 tryNextUrl();
                             });
                         };
@@ -4647,7 +4649,7 @@
 
                 if (token !== this._playToken || !this.isPlaying || this.isPaused) return;
 
-                // 3. Universal Web Speech API Engine with Intelligent Voice Adaptation
+                // 3. Universal Web Speech API Engine (strictly Persian / English only - NO ARABIC)
                 if (this.synth && typeof SpeechSynthesisUtterance !== 'undefined') {
                     const availableVoices = this.synth.getVoices() || [];
                     if (!this.persianVoice) {
@@ -4656,14 +4658,7 @@
                             const n = (v.name || '').toLowerCase();
                             return l === 'fa-ir' || l === 'fa' || l.startsWith('fa-') ||
                                    n.includes('persian') || n.includes('farsi') ||
-                                   n.includes('dilara') || n.includes('farid');
-                        }) || null;
-                    }
-                    if (!this.arabicVoice) {
-                        this.arabicVoice = availableVoices.find(v => {
-                            const l = (v.lang || '').toLowerCase();
-                            const n = (v.name || '').toLowerCase();
-                            return l.startsWith('ar') || n.includes('arabic') || n.includes('maged') || n.includes('hoda');
+                                   n.includes('dilara') || n.includes('farid') || n.includes('iran');
                         }) || null;
                     }
                     if (!this.englishVoice) {
@@ -4678,22 +4673,18 @@
                         let spokenLang = lang === 'en' ? 'en-US' : 'fa-IR';
 
                         if (lang === 'fa') {
+                            spokenLang = 'fa-IR';
                             if (this.persianVoice) {
                                 selectedVoice = this.persianVoice;
-                                spokenLang = 'fa-IR';
-                            } else if (this.arabicVoice) {
-                                // Arabic voice speaks Persian letters with high natural fidelity
-                                selectedVoice = this.arabicVoice;
-                                spokenLang = 'ar-SA';
                             } else {
-                                // Fallback when only English/Western voices exist (e.g. desktop Chrome on Windows)
+                                // If browser lacks native Persian voice (e.g. desktop Chrome on Windows), use phonetic transliteration
                                 spokenText = this.persianToPhoneticLatin(item.text);
                                 selectedVoice = this.englishVoice || availableVoices[0] || null;
                                 spokenLang = selectedVoice ? selectedVoice.lang : 'en-US';
 
                                 if (!this._notifiedVoiceFallback && !isNative) {
                                     this._notifiedVoiceFallback = true;
-                                    showToast('💡 در حال خوانش با موتور صوتی مرورگر. برای گوینده طبیعی فارسی (هوش مصنوعی Dilara)، کافیست برنامه را در Microsoft Edge باز کرده یا سرور را با python app.py اجرا نمایید.', 6500);
+                                    showToast('💡 برای گوینده طبیعی هوش مصنوعی فارسی (Microsoft Dilara)، برنامه را در Microsoft Edge باز کرده یا سرور را با python app.py اجرا نمایید.', 6500);
                                 }
                             }
                         } else {
@@ -4706,7 +4697,7 @@
                         if (selectedVoice) {
                             utterance.voice = selectedVoice;
                         }
-                        utterance.rate = (lang === 'fa' && !this.persianVoice && !this.arabicVoice) ? Math.max(0.85, this.rate * 0.9) : this.rate;
+                        utterance.rate = (lang === 'fa' && !this.persianVoice) ? Math.max(0.85, this.rate * 0.9) : this.rate;
                         utterance.pitch = 1.0;
 
                         utterance.onend = () => {
