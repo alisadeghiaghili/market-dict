@@ -370,38 +370,71 @@ class MarketDictAPITestCase(unittest.TestCase):
 
     def test_tts_generate_audio_and_cache(self):
         """Verify TTS endpoint generates and caches audio/mpeg stream."""
-        res = self.client.get("/api/tts?text=تست&lang=fa")
-        self.assertEqual(res.status_code, 200)
-        self.assertEqual(res.mimetype, "audio/mpeg")
-        self.assertGreater(len(res.data), 0)
+        from unittest.mock import patch
 
-        # Test caching
+        dummy_audio = b"\xff\xfb\x90\x00dummy_audio_bytes"
+
+        def mock_run(coro):
+            coro.close()
+            return dummy_audio
+
+        with patch("asyncio.run", side_effect=mock_run):
+            res = self.client.get("/api/tts?text=تست&lang=fa")
+            self.assertEqual(res.status_code, 200)
+            self.assertEqual(res.mimetype, "audio/mpeg")
+            self.assertEqual(res.data, dummy_audio)
+
+        # Test caching directly from memory cache
         res_cached = self.client.get("/api/tts?text=تست&lang=fa")
         self.assertEqual(res_cached.status_code, 200)
-        self.assertEqual(res_cached.data, res.data)
+        self.assertEqual(res_cached.data, dummy_audio)
 
     def test_tts_english_generation(self):
         """Verify TTS endpoint generates English audio."""
-        res = self.client.get("/api/tts?text=Hello&lang=en")
-        self.assertEqual(res.status_code, 200)
-        self.assertEqual(res.mimetype, "audio/mpeg")
-        self.assertGreater(len(res.data), 0)
+        from unittest.mock import patch
+
+        dummy_audio = b"\xff\xfb\x90\x00english_audio_bytes"
+
+        def mock_run(coro):
+            coro.close()
+            return dummy_audio
+
+        with patch("asyncio.run", side_effect=mock_run):
+            res = self.client.get("/api/tts?text=Hello&lang=en")
+            self.assertEqual(res.status_code, 200)
+            self.assertEqual(res.mimetype, "audio/mpeg")
+            self.assertEqual(res.data, dummy_audio)
 
     def test_tts_cache_eviction(self):
-        """Verify cache eviction when exceeding 500 entries."""
+        """Verify cache eviction when exceeding 1000 entries."""
+        from unittest.mock import patch
+
         from app import _TTS_CACHE, _TTS_LOCK
+
         with _TTS_LOCK:
             _TTS_CACHE.clear()
-            for i in range(501):
+            for i in range(1001):
                 _TTS_CACHE[f"dummy:{i}"] = b"dummy"
 
-        res = self.client.get("/api/tts?text=eviction_test&lang=en")
-        self.assertEqual(res.status_code, 200)
+        dummy_audio = b"\xff\xfb\x90\x00eviction_audio"
+
+        def mock_run(coro):
+            coro.close()
+            return dummy_audio
+
+        with patch("asyncio.run", side_effect=mock_run):
+            res = self.client.get("/api/tts?text=eviction_test&lang=en")
+            self.assertEqual(res.status_code, 200)
 
     def test_tts_empty_audio_failure(self):
         """Verify 500 when audio generation yields empty bytes."""
         from unittest.mock import patch
-        with patch("asyncio.run", return_value=b""):
+
+        def mock_run(coro):
+            coro.close()
+            return b""
+
+        with patch("asyncio.run", side_effect=mock_run):
             res = self.client.get("/api/tts?text=empty_fail_123&lang=fa")
             self.assertEqual(res.status_code, 500)
             data = res.get_json()
@@ -410,7 +443,12 @@ class MarketDictAPITestCase(unittest.TestCase):
     def test_tts_exception_handling(self):
         """Verify 500 and error message when TTS raises an unexpected exception."""
         from unittest.mock import patch
-        with patch("asyncio.run", side_effect=RuntimeError("EdgeTTS network timeout")):
+
+        def mock_run(coro):
+            coro.close()
+            raise RuntimeError("EdgeTTS network timeout")
+
+        with patch("asyncio.run", side_effect=mock_run):
             res = self.client.get("/api/tts?text=error_test_456&lang=fa")
             self.assertEqual(res.status_code, 500)
             data = res.get_json()

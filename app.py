@@ -12,9 +12,9 @@ import re
 import sqlite3
 import threading
 import time
-from typing import Any, Dict
+from typing import Any
 
-from flask import Flask, jsonify, render_template, request, Response
+from flask import Flask, Response, jsonify, render_template, request
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -597,6 +597,7 @@ def handle_tts():
 
     try:
         import asyncio
+
         import edge_tts
 
         async def _synthesize(v_name: str) -> bytes:
@@ -613,7 +614,7 @@ def handle_tts():
                     data = await asyncio.wait_for(_synthesize(voice_name), timeout=8.0)
                     if data and len(data) > 0:
                         return data
-                except Exception as inner_exc:
+                except (edge_tts.exceptions.EdgeTTSException, TimeoutError, OSError, RuntimeError, ValueError) as inner_exc:
                     app.logger.warning(f"Voice {voice_name} synthesis attempt failed: {inner_exc}")
             return None
 
@@ -636,7 +637,7 @@ def handle_tts():
                 "Access-Control-Allow-Origin": "*"
             }
         )
-    except Exception as exc:
+    except (edge_tts.exceptions.EdgeTTSException, TimeoutError, OSError, RuntimeError, ValueError, ImportError) as exc:
         app.logger.warning(f"TTS synthesis error: {exc}")
         return jsonify({"error": str(exc)}), 500
 
