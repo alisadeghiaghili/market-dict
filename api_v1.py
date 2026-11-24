@@ -281,31 +281,34 @@ def get_stats():
 @api_v1.route("/openapi.json", methods=["GET"])
 def openapi_json():
     """Machine-readable OpenAPI 3.0.3 specification."""
-    host_url = request.host_url.rstrip("/") + "/api/v1"
-    spec = get_openapi_spec(host_url)
+    root = request.script_root.rstrip("/")
+    relative_url = f"{root}/api/v1" if root else "/api/v1"
+    host_url = request.host_url.rstrip("/") + relative_url
+    spec = get_openapi_spec(host_url, relative_url=relative_url)
     return jsonify(spec)
 
 @api_v1.route("/docs", methods=["GET"])
 def swagger_ui():
     """Interactive Swagger UI Documentation."""
-    html_template = """<!DOCTYPE html>
+    root = request.script_root.rstrip("/")
+    html_template = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MarketDict API - Interactive Documentation & Explorer</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="{root}/favicon.ico">
   <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui.css">
   <style>
-    body {
+    body {{
       margin: 0;
       padding: 0;
       background: #0f172a;
       color: #f8fafc;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-    .topbar { display: none !important; }
-    .custom-header {
+    }}
+    .topbar {{ display: none !important; }}
+    .custom-header {{
       background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%);
       border-bottom: 1px solid #1e293b;
       padding: 20px 32px;
@@ -314,8 +317,8 @@ def swagger_ui():
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 16px;
-    }
-    .custom-header h1 {
+    }}
+    .custom-header h1 {{
       margin: 0;
       font-size: 1.4rem;
       font-weight: 700;
@@ -323,13 +326,13 @@ def swagger_ui():
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-    .custom-header p {
+    }}
+    .custom-header p {{
       margin: 4px 0 0;
       color: #94a3b8;
       font-size: 0.88rem;
-    }
-    .custom-header .badge {
+    }}
+    .custom-header .badge {{
       background: rgba(16, 185, 129, 0.2);
       color: #10b981;
       border: 1px solid rgba(16, 185, 129, 0.3);
@@ -337,26 +340,26 @@ def swagger_ui():
       border-radius: 9999px;
       font-size: 0.78rem;
       font-weight: 600;
-    }
-    .nav-links a {
+    }}
+    .nav-links a {{
       color: #38bdf8;
       text-decoration: none;
       font-size: 0.875rem;
       margin-left: 16px;
       transition: color 0.2s;
-    }
-    .nav-links a:hover {
+    }}
+    .nav-links a:hover {{
       color: #7dd3fc;
       text-decoration: underline;
-    }
-    .swagger-ui .info .title {
+    }}
+    .swagger-ui .info .title {{
       color: #f8fafc !important;
-    }
-    .swagger-ui {
+    }}
+    .swagger-ui {{
       max-width: 1200px;
       margin: 0 auto;
       padding: 24px 16px;
-    }
+    }}
   </style>
 </head>
 <body>
@@ -366,19 +369,19 @@ def swagger_ui():
       <p>High-performance bilingual financial dictionary API (6,108 terms, 32 categories, formulas, fuzzy search)</p>
     </div>
     <div class="nav-links">
-      <a href="/" target="_blank">🌐 Web App</a>
-      <a href="/docs/guide" target="_blank">📚 Developer Guide (FA / EN)</a>
-      <a href="/api/v1/openapi.json" target="_blank">📄 OpenAPI JSON</a>
-      <a href="/api/v1/health" target="_blank">🩺 Health Check</a>
+      <a href="{root}/" target="_blank">🌐 Web App</a>
+      <a href="{root}/docs/guide" target="_blank">📚 Developer Guide (FA / EN)</a>
+      <a href="{root}/api/v1/openapi.json" target="_blank">📄 OpenAPI JSON</a>
+      <a href="{root}/api/v1/health" target="_blank">🩺 Health Check</a>
     </div>
   </div>
   <div id="swagger-ui"></div>
   <script src="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui-bundle.js"></script>
   <script src="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui-standalone-preset.js"></script>
   <script>
-    window.onload = function() {
-      SwaggerUIBundle({
-        url: "/api/v1/openapi.json",
+    window.onload = function() {{
+      SwaggerUIBundle({{
+        url: "{root}/api/v1/openapi.json",
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
@@ -386,8 +389,8 @@ def swagger_ui():
           SwaggerUIStandalonePreset
         ],
         layout: "BaseLayout"
-      });
-    };
+      }});
+    }};
   </script>
 </body>
 </html>"""
@@ -730,6 +733,7 @@ def list_categories():
     cache = get_cache()
     categories = cache.get("categories", [])
     result = []
+    root = request.script_root.rstrip("/")
     for cat in categories:
         name_fa = cat["name_fa"]
         tax = get_category_meta(name_fa)
@@ -740,7 +744,7 @@ def list_categories():
             "name_en": tax["en"],
             "icon": tax["icon"] or cat.get("icon", "🏷️"),
             "count": cat.get("count", 0),
-            "terms_url": f"/api/v1/categories/{cat_id}/terms"
+            "terms_url": f"{root}/api/v1/categories/{cat_id}/terms"
         })
     return success_response(result)
 
@@ -763,6 +767,7 @@ def get_category_detail(category_id: str):
     name_fa = matched["name_fa"]
     tax = get_category_meta(name_fa)
     cat_id = tax["id"]
+    root = request.script_root.rstrip("/")
 
     return success_response({
         "id": cat_id,
@@ -770,7 +775,7 @@ def get_category_detail(category_id: str):
         "name_en": tax["en"],
         "icon": tax["icon"] or matched.get("icon", "🏷️"),
         "count": matched.get("count", 0),
-        "terms_url": f"/api/v1/categories/{cat_id}/terms"
+        "terms_url": f"{root}/api/v1/categories/{cat_id}/terms"
     })
 
 @api_v1.route("/categories/<category_id>/terms", methods=["GET"])
@@ -802,13 +807,14 @@ def list_letters():
     """List all letters with term counts."""
     cache = get_cache()
     letters = cache.get("letters", [])
+    root = request.script_root.rstrip("/")
     result = []
     for ltr in letters:
         char = ltr["letter"]
         result.append({
             "letter": char,
             "count": ltr["count"],
-            "terms_url": f"/api/v1/letters/{char}/terms"
+            "terms_url": f"{root}/api/v1/letters/{char}/terms"
         })
     return success_response(result)
 

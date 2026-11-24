@@ -3,14 +3,14 @@
 OpenAPI 3.0.3 Specification for MarketDict REST API
 """
 
-def get_openapi_spec(server_url: str = "") -> dict:
+def get_openapi_spec(server_url: str = "", relative_url: str = "/api/v1") -> dict:
     """Return the complete OpenAPI 3.0.3 specification as a Python dictionary."""
     servers = []
     if server_url:
         servers.append({"url": server_url, "description": "Current Server"})
     servers.extend([
-        {"url": "http://localhost:5000/api/v1", "description": "Local Development Server"},
-        {"url": "/api/v1", "description": "Relative URL"}
+        {"url": f"http://localhost:5000{relative_url}", "description": "Local Development Server"},
+        {"url": relative_url, "description": "Relative URL"}
     ])
 
     return {

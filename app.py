@@ -56,11 +56,90 @@ def apply_reverse_proxy(flask_app: Flask, allowed_ips: Any = "*") -> Flask:
     flask_app.wsgi_app = reverse_proxy_wsgi
     flask_app.config["REVERSE_PROXY_ENABLED"] = True
     flask_app.config["FORWARDED_ALLOW_IPS"] = allowed_ips
+    if hasattr(flask_app, "_unprefixed_wsgi_app"):
+        flask_app._unprefixed_wsgi_app = reverse_proxy_wsgi
     return flask_app
+
+
+def normalize_application_root(root: str | None) -> str:
+    """
+    Normalize application root path to format '/subpath' or empty string for domain root.
+    Handles None, empty string, leading/trailing slashes, and whitespace.
+    """
+    if not root:
+        return ""
+    cleaned = root.strip().rstrip("/")
+    if not cleaned or cleaned == "/":
+        return ""
+    if not cleaned.startswith("/"):
+        cleaned = "/" + cleaned
+    return cleaned
+
+
+def _root_fallback(environ: dict[str, Any], start_response: Any, root: str) -> Any:
+    """Fallback handler for requests outside the mounted application root."""
+    from werkzeug.wrappers import Response
+
+    path = environ.get("PATH_INFO", "")
+    if path in ("", "/"):
+        query = environ.get("QUERY_STRING", "")
+        location = f"{root}/" + (f"?{query}" if query else "")
+        res = Response(status=302, headers=[("Location", location)])
+        return res(environ, start_response)
+    res = Response("Not Found", status=404)
+    return res(environ, start_response)
+
+
+def apply_application_root(flask_app: Flask, application_root: str | None = None) -> Flask:
+    """
+    Mount Flask WSGI application under a subpath prefix (e.g. '/myapp' or 'myapp').
+    When configured, requests under '<application_root>' are routed to the Flask app,
+    requests to '<application_root>' (without trailing slash) redirect to '<application_root>/',
+    and requests to '/' automatically redirect to '<application_root>/'.
+    """
+    from werkzeug.middleware.dispatcher import DispatcherMiddleware
+    from werkzeug.wrappers import Response
+
+    root = normalize_application_root(application_root)
+    flask_app.config["APPLICATION_ROOT"] = root or "/"
+    flask_app.config["APPLICATION_ROOT_PREFIX"] = root
+
+    if not hasattr(flask_app, "_unprefixed_wsgi_app"):
+        flask_app._unprefixed_wsgi_app = flask_app.wsgi_app
+
+    base_app = flask_app._unprefixed_wsgi_app
+
+    if not root:
+        flask_app.wsgi_app = base_app
+        return flask_app
+
+    mounts = {root: base_app}
+    dispatcher = DispatcherMiddleware(
+        lambda env, sr: _root_fallback(env, sr, root),
+        mounts
+    )
+
+    def application_root_wsgi(environ: dict[str, Any], start_response: Any) -> Any:
+        path = environ.get("PATH_INFO", "")
+        if path in mounts:
+            query = environ.get("QUERY_STRING", "")
+            location = f"{path}/" + (f"?{query}" if query else "")
+            res = Response(status=308, headers=[("Location", location)])
+            return res(environ, start_response)
+        return dispatcher(environ, start_response)
+
+    flask_app.wsgi_app = application_root_wsgi
+    return flask_app
+
 
 # Auto-enable reverse proxy middleware if PROXY_HEADERS environment variable is active
 if os.environ.get("PROXY_HEADERS", "").strip().lower() in ("true", "1", "yes"):
     apply_reverse_proxy(app, allowed_ips=os.environ.get("FORWARDED_ALLOW_IPS", "*"))
+
+# Auto-enable application root if APPLICATION_ROOT or APP_ROOT environment variable is active
+env_app_root = os.environ.get("APPLICATION_ROOT") or os.environ.get("APP_ROOT")
+if env_app_root:
+    apply_application_root(app, application_root=env_app_root)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, "bilingual_dictionary.json")
@@ -417,8 +496,8 @@ def add_cors_headers(response):
 
 @app.route("/docs")
 def docs_redirect():
-    from flask import redirect
-    return redirect("/api/v1/docs")
+    from flask import redirect, url_for
+    return redirect(url_for("api_v1.swagger_ui"))
 
 @app.route("/docs/guide")
 @app.route("/api/v1/guide")
@@ -669,6 +748,12 @@ if __name__ == "__main__":
         default=os.environ.get("FORWARDED_ALLOW_IPS", "*"),
         help="Comma-separated list of trusted proxy IPs or '*' for all (default: '*' or $FORWARDED_ALLOW_IPS)"
     )
+    parser.add_argument(
+        "--application-root",
+        "--app-root",
+        default=os.environ.get("APPLICATION_ROOT") or os.environ.get("APP_ROOT") or "",
+        help="Root URL path prefix for mounting the application (e.g. '/myapp' or 'myapp')"
+    )
     args = parser.parse_args()
 
     if args.proxy_headers:
@@ -677,13 +762,19 @@ if __name__ == "__main__":
     else:
         proxy_status = "DISABLED"
 
+    if args.application_root:
+        apply_application_root(app, application_root=args.application_root)
+
+    root_prefix = normalize_application_root(args.application_root)
+
     print("\n=======================================================")
     print("🚀 MarketDict Web App & API are running!")
-    print(f"👉 Host:          {args.host}")
-    print(f"👉 Port:          {args.port}")
-    print(f"👉 Reverse Proxy: {proxy_status}")
-    print(f"👉 Web App:       http://{args.host}:{args.port}")
-    print(f"👉 REST API:      http://{args.host}:{args.port}/api/v1")
-    print(f"👉 API Docs:      http://{args.host}:{args.port}/docs")
+    print(f"👉 Host:             {args.host}")
+    print(f"👉 Port:             {args.port}")
+    print(f"👉 Application Root: {root_prefix or '/'}")
+    print(f"👉 Reverse Proxy:    {proxy_status}")
+    print(f"👉 Web App:          http://{args.host}:{args.port}{root_prefix}/")
+    print(f"👉 REST API:         http://{args.host}:{args.port}{root_prefix}/api/v1")
+    print(f"👉 API Docs:         http://{args.host}:{args.port}{root_prefix}/docs")
     print("=======================================================\n")
     app.run(host=args.host, port=args.port, debug=False, threaded=True)

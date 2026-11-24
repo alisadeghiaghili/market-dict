@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MarketDict REST API - Interactive Developer Guide & Docs</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="{{ request.script_root }}/favicon.ico">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
-  <script src="/static/tailwind.min.js"></script>
+  <script src="{{ request.script_root }}/static/tailwind.min.js"></script>
   <script>
     if (!window.tailwind) {
       document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
@@ -74,7 +74,7 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur border-b border-slate-800 px-6 py-4 flex items-center justify-between">
     <div class="flex items-center gap-4">
-      <a href="/" class="flex items-center gap-2 text-brand-400 font-bold text-xl hover:opacity-80 transition">
+      <a href="{{ request.script_root }}/" class="flex items-center gap-2 text-brand-400 font-bold text-xl hover:opacity-80 transition">
         <span>📈 MarketDict</span>
         <span class="text-xs bg-brand-500/20 text-brand-400 border border-brand-500/30 px-2 py-0.5 rounded-full font-mono">API v1</span>
       </a>
@@ -89,10 +89,10 @@
         <button id="lang-en" onclick="setLang('en')" class="px-3 py-1.5 rounded-md text-slate-400 hover:text-white transition">English</button>
       </div>
 
-      <a href="/docs" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md transition font-medium flex items-center gap-1">
+      <a href="{{ request.script_root }}/docs" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md transition font-medium flex items-center gap-1">
         <span>Swagger UI</span>
       </a>
-      <a href="/api/v1/openapi.json" target="_blank" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md transition font-medium">
+      <a href="{{ request.script_root }}/api/v1/openapi.json" target="_blank" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-3 py-1.5 rounded-md transition font-medium">
         <span>OpenAPI JSON</span>
       </a>
     </div>
