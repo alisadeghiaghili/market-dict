@@ -119,11 +119,7 @@ public class NativeTTSPlugin extends Plugin {
                 targetLocale = new Locale("fa", "IR");
                 int res = tts.setLanguage(targetLocale);
                 if (res == TextToSpeech.LANG_MISSING_DATA || res == TextToSpeech.LANG_NOT_SUPPORTED) {
-                    res = tts.setLanguage(new Locale("fa"));
-                    if (res == TextToSpeech.LANG_MISSING_DATA || res == TextToSpeech.LANG_NOT_SUPPORTED) {
-                        // Fallback to Arabic locale which supports Persian script phonetically
-                        tts.setLanguage(new Locale("ar"));
-                    }
+                    tts.setLanguage(new Locale("fa"));
                 }
             }
 
