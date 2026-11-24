@@ -1,13 +1,17 @@
 package com.marketdict.app;
 
+import android.content.Intent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
+import android.speech.tts.Voice;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
+import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 @CapacitorPlugin(name = "NativeTTS")
 public class NativeTTSPlugin extends Plugin {
@@ -20,6 +24,22 @@ public class NativeTTSPlugin extends Plugin {
         initTTS(null);
     }
 
+    private String findGoogleTtsEngine() {
+        try {
+            TextToSpeech probe = new TextToSpeech(getContext(), null);
+            List<TextToSpeech.EngineInfo> engines = probe.getEngines();
+            try { probe.shutdown(); } catch (Exception ignored) {}
+            if (engines != null) {
+                for (TextToSpeech.EngineInfo e : engines) {
+                    if ("com.google.android.tts".equals(e.name)) {
+                        return e.name;
+                    }
+                }
+            }
+        } catch (Exception ignored) {}
+        return null;
+    }
+
     private synchronized void initTTS(Runnable onReady) {
         if (tts != null && isInitialized) {
             if (onReady != null) onReady.run();
@@ -27,7 +47,8 @@ public class NativeTTSPlugin extends Plugin {
         }
 
         try {
-            tts = new TextToSpeech(getContext(), status -> {
+            String engine = findGoogleTtsEngine();
+            TextToSpeech.OnInitListener listener = status -> {
                 if (status == TextToSpeech.SUCCESS) {
                     isInitialized = true;
                     setupUtteranceListener();
@@ -36,7 +57,13 @@ public class NativeTTSPlugin extends Plugin {
                     isInitialized = false;
                     if (onReady != null) onReady.run();
                 }
-            });
+            };
+
+            if (engine != null) {
+                tts = new TextToSpeech(getContext(), listener, engine);
+            } else {
+                tts = new TextToSpeech(getContext(), listener);
+            }
         } catch (Exception e) {
             isInitialized = false;
             if (onReady != null) onReady.run();
@@ -105,21 +132,58 @@ public class NativeTTSPlugin extends Plugin {
         if (tts == null || !isInitialized) {
             JSObject ret = new JSObject();
             ret.put("completed", false);
-            ret.put("error", "TTS not initialized");
+            ret.put("error", "TTS_NOT_INITIALIZED");
             call.resolve(ret);
             return;
         }
 
         try {
-            Locale targetLocale;
             if ("en".equalsIgnoreCase(lang) || "en-US".equalsIgnoreCase(lang) || "en_US".equalsIgnoreCase(lang)) {
-                targetLocale = Locale.US;
-                tts.setLanguage(targetLocale);
+                tts.setLanguage(Locale.US);
             } else {
-                targetLocale = new Locale("fa", "IR");
-                int res = tts.setLanguage(targetLocale);
-                if (res == TextToSpeech.LANG_MISSING_DATA || res == TextToSpeech.LANG_NOT_SUPPORTED) {
-                    tts.setLanguage(new Locale("fa"));
+                // Persian language requested
+                boolean faFound = false;
+
+                // 1. First, search directly in available voices for Persian
+                try {
+                    Set<Voice> voices = tts.getVoices();
+                    if (voices != null) {
+                        for (Voice v : voices) {
+                            Locale loc = v.getLocale();
+                            if (loc != null) {
+                                String code = loc.getLanguage();
+                                if ("fa".equalsIgnoreCase(code) || "fas".equalsIgnoreCase(code) || "per".equalsIgnoreCase(code)) {
+                                    tts.setVoice(v);
+                                    tts.setLanguage(loc);
+                                    faFound = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                } catch (Exception ignored) {}
+
+                // 2. If not found via voices, test Locale("fa", "IR") and Locale("fa")
+                if (!faFound) {
+                    Locale faIr = new Locale("fa", "IR");
+                    int res = tts.setLanguage(faIr);
+                    if (res >= TextToSpeech.LANG_AVAILABLE) {
+                        faFound = true;
+                    } else {
+                        res = tts.setLanguage(new Locale("fa"));
+                        if (res >= TextToSpeech.LANG_AVAILABLE) {
+                            faFound = true;
+                        }
+                    }
+                }
+
+                // CRITICAL: NEVER speak Persian with an English voice!
+                if (!faFound) {
+                    JSObject ret = new JSObject();
+                    ret.put("completed", false);
+                    ret.put("error", "PERSIAN_VOICE_NOT_INSTALLED");
+                    call.resolve(ret);
+                    return;
                 }
             }
 
@@ -130,6 +194,27 @@ public class NativeTTSPlugin extends Plugin {
         } catch (Exception e) {
             resolveActiveCall(false);
             call.reject("Native TTS error: " + e.getMessage());
+        }
+    }
+
+    @PluginMethod
+    public void openTtsSettings(PluginCall call) {
+        try {
+            Intent intent = new Intent();
+            intent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+            intent.setPackage("com.google.android.tts");
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getContext().startActivity(intent);
+            call.resolve();
+        } catch (Exception e) {
+            try {
+                Intent intent = new Intent("com.android.settings.TTS_SETTINGS");
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getContext().startActivity(intent);
+                call.resolve();
+            } catch (Exception ex) {
+                call.reject("Cannot open TTS settings: " + ex.getMessage());
+            }
         }
     }
 

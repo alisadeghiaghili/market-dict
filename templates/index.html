@@ -4560,11 +4560,19 @@
                             rate: Math.min(2.0, Math.max(0.6, this.rate))
                         });
 
-                        if (token === this._playToken && this.isPlaying && !this.isPaused) {
-                            this.currentIndex++;
-                            this._playCurrentChunk(token);
+                        if (result && result.error === 'PERSIAN_VOICE_NOT_INSTALLED') {
+                            this.stop(true);
+                            showPersianVoiceInstallDialog();
+                            return;
                         }
-                        return;
+
+                        if (result && result.completed) {
+                            if (token === this._playToken && this.isPlaying && !this.isPaused) {
+                                this.currentIndex++;
+                                this._playCurrentChunk(token);
+                            }
+                            return;
+                        }
                     } catch (nativeErr) {
                         console.warn('NativeTTS speak failed, attempting fallbacks:', nativeErr);
                     }
@@ -4649,7 +4657,7 @@
 
                 if (token !== this._playToken || !this.isPlaying || this.isPaused) return;
 
-                // 3. Universal Web Speech API Engine (strictly Persian / English only - NO ARABIC)
+                // 3. Universal Web Speech API Engine (strictly Persian / English only - NEVER read Persian in English voice)
                 if (this.synth && typeof SpeechSynthesisUtterance !== 'undefined') {
                     const availableVoices = this.synth.getVoices() || [];
                     if (!this.persianVoice) {
@@ -4673,19 +4681,18 @@
                         let spokenLang = lang === 'en' ? 'en-US' : 'fa-IR';
 
                         if (lang === 'fa') {
-                            spokenLang = 'fa-IR';
                             if (this.persianVoice) {
                                 selectedVoice = this.persianVoice;
+                                spokenLang = 'fa-IR';
                             } else {
-                                // If browser lacks native Persian voice (e.g. desktop Chrome on Windows), use phonetic transliteration
-                                spokenText = this.persianToPhoneticLatin(item.text);
-                                selectedVoice = this.englishVoice || availableVoices[0] || null;
-                                spokenLang = selectedVoice ? selectedVoice.lang : 'en-US';
-
-                                if (!this._notifiedVoiceFallback && !isNative) {
-                                    this._notifiedVoiceFallback = true;
-                                    showToast('💡 برای گوینده طبیعی هوش مصنوعی فارسی (Microsoft Dilara)، برنامه را در Microsoft Edge باز کرده یا سرور را با python app.py اجرا نمایید.', 6500);
+                                // NEVER read Persian with English voice!
+                                this.stop(true);
+                                if (isNative) {
+                                    showPersianVoiceInstallDialog();
+                                } else {
+                                    showToast('موتور صوتی سیستم/مرورگر فاقد صدای فارسی است. برای گوینده طبیعی فارسی (Dilara)، سرور را با python app.py اجرا نمایید.', 6500);
                                 }
+                                return;
                             }
                         } else {
                             selectedVoice = this.englishVoice || availableVoices[0] || null;
@@ -4697,7 +4704,7 @@
                         if (selectedVoice) {
                             utterance.voice = selectedVoice;
                         }
-                        utterance.rate = (lang === 'fa' && !this.persianVoice) ? Math.max(0.85, this.rate * 0.9) : this.rate;
+                        utterance.rate = this.rate;
                         utterance.pitch = 1.0;
 
                         utterance.onend = () => {
@@ -5336,6 +5343,48 @@
                 persianTTS.stop();
             } else {
                 persianTTS.playDirect(text, 'en', 'speak_direct', text);
+            }
+        }
+
+        function showPersianVoiceInstallDialog() {
+            const existing = document.getElementById('persianVoiceInstallModal');
+            if (existing) existing.remove();
+
+            const modalHtml = `
+            <div id="persianVoiceInstallModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in" dir="rtl">
+                <div class="bg-white dark:bg-slate-900 border border-emerald-500/30 rounded-2xl p-5 max-w-sm w-full shadow-2xl text-center space-y-4">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl">
+                        🗣️
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">بسته صوتی زبان فارسی</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                            موتور صوتی سیستم گوشی شما فاقد بسته صدای فارسی (Google TTS) است. برای خوانش با صدای طبیعی فارسی، دکمه زیر را لمس کرده و بسته زبان فارسی را دانلود نمایید.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2 pt-1">
+                        <button type="button" onclick="openNativeTtsSettings()" class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition shadow-md flex items-center justify-center gap-1.5">
+                            ⚙️ دانلود / فعال‌سازی صدای فارسی در تنظیمات
+                        </button>
+                        <button type="button" onclick="document.getElementById('persianVoiceInstallModal').remove()" class="w-full py-2 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium text-xs transition">
+                            بستن
+                        </button>
+                    </div>
+                </div>
+            </div>`;
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+        }
+
+        function openNativeTtsSettings() {
+            const modal = document.getElementById('persianVoiceInstallModal');
+            if (modal) modal.remove();
+            const nativeTTS = getNativeTTS();
+            if (nativeTTS && typeof nativeTTS.openTtsSettings === 'function') {
+                nativeTTS.openTtsSettings().catch(() => {
+                    showToast('تنظیمات گوشی باز نشد. لطفاً در تنظیمات اندروید به بخش Text-to-speech مراجعه نمایید.');
+                });
+            } else {
+                showToast('لطفاً در تنظیمات گوشی به بخش Text-to-speech مراجعه نمایید.');
             }
         }
 
