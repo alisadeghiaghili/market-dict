@@ -199,6 +199,11 @@ def build():
     html_content = html_content.replace('href="/favicon.ico"', 'href="static/favicon.svg"')
     html_content = html_content.replace('window.HAS_BACKEND_API = true;', 'window.HAS_BACKEND_API = false;')
 
+    if "--no-github" in sys.argv:
+        print("🚫 Removing GitHub buttons and links for clean APK build (--no-github)...")
+        html_content = re.sub(r'<!-- GitHub Repository Link -->\s*<a id="navGithubBtn".*?</a>', '', html_content, flags=re.DOTALL)
+        html_content = re.sub(r'<a id="footerGithubLink".*?</a>', '', html_content, flags=re.DOTALL)
+
     dist_index = os.path.join(dist_dir, "index.html")
     with open(dist_index, "w", encoding="utf-8") as f:
         f.write(html_content)

@@ -103,27 +103,56 @@ jobs:
           </vector>
           EOF
 
-      - name: Sync Web Assets to Android
+      - name: Configure Android Manifest for Offline TTS & Visibility
         run: |
-          npx cap sync android
+          python -c "
+          manifest_path = 'android/app/src/main/AndroidManifest.xml'
+          with open(manifest_path, 'r', encoding='utf-8') as f:
+              content = f.read()
+          if '<queries>' not in content:
+              queries = '''    <queries>
+                  <intent>
+                      <action android:name=\"android.intent.action.TTS_SERVICE\" />
+                  </intent>
+              </queries>
+          </manifest>'''
+              content = content.replace('</manifest>', queries)
+              with open(manifest_path, 'w', encoding='utf-8') as f:
+                  f.write(content)
+          print('Successfully injected TTS queries intent into AndroidManifest.xml')
+          "
 
-      - name: Build Debug APK
+      - name: Build APK (With GitHub Button)
         run: |
+          python build_static.py
+          npx cap sync android
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug --no-daemon
           cd ..
+          cp android/app/build/outputs/apk/debug/app-debug.apk MarketDict-with-github.apk
+          cp MarketDict-with-github.apk MarketDict.apk
+          ls -lh MarketDict-with-github.apk
 
-      - name: Copy Output APK
+      - name: Build APK (Without GitHub Button)
         run: |
-          cp android/app/build/outputs/apk/debug/app-debug.apk MarketDict.apk
-          ls -lh MarketDict.apk
+          python build_static.py --no-github
+          npx cap sync android
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+          cd ..
+          cp android/app/build/outputs/apk/debug/app-debug.apk MarketDict-no-github.apk
+          ls -lh MarketDict-no-github.apk
 
-      - name: Upload APK as Artifact
+      - name: Upload APKs as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: MarketDict-APK
-          path: MarketDict.apk
+          name: MarketDict-APK-Binaries
+          path: |
+            MarketDict.apk
+            MarketDict-with-github.apk
+            MarketDict-no-github.apk
           retention-days: 30
 
       - name: Create or Update Release
@@ -133,9 +162,12 @@ jobs:
         with:
           tag_name: apk-latest
           name: "MarketDict APK Release"
-          body: "Direct download of MarketDict bilingual offline Android app."
+          body: "Official Android APK binaries for MarketDict with offline Persian/English speech, KaTeX formulas, and custom builds."
           draft: false
           prerelease: false
-          files: MarketDict.apk
+          files: |
+            MarketDict.apk
+            MarketDict-with-github.apk
+            MarketDict-no-github.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

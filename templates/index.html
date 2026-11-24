@@ -554,7 +554,7 @@
                 </button>
 
                 <!-- GitHub Repository Link -->
-                <a href="https://github.com/alisadeghiaghili/market-dict" target="_blank" rel="noopener noreferrer" title="سورس پروژه در گیت‌هاب (GitHub)" aria-label="سورس گیت‌هاب" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95 flex items-center justify-center shrink-0">
+                <a id="navGithubBtn" href="https://github.com/alisadeghiaghili/market-dict" target="_blank" rel="noopener noreferrer" title="سورس پروژه در گیت‌هاب (GitHub)" aria-label="سورس گیت‌هاب" class="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition shadow-sm hover:scale-105 active:scale-95 flex items-center justify-center shrink-0">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                     </svg>
@@ -821,7 +821,7 @@
                 <span class="font-en font-bold text-slate-800 dark:text-slate-200">Market<span class="text-emerald-500">Dict</span></span>
                 <span>— دانشنامه تخصصی ۶,۱۰۸ اصطلاح مالی و سرمایه‌گذاری</span>
             </div>
-            <a href="https://github.com/alisadeghiaghili/market-dict" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition shadow-sm font-medium">
+            <a id="footerGithubLink" href="https://github.com/alisadeghiaghili/market-dict" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition shadow-sm font-medium">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 <span>مشاهده سورس پروژه در GitHub</span>
             </a>
@@ -1196,7 +1196,7 @@
     </div>
 
     <!-- Floating Highlighter Selection Toolbar -->
-    <div id="highlightFloatingToolbar" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" class="fixed z-[70] hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-2xl px-3 py-2 flex items-center gap-2 transform -translate-x-1/2 transition-opacity duration-150 backdrop-blur-md">
+    <div id="highlightFloatingToolbar" onmousedown="event.preventDefault()" class="fixed z-[70] hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-2xl px-3 py-2 flex items-center gap-2 transform -translate-x-1/2 transition-opacity duration-150 backdrop-blur-md select-none pointer-events-auto">
         <div class="flex items-center gap-1.5 pl-2 border-l border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300">
             <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -1204,25 +1204,25 @@
             <span class="hidden sm:inline">هایلایت:</span>
         </div>
         <div class="flex items-center gap-1.5">
-            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="createHighlightFromSelection('yellow')" title="هایلایت زرد" class="w-6 h-6 rounded-full bg-yellow-300 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
-            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="createHighlightFromSelection('emerald')" title="هایلایت سبز" class="w-6 h-6 rounded-full bg-emerald-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
-            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="createHighlightFromSelection('blue')" title="هایلایت آبی" class="w-6 h-6 rounded-full bg-sky-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
-            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="createHighlightFromSelection('purple')" title="هایلایت بنفش" class="w-6 h-6 rounded-full bg-purple-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
-            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="createHighlightFromSelection('amber')" title="هایلایت نارنجی" class="w-6 h-6 rounded-full bg-amber-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('yellow')" title="هایلایت زرد" class="w-6 h-6 rounded-full bg-yellow-300 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none cursor-pointer"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('emerald')" title="هایلایت سبز" class="w-6 h-6 rounded-full bg-emerald-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none cursor-pointer"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('blue')" title="هایلایت آبی" class="w-6 h-6 rounded-full bg-sky-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none cursor-pointer"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('purple')" title="هایلایت بنفش" class="w-6 h-6 rounded-full bg-purple-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none cursor-pointer"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="createHighlightFromSelection('amber')" title="هایلایت نارنجی" class="w-6 h-6 rounded-full bg-amber-400 hover:scale-110 active:scale-95 transition-transform border-2 border-white dark:border-slate-800 shadow-sm focus:outline-none cursor-pointer"></button>
         </div>
     </div>
 
     <!-- Existing Highlight Action Popover -->
-    <div id="highlightActionPopover" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" class="fixed z-[70] hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-2xl p-2 flex items-center gap-2 transform -translate-x-1/2 transition-all duration-150">
+    <div id="highlightActionPopover" onmousedown="event.preventDefault()" class="fixed z-[70] hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-2xl rounded-2xl p-2 flex items-center gap-2 transform -translate-x-1/2 transition-all duration-150 select-none pointer-events-auto">
         <div class="flex items-center gap-1">
-            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="changeCurrentHighlightColor('yellow')" title="تغییر به زرد" class="w-5 h-5 rounded-full bg-yellow-300 hover:scale-110 transition border border-white dark:border-slate-800"></button>
-            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="changeCurrentHighlightColor('emerald')" title="تغییر به سبز" class="w-5 h-5 rounded-full bg-emerald-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
-            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="changeCurrentHighlightColor('blue')" title="تغییر به آبی" class="w-5 h-5 rounded-full bg-sky-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
-            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="changeCurrentHighlightColor('purple')" title="تغییر به بنفش" class="w-5 h-5 rounded-full bg-purple-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
-            <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="changeCurrentHighlightColor('amber')" title="تغییر به نارنجی" class="w-5 h-5 rounded-full bg-amber-400 hover:scale-110 transition border border-white dark:border-slate-800"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('yellow')" title="تغییر به زرد" class="w-5 h-5 rounded-full bg-yellow-300 hover:scale-110 transition border border-white dark:border-slate-800 cursor-pointer"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('emerald')" title="تغییر به سبز" class="w-5 h-5 rounded-full bg-emerald-400 hover:scale-110 transition border border-white dark:border-slate-800 cursor-pointer"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('blue')" title="تغییر به آبی" class="w-5 h-5 rounded-full bg-sky-400 hover:scale-110 transition border border-white dark:border-slate-800 cursor-pointer"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('purple')" title="تغییر به بنفش" class="w-5 h-5 rounded-full bg-purple-400 hover:scale-110 transition border border-white dark:border-slate-800 cursor-pointer"></button>
+            <button type="button" onmousedown="event.preventDefault()" onclick="changeCurrentHighlightColor('amber')" title="تغییر به نارنجی" class="w-5 h-5 rounded-full bg-amber-400 hover:scale-110 transition border border-white dark:border-slate-800 cursor-pointer"></button>
         </div>
         <div class="h-4 w-px bg-slate-200 dark:bg-slate-700"></div>
-        <button type="button" onmousedown="event.preventDefault()" ontouchstart="event.preventDefault()" onclick="deleteCurrentHighlight()" class="px-2 py-1 rounded-lg bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-600 dark:text-rose-400 text-xs font-semibold flex items-center gap-1 transition" title="حذف این هایلایت">
+        <button type="button" onmousedown="event.preventDefault()" onclick="deleteCurrentHighlight()" class="px-2 py-1 rounded-lg bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-600 dark:text-rose-400 text-xs font-semibold flex items-center gap-1 transition cursor-pointer" title="حذف این هایلایت">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
             </svg>
@@ -1353,18 +1353,26 @@
             setupInfiniteScroll();
             checkUrlHash();
 
-            // Text selection events for persistent highlighter
+            // Text selection events for persistent highlighter (Enhanced for mobile touch & desktop)
+            let _selChangeTimer = null;
             document.addEventListener('selectionchange', () => {
                 const sel = window.getSelection();
                 if (!sel || sel.isCollapsed || !sel.toString().trim()) {
-                    if (lastActiveSelection && (Date.now() - (lastActiveSelection.time || 0) < 400)) {
+                    if (lastActiveSelection && (Date.now() - (lastActiveSelection.time || 0) < 600)) {
                         return;
                     }
                     hideSelectionToolbar();
+                } else {
+                    clearTimeout(_selChangeTimer);
+                    _selChangeTimer = setTimeout(() => {
+                        handleTextSelection();
+                    }, 120);
                 }
             });
             document.addEventListener('mouseup', handleTextSelection);
-            document.addEventListener('touchend', handleTextSelection);
+            document.addEventListener('touchend', (e) => {
+                setTimeout(() => handleTextSelection(e), 100);
+            });
 
             const contentArea = document.getElementById('modalContentArea');
             if (contentArea) {
@@ -4505,17 +4513,53 @@
                 const wave = document.getElementById('ttsEqualizerWave');
                 if (wave) wave.classList.remove('tts-wave-paused');
 
-                // 1. Primary: Server-side Neural TTS Stream (/api/tts)
+                const isNativeApp = !!(window.Capacitor && (
+                    (window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ||
+                    (window.Capacitor.Plugins && window.Capacitor.Plugins.TextToSpeech)
+                ));
+
+                // 1. Primary for Native Mobile App: Capacitor Native TTS (100% Offline Engine)
+                if (isNativeApp && window.Capacitor?.Plugins?.TextToSpeech) {
+                    const tts = window.Capacitor.Plugins.TextToSpeech;
+                    const candidateLangs = lang === 'en' ? ['en-US', 'en_US', 'en'] : ['fa-IR', 'fa_IR', 'fa', 'fas'];
+                    let spoke = false;
+                    for (const l of candidateLangs) {
+                        try {
+                            await tts.speak({
+                                text: item.text,
+                                lang: l,
+                                rate: Math.min(1.5, Math.max(0.7, this.rate)),
+                                pitch: 1.0,
+                                volume: 1.0,
+                                category: 'ambient',
+                            });
+                            spoke = true;
+                            break;
+                        } catch (err) {
+                            console.warn(`Capacitor TTS lang ${l} error:`, err);
+                        }
+                    }
+
+                    if (spoke) {
+                        if (token === this._playToken && this.isPlaying && !this.isPaused) {
+                            this.currentIndex++;
+                            this._playCurrentChunk(token);
+                        }
+                        return;
+                    }
+                }
+
+                // 2. Server-Side Neural TTS Stream (when backend is available or online)
                 const playViaServerStream = () => {
                     return new Promise((resolve, reject) => {
                         const candidateUrls = [];
-                        // Primary endpoint (relative path works on localhost/server)
                         if (window.HAS_BACKEND_API !== false) {
                             candidateUrls.push(`/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`);
-                        } else {
-                            // On static GitHub Pages, probe local backend if running in background
+                        } else if (!isNativeApp && window.location.hostname === 'localhost') {
                             candidateUrls.push(`http://127.0.0.1:5000/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`);
                         }
+                        // Cloud audio fallback (Google TTS)
+                        candidateUrls.push(`https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${lang === 'en' ? 'en' : 'fa'}&q=${encodeURIComponent(item.text)}`);
 
                         let triedIdx = 0;
                         const tryNextUrl = () => {
@@ -4532,7 +4576,7 @@
                             let timeoutTimer = setTimeout(() => {
                                 try { audio.pause(); } catch(e) {}
                                 tryNextUrl();
-                            }, 5500);
+                            }, 2500);
 
                             audio.onplaying = () => {
                                 clearTimeout(timeoutTimer);
@@ -4569,30 +4613,7 @@
                     }
                     return;
                 } catch (netErr) {
-                    console.warn('Neural /api/tts streaming unavailable, switching to universal browser engine:', netErr);
-                }
-
-                if (token !== this._playToken || !this.isPlaying || this.isPaused) return;
-
-                // 2. Capacitor Native TTS on Android / Mobile
-                if (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.TextToSpeech) {
-                    try {
-                        await window.Capacitor.Plugins.TextToSpeech.speak({
-                            text: item.text,
-                            lang: lang === 'en' ? 'en-US' : 'fa-IR',
-                            rate: this.rate,
-                            pitch: 1.0,
-                            volume: 1.0,
-                            category: 'ambient',
-                        });
-                        if (token === this._playToken && this.isPlaying && !this.isPaused) {
-                            this.currentIndex++;
-                            this._playCurrentChunk(token);
-                        }
-                        return;
-                    } catch (capErr) {
-                        console.warn('Capacitor TTS error, falling back to Web Speech:', capErr);
-                    }
+                    console.warn('Audio streaming fallback unavailable, trying Web Speech API:', netErr);
                 }
 
                 if (token !== this._playToken || !this.isPlaying || this.isPaused) return;
