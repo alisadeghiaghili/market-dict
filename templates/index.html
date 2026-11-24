@@ -4073,12 +4073,13 @@
 
         // ==========================================
         // Bilingual Neural Text-to-Speech (TTS) Intelligent Engine
-        // Powered by /api/tts (Neural edge-tts) with Web Speech & Capacitor Fallbacks
+        // Powered by /api/tts (Neural edge-tts) with Web Speech & Universal Fallbacks
         // ==========================================
         class PersianTtsEngine {
             constructor() {
                 this.synth = ('speechSynthesis' in window) ? window.speechSynthesis : null;
                 this.persianVoice = null;
+                this.arabicVoice = null;
                 this.englishVoice = null;
                 this.isPlaying = false;
                 this.isPaused = false;
@@ -4092,6 +4093,7 @@
                 this._currentAudio = null;
                 this._keepAliveInterval = null;
                 this._playToken = 0;
+                this._notifiedVoiceFallback = false;
 
                 this.initVoices();
             }
@@ -4108,10 +4110,18 @@
                                name.includes('dilara') || name.includes('farid');
                     }) || null;
 
+                    this.arabicVoice = voices.find(v => {
+                        const lang = (v.lang || '').toLowerCase();
+                        const name = (v.name || '').toLowerCase();
+                        return lang.startsWith('ar') || name.includes('arabic') ||
+                               name.includes('maged') || name.includes('hoda') ||
+                               name.includes('laila') || name.includes('naayf');
+                    }) || null;
+
                     this.englishVoice = voices.find(v => {
                         const lang = (v.lang || '').toLowerCase();
                         const name = (v.name || '').toLowerCase();
-                        return lang.startsWith('en') && (name.includes('aria') || name.includes('natural') || name.includes('google') || name.includes('zira') || name.includes('samantha'));
+                        return lang.startsWith('en') && (name.includes('aria') || name.includes('natural') || name.includes('google') || name.includes('zira') || name.includes('david'));
                     }) || voices.find(v => (v.lang || '').toLowerCase().startsWith('en')) || null;
                 };
 
@@ -4119,6 +4129,95 @@
                 if (typeof this.synth.onvoiceschanged !== 'undefined') {
                     this.synth.onvoiceschanged = updateVoice;
                 }
+            }
+
+            persianToPhoneticLatin(text) {
+                if (!text) return '';
+                // Common Persian financial and dictionary vocabulary mappings
+                const dictionary = {
+                    'اصطلاح': 'Estelaah',
+                    'تعریف': 'Ta\'reef',
+                    'مفهوم': 'Mafhoom',
+                    'نکات': 'Nokaat',
+                    'کلیدی': 'Kelidi',
+                    'سرفصل': 'Sarfasl',
+                    'بخش': 'Bakhsh',
+                    'جمع‌بندی': 'Jam\'bandi',
+                    'نهایی': 'Nahaayee',
+                    'نتیجه‌گیری': 'Natijeh-giri',
+                    'بازار': 'Bazaar',
+                    'سرمایه': 'Sarmayeh',
+                    'بورس': 'Boors',
+                    'سهام': 'Sahaam',
+                    'اوراق': 'Owraagh',
+                    'بهادار': 'Bahaadaar',
+                    'نرخ': 'Nerkh',
+                    'بهره': 'Bahreh',
+                    'تورم': 'Tavarrom',
+                    'سود': 'Sood',
+                    'زیان': 'Ziyaan',
+                    'ریسک': 'Risk',
+                    'دارایی': 'Daaraayee',
+                    'بدهی': 'Bedehi',
+                    'حقوق': 'Hoghoogh',
+                    'صاحبان': 'Saahebaane',
+                    'صندوق': 'Sandoogh',
+                    'سرمایه‌گذاری': 'Sarmayeh-gozaari',
+                    'ارزش': 'Arzesh',
+                    'فعلی': 'Fe\'li',
+                    'آتی': 'Aati',
+                    'خالص': 'Khaales',
+                    'شاخص': 'Shaakhes',
+                    'کل': 'Kol',
+                    'معاملات': 'Mo\'aamelaat',
+                    'حجم': 'Hajm',
+                    'قیمت': 'Gheymat',
+                    'پایانی': 'Paayaani',
+                    'عرضه': 'Arzeh',
+                    'تقاضا': 'Taghaazaa',
+                    'تحلیل': 'Tahlil',
+                    'بنیادی': 'Bonyaadi',
+                    'تکنیکال': 'Technical',
+                    'بانک': 'Bank',
+                    'مرکزی': 'Markazi',
+                    'پول': 'Pool',
+                    'نقدینگی': 'Naghdeinegi',
+                    'اهرم': 'Ahrom',
+                    'مالی': 'Maali',
+                    'سودآوری': 'Sood-aavari',
+                    'بازده': 'Baazdeh',
+                    'سالیانه': 'Saaliyaaneh',
+                    'سود تقسیمی': 'Soode taghsimi',
+                    'افزایش سرمایه': 'Afzaayeshe sarmayeh',
+                    'ترازنامه': 'Taraaznaameh',
+                    'صورت سود و زیان': 'Soorate sood va ziyaan',
+                    'جریان وجوه نقد': 'Jariyaane vojoohe naghd'
+                };
+
+                let processed = text;
+                for (const [fa, lat] of Object.entries(dictionary)) {
+                    processed = processed.split(fa).join(lat);
+                }
+
+                // Phonetic letter conversion
+                const charMap = {
+                    'آ': 'aa', 'ا': 'a', 'ب': 'b', 'پ': 'p', 'ت': 't', 'ث': 's',
+                    'ج': 'j', 'چ': 'ch', 'ح': 'h', 'خ': 'kh', 'د': 'd', 'ذ': 'z',
+                    'ر': 'r', 'ز': 'z', 'ژ': 'zh', 'س': 's', 'ش': 'sh', 'ص': 's',
+                    'ض': 'z', 'ط': 't', 'ظ': 'z', 'ع': '\'', 'غ': 'gh', 'ف': 'f',
+                    'ق': 'gh', 'ک': 'k', 'گ': 'g', 'ل': 'l', 'م': 'm', 'ن': 'n',
+                    'و': 'o', 'ه': 'h', 'ی': 'i', 'ئ': 'y', 'ة': 'e', 'ي': 'i',
+                    'ك': 'k', '۰': '0', '۱': '1', '۲': '2', '۳': '3', '۴': '4',
+                    '۵': '5', '۶': '6', '۷': '7', '۸': '8', '۹': '9', '،': ',',
+                    '؛': ';', '؟': '?', '«': '"', '»': '"', '\u200c': ' '
+                };
+
+                let out = '';
+                for (let i = 0; i < processed.length; i++) {
+                    const ch = processed[i];
+                    out += charMap[ch] !== undefined ? charMap[ch] : ch;
+                }
+                return out.replace(/\s+/g, ' ').trim();
             }
 
             cleanTextForSpeech(rawText, lang = 'fa') {
@@ -4356,35 +4455,56 @@
                 // 1. Primary: Server-side Neural TTS Stream (/api/tts)
                 const playViaServerStream = () => {
                     return new Promise((resolve, reject) => {
-                        if (window.HAS_BACKEND_API === false) {
-                            reject(new Error('Static environment: no backend API'));
-                            return;
-                        }
-                        const url = `/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`;
-                        const audio = new Audio(url);
-                        audio.playbackRate = this.rate;
-                        this._currentAudio = audio;
-
-                        // Preload next chunk audio if available
-                        if (this.currentIndex + 1 < this.queue.length) {
-                            const nextItem = this.queue[this.currentIndex + 1];
-                            const nextUrl = `/api/tts?text=${encodeURIComponent(nextItem.text)}&lang=${nextItem.lang || 'fa'}`;
-                            const preloadImg = new Audio();
-                            preloadImg.preload = 'auto';
-                            preloadImg.src = nextUrl;
+                        const candidateUrls = [];
+                        // Primary endpoint (relative path works on localhost/server)
+                        if (window.HAS_BACKEND_API !== false) {
+                            candidateUrls.push(`/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`);
+                        } else {
+                            // On static GitHub Pages, probe local backend if running in background
+                            candidateUrls.push(`http://127.0.0.1:5000/api/tts?text=${encodeURIComponent(item.text)}&lang=${lang}`);
                         }
 
-                        audio.onended = () => {
-                            if (this._currentAudio === audio) this._currentAudio = null;
-                            resolve(true);
+                        let triedIdx = 0;
+                        const tryNextUrl = () => {
+                            if (triedIdx >= candidateUrls.length) {
+                                reject(new Error('No server TTS stream available'));
+                                return;
+                            }
+                            const url = candidateUrls[triedIdx++];
+                            const audio = new Audio();
+                            audio.preload = 'auto';
+                            audio.playbackRate = this.rate;
+                            this._currentAudio = audio;
+
+                            let timeoutTimer = setTimeout(() => {
+                                try { audio.pause(); } catch(e) {}
+                                tryNextUrl();
+                            }, 5500);
+
+                            audio.onplaying = () => {
+                                clearTimeout(timeoutTimer);
+                            };
+
+                            audio.onended = () => {
+                                clearTimeout(timeoutTimer);
+                                if (this._currentAudio === audio) this._currentAudio = null;
+                                resolve(true);
+                            };
+
+                            audio.onerror = () => {
+                                clearTimeout(timeoutTimer);
+                                if (this._currentAudio === audio) this._currentAudio = null;
+                                tryNextUrl();
+                            };
+
+                            audio.src = url;
+                            audio.play().catch(() => {
+                                clearTimeout(timeoutTimer);
+                                tryNextUrl();
+                            });
                         };
 
-                        audio.onerror = (err) => {
-                            if (this._currentAudio === audio) this._currentAudio = null;
-                            reject(err);
-                        };
-
-                        audio.play().catch(reject);
+                        tryNextUrl();
                     });
                 };
 
@@ -4396,7 +4516,7 @@
                     }
                     return;
                 } catch (netErr) {
-                    console.warn('Neural /api/tts streaming failed or offline, falling back to local TTS engine:', netErr);
+                    console.warn('Neural /api/tts streaming unavailable, switching to universal browser engine:', netErr);
                 }
 
                 if (token !== this._playToken || !this.isPlaying || this.isPaused) return;
@@ -4424,11 +4544,10 @@
 
                 if (token !== this._playToken || !this.isPlaying || this.isPaused) return;
 
-                // 3. Web Speech API Fallback
+                // 3. Universal Web Speech API Engine with Intelligent Voice Adaptation
                 if (this.synth && typeof SpeechSynthesisUtterance !== 'undefined') {
-                    // Refresh voice lookup if voice wasn't found during initial load
-                    if (lang === 'fa' && !this.persianVoice) {
-                        const availableVoices = this.synth.getVoices() || [];
+                    const availableVoices = this.synth.getVoices() || [];
+                    if (!this.persianVoice) {
                         this.persianVoice = availableVoices.find(v => {
                             const l = (v.lang || '').toLowerCase();
                             const n = (v.name || '').toLowerCase();
@@ -4437,23 +4556,54 @@
                                    n.includes('dilara') || n.includes('farid');
                         }) || null;
                     }
-
-                    if (lang === 'fa' && !this.persianVoice) {
-                        showToast('مرورگر شما فاقد بسته صوتی فارسی است. لطفاً صفحه را در Microsoft Edge باز کنید یا برنامه را به صورت لوکال با دستور python app.py اجرا نمایید.', 6000);
-                        this.stop(true);
-                        return;
+                    if (!this.arabicVoice) {
+                        this.arabicVoice = availableVoices.find(v => {
+                            const l = (v.lang || '').toLowerCase();
+                            const n = (v.name || '').toLowerCase();
+                            return l.startsWith('ar') || n.includes('arabic') || n.includes('maged') || n.includes('hoda');
+                        }) || null;
+                    }
+                    if (!this.englishVoice) {
+                        this.englishVoice = availableVoices.find(v => (v.lang || '').toLowerCase().startsWith('en')) || null;
                     }
 
                     try {
                         this.synth.cancel();
-                        const utterance = new SpeechSynthesisUtterance(item.text);
-                        utterance.lang = lang === 'en' ? 'en-US' : 'fa-IR';
-                        if (lang === 'en' && this.englishVoice) {
-                            utterance.voice = this.englishVoice;
-                        } else if (lang === 'fa' && this.persianVoice) {
-                            utterance.voice = this.persianVoice;
+
+                        let spokenText = item.text;
+                        let selectedVoice = null;
+                        let spokenLang = lang === 'en' ? 'en-US' : 'fa-IR';
+
+                        if (lang === 'fa') {
+                            if (this.persianVoice) {
+                                selectedVoice = this.persianVoice;
+                                spokenLang = 'fa-IR';
+                            } else if (this.arabicVoice) {
+                                // Arabic voice speaks Persian letters with high natural fidelity
+                                selectedVoice = this.arabicVoice;
+                                spokenLang = 'ar-SA';
+                            } else {
+                                // Fallback when only English/Western voices exist (e.g. desktop Chrome on Windows)
+                                spokenText = this.persianToPhoneticLatin(item.text);
+                                selectedVoice = this.englishVoice || availableVoices[0] || null;
+                                spokenLang = selectedVoice ? selectedVoice.lang : 'en-US';
+
+                                if (!this._notifiedVoiceFallback) {
+                                    this._notifiedVoiceFallback = true;
+                                    showToast('💡 در حال خوانش با موتور صوتی مرورگر. برای گوینده طبیعی فارسی (هوش مصنوعی Dilara)، کافیست برنامه را در Microsoft Edge باز کرده یا سرور را با python app.py اجرا نمایید.', 6500);
+                                }
+                            }
+                        } else {
+                            selectedVoice = this.englishVoice || availableVoices[0] || null;
+                            spokenLang = 'en-US';
                         }
-                        utterance.rate = this.rate;
+
+                        const utterance = new SpeechSynthesisUtterance(spokenText);
+                        utterance.lang = spokenLang;
+                        if (selectedVoice) {
+                            utterance.voice = selectedVoice;
+                        }
+                        utterance.rate = (lang === 'fa' && !this.persianVoice && !this.arabicVoice) ? Math.max(0.85, this.rate * 0.9) : this.rate;
                         utterance.pitch = 1.0;
 
                         utterance.onend = () => {
@@ -4466,11 +4616,6 @@
                         utterance.onerror = (e) => {
                             if (e.error === 'interrupted' || e.error === 'canceled') return;
                             console.warn('SpeechSynthesis error:', e);
-                            if (e.error === 'language-unavailable' || e.error === 'voice-unavailable') {
-                                showToast('مرورگر شما فاقد صدای فارسی است. لطفاً از Microsoft Edge یا اجرای لوکال استفاده فرمایید.');
-                                this.stop(true);
-                                return;
-                            }
                             if (token === this._playToken && this.isPlaying && !this.isPaused) {
                                 this.currentIndex++;
                                 this._playCurrentChunk(token);
@@ -4486,33 +4631,7 @@
                     }
                 }
 
-                // 4. English Google Translate Stream Fallback (for static environments like GitHub Pages)
-                if (lang === 'en') {
-                    try {
-                        await new Promise((resolve, reject) => {
-                            const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=en&client=tw-ob&q=${encodeURIComponent(item.text)}`;
-                            const audio = new Audio(url);
-                            audio.playbackRate = this.rate;
-                            this._currentAudio = audio;
-                            audio.onended = () => {
-                                if (this._currentAudio === audio) this._currentAudio = null;
-                                resolve(true);
-                            };
-                            audio.onerror = (err) => {
-                                if (this._currentAudio === audio) this._currentAudio = null;
-                                reject(err);
-                            };
-                            audio.play().catch(reject);
-                        });
-                        if (token === this._playToken && this.isPlaying && !this.isPaused) {
-                            this.currentIndex++;
-                            this._playCurrentChunk(token);
-                        }
-                        return;
-                    } catch(e) {}
-                }
-
-                showToast('خطا در پخش صوتی. لطفاً اتصال اینترنت یا سرور را بررسی نمایید.');
+                showToast('خطا در پخش صوتی. لطفاً اتصال اینترنت یا مرورگر را بررسی نمایید.');
                 this.stop(true);
             }
 

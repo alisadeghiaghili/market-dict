@@ -555,13 +555,15 @@ def get_random_term():
     return get_term_by_id(rand_slug)
 
 # In-memory LRU cache for generated neural TTS audio chunks
-_TTS_CACHE: Dict[str, bytes] = {}
+_TTS_CACHE: dict[str, bytes] = {}
 _TTS_LOCK = threading.Lock()
 
 @app.route("/api/tts")
 def handle_tts():
     """
     Stream high-quality neural TTS audio for Persian and English.
+    Supports automatic retry across voices (Dilara -> Farid), timeout protection,
+    in-memory caching, and CORS headers.
     Query parameters:
       - text: string to speak (required)
       - lang: 'fa' or 'en' (default: 'fa')
@@ -572,39 +574,68 @@ def handle_tts():
         return jsonify({"error": "Missing 'text' parameter"}), 400
 
     lang = (request.args.get("lang") or "fa").strip().lower()
-    voice = (request.args.get("voice") or "").strip()
-    if not voice:
-        voice = "fa-IR-DilaraNeural" if lang == "fa" else "en-US-AriaNeural"
+    custom_voice = (request.args.get("voice") or "").strip()
 
-    cache_key = f"{voice}:{text}"
+    if custom_voice:
+        voice_candidates = [custom_voice]
+    elif lang == "fa":
+        voice_candidates = ["fa-IR-DilaraNeural", "fa-IR-FaridNeural"]
+    else:
+        voice_candidates = ["en-US-AriaNeural", "en-US-GuyNeural", "en-US-JennyNeural"]
+
+    cache_key = f"{lang}:{custom_voice or 'default'}:{text}"
     with _TTS_LOCK:
         if cache_key in _TTS_CACHE:
-            return Response(_TTS_CACHE[cache_key], mimetype="audio/mpeg")
+            return Response(
+                _TTS_CACHE[cache_key],
+                mimetype="audio/mpeg",
+                headers={
+                    "Cache-Control": "public, max-age=604800, immutable",
+                    "Access-Control-Allow-Origin": "*"
+                }
+            )
 
     try:
         import asyncio
         import edge_tts
 
-        async def _generate_audio():
-            comm = edge_tts.Communicate(text, voice)
+        async def _synthesize(v_name: str) -> bytes:
+            comm = edge_tts.Communicate(text, v_name)
             buf = bytearray()
             async for chunk in comm.stream():
                 if chunk["type"] == "audio":
                     buf.extend(chunk["data"])
             return bytes(buf)
 
-        audio_bytes = asyncio.run(_generate_audio())
+        async def _attempt_voices() -> bytes | None:
+            for voice_name in voice_candidates:
+                try:
+                    data = await asyncio.wait_for(_synthesize(voice_name), timeout=8.0)
+                    if data and len(data) > 0:
+                        return data
+                except Exception as inner_exc:
+                    app.logger.warning(f"Voice {voice_name} synthesis attempt failed: {inner_exc}")
+            return None
+
+        audio_bytes = asyncio.run(_attempt_voices())
 
         if not audio_bytes:
             return jsonify({"error": "Failed to synthesize speech"}), 500
 
         with _TTS_LOCK:
-            if len(_TTS_CACHE) > 500:
+            if len(_TTS_CACHE) > 1000:
                 oldest_key = next(iter(_TTS_CACHE))
                 _TTS_CACHE.pop(oldest_key, None)
             _TTS_CACHE[cache_key] = audio_bytes
 
-        return Response(audio_bytes, mimetype="audio/mpeg")
+        return Response(
+            audio_bytes,
+            mimetype="audio/mpeg",
+            headers={
+                "Cache-Control": "public, max-age=604800, immutable",
+                "Access-Control-Allow-Origin": "*"
+            }
+        )
     except Exception as exc:
         app.logger.warning(f"TTS synthesis error: {exc}")
         return jsonify({"error": str(exc)}), 500
