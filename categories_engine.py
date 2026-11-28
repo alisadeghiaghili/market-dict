@@ -26,10 +26,10 @@ TAXONOMY = [
     # 3. Derivatives, Options & Futures
     {
         "id": "derivatives",
-        "fa": "ابزارهای مشتقه، آپشن و آتی",
+        "fa": "ابزارهای مشتقه، اختیارات و آتی",
         "en": "Derivatives, Options & Futures",
         "icon": "⚡",
-        "regex": r"\b(options?|futures?|derivatives?|swaps?|swaptions?|open interest|call options?|put options?|calls?\b|puts?\b|gamma|delta|theta|vega|rho|strike prices?|in[\s-]the[\s-]money|out[\s-]of[\s-]the[\s-]money|at[\s-]the[\s-]money|straddles?|strangles?|collars?|iron condors?|butterfly spreads?|forward contracts?|forwards?\b|hedging|hedged|underlying assets?|warrants?|implied volatilit(y|ies)|black[\s-]scholes|expiration dates?|contango|backwardation|naked options?|covered calls?|synthetic assets?|interest rate swaps?|basis risks?|cfds?|contracts? for differences?|cvrs?|contingent value rights?|exercise prices?|cheapest to deliver|ctd|cme|cboe|buy to open|buy to close|sell to open|sell to close|cash[\s-]and[\s-]carry[\s-]arbitrage|non[\s-]deliverable forward|ndf|horizontal spread|vertical spread|calendar spread|e[\s-]mini|volatility arbitrage|arbitrages?\b)\b|(مشتقه|مشتقات|قرارداد آتی|اختیار معامله|قرارداد اختیار|سوآپ|سواپ|قیمت اعمال|اختیار خرید|اختیار فروش|بلک شولز|نوسان ضمنی|پوشش ریسک|کال آپشن|پوت آپشن|قرارداد سلف|وارانت)"
+        "regex": r"\b(options?|futures?|derivatives?|swaps?|swaptions?|open interest|call options?|put options?|calls?\b|puts?\b|gamma|delta|theta|vega|rho|strike prices?|in[\s-]the[\s-]money|out[\s-]of[\s-]the[\s-]money|at[\s-]the[\s-]money|straddles?|strangles?|collars?|iron condors?|butterfly spreads?|forward contracts?|forwards?\b|hedging|hedged|underlying assets?|warrants?|implied volatilit(y|ies)|black[\s-]scholes|expiration dates?|contango|backwardation|naked options?|covered calls?|synthetic assets?|interest rate swaps?|basis risks?|cfds?|contracts? for differences?|cvrs?|contingent value rights?|exercise prices?|cheapest to deliver|ctd|cme|cboe|buy to open|buy to close|sell to open|sell to close|cash[\s-]and[\s-]carry[\s-]arbitrage|non[\s-]deliverable forward|ndf|horizontal spread|vertical spread|calendar spread|e[\s-]mini|volatility arbitrage|arbitrages?\b)\b|(مشتقه|مشتقات|قرارداد آتی|اختیار معامله|قرارداد اختیار|سوآپ|سواپ|قیمت اعمال|اختیار خرید|اختیار فروش|بلک شولز|نوسان ضمنی|پوشش ریسک|قرارداد سلف|وارانت)"
     },
     # 4. Fixed Income & Bond Markets
     {
